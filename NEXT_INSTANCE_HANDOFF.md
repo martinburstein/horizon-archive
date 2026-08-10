@@ -209,25 +209,54 @@ exact-next-action authority.
   FIRST_RUN_SHELL_FRSH-002-v1.md`. No product, test, learning, story, save,
   media, map, scoreboard, or maturity file changed in Mission.
 
-## Exact next action - Reconnaissance Sergeant
+## Fresh Recon result
 
-Read `First Run Agent Profiles/reconnaissance-sergeant.md` in full; then read
-`FRSH-002-v1`, `FRWO-002-v1`, `FRVE-002-v1`, and this handoff. Inspect the
-current Glass Meadow wide/narrow runtime presentation and the accepted master/
-provenance read-only without changing them.
+- Recon issued **`DIRECTORIAL LOCK / FRDT-002-v1`** from exact source
+  `d5398fc21b746d7d946371cf09ecf8a68081b604` with no variance.
+- The locked felt discovery is a short counterturn: Route Marker mastery first
+  leaves the existing route legible, then one suit-owned compatibility notice
+  redirects attention across the unchanged foreground to repair stock the
+  player already passed. Better method makes the overlooked legible; the world
+  does not change.
+- Wide presentation carries far-right Marker, central cultivation, and near-
+  left stock in one field. Narrow presentation preserves the same exact
+  `0/52/24/48` source band and uses semantic hierarchy rather than a required
+  pan, zoom, crop, or world response.
+- The Nursery stays low, humble, physically silent, and materially continuous
+  with rejected cloudy forms, imperfect sleeves, fused edges, collars, and
+  feed/return channels. It is not a kiosk, prize, cache, shrine, or secret door.
+- The three-bodies/one-interface turn is fixed: central First Signal, far-right
+  Route Marker, and low-left repair relationship are physically unlike; the
+  stable familiar overlay belongs to the expedition. Machine and Builders own
+  no line.
+- Exact geometry, sole optional `USE`, immediate departure, learning, privacy,
+  save, return/reload, focus outcomes, accessibility, PBA, command manifest,
+  immutable media, hard stops, and rollback remain frozen. Recon wrote no final
+  prose or interaction/focus implementation.
+- Fresh focused presentation evidence passes `10/10`. The treatment is
+  `Production Pipeline/First Run/
+  FIRST_RUN_DIRECTORIAL_TREATMENT_FRDT-002-v1.md`.
 
-Issue exactly one versioned Directorial Treatment for `FRSH-002-v1`. Define
-one compelling felt discovery, the attention path from Route Marker to the
-low-left repair stock, approach/pacing/silence, the three-bodies/one-expedition-
-interface turn, and concept-level use of the immutable existing plate. Preserve
-the shell's exact geometry, sole `USE`, optional route, state/save/privacy/
-learning/accessibility/PBA/media contracts, hard stops, and rollback. Leave one
-exact Tactical handoff.
+## Exact next action - Tactical Operations Specialist
 
-Do not write final prose, freeze exact interaction/focus implementation,
-implement code, edit/generate/import/publish media, create a reveal, alter
-learning/route/save/world/ending, advance maturity, or begin Tactical inside
-Recon.
+Read `First Run Agent Profiles/tactical-operations-specialist.md` in full;
+then read `FRSH-002-v1`, `FRDT-002-v1`, and this handoff. Independently inspect
+the exact current wide/narrow Meadow, immutable master/provenance,
+`pixelMeadow.js`, `App.jsx`, responsive styles, focus/modal contracts,
+calibration/route/return state, and focused tests.
+
+Issue exactly one versioned First Run Player Experience Blueprint. Freeze the
+target/source-order graph, pre-detection absence, post-Marker state/action map,
+sole `LOOK AT` / `TALK TO` / `USE`, duplicate-launcher removal, focus/
+announcement/recovery behavior, Terminal inertness, copy-slot ledger, wide/
+narrow/effective-`200%` containment, completed-use behavior, optional
+departure/return/reload paths, and Combat-ready acceptance matrix. Preserve
+every shell learning/privacy/save/route/accessibility/PBA/media/manifest/E2E/
+hard-stop/rollback contract and leave one exact Combat handoff.
+
+Do not write final prose, implement code, edit/generate/import/publish media,
+create a reveal, alter learning/route/save/world/ending, advance maturity, or
+begin Combat inside Tactical.
 
 ## Protected boundaries
 
