@@ -58,18 +58,48 @@ exact-next-action authority.
   production build output. All owned ports/processes are clear; the candidate
   and Git state are unaffected.
 
-## Exact next action - fresh Commandant baseline revalidation
+## Fresh Commandant result
 
-The fresh Commandant must read its profile and the exact current controls,
-then independently revalidate `FRPB-001-v1` against `FRAB-001-v1` and the
-current runtime. Reaffirm the existing baseline, or issue `REVISE`/`HOLD` only
-if a documented reopen trigger exists, and hand the next sequential stage to
-the Colonel. `FR-02 / Fracture Nursery` is the earliest mapped gap, but this
-handoff does not preselect or authorize a Work Order.
+- Commandant issued **`FIRST RUN VISION BASELINE REAFFIRMED /
+  FRPB-001-v1`** in guarded revalidation `FRPB-001-v1-GR-01`.
+- Exact Commandant source is
+  `f87f9081c272a71887c6ec869b4f5dd878fd7475`; the accepted product/test
+  candidate remains `d37103b46f257cb61ef99f76413611ee31d0fab2`.
+- Candidate-to-current product/test diff is empty and fresh focused package,
+  opening, and transition contracts pass `14/14`.
+- No baseline reopen trigger exists. Audience, product category, platform,
+  educational promise, media authority, visual ceiling, and ending remain
+  unchanged. The current official Microsoft AI-901 study guide still states
+  the 2026-04-15 objective set and was last updated 2026-07-13.
+- `FRAB-001-v1` remains one released bounded pass, not `FIRST RUN COMPLETE`.
+  No physical-host cell is promoted.
+- Commandant found one bounded continuity/copy question for independent
+  Colonel classification: current City Threshold runtime visibly says
+  `The successor packet remains behind the staging boundary.` immediately
+  before the released direct route action.
+- The revalidation artifact is
+  `Production Pipeline/First Run/FIRST_RUN_PRODUCT_BASELINE_REVALIDATION_FRPB-001-v1-GR-01.md`.
 
-Do not begin Colonel review, Work Order selection, implementation, presentation
-work, or Intelligence review inside the Commandant invocation. Do not infer or
-restart automation.
+## Exact next action - fresh Colonel continuity lock
+
+Read `First Run Agent Profiles/colonel.md` in full; then read the guarded
+Commandant revalidation, `FRPB-001-v1`, `FRAB-001-v1`, the current release map
+and scoreboard, the complete game-on-paper, surface lore, current runtime
+story/copy/scene authorities, and released TD-012/TE-001 evidence. Perform a
+fresh post-release continuity reconciliation and issue one versioned
+`CONTINUITY LOCK`, `REVISE`, or `HOLD` disposition.
+
+At minimum, determine whether `FR-02` remains the earliest unresolved
+continuity gap; classify the exact City Threshold `successor packet` phrase and
+its lawful voice ownership; prove that bounded `FR4` did not promote any
+physical-host parity; confirm direct City entry remains credits-free and
+nonresponsive; and confirm Measured Horizon remains behaviorally exact with
+equal outcomes, null deltas, and `successor=null` while its mapped literary
+close remains incomplete.
+
+Do not select or preauthorize a Work Order, implement a correction, change
+media, inspect protected state, begin Operations, or infer/restart automation
+inside the Colonel invocation.
 
 ## Protected boundaries
 
