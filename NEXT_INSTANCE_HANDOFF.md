@@ -2,43 +2,38 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / SEPARATE PREVIEW LAUNCH-
-READINESS CONTROL ONLY / FRSH-003-v1-VR-55`**
+Current disposition: **`FIRST RUN SHELL READY / MINIMAL PRODUCTION LAUNCH-
+READINESS CONTROL ONLY / FRSH-003-v1-VR-56`**
 
 Stage and release remain HOLD.
 
 Exact next owner: **fresh Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-55`
+Immediate control: `FRSH-003-v1-VR-56`
 
-Mission source: `c9f9cba33a37d5cd24f23d44c8be8e8ad5f59651`
+Mission source: `341fa12909d1ffbed24bbac9b063027c1f70d78a`
 
-VR-54 is accepted as **`EXACT TOKEN-BOUND ROOT CLEANUP PASS / ROOT DELETED /
-PORTS CLEAR / NO LIVE`**. Token decode, disposable SHA, exact identity,
-containment, exclusion, predecessor distinction, port-clear, emptiness,
-deletion, absence, and native-exit predicates all passed. No root remains.
-
-VR-53 Stage 2 remains **`EXECUTION-CONTROL REJECTION / TOOL SAFETY / NON-
-EXECUTED / NO LIVE`**, not candidate evidence or a new OPEN classification.
-The VR-53 Stage-4 cleanup-parser item remains the eleventh OPEN classification
-even though recovery succeeded.
+VR-55 Call 1 was rejected by tool safety before execution. No port query,
+launch, PID, request, process, preview, cleanup, fixture, browser, or E2E action
+occurred. Mission classifies **`EXECUTION-CONTROL REJECTION / TOOL SAFETY /
+NON-EXECUTED / NO EVIDENCE / VR-55 CALL 1`**. It is not a candidate finding or
+a twelfth OPEN classification.
 
 Fresh-child capacity remains unavailable; Mission context reuse is disclosed
 and non-evidence.
 
-Combat may run exactly three bounded preview-control calls: production launch
-and root readiness on 4173; fixture launch and root readiness on 4184; then
-mandatory cleanup of only the numeric PIDs returned by those calls with both
-ports proven clear. Use the previously accepted VR-40/VR-42 hidden direct
-Node/Vite `PassThru` launch vectors. Launch the two previews separately.
+Combat may run three small production-only calls: (1) query only loopback port
+4173 and emit a clear scalar; (2) use exactly the accepted VR-40 hidden direct
+Node/Vite `Start-Process -PassThru` shape, run bounded suppressed root IWR
+readiness, and emit only the returned numeric PID/readiness scalar; (3) stop
+only that transported PID if positive and prove port 4173 clear. Call 2 must
+contain no inline cleanup, deletion, port-kill, fixture, or multi-stage logic.
 
-No root creation/retention, deep/assets request, byte identity, browser, E2E,
-diagnostic, summary, verifier, formal served-identity claim, build, test, PBA,
-product/media/protected action, or retry is authorized. A failure or tool
-rejection exhausts the shell and activates only the independently authorized
-owned cleanup when a PID may remain.
+No fixture action is authorized. No root/filesystem, listener recovery,
+deep/assets, formal served identity, browser, E2E, diagnostic, summary,
+verifier, build, test, PBA, product/media/protected action, or retry is
+authorized.
 
 The single E2E budget remains unspent. Frozen candidates, cumulative accepted
 gates/invariants, and all eleven OPEN classifications remain exact. Return the
-three VR-55 scalars to Mission; no downstream stage or release action is
-authorized.
+three VR-56 scalars to fresh Mission; no downstream action is authorized.
