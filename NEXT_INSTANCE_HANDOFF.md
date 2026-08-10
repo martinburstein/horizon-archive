@@ -117,27 +117,53 @@ exact-next-action authority.
   checks. The repository QA quarantine remains protected and uninspected.
 - Shell artifact is `Production Pipeline/First Run/
   FIRST_RUN_SHELL_FRSH-003-v1.md`.
+- Reconnaissance issued **`DIRECTORIAL LOCK / FRDT-003-v1`** at source
+  `57fc489e98e49f9a20ab7e25a57ad091461b5856` with no requested variance.
+- The locked attention path is a short downward-clockwise reorientation from
+  the compact Host 04 body to six unequal relations already crossing two dry
+  foreground mineral lips. The Pilot notices repetition first; the suit
+  confirms one separate compatible surface. Host 04 does not point, unlock,
+  illuminate, or respond.
+- Host 05 remains a distributed two-lip relationship, not a console, diagram,
+  or six-principle mnemonic. `LOOK AT` owns bounded material fact, `TALK TO`
+  ends in complete silence, and the sole deliberate `USE` opens unchanged
+  expedition-owned `L02-02` work. Miss, resume, mastery, and read-only revisit
+  never change the water, branches, Crown, route, or world.
+- Exact `45/75/20/25` geometry, dry center, zero overlap, six-layout
+  containment, forced-color/reduced-motion meaning, immutable media, and every
+  shell hard stop remain fixed. The treatment requests no camera move, sound,
+  world motion, final prose, media work, or Host 06 expression.
+- Recon evidence is source/geometry/provenance based because no safe sanctioned
+  live state exposes not-yet-implemented Host 05. Original-resolution master
+  inspection, exact master hash/bytes, and fresh adjacent baseline `43/43`
+  passed. Tactical/production still own actual DOM, live-layout, focus,
+  served-identity, and single-E2E proof.
+- Treatment artifact is `Production Pipeline/First Run/
+  FIRST_RUN_DIRECTORIAL_TREATMENT_FRDT-003-v1.md`.
 
-## Exact next action - Reconnaissance Sergeant only
+## Exact next action - Tactical Operations Specialist only
 
-Read `First Run Agent Profiles/reconnaissance-sergeant.md` in full, then read
-this handoff, `FRSH-003-v1`, `FRWO-003-v1`, `FRVE-003-v1`, the relevant
-Drowned game-on-paper/surface/provenance authorities, current Host 04-to-05
-runtime source, and the immutable-media boundary.
+Read `First Run Agent Profiles/tactical-operations-specialist.md` in full, then
+read this handoff, `FRSH-003-v1`, and `FRDT-003-v1`. Independently inspect the
+exact current Drowned runtime, immutable master/provenance, Host 04 and
+Meadow-return targets, `App.jsx`, `sceneTransition.js`, responsive/focus/modal
+styles, Workload Sort and responsible-AI sanitizers/sessions, save projection,
+and relevant tests.
 
-Issue exactly one versioned `DIRECTORIAL LOCK`, `REVISE`, or `HOLD` for
-`FRSH-003-v1`. If locked, define the one compelling physical attention path
-from Host 04 back into the unchanged basin, the Pilot-first / Suit-confirmed
-Sixfold Weir discovery, approach rhythm, silence, restrained learning handoff,
-and concept-level use of the existing immutable Drowned plate across wide and
-narrow presentation. Preserve the exact `45/75/20/25` target, dry foreground
-identity, no-response meaning, and all shell hard stops.
+Issue exactly one versioned `PLAYER EXPERIENCE READY`, `REVISE`, or `HOLD` for
+`FRSH-003-v1`. If ready, freeze the complete Host 04-to-05 state and replacement
+graph: pre-mastery DOM absence; pure available/in-progress/remediation/
+complete/return states; Host 04 then Host 05 semantic order; sole `LOOK AT` /
+`TALK TO` / `USE`; generic-launcher removal; one polite detection; all focus,
+announcement, modal, recovery, completed-read-only, and malformed-evidence
+rules; unchanged next continuation; exact `45/75/20/25` source mapping at all
+six layouts; non-color, forced-color, and reduced-motion parity; owner-bounded
+copy slots; and a Combat-ready acceptance matrix.
 
-Do not write final copy, freeze the exact interaction/focus implementation,
-edit product/test/media, generate or reveal an image, alter learning/save/
-route/world/ending, repair the City contradiction, expand Host 06-15, advance
-maturity, begin Tactical/production, inspect protected state, create a
-schedule, or call `FIRST RUN COMPLETE`.
+Do not write final prose, implement product/test code, inspect the repository QA
+quarantine, change media, alter learning/save/route/world/ending, repair the
+City contradiction, expand Host 06-15, advance maturity, begin Combat, create
+a schedule, or call `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
 
