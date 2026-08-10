@@ -2,11 +2,13 @@
 
 Map ID: `FRRM-001-v1`
 
-Stage: Operations Planning Major / `operations_planning_major`
+Current release authority: `FRAB-001-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v1` / `FRCL-001-v1`
 
-Source commit inspected: `7e1e13b5e57ec96bf09b8a9ace652ddf4e7241a7`
+Released product/test candidate: `d37103b46f257cb61ef99f76413611ee31d0fab2`
+
+Image control edge reviewed: `91d98bff27727ccedf2ed74da1392508205e1838`
 
 Released predecessor: `TD-012 / PASS - AS BUILT RELEASED`
 
@@ -20,16 +22,20 @@ from the content, continuity, physical-host, presentation, and First Run release
 proof still required. A position on this map is not permission to change canon,
 learning ownership, save state, route order, or ending behavior.
 
+`FRAB-001-v1` independently releases the bounded `FRWO-001-v1` correction set
+from `FR-00` through initial `FR-05`. It does not release missing physical hosts
+or declare the full address range complete.
+
 ## Address model
 
 | Address | Player-facing surface | Required exit / next address | Content ownership | Current material distance |
 | --- | --- | --- | --- | --- |
-| `FR-00` | Local package and launcher | Truthful local build opens `FR-01` | Product identity; no evidence | Launcher/guide call the complete product a demo and describe an obsolete freeze |
-| `FR-01` | Title, Slot 01 setup, display name, prologue, Chapter I reveal | Final-purpose resumable opening reaches `FR-02` | Pilot/Suit ownership from the lock | Behavior works; visible temporary/story-pass/placeholder copy contradicts a finished opening |
+| `FR-00` | Local package and launcher | Truthful local build opens `FR-01` | Product identity; no evidence | Truthful complete-game launcher/guide released by `FRAB-001-v1`; Demo Tour remains separate and unchanged |
+| `FR-01` | Title, Slot 01 setup, display name, prologue, Chapter I reveal | Final-purpose resumable opening reaches `FR-02` | Pilot/Suit ownership from the lock | Final-purpose opening, save v1, resume, and Chapter I reveal released by `FRAB-001-v1` |
 | `FR-02` | Chapter I — Glass Meadow | Existing low-growth/wet phase ridge reaches `FR-03` | Hosts 01-03; `L01-01` through `L01-03` | Hosts 01-02 exact; Fracture Nursery and the full chapter turn are missing |
-| `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | Learning complete; one shared host compresses twelve clusters; success copy says the route appears |
-| `FR-04` | Chapter III — Witness Corridor | Damp heat-carrying channels reach `FR-05` | Host 16; `L05-07` | Host separation/learning work; tracking/listening/spoken-response copy contradicts silence |
-| `FR-05` | Chapter IV — City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Chapter is accepted compression; obsolete credits/world-response copy interrupts entry |
+| `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy released; one shared host still compresses twelve clusters and hosts 05-15 remain missing |
+| `FR-04` | Chapter III — Witness Corridor | Damp heat-carrying channels reach `FR-05` | Host 16; `L05-07` | Silent, separate, privacy-preserving Terminal copy released; physical-host parity was outside the Work Order |
+| `FR-05` | Chapter IV — City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Direct credits-free handoff into the already-operating city released; two enriched hosts remain missing |
 | `FR-06` | Chapter V — Civic Record District | Heat/material margin reaches `FR-07` | Hosts 19-20; `PY009`, `RAI D1O1` | Compact chapter/learning released; both enriched hosts missing |
 | `FR-07` | Chapter VI — Calibration Margin | Active bypass reaches `FR-08` | Hosts 21-22; `PY010`, `D2O7` | Compact chapter/learning released; both enriched hosts missing |
 | `FR-08` | Chapter VII — Three-Current Reach | Serviced carrier reaches `FR-09` | Hosts 23-24; `PY011`, `D1O4` | Compact chapter/learning released; both enriched hosts missing |
@@ -58,14 +64,13 @@ learning ownership, save state, route order, or ending behavior.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-00` through initial `FR-05` | `FRWO-001-v1 / Unbroken Opening Rail` | Clean launch/onboarding confusion is rubric priority 3; the same obsolete three-scene-demo seam contains active Chapter II-III and Chapter IV-handoff contradictions |
-| 2 | `FR-02` | Distinct Fracture Nursery and complete Glass Meadow turn | Earliest remaining missing physical host after the front-door contradiction pass |
-| 3 | `FR-03` | Drowned pedestrian sequence, hosts 05-15 | Earliest remaining host cluster; requires its own pacing/route pass and may HOLD if immutable media cannot support it |
-| 4 | `FR-05` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
-| 5 | `FR-16` | Final-purpose Measured Horizon literary close | Ending behavior is exact; final content follows earlier journey expression unless a dependency is proven |
-| 6 | Whole game | Completion sweep | Permitted only after every critical surface is independently `FR4 RELEASED` |
+| 1 | `FR-02` | Distinct Fracture Nursery and complete Glass Meadow turn | Earliest remaining missing physical host after released `FRWO-001-v1` |
+| 2 | `FR-03` | Drowned pedestrian sequence, hosts 05-15 | Earliest remaining host cluster; requires its own pacing/route pass and may HOLD if immutable media cannot support it |
+| 3 | `FR-05` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
+| 4 | `FR-16` | Final-purpose Measured Horizon literary close | Ending behavior is exact; final content follows earlier journey expression unless a dependency is proven |
+| 5 | Whole game | Completion sweep | Permitted only after every critical surface is independently `FR4 RELEASED` |
 
-## First Work Order boundary decision
+## Released First Work Order boundary decision
 
 The launcher/demo label, temporary prologue, Drowned route-creation line,
 Witness response language, and mid-rail credits are remnants of one retired
@@ -78,7 +83,8 @@ The pass remains integration-sized because it owns only product identity,
 opening/early-rail copy ownership, and one existing Chapter III-to-IV junction.
 It adds no host, exercise, lesson, save field, world state, branch, asset, or
 later chapter. Missing physical hosts remain separately visible and receive no
-parity promotion.
+parity promotion. Intelligence accepted this boundary as built in
+`FRAB-001-v1`.
 
 ## Global regression radius
 
