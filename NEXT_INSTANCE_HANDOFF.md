@@ -2,37 +2,39 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / SPLIT PRODUCTION LAUNCH-
-READINESS CONTROL ONLY / FRSH-003-v1-VR-57`**
+Current disposition: **`FIRST RUN SHELL READY / EXACT PID-16040 CLEANUP
+VERIFICATION ONLY / FRSH-003-v1-VR-58`**
 
 Stage and release remain HOLD.
 
 Exact next owner: **fresh Combat Engineer**
 
-Immediate control: `FRSH-003-v1-VR-57`
+Immediate control: `FRSH-003-v1-VR-58`
 
-Mission source: `20878104267a31bb2268dbd07d6ac7714a1f9663`
+Mission source: `7f76d6a45e07874d074c42f1bc7c847fabfcbfd2`
 
-VR-56 Call 1 preclear passed. The combined Call 2 was rejected by tool safety
-before execution, so it created no process/PID/request/preview evidence. The
-authorized PID-0 cleanup then passed and proved port 4173 clear. Mission
-classifies Call 2 **`EXECUTION-CONTROL REJECTION / TOOL SAFETY / NON-EXECUTED
-/ NO EVIDENCE / VR-56 CALL 2`**, not a twelfth OPEN item.
+VR-57 production launch/readiness passed: exact transported PID `16040`, root
+HTTP 200 on readiness attempt 1. Call D attempted one stop and proved port 4173
+clear, but its exact PID-absence predicate was 0. No fixture or E2E ran.
+
+Mission classifies **`REQUIRED VERIFICATION / EXECUTION CONTROL / POST-STOP PID
+ABSENCE / VR-57 CALL D`**. This is not candidate/product evidence and does not
+yet add a twelfth OPEN classification; exact cleanup verification decides only
+whether PID recovery is complete or remains unresolved.
 
 Fresh-child capacity remains unavailable; Mission context reuse is disclosed
 and non-evidence.
 
-VR-57 inherits the exact clear-port result and must not repeat it. Combat may
-run only: Call B, exact direct Node/Vite `Start-Process -WindowStyle Hidden
--PassThru` and numeric PID emission with no other action; Call C, transported-
-PID liveness plus bounded suppressed root IWR readiness only; and Call D,
-mandatory exact transported-PID stop plus exact port-4173 clear proof.
+Combat may execute one cleanup-verification call bound only to PID `16040` and
+loopback port 4173. Inspect that exact PID once. If absent, record absence. If
+present, require exact Node process identity; only then stop it once, wait a
+bounded interval, and verify PID absence. Finally query only port 4173 and
+require clear.
 
-The `-WindowStyle Hidden` argument is required by tool safety. No launch call
-may include IWR, cleanup, port/listener query, fixture logic, or deletion.
+No other process/listener/path inspection, ownership discovery, alternate PID,
+second stop, retry, fixture, root/filesystem, browser, E2E, diagnostic,
+summary, verifier, build, test, product/media/protected, or downstream action
+is authorized.
 
-No fixture, root/filesystem, formal served identity, browser, E2E, diagnostic,
-summary, verifier, build, test, PBA, product/media/protected action, or retry is
-authorized. The single E2E budget, candidates, cumulative gates/invariants,
-and all eleven OPEN classifications remain exact. Return VR-57 scalars to
-fresh Mission; no downstream action is authorized.
+The E2E budget remains unspent. Frozen candidates, cumulative gates/invariants,
+and all eleven OPEN classifications remain exact pending the VR-58 result.
