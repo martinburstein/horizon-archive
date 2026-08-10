@@ -199,29 +199,52 @@ exact-next-action authority.
   Quartermaster remains blocked.
 - Functional report is `Production Pipeline/First Run/
   FIRST_RUN_FUNCTIONAL_REPORT_FRCE-003-v1.md`.
+- Mission adjudicated the hold as **`HOLD / RETURN TO SCIENCE /
+  FRSH-003-v1-VR-01`** at source
+  `4ad1d44e67d1c2e44b03afefc1c47983c60adc74`.
+- Exact product candidate `a9776e337f1820776864a5690332c364d0fb2556`,
+  exact corrected two-assertion harness
+  `bf58e528bc6ce4088f81f2c782ce2895259ab9fd`, all seven placeholders,
+  exact `45/75/20/25`, `>=44 x 44`, crop/center/overlap/containment,
+  focus/forced-color, PBA, media, single-E2E, summary, verifier, and cleanup
+  gates are frozen. No rounding, waiver, product repair, or new E2E is
+  authorized.
+- The theoretical `45px` versus live `43.90625px` retained-height conflict is
+  routed to Science. Science must reconcile frame border box, hotspot
+  containing block, rendered image content box, and DOM target/label box and
+  either freeze one exact code-only non-weakened mechanism or continue HOLD.
+- Only after Science `READY`, Tactical must clarify source transforms from the
+  actual rendered `.scene-art` content box and require a keyboard-induced
+  Host 05 `:focus-visible` forced-color probe. Programmatic `host.focus()`
+  after pointer modality is not acceptance evidence.
+- Variance artifact is `Production Pipeline/First Run/
+  FIRST_RUN_SHELL_VARIANCE_FRSH-003-v1-VR-01.md`.
 
-## Exact next action - Mission Captain only
+## Exact next action - Office of Science Administrator only
 
-Read `First Run Agent Profiles/mission-captain.md` in full, then read this
-handoff, `FRVE-003-v1`, `FRSH-003-v1`, `FRPX-003-v1`, and the complete
-`FRCE-003-v1` live-variance evidence. Adjudicate before another Combat run.
+Read `First Run Agent Profiles/office-of-science-administrator.md` in full,
+then read this handoff, `FRSH-003-v1-VR-01`, `FRVE-003-v1`, `FRSH-003-v1`,
+`FRPX-003-v1`, complete `FRCE-003-v1`, and the exact current coordinate/style
+controls without changing them.
 
-Preserve product candidate `a9776e337f1820776864a5690332c364d0fb2556`,
-corrected harness candidate `bf58e528bc6ce4088f81f2c782ce2895259ab9fd`,
-all seven placeholders, and every threshold. Route the exact `25%` height
-versus live `43.90625px` / required `44px` contradiction back to Science.
-Obtain Tactical clarification for source mapping against the rendered image
-content box and for a keyboard-induced `:focus-visible` forced-color probe.
+Issue exactly one versioned `FRVE-003-v1-VR-01` **`POLISH VIABILITY READY`**
+or **`HOLD`**. The sole goal is to preserve exact `45/75/20/25` physical
+registration against the rendered immutable Drowned image while making the
+actual Host 05 semantic activation at least `44 x 44` at both retained
+layouts, with visible identity/state contained and every crop, center,
+retention, overlap, PBA, accessibility, and media gate unchanged.
 
-Issue a versioned shell variance decision that produces one implementable,
-non-weakened acceptance contract, or continue HOLD. Do not authorize another
-complete E2E, change product/meaning/media, advance Quartermaster, or relax a
-geometry, label, focus, forced-color, summary, verifier, or performance gate
-until the contradiction is resolved.
+Define exact bordered frame, hotspot containing block, rendered image content
+box, target, and label/state coordinate spaces at all six layouts. Explain the
+theoretical `64 x 45` versus live `62.796875 x 43.90625` result. Freeze the
+narrowest implementable code/configuration mechanism and exact measurements,
+or continue HOLD if the requirements cannot coexist. Tactical follows only
+after Science `READY`; Mission must readjudicate before Combat.
 
-Do not write final prose, inspect the repository QA quarantine, change media,
-alter learning/save/route/world/ending, repair the City contradiction, expand
-Host 06-15, advance maturity, begin Quartermaster, create a schedule, or call
+Do not edit product/test/harness/manifest/media/copy, run E2E, round or relax a
+threshold, inspect the repository QA quarantine or user state, begin Tactical,
+authorize Combat/Quartermaster, alter learning/save/route/world/ending, repair
+City, expand Host 06-15, advance maturity, create a schedule/reveal, or call
 `FIRST RUN COMPLETE`.
 
 ## Protected boundaries
