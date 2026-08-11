@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v5`
+Scoreboard ID: `FRSB-005-v6`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v5`
+Release map: `FRRM-005-v6`
 
-Operations source inspected: `796262d392e49e66cd635b4b016624dd5138f606`
+Operations source inspected: `b37f2057cbee5a2ab986f56f5326417dee7aac84`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -18,17 +18,18 @@ Date: **2026-08-11**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v5 / Stranded Lens Cradle - Explicit
-CLI/API Source and Fixed Lesson Integration`**.
+Selected bounded Work Order: **`FRWO-005-v6 / Stranded Lens Cradle - Direct
+Image API Source and Fixed Lesson Integration`**.
 
 The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
 remains withdrawn and closed without production, and its negative finding
 remains exact for the old immutable source. Martin explicitly authorized the
-CLI/API boundary, and `FRWO-005-v5` is the versioned distinct new-source Work
-Order under `FRPB-001-v2` / `FRCL-004-v2`. It freezes the immutable installed
-`image_gen.py` identity, `gpt-image-2`, one output per sequential call, exact
-predeclared OS-temp `--out` paths, no managed discovery or result hint, exact
-cleanup, and the unchanged candidate/import/release gates. The immutable
+direct Image API boundary, and `FRWO-005-v6` is the versioned distinct
+new-source Work Order under `FRPB-001-v2` / `FRCL-004-v2`. It withdraws the
+defective CLI and freezes the exact endpoint and `gpt-image-2` request,
+env-only secret handling, one bounded response, exclusive create-new staging,
+strict PNG proof, atomic no-replace move, exact cleanup, and the unchanged
+candidate/import/release gates. The immutable
 accepted-media manifest gate remains exact. Selection and media authority are
 not as-built evidence; no maturity cell or host inventory advances.
 
@@ -110,7 +111,7 @@ no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
 Martin's bounded media authorization and `FRPB-001-v2` permit the distinct
-successor `FRWO-005-v5` to own at most one eventual canonical additional
+successor `FRWO-005-v6` to own at most one eventual canonical additional
 Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03` integration.
 Its target `1 accepted shared compression / 2 exact / 9 missing` is not current
 candidate or maturity evidence. Current `FR-03` remains exactly `1
@@ -121,9 +122,10 @@ unadvanced Witness expression`.
 One fresh Science context is the exact next owner. It must independently
 revalidate the generatable/runtime-polishable asset envelope; ordinal 1
 permanently consumed, ordinals 2/3 remaining, and current conservative managed
-residual count 1; immutable installed CLI path/SHA/help/output behavior;
-boolean-only key presence; exact `gpt-image-2` one-output argument vector and
-literal predeclared OS-temp `--out`; create-new/race/partial-write behavior;
+residual count 1; exact endpoint/model/request/response behavior; boolean-only
+key presence and env-only Authorization; exact `gpt-image-2` one-output
+request; bounded JSON/base64 handling; exclusive staging and atomic no-replace
+move to the literal predeclared OS-temp attempt path;
 pre-pixel PNG/sRGB/dimension/size/metadata/CRC/decode gates; exact rejected /
 selected cleanup; and selected byte-identical import/provenance. The
 pre-generation Combat manifest,

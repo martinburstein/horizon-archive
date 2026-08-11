@@ -2,12 +2,12 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`POLISH VIABILITY HOLD / FRVE-005-v5 / IMMUTABLE CLI
-CREATE-NEW AND RACE CONTRACT FAILED / OPERATIONS RETURN REQUIRED`**
+Current disposition: **`WORK ORDER READY / FRWO-005-v6 / DIRECT IMAGE API
+WITH EXCLUSIVE STAGING AND ATOMIC NO-REPLACE MOVE / FRESH SCIENCE REQUIRED`**
 
-Current Work Order / Science envelope: `FRWO-005-v5` / `FRVE-005-v5`
+Current Work Order / prior Science envelope: `FRWO-005-v6` / `FRVE-005-v5`
 
-Planning controls: `FRRM-005-v5` / `FRSB-005-v5`
+Planning controls: `FRRM-005-v6` / `FRSB-005-v6`
 
 Effective prior shell: `FRSH-005-v1` through `FRSH-005-v1-VR-07`
 
@@ -24,40 +24,45 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Operations Planning Major /
-`operations_planning_major`**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-## Science decision
+## Operations decision
 
-The exact installed CLI identity, help surface, `gpt-image-2` model,
-`3840x2160` high-quality opaque-PNG dry-run payload, one declared `--out`,
-unchanged `--no-augment` prompt behavior, boolean API-key presence, and TCP
-network preflight passed without a generation or API request.
+Operations accepts `FRVE-005-v5`: the immutable CLI has a TOCTOU truncating
+final-path write and the declared Python environment lacks `openai`. The CLI,
+Python SDK, dependency install, and any script edit/helper are withdrawn.
 
-The immutable script is not create-new or race safe. It checks
-`out_path.exists()` and later calls `out_path.write_bytes(...)`; the latter is
-an ordinary truncating write. A target created between those two operations
-can be overwritten without `--force`, and an interrupted direct write can
-leave a partial final-path candidate. There is no atomic create-new handle,
-atomic rename, handle identity, or cleanup transaction. The defect cannot be
-cured without a script edit, wrapper, or different transport, all forbidden
-by `FRWO-005-v5`.
+Martin's explicit direct-API authority is now expressed by `FRWO-005-v6` as
+`HOST06-IMAGE-API-PSNET-v1`: native Windows PowerShell 5.1/.NET HttpClient,
+exact `POST https://api.openai.com/v1/images/generations`, model
+`gpt-image-2`, one high-quality `3840x2160` opaque PNG, exact unchanged
+`HOST06-GEN-PROMPT-v1`, and exactly one bounded in-memory
+`data[0].b64_json` response per active ordinal. Authorization comes only from
+the nonempty `OPENAI_API_KEY` environment value and is never printed, logged,
+serialized, or retained.
 
-The declared platform `python` also lacks the required `openai` package. No
-install or environment mutation occurred. This dependency stop is independent
-of and does not cure the decisive exact-target defect.
+The response and base64 are capped and strictly validated. Decoded bytes are
+written only to the active predeclared staging path with
+`FileMode.CreateNew`, `FileShare.None`, `Flush(true)`, and close; exact bytes,
+SHA-256, and strict PNG structure are then validated before one same-directory
+two-argument `File.Move` to absent `attempt-02.png` or `attempt-03.png`. The
+move must be atomic and no-replace; a destination race fails without overwrite.
+Any transport/materialization failure receives exact owned cleanup, consumes
+the active ordinal, and stops without retry. Ordinal `3` remains available
+only after a fully identified objective source rejection and exact cleanup.
 
-Science therefore issued `HOLD / FRVE-005-v5`. No Mission, generation/API
-call, ordinal consumption, candidate, import, reveal, or release is
-authorized.
+No CLI, SDK, generated-images path, `output_hint`, managed-output discovery,
+data URL, script file/edit/helper, reference/edit/variation, accepted-media
+input, or alternate transport is permitted.
 
 ## Preserved state
 
-The predeclared live root and exact `attempt-02.png` / `attempt-03.png` targets
-remain absent and unallocated. Ordinal `1` remains permanently consumed and
-opaque; ordinals `2` and `3` remain unconsumed and unavailable. Conservative
-managed-residual count remains exact `1`, associated only with ordinal `1`.
-VR-65 remains separate and inaccessible.
+The predeclared API root, both staging paths, and exact `attempt-02.png` /
+`attempt-03.png` targets remain absent and unallocated. Ordinal `1` remains
+permanently consumed and opaque; ordinals `2` and `3` remain unconsumed and
+unavailable. Conservative managed-residual count remains exact `1`, associated
+only with ordinal `1`. VR-65 remains separate and inaccessible.
 
 The fixed Host 05 -> one dry same-basin Host 06 lens/cradle relation -> sole
 unchanged `L02-03` -> unchanged next Drowned boundary, all PNG/CRC/decode,
@@ -68,13 +73,23 @@ and maturity state remain unchanged.
 
 ## Exact next action
 
-One fresh Operations Planning Major reads complete `FRVE-005-v5` and
-`FRWO-005-v5`, accepts the Science counterexample, and issues exactly one new
-versioned `WORK ORDER READY`, `REVISE`, or `HOLD` artifact. Operations may
-withdraw the CLI route or seek Martin's explicit decision for a materially
-different ingress, script/dependency authority, or termination. It may not
-reinterpret the current CLI as atomic create-new, silently edit/install/wrap,
-authorize Mission, call the generator/API, consume ordinal `2`, allocate the
-live root, inspect pixels, access managed outputs or residuals, import media,
-write copy/provenance, run E2E, reveal, advance maturity, close an OPEN record,
-schedule, automate, push, release, or call `FIRST RUN COMPLETE`.
+One fresh Office of Science Administrator reads complete `FRWO-005-v6`,
+`FRVE-005-v5`, current map/scoreboard, and exact Host 06 controls. Without a
+generation or API call, live-root allocation, or pixel review, Science must
+independently fixture-prove the authoritative endpoint/request/response shape,
+env-only secret boundary, single-send/no-retry HTTP behavior, response caps,
+strict UTF-8/JSON/base64 parsing, exact path containment, exclusive staging,
+flush/close/byte/PNG identity, atomic no-replace destination-race behavior,
+and every cleanup branch. It then issues exactly one new versioned `POLISH
+VIABILITY READY`, `REVISE`, or `HOLD` artifact.
+
+If any direct API response, parser, secret, cap, staging, move, or cleanup
+property cannot be frozen from authoritative local references and installed
+framework behavior, Science must `HOLD`; it may not invent or install a
+substitute.
+
+Science may not authorize Mission; invoke generation/API; consume ordinal `2`;
+inspect pixels; allocate the live root; import media; write copy/provenance;
+access managed outputs/residuals or VR-65; run E2E; reveal; advance maturity;
+close an OPEN record; schedule; automate; push; release; or call `FIRST RUN
+COMPLETE`.
