@@ -2,11 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / PRE-HELPER ONE-PROCESS HOST FAILURE /
-ORDINALS 2-3 PRESERVED / NO MEDIA CANDIDATE / FRCA-005-v3`**
+Current disposition: **`HOLD / PRE-HELPER FAILURE SOURCE UNRETAINED /
+SYNTHETIC TRANSPORT VIABLE / NO PRODUCTION RETRY / FRVE-005-v7-VR-04`**
 
 Current Work Order / decisive Science return: `FRWO-005-v7` /
-`FRVE-005-v7-VR-03`
+`FRVE-005-v7-VR-04`
+
+Quartermaster return: `FRCA-005-v3`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-08`
 
@@ -14,8 +16,6 @@ Effective treatment / blueprint: `FRDT-005-v1-VR-01` /
 `FRPX-005-v1-VR-01`
 
 Functional report: `FRCE-005-v1-VR-05`
-
-Quartermaster return: `FRCA-005-v3`
 
 Corrected inert code candidate:
 `f4b2062508f9e0606953a4cc9bcdaff09b66ebc4`
@@ -30,41 +30,47 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Quartermaster result
+## Science result
 
-Quartermaster independently proved exact synchronization, immutable manifest
-identity, the `{2,3}` selected-source guard, absent product targets, null-first
-registry/copy/alt state, and absent helper/live roots.
+Science proved the short exact Windows PowerShell `5.1.26100.8875`, 64-bit,
+task-environment -> parser -> `ScriptBlock.Create` -> invocation transport
+with a credential-cleared synthetic child and no request or controlled-root
+action. It also proved a concrete PS5.1 pre-root hazard: `New-Item` has no
+`LiteralPath` parameter and rejects that form during parameter binding before
+path resolution. `Directory.CreateDirectory` plus exact nonrecursive deletion
+passed on one disposable short synthetic root, which was restored to absence.
 
-The final exact 64-bit Windows PowerShell `5.1.26100.8875` one-process host
-failed closed before helper-root creation with the sole retained code
-`STABLE_LOCAL_FAILURE`. Exact post-stop checks proved the helper root, DLL,
+That hazard cannot be attributed to the failed Quartermaster block because
+`FRCA-005-v3` retained neither the script nor the earliest predicate,
+exception class, or fully-qualified error ID. The exact failed production
+statement is therefore unavailable. Science will not invent it or authorize
+a retry from a synthetic resemblance.
+
+Exact post-fixture checks prove the synthetic root, helper root, helper DLL,
 live root, both ordinal stage-target pairs, product raster, and provenance all
-absent. The production sequence did not read the API credential or begin
-`SendAsync`; direct API sends remain exact `0`; ordinals `2` and `3` remain
-unconsumed. No media, pixel, preview, copy, provenance, registry, copy, alt,
+absent. Direct API sends remain exact `0`; ordinals `2` and `3` remain
+unconsumed. No media, pixel, preview, copy, provenance, registry, alt, product,
 test, build, browser, or E2E action occurred.
-
-The shell makes this execution-control failure terminal for Quartermaster.
-No retry, ordinal `3`, alternate host, parser change, cleanup weakening,
-diagnostic recovery, or source import is authorized.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads the complete current intake,
-full Science profile, `FRCA-005-v3`, complete `FRWO-005-v7`, decisive
+One fresh Mission Captain reads the complete current intake, full Mission
+profile, `FRVE-005-v7-VR-04`, `FRCA-005-v3`, complete `FRWO-005-v7`, decisive
 `FRVE-005-v7-VR-03`, complete effective shell, treatment, blueprint,
-`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and exact pre-helper execution
-boundary.
+`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and the exact pre-helper
+execution boundary.
 
-Science adjudicates only the stable pre-helper one-process host failure and
-issues one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact.
-A corrected retry path requires a new Mission shell variance before any fresh
-Quartermaster action. Science may not compile/invoke the helper, allocate the
-live root, read a credential, call the API, consume ordinal `2`, inspect
-media/pixels, change product/tests, run E2E, reveal, advance maturity, close an
-OPEN record, access a residual or VR-65, schedule, automate, push, release, or
-call `FIRST RUN COMPLETE`.
+Mission issues one versioned shell `REVISE` or `HOLD` result. A revision must
+freeze the exact short launcher, nonsecret pre-helper script bytes/length/SHA,
+PS5.1-compatible root-creation primitive, stable pre-helper predicate IDs,
+allowlisted diagnostic retention, and mandatory fresh Science no-request
+fixture. It must return that exact form to fresh Science; it may not route
+directly to Quartermaster.
+
+Mission may not execute a helper, allocate a helper/live root, read a
+credential, call the API, consume ordinal `2`, inspect media/pixels, change
+product/tests, run E2E, reveal, advance maturity, close an OPEN record, access
+a residual or VR-65, schedule, automate, push, release, or call
+`FIRST RUN COMPLETE`.
