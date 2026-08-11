@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / DETERMINISTIC FOUR-CHUNK
-CANONICAL PARENT CARRIER RETENTION / ONE PARSER / NO EXECUTION / FRESH SCIENCE
-REQUIRED / FRSH-005-v1-VR-19`**
+Current disposition: **`HOLD / FOUR-CHUNK CANONICAL PARENT CARRIER CONTENTS
+ABSENT / NO PARSER / NO EXECUTION / FRESH MISSION REQUIRED /
+FRVE-005-v7-VR-17`**
 
 Current Work Order: `FRWO-005-v7`
 
-Current Science return: `FRVE-005-v7-VR-16`
+Current Science return: `FRVE-005-v7-VR-17`
 
 Current Mission shell decision: `FRSH-005-v1-VR-19`
 
@@ -34,53 +34,41 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission correction
+## Science return
 
-Mission accepts `FRVE-005-v7-VR-16` as an honest no-execution HOLD. The
-already-proved parser-clean parent is exact `48,615` ASCII bytes, SHA-256
-`3e0250a1e06e1ed1d26a9d0f16f08bf10a3fc209e4d33251cd2884a1b4b4ef5f`;
-its canonical Base64 carrier is exact `64,820` ASCII characters. The prior
-single result truncated at `40,021` characters and is rejected.
+Fresh Science accepted `FRSH-005-v1-VR-19` only as a no-execution retention
+contract. The shell freezes four offsets and lengths, an aggregate decoded
+identity, and a validation schema, but supplies no content for any chunk.
+Repository inspection found no persistent `chunkOrdinal=01` block. The prior
+`FRVE-005-v7-VR-16` rejected its truncated `40,021`-character prefix and
+retained no authoritative carrier.
 
-`FRSH-005-v1-VR-19` authorizes one fresh parser-and-retention pass using exactly
-four ordered chunks with lengths `16,384`, `16,384`, `16,384`, and `15,668`.
-Science records each exact per-chunk length and SHA-256, the complete
-carrier SHA-256, and exact ordered reconstruction/decode/candidate identity.
-Only the four report blocks are persistent; no source, carrier, decoded,
-runtime, scratch, temp, cache, or intermediate file may exist.
-
-Historical ordinal `1` remains opaque and unchanged. Ordinals `2` and `3`
-remain unstarted and unconsumed. No Host 06 raster or provenance exists.
+Science cannot derive source bytes from lengths or hashes and cannot invent an
+exact `64,820`-character canonical carrier. It therefore performed no
+candidate construction, parser operation, bootstrap, parent, child, helper,
+credential, API, generation, media, controlled-root, product, test, browser,
+or E2E operation. Exact parent executions, child invocations, credential value
+reads, request constructions, `SendAsync` calls, direct sends, and ordinals
+consumed remain `0`. Historical ordinal `1` remains opaque and unchanged;
+ordinals `2` and `3` remain unstarted and unconsumed. No Host 06 raster or
+provenance exists.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads the complete active intake,
-full Science profile, complete `FRSH-005-v1-VR-19`, complete
-`FRVE-005-v7-VR-16`, complete `FRSH-005-v1-VR-18`, complete
-`FRVE-005-v7-VR-15`, complete `FRSH-005-v1-VR-17`, complete
-`FRSH-005-v1-VR-16`, and all exact cited effective controls.
+One fresh Mission Captain reads the complete active intake, full Mission
+profile, complete `FRVE-005-v7-VR-17`, complete `FRSH-005-v1-VR-19`, complete
+`FRVE-005-v7-VR-16`, and all exact cited controls. Mission issues exactly one
+versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD` decision that either
+supplies an exact, complete, bounded authoritative representation of the
+already-proved canonical parent carrier or stops the unavailable
+reconstruction path.
 
-Science reconstructs the exact candidate in memory, proves its frozen identity,
-performs exactly one local `Parser.ParseInput` operation, and on parser zero
-canonical-Base64-encodes it. It retains exactly four unwrapped ordered chunks
-at offsets `[0,16384)`, `[16384,32768)`, `[32768,49152)`, and
-`[49152,64820)`, with exact per-chunk length/SHA and complete-carrier SHA.
-It then reads those report blocks, revalidates every chunk, concatenates them in
-order, proves canonical Base64/decode-reencode and decoded identity to exact
-`48,615` bytes / SHA
-`3e0250a1e06e1ed1d26a9d0f16f08bf10a3fc209e4d33251cd2884a1b4b4ef5f`,
-and compares that decoded identity to the single already-parsed candidate. It
-does not parse again. PASS is only `POLISH VIABILITY READY / DISPOSABLE PARENT
-GRAMMAR AND CHUNKED CARRIER RETENTION SUBGATE PASSED / MISSION IMMUTABLE-
-CARRIER FREEZE REQUIRED`; otherwise exact HOLD. Science commits only its
-variance and this handoff and does not push.
-
-Science may not execute the candidate; invoke a bootstrap, parent, child, or
-helper; read or change a credential; route to Quartermaster; execute generation
-or API; allocate the live root; construct a request; call `SendAsync`; consume
-ordinal `2`; inspect media/pixels; change product/tests; run E2E; reveal;
-advance maturity; close an OPEN record; access a residual or VR-65; schedule;
-automate; push; release; or call `FIRST RUN COMPLETE`.
+Mission may not treat chunk lengths, offsets, or hashes as chunk contents; use
+the rejected truncated prefix; execute a bootstrap, parent, child, or helper;
+read or change a credential; route to Quartermaster; generate or call an API;
+allocate the live root; construct a request; call `SendAsync`; consume ordinal
+`2`; inspect media/pixels; change product/tests; run E2E; reveal; advance
+maturity; close an OPEN record; access a residual or VR-65; schedule; automate;
+push from Science; release; or call `FIRST RUN COMPLETE`.
