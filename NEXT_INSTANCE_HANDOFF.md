@@ -2,19 +2,19 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / DISPOSABLE PARENT PARSER ZERO BUT REQUIRED
-COMPLETE CANONICAL CARRIER NOT RETAINED / NO EXECUTION / FRESH MISSION
-REQUIRED / FRVE-005-v7-VR-16`**
+Current disposition: **`FIRST RUN SHELL READY / DETERMINISTIC FOUR-CHUNK
+CANONICAL PARENT CARRIER RETENTION / ONE PARSER / NO EXECUTION / FRESH SCIENCE
+REQUIRED / FRSH-005-v1-VR-19`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Science return: `FRVE-005-v7-VR-16`
 
-Current Mission shell decision: `FRSH-005-v1-VR-18`
+Current Mission shell decision: `FRSH-005-v1-VR-19`
 
 Quartermaster return: `FRCA-005-v4`
 
-Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-18`
+Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-19`
 
 Effective treatment / blueprint: `FRDT-005-v1-VR-01` /
 `FRPX-005-v1-VR-01`
@@ -34,52 +34,53 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-## Science result
+## Mission correction
 
-Fresh Science constructed one complete prospective parent candidate in memory,
-canonical-Base64-encoded and decoded it, proved exact byte identity, and called
-only `System.Management.Automation.Language.Parser.ParseInput` once on the
-decoded identity. It performed no execution, process, bootstrap, parent, child,
-helper, credential, API, media, controlled-root, product, test, browser, or E2E
-operation.
+Mission accepts `FRVE-005-v7-VR-16` as an honest no-execution HOLD. The
+already-proved parser-clean parent is exact `48,615` ASCII bytes, SHA-256
+`3e0250a1e06e1ed1d26a9d0f16f08bf10a3fc209e4d33251cd2884a1b4b4ef5f`;
+its canonical Base64 carrier is exact `64,820` ASCII characters. The prior
+single result truncated at `40,021` characters and is rejected.
 
-The exact candidate was strict ASCII, LF-only, final-LF, `48,615` characters
-and bytes, SHA-256
-`3e0250a1e06e1ed1d26a9d0f16f08bf10a3fc209e4d33251cd2884a1b4b4ef5f`,
-with each immutable runtime carrier exactly once. The sole parser operation
-returned `parserErrorCount=0` and `tokenCount=1441`.
-
-The canonical carrier was exact `64,820` ASCII characters, but bounded
-controller transport truncated it at `40,021`. Science rejected the
-incomplete carrier and did not create a forbidden source or carrier
-intermediate. Because `FRSH-005-v1-VR-18` makes missing complete carrier on
-parser-zero a HOLD, the parser-clean candidate is not yet an immutable
-Mission-inspectable execution authority.
+`FRSH-005-v1-VR-19` authorizes one fresh parser-and-retention pass using exactly
+four ordered chunks with lengths `16,384`, `16,384`, `16,384`, and `15,668`.
+Science records each exact per-chunk length and SHA-256, the complete
+carrier SHA-256, and exact ordered reconstruction/decode/candidate identity.
+Only the four report blocks are persistent; no source, carrier, decoded,
+runtime, scratch, temp, cache, or intermediate file may exist.
 
 Historical ordinal `1` remains opaque and unchanged. Ordinals `2` and `3`
 remain unstarted and unconsumed. No Host 06 raster or provenance exists.
 
 ## Exact next action
 
-One fresh Mission Captain reads the complete active intake, full Mission
-profile, complete `FRVE-005-v7-VR-16`, complete
-`FRSH-005-v1-VR-18`, complete `FRVE-005-v7-VR-15`, complete
-`FRSH-005-v1-VR-17`, complete `FRSH-005-v1-VR-16`, and all exact cited
-effective controls.
+One fresh Office of Science Administrator reads the complete active intake,
+full Science profile, complete `FRSH-005-v1-VR-19`, complete
+`FRVE-005-v7-VR-16`, complete `FRSH-005-v1-VR-18`, complete
+`FRVE-005-v7-VR-15`, complete `FRSH-005-v1-VR-17`, complete
+`FRSH-005-v1-VR-16`, and all exact cited effective controls.
 
-Mission issues exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or
-`HOLD` decision that supplies a bounded, no-execution retention transport for
-the already-proved `64,820`-character canonical carrier or authorizes one
-fresh parser-and-retention pass without relaxing the no-file, no-execution,
-no-credential, no-API, no-media, no-controlled-root, one-parser, and no-retry
-rules.
+Science reconstructs the exact candidate in memory, proves its frozen identity,
+performs exactly one local `Parser.ParseInput` operation, and on parser zero
+canonical-Base64-encodes it. It retains exactly four unwrapped ordered chunks
+at offsets `[0,16384)`, `[16384,32768)`, `[32768,49152)`, and
+`[49152,64820)`, with exact per-chunk length/SHA and complete-carrier SHA.
+It then reads those report blocks, revalidates every chunk, concatenates them in
+order, proves canonical Base64/decode-reencode and decoded identity to exact
+`48,615` bytes / SHA
+`3e0250a1e06e1ed1d26a9d0f16f08bf10a3fc209e4d33251cd2884a1b4b4ef5f`,
+and compares that decoded identity to the single already-parsed candidate. It
+does not parse again. PASS is only `POLISH VIABILITY READY / DISPOSABLE PARENT
+GRAMMAR AND CHUNKED CARRIER RETENTION SUBGATE PASSED / MISSION IMMUTABLE-
+CARRIER FREEZE REQUIRED`; otherwise exact HOLD. Science commits only its
+variance and this handoff and does not push.
 
-Mission may not treat parser-zero metrics as a retained carrier; execute the
-candidate; invoke a bootstrap, parent, child, or helper; read or change a
-credential; route to Quartermaster; execute generation/API; allocate the live
-root; construct a request; call `SendAsync`; consume ordinal `2`; inspect
-media/pixels; change product/tests; run E2E; reveal; advance maturity; close an
-OPEN record; access a residual or VR-65; schedule; automate; release; or call
-`FIRST RUN COMPLETE`.
+Science may not execute the candidate; invoke a bootstrap, parent, child, or
+helper; read or change a credential; route to Quartermaster; execute generation
+or API; allocate the live root; construct a request; call `SendAsync`; consume
+ordinal `2`; inspect media/pixels; change product/tests; run E2E; reveal;
+advance maturity; close an OPEN record; access a residual or VR-65; schedule;
+automate; push; release; or call `FIRST RUN COMPLETE`.
