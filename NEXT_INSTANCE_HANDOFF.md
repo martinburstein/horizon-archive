@@ -2,8 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`POLISH VIABILITY READY / FRRC-003-v4 REMAINS HELD /
-MISSION CHANGE-TIME QUIESCENCE VARIANCE REQUIRED`**
+Current disposition: **`FIRST RUN SHELL READY / FRRC-003-v5 FROZEN / ONE
+FRESH COMBAT CREATE AUTHORIZED AFTER EXACT SYNC`**
 
 Martin's controlling decision: **`Authorized new Drowned Media for Host 06`**
 
@@ -11,10 +11,14 @@ Work Order / viability / effective Science variances: `FRWO-005-v2` /
 `FRVE-005-v2` / `FRVE-005-v2-VR-01` / `FRVE-005-v2-VR-02`
 
 Base shell / effective Mission variances: `FRSH-005-v1` /
-`FRSH-005-v1-VR-01` / `FRSH-005-v1-VR-02` / `FRSH-005-v1-VR-03`
+`FRSH-005-v1-VR-01` / `FRSH-005-v1-VR-02` /
+`FRSH-005-v1-VR-03` / `FRSH-005-v1-VR-04`
 
 Consumed release-command manifests: `FRRC-003-v2` / `FRRC-003-v3` /
 `FRRC-003-v4`
+
+Authorized superseding manifest / launcher: `FRRC-003-v5` /
+`FIRST_RUN_RELEASE_COMMAND_LAUNCHER_FRRC-003-v5.ps1`
 
 Latest Combat return: `FRCE-005-v1-VR-03 / HOLD`
 
@@ -26,65 +30,73 @@ Frozen candidate tree:
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **fresh Mission Captain / `mission_captain`**
+Exact next owner: **fresh Combat Engineer / `combat_engineer`**
 
-## Science adjudication
+## Mission release
 
-Fresh Science accepted Combat's v4 stop as exact and permanent. The consumed
-attempt emitted only `metadata drift ChangeTime`; it supplied no affected
-ordinal, settled snapshot, complete Cloud placeholder information, tuple,
-digest, final candidate scalar, or reusable manifest evidence. `FRAM-001-v1`
-remains absent and v4 may not be retried, recomputed, repaired, or reclassified.
+Fresh Mission issued `FRSH-005-v1-VR-04` and immutable `FRRC-003-v5`.
+The v5 adapter preserves the exact `FILE_SHARE_READ`-only same data handle,
+full path/volume/128-bit identity, creation/write time, attributes/tag/derived
+Cloud state, allocation/EOF/link/delete/directory domain, raw length/SHA, and
+complete `CF_PLACEHOLDER_STANDARD_INFO` fields. It requires exact in-sync,
+zero modified data, fully validated/on-disk content equal to EOF, valid stable
+Cloud IDs/pin/property/opaque identity, and ordinary-file ChangeTime equality.
 
-Official Windows semantics distinguish `LastWriteTime`, which belongs to the
-underlying data stream, from `ChangeTime`, which records file-metadata changes
-such as rename and attribute updates. The v4 `FILE_SHARE_READ`-only data handle
-also excluded an existing or later writable handle or writable mapping while
-it remained open. A bare monotonic `ChangeTime` advance is therefore not, by
-itself, evidence that the hashed content stream changed.
+A Cloud-only sole monotonic ChangeTime advance enters a maximum `2,000 ms`
+same-handle settle: first complete sample after `250 ms`, `250 ms` cadence,
+maximum eight samples, and two consecutive identical complete snapshots.
+Any fixed-field delta, reversal, later ChangeTime movement, timeout,
+topology/residency disagreement, or reconfirmation drift stops. The command
+emits per-ordinal access/change status and advanced before/immediate/settled
+FILETIME, elapsed, and sample-count scalars; none enters tuple identity.
+Nothing is repaired or suppressed.
 
-Science found the manifest gate prospectively viable only under
-`FRVE-005-v2-VR-02`'s stronger fail-closed adapter: unchanged path, volume and
-128-bit file ID, creation/last-write times, attributes/tag/derived Cloud state,
-allocation/EOF/link/delete/directory state, raw length/SHA, and complete
-`CF_PLACEHOLDER_STANDARD_INFO`; no name-surrogate, topology, residency,
-modified-data, validation, pin, in-sync, sync-root, or opaque identity drift;
-monotonic access/change times; and, for a Cloud-only change-time advance, a
-same-handle bounded `2,000 ms` settle with two consecutive identical complete
-snapshots. The exact transition is recorded as scalars and never repaired or
-inserted into tuple identity.
+Frozen v4 SHA-256:
+`9db5b4dde14f944bfb435c59cf9e40a5835eeed46bac199c2916b9937eba4196`
 
-Science opened or queried no accepted-media path and ran no data, pixel, test,
-build, preview, E2E, generation, import, release, reveal, or mutation operation.
-The frozen candidate/tree, inherited gates, generation ordinals `0`, maturity,
-OPEN records, and VR-65 remain unchanged.
+Frozen v5 SHA-256:
+`6b2d8dc1ad71640394a9c9fcca244072cce608f2dc571642ab8b1444b2941e03`
+
+Frozen v5 launcher SHA-256:
+`6218e7efd2e9758f902e631d443ac4ad999e19b6ab638031ccfd6a7276a163b0`
+
+Mission proved JSON, launcher AST, joined primitive AST, embedded C# compile,
+exact literal/count/component/total set, frozen candidate/tree, and
+`FRAM-001-v1` absence using control files and Git objects only. It did not
+invoke v5, retry v4, or query an accepted-media path. Candidate, inherited
+gates, generation ordinals `0`, maturity, OPEN records, and VR-65 are
+unchanged.
 
 ## Exact next action
 
-One fresh Mission Captain reads in full `AGENTS.md`, this handoff,
-`FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Mission profile,
-`FRCE-005-v1-VR-03`, `FRVE-005-v2-VR-01`,
-`FRVE-005-v2-VR-02`, `FRSH-005-v1-VR-01`,
-`FRSH-005-v1-VR-03`, and `FRRC-003-v4`.
+One fresh Combat Engineer reads in full `AGENTS.md`, this handoff,
+`FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Combat profile,
+`FRCE-005-v1-VR-03`, `FRVE-005-v2-VR-02`,
+`FRSH-005-v1-VR-04`, immutable `FRRC-003-v4`, `FRRC-003-v5`, and the exact
+v5 launcher.
 
-Mission issues one versioned `FRSH-005-v1-VR-04` and superseding
-`FRRC-003-v5` manifest/launcher implementing the exact Science snapshot,
-Cloud-standard-info, monotonic-time, bounded-settle, scalar-recording, no-
-repair, and no-retry contract without changing the frozen candidate, literals,
-tuple schema, count, total, gates, timeout, or protected boundaries. Mission
-runs only control-file, AST, literal-set, candidate, and Git proof; it must not
-invoke create/recompute or query an accepted-media path.
+Combat first verifies exact Mission synchronization, all three SHA pins,
+launcher and primitive ASTs, the declared v4-to-v5 semantic delta, frozen
+candidate/tree, exact seventeen literals, exact thirty-one cumulative
+components, exact `17 / 37,410,731`, and `FRAM-001-v1` absence without opening
+an accepted-media path. If and only if those controls pass, Combat invokes
+`FRRC-003-v5.entries.accepted-media-create` exactly once through its literal
+checked-in command array.
 
-If and only if Mission reaches `FIRST RUN SHELL READY`, commits, pushes, and
-proves exact synchronization, one fresh Combat Engineer independently verifies
-the new pins and invokes `FRRC-003-v5.entries.accepted-media-create` exactly
-once. Any failure is immediate `HOLD / NO RETRY`. `FRRC-003-v4` remains
-consumed and no second v4 invocation is authorized.
+On exact PASS, Combat verifies immutable `FRAM-001-v1`, canonical tuple
+digest, candidate identity, and complete per-ordinal timing scalars; issues a
+versioned functional close; commits only lawful manifest/report/NEXT evidence;
+pushes; and proves exact synchronization before `PRODUCTION FUNCTIONAL`.
 
-Quartermaster remains blocked. No manifest repair, candidate code change,
-selected-source inspection/import, Image work, test/build/preview/E2E,
-Intelligence release, reveal, maturity update, OPEN-record closure, schedule,
-automation, or `FIRST RUN COMPLETE` may begin.
+Any v5 failure is immediate **`HOLD / NO RETRY`**. `FRRC-003-v4` remains
+consumed forever. No alternate timer, wrapper, transport, host, widened share,
+second stream, auxiliary accepted-media inspection, manifest repair, media
+mutation, or second invocation is authorized.
+
+Quartermaster remains blocked. No generation, selected-source inspection or
+import, candidate code change, prior test/build/preview replay, E2E, Image
+work, Intelligence release, reveal, maturity update, OPEN-record closure,
+schedule, automation, or `FIRST RUN COMPLETE` may begin.
 
 All thirteen inherited process records and the separate Commandant filename /
 search-scope record remain **OPEN**. VR-65 remains exactly **`DEFERRED
