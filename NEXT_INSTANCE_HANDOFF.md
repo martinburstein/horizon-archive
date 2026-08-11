@@ -2,11 +2,11 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRVE-005-v7-VR-01 / DIRECT PS5.1
-NATIVE-IDENTITY FIXTURE DID NOT EXECUTE / FRESH SCIENCE REQUIRED`**
+Current disposition: **`HOLD / FRVE-005-v7-VR-02 / DIRECT PS5.1 FIXTURE
+BODY DID NOT EXECUTE / FRESH SCIENCE REQUIRED`**
 
 Current Work Order / decisive Science return: `FRWO-005-v7` /
-`FRVE-005-v7-VR-01`
+`FRVE-005-v7-VR-02`
 
 Planning controls: `FRRM-005-v7` / `FRSB-005-v7`
 
@@ -30,17 +30,20 @@ Exact next owner: **one fresh Office of Science Administrator /
 
 ## Science decision
 
-`FRVE-005-v7-VR-01` records a renewed evidence-availability HOLD. The current
-host was directly confirmed as Windows PowerShell `5.1.26100.8875` in a
-64-bit process, with no nested shell, but this Science invocation was
-terminated before the authorized fixture body executed. Science therefore
-could not lawfully freeze the helper DLL identity, prove its surface/layout/
-native results and required failure/race/cleanup branches, or establish exact
-cleanup postconditions. No helper or fixture root was allocated.
+`FRVE-005-v7-VR-02` records a renewed evidence-availability HOLD. The current
+host directly confirmed Windows PowerShell `5.1.26100.8875` in a 64-bit
+process, with no nested shell. A full inline fixture submission was rejected
+by the command transport with Windows `Access is denied` before PowerShell
+emitted output. A smaller inline form reached the direct PS5.1 parser, but
+parser errors rejected the entire command before any statement executed.
 
-The HOLD does not identify a defect in the frozen helper and does not return
-to Operations. It requires one fresh Science context to run the exact bounded
-fixture directly in the already-confirmed PS5.1 host, without a nested shell.
+Science therefore could not lawfully freeze the helper DLL identity or prove
+its load, surface, x64 layout, native results, required negative/race/
+substitution/reparse branches, identity-conditioned cleanup, or exact fixture
+postconditions. No helper or disposable fixture root was allocated. Exact
+post-attempt checks proved the fixed helper root, exact DLL, and live API root
+absent. The HOLD identifies no defect in the frozen helper.
+
 No Mission follows until a complete `POLISH VIABILITY READY` envelope exists.
 
 ## Preserved state
@@ -50,12 +53,12 @@ remain unconsumed and unavailable. Direct API calls remain exact `0`.
 Conservative managed-residual count remains exact `1`, associated only with
 ordinal `1`; VR-65 remains separate and inaccessible.
 
-`FRVE-005-v6` remains prior evidence for the direct API/TLS/parser/CreateNew/
-Flush/no-replace predicates. Fresh helper corroboration did not run. No API key
-value or derivative was observed; no Image API request, generation, media
-operation, live-root allocation, pixel inspection, import, provenance, E2E,
-reveal, maturity change, OPEN-record closure, residual access, scheduling,
-automation, push, release, or `FIRST RUN COMPLETE` occurred.
+`FRVE-005-v6` remains prior evidence for the direct API/TLS/parser/
+`CreateNew`/`Flush(true)`/no-replace predicates. No API key value or
+derivative was observed; no Image API request, generation, media operation,
+live-root allocation, pixel inspection, import, provenance, E2E, reveal,
+maturity change, OPEN-record closure, residual access, scheduling, automation,
+push, release, or `FIRST RUN COMPLETE` occurred.
 
 The exact Host 05 -> dry same-basin Host 06 -> sole unchanged `L02-03` ->
 unchanged next Drowned boundary, prompt, strict PNG/CRC/decode, `PHY-01..12`,
@@ -66,18 +69,19 @@ accepted-media tuple, code candidate, inventory, and maturity remain unchanged.
 ## Exact next action
 
 One fresh Office of Science Administrator reads complete `FRWO-005-v7`,
-complete `FRWO-005-v6`, complete `FRVE-005-v6`, complete `FRVE-005-v7`, and
-complete `FRVE-005-v7-VR-01`, and synchronized controls. It runs the exact v7 fixture directly in the current
-PS5.1 host; freezes the emitted DLL byte length/SHA; proves byte-only load,
-surface, x64 layout, exclusive SafeFileHandle volume/file-index/link-count/
-attribute/size behavior, every required negative/race/substitution/reparse/
-cleanup branch, and exact root absence; then freshly corroborates the v6 gates
-with synthetic non-media evidence and exact zero API sends. It issues one new
-versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact.
+`FRVE-005-v7`, `FRVE-005-v7-VR-01`, `FRVE-005-v7-VR-02`, and synchronized
+controls. It runs a parse-valid exact v7 fixture directly in Windows
+PowerShell 5.1 without a nested process. It uses only the fixed helper root
+and one fresh disposable GUID OS-temp non-media fixture; freezes the emitted
+DLL byte length/lowercase SHA; proves byte-only load, exact surface and x64
+layout, exclusive SafeFileHandle volume/file-index/link-count/attribute/size
+behavior, every required negative/race/substitution/reparse/cleanup branch,
+and exact root absence; preserves the v6 gates with exact zero API sends; and
+issues one new versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`
+artifact.
 
-Science may allocate only the exact helper root and disposable non-media
-fixtures and must restore them to proved absence. It may not authorize
-Mission; invoke generation/API; consume ordinal `2`; allocate the live root;
-inspect pixels; import media; write copy or provenance; run E2E; reveal;
-advance maturity; close an OPEN record; access a managed residual or VR-65;
-schedule; automate; push; release; or call `FIRST RUN COMPLETE`.
+Science may not authorize Mission; invoke generation/API; consume ordinal
+`2`; allocate the live root; inspect pixels; import media; write copy or
+provenance; run E2E; reveal; advance maturity; close an OPEN record; access a
+managed residual or VR-65; schedule; automate; push; release; or call `FIRST
+RUN COMPLETE`.
