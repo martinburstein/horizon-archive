@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-005-v1`
+Map ID: `FRRM-005-v2`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Operations source inspected: `56a77a705f1730796d6e33dc1aa98b8ba7103a82`
+Operations source inspected: `04e00139cdc1dcc723179b7235a7a1dc507906cb`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -22,15 +22,19 @@ Date: **2026-08-10**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **`FRWO-005-v1 / Stranded Lens Cradle - One New
+Selected bounded Work Order: **`FRWO-005-v2 / Stranded Lens Cradle - One New
 Source and Fixed Lesson Integration`**.
 
 `FRWO-004-v1` remains withdrawn and closed without production. Martin's
 bounded new-Drowned-media authorization, `FRPB-001-v2`, and `FRCL-004-v2`
 permit a distinct successor Work Order for exactly one eventual canonical
-additional Host 06 source. The exact next stage is one fresh Science viability
-review of `FRWO-005-v1`; no Mission, generation, implementation, reveal, or
-later-address work is authorized by this map.
+additional Host 06 source. `FRWO-005-v2` supersedes `FRWO-005-v1` by freezing
+the built-in tool's exact one-file managed ingress, byte-identical GUID-temp
+evaluation copy, immediate exact-path managed cleanup, and the read-only
+pre-generation Combat manifest gate for all seventeen immutable accepted
+media paths/bytes/SHA-256 values. The exact next stage is one fresh Science
+revalidation of `FRWO-005-v2`; no Mission, generation, implementation, reveal,
+or later-address work is authorized by this map.
 
 ## Purpose
 
@@ -84,8 +88,8 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 06` | **SELECTED - `FRWO-005-v1`**: one new source plus fixed Host 05 -> Host 06 -> unchanged `L02-03` integration | First missing fixed encounter and exact next learning adjacency after Host 05; bounded media authority now permits Science to test one-source viability while the old-source HOLD remains exact |
-| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind independent acceptance or HOLD of `FRWO-005-v1`; no skip or repeatable host pattern is authorized |
+| 1 | `FR-03 / Host 06` | **SELECTED - `FRWO-005-v2`**: one new source plus fixed Host 05 -> Host 06 -> unchanged `L02-03` integration | First missing fixed encounter and exact next learning adjacency after Host 05; the revised Work Order freezes one-file managed ingress and the accepted-media manifest gate for fresh Science review while the old-source HOLD remains exact |
+| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind independent acceptance or HOLD of `FRWO-005-v2`; no skip or repeatable host pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
@@ -94,10 +98,11 @@ game complete.
 
 ## Selected fifth Work Order boundary decision
 
-`FRWO-005-v1` owns only one new eventual canonical Host 06 Drowned source and
+`FRWO-005-v2` owns only one new eventual canonical Host 06 Drowned source and
 its complete integration into exact Host 05 -> Host 06 -> sole unchanged
 `L02-03`. It is a new Work Order under `FRPB-001-v2` and `FRCL-004-v2`, not a
-revival or amendment of closed `FRWO-004-v1`.
+revival or amendment of closed `FRWO-004-v1`. It is a versioned replacement,
+not a silent amendment, of superseded `FRWO-005-v1`.
 
 The source must show one weathered lens inside one tilted conformal cradle on
 a dry reachable same-basin continuation, with Host 05 fragment continuity,
@@ -106,14 +111,17 @@ live water, the return ridge, Crown, and distant Tidal Lens. The old accepted
 Drowned master remains immutable and its negative Host 06 geometry finding
 remains exact.
 
-Science must independently prove a generatable and runtime-polishable source
-envelope, a maximum-three-attempt external-staging firewall, exact provenance
-and numeric media-byte/PBA caps, six-layout crop retention, measurable hotspot/
-label/center/nonoverlap access, fail-closed state/source identity, sole lesson
-ownership, validation, cleanup, and rollback before Mission. At most one later
-passing source may enter the exact new product path; every rejected attempt
-stays outside the workspace with zero authority. No generated candidate may be
-published or used as a cycle reveal.
+Science must independently revalidate a generatable and runtime-polishable
+source envelope; the maximum-three-attempt built-in-only managed-ingress
+firewall; byte/SHA identity into fresh GUID OS temp; immediate exact managed-
+file cleanup; the pre-generation Combat manifest for exactly seventeen literal
+accepted-media paths totaling `37,410,731` bytes; exact provenance and numeric
+media/PBA caps; six-layout crop retention; measurable hotspot/label/center/
+nonoverlap access; fail-closed state/source identity; sole lesson ownership;
+validation; cleanup; and rollback before Mission. At most one later passing
+source may enter the exact new product path; every rejected attempt stays
+outside the workspace with zero authority. No CLI/API fallback, parent listing,
+accepted-media pixel inspection, or candidate reveal is authorized.
 
 Hosts 07-15 and all later gaps remain deferred. The target inventory after
 independent acceptance would be `1 accepted shared compression / 2 exact / 9
@@ -139,7 +147,7 @@ expression. Relabeling it without a distinct physical Host 06 would not create
 a new player-visible vertical-quality outcome. For the old immutable source,
 exact Host 06 geometry, mapping, center, semantic target, label box, and
 source-retention band remain `null`. The new-source questions belong only to
-`FRWO-005-v1` and do not revise this historical finding.
+`FRWO-005-v2` and do not revise this historical finding.
 
 Hosts 07-15, the remaining three Drowned movements, Crown turn, Witness
 physical-host cell, City contradiction, Hosts 17-38, and Measured Horizon
@@ -147,8 +155,8 @@ literary close remain deferred. Host 06 remains the first missing fixed
 encounter, so the HOLD does not authorize a later-address skip. That product/
 media decision has since been made: Martin authorized one bounded new Drowned
 source, Commandant issued `FRPB-001-v2`, Colonel issued `FRCL-004-v2`, and
-Operations selected the distinct successor `FRWO-005-v1`. The closed fourth
-Work Order remains historical evidence only.
+Operations selected then versioned the distinct successor as `FRWO-005-v2`.
+The closed fourth Work Order remains historical evidence only.
 
 ## Released third Work Order boundary decision
 
@@ -235,7 +243,7 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v1` is selected and one fresh Science review is the exact next
+`FRWO-005-v2` is selected and one fresh Science review is the exact next
 action. `FRWO-004-v1` remains closed. This map does not preauthorize Mission,
 generation, implementation, asset selection/import, reveal, later-address
 work, maturity advancement, residual cleanup, closure of any OPEN
