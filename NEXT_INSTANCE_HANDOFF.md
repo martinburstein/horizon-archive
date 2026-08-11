@@ -2,8 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PLAYER EXPERIENCE READY / FRPX-005-v1 / COMBAT INERT
-HOST 06 INTEGRATION ONLY`**
+Current disposition: **`COMBAT HOLD / FRCE-005-v1 / ACCEPTED-MEDIA REPARSE
+GATE STOPPED BEFORE BYTE READ`**
 
 Martin's controlling decision: **`Authorized new Drowned Media for Host 06`**
 
@@ -12,68 +12,59 @@ Work Order / viability: `FRWO-005-v2` / `FRVE-005-v2`
 Production shell / direction / blueprint: `FRSH-005-v1` / `FRDT-005-v1` /
 `FRPX-005-v1`
 
+Frozen inert code candidate:
+`02d957e9d69dc7986928a391c37f899784f73ea5`
+
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Tactical source inspected: `2afc3cc94011673ccb9426ef6205a16a5fa0189b`
+Exact next owner: **fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-Exact next owner: **fresh Combat Engineer / `combat_engineer`**
+## Combat result
 
-## Tactical lock
+Combat implemented and committed the bounded no-media Host 06 registry,
+fail-closed source/state/decode/measurement guard, conditional generic
+launcher, future exact source succession, sole unchanged `L02-03` USE,
+completed read-only behavior, focus/recovery, seven null copy slots, tests, and
+`FRRC-003-v1`.
 
-Combat implements only the inert null-first Host 06 registry, pure fail-closed
-source/state guard, exact accepted-source to selected-source replacement,
-conditional generic-launcher absence, Host 05 -> Host 06 -> return semantic
-succession, sole unchanged `L02-03` USE, completed read-only behavior, one-time
-focus/announcement, recovery, six-layout probe contract, accessibility, and
-predeclared seven copy slots frozen in `FRPX-005-v1`.
+Focused, learning/privacy, related, exact `40/40` validators, full `979/979`,
+production/TD-012 builds, PBA, and served preflight passed. The selected source
+is absent; no post-generation E2E ran.
 
-Before generation, Combat must freeze and commit its no-media code/test
-candidate, create `FRRC-003-v1`, run the exact read-only seventeen-literal
-accepted-media gate, create immutable `FRAM-001-v1`, commit evidence, push, and
-prove `HEAD == origin/main`. A failed/unavailable gate stops before attempt one
-and consumes no ordinal.
+The mandatory manifest create gate then stopped before ordinal-1 byte open.
+Every exact accepted-media literal traverses OneDrive components marked
+`ReparsePoint`, and each exact literal file is also marked `ReparsePoint`.
+`FRSH-005-v1` requires rejection of any reparse point in any literal path
+component. No `FRAM-001-v1`, tuple digest, media byte read, generator call, or
+consumed attempt exists.
 
-Combat generates or inspects no pixels, imports no raster, populates no
-candidate scalar, writes no final prose, and begins no Quartermaster work. The
-generic model-choice launcher remains byte/behavior exact only while
-`source.enabled !== true`; after enablement it is absent even if metadata,
-provenance, measurement, import, or decode fails. Failure leaves Host 06 absent
-and Host 05 safe without restoring the bypass.
-
-The only later media-owned paths remain:
-
-```text
-Visual Direction/Production Masters/2026-08-10-first-run-host06/host06-stranded-lens-cradle-master-v1.png
-Visual Direction/Production Masters/2026-08-10-first-run-host06/PROVENANCE.md
-```
-
-All candidate scalars remain `null`. Accepted media remains exact
-`17 / 37,410,731`; every pre-existing tuple remains immutable. Candidate code,
-manifest baseline, attempt, temp file, selected bytes, Quartermaster candidate,
-Image candidate, and Intelligence release candidate remain separate identities.
+Combat did not push because `PRODUCTION FUNCTIONAL` was not reached.
 
 ## Exact next action
 
-One fresh Combat Engineer reads in full `AGENTS.md`, this handoff,
-`FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Combat profile,
-`FRSH-005-v1`, `FRDT-005-v1`, and `FRPX-005-v1`, then inspects only the exact
-current product/test/manifest authorities required by that profile.
+One fresh Office of Science Administrator reads in full `AGENTS.md`, this
+handoff, `FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Science profile,
+`FRCE-005-v1`, `FRSH-005-v1`, `FRVE-005-v2`, and the exact manifest clauses.
+Using only the seventeen frozen literal paths, corroborate whether a lawful
+non-reparse raw-byte read source exists without copying, hydrating, moving,
+editing, relabeling, or otherwise mutating accepted media. Issue one versioned
+`POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact and synchronize the
+next handoff.
 
-Implement and validate the bounded inert candidate. Create focused and related
-tests plus `FRRC-003-v1`; freeze the no-media code commit; execute the exact
-seventeen-file raw-byte manifest gate without decode/render/pixel inspection;
-create immutable `FRAM-001-v1`; commit the evidence; push; and prove exact
-synchronization. Issue `PRODUCTION FUNCTIONAL`, `REVISE`, or `HOLD`.
+Science may not weaken the shell silently. If no lawful source exists, return
+the manifest contradiction through Mission with an explicit versioned
+variance. Quartermaster does not begin.
 
-No Quartermaster attempt, generator call, candidate inspection, selection,
-import, media cleanup, Image work, Intelligence release, reveal, schedule,
-automation, maturity update, OPEN-record closure, residual access, Host 07 or
-later expression, route/save/world/ending change, or `FIRST RUN COMPLETE`
-begins from this handoff.
+No generation attempt, pixel inspection, import, accepted-media mutation,
+parent enumeration, manifest bypass, Image work, Intelligence release, reveal,
+push, maturity update, OPEN-record closure, residual access, schedule,
+automation, or `FIRST RUN COMPLETE` begins from this handoff.
 
-All thirteen inherited process records and the separate Commandant search-scope
-record remain **OPEN**. VR-65 remains exactly **`DEFERRED LIMITATION /
-RELEASE-PROCESS ONLY / NON-GATING / OPAQUE EXTERNAL QA RESIDUAL`**, unknown and
-inaccessible. Repository QA quarantine, protected PDF, training directory,
-real browser/profile/save, hidden lore, user work, accepted-media bytes,
-managed/temp roots, and opaque residuals remain protected.
+All thirteen inherited process records and the separate Commandant
+filename/search-scope record remain **OPEN**. VR-65 remains exactly
+**`DEFERRED LIMITATION / RELEASE-PROCESS ONLY / NON-GATING / OPAQUE EXTERNAL
+QA RESIDUAL`**, unknown and inaccessible. Repository QA quarantine, protected
+PDF, training directory, real browser/profile/save, hidden lore, user work,
+accepted-media bytes, managed/temp roots, and opaque residuals remain
+protected.
