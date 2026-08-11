@@ -2,9 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / WINDOWS POWERSHELL HEX
-CONVERSION FROZEN / ONE FRESH COMBAT MANIFEST-CREATE VERIFICATION
-AUTHORIZED`**
+Current disposition: **`HOLD / FRRC-003-v3 CREATE STOPPED BEFORE PRIMITIVE
+LOAD / NO RETRY / MISSION EXECUTION-CONTROL ADJUDICATION REQUIRED`**
 
 Martin's controlling decision: **`Authorized new Drowned Media for Host 06`**
 
@@ -14,11 +13,9 @@ Work Order / viability / Science variance: `FRWO-005-v2` / `FRVE-005-v2` /
 Base shell / effective Mission variances: `FRSH-005-v1` /
 `FRSH-005-v1-VR-01` / `FRSH-005-v1-VR-02`
 
-Superseded / current release-command manifests: `FRRC-003-v2` /
-`FRRC-003-v3`
+Consumed release-command manifests: `FRRC-003-v2` / `FRRC-003-v3`
 
-Mission source inspected:
-`5ea1da46790950e0d3c5372ea2cf54f678acd822`
+Latest Combat return: `FRCE-005-v1-VR-02 / HOLD`
 
 Frozen inert code candidate:
 `02d957e9d69dc7986928a391c37f899784f73ea5`
@@ -28,73 +25,50 @@ Frozen candidate tree:
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Prior Combat return: `FRCE-005-v1-VR-01 / HOLD`
+Exact next owner: **fresh Mission Captain / `mission_captain`**
 
-Exact next owner: **fresh Combat Engineer / `combat_engineer`**
+## Combat result
 
-## Mission adjudication
+Fresh Combat verified exact source synchronization, immutable v2 SHA pin,
+v3's sole effective BitConverter substitution, frozen candidate/tree, exact
+seventeen literals, exact thirty-one cumulative components, exact frozen
+total `37,410,731`, and `FRAM-001-v1` absence.
 
-Mission classifies the prior stop as **`REQUIRED CORRECTION / EXECUTION
-CONTROL / DECLARED COMMAND-RUNTIME HEX COMPATIBILITY`**. The sole
-`FRRC-003-v2.entries.accepted-media-create` invocation completed the frozen
-Cloud Files topology, identity, residency, no-recall, single-handle raw-stream,
-per-file length/SHA, before/after metadata, and exact `17 / 37,410,731` checks.
-It then stopped before tuple-digest completion because literal `powershell`
-does not expose `[System.Convert]::ToHexString`.
+The one authorized `FRRC-003-v3.entries.accepted-media-create` launch then
+stopped before the JSON manifest or primitive loaded. The outer Windows
+PowerShell command layer interpolated `$r` and `$p` before the declared child
+`powershell -NoProfile -Command` process received them. The child received
+malformed expressions beginning with `=Get-Content` and exited nonzero.
 
-`FRRC-003-v2` is consumed, immutable, and may not be retried or edited. It is
-pinned by exact SHA-256
-`1ce0dedb5f8d4fc7d9d2b9186194f9af112069d4ff0d4b7aee517b2f1b1b85f1`.
-
-`FRSH-005-v1-VR-02` and `FRRC-003-v3` replace only the effective PowerShell
-tuple-digest hex conversion with the already-proven compatible, non-emitting
-assignments:
-
-```powershell
-$digestBytes = $sha.ComputeHash($tuple)
-$entriesSha = [BitConverter]::ToString($digestBytes).Replace('-', '').ToLowerInvariant()
-```
-
-No `[Convert]::ToHexString` remains in the v3 primitive. Every other Cloud
-Files adapter step, literal, candidate/tree, tuple domain, manifest schema,
-create-new boundary, command host, timeout, output contract, accepted gate,
-no-pixel boundary, protected-state boundary, and hard stop remains frozen.
-
-Mission ran no manifest create/recompute, digest, accepted-media stream, test,
-build, preview, E2E, generation, import, Image, release, or maturity operation.
-`FRAM-001-v1` remains absent; `entriesSha256` remains unavailable; generation
-ordinals consumed remain `0`.
+No accepted-media metadata or data handle opened. No raw byte, tuple digest,
+candidate assertion, `LastAccessTime` scalar, or manifest create was reached.
+`FRAM-001-v1` remains absent. Generation ordinals consumed remain `0`.
+Combat obeyed immediate `HOLD / NO RETRY`; no corrected escape, host
+substitution, or second v3 launch occurred.
 
 ## Exact next action
 
-One fresh Combat Engineer reads in full `AGENTS.md`, this handoff,
-`FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Combat profile,
-`FRSH-005-v1-VR-01`, `FRSH-005-v1-VR-02`, `FRVE-005-v2-VR-01`,
-`FRCE-005-v1-VR-01`, `FRRC-003-v2`, and `FRRC-003-v3`.
+One fresh Mission Captain reads in full `AGENTS.md`, this handoff,
+`FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Mission profile,
+`FRCE-005-v1-VR-02`, `FRSH-005-v1-VR-01`, `FRSH-005-v1-VR-02`,
+`FRVE-005-v2-VR-01`, `FRRC-003-v2`, and `FRRC-003-v3`.
 
-Combat verifies exact Mission synchronization; immutable v2 SHA pin; v3's
-sole compatibility substitution; frozen candidate/tree; exact seventeen
-literals; exact thirty-one cumulative components; and `FRAM-001-v1` absence.
-Combat then invokes `FRRC-003-v3.entries.accepted-media-create` exactly once
-against candidate `02d957e9...`.
+Mission classifies the consumed v3 launch-literal stop. If and only if the
+frozen shell remains viable, Mission may issue one versioned variance and one
+superseding release-command manifest that preserve every Cloud Files adapter
+step and the BitConverter tuple-hex correction while making the command-array
+argument transport literal under the actual executor. Mission performs no
+manifest create/recompute, accepted-media stream, test/build/preview replay,
+E2E, generation, import, presentation, release, or maturity operation.
 
-If and only if the invocation passes, Combat verifies the create-new
-`FRAM-001-v1` semantic object, exact `17 / 37,410,731`, lowercase-hex entry and
-canonical tuple digests, candidate identity, and `LastAccessTime` scalars;
-issues one versioned Combat functional close; commits only immutable manifest
-evidence, its report, and the synchronized handoff; pushes `main`; proves exact
-`HEAD == origin/main`; and reports **`PRODUCTION FUNCTIONAL`**.
+`FRRC-003-v3` is consumed and may not be retried or edited. No second v3
+launch, alternate ad hoc quoting, command-host substitution, manifest repair,
+accepted-media read/mutation, Quartermaster, Image work, E2E, Intelligence
+release, reveal, maturity update, OPEN-record closure, residual access,
+schedule, automation, or `FIRST RUN COMPLETE` may begin.
 
-Any failure is immediate `HOLD / NO RETRY`. This is one fresh v3 invocation,
-not a v2 retry. No alternate hex conversion, command host, manifest repair,
-second invocation, prior test/build/preview replay, accepted-media mutation,
-hydration, pixel work, generator call/attempt, source inspection/import,
-Quartermaster, Image work, E2E, Intelligence release, reveal, maturity update,
-OPEN-record closure, residual access, schedule, automation, or
-`FIRST RUN COMPLETE` may begin.
-
-Quartermaster remains blocked until the exact Combat PASS, immutable evidence
-commit, `PRODUCTION FUNCTIONAL` disposition, push, and synchronization.
+Quartermaster remains blocked. `PRODUCTION FUNCTIONAL` was not reached and no
+push under that disposition is authorized.
 
 All thirteen inherited process records and the separate Commandant filename /
 search-scope record remain **OPEN**. VR-65 remains exactly **`DEFERRED
