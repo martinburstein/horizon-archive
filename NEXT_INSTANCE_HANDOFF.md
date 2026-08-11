@@ -2,21 +2,18 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`POLISH VIABILITY READY / COMPACT CURRENT-SHELL
-PRE-HELPER FIXTURE PASS / COMPLETE BOUNDED FAILURE RETENTION AND CLEANUP
-PROVED / FRVE-005-v7-VR-08`**
+Current disposition: **`FIRST RUN SHELL READY / SCIENCE PRE-HELPER PASS
+ACCEPTED / EXACTLY ONE FRESH QUARTERMASTER RETRY AUTHORIZED FROM ORDINAL 2 /
+FRSH-005-v1-VR-10`**
 
 Current Work Order / decisive Science return: `FRWO-005-v7` /
 `FRVE-005-v7-VR-08`
 
-Mission correction: `FRSH-005-v1-VR-09`
-
-Prior Science returns: `FRVE-005-v7-VR-07` / `FRVE-005-v7-VR-06` /
-`FRVE-005-v7-VR-05`
+Current Mission shell decision: `FRSH-005-v1-VR-10`
 
 Quartermaster return: `FRCA-005-v3`
 
-Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-09`
+Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-10`
 
 Effective treatment / blueprint: `FRDT-005-v1-VR-01` /
 `FRPX-005-v1-VR-01`
@@ -36,54 +33,60 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Quartermaster / `quartermaster`**
 
-## Science result
+## Mission result
 
-`FRVE-005-v7-VR-08` ran exactly one credential-cleared, no-request fixture
-through the authorized compact current-shell parent and passed. Every declared
-parent-local name was collision-checked case-insensitively; the pre-helper
-identity object was `$prehelperIdentity`, and no `$pid`/`$PID` case variant was
-declared or assigned.
+Mission independently accepts the complete passing Science fixture in
+`FRVE-005-v7-VR-08` and issues `FRSH-005-v1-VR-10`. Exactly one fresh
+Quartermaster retry is authorized. Historical ordinal `1` remains consumed,
+opaque, and inaccessible. Ordinal `2` remains unstarted and is the sole first
+live request. Ordinal `3` remains unstarted and conditional only after ordinal
+`2` becomes a fully identified objective source rejection following complete
+technical, physical, crop/mapping/accessibility review and exact cleanup.
+Direct Image API sends remain exact `0` at this handoff.
 
-The launcher identity passed exact `2001 / 96feaf7e...`; pre-helper identity
-passed exact `976 / 5cd257c9...`. Before the first child, a conservative exact
-executable-plus-argv rendering measured `2,156` characters, below both `8191`
-and `32767`. Each native call alone used
-`$ErrorActionPreference='Continue'`, in-memory stderr and `$LASTEXITCODE`
-capture, and immediate preference restoration.
+The frozen pre-helper remains exact launcher `2001 / 96feaf7e...`, pre-helper
+`976 / 5cd257c9...`, environment name
+`HORIZON_ARCHIVE_HOST06_PREHELPER_V1`, exact PS5.1 executable and argument
+order, namespace-safe `$prehelperIdentity`, measured executable-plus-argv
+preflight, exact `Directory.CreateDirectory` primitive, ordered `PH01..PH08`,
+bounded `640`-byte diagnostic retention/rejection, and identity-conditioned
+nonrecursive cleanup. Every helper/API/parser/staging/ordinal/media/physical/
+crop/accessibility/canon/lesson/privacy/save/offline/performance/PBA/
+provenance/no-reveal/rollback/protected-state/OPEN-record clause remains exact.
 
-Exact success passed silently through ordered `PH01..PH08`. All eight induced
-first-failure records, allowlist bounding, literal `UNLISTED` replacement,
-exact `640`-byte acceptance, zero/multiple/missing/extra/reordered/unknown-
-predicate/multiline/non-ASCII/`641`-byte rejection collapse, and
-identity-conditioned PH08 post-root nonrecursive cleanup passed.
-
-Final exact-path checks prove helper root/DLL, live root, both ordinal pairs,
-product raster, and provenance absent. Credential reads, request
-constructions, `SendAsync` calls, direct API sends, and ordinals consumed are
-exact `0`. Historical ordinal `1` remains consumed and inaccessible; ordinals
-`2` and `3` remain unstarted and unconsumed. No helper/API/media/pixel/product/
-test/build/browser/E2E/reveal action occurred, and no protected or opaque state
-was accessed.
+Mission independently reconfirmed the corrected candidate/tree, ordinal `2|3`
+source guard, immutable manifest control identity, and absence of helper root/
+DLL, live root, both ordinal pairs, product raster, and provenance. Mission
+executed no launcher/helper/API/media/pixel/product/test/build/browser/E2E/
+reveal action and accessed no residual, VR-65, or protected state.
 
 ## Exact next action
 
-One fresh Mission Captain reads the complete current intake, full Mission
-profile, `FRVE-005-v7-VR-08`, `FRVE-005-v7-VR-07` through
-`FRVE-005-v7-VR-05`, complete `FRSH-005-v1-VR-09`,
-`FRCA-005-v3`, complete `FRWO-005-v7`, decisive
+After exact shell-gate synchronization, one fresh Quartermaster reads the
+complete current intake, full Quartermaster profile,
+`FRSH-005-v1-VR-10`, `FRVE-005-v7-VR-08`, complete
+`FRSH-005-v1-VR-09`, `FRCA-005-v3`, complete `FRWO-005-v7`, decisive
 `FRVE-005-v7-VR-03`, complete effective shell, treatment, blueprint,
-`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and the exact passing
-pre-helper fixture evidence.
+`FRCE-005-v1-VR-05`, corrected candidate `f4b2062...`, immutable
+`FRAM-001-v1`, and the exact helper/direct-API/product controls.
 
-Mission issues exactly one new versioned `FIRST RUN SHELL READY`, `REVISE`,
-or `HOLD` result that makes the explicit Quartermaster retry decision. It
-preserves the exact frozen launcher, pre-helper, environment name, executable,
-arguments, helper/API/ordinal/media contract, bounded diagnostic retention,
-cleanup, protected state, and no-reveal boundaries.
+Quartermaster independently proves synchronization, manifest identity,
+selected-ordinal guard, inert slots, controlled-path absences, and the exact
+ordinal ledger. It then performs exactly one bounded production action through
+the frozen compact current-shell parent and one bounded 64-bit Windows
+PowerShell `5.1.26100.8875` production sequence. It begins with ordinal `2`,
+uses ordinal `3` only after the unchanged lawful objective-rejection and exact-
+cleanup condition, selects at most one source, imports only the byte-identical
+raster plus `PROVENANCE.md`, populates only predeclared slots, proves exact
+cleanup, and issues one versioned `PRODUCTION CONTENT COMPLETE`, `REVISE`, or
+`HOLD` ledger without reveal.
 
-Mission may not execute the helper, allocate the live root, read a credential,
-call the API, consume an ordinal, inspect media/pixels, change product/tests,
-run E2E, reveal, advance maturity, close an OPEN record, access a residual or
-VR-65, schedule, automate, push, release, or call `FIRST RUN COMPLETE`.
+Any pre-helper/helper/API/transport/parser/file/identity/cleanup terminal
+failure stops without retry or later ordinal. Quartermaster may not retry
+ordinal `1`, exceed the two future sends, change behavior/lesson/route/save/
+world/ending/accepted media/dependencies/later rail, weaken any frozen gate,
+retain rejected pixels, run the complete E2E, access a residual or VR-65,
+advance maturity, release, schedule, automate, reveal, or call `FIRST RUN
+COMPLETE`.
