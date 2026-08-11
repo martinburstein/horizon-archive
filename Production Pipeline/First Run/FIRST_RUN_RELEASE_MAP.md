@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-004-v2`
+Map ID: `FRRM-005-v1`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v1` / `FRCL-004-v1`
+Baseline / continuity lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Operations source inspected: `b64413c34cb10aafbb28853c52bb3415cc5b9dc0`
+Operations source inspected: `56a77a705f1730796d6e33dc1aa98b8ba7103a82`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -22,13 +22,15 @@ Date: **2026-08-10**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **none**.
+Selected bounded Work Order: **`FRWO-005-v1 / Stranded Lens Cradle - One New
+Source and Fixed Lesson Integration`**.
 
-`FRWO-004-v1 / Stranded Lens Cradle` is withdrawn and closed without
-production by `FRWO-004-v1-OPH-01` after `FRVE-004-v1` proved that no lawful
-Host 06 source geometry exists. The exact next stage is one fresh Commandant
-product-boundary review. No Mission, production, or later-address work is
-authorized.
+`FRWO-004-v1` remains withdrawn and closed without production. Martin's
+bounded new-Drowned-media authorization, `FRPB-001-v2`, and `FRCL-004-v2`
+permit a distinct successor Work Order for exactly one eventual canonical
+additional Host 06 source. The exact next stage is one fresh Science viability
+review of `FRWO-005-v1`; no Mission, generation, implementation, reveal, or
+later-address work is authorized by this map.
 
 ## Purpose
 
@@ -82,15 +84,42 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 06` | **PLANNING HOLD** - no lawful current-media expression | First missing fixed encounter and exact next learning adjacency after Host 05. `FRVE-004-v1` proves source geometry absent; `FRWO-004-v1-OPH-01` closes the Work Order without production |
-| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind the unresolved Host 06/product-media boundary; no skip or repeatable host pattern is authorized |
+| 1 | `FR-03 / Host 06` | **SELECTED - `FRWO-005-v1`**: one new source plus fixed Host 05 -> Host 06 -> unchanged `L02-03` integration | First missing fixed encounter and exact next learning adjacency after Host 05; bounded media authority now permits Science to test one-source viability while the old-source HOLD remains exact |
+| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind independent acceptance or HOLD of `FRWO-005-v1`; no skip or repeatable host pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
 | 6 | `FR-16` | Final-purpose Measured Horizon literary close | Ending behavior is exact; final content follows earlier journey expression unless a dependency is proven |
 | 7 | Whole game | Completion sweep | Permitted only after every critical surface is independently `FR4 RELEASED` |
 
-## Held fourth Work Order boundary decision
+## Selected fifth Work Order boundary decision
+
+`FRWO-005-v1` owns only one new eventual canonical Host 06 Drowned source and
+its complete integration into exact Host 05 -> Host 06 -> sole unchanged
+`L02-03`. It is a new Work Order under `FRPB-001-v2` and `FRCL-004-v2`, not a
+revival or amendment of closed `FRWO-004-v1`.
+
+The source must show one weathered lens inside one tilted conformal cradle on
+a dry reachable same-basin continuation, with Host 05 fragment continuity,
+visible drainage and stress contacts, and separation from exact Hosts 04/05,
+live water, the return ridge, Crown, and distant Tidal Lens. The old accepted
+Drowned master remains immutable and its negative Host 06 geometry finding
+remains exact.
+
+Science must independently prove a generatable and runtime-polishable source
+envelope, a maximum-three-attempt external-staging firewall, exact provenance
+and numeric media-byte/PBA caps, six-layout crop retention, measurable hotspot/
+label/center/nonoverlap access, fail-closed state/source identity, sole lesson
+ownership, validation, cleanup, and rollback before Mission. At most one later
+passing source may enter the exact new product path; every rejected attempt
+stays outside the workspace with zero authority. No generated candidate may be
+published or used as a cycle reveal.
+
+Hosts 07-15 and all later gaps remain deferred. The target inventory after
+independent acceptance would be `1 accepted shared compression / 2 exact / 9
+missing` at `FR-03`, but no current maturity or inventory changes.
+
+## Held fourth Work Order boundary decision - historical and closed
 
 `FRWO-004-v1` historically selected only `FR-03 / Host 06 - Stranded Lens
 Cradle`, not the whole Drowned Archive. `FRVE-004-v1` then issued `HOLD /
@@ -107,17 +136,19 @@ and interface overlays are not lawful substitutes.
 
 The existing generic `L02-03` launcher is already the compact released runtime
 expression. Relabeling it without a distinct physical Host 06 would not create
-a new player-visible vertical-quality outcome. Exact Host 06 geometry, mapping,
-center, semantic target, label box, and source-retention band therefore remain
-`null`; no revised Science questions are issued.
+a new player-visible vertical-quality outcome. For the old immutable source,
+exact Host 06 geometry, mapping, center, semantic target, label box, and
+source-retention band remain `null`. The new-source questions belong only to
+`FRWO-005-v1` and do not revise this historical finding.
 
 Hosts 07-15, the remaining three Drowned movements, Crown turn, Witness
 physical-host cell, City contradiction, Hosts 17-38, and Measured Horizon
 literary close remain deferred. Host 06 remains the first missing fixed
-encounter, so the HOLD does not authorize a later-address skip. The fresh
-Commandant must adjudicate whether an explicit no-Host06 compression can still
-satisfy the complete-game product promise or whether Martin must decide a
-media-authority or product-promise boundary change.
+encounter, so the HOLD does not authorize a later-address skip. That product/
+media decision has since been made: Martin authorized one bounded new Drowned
+source, Commandant issued `FRPB-001-v2`, Colonel issued `FRCL-004-v2`, and
+Operations selected the distinct successor `FRWO-005-v1`. The closed fourth
+Work Order remains historical evidence only.
 
 ## Released third Work Order boundary decision
 
@@ -195,7 +226,8 @@ Every pass preserves clean start and exact resume; local privacy and Demo Tour
 isolation; all forty learning-owner mappings; current chapter order, returns,
 and checkpoint behavior; equivalent keyboard/pointer/touch/focus/reflow/forced-
 color/reduced-motion access; offline/no-authority/no-exam behavior; immutable
-accepted media; and MH-40 with equal outcomes, invariant world, and
+pre-existing accepted media plus only an explicitly accepted bounded
+new-source delta; and MH-40 with equal outcomes, invariant world, and
 `successor=null`.
 
 ## Update authority
@@ -203,9 +235,8 @@ accepted media; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-No Work Order is selected. `FRWO-004-v1` is closed without production. One
-fresh Commandant is the exact next owner of the product/media-authority
-conflict. This map does not preauthorize a revised Work Order, Science,
-Mission, production, later-address work, maturity advancement, media work,
-cleanup of any disclosed residual, closure of any OPEN classification, or
-`FIRST RUN COMPLETE`.
+`FRWO-005-v1` is selected and one fresh Science review is the exact next
+action. `FRWO-004-v1` remains closed. This map does not preauthorize Mission,
+generation, implementation, asset selection/import, reveal, later-address
+work, maturity advancement, residual cleanup, closure of any OPEN
+classification, or `FIRST RUN COMPLETE`.

@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-004-v2`
+Scoreboard ID: `FRSB-005-v1`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / lock: `FRPB-001-v1` / `FRCL-004-v1`
+Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-004-v2`
+Release map: `FRRM-005-v1`
 
-Operations source inspected: `b64413c34cb10aafbb28853c52bb3415cc5b9dc0`
+Operations source inspected: `56a77a705f1730796d6e33dc1aa98b8ba7103a82`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -18,12 +18,15 @@ Date: **2026-08-10**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **none**.
+Selected bounded Work Order: **`FRWO-005-v1 / Stranded Lens Cradle - One New
+Source and Fixed Lesson Integration`**.
 
-The exact bounded Host 05 evidence remains released below. `FRWO-004-v1` is
-withdrawn and closed without production by `FRWO-004-v1-OPH-01` after
-`FRVE-004-v1` proved that no lawful Host 06 source geometry exists. No maturity
-cell or host inventory advances.
+The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
+remains withdrawn and closed without production, and its negative finding
+remains exact for the old immutable source. `FRWO-005-v1` is a distinct
+new-source Work Order under `FRPB-001-v2` / `FRCL-004-v2`. Selection and media
+authority are not as-built evidence; no maturity cell or host inventory
+advances.
 
 ## Reading the matrix
 
@@ -92,25 +95,30 @@ complete.
 - The host inventory is now `6 exact / 1 accepted shared compression / 32
   missing / 1 unadvanced Witness expression`.
 
-## Current planning hold
+## Current selected Work Order - maturity unchanged
 
 `FRAB-003-v1` records Host 05 as one exact distinct relationship while leaving
 the address physical-host cell at `FR0` with one accepted compression and ten
-missing hosts. `FRCL-004-v1` confirms Host 06 / Stranded Lens Cradle as the
-first missing fixed encounter. `FRVE-004-v1` proves that the immutable Drowned
-source contains no lawful local dry lens-and-cradle geometry, and
-`FRWO-004-v1-OPH-01` therefore closes `FRWO-004-v1` without production.
+missing hosts. `FRCL-004-v2` confirms Host 06 / Stranded Lens Cradle as the
+first missing fixed encounter and locks exactly one new-source continuity.
+`FRVE-004-v1` still proves that the immutable accepted Drowned source contains
+no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
+closes `FRWO-004-v1` without production.
 
-The withdrawn target `1 accepted shared compression / 2 exact / 9 missing` is
-not candidate or maturity evidence. Current `FR-03` remains exactly `1
+Martin's bounded media authorization and `FRPB-001-v2` permit the distinct
+successor `FRWO-005-v1` to own at most one eventual canonical additional
+Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03` integration.
+Its target `1 accepted shared compression / 2 exact / 9 missing` is not current
+candidate or maturity evidence. Current `FR-03` remains exactly `1
 accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-One fresh Commandant is the exact next owner to adjudicate whether a truthful
-explicit no-Host06 compression can still satisfy the complete-game promise or
-whether Martin must decide a media-authority or product-promise boundary
-change. No revised Work Order, Science, Mission, Host 06 implementation, Host
-07-15 work, Witness promotion, City correction, maturity inference, media
-operation, OPEN-classification closure, residual inspection, completion sweep,
-or `FIRST RUN COMPLETE` is preauthorized.
+One fresh Science context is the exact next owner. It must independently prove
+the generatable/runtime-polishable asset envelope; maximum-three-attempt
+external quarantine; exact provenance and numeric media/PBA budgets; six-
+layout crop/hotspot/accessibility/state feasibility; validation; and rollback
+before Mission. No Mission, media attempt, asset selection/import, Host 06
+implementation, reveal, Host 07-15 work, Witness promotion, City correction,
+maturity inference, OPEN-classification closure, residual inspection,
+completion sweep, or `FIRST RUN COMPLETE` is preauthorized.
