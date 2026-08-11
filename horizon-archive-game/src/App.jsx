@@ -179,9 +179,18 @@ import {
 import { deriveFractureNurseryState, deriveMeadowRouteMarkerState, MEADOW_PIXEL_HOTSPOTS } from "./pixelMeadow.js";
 import {
   buildSixfoldWeirReturnPresentation,
+  deriveStrandedLensCradleState,
   deriveSixfoldWeirState,
   DROWNED_ARCHIVE_HOTSPOTS,
+  FRPX05_COPY,
+  FRPX05_IDENTIFICATION,
   FRPX03_COPY,
+  getStrandedLensCradleHotspot,
+  isLegacyModelChoiceLauncherVisible,
+  isStrandedLensCradleSourceIdentityPass,
+  STRANDED_LENS_CRADLE_PROVENANCE,
+  STRANDED_LENS_CRADLE_REGISTRY,
+  STRANDED_LENS_CRADLE_SOURCE_URL,
 } from "./drownedArchive.js";
 import {
   buildCompletedMeadowReturnPatch,
@@ -1018,6 +1027,8 @@ export function App() {
   const [responsibleAIEvidence, setResponsibleAIEvidence] = useState(null);
   const [modelChoiceSession, setModelChoiceSession] = useState(null);
   const [modelChoiceEvidence, setModelChoiceEvidence] = useState(null);
+  const [strandedLensCradleDecodedImage, setStrandedLensCradleDecodedImage] = useState(null);
+  const [strandedLensCradlePresented, setStrandedLensCradlePresented] = useState(false);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
@@ -1077,9 +1088,13 @@ export function App() {
   const primaryHotspotRef = useRef(null);
   const fractureNurseryRef = useRef(null);
   const sixfoldWeirRef = useRef(null);
+  const strandedLensCradleRef = useRef(null);
   const meadowEntryFocusPendingRef = useRef(false);
   const fractureNurseryFocusPendingRef = useRef(false);
   const sixfoldWeirFocusPendingRef = useRef(false);
+  const strandedLensCradleTransitionPendingRef = useRef(false);
+  const strandedLensCradleFocusPendingRef = useRef(false);
+  const strandedLensCradleAnnouncementPendingRef = useRef(false);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1132,6 +1147,16 @@ export function App() {
     sanitizeWorkloadEvidence(workloadEvidence),
     sanitizeResponsibleAIEvidence(responsibleAIEvidence),
   );
+  const strandedLensCradleState = deriveStrandedLensCradleState({
+    responsibleAIEvidence,
+    modelChoiceEvidence,
+    registry: STRANDED_LENS_CRADLE_REGISTRY,
+    provenance: STRANDED_LENS_CRADLE_PROVENANCE,
+    decodedImage: strandedLensCradleDecodedImage,
+  });
+  const strandedLensCradleLawful = strandedLensCradleState !== "hidden";
+  const strandedLensCradleActive = strandedLensCradlePresented && strandedLensCradleLawful;
+  const legacyModelChoiceLauncherVisible = isLegacyModelChoiceLauncherVisible(STRANDED_LENS_CRADLE_REGISTRY.source);
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -1159,18 +1184,30 @@ export function App() {
     label: FRPX03_COPY.NAME,
     hotspot: DROWNED_ARCHIVE_HOTSPOTS.sixfoldWeir,
   }] : []), ...(scene.secondaryHotspots ?? [])];
+  const strandedLensCradleHotspot = getStrandedLensCradleHotspot(STRANDED_LENS_CRADLE_REGISTRY);
+  const strandedLensCradleHotspots = scene.id === "ruins" && strandedLensCradleActive && strandedLensCradleHotspot ? [{
+    id: "stranded-lens-cradle",
+    label: FRPX05_IDENTIFICATION.NAME,
+    hotspot: strandedLensCradleHotspot,
+  }] : [];
   const sceneHotspots = [primarySceneHotspot, ...(scene.id === "ruins" ? ruinsHotspots : meadowHotspots)];
+  const activeSceneHotspots = scene.id === "ruins" && strandedLensCradleActive
+    ? strandedLensCradleHotspots
+    : sceneHotspots;
   const ruinsVisualState = completed.includes("ruins") ? "complete" : terminalOpen && scene.id === "ruins" ? "active" : "available";
   const ruinsImages = { canonical: drownedArchiveImage, narrow: drownedArchiveImage };
-  const hotspotButtons = sceneHotspots.map((hotspot) => {
+  const hotspotButtons = activeSceneHotspots.map((hotspot) => {
     const isMeadowRouteMarker = scene.id === "meadow" && hotspot.id === "route-marker";
     const isFractureNursery = scene.id === "meadow" && hotspot.id === "fracture-nursery";
     const isSixfoldWeir = scene.id === "ruins" && hotspot.id === "sixfold-weir";
+    const isStrandedLensCradle = scene.id === "ruins" && hotspot.id === "stranded-lens-cradle";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
     const nurseryStateLabel = isFractureNursery ? FRPX02_COPY.NURSERY_STATE[fractureNurseryState] : "";
     const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
     const sixfoldStateLabel = isSixfoldWeir ? FRPX03_COPY.STATE[sixfoldWeirState] : "";
     const sixfoldLabel = isSixfoldWeir ? ` // ${sixfoldStateLabel.toUpperCase()}` : "";
+    const strandedLensCradleStateLabel = isStrandedLensCradle ? FRPX05_IDENTIFICATION.STATE[strandedLensCradleState] : "";
+    const strandedLensCradleLabel = isStrandedLensCradle ? ` // ${strandedLensCradleStateLabel.toUpperCase()}` : "";
     const hotspotStyle = getHotspotStyle(hotspot.hotspot);
     const sixfoldActivationStyle = isSixfoldWeir ? {
       ...hotspotStyle,
@@ -1189,6 +1226,35 @@ export function App() {
       letterSpacing: 0,
       overflow: "hidden",
     } : undefined;
+    const strandedLensCradleLabelStyle = isStrandedLensCradle ? {
+      left: "3px",
+      right: "3px",
+      top: "3px",
+      bottom: "3px",
+      width: "auto",
+      height: "auto",
+      transform: "none",
+      padding: "2px",
+      letterSpacing: 0,
+      overflow: "hidden",
+    } : undefined;
+    if (isStrandedLensCradle) {
+      return (
+        <button
+          key={hotspot.id}
+          ref={strandedLensCradleRef}
+          className="hotspot hotspot-secondary"
+          data-hotspot-id={hotspot.id}
+          data-stranded-lens-cradle-state={strandedLensCradleState}
+          style={hotspotStyle}
+          onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }}
+          disabled={terminalOpen}
+          aria-label={`${verb.toLowerCase()} ${hotspot.label}, ${strandedLensCradleStateLabel}`}
+        >
+          <span data-stranded-lens-cradle-label style={strandedLensCradleLabelStyle}>{verb} {hotspot.label}{strandedLensCradleLabel}</span>
+        </button>
+      );
+    }
     return (
       <button
         key={hotspot.id}
@@ -1210,6 +1276,12 @@ export function App() {
       </button>
     );
   });
+  const legacyVerbButtons = ADVENTURE_VERBS.map((item) => (
+    <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance && !((scene.id === "meadow" && fractureNurseryState !== "hidden") || (scene.id === "ruins" && sixfoldWeirState !== "hidden"))}>{item}</button>
+  ));
+  const strandedLensCradleVerbButtons = ADVENTURE_VERBS.map((item) => (
+    <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance && strandedLensCradleState === "hidden"}>{item}</button>
+  ));
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
 
   useEffect(() => {
@@ -1365,6 +1437,74 @@ export function App() {
     sixfoldWeirFocusPendingRef.current = false;
     sixfoldWeirRef.current?.focus({ preventScroll: true });
   }, [mode, scene.id, terminalOpen, sixfoldWeirState]);
+
+  useEffect(() => {
+    if (!isStrandedLensCradleSourceIdentityPass(STRANDED_LENS_CRADLE_REGISTRY.source, STRANDED_LENS_CRADLE_PROVENANCE)
+      || typeof STRANDED_LENS_CRADLE_SOURCE_URL !== "string"
+      || !STRANDED_LENS_CRADLE_SOURCE_URL) {
+      setStrandedLensCradleDecodedImage(null);
+      return undefined;
+    }
+    let connected = true;
+    const image = new Image();
+    image.decoding = "async";
+    image.onload = () => {
+      if (!connected) return;
+      setStrandedLensCradleDecodedImage({
+        complete: image.complete,
+        naturalWidth: image.naturalWidth,
+        naturalHeight: image.naturalHeight,
+      });
+    };
+    image.onerror = () => {
+      if (connected) setStrandedLensCradleDecodedImage(null);
+    };
+    image.src = STRANDED_LENS_CRADLE_SOURCE_URL;
+    return () => {
+      connected = false;
+      image.onload = null;
+      image.onerror = null;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!strandedLensCradleLawful) {
+      strandedLensCradleTransitionPendingRef.current = false;
+      strandedLensCradleAnnouncementPendingRef.current = false;
+      if (strandedLensCradlePresented) {
+        sixfoldWeirFocusPendingRef.current = true;
+        setStrandedLensCradlePresented(false);
+      }
+      return undefined;
+    }
+    if (strandedLensCradlePresented || mode !== "playing" || scene.id !== "ruins" || terminalOpen) return undefined;
+    if (!strandedLensCradleTransitionPendingRef.current) {
+      strandedLensCradleFocusPendingRef.current = true;
+      setStrandedLensCradlePresented(true);
+      return undefined;
+    }
+    const frame = window.requestAnimationFrame(() => {
+      if (!strandedLensCradleTransitionPendingRef.current) return;
+      strandedLensCradleTransitionPendingRef.current = false;
+      strandedLensCradleFocusPendingRef.current = true;
+      strandedLensCradleAnnouncementPendingRef.current = true;
+      setStrandedLensCradlePresented(true);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [mode, scene.id, terminalOpen, strandedLensCradleLawful, strandedLensCradlePresented]);
+
+  useLayoutEffect(() => {
+    if (!strandedLensCradleFocusPendingRef.current || !strandedLensCradleActive || terminalOpen) return;
+    const target = strandedLensCradleRef.current;
+    if (!target?.isConnected) return;
+    strandedLensCradleFocusPendingRef.current = false;
+    target.focus({ preventScroll: true });
+    if (strandedLensCradleAnnouncementPendingRef.current) {
+      strandedLensCradleAnnouncementPendingRef.current = false;
+      setSceneAnnouncement(FRPX05_COPY.FRPX05_AVAILABLE);
+      setDialogue(FRPX05_COPY.FRPX05_AVAILABLE, "system");
+    }
+  }, [strandedLensCradleActive, strandedLensCradleState, terminalOpen]);
 
   useLayoutEffect(() => {
     if (!terminalOpen || scene.id !== "meadow" || meadowTerminalKind !== "first") return;
@@ -2894,6 +3034,23 @@ export function App() {
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if (scene.id === "ruins" && hotspotId === "stranded-lens-cradle") {
+      if (strandedLensCradleState === "hidden" || terminalOpen) return;
+      if (verb === "LOOK AT") {
+        setDialogue(FRPX05_COPY.FRPX05_UNSEEN_INTERFACE, "scene");
+        return;
+      }
+      if (verb === "TALK TO") {
+        setDialogue(FRPX05_COPY.FRPX05_AVAILABLE, "pilot");
+        return;
+      }
+      if (strandedLensCradleState === "complete") {
+        setDialogue(`${FRPX05_COPY.FRPX05_MASTERED} ${FRPX05_COPY.FRPX05_NEXT_BOUNDARY}`, "system");
+        return;
+      }
+      openModelChoiceExercise();
+      return;
+    }
     if (scene.id === "ruins" && hotspotId === "sixfold-weir") {
       if (sixfoldWeirState === "hidden" || terminalOpen) return;
       if (verb === "LOOK AT") {
@@ -3404,6 +3561,7 @@ export function App() {
     setResponsibleAIEvidence((previous) => updateResponsibleAIEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true }));
     setResponsibleAISession(null);
     sixfoldWeirFocusPendingRef.current = true;
+    strandedLensCradleTransitionPendingRef.current = STRANDED_LENS_CRADLE_REGISTRY.source.enabled === true;
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
     setDialogue(`${FRPX03_COPY.FRPX03_MASTERED} ${FRPX03_COPY.FRPX03_NEXT_BOUNDARY}`, "system");
@@ -3462,6 +3620,7 @@ export function App() {
     if (!modelChoiceSession?.complete || !modelChoiceEvidence?.confidence) return;
     setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true }));
     setModelChoiceSession(null);
+    strandedLensCradleFocusPendingRef.current = true;
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
     setDialogue("Model and deployment primary form complete at 16 of 16. Transfer and closed-note explanation remain; this course-authored practice is not a Microsoft exam question.", "teacher");
@@ -3482,6 +3641,7 @@ export function App() {
     if (!modelChoiceSession?.explanationResult?.passed || !modelChoiceSession.ownershipConfirmed || !modelChoiceEvidence?.confidence) return;
     setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true }));
     setModelChoiceSession(null);
+    strandedLensCradleFocusPendingRef.current = true;
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
     setDialogue("Model and deployment readiness confirmed: both 16-of-16 course-authored forms and the closed-note decision explanation are complete.", "teacher");
@@ -3827,7 +3987,13 @@ export function App() {
       const nextSixfoldState = nextScene.id === "ruins"
         ? deriveSixfoldWeirState(sanitizeWorkloadEvidence(workloadEvidence), sanitizeResponsibleAIEvidence(responsibleAIEvidence))
         : "hidden";
-      if (["available", "in_progress", "remediation_required"].includes(nextSixfoldState)) sixfoldWeirFocusPendingRef.current = true;
+      const nextStrandedLensState = nextScene.id === "ruins"
+        ? deriveStrandedLensCradleState({ responsibleAIEvidence, modelChoiceEvidence, registry: STRANDED_LENS_CRADLE_REGISTRY, provenance: STRANDED_LENS_CRADLE_PROVENANCE, decodedImage: strandedLensCradleDecodedImage })
+        : "hidden";
+      if (nextStrandedLensState !== "hidden") {
+        strandedLensCradleFocusPendingRef.current = true;
+        setStrandedLensCradlePresented(true);
+      } else if (["available", "in_progress", "remediation_required"].includes(nextSixfoldState)) sixfoldWeirFocusPendingRef.current = true;
       else resumeContinueFocusPendingRef.current = true;
       setPendingAdvance(true);
     } else {
@@ -3837,7 +4003,9 @@ export function App() {
     setSceneIndex(nextSceneIndex);
     setVerb("LOOK AT");
     setDialogue(nextSceneAlreadyCompleted && nextScene.id === "ruins"
-      ? buildSixfoldWeirReturnPresentation(deriveSixfoldWeirState(sanitizeWorkloadEvidence(workloadEvidence), sanitizeResponsibleAIEvidence(responsibleAIEvidence)))
+      ? strandedLensCradleState !== "hidden"
+        ? `${FRPX05_COPY.FRPX05_RETURNED} ${strandedLensCradleState === "complete" ? FRPX05_COPY.FRPX05_MASTERED : strandedLensCradleState === "remediation_required" ? FRPX05_COPY.FRPX05_MISSED : strandedLensCradleState === "in_progress" ? FRPX05_COPY.FRPX05_IN_PROGRESS : FRPX05_COPY.FRPX05_AVAILABLE}`
+        : buildSixfoldWeirReturnPresentation(deriveSixfoldWeirState(sanitizeWorkloadEvidence(workloadEvidence), sanitizeResponsibleAIEvidence(responsibleAIEvidence)))
       : nextSceneAlreadyCompleted ? nextScene.success : nextScene.prompt, "system");
   }
 
@@ -4149,10 +4317,19 @@ export function App() {
         ) : (
           <>
             {scene.id === "ruins" ? (
-              <picture>
-                <source media="(max-width: 759px), (max-height: 595px)" srcSet={ruinsImages.narrow} />
-                <img className="scene-art" src={ruinsImages.canonical} alt={scene.imageAlt} data-ab01-state={ruinsVisualState} />
-              </picture>
+              strandedLensCradleActive ? (
+                <img
+                  className="scene-art stranded-lens-cradle-art"
+                  src={STRANDED_LENS_CRADLE_SOURCE_URL}
+                  alt={FRPX05_IDENTIFICATION.ALT}
+                  data-stranded-lens-cradle-source={STRANDED_LENS_CRADLE_REGISTRY.source.path}
+                />
+              ) : (
+                <picture>
+                  <source media="(max-width: 759px), (max-height: 595px)" srcSet={ruinsImages.narrow} />
+                  <img className="scene-art" src={ruinsImages.canonical} alt={scene.imageAlt} data-ab01-state={ruinsVisualState} />
+                </picture>
+              )
             ) : (
               <img className="scene-art" src={scene.image} alt={scene.imageAlt ?? `Alien archaeological site: ${scene.location}`} />
             )}
@@ -5912,9 +6089,7 @@ export function App() {
 
       <section className="command-panel" data-meadow-departure-choice={showMeadowDepartureChoice ? "true" : undefined} aria-label="Adventure controls and dialogue" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
         <nav className="verb-grid" aria-label="Action verbs">
-          {ADVENTURE_VERBS.map((item) => (
-            <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance && !((scene.id === "meadow" && fractureNurseryState !== "hidden") || (scene.id === "ruins" && sixfoldWeirState !== "hidden"))}>{item}</button>
-          ))}
+          {strandedLensCradleActive ? strandedLensCradleVerbButtons : legacyVerbButtons}
         </nav>
 
         <div className="dialogue-box" aria-live="polite">
@@ -5942,7 +6117,7 @@ export function App() {
               <div className="dialogue-footer">
                 <span className="speaker" data-dialogue-owner={dialogueOwner}>{getDialogueSpeaker(dialogueOwner)}</span>
                 <div className="dialogue-actions">
-                  {pendingAdvance && scene.id === "ruins" && responsibleAIEvidence?.masteryStatus === "mastered" && modelChoiceEvidence?.masteryStatus !== "mastered" && (
+                  {legacyModelChoiceLauncherVisible && pendingAdvance && scene.id === "ruins" && responsibleAIEvidence?.masteryStatus === "mastered" && modelChoiceEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openModelChoiceExercise(); }}>{modelChoiceSession ? "Resume Model Choices" : modelChoiceEvidence?.masteryStatus === "primary_complete" ? "Start Model Choice Transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" ? "Open Closed-Note Gate" : "Start Model Choices"}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && modelChoiceEvidence?.masteryStatus === "mastered" && structuredPacketEvidence?.masteryStatus !== "mastered" && (
