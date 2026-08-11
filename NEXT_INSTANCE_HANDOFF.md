@@ -2,22 +2,18 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`DIRECTORIAL LOCK / HOST 05 FRAGMENT HANDOFF,
-SINGULAR NESTED CRADLE, RESTRAINED HORIZON CATCH, AND WORLD SILENCE
-FROZEN / FRDT-005-v1-VR-01`**
+Current disposition: **`PLAYER EXPERIENCE READY / DIRECT-API ATTEMPT LEDGER,
+OBJECTIVE CANDIDATE MEASUREMENTS, AND POST-IMPORT LIVE SUMMARY FROZEN /
+FRPX-005-v1-VR-01`**
 
 Current Work Order / decisive Science return: `FRWO-005-v7` /
 `FRVE-005-v7-VR-03`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-08`
 
-Current directorial lock: `FRDT-005-v1-VR-01`, adopting compatible direction
-from `FRDT-005-v1`
+Effective treatment: `FRDT-005-v1` through `FRDT-005-v1-VR-01`
 
-Planning controls: `FRRM-005-v7` / `FRSB-005-v7`
-
-Recon source inspected:
-`a0ecd6d735516366414f8d5a6a87831fe76939ff`
+Effective blueprint: `FRPX-005-v1` through `FRPX-005-v1-VR-01`
 
 Frozen inert code candidate:
 `02d957e9d69dc7986928a391c37f899784f73ea5`
@@ -30,74 +26,73 @@ Immutable accepted-media manifest: `FRAM-001-v1`, file SHA-256
 exact `17 / 37,410,731`, canonical digest
 `c7ca95201029b490f2460a846e3dc2a64a26775b57e8c587cbc2d874df654d99`
 
+Tactical source inspected:
+`6d719c0c4c0f703486fb6c854c9437ab09e01202`
+
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Tactical Operations Specialist /
-`tactical_operations_specialist`**
+Exact next owner: **one fresh Combat Engineer / `combat_engineer`**
 
-## Recon decision
+## Tactical decision
 
-Recon independently reconciled the direct-API/native-handle shell with the
-current Drowned canon, inert Host 06 controls, prior treatment/blueprint,
-immutable accepted-media evidence, and active visual standards. It issued
-`FRDT-005-v1-VR-01 / DIRECTORIAL LOCK` with no variance request.
+Tactical independently reconciled the direct-API/native-handle shell and
+directorial lock with the frozen inert runtime and tests. It issued
+`FRPX-005-v1-VR-01 / PLAYER EXPERIENCE READY`.
 
-The exact interpretation remains: one calm unchanged Host 05 mastery beat;
-at least three lens-like fragments and one continuous dry material approach
-carry attention into a local continuation of the same basin; one complete
-weathered lens is at least `80%` visibly nested inside one `12..35` degree
-tilted conformal cradle; at least two distinct load/stress contacts and two
-continuous drainage seams establish physical credibility; and the natural
-horizon or its reflection crosses at least `25%` of the inner-lens width.
+The exact player graph is unchanged: inert/null-first Host 06 preserves the
+accepted Host 05 surface and generic launcher; a later lawful source follows
+exact Host 05 mastery, one committed Host 05 paint, direct same-basin
+replacement, Host 06 focus/notice once, sole deliberate `USE` into unchanged
+`L02-03`, exact miss/Close/Escape/reload/Meadow-return recovery, completed
+read-only USE, and the unchanged next Drowned boundary. Hidden remains no DOM,
+name, focus, announcement, action, or credit. Six-layout mapping, native input,
+forced color, reduced motion, factual alt, seven copy-purpose slots, privacy,
+save, and no-reveal behavior remain exact.
 
-The relation is singular, dry, first-person, and distinct from Host 05, live
-water, a return-like ridge, the Crown, the distant suspended Tidal Lens, and
-any second candidate. It preserves stranded-versus-correct uncertainty,
-complete Machine/Builder/world silence, no text/pseudo-text/watermark, no
-lesson diagram or answer, exact full-source six-layout crop/mapping/
-accessibility discipline, no reveal, and sole deliberate `USE` into unchanged
-`L02-03`. The exact route remains Host 05 -> Host 06 -> unchanged `L02-03` ->
-unchanged next Drowned boundary, with no Host 07 expression.
+Tactical froze the direct-API attempt/failure/rejection/selection evidence
+ledger, original-resolution technical and `PHY-01..12` fact slots, source-band
+and protected-feature records, selected-source six-layout/live records, and
+the exact one-summary/one-verifier complete-E2E fields. Rejected working facts
+are discarded; only stable codes and cleanup booleans survive.
 
-The objective rejection priorities are frozen: forbidden implication/human or
-text identity; broken singular nested relation; broken support/drainage/dry
-reach; broken Host 05/same-basin continuity; broken horizon/hierarchy/crop/
-accessibility; then broken Horizon Archive material and lighting finish. All
-shell predicates remain conjunctive, and the ordering changes neither the
-technical-first validation ladder nor the full-review condition for ordinal
-`3`.
+One bounded correction is required: current source identity accepts
+`attemptOrdinal` integer `1..3`, but the effective shell makes historical
+ordinal `1` permanently opaque and ineligible for selection. Runtime selected
+source identity must accept exact ordinal `2` or `3` only. This does not change
+the total ordinal domain, future send budget, technical transport, or any
+player behavior.
 
-Every helper, direct API, request, response/parser, ordinal, file identity,
-cleanup, PNG, import/provenance, runtime/learning/privacy/save/offline/PBA/
-performance, E2E, rollback, protected-state, OPEN-record, and maturity clause
-of `FRSH-005-v1-VR-08` remains exact and unchanged.
-
-No helper/API/media/pixel/product/E2E/reveal/maturity action occurred in Recon.
-Direct Image API sends remain exact `0`; ordinals `2` and `3` remain
-unconsumed; conservative managed-residual count remains exact `1` for ordinal
-`1`; VR-65 remains separate and inaccessible. Recon changed only its new
-versioned treatment and this synchronized handoff and did not push.
+No helper/API/media/pixel/product/test/E2E/reveal/maturity action occurred.
+Direct API sends remain exact `0`; ordinals `2` and `3` remain unconsumed;
+conservative managed-residual count remains exact `1` for ordinal `1`; VR-65
+remains separate and inaccessible. Tactical changed only its versioned
+blueprint variance and this synchronized handoff and did not push.
 
 ## Exact next action
 
-One fresh Tactical Operations Specialist reads complete
-`FRSH-005-v1-VR-08`, complete `FRDT-005-v1-VR-01`, `FRDT-005-v1`,
-`FRPX-005-v1`, complete `FRWO-005-v7`, decisive `FRVE-005-v7-VR-03`, frozen
-functional evidence `FRCE-005-v1-VR-04`, immutable `FRAM-001-v1`, and the
-exact current Drowned runtime/state/focus/return/accessibility controls required
-by its profile.
+One fresh Combat Engineer / `combat_engineer` reads complete
+`FRSH-005-v1-VR-08`, complete `FRDT-005-v1-VR-01`, `FRDT-005-v1`, complete
+`FRPX-005-v1`, complete `FRPX-005-v1-VR-01`, `FRWO-005-v7`, decisive
+`FRVE-005-v7-VR-03`, frozen `FRCE-005-v1-VR-04`, immutable
+`FRAM-001-v1`, and the exact current Host 06 runtime/test/release controls.
 
-Tactical issues exactly one new versioned `PLAYER EXPERIENCE READY`, `REVISE`,
-or `HOLD` artifact. A passing blueprint must reconcile the direct-API
-attempt/failure/selection ledger, exact source/DOM/focus/recovery order,
-irreversible null-first source-enable boundary, Host 05-to-06 calm committed
-paint, six-layout mapping/accessibility probes, seven copy-purpose slots, one
-factual alt slot, and no-reveal behavior without changing the directorial or
-technical shell.
+Combat independently revalidates the frozen candidate/tree, manifest file and
+stored identities, absent Host 06 product/provenance targets, null registry/
+copy/alt slots, helper/API contracts, direct-API attempt ledger,
+post-import/live summary schema, permitted paths, focused tests, and current
+release-command needs. It implements only the bounded selected-ordinal
+`{2,3}` correction and any evidence-control correction strictly required to
+prevent obsolete managed-ingress execution; otherwise it preserves the exact
+runtime and may issue a substantiated no-change result.
 
-Tactical may not compile/invoke the helper; allocate a helper, fixture, or live
+Combat performs only non-generative preflight, issues exactly one new
+versioned `PRODUCTION FUNCTIONAL`, `REVISE`, or `HOLD` artifact, commits its
+bounded result and synchronized handoff, and proves required synchronization
+before Quartermaster.
+
+Combat may not compile/invoke the helper; allocate a helper, fixture, or live
 root; read a credential; construct/send an API request; consume ordinal `2`;
-inspect media/pixels; import an asset; write final copy/provenance; edit
-product/tests; begin Combat; run E2E; reveal; advance maturity; close an OPEN
-record; access a managed residual or VR-65; schedule; automate; push; release;
-or call `FIRST RUN COMPLETE`.
+inspect media/pixels; import an asset; populate candidate/copy/alt/provenance;
+run candidate preview or E2E; reveal; advance maturity; close an OPEN record;
+access a residual or VR-65; schedule; automate; release; or call
+`FIRST RUN COMPLETE`.
