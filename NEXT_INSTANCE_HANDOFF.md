@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRRC-003-v4 CREATE STOPPED ON SAME-HANDLE
-CHANGE-TIME DRIFT / NO RETRY / SCIENCE VIABILITY ADJUDICATION REQUIRED`**
+Current disposition: **`POLISH VIABILITY READY / FRRC-003-v4 REMAINS HELD /
+MISSION CHANGE-TIME QUIESCENCE VARIANCE REQUIRED`**
 
 Martin's controlling decision: **`Authorized new Drowned Media for Host 06`**
 
-Work Order / viability / Science variance: `FRWO-005-v2` / `FRVE-005-v2` /
-`FRVE-005-v2-VR-01`
+Work Order / viability / effective Science variances: `FRWO-005-v2` /
+`FRVE-005-v2` / `FRVE-005-v2-VR-01` / `FRVE-005-v2-VR-02`
 
 Base shell / effective Mission variances: `FRSH-005-v1` /
 `FRSH-005-v1-VR-01` / `FRSH-005-v1-VR-02` / `FRSH-005-v1-VR-03`
@@ -26,54 +26,60 @@ Frozen candidate tree:
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **fresh Mission Captain / `mission_captain`**
 
-## Combat result
+## Science adjudication
 
-Fresh Combat verified exact v4 synchronization: `HEAD == origin/main ==
-390345d7...`; immutable v3, launcher, and v4 hashes; both zero-error AST
-results; transport-only semantic delta; exact literal command arrays; frozen
-candidate/tree; exact `17` literals; exact `31` cumulative components; frozen
-total `37,410,731`; exact BitConverter correction; and `FRAM-001-v1` absence.
+Fresh Science accepted Combat's v4 stop as exact and permanent. The consumed
+attempt emitted only `metadata drift ChangeTime`; it supplied no affected
+ordinal, settled snapshot, complete Cloud placeholder information, tuple,
+digest, final candidate scalar, or reusable manifest evidence. `FRAM-001-v1`
+remains absent and v4 may not be retried, recomputed, repaired, or reclassified.
 
-Combat invoked `FRRC-003-v4.entries.accepted-media-create` exactly once through
-the literal checked-in `-File` launcher. The primitive stopped fail-closed
-after an affected leaf's permitted same-handle raw stream because its post-read
-snapshot differed from the pre-read snapshot in the shell-frozen
-`ChangeTime` field:
+Official Windows semantics distinguish `LastWriteTime`, which belongs to the
+underlying data stream, from `ChangeTime`, which records file-metadata changes
+such as rename and attribute updates. The v4 `FILE_SHARE_READ`-only data handle
+also excluded an existing or later writable handle or writable mapping while
+it remained open. A bare monotonic `ChangeTime` advance is therefore not, by
+itself, evidence that the hashed content stream changed.
 
-```text
-metadata drift ChangeTime
-```
+Science found the manifest gate prospectively viable only under
+`FRVE-005-v2-VR-02`'s stronger fail-closed adapter: unchanged path, volume and
+128-bit file ID, creation/last-write times, attributes/tag/derived Cloud state,
+allocation/EOF/link/delete/directory state, raw length/SHA, and complete
+`CF_PLACEHOLDER_STANDARD_INFO`; no name-surrogate, topology, residency,
+modified-data, validation, pin, in-sync, sync-root, or opaque identity drift;
+monotonic access/change times; and, for a Cloud-only change-time advance, a
+same-handle bounded `2,000 ms` settle with two consecutive identical complete
+snapshots. The exact transition is recorded as scalars and never repaired or
+inserted into tuple identity.
 
-The invocation emitted no final scalar object, did not reach tuple completion,
-candidate assertion, or create-new logic, and left `FRAM-001-v1` absent. The
-affected ordinal, progress count, total, per-entry digests, tuple digest, and
-LastAccessTime scalars are unavailable. Combat made no retry, recompute,
-auxiliary accepted-media inspection, repair, or alternate invocation.
-Generation ordinals consumed remain `0`.
+Science opened or queried no accepted-media path and ran no data, pixel, test,
+build, preview, E2E, generation, import, release, reveal, or mutation operation.
+The frozen candidate/tree, inherited gates, generation ordinals `0`, maturity,
+OPEN records, and VR-65 remain unchanged.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads in full `AGENTS.md`, this
-handoff, `FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Science profile,
-`FRCE-005-v1-VR-03`, `FRVE-005-v2-VR-01`, `FRSH-005-v1-VR-01`,
+One fresh Mission Captain reads in full `AGENTS.md`, this handoff,
+`FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Mission profile,
+`FRCE-005-v1-VR-03`, `FRVE-005-v2-VR-01`,
+`FRVE-005-v2-VR-02`, `FRSH-005-v1-VR-01`,
 `FRSH-005-v1-VR-03`, and `FRRC-003-v4`.
 
-Science classifies the same-handle `ChangeTime` stop using control evidence
-only. It must not inspect or query an accepted-media path, retry or recompute
-the consumed v4 invocation, infer which ordinal failed, accept or reset the
-metadata delta, edit the launcher/primitive, or run a data, pixel, test, build,
-preview, E2E, generation, import, or release operation.
+Mission issues one versioned `FRSH-005-v1-VR-04` and superseding
+`FRRC-003-v5` manifest/launcher implementing the exact Science snapshot,
+Cloud-standard-info, monotonic-time, bounded-settle, scalar-recording, no-
+repair, and no-retry contract without changing the frozen candidate, literals,
+tuple schema, count, total, gates, timeout, or protected boundaries. Mission
+runs only control-file, AST, literal-set, candidate, and Git proof; it must not
+invoke create/recompute or query an accepted-media path.
 
-Science decides whether the accepted-media gate remains technically viable
-under the frozen no-fetch, single-handle, before/after-integrity, no-pixel, and
-no-mutation constraints. If and only if a lawful fail-closed envelope exists,
-Science issues one versioned viability variance and returns to a fresh Mission
-Captain for any new versioned shell and release-command authorization. If it
-cannot establish viability from permitted evidence, it records `HOLD`. It may
-not authorize a second `FRRC-003-v4` invocation.
+If and only if Mission reaches `FIRST RUN SHELL READY`, commits, pushes, and
+proves exact synchronization, one fresh Combat Engineer independently verifies
+the new pins and invokes `FRRC-003-v5.entries.accepted-media-create` exactly
+once. Any failure is immediate `HOLD / NO RETRY`. `FRRC-003-v4` remains
+consumed and no second v4 invocation is authorized.
 
 Quartermaster remains blocked. No manifest repair, candidate code change,
 selected-source inspection/import, Image work, test/build/preview/E2E,
