@@ -2,73 +2,80 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`SCIENCE POLISH VIABILITY READY / REQUIRED CORRECTION /
-MISSION REPARSE-GATE VARIANCE REQUIRED`**
+Current disposition: **`FIRST RUN SHELL READY / CLOUD FILES MANIFEST ADAPTER
+FROZEN / COMBAT MANIFEST-CREATE VERIFICATION REQUIRED`**
 
 Martin's controlling decision: **`Authorized new Drowned Media for Host 06`**
 
-Work Order / viability / variance: `FRWO-005-v2` / `FRVE-005-v2` /
+Work Order / viability / Science variance: `FRWO-005-v2` / `FRVE-005-v2` /
 `FRVE-005-v2-VR-01`
 
-Production shell / direction / blueprint: `FRSH-005-v1` / `FRDT-005-v1` /
-`FRPX-005-v1`
+Base shell / Mission variance: `FRSH-005-v1` /
+`FRSH-005-v1-VR-01`
+
+Superseding release-command manifest: `FRRC-003-v2`
 
 Frozen inert code candidate:
 `02d957e9d69dc7986928a391c37f899784f73ea5`
 
-Science inspection source:
-`12a8768d603d314e0d3124f6079b50a68176efaf`
+Frozen candidate tree:
+`09da6293d72c8123b8d9673bd8e41329338e8d13`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **fresh Mission Captain / `mission_captain`**
+Exact next owner: **fresh Combat Engineer / `combat_engineer`**
 
-## Science decision
+## Mission decision
 
-The manifest gate is viable, but the current shell/command primitive must not
-reject every `ReparsePoint` attribute. Metadata-only proof over only the exact
-seventeen literals and their cumulative components established that the
-observed `0x9000e01a` / `0x9000601a` tags are Microsoft Cloud Files variants,
-not name surrogates. All seventeen leaves resolve to their exact frozen paths
-inside the exact repository root, reparse-open and normal handles have the
-same volume/file ID, and every leaf is `PLACEHOLDER | IN_SYNC` with no
-partial/offline/unpinned/recall-on-data-access state.
+`FRSH-005-v1-VR-01` incorporates Science's exact OneDrive Cloud Files
+correction without changing another shell field. `FRRC-003-v2` supersedes
+only the `FRRC-003-v1` accepted-media create/recompute primitive and pins the
+immutable v1 manifest by SHA-256.
 
-`FRVE-005-v2-VR-01` freezes a fail-closed replacement: exact-component
-attribute-only tag/identity/final-path checks; rejection of every name
-surrogate, non-Cloud tag, path substitution, containment ambiguity, or
-partial/dehydrated file; then one no-write/no-delete-share/no-recall data
-handle per leaf for length plus SHA; strict before/after identity and metadata;
-and no accepted-media rollback or repair. Only an automatic monotonic
-`LastAccessTime` advance is permitted and recorded because Windows produced
-that sole change in the non-media proof.
+The adapter addresses only the exact seventeen literals and their exact 31
+cumulative components. It permits only ordinary non-reparse components or
+known Microsoft Cloud Files tags with no name-surrogate bit; requires exact
+normal/reparse volume and file identity, exact normalized final path and root
+containment, safe leaf attributes and Cloud state; rejects offline, unpinned,
+recall, partial, dehydrated, name-surrogate, non-Cloud, identity, path, byte,
+or metadata drift; and uses one `GENERIC_READ` / `FILE_SHARE_READ`-only /
+`OPEN_NO_RECALL` handle per leaf for a single EOF length/SHA stream. Before/
+after identity and metadata must be exact except unchanged or monotonically
+advanced `LastAccessTime`. No hydration, repair, decode, or pixel inspection
+is permitted.
 
-No accepted-media data stream was opened. No `FRAM-001-v1`, tuple digest,
-generator call, attempt, import, reveal, or product/runtime change exists.
+The frozen candidate and every already-passing `FRCE-005-v1` gate remain
+accepted and unchanged. No prior gate is rerun. `FRAM-001-v1` remains absent;
+generation ordinals consumed remain `0`.
 
 ## Exact next action
 
-One fresh Mission Captain reads in full `AGENTS.md`, this handoff,
-`FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Mission profile,
-`FRWO-005-v2`, `FRVE-005-v2`, `FRVE-005-v2-VR-01`, `FRSH-005-v1`,
-`FRCE-005-v1`, and `FRRC-003-v1`. Issue one versioned shell variance plus a
-superseding release-command manifest implementing the exact Science adapter.
-Change no other shell field.
+One fresh Combat Engineer reads in full `AGENTS.md`, this handoff,
+`FIRST_RUN_AGENT_WORKFLOW.md`, the registry, complete Combat profile,
+`FRSH-005-v1`, `FRSH-005-v1-VR-01`, `FRVE-005-v2-VR-01`, `FRCE-005-v1`,
+`FRPX-005-v1`, `FRRC-003-v1`, and `FRRC-003-v2`.
 
-If Mission cannot freeze that adapter exactly, issue `HOLD`. If it can, hand
-the unchanged frozen candidate to one fresh Combat Engineer to run the
-manifest create gate. Quartermaster does not begin until Combat lawfully
-reaches and pushes `PRODUCTION FUNCTIONAL` with exact synchronization.
+Combat verifies the superseding manifest and its frozen predecessor, then runs
+`FRRC-003-v2.entries.accepted-media-create` exactly once against candidate
+`02d957e9...`. If and only if it passes, verify the exact created
+`FRAM-001-v1`, issue one versioned `PRODUCTION FUNCTIONAL` close, commit only
+the manifest/report/handoff, push `main`, and prove `HEAD == origin/main`.
 
-No media-byte read under the old primitive, generation, pixel inspection,
-import, accepted-media mutation, parent enumeration, bypass, Image work,
-Intelligence release, reveal, maturity update, OPEN-record closure, residual
-access, schedule, automation, or `FIRST RUN COMPLETE` begins from this handoff.
+If the create gate stops, issue `HOLD`; do not retry, repair, mutate accepted
+media, or push as `PRODUCTION FUNCTIONAL`. Quartermaster remains blocked until
+the exact Combat PASS, evidence commit, functional disposition, push, and
+synchronization.
+
+No prior test/build/preview replay, pixel decode/inspection, hydration,
+accepted-media mutation, generator call, attempt, selected-source inspection,
+import, Image work, E2E, Intelligence release, reveal, maturity update,
+OPEN-record closure, residual access, schedule, automation, or `FIRST RUN
+COMPLETE` begins from this handoff.
 
 All thirteen inherited process records and the separate Commandant filename/
 search-scope record remain **OPEN**. VR-65 remains exactly **`DEFERRED
 LIMITATION / RELEASE-PROCESS ONLY / NON-GATING / OPAQUE EXTERNAL QA
 RESIDUAL`**, unknown and inaccessible. Repository QA quarantine, protected
 PDF, training directory, real browser/profile/save, hidden lore, user work,
-accepted-media bytes, managed/temp roots, and opaque residuals remain
+managed/temp roots, accepted-media pixels, and opaque residuals remain
 protected.
