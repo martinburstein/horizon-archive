@@ -2,19 +2,22 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-005-v1-VR-08 /
-DIRECT IMAGE API, EXACT PS5.1 NATIVE HANDLE IDENTITY, AND FULL FRESH
-PRODUCTION SEQUENCE FROZEN`**
+Current disposition: **`DIRECTORIAL LOCK / HOST 05 FRAGMENT HANDOFF,
+SINGULAR NESTED CRADLE, RESTRAINED HORIZON CATCH, AND WORLD SILENCE
+FROZEN / FRDT-005-v1-VR-01`**
 
 Current Work Order / decisive Science return: `FRWO-005-v7` /
 `FRVE-005-v7-VR-03`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-08`
 
+Current directorial lock: `FRDT-005-v1-VR-01`, adopting compatible direction
+from `FRDT-005-v1`
+
 Planning controls: `FRRM-005-v7` / `FRSB-005-v7`
 
-Mission source inspected:
-`7b10633bd1f6664103d50bbe648a2c0c0ffafc61`
+Recon source inspected:
+`a0ecd6d735516366414f8d5a6a87831fe76939ff`
 
 Frozen inert code candidate:
 `02d957e9d69dc7986928a391c37f899784f73ea5`
@@ -29,62 +32,72 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Reconnaissance Sergeant /
-`reconnaissance_sergeant`**
+Exact next owner: **one fresh Tactical Operations Specialist /
+`tactical_operations_specialist`**
 
-## Mission decision
+## Recon decision
 
-Mission reconciled `FRWO-005-v7` with decisive Science READY
-`FRVE-005-v7-VR-03` and issued `FRSH-005-v1-VR-08`.
+Recon independently reconciled the direct-API/native-handle shell with the
+current Drowned canon, inert Host 06 controls, prior treatment/blueprint,
+immutable accepted-media evidence, and active visual standards. It issued
+`FRDT-005-v1-VR-01 / DIRECTORIAL LOCK` with no variance request.
 
-The shell freezes one bounded 64-bit Windows PowerShell 5.1 production process:
-exact in-memory 1,693-byte helper source SHA
-`98cf564b7d22da686adc204a3f6051927ac2d37ef7b5f2fe22d774cb10d5da97`;
-exact 4,096-byte compiled DLL SHA
-`39e85b32b7f8437c2b5732e26093ca5bd9a9182b048c411e9dc5660ba03f10c9`;
-byte-only load, exact surface/layout, identity-conditioned helper cleanup
-before live-root/API activity; then one-send direct `POST
-https://api.openai.com/v1/images/generations` using `gpt-image-2`, exact
-`HOST06-GEN-PROMPT-v1`, `n=1`, `3840x2160`, `quality=high`,
-`background=opaque`, `output_format=png`, and env-only `OPENAI_API_KEY`.
+The exact interpretation remains: one calm unchanged Host 05 mastery beat;
+at least three lens-like fragments and one continuous dry material approach
+carry attention into a local continuation of the same basin; one complete
+weathered lens is at least `80%` visibly nested inside one `12..35` degree
+tilted conformal cradle; at least two distinct load/stress contacts and two
+continuous drainage seams establish physical credibility; and the natural
+horizon or its reflection crosses at least `25%` of the inner-lens width.
 
-Ordinal `1` remains permanently consumed and opaque. Ordinal `2` is the sole
-next request; ordinal `3` is allowed only after full objective source rejection
-and exact identity-conditioned cleanup. Every transport/parser/file/identity/
-cleanup failure stops with no retry. Strict response/base64, PNG/chunk/CRC/
-IHDR/sRGB/no-alpha/inflate/decode, `PHY-01..12`, six-layout crop/mapping/
-accessibility, byte-identical selected import/provenance, immutable-media,
-runtime/learning/privacy/save/offline/PBA/performance, no-reveal, E2E,
-rollback, OPEN-record, residual, canon, ending, and maturity gates remain
-exact.
+The relation is singular, dry, first-person, and distinct from Host 05, live
+water, a return-like ridge, the Crown, the distant suspended Tidal Lens, and
+any second candidate. It preserves stranded-versus-correct uncertainty,
+complete Machine/Builder/world silence, no text/pseudo-text/watermark, no
+lesson diagram or answer, exact full-source six-layout crop/mapping/
+accessibility discipline, no reveal, and sole deliberate `USE` into unchanged
+`L02-03`. The exact route remains Host 05 -> Host 06 -> unchanged `L02-03` ->
+unchanged next Drowned boundary, with no Host 07 expression.
 
-No helper/API/media/pixel/product/E2E/reveal/maturity action occurred in
-Mission. Direct Image API sends remain exact `0`; ordinals `2` and `3` remain
+The objective rejection priorities are frozen: forbidden implication/human or
+text identity; broken singular nested relation; broken support/drainage/dry
+reach; broken Host 05/same-basin continuity; broken horizon/hierarchy/crop/
+accessibility; then broken Horizon Archive material and lighting finish. All
+shell predicates remain conjunctive, and the ordering changes neither the
+technical-first validation ladder nor the full-review condition for ordinal
+`3`.
+
+Every helper, direct API, request, response/parser, ordinal, file identity,
+cleanup, PNG, import/provenance, runtime/learning/privacy/save/offline/PBA/
+performance, E2E, rollback, protected-state, OPEN-record, and maturity clause
+of `FRSH-005-v1-VR-08` remains exact and unchanged.
+
+No helper/API/media/pixel/product/E2E/reveal/maturity action occurred in Recon.
+Direct Image API sends remain exact `0`; ordinals `2` and `3` remain
 unconsumed; conservative managed-residual count remains exact `1` for ordinal
-`1`; VR-65 remains separate and inaccessible.
+`1`; VR-65 remains separate and inaccessible. Recon changed only its new
+versioned treatment and this synchronized handoff and did not push.
 
 ## Exact next action
 
-One fresh Reconnaissance Sergeant reads complete `FRSH-005-v1-VR-08`, this
-handoff, complete `FRWO-005-v7`, decisive `FRVE-005-v7-VR-03`, existing
-`FRDT-005-v1`, `FRPX-005-v1`, frozen functional evidence, immutable
-`FRAM-001-v1`, and the relevant current Drowned visual/canon controls.
+One fresh Tactical Operations Specialist reads complete
+`FRSH-005-v1-VR-08`, complete `FRDT-005-v1-VR-01`, `FRDT-005-v1`,
+`FRPX-005-v1`, complete `FRWO-005-v7`, decisive `FRVE-005-v7-VR-03`, frozen
+functional evidence `FRCE-005-v1-VR-04`, immutable `FRAM-001-v1`, and the
+exact current Drowned runtime/state/focus/return/accessibility controls required
+by its profile.
 
-Recon issues exactly one new versioned `DIRECTORIAL LOCK`, `REVISE`, or
-`HOLD` artifact for the direct-API shell. A passing lock must preserve the
-fragment-led same-basin reorientation, singular nested relation, restrained
-horizon catch, stranded/correct uncertainty, world silence, unchanged sole
-`L02-03`, exact no-reveal boundary, and the required fresh sequence:
+Tactical issues exactly one new versioned `PLAYER EXPERIENCE READY`, `REVISE`,
+or `HOLD` artifact. A passing blueprint must reconcile the direct-API
+attempt/failure/selection ledger, exact source/DOM/focus/recovery order,
+irreversible null-first source-enable boundary, Host 05-to-06 calm committed
+paint, six-layout mapping/accessibility probes, seven copy-purpose slots, one
+factual alt slot, and no-reveal behavior without changing the directorial or
+technical shell.
 
-```text
-fresh Recon -> fresh Tactical -> fresh Combat preflight ->
-Quartermaster API generation/content -> Image runtime presentation ->
-fresh Intelligence
-```
-
-Recon may not compile/invoke the helper; allocate helper, fixture, or live
-roots; read a credential; construct/send an API request; consume ordinal `2`;
+Tactical may not compile/invoke the helper; allocate a helper, fixture, or live
+root; read a credential; construct/send an API request; consume ordinal `2`;
 inspect media/pixels; import an asset; write final copy/provenance; edit
-product/tests; begin Tactical; run E2E; reveal; advance maturity; close an OPEN
+product/tests; begin Combat; run E2E; reveal; advance maturity; close an OPEN
 record; access a managed residual or VR-65; schedule; automate; push; release;
 or call `FIRST RUN COMPLETE`.
