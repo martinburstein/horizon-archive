@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v3`
+Scoreboard ID: `FRSB-005-v4`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v3`
+Release map: `FRRM-005-v4`
 
-Operations source inspected: `67addd5a3a1b50d0b46b4d13780effeec6da6fd0`
+Operations source inspected: `8a36ef773eb2d949b4f134b14d6d34670b74b5c6`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -18,19 +18,19 @@ Date: **2026-08-11**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v3 / Stranded Lens Cradle - One New
+Selected bounded Work Order: **`FRWO-005-v4 / Stranded Lens Cradle - One New
 Source and Fixed Lesson Integration`**.
 
 The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
 remains withdrawn and closed without production, and its negative finding
-remains exact for the old immutable source. `FRWO-005-v3` is the versioned
+remains exact for the old immutable source. `FRWO-005-v4` is the versioned
 distinct new-source Work Order under `FRPB-001-v2` / `FRCL-004-v2`; it
-supersedes `FRWO-005-v2` by freezing strict direct PNG data-URL ingress, one
-decode into fresh GUID OS temp, payload/temp identity, exact temp cleanup, and
-the explicit non-gating treatment of at most one opaque managed residual per
-consumed ordinal and three total. The immutable accepted-media manifest gate
-remains exact. Selection and media authority are not as-built evidence; no
-maturity cell or host inventory advances.
+supersedes `FRWO-005-v3` by freezing bounded direct-child managed-directory
+identity snapshots, exactly one new ordinary owner/window-proved file,
+byte/SHA-identical temp copy, immediate exact source deletion and restoration
+proof, with optional data URL cross-check only. The immutable accepted-media
+manifest gate remains exact. Selection and media authority are not as-built
+evidence; no maturity cell or host inventory advances.
 
 ## Reading the matrix
 
@@ -110,7 +110,7 @@ no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
 Martin's bounded media authorization and `FRPB-001-v2` permit the distinct
-successor `FRWO-005-v3` to own at most one eventual canonical additional
+successor `FRWO-005-v4` to own at most one eventual canonical additional
 Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03` integration.
 Its target `1 accepted shared compression / 2 exact / 9 missing` is not current
 candidate or maturity evidence. Current `FR-03` remains exactly `1
@@ -120,13 +120,15 @@ unadvanced Witness expression`.
 
 One fresh Science context is the exact next owner. It must independently
 revalidate the generatable/runtime-polishable asset envelope; ordinal 1
-permanently consumed and at most ordinals 2/3 remaining; exact single-result
-`data:image/png;base64,` grammar; one strict decode into fresh GUID OS temp;
-payload/temp byte-and-SHA identity; pre-pixel PNG/sRGB/dimension/size/metadata/
-decode gates; exact rejected/selected temp cleanup; selected byte-identical
-import/provenance; and the classification of each possible ordinal-associated
-opaque `$CODEX_HOME` residual as `DEFERRED LIMITATION / RELEASE-PROCESS ONLY /
-NON-GATING` with no more than three total. The pre-generation Combat manifest,
+permanently consumed, ordinals 2/3 remaining, and current conservative residual
+count 1; exact managed-parent resolution outside protected roots; bounded
+nonrecursive canonical-identity before/after snapshots; exactly one new
+ordinary file with owner plus creation/write call-window proof; no-follow
+exact-path stream copy and managed/temp byte-and-SHA identity; immediate exact
+managed-source deletion, absence, and closing restoration proof; optional data
+URL cross-check only; pre-pixel PNG/sRGB/dimension/size/metadata/decode gates;
+exact rejected/selected temp cleanup; and selected byte-identical import /
+provenance. The pre-generation Combat manifest,
 numeric media/PBA budgets, six-layout/accessibility/state feasibility,
 validation, no-reveal boundary, and rollback remain exact. No Mission, media
 attempt, asset selection/import, Host 06

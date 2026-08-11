@@ -2,9 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`REVISE / OPERATIONS WORK ORDER RETURN REQUIRED /
-BOUNDED BUILT-IN MANAGED-DIRECTORY DISCOVERY PREFERRED / ORDINALS 2-3
-PRESERVED`**
+Current disposition: **`WORK ORDER READY / FRESH SCIENCE MANAGED-DIRECTORY
+VIABILITY REVIEW REQUIRED / ORDINALS 2-3 AND RESIDUAL 1 PRESERVED`**
 
 Martin's controlling decision: **`Authorized new Drowned Media for Host 06`**
 
@@ -14,7 +13,7 @@ Current Quartermaster return: `FRCA-005-v2 / HOLD`
 
 Prior Quartermaster return: `FRCA-005-v1 / HOLD`
 
-Current Work Order / viability: `FRWO-005-v3` / `FRVE-005-v3`
+Current Work Order / prior viability: `FRWO-005-v4` / `FRVE-005-v3`
 
 Prior viability / effective Science variances: `FRVE-005-v2` /
 `FRVE-005-v2-VR-01` / `FRVE-005-v2-VR-02`
@@ -42,76 +41,79 @@ Manifest identity: exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Operations Planning Major /
-`operations_planning_major`**
+Planning controls: `FRRM-005-v4` / `FRSB-005-v4`
 
-## Mission decision
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-Mission accepts `FRCA-005-v2` as a correct pre-call HOLD. The same-isolate
-data-URL materialization adapter frozen by `FRSH-005-v1-VR-06` is unavailable,
-and Quartermaster correctly did not consume ordinal `2`.
+## Operations decision
 
-The installed `imagegen` skill still prefers built-in mode and states that
-project-bound output is copied or moved from
-`$CODEX_HOME/generated_images/...`. A lawful built-in route is therefore
-preferred over asking Martin for CLI/API fallback: bracket exactly one call
-with bounded nonrecursive metadata-only snapshots of the exact managed
-directory, admit only one uniquely new ordinary file with exact owner and
-creation-window proof, copy/hash only that exact path into the predeclared
-temp candidate, then delete and prove absent only that identity-proved source.
-`output_hint` and `image_url` remain unread and unused.
+Operations accepts `FRSH-005-v1-VR-07` and `FRCA-005-v2`. The same-isolate
+data-URL materialization adapter is unavailable, and Quartermaster correctly
+did not consume ordinal `2`.
 
-This is a Work Order staging change, not a Mission-only adapter patch.
-`FRWO-005-v3`, `FRVE-005-v3`, and `FRSH-005-v1-VR-06` currently prohibit the
-managed resolution, snapshot, ingress, and cleanup the route requires.
-Mission therefore issues `REVISE` and returns to Operations, followed by fresh
-Science and fresh Mission review. No production authority exists yet.
+`FRWO-005-v4` replaces the unavailable data-URL writer with a lawful bounded
+built-in route: resolve only exact
+`C:\Users\marti\.codex\generated_images`; take a bounded nonrecursive
+metadata-only before snapshot of ordinary direct files with canonical Windows
+identities; bracket one call with exact UTC bounds; require exactly one new
+ordinary non-reparse one-link file owned by the current principal with both
+creation and last-write FILETIMEs inside that call window and zero other
+entry, metadata, or subdirectory delta; stream-copy/hash only that exact path
+to the predeclared create-new GUID temp candidate; then immediately delete by
+the identity-proved handle and prove exact absence plus before-state
+restoration.
 
-## Exact prospective contract for Operations
+The managed delta is sole ingress. `output_hint` is never parsed. A direct PNG
+data URL, if present, is optional length/SHA cross-check only and never
+transport or materialization authority. Every staging ambiguity after a call
+is an opaque consumed-ordinal stop. No CLI/API fallback exists. Fresh Science
+must now prove the exact Windows implementation and synthetic fixture matrix;
+fresh Mission follows only after Science acceptance. No production authority
+exists yet.
 
-Operations reads complete `FRSH-005-v1-VR-07` and decides whether to issue a
-versioned Work Order that freezes all of these controls:
+## Exact Science question
+
+Science reads complete `FRWO-005-v4` and independently decides whether all of
+these controls are technically executable and fail closed:
 
 1. resolve exact `C:\Users\marti\.codex\generated_images` from trusted
    `$CODEX_HOME` without listing any parent or sibling; prove the ordinary,
-   non-reparse directory is outside the repository and all other protected,
-   user, browser/profile/save, accepted-media, QA, temp, and residual roots;
+   non-reparse directory is outside the repository and every protected root;
 2. create and predeclare only one fresh exact OS-temp `attempt-0N.png` target;
-3. take one nonrecursive metadata-only direct-child snapshot of the exact
-   managed directory before the call, retaining only bounded in-memory path,
-   type/reparse, exact file identity/link count, creation/write UTC, length,
-   and owner fields, failing closed if required metadata is unavailable;
+3. take one bounded nonrecursive metadata-only before snapshot of ordinary
+   direct files only, with canonical final paths, volume/128-bit file IDs,
+   link count, owner SID, creation/write FILETIME, length, and type/tag;
 4. capture the exact UTC lower bound, invoke exactly one sequential built-in
    call with the unchanged prompt and no image inputs, then capture the exact
    UTC upper bound;
 5. take one matching nonrecursive metadata-only after snapshot, with no child
    traversal or content access;
-6. require all prior direct children metadata-identical and exactly one new
+6. require all prior direct files metadata-identical and exactly one new
    direct ordinary file, with no subdirectory, reparse/link/device/placeholder,
    other new entry, deletion, rename, or changed prior entry; require exact
-   current-owner match and creation UTC inside the frozen call window;
+   current-owner match and both creation and last-write FILETIME inside the
+   frozen call window;
 7. treat every zero/multiple/ambiguous/wrong-owner/out-of-window/subdirectory/
-   reparse/hard-link/other delta as a consumed-ordinal opaque stop with no discovery,
-   cleanup, result-field parsing, or later call;
+   reparse/hard-link/other delta as a consumed-ordinal opaque stop with no
+   broader discovery, cleanup, result-path parsing, or later call;
 8. open only the exact admissible path read-only with no-follow and identity
    reproof; stream-copy once to the predeclared create-new temp candidate;
    independently require managed/temp byte-length and lowercase-SHA equality;
-9. after identity only, delete and prove absent only the exact managed source,
-   optionally using one same-schema nonrecursive closing snapshot to prove
-   exact restoration; no broad, recursive, parent, sibling, pattern, or retry
-   cleanup exists; and
+9. after identity and any bounded optional data-URL digest cross-check, delete
+   only that managed source by the identity-proved handle; prove its exact path
+   absent and require one same-schema closing snapshot equal the before state;
+   no broad, recursive, parent, sibling, pattern, or retry cleanup exists; and
 10. only then continue the existing PNG, `PHY-01..12`, source-band, six-layout,
     accessibility, project-copy, provenance, runtime, and release gates, with
     no preview, screenshot, Markdown image, contact sheet, or reveal.
 
 A built-in implementation that creates a new direct subdirectory instead of
-exactly one new ordinary file fails opaque under this proposed contract. No
-recursive or one-level child discovery is authorized. `output_hint` is never
-parsed. If Operations accepts, fresh Science must prove exact Windows file
-identity/owner/time/race/no-follow/copy/hash/delete semantics with synthetic
-non-generative fixtures before fresh Mission may issue a shell.
+exactly one new ordinary file fails opaque. No recursive or one-level child
+discovery is authorized. `output_hint` is never parsed. An optional data URL
+may prove only matching length/SHA and may never create a file.
 
-If Operations or Science finds this bounded built-in path non-viable, the pass
+If Science finds this bounded built-in path non-viable, the pass
 returns to terminal `HOLD / MARTIN DECISION REQUIRED`. CLI/API fallback remains
 forbidden unless Martin explicitly authorizes it.
 
@@ -120,7 +122,8 @@ forbidden unless Martin explicitly authorizes it.
 - Total ordinal domain remains exactly `{1,2,3}`.
 - Ordinal `1` remains permanently consumed by the historical opaque result-
   path stop.
-- Ordinal `2` remains unconsumed and may not run under the current `REVISE`.
+- Ordinal `2` remains unconsumed and may not run before fresh Science and
+  fresh Mission both accept the v4 contract.
 - Ordinal `3` remains unconsumed and conditional on a future lawful ordinal-2
   objective rejection plus exact cleanup.
 - Built-in calls in `FRCA-005-v2`: exact `0`.
@@ -131,9 +134,9 @@ forbidden unless Martin explicitly authorizes it.
   changed.
 - VR-65 remains separate, opaque, non-gating, and inaccessible.
 
-No role may infer that this Mission return consumed ordinal `2`, produced a
-candidate, authorized managed discovery, allowed `output_hint` parsing, or
-authorized CLI/API fallback.
+No role may infer that this Operations stage consumed ordinal `2`, produced a
+candidate, activated real managed-directory discovery, allowed `output_hint`
+parsing, or authorized CLI/API fallback.
 
 ## Preserved gates and state
 
@@ -164,18 +167,24 @@ publication occurred.
 
 ## Exact next action
 
-One fresh Operations Planning Major reads this handoff; complete
-`FRSH-005-v1-VR-07`; complete `FRCA-005-v2`; complete `FRWO-005-v3`;
+One fresh Office of Science Administrator reads this handoff; complete
+`FRWO-005-v4`; complete `FRSH-005-v1-VR-07`; complete `FRCA-005-v2`;
 complete `FRVE-005-v3`; the effective shell through `FRSH-005-v1-VR-06`;
-the full Operations profile; and the installed image-generation skill's
-built-in save-path and no-silent-CLI-fallback rules.
+the full Science profile; and the installed image-generation skill's built-in
+save-path and no-silent-CLI-fallback rules.
 
-Operations issues exactly one versioned `WORK ORDER READY`, `REVISE`, or
-`HOLD` artifact for the prospective managed-directory discovery/identity/
-cleanup contract. If it accepts, it routes one synchronized exact action to a
-fresh Office of Science Administrator. It may not invoke generation; resolve,
-list, snapshot, or mutate the real managed directory; consume ordinal `2`;
-parse `output_hint`; use `image_url`; authorize CLI/API; inspect pixels; import
-media; write copy/provenance; begin Image; run E2E; reveal; advance maturity;
-close an OPEN record; inspect VR-65; schedule; automate; release; or call
-`FIRST RUN COMPLETE`.
+Science uses synthetic non-generative fixtures only to prove or reject exact
+parent resolution, bounded snapshots, canonical identity/owner, creation and
+last-write call-window semantics, race/no-follow controls, exact copy/hash,
+optional data-URL digest cross-check, handle-bound deletion, exact absence and
+closing restoration, temp cleanup, residual accounting, privacy, performance,
+offline, no-reveal, and rollback. It issues exactly one versioned `POLISH
+VIABILITY READY`, `REVISE`, or `HOLD` artifact and routes acceptance to fresh
+Mission.
+
+Science may not invoke generation; resolve, list, snapshot, or mutate the real
+managed directory; consume ordinal `2`; parse `output_hint`; use a data URL as
+transport; authorize CLI/API; inspect pixels; import media; write copy /
+provenance; begin production; run E2E; reveal; advance maturity; close an OPEN
+record; inspect VR-65; schedule; automate; push; release; or call `FIRST RUN
+COMPLETE`.
