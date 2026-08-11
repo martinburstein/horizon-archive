@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / EXACT PT06
-CHILD-DIAGNOSTIC TO CREDENTIAL-ABSENT RESULT MAPPING FROZEN / FRESH SCIENCE
-ONE-RUN PROOF REQUIRED / FRSH-005-v1-VR-13`**
+Current disposition: **`HOLD / FRESH SCIENCE PARENT STOPPED BEFORE CHILD AT
+SR01_STATIC_IDENTITY / CHILD INVOCATIONS ZERO / NO RETRY /
+FRVE-005-v7-VR-11`**
 
 Current Work Order: `FRWO-005-v7`
 
-Current Science return: `FRVE-005-v7-VR-10`
+Current Science return: `FRVE-005-v7-VR-11`
 
 Current Mission shell decision: `FRSH-005-v1-VR-13`
 
@@ -34,66 +34,47 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission result
+## Science result
 
-`FRSH-005-v1-VR-13` accepts `FRVE-005-v7-VR-10` only as the honest
-rejected prior run. Exit `87`, one child, exact zero activity, and final
-absence do not retrospectively create the missing accepted result, and that
-run has no retry.
-
-Mission freezes one bounded correction in the disposable Science parent. The
-unchanged child diagnostic has no `code` field. Exact exit `87`, zero stdout,
-and exactly one schema-valid child record with
-`stage=PT06_CREDENTIAL_GATE`, ordinal `0`, `sendStarted=false`, and every
-inherited child absence true must derive:
+The fresh disposable Science parent parsed successfully, then stopped at its
+first static-identity assertion group before child preparation or creation.
+It retained exactly:
 
 ```text
-outcome=ACCEPTED_NO_REQUEST_STOP
-earliestStage=PT06_CREDENTIAL_GATE
-code=CREDENTIAL_ABSENT
-childExit=87
+SCIENCE_PARENT_STOP|stage=SR01_STATIC_IDENTITY|childInvocations=0|code=ASSERTION_FAILED
 ```
 
-`CREDENTIAL_ABSENT` is derived by the parent; it is not required from the
-child. Product-root/raster/provenance result fields remain independent parent
-postflight facts, not extra child-diagnostic fields. The exact launcher,
-prefix, tail, combined value, child diagnostic, environment, executable,
-arguments, production behavior, request path, ordinals, product, and media
-identity remain unchanged.
+No `SCIENCE_HOST06_COMBINED_RESULT_V1` record exists. The run did not reach
+the PT06 classifier self-test and did not invoke a child. Under
+`FRSH-005-v1-VR-13`, it supplies no runtime evidence and may not be repaired
+into a child-bearing run in the same Science context. Science issued `HOLD`
+without retry.
 
-No API/generation request was constructed or sent; `SendAsync`, direct sends,
-credential value reads, and ordinal consumption remain exact `0`. Helper,
-live, ordinal, product, and Science fixture controlled paths remain absent.
-No disallowed diagnostic or opaque value was retained.
+Credential reads, request constructions, `SendAsync`, direct sends, and
+ordinals consumed remain exact `0`. Helper, DLL, live, ordinal-2/3, product,
+and Science-fixture controlled paths are absent. The disposable parent harness
+was removed. No product, test, runtime, media, manifest, maturity, process,
+residual, schedule, or automation state changed.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads the complete active intake,
-full Science profile, complete `FRSH-005-v1-VR-13`, complete
-`FRVE-005-v7-VR-10`, complete `FRSH-005-v1-VR-12`, complete
+One fresh Mission Captain reads the complete active intake, full Mission
+profile, complete `FRVE-005-v7-VR-11`, complete `FRSH-005-v1-VR-13`,
+complete `FRVE-005-v7-VR-10`, complete `FRSH-005-v1-VR-12`, complete
 `FRVE-005-v7-VR-09`, complete `FRSH-005-v1-VR-11`, `FRCA-005-v4`,
 complete `FRSH-005-v1-VR-10`, complete `FRSH-005-v1-VR-09`, decisive
 `FRVE-005-v7-VR-08`, complete `FRWO-005-v7`, decisive
 `FRVE-005-v7-VR-03`, the effective shell, treatment, blueprint,
 `FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and both exact literal blocks.
 
-Before child creation, Science proves the exact PT06 diagnostic maps to the
-accepted semantic scalars and every single-field/malformed variant rejects.
-Science then performs exactly one fresh credential-cleared, no-request child
-run. Acceptance requires the one complete
-`SCIENCE_HOST06_COMBINED_RESULT_V1|outcome=ACCEPTED_NO_REQUEST_STOP|...`
-identity frozen in `FRSH-005-v1-VR-13`, with exact zero activity and every
-controlled-path absence true. Science removes its disposable harness, issues
-one new versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`, and routes
-only to one fresh Mission Captain.
-
-Science may not reinterpret or retry `FRVE-005-v7-VR-10`; repair its parent
-after the fresh child begins; invoke a second child; route to Quartermaster;
-execute generation/API; allocate the live root or product target; read a
+Mission issues exactly one new versioned `FIRST RUN SHELL READY`, `REVISE`,
+or `HOLD` decision for the fresh Science parent `SR01_STATIC_IDENTITY` stop.
+Mission may not reinterpret this run as a child result; repair or rerun this
+Science parent; infer the missing classifier proof from prior evidence; route
+to Quartermaster; execute generation/API; allocate the live root; read a
 credential value; construct/send a request; call `SendAsync`; consume ordinal
 `2`; inspect media/pixels; change product/tests; run E2E; reveal; advance
 maturity; close an OPEN record; access a residual or VR-65; schedule;
-automate; push; release; or call `FIRST RUN COMPLETE`.
+automate; push from Science; release; or call `FIRST RUN COMPLETE`.
