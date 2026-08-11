@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / STRICT PNG DATA-URL INGRESS /
-OPAQUE BUILT-IN MANAGED RESIDUALS DEFERRED AS NON-GATING RELEASE-PROCESS
-LIMITATION / ORDINAL 1 CONSUMED / SCIENCE REVIEW REQUIRED`**
+Current disposition: **`POLISH VIABILITY READY / STRICT PNG DATA-URL
+INGRESS / OPAQUE BUILT-IN MANAGED RESIDUALS ACCEPTED AS NON-GATING RELEASE-
+PROCESS LIMITATION / ORDINAL 1 CONSUMED / MISSION REVIEW REQUIRED`**
 
 Martin's controlling decision: **`Authorized new Drowned Media for Host 06`**
 
-Current Work Order: `FRWO-005-v3`
+Current Work Order / viability: `FRWO-005-v3` / `FRVE-005-v3`
 
 Prior viability / effective Science variances: `FRVE-005-v2` /
 `FRVE-005-v2-VR-01` / `FRVE-005-v2-VR-02`
@@ -22,95 +22,103 @@ Combat functional close: `FRCE-005-v1-VR-04 / PRODUCTION FUNCTIONAL`
 
 Quartermaster return: `FRCA-005-v1 / HOLD`
 
-Operations revision: `FRWO-005-v3 / WORK ORDER READY`
-
-Immutable accepted-media manifest: `FRAM-001-v1`
-
-Planning controls: `FRRM-005-v3` / `FRSB-005-v3`
-
 Frozen inert code candidate:
 `02d957e9d69dc7986928a391c37f899784f73ea5`
 
 Frozen candidate tree:
 `09da6293d72c8123b8d9673bd8e41329338e8d13`
 
+Immutable accepted-media manifest: `FRAM-001-v1`
+
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **fresh Mission Captain / `mission_captain`**
 
-## Operations decision
+## Science decision
 
-`FRWO-005-v3` lawfully replaces the returned-path/managed-cleanup ingress in
-`FRWO-005-v2` with one strict direct PNG data URL from the built-in result.
-For a future ordinal, exactly one string from direct `image_url` may be the
-sole ingress authority only when it matches the literal
-`data:image/png;base64,` grammar and passes strict canonical base64 validation.
-`output_hint` remains opaque and may not be parsed, exposed, or used.
+`FRVE-005-v3` independently finds `FRWO-005-v3` technically viable and
+fail-closed. One future built-in result may supply exactly one direct
+`image_url` string only when it is one canonical
+`data:image/png;base64,` value. `output_hint` and every other result field
+remain opaque and unused.
 
-The accepted payload is decoded exactly once into only one predeclared create-
-new `attempt-0N.png` in a fresh GUID-named OS-temp child. Decoded-payload byte
-length and lowercase SHA-256 must equal an independent read of that exact temp
-file before PNG, chunk, metadata, browser-decode, pixel, or `PHY-01..12`
-inspection. Pre-pixel gates require exact PNG, exact `3840 x 2160`, opaque
-8-bit sRGB with no alpha/transparency, lawful metadata/chunks, direct browser
-decodability, and `1..12,000,000` bytes.
+The exact transport cap is `16,000,022` string code units: 22 for the literal
+prefix and at most `16,000,000` canonical base64 characters, which can decode
+to at most `12,000,000` bytes. Validation is an index-only non-copying pass.
+One fixed-buffer streaming decoder writes the bytes exactly once to the sole
+create-new `attempt-0N.png`, counts them, and computes lowercase SHA-256. An
+independent read of the exact temp file must match byte length and SHA before
+PNG, browser-decode, pixel, or `PHY-01..12` work.
 
-Rejected candidates remain outside the repository and are exact-deleted with
-their GUID temp child before another ordinal. At most one passing candidate may
-be copied byte-identically to the single permitted product raster, proven by
-bytes/SHA, recorded in only the permitted provenance, and followed by exact
-temp cleanup. No payload, result, candidate, selected source, managed output,
-preview, screenshot, Markdown image, or reveal may be emitted.
+The pre-pixel parser requires exact PNG signature; checked chunk lengths and
+CRCs; one `IHDR` with `3840 x 2160`, 8-bit truecolor, no alpha, and no
+interlace; one valid `sRGB`; only narrowly allowed exact `gAMA`, `cHRM`, or
+`pHYs`; consecutive nonempty `IDAT`; one final empty `IEND`; no `tRNS`, ICC,
+text, EXIF, APNG, unknown/private chunk, or trailing byte; one complete zlib
+stream with exactly `24,885,360` structural scanline bytes and valid filter
+bytes; and direct isolated-browser decode at natural `3840 x 2160`.
 
-The built-in save policy may retain a default output under `$CODEX_HOME/*`
-without returning a provable saved-file path. Operations explicitly classifies
-each consumed ordinal's possible opaque tool-owned managed file as
-**`DEFERRED LIMITATION / RELEASE-PROCESS ONLY / NON-GATING / OPAQUE BUILT-IN
-MANAGED RESIDUAL`**. It has zero candidate, product, provenance, evidence,
-reuse, reveal, rollback, maturity, or release authority. No role may discover,
-list, search, parse, infer, inspect, copy, move, delete, clean, or prove absence
-of the managed parent or unknown output, and discarded references never imply
-cleanup.
+Malformed result/grammar/base64, allocation/write, or payload/temp identity
+failure is a consumed-ordinal opaque stop. A fully identified candidate that
+fails PNG or objective visual gates is an objective rejection. Every branch
+deletes and proves absent only its exact temp candidate and GUID child; cleanup
+uncertainty is terminal and never authorizes another call or broad cleanup.
 
-Ordinal `1` remains permanently consumed and its possible opaque managed file
-counts conservatively as residual `1`. Only ordinals `2` and `3` can remain,
-one call and one payload each, and each may leave at most one separate managed
-residual. Therefore maximum remaining calls is `2` and maximum total ordinal-
-associated managed residuals is `3`. A fourth call or fourth such residual is
-forbidden. VR-65 remains separate and is not merged with or inferred from this
-count.
+At most one passing temp candidate may be copied create-new and byte-
+identically to the sole product raster, proven by length/SHA, recorded in only
+the permitted `PROVENANCE.md`, and followed by exact temp cleanup. No data URL,
+payload, result, `output_hint`, temp/managed path, or rejected hash/pixels may
+enter provenance, source, Git, build output, report, preview, or reveal.
 
-If Science concludes that leaving any opaque tool-owned `$CODEX_HOME` residual
-violates product, privacy, security, storage, or release policy, the only lawful
-result is terminal **`HOLD / MARTIN DECISION REQUIRED`**. Managed discovery or
-cleanup is not an alternative.
+The installed built-in image-generation skill allows default output under
+`$CODEX_HOME/*` and requires a project-bound selected final to be copied into
+the workspace; it does not require deletion of every default file. Science
+therefore accepts at most one possible opaque tool-owned managed residual per
+consumed ordinal as **`DEFERRED LIMITATION / RELEASE-PROCESS ONLY /
+NON-GATING / OPAQUE BUILT-IN MANAGED RESIDUAL`**. It has zero project,
+candidate, provenance, evidence, reuse, reveal, rollback, maturity, or release
+authority. No role may discover, inspect, infer, copy, move, delete, clean, or
+prove absence of it.
+
+Ordinal `1` remains permanently consumed and conservatively counts as possible
+residual `1`. Only ordinals `2` and `3` remain; maximum future calls is `2`;
+maximum total ordinal-associated managed-residual count is `3`; a fourth call
+or fourth count is forbidden. VR-65 remains separate and inaccessible. If a
+later controlling policy requires zero default retention, the only lawful
+result is `HOLD / MARTIN DECISION REQUIRED`; managed discovery/cleanup is not
+an alternative.
+
+The transport data URL is production-time transient state and never counts as
+a product asset. The selected PNG alone is the media delta. Existing PBA caps
+remain exact: JavaScript `<=1,679,393` affected / `<=1,703,258` global; CSS
+`<=119,547` / `<=119,672`; modules `<=218` / `<=222`; resulting media exact
+`18` and `37,410,731 + selectedBytes`, at most `49,410,731`; source maps `0`;
+all decode/ready/CLS/task/test/build/E2E caps unchanged. A static gate must
+prove no inline PNG data URL or selected base64 payload in product/build/report
+output.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads this handoff, complete
-`FRWO-005-v3`, complete `FRVE-005-v2` and its effective variances, the built-in
-save-path policy, and only the exact current shell sections needed to preserve
-unchanged bounds. Science then issues exactly one new versioned `POLISH
-VIABILITY READY`, `REVISE`, or `HOLD` artifact for `FRWO-005-v3`.
+One fresh Mission Captain reads this handoff, complete `FRWO-005-v3`, complete
+`FRVE-005-v3`, complete prior `FRVE-005-v2` and its effective variances,
+complete `FRSH-005-v1` through `FRSH-005-v1-VR-05`, complete `FRCA-005-v1`,
+the Mission profile, and the installed built-in save-path policy. Mission then
+issues exactly one new versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD`
+artifact for `FRWO-005-v3`.
 
-Science must independently freeze and validate exact single-result shape,
-literal data-URL grammar, strict one-time decode and memory/byte bounds,
-create-new GUID-temp materialization, payload/temp byte-and-SHA identity,
-PNG/chunk/sRGB/dimension/opacity/size/metadata/browser-decode gates, objective
-rejection and exact temp cleanup, selected byte-identical import/provenance,
-opaque managed-residual classification/count, no-reveal, offline/performance,
-failure semantics, and rollback. It must preserve ordinal 1 consumed, maximum
-three total ordinals, maximum two future calls, immutable accepted-media
-manifest/gates, all OPEN records, VR-65, and every fixed canon/learning/state/
-save/route/world/ending/protected-state boundary.
+Mission must freeze the exact result/data-URL adapter, parser bounds,
+canonical-base64 rules, single streaming decode, temp byte/SHA identity,
+strict PNG/chunk/sRGB/opacity/dimension/size/inflate/browser-decode gates,
+failure classification, exact temp cleanup, selected byte-identical import/
+provenance, ordinal/residual accounting, PBA/no-inline-data proof, validation
+order, no-reveal boundary, and rollback while preserving every unchanged
+shell field and effective variance.
 
-Science may not call the generator, inspect or expose a result, parse an
-`output_hint`, decode a payload, materialize or inspect a candidate, discover or
-clean a managed output, authorize Quartermaster directly, inspect pixels,
-import media, write copy/provenance, begin Image, run E2E, update maturity,
-close an OPEN record, inspect VR-65, reveal, schedule, automate, push, release,
-or call `FIRST RUN COMPLETE`.
+Mission may not call the generator, inspect or decode a payload or pixel,
+inspect/clean a managed output, authorize Quartermaster directly, import
+media, write copy/provenance, alter the frozen inert candidate or immutable
+manifest, run E2E, update maturity, close an OPEN record, inspect VR-65,
+reveal, schedule, automate, push, release, or call `FIRST RUN COMPLETE`.
 
 ## Preserved state
 
@@ -121,9 +129,9 @@ candidate exists. No Quartermaster attempt `2` is authorized.
 
 The accepted-media baseline remains exact `17 / 37,410,731`, canonical digest
 `c7ca95201029b490f2460a846e3dc2a64a26775b57e8c587cbc2d874df654d99`;
-product/test code, immutable manifest, candidate/tree, registry/source/geometry/
-protected/layout scalars, seven copy slots, and alt slot remain unchanged.
-Complete E2E remains correctly unrun.
+product/test code, immutable manifest, candidate/tree, registry/source/
+geometry/protected/layout scalars, seven copy slots, and alt slot remain
+unchanged. Complete E2E remains correctly unrun.
 
 Inherited functional gates remain frozen and were not replayed: focused
 `50/0`, legacy static-contract `29/0`, learning/privacy `17/0`, related `58/0`,
@@ -140,11 +148,11 @@ learning `FR2`; behavior/save/recovery `FR1`; content `FR2`; presentation
 All thirteen inherited process records remain separate and **OPEN**: VR-17,
 VR-23, VR-24, VR-25, VR-28, VR-39, VR-41, VR-46, VR-47, VR-50, VR-53 Stage 4,
 VR-60 Call 9, and VR-61. The separate Commandant filename/search-scope record
-remains **OPEN**. Operations closes none.
+remains **OPEN**. Science closes none.
 
 VR-65 remains exactly **`DEFERRED LIMITATION / RELEASE-PROCESS ONLY /
 NON-GATING / OPAQUE EXTERNAL QA RESIDUAL`**, unknown and inaccessible. It is
-separate from ordinal 1 and every possible future ordinal-managed residual.
+separate from ordinal `1` and every possible future ordinal-managed residual.
 
 Repository QA quarantine, protected PDF, training directory, real browser /
 profile/save, hidden lore, user work, accepted-media pixels, managed/temp
