@@ -2,24 +2,27 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / EXACT CANONICAL PARENT CARRIER UNAVAILABLE /
-RECONSTRUCTION PATH STOPPED / NO AUTONOMOUS NEXT ROLE /
-FRSH-005-v1-VR-20`**
+Current disposition: **`FIRST RUN SHELL READY / NEW COMPLETE HOST 06 SCIENCE
+PARENT V2 RETAINED BEFORE EXECUTION / FRESH SCIENCE ONE-RUN PROOF REQUIRED /
+FRSH-005-v1-VR-21`**
 
 Current Work Order: `FRWO-005-v7`
 
-Current Mission decision: `FRSH-005-v1-VR-20`
+Current Mission decision: `FRSH-005-v1-VR-21`
 
 Current Science return: `FRVE-005-v7-VR-17`
 
 Quartermaster return: `FRCA-005-v4`
 
-Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-20`
+Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-21`
 
-Effective treatment / blueprint: `FRDT-005-v1-VR-01` /
-`FRPX-005-v1-VR-01`
+Authoritative new parent source:
+`Production Pipeline/First Run/HOST06_SCIENCE_PARENT_V2.ps1`
 
-Functional report: `FRCE-005-v1-VR-05`
+Parent source identity: exact `48,090` strict-ASCII/LF/final-LF bytes,
+SHA-256 `cf7a722759db7b97fad6aefbdbf21df9864ec4b0794a661ecfde7c4f5384df4f`
+
+Checkout identity rule: exact source-specific `.gitattributes` `text eol=lf`
 
 Corrected inert code candidate:
 `f4b2062508f9e0606953a4cc9bcdaff09b66ebc4`
@@ -34,48 +37,49 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **Martin / explicit replacement-path decision required**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-## Mission stop
+## Mission handoff
 
-Fresh Mission accepted complete `FRVE-005-v7-VR-17` as decisive evidence
-that the exact previously parsed disposable-parent carrier is unavailable.
-The tracked authorities contain only its length, SHA-256, parser metrics, and
-embedded runtime-carrier identities. They contain neither the exact
-`48,615`-byte parent source nor the complete `64,820`-character canonical
-Base64 carrier. No `chunkOrdinal=01` content block exists, and the prior
-`40,021`-character prefix was explicitly rejected as truncated.
+Martin explicitly authorized replacement path `1`. Mission constructed a new
+minimal deterministic parent from scratch and retained its complete actual
+source before any execution. The tracked source contains each immutable
+runtime Base64 carrier exactly once; it does not depend on the unavailable old
+parent, a truncated prefix, or hash-only reconstruction.
 
-The retained launcher and combined runtime carriers do not determine the
-missing parent wrapper byte-for-byte. A new wrapper would be a new candidate,
-not an independently proved reconstruction. Hashes, offsets, lengths, and
-token counts are validators and cannot supply missing content.
+Mission validated exact full-source canonical Base64 roundtrip, source length/
+SHA/ASCII/LF/final-LF, carrier occurrence counts, carrier ASCII identities,
+decoded lengths/SHAs, prefix/tail slices, and final LF. Mission performed zero
+parser operations and no execution. The missing old parent identity is
+explicitly superseded, not reconstructed.
 
-Mission therefore issued terminal `FRSH-005-v1-VR-20` for this reconstruction
-path. It performed no parser, parent, child, helper, credential, API,
-generation, media, controlled-root, product, test, build, browser, or E2E
-operation. API sends remain `0`; historical ordinal `1` remains opaque and
-unchanged; ordinals `2` and `3` remain unstarted and unconsumed. No Host 06
-raster or provenance exists.
+No process, child, helper, credential, API, media, pixel, controlled-root,
+product, test, build, browser, or E2E operation occurred. API sends remain `0`;
+ordinal `1` remains opaque; ordinals `2` and `3` remain unstarted and
+unconsumed.
 
 ## Exact next action
 
-There is no autonomous next role under the current carrier identity. Martin
-must explicitly decide whether to authorize one bounded replacement path:
+Fresh Science reads the required intake and profile in full, then reads complete
+`FRSH-005-v1-VR-21` and every cited authority. It validates the authoritative
+source and frozen carriers exactly, performs one zero-error pre-execution
+parent-source parser check, and then uses the exact VR-17 fileless bootstrap for
+one credential-cleared parent execution. The retained parent may invoke exactly
+one frozen production child. No correction, second parent, second child, or
+retry exists.
 
-1. construct a new disposable-parent identity and retain its complete source
-   or canonical carrier before any execution; or
-2. replace the unavailable wrapper with a different bounded Host 06 API
-   transport.
+PASS requires exact parent exit `0`, one exact
+`SCIENCE_HOST06_COMBINED_RESULT_V2` accepted stdout record, zero stderr, child
+exit `87`, one child invocation, every activity counter `0`, every controlled
+path absent, no request/API/send, and ordinals `2`/`3` unconsumed. PASS issues
+one `POLISH VIABILITY READY` variance and returns to fresh Mission for an API
+shell. Anything else is exact `HOLD`. Science commits only its artifact and
+handoff and does not push.
 
-Until that decision, do not restart Science or Mission on the missing carrier;
-treat a hash, length, offset, runtime input carrier, or rejected truncated
-prefix as parent-source content; silently substitute a new candidate; route to
-Quartermaster; execute a bootstrap, parent, child, or helper; read or change a
-credential; call the API; allocate a live root; construct a request; call
-`SendAsync`; consume ordinal `2`; inspect media/pixels; change product/tests;
-run E2E; reveal; advance maturity; close an OPEN record; access a residual or
-VR-65; release; or call `FIRST RUN COMPLETE`.
+Do not route to Quartermaster, call the API, consume ordinal `2`, inspect
+media/pixels, change product/tests, run E2E, reveal, advance maturity, close an
+OPEN record, access a residual or VR-65, release, or call `FIRST RUN COMPLETE`.
 
 The one-path rail, sole unchanged `L02-03`, equal-dignity MH-40 outcomes,
 shared RP-012 ending, and `successor=null` remain immutable. Repository QA
