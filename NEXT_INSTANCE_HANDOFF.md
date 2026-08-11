@@ -2,19 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / SELECTED ORDINAL 2|3 ONLY /
-DIRECT-API PREFLIGHT PASS / FRCE-005-v1-VR-05`**
+Current disposition: **`HOLD / PRE-HELPER ONE-PROCESS HOST FAILURE /
+ORDINALS 2-3 PRESERVED / NO MEDIA CANDIDATE / FRCA-005-v3`**
 
 Current Work Order / decisive Science return: `FRWO-005-v7` /
 `FRVE-005-v7-VR-03`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-08`
 
-Effective treatment: `FRDT-005-v1` through `FRDT-005-v1-VR-01`
+Effective treatment / blueprint: `FRDT-005-v1-VR-01` /
+`FRPX-005-v1-VR-01`
 
-Effective blueprint: `FRPX-005-v1` through `FRPX-005-v1-VR-01`
+Functional report: `FRCE-005-v1-VR-05`
 
-Current functional report: `FRCE-005-v1-VR-05`
+Quartermaster return: `FRCA-005-v3`
 
 Corrected inert code candidate:
 `f4b2062508f9e0606953a4cc9bcdaff09b66ebc4`
@@ -29,54 +30,41 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Quartermaster / `quartermaster`**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-## Combat result
+## Quartermaster result
 
-Combat independently revalidated the frozen candidate/tree, immutable
-manifest file and stored identities, exact helper/prompt identities, absent
-product targets, null registry/copy/alt slots, current runtime/test graph, and
-release controls. It corrected only the pure selected-source guard:
-`attemptOrdinal` now accepts exact `2` or `3`; historical consumed ordinal `1`
-fails closed.
+Quartermaster independently proved exact synchronization, immutable manifest
+identity, the `{2,3}` selected-source guard, absent product targets, null-first
+registry/copy/alt state, and absent helper/live roots.
 
-Focused `50/50`, learning/privacy `17/17`, related `58/58`, validators `40/40`,
-cold full `979/979/0`, production/TD-012 builds, PBA, served root/deep/JS/CSS,
-and owned port cleanup all pass. PBA is JavaScript `1,676,476`, CSS `119,394`,
-modules `217`, accepted media `17 / 37,410,731`, source maps `0`.
+The final exact 64-bit Windows PowerShell `5.1.26100.8875` one-process host
+failed closed before helper-root creation with the sole retained code
+`STABLE_LOCAL_FAILURE`. Exact post-stop checks proved the helper root, DLL,
+live root, both ordinal stage-target pairs, product raster, and provenance all
+absent. The production sequence did not read the API credential or begin
+`SendAsync`; direct API sends remain exact `0`; ordinals `2` and `3` remain
+unconsumed. No media, pixel, preview, copy, provenance, registry, copy, alt,
+test, build, browser, or E2E action occurred.
 
-`FRRC-003-v5` remains immutable and direct-API-neutral: it exposes only
-accepted-media create/verify plus the production-functional push and contains
-no generation, managed-ingress, output-hint, endpoint, credential, response,
-or discovery executable entry. No release-control change was required.
-
-No helper/API/media/pixel/product/copy/provenance/E2E action occurred. Direct
-API sends remain `0`; ordinals `2` and `3` remain unconsumed; conservative
-managed-residual count remains exact `1` for opaque ordinal `1`; VR-65 remains
-separate and inaccessible. The raster and provenance targets remain absent;
-every candidate/copy/alt slot remains null.
+The shell makes this execution-control failure terminal for Quartermaster.
+No retry, ordinal `3`, alternate host, parser change, cleanup weakening,
+diagnostic recovery, or source import is authorized.
 
 ## Exact next action
 
-One fresh Quartermaster / `quartermaster` reads the complete current intake,
-full Quartermaster profile, `FRWO-005-v7`, decisive `FRVE-005-v7-VR-03`,
-complete `FRSH-005-v1-VR-08`, complete effective treatment and blueprint,
-corrected candidate `f4b2062...`, `FRCE-005-v1-VR-05`, immutable
-`FRAM-001-v1`, and the exact helper/direct-API/runtime/test controls.
+One fresh Office of Science Administrator reads the complete current intake,
+full Science profile, `FRCA-005-v3`, complete `FRWO-005-v7`, decisive
+`FRVE-005-v7-VR-03`, complete effective shell, treatment, blueprint,
+`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and exact pre-helper execution
+boundary.
 
-Quartermaster independently proves exact synchronization, manifest identity,
-the `{2,3}` selected-source guard, absent targets, inert slots, and attempt
-ledger. Only then it executes the exact shell-authorized helper and direct
-Image API protocol in one bounded PS5.1 process beginning with ordinal `2`.
-Ordinal `3` is permitted only after ordinal `2` becomes a fully reviewed
-objective rejection and exact cleanup passes. Quartermaster selects at most
-one source, imports only one byte-identical raster plus `PROVENANCE.md`,
-populates only the declared source/provenance/geometry/layout/copy/alt slots,
-proves exact cleanup, and issues exactly one new versioned `PRODUCTION CONTENT
-COMPLETE` or `HOLD` artifact without reveal.
-
-Quartermaster may not change behavior, lesson ownership, route, save, world,
-ending, accepted media/manifest, dependencies, Host 07+, or later rail; retry
-ordinal `1`; exceed the two future sends; access any residual or VR-65; run
-complete E2E; reveal; advance maturity; close an OPEN record; schedule;
-automate; release; or call `FIRST RUN COMPLETE`.
+Science adjudicates only the stable pre-helper one-process host failure and
+issues one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact.
+A corrected retry path requires a new Mission shell variance before any fresh
+Quartermaster action. Science may not compile/invoke the helper, allocate the
+live root, read a credential, call the API, consume ordinal `2`, inspect
+media/pixels, change product/tests, run E2E, reveal, advance maturity, close an
+OPEN record, access a residual or VR-65, schedule, automate, push, release, or
+call `FIRST RUN COMPLETE`.
