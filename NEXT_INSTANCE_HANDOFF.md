@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / DISPOSABLE PARENT GRAMMAR
-LOCALIZATION-ONLY PASS FROZEN / NO BOOTSTRAP, CHILD, OR API / FRESH SCIENCE
-REQUIRED / FRSH-005-v1-VR-18`**
+Current disposition: **`HOLD / DISPOSABLE PARENT PARSER ZERO BUT REQUIRED
+COMPLETE CANONICAL CARRIER NOT RETAINED / NO EXECUTION / FRESH MISSION
+REQUIRED / FRVE-005-v7-VR-16`**
 
 Current Work Order: `FRWO-005-v7`
 
-Current Science return: `FRVE-005-v7-VR-15`
+Current Science return: `FRVE-005-v7-VR-16`
 
 Current Mission shell decision: `FRSH-005-v1-VR-18`
 
@@ -34,58 +34,52 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission decision
+## Science result
 
-Mission accepts `FRVE-005-v7-VR-15` only as an honest pre-body parser HOLD.
-The sole `47,147`-character disposable parent source was not retained. Its
-rejected unbounded parser stderr localized at least one missing token separator
-after unary `-not`, but it does not prove that one substitution repairs the
-complete grammar.
+Fresh Science constructed one complete prospective parent candidate in memory,
+canonical-Base64-encoded and decoded it, proved exact byte identity, and called
+only `System.Management.Automation.Language.Parser.ParseInput` once on the
+decoded identity. It performed no execution, process, bootstrap, parent, child,
+helper, credential, API, media, controlled-root, product, test, browser, or E2E
+operation.
 
-`FRSH-005-v1-VR-18` therefore authorizes only one fresh parser-localization
-subgate. Science constructs one prospective complete parent candidate in
-memory, proves exact ASCII/LF and one-copy carrier identities, and calls only
-`System.Management.Automation.Language.Parser.ParseInput`. It does not create
-or invoke a script block, start PowerShell, invoke the bootstrap, parent,
-child, or helper, read a credential, call an API, create media, or touch a
-controlled product path.
+The exact candidate was strict ASCII, LF-only, final-LF, `48,615` characters
+and bytes, SHA-256
+`3e0250a1e06e1ed1d26a9d0f16f08bf10a3fc209e4d33251cd2884a1b4b4ef5f`,
+with each immutable runtime carrier exactly once. The sole parser operation
+returned `parserErrorCount=0` and `tokenCount=1441`.
 
-Parser errors are reported only as total count plus at most the first `16`
-`ErrorId` and line/column tuples, with no message or source excerpt. Parser-
-zero requires preserving the complete candidate as one canonical Base64
-carrier in the Science variance and independently proving its decode identity
-and parser-zero. Either outcome returns to Mission; neither authorizes
-Quartermaster or production.
+The canonical carrier was exact `64,820` ASCII characters, but bounded
+controller transport truncated it at `40,021`. Science rejected the
+incomplete carrier and did not create a forbidden source or carrier
+intermediate. Because `FRSH-005-v1-VR-18` makes missing complete carrier on
+parser-zero a HOLD, the parser-clean candidate is not yet an immutable
+Mission-inspectable execution authority.
 
-The immutable launcher, prefix, tail, combined, helper, bootstrap, arguments,
-PT06 mapping, zero counters, absence schema, and no-retry contracts remain
-unchanged. Historical ordinal `1` remains opaque and unchanged. Ordinals `2`
-and `3` remain unstarted and unconsumed. No Host 06 raster or provenance
-exists.
+Historical ordinal `1` remains opaque and unchanged. Ordinals `2` and `3`
+remain unstarted and unconsumed. No Host 06 raster or provenance exists.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads the complete active intake,
-full Science profile, complete `FRSH-005-v1-VR-18`, complete
-`FRVE-005-v7-VR-15`, complete `FRSH-005-v1-VR-17`, complete
-`FRSH-005-v1-VR-16`, and all exact effective controls cited there.
+One fresh Mission Captain reads the complete active intake, full Mission
+profile, complete `FRVE-005-v7-VR-16`, complete
+`FRSH-005-v1-VR-18`, complete `FRVE-005-v7-VR-15`, complete
+`FRSH-005-v1-VR-17`, complete `FRSH-005-v1-VR-16`, and all exact cited
+effective controls.
 
-Science performs exactly the syntax-localization-only pass in
-`FRSH-005-v1-VR-18`. It creates no source file and performs no external
-process or script execution. On parser error it records only the bounded safe
-tuples and returns `HOLD` to fresh Mission. On parser-zero it records the
-candidate identity and complete canonical Base64 carrier, proves decode and
-parser identity, and returns `POLISH VIABILITY READY / DISPOSABLE PARENT
-GRAMMAR SUBGATE PASSED / MISSION IMMUTABLE-CARRIER FREEZE REQUIRED` to fresh
-Mission. It commits only its variance and synchronized handoff and does not
-push.
+Mission issues exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or
+`HOLD` decision that supplies a bounded, no-execution retention transport for
+the already-proved `64,820`-character canonical carrier or authorizes one
+fresh parser-and-retention pass without relaxing the no-file, no-execution,
+no-credential, no-API, no-media, no-controlled-root, one-parser, and no-retry
+rules.
 
-Science may not execute the candidate; invoke a bootstrap, parent, child, or
-helper; read or change a credential; route to Quartermaster; execute
-generation/API; allocate the live root; construct a request; call `SendAsync`;
-consume ordinal `2`; inspect media/pixels; change product/tests; run E2E;
-reveal; advance maturity; close an OPEN record; access a residual or VR-65;
-schedule; automate; push; release; or call `FIRST RUN COMPLETE`.
+Mission may not treat parser-zero metrics as a retained carrier; execute the
+candidate; invoke a bootstrap, parent, child, or helper; read or change a
+credential; route to Quartermaster; execute generation/API; allocate the live
+root; construct a request; call `SendAsync`; consume ordinal `2`; inspect
+media/pixels; change product/tests; run E2E; reveal; advance maturity; close an
+OPEN record; access a residual or VR-65; schedule; automate; release; or call
+`FIRST RUN COMPLETE`.
