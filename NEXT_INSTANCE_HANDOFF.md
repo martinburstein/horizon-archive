@@ -2,17 +2,18 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / PRE-CALL FROZEN TRANSPORT CONTINUATION ABSENT
-/ ORDINALS 2-3 PRESERVED / NO MEDIA CANDIDATE / FRCA-005-v4`**
+Current disposition: **`FIRST RUN SHELL READY / COMPLETE SAME-PROCESS
+PRODUCTION TAIL FROZEN / CREDENTIAL-CLEARED SCIENCE FIXTURE REQUIRED /
+FRSH-005-v1-VR-11`**
 
-Current Work Order / decisive Science return: `FRWO-005-v7` /
+Current Work Order / decisive prior Science return: `FRWO-005-v7` /
 `FRVE-005-v7-VR-08`
 
-Current Mission shell decision: `FRSH-005-v1-VR-10`
+Current Mission shell decision: `FRSH-005-v1-VR-11`
 
 Quartermaster return: `FRCA-005-v4`
 
-Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-10`
+Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-11`
 
 Effective treatment / blueprint: `FRDT-005-v1-VR-01` /
 `FRPX-005-v1-VR-01`
@@ -32,54 +33,70 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-## Quartermaster result
+## Mission result
 
-Quartermaster stopped before launcher execution and ordinal `2`. The exact
-`2,001`-byte launcher invokes only the exact `976`-byte pre-helper and then
-reaches end of file. The pre-helper itself ends after
-`$state.RootOrdinary=$true`. Neither frozen sequence contains or invokes the
-helper compile/load/cleanup and direct-API continuation.
+Mission accepted `FRCA-005-v4` and repaired only the frozen transport
+continuation contradiction. `FRSH-005-v1-VR-11` replaces the complete
+environment-value identity with one exact combined script whose first `976`
+bytes are byte-identical to the accepted pre-helper and whose remaining
+`26,068` bytes are a predeclared production tail. Exact combined identity:
 
-Appending the continuation would change one of the frozen byte identities.
-Supplying it through a second environment value, stdin, source file, encoded
-command, profile, nested shell, alternate transport, or second PowerShell
-process violates the current shell. Letting the exact successful prefix exit
-would leave a pre-existing helper root and would not preserve the required
-same-process ownership. There is therefore no lawful route from exact PH08
-success to the frozen helper/API tail.
+```text
+byteLength=27044
+sha256=015dfd96befad29793892f1e15dc9ff4362ff8cec0ae4ce7b9c45b5da9e125f3
+```
 
-Quartermaster issued `FRCA-005-v4 / HOLD` and routed the contradiction to its
-earliest shell owner. Direct Image API sends remain exact `0`. Historical
-ordinal `1` remains consumed, opaque, inaccessible, and unchanged. Ordinals
-`2` and `3` remain unstarted and unconsumed.
+The exact `2,001`-byte launcher, executable, argument vector, environment
+name, parser/invocation, `PH01..PH08`, PS5.1/bitness gates, root primitive,
+and all pre-helper failure semantics remain unchanged. The helper compile,
+verified DLL load/reflection/identity, helper cleanup, credential gate,
+request/response/materialization, ordinal-2/3 review rendezvous, import,
+rollback, cleanup, and bounded diagnostics now execute in that same child
+process through exact `PT01..PT18` stages.
 
-The launcher and pre-helper identities, candidate/tree, manifest identity,
-selected ordinal guard, and null-first slots were independently revalidated.
-The helper root/DLL, live root, both ordinal stage-target pairs, product raster,
-and provenance are all exactly absent. No key, request, response, base64,
-media, pixel, preview, browser, build, or E2E action occurred.
+Mission independently parser-checked the complete combined block with zero
+errors and proved exact prefix, helper-source, prompt, tail, and combined byte
+identities. It did not execute the launcher/helper/tail, allocate a root, read
+a credential, construct/send a request, consume an ordinal, inspect media or
+pixels, change product/tests, run E2E, reveal, advance maturity, close an OPEN
+record, access a residual or VR-65, schedule, automate, release, or call
+`FIRST RUN COMPLETE`.
+
+Direct Image API sends remain exact `0`. Historical ordinal `1` remains
+consumed, opaque, inaccessible, and unchanged. Ordinals `2` and `3` remain
+unstarted and unconsumed. The helper root/DLL, live root, both ordinal pairs,
+product raster, and provenance remain absent.
 
 ## Exact next action
 
-One fresh Mission Captain / `mission_captain` reads the complete active
-intake, full Mission profile, complete `FRCA-005-v4`, complete
+One fresh Office of Science Administrator /
+`office_of_science_administrator` reads the complete active intake, full
+Science profile, complete `FRSH-005-v1-VR-11`, `FRCA-005-v4`, complete
 `FRSH-005-v1-VR-10`, complete `FRSH-005-v1-VR-09`,
-`FRVE-005-v7-VR-08`, `FRCA-005-v3`, complete `FRWO-005-v7`, decisive
+`FRVE-005-v7-VR-08`, complete `FRWO-005-v7`, decisive
 `FRVE-005-v7-VR-03`, complete effective shell, treatment, blueprint,
-`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and both frozen byte sequences.
+`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and both exact literal blocks.
 
-Mission issues exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or
-`HOLD` artifact adjudicating the missing same-process continuation. It may
-freeze a corrected complete production transport only through an explicit
-versioned variance that is executable as written, preserves the accepted
-pre-helper predicates and bounded diagnostics, and carries the unchanged
-helper/API tail without silently changing process, identity, or cleanup
-semantics.
+Science independently recomputes launcher/prefix/tail/combined identities,
+proves bytes `[0..975]` exactly equal the accepted pre-helper, parser-checks
+the complete combined block, and proves the unchanged executable-plus-argv
+and environment value fit applicable Windows limits. Science then runs one
+credential-cleared, no-request fixture through the exact combined transport.
+It must reach `PH08`, compile/hash/load/reflect/identity-check and exactly clean
+the helper, reach `PT06_CREDENTIAL_GATE`, retain only the bounded production
+failure, and restore every controlled path to absence with exact zero request
+construction, `SendAsync`, direct sends, and ordinal consumption.
 
-Mission may not execute the launcher/helper, allocate a root, read a
-credential, call the API, consume ordinal `2`, inspect media/pixels, change
-product/tests, run E2E, reveal, advance maturity, close an OPEN record, access
-a residual or VR-65, schedule, automate, release, or call `FIRST RUN
+Science also validates the production diagnostic normalizer, review-record
+parser, ordinal-2 rejection-to-3 transition, success/rollback branches, and
+identity-conditioned cleanup using synthetic non-media data only. It issues
+exactly one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact
+and routes only to a fresh Mission Captain. Science may not route directly to
+Quartermaster, allocate the live root in the exact no-request run, read a
+credential value, call the API, consume ordinal `2`, inspect media/pixels,
+change product/tests, run E2E, reveal, advance maturity, close an OPEN record,
+access a residual or VR-65, schedule, automate, release, or call `FIRST RUN
 COMPLETE`.
