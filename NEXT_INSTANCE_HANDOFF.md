@@ -2,17 +2,17 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / COMPACT CURRENT-SHELL PARENT ABORTED ON
-CASE-INSENSITIVE AUTOMATIC PID VARIABLE COLLISION BEFORE CREDENTIAL CLEAR,
-COMMAND-LINE MEASUREMENT, OR CHILD ENTRY / NO RETRY /
-FRVE-005-v7-VR-07`**
+Current disposition: **`POLISH VIABILITY READY / COMPACT CURRENT-SHELL
+PRE-HELPER FIXTURE PASS / COMPLETE BOUNDED FAILURE RETENTION AND CLEANUP
+PROVED / FRVE-005-v7-VR-08`**
 
 Current Work Order / decisive Science return: `FRWO-005-v7` /
-`FRVE-005-v7-VR-07`
+`FRVE-005-v7-VR-08`
 
 Mission correction: `FRSH-005-v1-VR-09`
 
-Prior Science returns: `FRVE-005-v7-VR-06` / `FRVE-005-v7-VR-05`
+Prior Science returns: `FRVE-005-v7-VR-07` / `FRVE-005-v7-VR-06` /
+`FRVE-005-v7-VR-05`
 
 Quartermaster return: `FRCA-005-v3`
 
@@ -36,71 +36,54 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
 ## Science result
 
-`FRVE-005-v7-VR-07` selected the authorized compact current-shell parent, but
-the one parent aborted before fixture entry because PowerShell treated its
-local `$pid` pre-helper-identity variable as the case-insensitive read-only
-automatic `$PID` variable. The stop preceded credential clearing, child
-command-line measurement, controlled-path setup, task environment assignment,
-native capture scope, and every child invocation. The no-retry boundary
-prohibited a corrected parent in the heartbeat.
+`FRVE-005-v7-VR-08` ran exactly one credential-cleared, no-request fixture
+through the authorized compact current-shell parent and passed. Every declared
+parent-local name was collision-checked case-insensitively; the pre-helper
+identity object was `$prehelperIdentity`, and no `$pid`/`$PID` case variant was
+declared or assigned.
 
-No `PH01..PH08`, allowlist, `UNLISTED`, malformed/oversized-collapse, or
-post-root cleanup evidence was produced. The frozen Mission child contract is
-unchanged and not disproved. Final exact-path checks prove helper root/DLL,
-live root, both ordinal pairs, product raster, and provenance absent.
-Credential reads, request constructions, `SendAsync` calls, direct API sends,
-and ordinals consumed are exact `0`. Historical ordinal `1` remains consumed
-and inaccessible; ordinals `2` and `3` remain unstarted and unconsumed.
+The launcher identity passed exact `2001 / 96feaf7e...`; pre-helper identity
+passed exact `976 / 5cd257c9...`. Before the first child, a conservative exact
+executable-plus-argv rendering measured `2,156` characters, below both `8191`
+and `32767`. Each native call alone used
+`$ErrorActionPreference='Continue'`, in-memory stderr and `$LASTEXITCODE`
+capture, and immediate preference restoration.
 
-No helper/API/media/pixel/product/test/build/browser/E2E/reveal action
-occurred. No protected or opaque state was accessed.
+Exact success passed silently through ordered `PH01..PH08`. All eight induced
+first-failure records, allowlist bounding, literal `UNLISTED` replacement,
+exact `640`-byte acceptance, zero/multiple/missing/extra/reordered/unknown-
+predicate/multiline/non-ASCII/`641`-byte rejection collapse, and
+identity-conditioned PH08 post-root nonrecursive cleanup passed.
+
+Final exact-path checks prove helper root/DLL, live root, both ordinal pairs,
+product raster, and provenance absent. Credential reads, request
+constructions, `SendAsync` calls, direct API sends, and ordinals consumed are
+exact `0`. Historical ordinal `1` remains consumed and inaccessible; ordinals
+`2` and `3` remain unstarted and unconsumed. No helper/API/media/pixel/product/
+test/build/browser/E2E/reveal action occurred, and no protected or opaque state
+was accessed.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads the complete current intake,
-full Science profile, `FRVE-005-v7-VR-07`, `FRVE-005-v7-VR-06`,
-`FRVE-005-v7-VR-05`, `FRSH-005-v1-VR-09`, `FRVE-005-v7-VR-04`,
+One fresh Mission Captain reads the complete current intake, full Mission
+profile, `FRVE-005-v7-VR-08`, `FRVE-005-v7-VR-07` through
+`FRVE-005-v7-VR-05`, complete `FRSH-005-v1-VR-09`,
 `FRCA-005-v3`, complete `FRWO-005-v7`, decisive
 `FRVE-005-v7-VR-03`, complete effective shell, treatment, blueprint,
-`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and the exact pre-helper
-execution boundary.
+`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and the exact passing
+pre-helper fixture evidence.
 
-Science runs exactly one new credential-cleared, no-request fixture through
-the same bounded current-shell parent transport, with no encoded parent,
-child source file, stdin, diagnostic file, or alternate environment
-transport. The parent uses task-specific local variable names checked
-case-insensitively against PowerShell automatic, preference, constant,
-read-only, and common system variables. The pre-helper identity object is
-named `$prehelperIdentity`; `$pid` and every case variant of `$PID` are
-forbidden.
+Mission issues exactly one new versioned `FIRST RUN SHELL READY`, `REVISE`,
+or `HOLD` result that makes the explicit Quartermaster retry decision. It
+preserves the exact frozen launcher, pre-helper, environment name, executable,
+arguments, helper/API/ordinal/media contract, bounded diagnostic retention,
+cleanup, protected state, and no-reveal boundaries.
 
-Before the first child, the parent measures a conservative rendering of the
-exact child executable plus argument array and proves it below both `8191`
-and `32767` characters. The frozen launcher, pre-helper, environment name,
-child executable/arguments, paths, predicates, schema, allowlists, and cleanup
-rules remain exact.
-
-The parent scopes `$ErrorActionPreference='Continue'` around only each exact
-native child invocation, captures the single stderr record and
-`$LASTEXITCODE` in memory, and immediately restores the prior preference. It
-must not suppress, rewrite, discard, or file-redirect stderr.
-
-The one fixture repeats exact identities and full `PH01..PH08` success, then
-completes every locally inducible first-failure record, allowlist bounding,
-unlisted class/FQID replacement, malformed/non-ASCII/multiline/oversized
-collapse, exact process-ownership-conditioned nonrecursive cleanup, and final
-absence of helper root/DLL, live root, both ordinal pairs, raster, and
-provenance. It proves zero credential read, request construction, `SendAsync`,
-API sends, and ordinal consumption, then issues exactly one new versioned
-`POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact.
-
-Only a passing fresh result returns to one fresh Mission Captain for an
-explicit Quartermaster retry decision. Science may not route to Quartermaster,
-call the API, inspect media/pixels, change product/tests, run E2E, reveal,
-advance maturity, close an OPEN record, access a residual or VR-65, schedule,
-automate, push, release, or call `FIRST RUN COMPLETE`.
+Mission may not execute the helper, allocate the live root, read a credential,
+call the API, consume an ordinal, inspect media/pixels, change product/tests,
+run E2E, reveal, advance maturity, close an OPEN record, access a residual or
+VR-65, schedule, automate, push, release, or call `FIRST RUN COMPLETE`.
