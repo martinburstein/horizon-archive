@@ -1,0 +1,117 @@
+{
+    "schema":  "horizon-archive.first-run.accepted-media-manifest/v1",
+    "workOrder":  "FRWO-005-v2",
+    "shell":  "FRSH-005-v1",
+    "releaseBaseline":  "a91763e28d488f31f8cf7d40ece0b2682246ba9b",
+    "candidateHead":  "02d957e9d69dc7986928a391c37f899784f73ea5",
+    "pathBase":  "repository-root",
+    "hashAlgorithm":  "SHA-256",
+    "hashEncoding":  "lowercase-hex",
+    "entries":  [
+                    {
+                        "ordinal":  1,
+                        "path":  "Visual Direction/Production Masters/2026-07-15-glass-meadow-integrated-terminal/glass-meadow-integrated-terminal-master-v1.png",
+                        "byteLength":  2688247,
+                        "sha256":  "6b27ac8233a5c29583450064da3d51c504e16a513759d52e5651b9c60ec031d2"
+                    },
+                    {
+                        "ordinal":  2,
+                        "path":  "Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-access-master.png",
+                        "byteLength":  3076970,
+                        "sha256":  "e03fcffeb1aaf941e9ee8c5a4ea9c840b4f90271353fdf0b26f51350421c7b4e"
+                    },
+                    {
+                        "ordinal":  3,
+                        "path":  "Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-boundary-master.png",
+                        "byteLength":  2990550,
+                        "sha256":  "8a932f027a0db79df7d24eac6803b0ade45beb3e9099e48c324d887e38de3e4a"
+                    },
+                    {
+                        "ordinal":  4,
+                        "path":  "Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png",
+                        "byteLength":  2626795,
+                        "sha256":  "1d727694fa1dbb4311f9d7974a017d6165e66f10080114e5f81fe3cfd44eff6d"
+                    },
+                    {
+                        "ordinal":  5,
+                        "path":  "Visual Direction/Production Masters/2026-07-15-photorealistic-demo/drowned-archive-master.png",
+                        "byteLength":  2727857,
+                        "sha256":  "afa0008e3f1e0cdacb2b9e58f14e9f676729eab9e8725a58c87d73ac489c08ed"
+                    },
+                    {
+                        "ordinal":  6,
+                        "path":  "Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png",
+                        "byteLength":  2571813,
+                        "sha256":  "eea780a0e0af3e57497552601e00ad80851036c26cd29ab512c0e25ef3e0c4cf"
+                    },
+                    {
+                        "ordinal":  7,
+                        "path":  "Visual Direction/Production Masters/2026-07-16-civic-record-district-arrival/civic-record-district-arrival-master-v1.png",
+                        "byteLength":  2594095,
+                        "sha256":  "fd28d2d6bd02f40e5a37d2fd08c9cd5f29ced47608804b900ceb17f497ddaf6c"
+                    },
+                    {
+                        "ordinal":  8,
+                        "path":  "Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp",
+                        "byteLength":  2163752,
+                        "sha256":  "b6e0f34a917732dbb7b66b65968198cfc068bc650ac00cd8a01f095a6109f63f"
+                    },
+                    {
+                        "ordinal":  9,
+                        "path":  "Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-detail-runtime-master-v1.webp",
+                        "byteLength":  2125650,
+                        "sha256":  "1f64ee18eb14ed0fb7b35ef4814c308391635865056a21f7ec76f3f5ba48d0e9"
+                    },
+                    {
+                        "ordinal":  10,
+                        "path":  "Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-panorama-runtime-master-v1.webp",
+                        "byteLength":  2416978,
+                        "sha256":  "3eec1a762abb1c0654cf41753044173136e79f933db55c6fe7ca097e33a5012b"
+                    },
+                    {
+                        "ordinal":  11,
+                        "path":  "Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-crosssection-runtime-master-v1.webp",
+                        "byteLength":  1790866,
+                        "sha256":  "0d79c2c2096c0114216a666279d5acd2ed35f6920d60a117726c625177a0615d"
+                    },
+                    {
+                        "ordinal":  12,
+                        "path":  "Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-panorama-runtime-master-v1.webp",
+                        "byteLength":  1816650,
+                        "sha256":  "ef5917632eb2440d7d6d85895f5775767389745f1534f4e107f7bb0de7d59202"
+                    },
+                    {
+                        "ordinal":  13,
+                        "path":  "Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-contact-detail-runtime-master-v1.webp",
+                        "byteLength":  1638180,
+                        "sha256":  "182e79793ceb3f375bcaabd87ff6d6279e54b53927b8af90f988d2dfaabc4640"
+                    },
+                    {
+                        "ordinal":  14,
+                        "path":  "Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-panorama-runtime-master-v1.webp",
+                        "byteLength":  2097426,
+                        "sha256":  "63148566d2745c45e0d9f1bdedbb437b0d74a6dae09028f61828be2f0e96031e"
+                    },
+                    {
+                        "ordinal":  15,
+                        "path":  "Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-panorama-runtime-master-v4.webp",
+                        "byteLength":  1619836,
+                        "sha256":  "7b64d4949bf02b1fbdfb2eb3bafb1ba2c0b7c8cd6eab0ea6fa87179a927872a9"
+                    },
+                    {
+                        "ordinal":  16,
+                        "path":  "Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-relation-detail-runtime-master-v1.webp",
+                        "byteLength":  2369022,
+                        "sha256":  "ca09c4bdfedc6efc99538a8403ac43f6dd8db221a6157434e82ae1a9767fd0b8"
+                    },
+                    {
+                        "ordinal":  17,
+                        "path":  "curriculum/lessons/L-05-07/evidence/basin_audio.wav",
+                        "byteLength":  96044,
+                        "sha256":  "ab396955d4533b7d73676d3271dabf9b9de68ee4c5a4aebe3cec80ddb5756030"
+                    }
+                ],
+    "count":  17,
+    "totalBytes":  37410731,
+    "entriesSha256":  "c7ca95201029b490f2460a846e3dc2a64a26775b57e8c587cbc2d874df654d99"
+}
