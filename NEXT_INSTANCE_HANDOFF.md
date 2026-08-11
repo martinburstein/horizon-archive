@@ -2,14 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / AUTHORITATIVE STATIC
-IDENTITIES RECONFIRMED / DISPOSABLE SCIENCE SR01 STRING-CONSTRUCTION AND
-FAILURE LOCALIZATION FROZEN / FRESH CREDENTIAL-CLEARED SCIENCE ONE-RUN PROOF
-REQUIRED / FRSH-005-v1-VR-14`**
+Current disposition: **`HOLD / FRESH SCIENCE PARENT STOPPED BEFORE CHILD AT
+SR01_STATIC_IDENTITY / LAUNCHER_EXTRACT / CHILD INVOCATIONS ZERO / NO RETRY /
+FRVE-005-v7-VR-12`**
 
 Current Work Order: `FRWO-005-v7`
 
-Current Science return: `FRVE-005-v7-VR-11`
+Current Science return: `FRVE-005-v7-VR-12`
 
 Current Mission shell decision: `FRSH-005-v1-VR-14`
 
@@ -35,62 +34,47 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission result
+## Science result
 
-Mission accepts `FRVE-005-v7-VR-11` only as a parent-before-child HOLD. The
-retained parent stopped at `SR01_STATIC_IDENTITY` with
-`childInvocations=0`; it supplies no child runtime evidence and cannot be
-repaired, resumed, or reinterpreted.
+The fresh Science parent stopped before child preparation or creation and
+retained exactly:
 
-Mission independently re-extracted the authoritative literal blocks and
-recomputed exact launcher `2001 / 96feaf7e...`, prefix `976 / 5cd257c9...`,
-tail `26068 / e9815ce8...`, and combined `27044 / 015dfd96...` identities,
-with exact prefix equality. The authority files have not drifted. The exact
-retained defect is isolated to the removed disposable Science parent's SR01
-representation/assertion. Because that parent retained no sub-assertion,
-Mission claims no narrower historical expression.
+```text
+SCIENCE_PARENT_STOP|stage=SR01_STATIC_IDENTITY|assertion=LAUNCHER_EXTRACT|childInvocations=0|code=ASSERTION_FAILED
+```
 
-`FRSH-005-v1-VR-14` freezes scalar `[string]` captures, exact
-`[string]::Concat(prefix,tail)`, separate hash operations, byte-level prefix
-equality, an array/collection negative control, and a closed sub-assertion
-allowlist for any new pre-child SR01 stop. It changes no production byte,
-child diagnostic, helper, API, ordinal, path, product, media, runtime, lesson,
-or cleanup behavior.
-
+This is an allowlisted `FRSH-005-v1-VR-14` no-child stop and supplies no
+runtime evidence. Science did not repair, resume, narrow, or rerun the parent.
 Credential value reads, request constructions, `SendAsync` calls, direct
-sends, and ordinals consumed remain exact `0`. Historical ordinal `1` remains
-consumed and opaque. Ordinals `2` and `3` remain unstarted and unconsumed.
-Every controlled helper/live/ordinal/product/Science-fixture path remains
-absent. No product raster or provenance exists.
+sends, ordinals consumed, and child invocations remain exact `0`.
+
+Historical ordinal `1` remains consumed, opaque, inaccessible, and unchanged.
+Ordinals `2` and `3` remain unstarted and unconsumed. Every controlled helper,
+live, ordinal, product, and Science-fixture path is absent. No product raster
+or provenance exists. No API call occurred.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads the complete active intake,
-full Science profile, complete `FRSH-005-v1-VR-14`, complete
-`FRVE-005-v7-VR-11`, complete `FRSH-005-v1-VR-13`, complete
-`FRVE-005-v7-VR-10`, complete `FRSH-005-v1-VR-12`, complete
-`FRVE-005-v7-VR-09`, complete `FRSH-005-v1-VR-11`, `FRCA-005-v4`,
-complete `FRSH-005-v1-VR-10`, complete `FRSH-005-v1-VR-09`, decisive
+One fresh Mission Captain reads the complete active intake, full Mission
+profile, complete `FRVE-005-v7-VR-12`, complete
+`FRSH-005-v1-VR-14`, complete `FRVE-005-v7-VR-11`, complete
+`FRSH-005-v1-VR-13`, complete `FRVE-005-v7-VR-10`, complete
+`FRSH-005-v1-VR-12`, complete `FRVE-005-v7-VR-09`, complete
+`FRSH-005-v1-VR-11`, `FRCA-005-v4`, complete
+`FRSH-005-v1-VR-10`, complete `FRSH-005-v1-VR-09`, decisive
 `FRVE-005-v7-VR-08`, complete `FRWO-005-v7`, decisive
 `FRVE-005-v7-VR-03`, the effective shell, treatment, blueprint,
-`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, and both exact literal blocks.
+`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, current release-map and
+scoreboard controls, and both named literal-block authorities.
 
-Science performs exactly one fresh credential-cleared no-request proof using
-the deterministic SR01 construction in `FRSH-005-v1-VR-14`, the exact PT06
-classification mapping in `FRSH-005-v1-VR-13`, and the complete bounded result
-schema in `FRSH-005-v1-VR-12`. Acceptance requires exact child exit `87`, zero
-stdout, one exact PT06 production diagnostic, `childInvocations=1`, every
-activity counter `0`, every controlled-path absence `true`, and final
-`ACCEPTED_NO_REQUEST_STOP / PT06_CREDENTIAL_GATE / CREDENTIAL_ABSENT`.
-
-Science issues one new versioned `POLISH VIABILITY READY`, `REVISE`, or
-`HOLD` artifact and routes only to one fresh Mission Captain. It may not retry
-after its child begins; route to Quartermaster; execute generation/API;
-allocate the live root; read a credential value; construct/send a request;
-call `SendAsync`; consume ordinal `2`; inspect media/pixels; change
-product/tests; run E2E; reveal; advance maturity; close an OPEN record; access
-a residual or VR-65; schedule; automate; push; release; or call `FIRST RUN
-COMPLETE`.
+Mission issues exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or
+`HOLD` decision for the bounded `SR01_STATIC_IDENTITY /
+LAUNCHER_EXTRACT` stop. Mission may not reinterpret this run as static or
+child evidence; repair or rerun this Science parent; route to Quartermaster;
+execute generation/API; allocate the live root; read a credential value;
+construct/send a request; call `SendAsync`; consume ordinal `2`; inspect
+media/pixels; change product/tests; run E2E; reveal; advance maturity; close an
+OPEN record; access a residual or VR-65; schedule; automate; push from
+Science; release; or call `FIRST RUN COMPLETE`.
