@@ -2,10 +2,10 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-005-v7 / MINIMAL TEMP-ONLY
-GETFILEINFORMATIONBYHANDLE HELPER AUTHORIZED / FRESH SCIENCE REQUIRED`**
+Current disposition: **`HOLD / FRVE-005-v7 / EXACT PS5.1 NATIVE-IDENTITY
+FIXTURE DID NOT EXECUTE / FRESH SCIENCE REQUIRED`**
 
-Current Work Order / decisive Science return: `FRWO-005-v7` / `FRVE-005-v6`
+Current Work Order / decisive Science return: `FRWO-005-v7` / `FRVE-005-v7`
 
 Planning controls: `FRRM-005-v7` / `FRSB-005-v7`
 
@@ -27,59 +27,55 @@ Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 Exact next owner: **one fresh Office of Science Administrator /
 `office_of_science_administrator`**
 
-## Operations decision
+## Science decision
 
-`FRVE-005-v6` independently validated the direct API endpoint/model/request
-and one-item `data[0].b64_json`; boolean-only env credential boundary; single-
-send/no-redirect HttpClient posture; strict bounded UTF-8/JSON/base64 pipeline;
-CreateNew/Flush/close; same-volume two-argument File.Move no-replace behavior;
-and exact cleanup. It isolated one missing primitive: PowerShell 5.1 exposes
-no managed one-link and handle-bound file identity surface.
+`FRVE-005-v7` records an evidence-availability HOLD. The active shell was
+confirmed as Windows PowerShell `5.1.26100.8875` in a 64-bit process, but the
+attempted explicit nested PS5.1 process was denied before the fixture body
+returned any evidence. Science therefore could not lawfully freeze the helper
+DLL identity, prove its surface/layout/native results and required failure/
+race/cleanup branches, or establish exact cleanup postconditions.
 
-Martin explicitly authorized the sole cure. `FRWO-005-v7` freezes one minimal
-temp-only PowerShell `Add-Type` C# bridge calling only kernel32
-`GetFileInformationByHandle` on the already-open exclusive `FileStream`
-`SafeFileHandle`. Exact source bytes/length/SHA, return schema, compile-output
-location and output-hash rule, in-memory load, exact cleanup, and forbidden
-surface are fixed. The helper exposes no `CloseHandle`, path, write, move,
-delete, enumeration, process, network, registry, or environment method. It
-changes no v6 direct API, CreateNew/Flush/no-replace move, ordinal, FRAM,
-canon, PBA, no-reveal, OPEN-record, product, or release boundary.
-
-Operations issues `WORK ORDER READY / FRWO-005-v7`. No Mission follows until
-fresh Science independently fixture-proves the exact helper and unchanged
-envelope with zero API sends.
+The HOLD does not identify a defect in the frozen helper and does not return
+to Operations. It requires one fresh Science context to run the exact bounded
+fixture directly in the already-confirmed PS5.1 host, without a nested shell.
+No Mission follows until a complete `POLISH VIABILITY READY` envelope exists.
 
 ## Preserved state
 
-The live API root, both staging paths, both attempt targets, and the exact
-helper root/DLL remain absent. Ordinal `1` remains permanently consumed and
-opaque; ordinals `2` and `3` remain unconsumed and unavailable. Direct API
-calls remain exact `0`. Conservative managed-residual count remains exact `1`,
-associated only with ordinal `1`; VR-65 remains separate and inaccessible.
+Ordinal `1` remains permanently consumed and opaque; ordinals `2` and `3`
+remain unconsumed and unavailable. Direct API calls remain exact `0`.
+Conservative managed-residual count remains exact `1`, associated only with
+ordinal `1`; VR-65 remains separate and inaccessible.
 
-The exact Host 05 -> dry same-basin Host 06 lens/cradle -> sole unchanged
-`L02-03` -> unchanged next Drowned boundary, prompt, strict PNG/CRC/decode,
-`PHY-01..12`, six-layout crop/mapping/accessibility, privacy/save/offline/PBA/
-performance/E2E/no-reveal/rollback, one-path canon, RP-012,
-`successor=null`, all OPEN records, exact `17 / 37,410,731` accepted-media
-tuple, code candidate, inventory, and maturity state remain unchanged.
+`FRVE-005-v6` remains prior evidence for the direct API/TLS/parser/CreateNew/
+Flush/no-replace predicates. Fresh v7 corroboration did not run. No API key
+value or derivative was observed; no Image API request, generation, media
+operation, live-root allocation, pixel inspection, import, provenance, E2E,
+reveal, maturity change, OPEN-record closure, residual access, scheduling,
+automation, push, release, or `FIRST RUN COMPLETE` occurred.
+
+The exact Host 05 -> dry same-basin Host 06 -> sole unchanged `L02-03` ->
+unchanged next Drowned boundary, prompt, strict PNG/CRC/decode, `PHY-01..12`,
+six-layout crop/mapping/accessibility, privacy/save/offline/PBA/performance/
+no-reveal/rollback, one-path canon, RP-012, `successor=null`, OPEN records,
+accepted-media tuple, code candidate, inventory, and maturity remain unchanged.
 
 ## Exact next action
 
 One fresh Office of Science Administrator reads complete `FRWO-005-v7`,
-complete `FRWO-005-v6`, complete `FRVE-005-v6`, and synchronized controls. It
-must independently verify exact helper source/SHA and forbidden surface;
-compile only to the exact helper DLL; freeze emitted byte length/SHA; load only
-those bytes in memory; fixture-prove one-link and stable handle identity across
-exclusive create/reopen/no-replace-move/cleanup branches; restore the helper
-root to absence; revalidate unchanged v6 API/parser/file gates with synthetic/
-disposable non-media evidence and exact zero API sends; and issue exactly one
-new versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact.
+complete `FRWO-005-v6`, complete `FRVE-005-v6`, complete `FRVE-005-v7`, and
+synchronized controls. It runs the exact v7 fixture directly in the current
+PS5.1 host; freezes the emitted DLL byte length/SHA; proves byte-only load,
+surface, x64 layout, exclusive SafeFileHandle volume/file-index/link-count/
+attribute/size behavior, every required negative/race/substitution/reparse/
+cleanup branch, and exact root absence; then freshly corroborates the v6 gates
+with synthetic non-media evidence and exact zero API sends. It issues one new
+versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact.
 
 Science may allocate only the exact helper root and disposable non-media
-fixtures, and must restore them to absence. It may not authorize Mission;
-invoke generation/API; consume ordinal `2`; allocate the live root; inspect
-pixels; import media; write copy or provenance; run E2E; reveal; advance
-maturity; close an OPEN record; access a managed residual or VR-65; schedule;
-automate; push; release; or call `FIRST RUN COMPLETE`.
+fixtures and must restore them to proved absence. It may not authorize
+Mission; invoke generation/API; consume ordinal `2`; allocate the live root;
+inspect pixels; import media; write copy or provenance; run E2E; reveal;
+advance maturity; close an OPEN record; access a managed residual or VR-65;
+schedule; automate; push; release; or call `FIRST RUN COMPLETE`.
