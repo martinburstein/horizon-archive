@@ -2,19 +2,19 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRESH SCIENCE PARENT STOPPED BEFORE CHILD AT
-SR01_STATIC_IDENTITY / PREFIX_EXTRACT / CHILD INVOCATIONS ZERO / NO RETRY /
-FRVE-005-v7-VR-13`**
+Current disposition: **`FIRST RUN SHELL READY / BOTH RUNTIME SCRIPT
+CARRIERS DOCUMENT-INDEPENDENT AND IMMUTABLE / FRESH CREDENTIAL-CLEARED
+SCIENCE ONE-RUN PROOF REQUIRED / FRSH-005-v1-VR-16`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Science return: `FRVE-005-v7-VR-13`
 
-Current Mission shell decision: `FRSH-005-v1-VR-15`
+Current Mission shell decision: `FRSH-005-v1-VR-16`
 
 Quartermaster return: `FRCA-005-v4`
 
-Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-15`
+Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-16`
 
 Effective treatment / blueprint: `FRDT-005-v1-VR-01` /
 `FRPX-005-v1-VR-01`
@@ -34,55 +34,79 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-## Science result
+## Mission result
 
-Fresh Science embedded and independently validated the exact canonical
-launcher Base64 carrier without reading a repository document for the
-launcher. The carrier passed its ASCII length/hash, canonical decode/re-encode,
-decoded launcher length/hash, LF-only/final-LF, and strict UTF-8 round-trip
-checks.
+Mission accepts `FRVE-005-v7-VR-13` only as an honest no-child stop at
+`SR01_STATIC_IDENTITY / PREFIX_EXTRACT`. It supplies no runtime evidence and
+cannot be repaired, resumed, or followed by a child in the same Science
+context. Its unbounded local exception formatting is rejected.
 
-The disposable parent then stopped before child preparation at the unchanged
-prehelper-prefix capture. It did not obtain exactly one named `prehelper`
-capture and emitted unbounded local PowerShell exception formatting rather
-than only the frozen bounded stop. Science rejects that output and retains
-only this bounded classification:
+`FRSH-005-v1-VR-16` eliminates every remaining repository-document and
+Markdown extraction step from the Science parent. The parent source contains
+only two already-compiled canonical Base64 ASCII scalar constants: the exact
+launcher carrier and the exact complete combined-environment carrier. The
+complete combined decode already contains the accepted pre-helper prefix
+followed immediately by the accepted production tail.
+
+Exact carrier and decoded identities are:
 
 ```text
-SCIENCE_PARENT_STOP|stage=SR01_STATIC_IDENTITY|assertion=PREFIX_EXTRACT|childInvocations=0|code=ASSERTION_FAILED
+launcherBase64 2668 / 02c0219793c0aeb6e8e989aac9f9ee52373598cdbc2a33da4f2c54b069796af9
+launcherDecoded 2001 / 96feaf7e62fa89e8c80cc46d38425d465cf845ffbd426405a75c73c056314212
+combinedBase64 36060 / c8926687184ecff422bb29fe26a7a9e3bd3d6273c75fceb56746734de89b19f5
+combinedDecoded 27044 / 015dfd96befad29793892f1e15dc9ff4362ff8cec0ae4ce7b9c45b5da9e125f3
+prefixSlice [0..975] 976 / 5cd257c94bcd70b8d6ada4e0b561b2a14ed52fd9459146b1269dc93ce1bdc7d1
+tailSlice [976..27043] 26068 / e9815ce8f988bca0f1f9bd14a7ba50cfa4935b3d7a47492c95bfa90986b7070c
 ```
 
-No child, helper, API, generation, media, pixel, product, test, build, browser,
-or E2E operation occurred. Credential value reads, request constructions,
-`SendAsync` calls, direct sends, ordinals consumed, and child invocations are
-exact `0`. Historical ordinal `1` remains opaque and unchanged; ordinals `2`
-and `3` remain unstarted and unconsumed. Every controlled helper, live,
-ordinal, product, and Science-fixture path remains absent. No product raster
-or provenance exists. The disposable parent was removed. The run is no child
-evidence and cannot be repaired or retried in this Science context.
+Mission independently proved both ASCII length/hashes, canonical
+decode/re-encode, decoded length/hashes, final-LF/no-CR strict UTF-8
+round-trip, exact prefix/tail slice identities, and complete combined parser
+acceptance with zero errors. Mission ran no child, API, generation, media,
+pixel, product, test, build, browser, or E2E operation.
+
+Credential value reads, request constructions, `SendAsync` calls, direct
+sends, ordinals consumed, and child invocations remain exact `0`. Historical
+ordinal `1` remains opaque and unchanged; ordinals `2` and `3` remain
+unstarted and unconsumed. Every controlled helper, live, ordinal, product, and
+Science-fixture path remains absent. No product raster or provenance exists.
 
 ## Exact next action
 
-One fresh Mission Captain reads the complete active intake, full Mission
-profile, complete `FRVE-005-v7-VR-13`, complete `FRSH-005-v1-VR-15`,
-complete `FRVE-005-v7-VR-12`, complete `FRSH-005-v1-VR-14`, complete
-`FRVE-005-v7-VR-11`, complete `FRSH-005-v1-VR-13`, complete
-`FRVE-005-v7-VR-10`, complete `FRSH-005-v1-VR-12`, complete
-`FRVE-005-v7-VR-09`, complete `FRSH-005-v1-VR-11`, `FRCA-005-v4`,
-complete `FRSH-005-v1-VR-10`, complete `FRSH-005-v1-VR-09`, decisive
-`FRVE-005-v7-VR-08`, complete `FRWO-005-v7`, decisive
-`FRVE-005-v7-VR-03`, the effective shell, treatment, blueprint,
-`FRCE-005-v1-VR-05`, immutable `FRAM-001-v1`, current release-map and
-scoreboard controls, and both named literal-block authorities.
+One fresh Office of Science Administrator reads the complete active intake,
+full Science profile, complete `FRSH-005-v1-VR-16`, complete
+`FRVE-005-v7-VR-13`, complete `FRSH-005-v1-VR-15`, and all exact
+effective controls cited there. Science constructs one disposable parent whose
+only script-byte inputs are the two already-compiled Base64 scalar constants
+in `FRSH-005-v1-VR-16`. The parent must not read any repository document,
+Markdown, fence, line range, source slice, Git object, or alternate file to
+obtain launcher, prefix, tail, or combined script bytes.
 
-Mission issues exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or
-`HOLD` decision for `SR01_STATIC_IDENTITY / PREFIX_EXTRACT` and bounded-stop
-emission. Mission may not reinterpret this run as child evidence; repair or
-rerun the removed Science parent; route to Quartermaster; execute
-generation/API; allocate the live root; read a credential value; construct or
-send a request; call `SendAsync`; consume ordinal `2`; inspect media/pixels;
-change product/tests; run E2E; reveal; advance maturity; close an OPEN record;
-access a residual or VR-65; schedule; automate; push from Science; release; or
-call `FIRST RUN COMPLETE`.
+Science independently validates both carrier ASCII identities, canonical
+decode/re-encode, decoded identities, prefix/tail slices, strict UTF-8,
+parser-zero result, argv/environment rendering, Windows limits, and stage
+order. It must trap any parent assertion into only the frozen bounded
+`SCIENCE_PARENT_STOP` record without host exception formatting.
+
+After all pre-child assertions pass, Science removes `OPENAI_API_KEY` from
+the parent process environment without reading its value and invokes the
+unchanged production child exactly once. Acceptance requires only the complete
+`ACCEPTED_NO_REQUEST_STOP / PT06_CREDENTIAL_GATE / CREDENTIAL_ABSENT`
+result with child exit `87`, child invocations `1`, all activity counters
+`0`, and every controlled-path absence `true`. The child diagnostic has no
+`code` field; product-root/raster/provenance absence remains parent
+postflight. Anything nonexact is `HOLD`. No retry exists once the child
+begins.
+
+Science removes its disposable parent and writes only one versioned
+`POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact plus this
+synchronized handoff. Science does not push.
+
+Science may not route directly to Quartermaster; execute generation/API;
+allocate the live root; construct a request; call `SendAsync`; consume
+ordinal `2`; inspect media/pixels; change product/tests; run E2E; reveal;
+advance maturity; close an OPEN record; access a residual or VR-65; schedule;
+automate; push; release; or call `FIRST RUN COMPLETE`.
