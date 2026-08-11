@@ -2,19 +2,19 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FILELESS READTOEND PARENT SOURCE FAILED
-SCRIPTBLOCK PARSE BEFORE PARENT BODY OR CHILD / FRESH MISSION GRAMMAR
-CORRECTION REQUIRED / FRVE-005-v7-VR-15`**
+Current disposition: **`FIRST RUN SHELL READY / DISPOSABLE PARENT GRAMMAR
+LOCALIZATION-ONLY PASS FROZEN / NO BOOTSTRAP, CHILD, OR API / FRESH SCIENCE
+REQUIRED / FRSH-005-v1-VR-18`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Science return: `FRVE-005-v7-VR-15`
 
-Current Mission shell decision: `FRSH-005-v1-VR-17`
+Current Mission shell decision: `FRSH-005-v1-VR-18`
 
 Quartermaster return: `FRCA-005-v4`
 
-Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-17`
+Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-18`
 
 Effective treatment / blueprint: `FRDT-005-v1-VR-01` /
 `FRPX-005-v1-VR-01`
@@ -34,51 +34,58 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-## Science decision
+## Mission decision
 
-The sole fresh Science parent source was exact `47,147` ASCII, LF-only,
-final-LF characters with SHA-256
-`2426e45f62842f7c5c9c314e280e4c4dc384ffa518eacaf230223a93ec85283e`.
-Science invoked exact Windows PowerShell 5.1 once with the frozen 105-character
-ReadToEnd bootstrap and exact 151-character arguments, starting asynchronous
-stdout/stderr drains before one complete stdin write and close.
+Mission accepts `FRVE-005-v7-VR-15` only as an honest pre-body parser HOLD.
+The sole `47,147`-character disposable parent source was not retained. Its
+rejected unbounded parser stderr localized at least one missing token separator
+after unary `-not`, but it does not prove that one substitution repairs the
+complete grammar.
 
-The bootstrap read the source, but `ScriptBlock.Create` rejected its grammar
-before the parent body or bounded catch could compile. Process exit was `1`,
-stdout was empty, and unbounded parse stderr was rejected. The localized
-grammar class includes a generic static invocation written without token
-separation after unary `-not`; Mission must validate the entire parent grammar,
-not merely that first reported token.
+`FRSH-005-v1-VR-18` therefore authorizes only one fresh parser-localization
+subgate. Science constructs one prospective complete parent candidate in
+memory, proves exact ASCII/LF and one-copy carrier identities, and calls only
+`System.Management.Automation.Language.Parser.ParseInput`. It does not create
+or invoke a script block, start PowerShell, invoke the bootstrap, parent,
+child, or helper, read a credential, call an API, create media, or touch a
+controlled product path.
 
-No child began. Credential value reads, request constructions, `SendAsync`
-calls, direct sends, ordinals consumed, and child invocations are all exact
-`0`. Every controlled helper/live/ordinal/product/Science-fixture path is
-absent. Historical ordinal `1` remains opaque and unchanged; ordinals `2` and
-`3` remain unstarted and unconsumed. No API, generation, response, media byte,
-image, pixel, product raster, or provenance exists.
+Parser errors are reported only as total count plus at most the first `16`
+`ErrorId` and line/column tuples, with no message or source excerpt. Parser-
+zero requires preserving the complete candidate as one canonical Base64
+carrier in the Science variance and independently proving its decode identity
+and parser-zero. Either outcome returns to Mission; neither authorizes
+Quartermaster or production.
+
+The immutable launcher, prefix, tail, combined, helper, bootstrap, arguments,
+PT06 mapping, zero counters, absence schema, and no-retry contracts remain
+unchanged. Historical ordinal `1` remains opaque and unchanged. Ordinals `2`
+and `3` remain unstarted and unconsumed. No Host 06 raster or provenance
+exists.
 
 ## Exact next action
 
-One fresh Mission Captain reads the complete active intake, full Mission
-profile, complete `FRVE-005-v7-VR-15`, complete `FRSH-005-v1-VR-17`, complete
-`FRVE-005-v7-VR-14`, complete `FRSH-005-v1-VR-16`, complete
-`FRVE-005-v7-VR-13`, complete `FRSH-005-v1-VR-15`, and all exact effective
-controls cited there.
+One fresh Office of Science Administrator reads the complete active intake,
+full Science profile, complete `FRSH-005-v1-VR-18`, complete
+`FRVE-005-v7-VR-15`, complete `FRSH-005-v1-VR-17`, complete
+`FRSH-005-v1-VR-16`, and all exact effective controls cited there.
 
-Mission issues one versioned shell decision that repairs and independently
-parser-proves the disposable parent-source grammar before any later fresh
-Science invocation. It preserves the two canonical Base64 runtime carriers,
-fixed bootstrap and argument identities, one complete stdin write/close,
-asynchronous dual-stream retention, unchanged production child, exact PT06
-diagnostic-to-`CREDENTIAL_ABSENT` mapping, all zero counters and controlled-
-path absences, and the one-run/no-retry boundary.
+Science performs exactly the syntax-localization-only pass in
+`FRSH-005-v1-VR-18`. It creates no source file and performs no external
+process or script execution. On parser error it records only the bounded safe
+tuples and returns `HOLD` to fresh Mission. On parser-zero it records the
+candidate identity and complete canonical Base64 carrier, proves decode and
+parser identity, and returns `POLISH VIABILITY READY / DISPOSABLE PARENT
+GRAMMAR SUBGATE PASSED / MISSION IMMUTABLE-CARRIER FREEZE REQUIRED` to fresh
+Mission. It commits only its variance and synchronized handoff and does not
+push.
 
-Mission may not rerun this Science context; reinterpret bootstrap parse output
-as parent/child evidence; route to Quartermaster; execute generation/API;
-allocate the live root; read a credential value; construct a request; call
-`SendAsync`; consume ordinal `2`; inspect media/pixels; change product/tests;
-run E2E; reveal; advance maturity; close an OPEN record; access a residual or
-VR-65; schedule; automate; push from Science; release; or call
-`FIRST RUN COMPLETE`.
+Science may not execute the candidate; invoke a bootstrap, parent, child, or
+helper; read or change a credential; route to Quartermaster; execute
+generation/API; allocate the live root; construct a request; call `SendAsync`;
+consume ordinal `2`; inspect media/pixels; change product/tests; run E2E;
+reveal; advance maturity; close an OPEN record; access a residual or VR-65;
+schedule; automate; push; release; or call `FIRST RUN COMPLETE`.
