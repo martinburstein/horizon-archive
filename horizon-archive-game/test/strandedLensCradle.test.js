@@ -36,7 +36,7 @@ const source = {
   height: 2160,
   format: "png",
   color: "opaque-srgb-8",
-  attemptOrdinal: 1,
+  attemptOrdinal: 2,
 };
 const physical = { x: 1344, y: 700, width: 1200, height: 700, centerX: 1944, centerY: 1050 };
 const activation = { x: 1300, y: 650, width: 1300, height: 800 };
@@ -152,6 +152,9 @@ test("Combat registry is inert, null-first, copy-empty, and media-free", () => {
 
 test("source, measurement, provenance, and decode guards fail closed independently", () => {
   assert.equal(isStrandedLensCradleSourceIdentityPass(source, provenance), true);
+  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, attemptOrdinal: 1 }, provenance), false);
+  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, attemptOrdinal: 2 }, provenance), true);
+  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, attemptOrdinal: 3 }, provenance), true);
   assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, enabled: false }, provenance), false);
   assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, sha256: "b".repeat(64) }, provenance), false);
   assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, byteLength: 12000001 }, provenance), false);

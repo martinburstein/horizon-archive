@@ -323,9 +323,7 @@ export function isStrandedLensCradleSourceIdentityPass(
     && source.height === 2160
     && source.format === "png"
     && source.color === "opaque-srgb-8"
-    && Number.isInteger(source.attemptOrdinal)
-    && source.attemptOrdinal >= 1
-    && source.attemptOrdinal <= 3
+    && (source.attemptOrdinal === 2 || source.attemptOrdinal === 3)
     && Number.isInteger(source.byteLength)
     && source.byteLength > 0
     && source.byteLength <= 12000000
