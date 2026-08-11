@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v6`
+Scoreboard ID: `FRSB-005-v7`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v6`
+Release map: `FRRM-005-v7`
 
-Operations source inspected: `b37f2057cbee5a2ab986f56f5326417dee7aac84`
+Operations source inspected: `c750893fcf27a99176a780c9cc5538ee7cb47253`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -18,19 +18,23 @@ Date: **2026-08-11**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v6 / Stranded Lens Cradle - Direct
-Image API Source and Fixed Lesson Integration`**.
+Selected bounded Work Order: **`FRWO-005-v7 / Stranded Lens Cradle - Direct
+Image API Source, Native Handle Identity, and Fixed Lesson Integration`**.
 
 The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
 remains withdrawn and closed without production, and its negative finding
 remains exact for the old immutable source. Martin explicitly authorized the
-direct Image API boundary, and `FRWO-005-v6` is the versioned distinct
+direct Image API boundary, and `FRWO-005-v7` is the current versioned distinct
 new-source Work Order under `FRPB-001-v2` / `FRCL-004-v2`. It withdraws the
 defective CLI and freezes the exact endpoint and `gpt-image-2` request,
 env-only secret handling, one bounded response, exclusive create-new staging,
 strict PNG proof, atomic no-replace move, exact cleanup, and the unchanged
 candidate/import/release gates. The immutable
-accepted-media manifest gate remains exact. Selection and media authority are
+accepted-media manifest gate remains exact. `FRVE-005-v6` isolated one missing
+primitive; Martin authorized `FRWO-005-v7` to add only a frozen temp-only
+`Add-Type` / `GetFileInformationByHandle` bridge for already-open exclusive
+SafeFileHandle identity/link count, with exact source/hash/output-hash rule/
+location/cleanup and no close/path/write method. Selection and media authority are
 not as-built evidence; no maturity cell or host inventory advances.
 
 ## Reading the matrix
@@ -111,7 +115,7 @@ no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
 Martin's bounded media authorization and `FRPB-001-v2` permit the distinct
-successor `FRWO-005-v6` to own at most one eventual canonical additional
+successor `FRWO-005-v7` to own at most one eventual canonical additional
 Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03` integration.
 Its target `1 accepted shared compression / 2 exact / 9 missing` is not current
 candidate or maturity evidence. Current `FR-03` remains exactly `1
@@ -119,7 +123,8 @@ accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-One fresh Science context is the exact next owner. It must independently
+One fresh Science context is the exact next owner. It must first fixture-prove
+the exact authorized helper and restore its temp root to absence, then independently
 revalidate the generatable/runtime-polishable asset envelope; ordinal 1
 permanently consumed, ordinals 2/3 remaining, and current conservative managed
 residual count 1; exact endpoint/model/request/response behavior; boolean-only
