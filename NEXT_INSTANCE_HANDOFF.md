@@ -2,10 +2,11 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRVE-005-v7 / EXACT PS5.1 NATIVE-IDENTITY
-FIXTURE DID NOT EXECUTE / FRESH SCIENCE REQUIRED`**
+Current disposition: **`HOLD / FRVE-005-v7-VR-01 / DIRECT PS5.1
+NATIVE-IDENTITY FIXTURE DID NOT EXECUTE / FRESH SCIENCE REQUIRED`**
 
-Current Work Order / decisive Science return: `FRWO-005-v7` / `FRVE-005-v7`
+Current Work Order / decisive Science return: `FRWO-005-v7` /
+`FRVE-005-v7-VR-01`
 
 Planning controls: `FRRM-005-v7` / `FRSB-005-v7`
 
@@ -29,12 +30,13 @@ Exact next owner: **one fresh Office of Science Administrator /
 
 ## Science decision
 
-`FRVE-005-v7` records an evidence-availability HOLD. The active shell was
-confirmed as Windows PowerShell `5.1.26100.8875` in a 64-bit process, but the
-attempted explicit nested PS5.1 process was denied before the fixture body
-returned any evidence. Science therefore could not lawfully freeze the helper
-DLL identity, prove its surface/layout/native results and required failure/
-race/cleanup branches, or establish exact cleanup postconditions.
+`FRVE-005-v7-VR-01` records a renewed evidence-availability HOLD. The current
+host was directly confirmed as Windows PowerShell `5.1.26100.8875` in a
+64-bit process, with no nested shell, but this Science invocation was
+terminated before the authorized fixture body executed. Science therefore
+could not lawfully freeze the helper DLL identity, prove its surface/layout/
+native results and required failure/race/cleanup branches, or establish exact
+cleanup postconditions. No helper or fixture root was allocated.
 
 The HOLD does not identify a defect in the frozen helper and does not return
 to Operations. It requires one fresh Science context to run the exact bounded
@@ -49,7 +51,7 @@ Conservative managed-residual count remains exact `1`, associated only with
 ordinal `1`; VR-65 remains separate and inaccessible.
 
 `FRVE-005-v6` remains prior evidence for the direct API/TLS/parser/CreateNew/
-Flush/no-replace predicates. Fresh v7 corroboration did not run. No API key
+Flush/no-replace predicates. Fresh helper corroboration did not run. No API key
 value or derivative was observed; no Image API request, generation, media
 operation, live-root allocation, pixel inspection, import, provenance, E2E,
 reveal, maturity change, OPEN-record closure, residual access, scheduling,
@@ -65,7 +67,7 @@ accepted-media tuple, code candidate, inventory, and maturity remain unchanged.
 
 One fresh Office of Science Administrator reads complete `FRWO-005-v7`,
 complete `FRWO-005-v6`, complete `FRVE-005-v6`, complete `FRVE-005-v7`, and
-synchronized controls. It runs the exact v7 fixture directly in the current
+complete `FRVE-005-v7-VR-01`, and synchronized controls. It runs the exact v7 fixture directly in the current
 PS5.1 host; freezes the emitted DLL byte length/SHA; proves byte-only load,
 surface, x64 layout, exclusive SafeFileHandle volume/file-index/link-count/
 attribute/size behavior, every required negative/race/substitution/reparse/
