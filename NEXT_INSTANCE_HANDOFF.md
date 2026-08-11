@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FILELESS READTOEND PARENT
-SOURCE TRANSPORT AND EXACT DUAL-STREAM RESULT RETENTION FROZEN / FRESH SCIENCE
-ONE-RUN PROOF REQUIRED / FRSH-005-v1-VR-17`**
+Current disposition: **`HOLD / FILELESS READTOEND PARENT SOURCE FAILED
+SCRIPTBLOCK PARSE BEFORE PARENT BODY OR CHILD / FRESH MISSION GRAMMAR
+CORRECTION REQUIRED / FRVE-005-v7-VR-15`**
 
 Current Work Order: `FRWO-005-v7`
 
-Current Science return: `FRVE-005-v7-VR-14`
+Current Science return: `FRVE-005-v7-VR-15`
 
 Current Mission shell decision: `FRSH-005-v1-VR-17`
 
@@ -34,65 +34,51 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission decision
+## Science decision
 
-Mission accepts `FRVE-005-v7-VR-14` only as an honest transport HOLD. The
-completed Science context returned exit `0` with exact zero-byte stdout and
-stderr, so child invocation cardinality remains unproven `0-or-1`. The empty
-capture is not child evidence and may not be reclassified, repaired, resumed,
-or retried from that context.
+The sole fresh Science parent source was exact `47,147` ASCII, LF-only,
+final-LF characters with SHA-256
+`2426e45f62842f7c5c9c314e280e4c4dc384ffa518eacaf230223a93ec85283e`.
+Science invoked exact Windows PowerShell 5.1 once with the frozen 105-character
+ReadToEnd bootstrap and exact 151-character arguments, starting asynchronous
+stdout/stderr drains before one complete stdin write and close.
 
-`FRSH-005-v1-VR-17` replaces only Windows PowerShell `-Command -` outer-parent
-source mode. The fresh Science parent remains one in-memory strictly ASCII,
-LF-only, final-LF scalar with only the two immutable Base64 script carriers.
-Science starts exact Windows PowerShell 5.1 with one fixed `151`-character
-`-Command` argument whose `105`-character bootstrap calls
-`[Console]::In.ReadToEnd()`, rejects empty input, creates one script block, and
-invokes it once. Science drains stdout and stderr asynchronously, writes the
-complete parent scalar once through redirected standard input, closes input,
-waits for process and drains, and retains exact exit and stream bytes. No
-source file, `-Command -`, environment-source carrier, encoded command,
-repository-document runtime extraction, merged stream, or second process is
-allowed.
+The bootstrap read the source, but `ScriptBlock.Create` rejected its grammar
+before the parent body or bounded catch could compile. Process exit was `1`,
+stdout was empty, and unbounded parse stderr was rejected. The localized
+grammar class includes a generic static invocation written without token
+separation after unary `-not`; Mission must validate the entire parent grammar,
+not merely that first reported token.
 
-Mission independently proved that exact transport with a disposable no-child
-`38,953`-character ASCII parent containing inert `2,668`- and
-`36,060`-character scalars. It returned exit `0`, one exact 80-character
-bounded record (`82` UTF-8 bytes including CRLF), and zero stderr through a
-`151`-character argument string. This is transport evidence only. Mission ran
-no production child, helper, API, generation, media, or pixel operation.
-
-All carrier/decoded/slice identities, parser-zero and stage-order checks, exact
-PT06 semantic mapping, credential clearing without value read, one-child
-maximum, zero-activity counters, controlled-path absence requirements, and
-no-retry rules remain unchanged. Historical ordinal `1` remains opaque and
-unchanged. Ordinals `2` and `3` remain unstarted and unconsumed. Direct sends
-remain `0`. No Host 06 raster or provenance exists.
+No child began. Credential value reads, request constructions, `SendAsync`
+calls, direct sends, ordinals consumed, and child invocations are all exact
+`0`. Every controlled helper/live/ordinal/product/Science-fixture path is
+absent. Historical ordinal `1` remains opaque and unchanged; ordinals `2` and
+`3` remain unstarted and unconsumed. No API, generation, response, media byte,
+image, pixel, product raster, or provenance exists.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads the complete active intake,
-full Science profile, complete `FRSH-005-v1-VR-17`, complete
+One fresh Mission Captain reads the complete active intake, full Mission
+profile, complete `FRVE-005-v7-VR-15`, complete `FRSH-005-v1-VR-17`, complete
 `FRVE-005-v7-VR-14`, complete `FRSH-005-v1-VR-16`, complete
 `FRVE-005-v7-VR-13`, complete `FRSH-005-v1-VR-15`, and all exact effective
 controls cited there.
 
-Science constructs the one complete document-independent parent source in
-memory, proves its ASCII/LF/source identity, and uses the exact
-`FRSH-005-v1-VR-17` bootstrap/one-write/close/dual-drain transport directly
-for the sole fresh credential-cleared proof. It performs no separate transport
-probe and no retry. Acceptance requires the unchanged exact
-`ACCEPTED_NO_REQUEST_STOP / PT06_CREDENTIAL_GATE / CREDENTIAL_ABSENT` result,
-one child, all zero counters, and every controlled path absent. A no-child
-allowlisted bounded stop or any nonexact output is `HOLD` under the existing
-contract.
+Mission issues one versioned shell decision that repairs and independently
+parser-proves the disposable parent-source grammar before any later fresh
+Science invocation. It preserves the two canonical Base64 runtime carriers,
+fixed bootstrap and argument identities, one complete stdin write/close,
+asynchronous dual-stream retention, unchanged production child, exact PT06
+diagnostic-to-`CREDENTIAL_ABSENT` mapping, all zero counters and controlled-
+path absences, and the one-run/no-retry boundary.
 
-Science may not use `-Command -`; write a parent source file; read a repository
-document for script bytes; route to Quartermaster; execute generation/API;
+Mission may not rerun this Science context; reinterpret bootstrap parse output
+as parent/child evidence; route to Quartermaster; execute generation/API;
 allocate the live root; read a credential value; construct a request; call
 `SendAsync`; consume ordinal `2`; inspect media/pixels; change product/tests;
 run E2E; reveal; advance maturity; close an OPEN record; access a residual or
-VR-65; schedule; automate; push; release; or call `FIRST RUN COMPLETE`.
+VR-65; schedule; automate; push from Science; release; or call
+`FIRST RUN COMPLETE`.
