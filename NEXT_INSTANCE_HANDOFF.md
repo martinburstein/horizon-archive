@@ -2,11 +2,11 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRVE-005-v7-VR-02 / DIRECT PS5.1 FIXTURE
-BODY DID NOT EXECUTE / FRESH SCIENCE REQUIRED`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-005-v7-VR-03 /
+EXACT PS5.1 NATIVE HANDLE IDENTITY AND TEMP-ONLY CLEANUP PROVED`**
 
 Current Work Order / decisive Science return: `FRWO-005-v7` /
-`FRVE-005-v7-VR-02`
+`FRVE-005-v7-VR-03`
 
 Planning controls: `FRRM-005-v7` / `FRSB-005-v7`
 
@@ -25,26 +25,34 @@ exact `17 / 37,410,731`, canonical digest
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
 ## Science decision
 
-`FRVE-005-v7-VR-02` records a renewed evidence-availability HOLD. The current
-host directly confirmed Windows PowerShell `5.1.26100.8875` in a 64-bit
-process, with no nested shell. A full inline fixture submission was rejected
-by the command transport with Windows `Access is denied` before PowerShell
-emitted output. A smaller inline form reached the direct PS5.1 parser, but
-parser errors rejected the entire command before any statement executed.
+`FRVE-005-v7-VR-03` resolves the prior evidence-availability HOLD. Fresh
+Science ran the exact fixture directly in Windows PowerShell
+`5.1.26100.8875`, 64-bit, without a nested process. The exact frozen source
+passed `1,693`-byte / source-SHA proof and compiled to the sole fixed temp DLL.
+Science freezes the compiled output at exact `4,096` bytes and lowercase
+SHA-256
+`39e85b32b7f8437c2b5732e26093ca5bd9a9182b048c411e9dc5660ba03f10c9`.
 
-Science therefore could not lawfully freeze the helper DLL identity or prove
-its load, surface, x64 layout, native results, required negative/race/
-substitution/reparse branches, identity-conditioned cleanup, or exact fixture
-postconditions. No helper or disposable fixture root was allocated. Exact
-post-attempt checks proved the fixed helper root, exact DLL, and live API root
-absent. The HOLD identifies no defect in the frozen helper.
+Byte-only load, exact public/private surface, sole kernel32 import, x64
+52-byte layout and every field offset, five-value native schema, exclusive
+write/flush/reopen/pre-move/post-move identity, one-link/no-reparse/size,
+null/invalid/closed failures, hard-link detection, CreateNew collision,
+partial-abort, destination race, substitution refusal, reparse rejection,
+unexpected-child stop, and identity-conditioned cleanup all passed in one
+fresh GUID non-media OS-temp fixture.
 
-No Mission follows until a complete `POLISH VIABILITY READY` envelope exists.
+The exact DLL was reverified before deletion. The DLL, helper root, disposable
+fixture root, and live API root are all proved absent. No repo helper or source
+file was written.
+
+No API request, generation, credential read, media operation, pixel
+inspection, live-root allocation, ordinal consumption, import, provenance,
+runtime/test change, E2E, reveal, maturity change, OPEN-record closure,
+residual access, automation, push, release, or `FIRST RUN COMPLETE` occurred.
 
 ## Preserved state
 
@@ -53,35 +61,27 @@ remain unconsumed and unavailable. Direct API calls remain exact `0`.
 Conservative managed-residual count remains exact `1`, associated only with
 ordinal `1`; VR-65 remains separate and inaccessible.
 
-`FRVE-005-v6` remains prior evidence for the direct API/TLS/parser/
-`CreateNew`/`Flush(true)`/no-replace predicates. No API key value or
-derivative was observed; no Image API request, generation, media operation,
-live-root allocation, pixel inspection, import, provenance, E2E, reveal,
-maturity change, OPEN-record closure, residual access, scheduling, automation,
-push, release, or `FIRST RUN COMPLETE` occurred.
-
-The exact Host 05 -> dry same-basin Host 06 -> sole unchanged `L02-03` ->
-unchanged next Drowned boundary, prompt, strict PNG/CRC/decode, `PHY-01..12`,
-six-layout crop/mapping/accessibility, privacy/save/offline/PBA/performance/
-no-reveal/rollback, one-path canon, RP-012, `successor=null`, OPEN records,
-accepted-media tuple, code candidate, inventory, and maturity remain unchanged.
+`FRVE-005-v6` remains accepted evidence for the exact direct API/TLS/parser/
+credential/CreateNew/Flush/no-replace predicates. The exact Host 05 -> dry
+same-basin Host 06 -> sole unchanged `L02-03` -> unchanged next Drowned
+boundary, prompt, strict PNG/CRC/decode, `PHY-01..12`, six-layout crop/mapping/
+accessibility, privacy/save/offline/PBA/performance/no-reveal/rollback, one-path
+canon, RP-012, `successor=null`, OPEN records, accepted-media tuple, code
+candidate, inventory, and maturity remain unchanged.
 
 ## Exact next action
 
-One fresh Office of Science Administrator reads complete `FRWO-005-v7`,
-`FRVE-005-v7`, `FRVE-005-v7-VR-01`, `FRVE-005-v7-VR-02`, and synchronized
-controls. It runs a parse-valid exact v7 fixture directly in Windows
-PowerShell 5.1 without a nested process. It uses only the fixed helper root
-and one fresh disposable GUID OS-temp non-media fixture; freezes the emitted
-DLL byte length/lowercase SHA; proves byte-only load, exact surface and x64
-layout, exclusive SafeFileHandle volume/file-index/link-count/attribute/size
-behavior, every required negative/race/substitution/reparse/cleanup branch,
-and exact root absence; preserves the v6 gates with exact zero API sends; and
-issues one new versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`
-artifact.
+One fresh Mission Captain reads complete `FRWO-005-v7`, `FRVE-005-v7`,
+`FRVE-005-v7-VR-01`, `FRVE-005-v7-VR-02`, and decisive
+`FRVE-005-v7-VR-03`, plus synchronized controls and the effective prior shell.
+It issues exactly one new versioned `FIRST RUN SHELL READY`, `REVISE`, or
+`HOLD` contract carrying forward the frozen helper identity and cleanup,
+preserved v6 direct API and ordinal contract, all technical/physical/
+accessibility/privacy/save/offline/performance/no-reveal gates, and all canon,
+record, protected-state, and maturity hard stops.
 
-Science may not authorize Mission; invoke generation/API; consume ordinal
-`2`; allocate the live root; inspect pixels; import media; write copy or
-provenance; run E2E; reveal; advance maturity; close an OPEN record; access a
-managed residual or VR-65; schedule; automate; push; release; or call `FIRST
-RUN COMPLETE`.
+Mission may not execute the helper; allocate the helper, fixture, or live
+root; invoke generation/API; consume ordinal `2`; inspect pixels; import
+media; write copy/provenance; begin production; run E2E; reveal; advance
+maturity; close an OPEN record; access a managed residual or VR-65; schedule;
+automate; push; release; or call `FIRST RUN COMPLETE`.
