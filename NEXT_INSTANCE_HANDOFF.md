@@ -2,9 +2,8 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PLAYER EXPERIENCE READY / DIRECT-API ATTEMPT LEDGER,
-OBJECTIVE CANDIDATE MEASUREMENTS, AND POST-IMPORT LIVE SUMMARY FROZEN /
-FRPX-005-v1-VR-01`**
+Current disposition: **`PRODUCTION FUNCTIONAL / SELECTED ORDINAL 2|3 ONLY /
+DIRECT-API PREFLIGHT PASS / FRCE-005-v1-VR-05`**
 
 Current Work Order / decisive Science return: `FRWO-005-v7` /
 `FRVE-005-v7-VR-03`
@@ -15,84 +14,69 @@ Effective treatment: `FRDT-005-v1` through `FRDT-005-v1-VR-01`
 
 Effective blueprint: `FRPX-005-v1` through `FRPX-005-v1-VR-01`
 
-Frozen inert code candidate:
-`02d957e9d69dc7986928a391c37f899784f73ea5`
+Current functional report: `FRCE-005-v1-VR-05`
 
-Frozen candidate tree:
-`09da6293d72c8123b8d9673bd8e41329338e8d13`
+Corrected inert code candidate:
+`f4b2062508f9e0606953a4cc9bcdaff09b66ebc4`
+
+Corrected candidate tree:
+`92b22fc56d79d18cf1abf7213c5268c9e4149830`
 
 Immutable accepted-media manifest: `FRAM-001-v1`, file SHA-256
 `a674c337b377de113eaa4c6763bd431afc73ab613374a76501aa8c5ce37e5437`,
 exact `17 / 37,410,731`, canonical digest
 `c7ca95201029b490f2460a846e3dc2a64a26775b57e8c587cbc2d874df654d99`
 
-Tactical source inspected:
-`6d719c0c4c0f703486fb6c854c9437ab09e01202`
-
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Combat Engineer / `combat_engineer`**
+Exact next owner: **one fresh Quartermaster / `quartermaster`**
 
-## Tactical decision
+## Combat result
 
-Tactical independently reconciled the direct-API/native-handle shell and
-directorial lock with the frozen inert runtime and tests. It issued
-`FRPX-005-v1-VR-01 / PLAYER EXPERIENCE READY`.
+Combat independently revalidated the frozen candidate/tree, immutable
+manifest file and stored identities, exact helper/prompt identities, absent
+product targets, null registry/copy/alt slots, current runtime/test graph, and
+release controls. It corrected only the pure selected-source guard:
+`attemptOrdinal` now accepts exact `2` or `3`; historical consumed ordinal `1`
+fails closed.
 
-The exact player graph is unchanged: inert/null-first Host 06 preserves the
-accepted Host 05 surface and generic launcher; a later lawful source follows
-exact Host 05 mastery, one committed Host 05 paint, direct same-basin
-replacement, Host 06 focus/notice once, sole deliberate `USE` into unchanged
-`L02-03`, exact miss/Close/Escape/reload/Meadow-return recovery, completed
-read-only USE, and the unchanged next Drowned boundary. Hidden remains no DOM,
-name, focus, announcement, action, or credit. Six-layout mapping, native input,
-forced color, reduced motion, factual alt, seven copy-purpose slots, privacy,
-save, and no-reveal behavior remain exact.
+Focused `50/50`, learning/privacy `17/17`, related `58/58`, validators `40/40`,
+cold full `979/979/0`, production/TD-012 builds, PBA, served root/deep/JS/CSS,
+and owned port cleanup all pass. PBA is JavaScript `1,676,476`, CSS `119,394`,
+modules `217`, accepted media `17 / 37,410,731`, source maps `0`.
 
-Tactical froze the direct-API attempt/failure/rejection/selection evidence
-ledger, original-resolution technical and `PHY-01..12` fact slots, source-band
-and protected-feature records, selected-source six-layout/live records, and
-the exact one-summary/one-verifier complete-E2E fields. Rejected working facts
-are discarded; only stable codes and cleanup booleans survive.
+`FRRC-003-v5` remains immutable and direct-API-neutral: it exposes only
+accepted-media create/verify plus the production-functional push and contains
+no generation, managed-ingress, output-hint, endpoint, credential, response,
+or discovery executable entry. No release-control change was required.
 
-One bounded correction is required: current source identity accepts
-`attemptOrdinal` integer `1..3`, but the effective shell makes historical
-ordinal `1` permanently opaque and ineligible for selection. Runtime selected
-source identity must accept exact ordinal `2` or `3` only. This does not change
-the total ordinal domain, future send budget, technical transport, or any
-player behavior.
-
-No helper/API/media/pixel/product/test/E2E/reveal/maturity action occurred.
-Direct API sends remain exact `0`; ordinals `2` and `3` remain unconsumed;
-conservative managed-residual count remains exact `1` for ordinal `1`; VR-65
-remains separate and inaccessible. Tactical changed only its versioned
-blueprint variance and this synchronized handoff and did not push.
+No helper/API/media/pixel/product/copy/provenance/E2E action occurred. Direct
+API sends remain `0`; ordinals `2` and `3` remain unconsumed; conservative
+managed-residual count remains exact `1` for opaque ordinal `1`; VR-65 remains
+separate and inaccessible. The raster and provenance targets remain absent;
+every candidate/copy/alt slot remains null.
 
 ## Exact next action
 
-One fresh Combat Engineer / `combat_engineer` reads complete
-`FRSH-005-v1-VR-08`, complete `FRDT-005-v1-VR-01`, `FRDT-005-v1`, complete
-`FRPX-005-v1`, complete `FRPX-005-v1-VR-01`, `FRWO-005-v7`, decisive
-`FRVE-005-v7-VR-03`, frozen `FRCE-005-v1-VR-04`, immutable
-`FRAM-001-v1`, and the exact current Host 06 runtime/test/release controls.
+One fresh Quartermaster / `quartermaster` reads the complete current intake,
+full Quartermaster profile, `FRWO-005-v7`, decisive `FRVE-005-v7-VR-03`,
+complete `FRSH-005-v1-VR-08`, complete effective treatment and blueprint,
+corrected candidate `f4b2062...`, `FRCE-005-v1-VR-05`, immutable
+`FRAM-001-v1`, and the exact helper/direct-API/runtime/test controls.
 
-Combat independently revalidates the frozen candidate/tree, manifest file and
-stored identities, absent Host 06 product/provenance targets, null registry/
-copy/alt slots, helper/API contracts, direct-API attempt ledger,
-post-import/live summary schema, permitted paths, focused tests, and current
-release-command needs. It implements only the bounded selected-ordinal
-`{2,3}` correction and any evidence-control correction strictly required to
-prevent obsolete managed-ingress execution; otherwise it preserves the exact
-runtime and may issue a substantiated no-change result.
+Quartermaster independently proves exact synchronization, manifest identity,
+the `{2,3}` selected-source guard, absent targets, inert slots, and attempt
+ledger. Only then it executes the exact shell-authorized helper and direct
+Image API protocol in one bounded PS5.1 process beginning with ordinal `2`.
+Ordinal `3` is permitted only after ordinal `2` becomes a fully reviewed
+objective rejection and exact cleanup passes. Quartermaster selects at most
+one source, imports only one byte-identical raster plus `PROVENANCE.md`,
+populates only the declared source/provenance/geometry/layout/copy/alt slots,
+proves exact cleanup, and issues exactly one new versioned `PRODUCTION CONTENT
+COMPLETE` or `HOLD` artifact without reveal.
 
-Combat performs only non-generative preflight, issues exactly one new
-versioned `PRODUCTION FUNCTIONAL`, `REVISE`, or `HOLD` artifact, commits its
-bounded result and synchronized handoff, and proves required synchronization
-before Quartermaster.
-
-Combat may not compile/invoke the helper; allocate a helper, fixture, or live
-root; read a credential; construct/send an API request; consume ordinal `2`;
-inspect media/pixels; import an asset; populate candidate/copy/alt/provenance;
-run candidate preview or E2E; reveal; advance maturity; close an OPEN record;
-access a residual or VR-65; schedule; automate; release; or call
-`FIRST RUN COMPLETE`.
+Quartermaster may not change behavior, lesson ownership, route, save, world,
+ending, accepted media/manifest, dependencies, Host 07+, or later rail; retry
+ordinal `1`; exceed the two future sends; access any residual or VR-65; run
+complete E2E; reveal; advance maturity; close an OPEN record; schedule;
+automate; release; or call `FIRST RUN COMPLETE`.
