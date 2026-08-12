@@ -2,78 +2,58 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / SOLE AUTHORITATIVE OUTER CONTROLLER RUN
-LOCALIZED SR05 TO CHILD STDERR NONEXACT_BOUNDED / CHILD EXIT 87 AND STDOUT
-ZERO PASS / ONE PARENT / ONE CHILD / ALL CONTROLLED PATHS ABSENT / NO RETRY /
-FRESH MISSION ADJUDICATION REQUIRED / FRVE-005-v7-VR-23`**
+Current disposition: **`FIRST RUN SHELL READY / BOUNDED SINGLE PT06 STDERR
+NORMALIZATION RETAINED / FRESH SCIENCE ONE-RUN PROOF REQUIRED /
+FRSH-005-v1-VR-27`**
 
 Current Work Order: `FRWO-005-v7`
 
-Current Mission decision: `FRSH-005-v1-VR-26`
+Current Mission decision: `FRSH-005-v1-VR-27`
 
 Current Science return: `FRVE-005-v7-VR-23`
 
-Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-26`
+Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-27`
 
 Authoritative retained outer controller:
 `Production Pipeline/First Run/HOST06_SCIENCE_OUTER_CONTROLLER_V1.ps1`
 
-Outer controller identity: exact `11,251` strict-ASCII/LF/final-LF bytes,
-SHA-256 `a1f40770f9dc16f042f89feda547655dd7b0e22dd5e0d68fd3b88cdf1dc01d83`
+Outer identity: exact `11,251` strict-ASCII/LF/final-LF bytes, SHA-256
+`b02015e7a25d94a450c4f968d0cb481023f1b51ccbd4a9cc2ed35af39706df37`
 
-Authoritative retained parent source:
+Authoritative retained parent:
 `Production Pipeline/First Run/HOST06_SCIENCE_PARENT_V2.ps1`
 
-Parent source identity: exact `50,688` strict-ASCII/LF/final-LF bytes,
-SHA-256 `2f47b5d01dd67397654176b596ced4602622a7f35ff1a078c57ad058399ef217`
+Parent identity: exact `51,179` strict-ASCII/LF/final-LF bytes, SHA-256
+`15f56566daf08e3cd2cd636c9dcceec92168a6c97d6638a067fcd2c63ab0e232`
 
-Corrected inert code candidate:
-`f4b2062508f9e0606953a4cc9bcdaff09b66ebc4`
+Corrected inert code candidate: `f4b2062508f9e0606953a4cc9bcdaff09b66ebc4`
 
-Corrected candidate tree:
-`92b22fc56d79d18cf1abf7213c5268c9e4149830`
+Corrected candidate tree: `92b22fc56d79d18cf1abf7213c5268c9e4149830`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
-
-## Science handoff
-
-Science invoked the exact retained outer controller once and only once. The
-bounded result was controller exit `89`, parent exit `88`, empty parent
-stdout, exact parent-stop V2 stderr classification, exact
-`SR05_CHILD_CAPTURE / ASSERTION_FAILED`, one child, and exact postflight
-absence. The three retained child facts compare as follows:
-
-```text
-CHILD_EXIT:   actual 87 / expected 87 / PASS
-CHILD_STDOUT: actual ZERO / expected ZERO / PASS
-CHILD_STDERR: actual NONEXACT_BOUNDED / expected EXACT_PT06 / FAIL
-```
-
-The completed run is not reinterpreted or retried. No stream body, diagnostic
-text, credential, response, Base64 member, exception, stack, handle, native
-value, or path-derived value was exposed.
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
 ## Exact next action
 
-One fresh Mission Captain reads the complete required intake/profile,
+Science reads the complete required intake/profile, `FRSH-005-v1-VR-27`,
 `FRVE-005-v7-VR-23`, `FRSH-005-v1-VR-26`, `FRVE-005-v7-VR-22`, both retained
-sources, `FRWO-005-v7`, and all cited controls. Mission issues exactly one new
-versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD` decision for the exact
-`CHILD_STDERR` mismatch. It performs no controller, parent, child, credential,
-API, media, product, test, build, browser, E2E, or residual operation.
+sources, `FRWO-005-v7`, and cited controls. It validates all source/carrier
+identities, parser/stage order, the exact-one anchored PT06 plus ASCII-
+whitespace-only normalizer, cardinality, and `13/13` preflight absence.
 
-Any correction must preserve the passing child exit/stdout predicates,
-bounded allowlisted projection, no-body/no-secret boundary, frozen carrier
-and production semantics, and one-run/no-retry discipline. Mission may not
-reinterpret or retry the completed run, route to Quartermaster, authorize an
-API request, or consume ordinal `2` from this HOLD.
+If and only if all read-only gates pass, Science invokes the exact retained
+outer controller once through Windows PowerShell 5.1 x64. No alternate runner,
+correction, or retry exists. PASS requires controller exit `0`, exact accepted
+scalar, zero controller stderr, one parent, one child, zero request/activity
+counters, and exact postflight absence. PASS returns only `POLISH VIABILITY
+READY` to a fresh Mission Captain for a separate API shell. Failure is exact
+HOLD.
 
 API sends remain `0`; ordinal `1` remains opaque and consumed; ordinals `2`
 and `3` remain unstarted and unconsumed. The one-path rail, sole unchanged
 `L02-03`, equal-dignity MH-40 outcomes, shared RP-012 ending, and
 `successor=null` remain immutable. Repository QA quarantine, protected PDF,
-training tree, Martin's real browser/profile/save, hidden lore, accepted-media
-bytes/pixels, OS-temp parent, ordinal-1 residual, real managed directory, user
-work, VR-65, and opaque residuals remain untouched.
+training tree, Martin's real browser/profile/save, accepted media, opaque
+residuals, VR-65, and hidden lore remain untouched.

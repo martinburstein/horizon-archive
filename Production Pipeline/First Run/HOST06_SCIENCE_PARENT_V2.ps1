@@ -27,6 +27,18 @@ function Assert-Ordered([string]$source,[string[]]$items,[string]$name){
   $cursor=-1
   foreach($item in $items){$next=$source.IndexOf($item,$cursor+1,[StringComparison]::Ordinal);if($next -lt 0){throw ('ASSERT:'+$name)};$cursor=$next}
 }
+function Get-ChildStderrClass([string]$captured,[long]$count,[string]$expected){
+  if($count-eq 0){return 'EMPTY'}
+  if($count-gt 512){return 'OVERSIZE'}
+  if(($null-eq$captured)-or($captured.Length-ne$count)){return 'NONEXACT_BOUNDED'}
+  foreach($character in $captured.ToCharArray()){if([int]$character-gt 127){return 'NONEXACT_BOUNDED'}}
+  $pattern='(?m)^'+[regex]::Escape($expected)+'(?=\r?$)'
+  $matches=[regex]::Matches($captured,$pattern,[Text.RegularExpressions.RegexOptions]::CultureInvariant)
+  if($matches.Count-ne 1){return 'NONEXACT_BOUNDED'}
+  $remainder=$captured.Remove($matches[0].Index,$matches[0].Length)
+  if(-not[regex]::IsMatch($remainder,'\A[\x09\x0a\x0d\x20]*\z',[Text.RegularExpressions.RegexOptions]::CultureInvariant)){return 'NONEXACT_BOUNDED'}
+  return 'EXACT_PT06'
+}
 try{
   $ascii=New-Object Text.ASCIIEncoding
   $strictUtf8=New-Object Text.UTF8Encoding($false,$true)
@@ -128,10 +140,7 @@ try{
   $childStdoutCharacters=$stdoutCount
   $childStderrCharacters=$stderrCount
   $stderr=$stderrCaptured.ToString()
-  if((($stderrCount-eq($expectedDiagnostic.Length+2))-and($stderr-ceq($expectedDiagnostic+"`r`n")))-or(($stderrCount-eq($expectedDiagnostic.Length+1))-and($stderr-ceq($expectedDiagnostic+"`n")))){$childStderrClass='EXACT_PT06'}
-  elseif($stderrCount-eq 0){$childStderrClass='EMPTY'}
-  elseif($stderrCount-le 512){$childStderrClass='NONEXACT_BOUNDED'}
-  else{$childStderrClass='OVERSIZE'}
+  $childStderrClass=Get-ChildStderrClass $stderr $stderrCount $expectedDiagnostic
   $stage='SR05_CHILD_CAPTURE'
   Assert-Exact ($childExitEvidence-eq 87) 'CHILD_EXIT'
   Assert-Exact ($childStdoutCharacters-eq 0) 'CHILD_STDOUT'
