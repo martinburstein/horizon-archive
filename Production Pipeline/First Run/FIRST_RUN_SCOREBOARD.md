@@ -1,6 +1,6 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v19`
+Scoreboard ID: `FRSB-005-v20`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
@@ -18,7 +18,7 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **none - terminal `FRWO-005-v20` HOLD pending Martin's decision**.
+Selected bounded Work Order: **`FRWO-005-v21 / Stranded Lens Cradle - Two-Attempt Legible Composition Pass`**.
 
 G1 used prompt v4's distant center-island strategy and made exactly one HTTP
 200 request. It passed technical and physical review, then failed the exact
@@ -149,8 +149,9 @@ accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-Martin is the exact next owner. No Science, Mission, generation/API call,
-media attempt, asset selection/import, Host 06 implementation, Image work,
-E2E, reveal, Host 07-15 work, Witness promotion, City correction, maturity
-inference, OPEN-classification closure, residual inspection, completion sweep,
-or `FIRST RUN COMPLETE` is authorized. H1 is consumed; no H2 or retry exists.
+Fresh Science is the exact next owner. I1 and I2 remain unstarted; I2 is
+conditional after truthful I1 cleanup, and no I3 or retry exists. No Mission,
+generation/API call, asset selection/import, Host 06 implementation, Image
+work, E2E, reveal, later-address work, maturity inference, OPEN-classification
+closure, residual inspection, completion sweep, or `FIRST RUN COMPLETE` is
+authorized before the required fresh gates.
