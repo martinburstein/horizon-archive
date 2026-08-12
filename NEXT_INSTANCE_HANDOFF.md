@@ -2,16 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`POLISH VIABILITY READY / FRVE-009-v2 / FIVE FRESH ATTEMPTS`**
+Current disposition: **`FIRST RUN SHELL READY / FRSH-009-v2 / FIVE FRESH ATTEMPTS`**
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Reconnaissance Sergeant / `reconnaissance_sergeant`**
 
-Read the full Mission profile, `FRWO-009-v3`, `FRVE-009-v2`, and the complete
-prior Host 09 shell/production chain. Freeze five exact independent compact-
-island prompts, a fresh absent GUID OS-temp root with literal H9-6..H9-10
-children, all CLI/custody/geometry/runtime/PBA/E2E/no-reveal controls, and the
-strict role sequence. Issue and push one versioned FIRST RUN SHELL READY, then
-route fresh Recon. Do not generate or access media.
+Read the full Recon profile, `FRSH-009-v2`, `FRDT-009-v1`, and the prior Host 09
+chain. Issue a narrow directorial variance locking the distant compact-island
+interpretation without changing canon or physical meaning, then route fresh
+Tactical. Do not generate, inspect, import, or reveal media.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then

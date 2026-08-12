@@ -1,0 +1,12 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: Render a distant first-person environmental landmark whose complete pressure-linked cavity relation is intentionally miniature within a vast dry basin. The small centered island contains unequal water-filled intervals, two natural reflection returns, one dark no-return case, an exterior mineral coupling, and an accessible dry rim. No biological, communicative, musical, mechanical, or portal implication.
+Scene/background: Large empty eroded platform with quiet horizon and restrained basin walls. Dry stone negative space dominates. A subtle inherited seam crosses from lower-left midground toward the tiny encounter island.
+Subject: One low compact formation with five nonuniform cavity openings. Their lips are dry and thick; water sits below. Two reflect narrow pale ambient bands. One offset cavity remains dark without reflected sky. The connecting stress pattern stays dry and off-axis. A modest dry ring supports observation.
+Style/medium: Ultra-detailed photoreal environment source, realistic scale and erosion, understated cinematic game art.
+Composition/framing: Exact 16:9 3840x2160, high distant camera. Complete family box x 0.39 to 0.61, y 0.39 to 0.61, width 0.20 to 0.23, height 0.19 to 0.23, center x 0.50, y 0.50. All required centers remain within x 0.33 to 0.67 and y 0.33 to 0.67. Show continuous empty dry ground between the family and every image edge. No required feature enters the lower foreground third. The relation must remain fully legible when the image is center-cropped for a narrow phone viewport.
+Lighting/mood: Diffuse silver daylight, fine raking relief, calm water, quiet analytical mood.
+Color palette: Mineral gray, ash, charcoal, pale chalk, desaturated steel-blue water, restrained umber trace.
+Materials/textures: Ancient eroded stone, mineral laminations, dry dust, calm inset water, pressure cracks.
+Constraints: At least three unequal opening sizes, reflection pair, distinct no-return cavity, inherited lower-left pressure seam, distributed dry coupling, continuous dry rim, strong four-sided negative space.
+Avoid: Hero close-up, foreground enlargement, edge-reaching formation, cropped ring, symmetry, face-like arrangement, eyes, mouth, skull, anatomy, life, people, performer, choir, instrument, acoustic visualization, text, sign, UI, answer, message, reaction, invitation, reward, access, authority, portal, glowing hole, underwater target, later-host clue, watermark.
