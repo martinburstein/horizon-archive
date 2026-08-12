@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v12`
+Scoreboard ID: `FRSB-005-v13`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v12`
+Release map: `FRRM-005-v13`
 
-Operations source inspected: `750ab56fa9bc63f34879c260a76ce6bedc6403bb`
+Operations source inspected: `ca82ba18e80b477f2c186a14d0972dd691c1811a`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -18,15 +18,19 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v12 / Stranded Lens Cradle -
-Post-D1 Decision Hold`**.
+Selected bounded Work Order: **`FRWO-005-v13 / Stranded Lens Cradle -
+Center-Safe E1 Attempt`**.
 
 V11 D1 returned HTTP 200 and a valid 4K PNG, then failed private objective
 review because the relation exceeded its frozen composition band and the
 fragment approach would not survive required narrow/effective-`200%` layouts.
 D1 was deleted under exact identity controls and all fresh paths are absent.
-No product or maturity evidence exists. V12 records terminal HOLD pending
-Martin's separate decision; it authorizes no request.
+No product or maturity evidence exists. V12 recorded the required decision
+hold. Martin has now explicitly directed another loop; V13 owns exactly one
+fresh `{E1}` with no retry and corrects the source composition so the bounded
+relation and inward fragment-led dry approach remain one legible center-safe
+sentence at narrow and effective `200%`. Fresh Science and Mission must pass
+before any request.
 
 The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
 remains withdrawn and closed without production, and its negative finding
@@ -46,9 +50,10 @@ ordinal 2's PT10 stop; ordinal 3 is unavailable. `FRWO-005-v8` consumed its
 sole `{A1}` on HTTP 429 and closed with no media or product. Martin then added
 API funds and explicitly authorized another try. V9 B1 returned HTTP 200 but
 the undersized response envelope rejected it before media existed. Science
-approved corrected finite 4K budgets, and `FRWO-005-v10` owns exactly one
-fresh `{C1}` under the same strict official response and bounded diagnostic
-rules. Fresh Mission is required before any request.
+approved corrected finite 4K budgets; C1 and later D1 are now consumed. The
+dictionary-safe response envelope remains the proven parser baseline for
+Science to revalidate around sole fresh E1 and the corrected prompt. Fresh
+Science, then Mission, is required before any request.
 Selection is not as-built evidence; no maturity cell or inventory advances.
 
 ## Reading the matrix
@@ -128,8 +133,8 @@ first missing fixed encounter and locks exactly one new-source continuity.
 no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
-Martin's bounded media authorization and `FRPB-001-v2` permitted the distinct
-successor `FRWO-005-v11` to own at most one eventual canonical additional
+Martin's bounded media authorization and `FRPB-001-v2` permit the distinct
+successor `FRWO-005-v13` to own at most one eventual canonical additional
 Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03` integration.
 Its target `1 accepted shared compression / 2 exact / 9 missing` is not current
 candidate or maturity evidence. Current `FR-03` remains exactly `1
@@ -137,12 +142,12 @@ accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-Martin is the exact next owner. Until Martin decides, no further role may
-freeze or execute the strict official `ImagesResponse` parser, bounded
+Fresh Science is the exact next owner. It may freeze but not execute the
+strict official `ImagesResponse` parser, bounded
 sanitized status/content-type/
 failure evidence, the exact authorized helper, and restore all fixture roots to
 absence; then independently revalidate the generatable/runtime-polishable asset
-envelope; the closed v7/v8/v9 ledgers and sole fresh v10 `{C1}` budget; exact endpoint/
+envelope; the closed prior ledgers and sole fresh v13 `{E1}` budget; exact endpoint/
 model/request behavior; boolean-only key presence and env-only Authorization;
 exact `gpt-image-2` one-output request; bounded JSON/base64 handling; exclusive
 staging and atomic no-replace move to a fresh literal predeclared OS-temp path;
@@ -150,8 +155,7 @@ pre-pixel PNG/sRGB/dimension/size/metadata/CRC/decode gates; exact rejected /
 selected cleanup; and selected byte-identical import/provenance. The
 pre-generation Combat manifest,
 numeric media/PBA budgets, six-layout/accessibility/state feasibility,
-validation, no-reveal boundary, and rollback remain exact. No Operations,
-Science, Mission,
+validation, no-reveal boundary, and rollback remain exact. No Mission,
 generation/API call, media attempt, asset selection/import, Host 06
 implementation, reveal, Host 07-15 work, Witness promotion, City correction,
 maturity inference, OPEN-classification closure, residual inspection,

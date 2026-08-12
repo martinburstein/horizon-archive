@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-005-v12`
+Map ID: `FRRM-005-v13`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Operations source inspected: `750ab56fa9bc63f34879c260a76ce6bedc6403bb`
+Operations source inspected: `ca82ba18e80b477f2c186a14d0972dd691c1811a`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -22,17 +22,21 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **`FRWO-005-v12 / Stranded Lens Cradle -
-Post-D1 Decision Hold`**.
+Selected bounded Work Order: **`FRWO-005-v13 / Stranded Lens Cradle -
+Center-Safe E1 Attempt`**.
 
 `FRWO-005-v11` is closed. Its sole D1 request returned HTTP 200 and a valid 4K
 PNG, but private objective review rejected the source because its central
 relation exceeded the frozen composition band and the fragment-led approach
 would not survive required narrow/effective-`200%` layouts. D1 and its exact
 paid-request authority are consumed; rejected bytes and all fresh paths are
-absent; no product or maturity evidence exists. `FRWO-005-v12` is a terminal
-decision HOLD pending Martin's separate authorization for any new finite
-attempt or withdrawal of further media work.
+absent; no product or maturity evidence exists. `FRWO-005-v12` recorded the
+required decision hold. Martin has now explicitly directed another loop, and
+`FRWO-005-v13` converts that decision into exactly one new attempt `{E1}` with
+no retry. Its prompt correction keeps the bounded lens/cradle scale exact and
+moves the complete fragment-led dry approach into the center-safe source
+corridor so the authored sequence remains legible at narrow and effective
+`200%`. Fresh Science and Mission are mandatory before any request.
 
 `FRWO-004-v1` remains withdrawn and closed without production. Martin's
 bounded new-Drowned-media authorization, `FRPB-001-v2`, and `FRCL-004-v2`
@@ -60,11 +64,11 @@ and ordinal 3 is unavailable. `FRWO-005-v8` then consumed its sole `{A1}` at
 one HTTP 429 response and is closed with no media or product. Martin has since
 added API funds and explicitly directed another try. V9 B1 reached HTTP 200
 but was discarded before parsing because the 4K response exceeded the old
-envelope. `FRWO-005-v10` retires B1 and creates exactly one distinct attempt
-`{C1}` with Science's corrected finite response/Base64/PNG budgets, the strict
-official `ImagesResponse` and diagnostic rules, and fresh Mission before any
-send. No generation/API call, implementation, reveal, or later-address work
-is authorized by this map.
+envelope. `FRWO-005-v10` retired B1 and its later C1 was consumed; V11 then
+corrected the PowerShell dictionary parser and consumed D1 on the objectively
+rejected layout result above. V13 creates only `{E1}` under fresh center-safe
+composition requirements. No generation/API call, implementation, reveal, or
+later-address work is authorized by this map.
 
 ## Purpose
 
@@ -183,7 +187,7 @@ expression. Relabeling it without a distinct physical Host 06 would not create
 a new player-visible vertical-quality outcome. For the old immutable source,
 exact Host 06 geometry, mapping, center, semantic target, label box, and
 source-retention band remain `null`. The active new-source questions belong
-only to `FRWO-005-v10` and do not revise this historical finding.
+only to `FRWO-005-v13` and do not revise this historical finding.
 
 Hosts 07-15, the remaining three Drowned movements, Crown turn, Witness
 physical-host cell, City contradiction, Hosts 17-38, and Measured Horizon
@@ -279,7 +283,7 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v12` is HOLD and Martin's decision is the exact next action.
+`FRWO-005-v13` is `WORK ORDER READY`; fresh Science is the exact next action.
 `FRWO-004-v1` remains closed. This map does not preauthorize
 generation/API invocation, implementation, asset selection/import, reveal, later-address
 work, maturity advancement, residual cleanup, closure of any OPEN
