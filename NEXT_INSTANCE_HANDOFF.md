@@ -2,42 +2,50 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRCA-005-v6 / V8 PRE-SEND CARRIER ENVIRONMENT BINDING FAILED / ZERO CREDENTIAL OR SEND / A1 UNCONSUMED / FRESH SCIENCE REQUIRED`**
+Current disposition: **`POLISH VIABILITY READY /
+FRVE-005-v8-VR-01 / FILELESS REDIRECTED-STDIN CARRIER DELIVERY
+FIXTURE-PROVED / A1 UNCONSUMED / FRESH MISSION REQUIRED`**
 
-Current Work Order / Science: `FRWO-005-v8` / `FRVE-005-v8`
+Current Work Order / Science: `FRWO-005-v8` / `FRVE-005-v8-VR-01`
 
-Current shell: `FRSH-005-v1-VR-34` - terminal after pre-send failure; no
-further Quartermaster invocation is authorized
+Terminal prior shell: `FRSH-005-v1-VR-34` - may not be invoked again
 
-Quartermaster result: `FRCA-005-v6`
+Predecessor Quartermaster result: `FRCA-005-v6`
 
 Planning controls: `FRRM-005-v8` / `FRSB-005-v8`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
 ## Exact next action
 
-Fresh Science reads the complete required intake/profile; complete
-`FRCA-005-v6`, `FRSH-005-v1-VR-34`, `FRVE-005-v8`, `FRWO-005-v8`, retained
-v8 launcher/carrier/builder, exact prompt authority, and the exact Windows
-PowerShell 5.1 process-environment carrier-delivery contract.
+Fresh Mission reads the complete required intake/profile; complete
+`FRVE-005-v8-VR-01`, `FRCA-005-v6`, `FRVE-005-v8`, `FRWO-005-v8`, terminal
+`FRSH-005-v1-VR-34`, and the exact retained v8 launcher/carrier/builder.
 
-It independently reproduces, with zero credential access and zero API sends,
-that assigning the exact `33,638`-byte carrier to
-`HORIZON_ARCHIVE_HOST06_PREHELPER_V1` fails before the launcher can retrieve
-it. It determines the smallest deterministic, secret-free, bounded carrier
-delivery correction that preserves the byte-frozen production carrier and
-every request, response, helper, identity, materialization, review, product,
-cleanup, no-reveal, and one-A1 boundary. It issues one versioned `POLISH
-VIABILITY READY`, `REVISE`, or `HOLD` artifact and synchronizes this handoff.
+It constructs and parser-checks one revised launcher and the exact bounded
+Quartermaster parent invocation that replace only the failed single
+process-environment carrier binding with the Science-proved fileless redirected
+standard-input contract: exact source preflight; one child; one
+`StandardInput.Write`; mandatory close; child `ReadToEnd`; exact child-side
+ASCII/UTF-8 length and SHA proof; one parser pass; one ScriptBlock invocation;
+no carrier source/intermediate file, environment chunking, encoded command,
+alternate binding, relaunch, or retry. The obsolete carrier environment value
+must be absent. `OPENAI_API_KEY` remains inherited and unread by the parent;
+only the unchanged production carrier may read it at PT06 after helper cleanup.
 
-If viable, route one fresh Mission Captain to issue a new complete shell. The
-current `FRSH-005-v1-VR-34` is terminal and may not be invoked again. A1 is
-unconsumed because no `SendAsync` began, but it is not executable authority
-until Science and Mission explicitly repair the delivery contract.
+Mission fixture-proves the complete delivery and no-request stop with zero
+credential, API, and media activity, freezes every revised launcher/parent
+identity, and issues one new complete `FIRST RUN SHELL READY`, `REVISE`, or
+`HOLD`. On READY, route exactly one fresh Quartermaster. A1 remains unconsumed
+because no `SendAsync` began, but it is not executable authority until that new
+complete shell exists.
+
+The retained production carrier remains exact `33,638 /
+81e82f1b4f6bd936c4002f969ea6896533673ef7d03b4eef23b7953e7fcbe491`.
+Its request, prompt, response, helper, identity, materialization, review,
+product, cleanup, no-reveal, and sole-A1 boundaries remain unchanged.
 
 Repository QA quarantine, protected PDF, training tree, Martin's real
 browser/profile/save, accepted-media bytes/pixels, all v7 paths/ordinals/
