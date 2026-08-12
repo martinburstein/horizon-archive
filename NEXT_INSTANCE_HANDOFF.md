@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`DIRECTORIAL LOCK / FRDT-009-v3 / HIGH-AIM COMPENSATION`**
+Current disposition: **`PLAYER EXPERIENCE READY / FRPX-009-v3 / FIFTEEN-ID GUARD`**
 
-Exact next owner: **one fresh Tactical Operations Specialist / `tactical_operations_specialist`**
+Exact next owner: **one fresh Combat Engineer / `combat_engineer`**
 
-Read the full Tactical profile, `FRSH-009-v3`, `FRDT-009-v3`, and current
-blueprint. Extend the exact attempt-ID guard to H9-15 while preserving all
-interaction and runtime acceptance, then route fresh Combat. Do not generate.
+Read the full Combat profile, `FRSH-009-v3`, `FRPX-009-v3`, and current runtime.
+Add H9-11..H9-15 prompt identities/tests only, preserve inert state, run focused
+and build/PBA gates, push, and route Quartermaster. Do not generate.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
