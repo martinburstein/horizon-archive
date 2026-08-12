@@ -76,8 +76,16 @@ try{
   Assert-Exact (($combinedBytes[975] -eq 10)-and($combinedBytes[976] -eq 36)) 'PREFIX_EQUALITY'
   $launcher=$strictUtf8.GetString($launcherBytes)
   $combined=$strictUtf8.GetString($combinedBytes)
+  $helperSourceNeedle='"@'+[char]10+'  $utf8=New-Object Text.UTF8Encoding($false,$true)'
+  $helperSourceReplacement='"@'+[char]10+'  $helperSource += [char]10'+[char]10+'  $utf8=New-Object Text.UTF8Encoding($false,$true)'
+  Assert-Exact (($combined.IndexOf($helperSourceNeedle,[StringComparison]::Ordinal)-ge 0)-and($combined.IndexOf($helperSourceNeedle,[StringComparison]::Ordinal)-eq$combined.LastIndexOf($helperSourceNeedle,[StringComparison]::Ordinal))) 'HELPER_SOURCE_PATCH'
+  $combined=$combined.Replace($helperSourceNeedle,$helperSourceReplacement)
+  $combinedBytes=$strictUtf8.GetBytes($combined)
   Assert-Exact ((Get-Sha256Hex ($strictUtf8.GetBytes($launcher))) -ceq '96feaf7e62fa89e8c80cc46d38425d465cf845ffbd426405a75c73c056314212') 'LAUNCHER_IDENTITY'
-  Assert-Exact ((Get-Sha256Hex ($strictUtf8.GetBytes($combined))) -ceq '015dfd96befad29793892f1e15dc9ff4362ff8cec0ae4ce7b9c45b5da9e125f3') 'COMBINED_IDENTITY'
+  Assert-Exact (($combinedBytes.Length -eq 27072)-and((Get-Sha256Hex $combinedBytes) -ceq 'c05bf41467e6272e890607e8848e6f3354311071942166804a4d2d7444e71158')) 'COMBINED_IDENTITY'
+  Assert-Exact ((Get-Sha256Hex ([byte[]]$combinedBytes[0..975])) -ceq '5cd257c94bcd70b8d6ada4e0b561b2a14ed52fd9459146b1269dc93ce1bdc7d1') 'PREFIX_IDENTITY'
+  Assert-Exact ((Get-Sha256Hex ([byte[]]$combinedBytes[976..27071])) -ceq '580a11aacd59301265f4e86abc83dc973cff68b9efac015b626086b42a37836e') 'TAIL_IDENTITY'
+  Assert-Exact (($combinedBytes[975] -eq 10)-and($combinedBytes[976] -eq 36)-and($combinedBytes[$combinedBytes.Length-1] -eq 10)-and(-not($combinedBytes -contains 13))) 'PREFIX_EQUALITY'
   $tokens=$null;$parseErrors=$null
   [void][Management.Automation.Language.Parser]::ParseInput($combined,[ref]$tokens,[ref]$parseErrors)
   Assert-Exact ($parseErrors.Count -eq 0) 'PARSER'

@@ -48,14 +48,14 @@ try{
   Assert-Outer ([IO.File]::Exists($parentSourcePath)) 'PARENT_SOURCE_PATH'
   Assert-Outer (-not [IO.Directory]::Exists($parentSourcePath)) 'PARENT_SOURCE_PATH'
   $parentSourceBytes=[IO.File]::ReadAllBytes($parentSourcePath)
-  Assert-Outer ($parentSourceBytes.Length-eq 52900) 'PARENT_SOURCE_LENGTH'
-  Assert-Outer ((Get-Sha256Hex $parentSourceBytes)-ceq'59915b373283f78408df07a2f3ad37e01ed8ce4cb963b03eb453385c531009f0') 'PARENT_SOURCE_SHA256'
+  Assert-Outer ($parentSourceBytes.Length-eq 54026) 'PARENT_SOURCE_LENGTH'
+  Assert-Outer ((Get-Sha256Hex $parentSourceBytes)-ceq'ac0bef04361a9ebb5e473b11c54e314d88f41182b7140b7d631256e79530e60f') 'PARENT_SOURCE_SHA256'
   Assert-Outer ($parentSourceBytes[$parentSourceBytes.Length-1]-eq 10) 'PARENT_SOURCE_FINAL_LF'
   Assert-Outer (-not($parentSourceBytes-contains 13)) 'PARENT_SOURCE_LF_ONLY'
   foreach($byte in $parentSourceBytes){Assert-Outer ($byte-le 127) 'PARENT_SOURCE_ASCII'}
   $ascii=New-Object Text.ASCIIEncoding
   $parentSource=$ascii.GetString($parentSourceBytes)
-  Assert-Outer ($parentSource.Length-eq 52900) 'PARENT_SOURCE_CHARACTERS'
+  Assert-Outer ($parentSource.Length-eq 54026) 'PARENT_SOURCE_CHARACTERS'
 
   $controllerStage='OC02_PARENT_PARSE'
   $tokens=$null
