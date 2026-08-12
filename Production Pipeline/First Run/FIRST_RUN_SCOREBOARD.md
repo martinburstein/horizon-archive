@@ -18,7 +18,7 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v19 / Stranded Lens Cradle - Legible Wide H1 Attempt`**.
+Selected bounded Work Order: **none - terminal `FRWO-005-v20` HOLD pending Martin's decision**.
 
 G1 used prompt v4's distant center-island strategy and made exactly one HTTP
 200 request. It passed technical and physical review, then failed the exact
@@ -140,16 +140,17 @@ no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
 Martin's bounded media authorization and `FRPB-001-v2` permitted the closed
-E1 and F1 attempts to pursue at most one eventual canonical additional Drowned
-source and its Host 05 -> Host 06 -> unchanged `L02-03` integration. Both were
-objectively rejected and cleaned, so that target was not achieved. Current
+E1, F1, G1, and H1 attempts to pursue at most one eventual canonical
+additional Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03`
+integration. All were objectively rejected and cleaned, so that target was
+not achieved. Current
 `FR-03` remains exactly `1
 accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-Fresh Science is the exact next owner. No Mission, generation/API call,
+Martin is the exact next owner. No Science, Mission, generation/API call,
 media attempt, asset selection/import, Host 06 implementation, Image work,
 E2E, reveal, Host 07-15 work, Witness promotion, City correction, maturity
 inference, OPEN-classification closure, residual inspection, completion sweep,
-or `FIRST RUN COMPLETE` is authorized. H1 is unstarted; no H2 or retry exists.
+or `FIRST RUN COMPLETE` is authorized. H1 is consumed; no H2 or retry exists.

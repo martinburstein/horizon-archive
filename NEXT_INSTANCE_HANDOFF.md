@@ -2,21 +2,22 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRCA-005-v15 / SOLE H1 HTTP 200 /
-TECHNICAL + PHYSICAL PASS / OBJECTIVE V5 LAYOUT REJECTION / H1 CONSUMED /
-NO PRODUCT / EXACT CLEANUP`**
+Current disposition: **`HOLD / FRWO-005-v20 / FRWO-005-v19 CLOSED / SOLE H1
+HTTP 200 / TECHNICAL + PHYSICAL PASS / OBJECTIVE V5 LAYOUT REJECTION / EXACT
+CLEANUP / NO PRODUCT OR REMAINING ATTEMPT AUTHORITY`**
 
-Exact next owner: **one fresh Operations Planning Major /
-`operations_planning_major`**
+Exact next owner: **Martin**
 
-Fresh Operations reads the complete intake/profile, `FRWO-005-v19`,
-`FRVE-005-v14`, `FRSH-005-v1-VR-46`, and `FRCA-005-v15`. Close the Work Order
-honestly at terminal HOLD, update the release map and scoreboard without any
-maturity or inventory advance, and route the synchronized handoff to Martin.
-Record H1 as exactly one HTTP-200 send, technical and physical PASS, objective
-v5 layout/accessibility REJECT, H1 consumed, exact nine-path cleanup, and no
-product/runtime/test/media change. Do not infer H2, retry, another paid attempt,
-prompt reuse, reveal, Image work, E2E, later-address work, or release.
+H1 is consumed. It returned HTTP 200 and passed technical/physical review, but
+failed the frozen v5 center-safe layout and equivalent accessibility gate. The
+private candidate was identity-cleaned; all nine controlled/product paths are
+absent; accepted media remains `17 / 37,410,731`; runtime remains null-first.
+
+Martin may explicitly authorize a new separately versioned finite Host 06
+image attempt, in which case fresh Operations, Science, and Mission gates must
+precede any credential read or request; or withdraw further attempts and leave
+Host 06 honestly missing. Generic continuation does not authorize H2, retry,
+reuse, reveal, Image work, E2E, later-address work, or release.
 
 Preserve the rail, sole unchanged `L02-03`, canon, learning, privacy/save,
 RP-012, `successor=null`, the separate OPEN protected-filename enumeration

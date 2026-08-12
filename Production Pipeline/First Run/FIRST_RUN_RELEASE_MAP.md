@@ -22,7 +22,7 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **`FRWO-005-v19 / Stranded Lens Cradle - Legible Wide H1 Attempt`**.
+Selected bounded Work Order: **none - `FRWO-005-v20` records terminal post-H1 HOLD pending Martin's decision**.
 
 `FRWO-005-v17` is closed. G1 made exactly one HTTP 200 request, passed strict
 technical and physical review, and failed the frozen v4 responsive-layout and
@@ -128,7 +128,7 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 06` | **SELECTED - `FRWO-005-v19`**: one legible-wide center-safe H1 source attempt | First missing fixed encounter; Martin explicitly authorized one new image and H1 requires fresh Science and Mission before its sole request |
+| 1 | `FR-03 / Host 06` | **HOLD - `FRWO-005-v20`**: H1 objectively rejected and cleaned; Martin decision required | First missing fixed encounter; no product and no remaining paid-attempt authority |
 | 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind independent acceptance or HOLD of `FRWO-005-v17`; no skip or repeatable host pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
@@ -310,8 +310,10 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v19` is selected; fresh Science is the exact next owner. H1 is
-unstarted and no request exists before a fresh Mission shell.
+`FRWO-005-v20` closes `FRWO-005-v19` after H1 returned HTTP 200, passed
+technical and physical review, failed the frozen v5 layout/accessibility gate,
+and was exactly cleaned. No Work Order is selected; Martin is the exact next
+owner. H1 is consumed and no H2 or retry exists.
 `FRWO-004-v1` remains closed. This map does not preauthorize
 generation/API invocation before a fresh shell, implementation, asset
 selection/import, reveal, later-address work, maturity advancement, residual
