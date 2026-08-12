@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / DIRECT PROCESS RAW-BYTE
-DUAL-STREAM CAPTURE / UNCHANGED EXACT PT06 RECORD PREDICATE / FRESH SCIENCE
-ONE-RUN PROOF REQUIRED / FRSH-005-v1-VR-28`**
+Current disposition: **`HOLD / SOLE FRSH-005-v1-VR-28 RAW CHILD STREAM RUN /
+CHILD EXIT 87 AND STDOUT ZERO PASS / CHILD STDERR NONEXACT_BOUNDED FAIL / ONE
+PARENT / ONE CHILD / ALL PATHS ABSENT / NO RETRY / FRESH MISSION REQUIRED /
+FRVE-005-v7-VR-25`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Mission decision: `FRSH-005-v1-VR-28`
 
-Current Science return: `FRVE-005-v7-VR-24`
+Current Science return: `FRVE-005-v7-VR-25`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-28`
 
@@ -32,25 +33,24 @@ Corrected candidate tree: `92b22fc56d79d18cf1abf7213c5268c9e4149830`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
 ## Exact next action
 
-Science reads the complete required intake/profile, `FRSH-005-v1-VR-28`,
-`FRVE-005-v7-VR-24`, `FRSH-005-v1-VR-27`, `FRVE-005-v7-VR-23`, both retained
-sources, `FRWO-005-v7`, and cited controls. It independently validates the
-exact retained identities, unchanged child executable/argv/environment and
-carriers, direct Process start, asynchronous redirected base-stream byte
-drains, bounded raw stderr retention, unchanged exact PT06 content predicate,
-one-parent/one-child cardinality, and `13/13` preflight absence.
+Mission reads the complete required intake/profile, `FRVE-005-v7-VR-25`,
+`FRSH-005-v1-VR-28`, `FRVE-005-v7-VR-24`, both retained sources,
+`FRWO-005-v7`, and cited controls. It accepts the completed sole run as HOLD:
+controller `89`, parent `88`, one parent, one child, child exit `87`, child
+stdout zero, raw child stderr `NONEXACT_BOUNDED`, zero controller stderr, zero
+activity, and `13/13` postflight absence. The run is never reinterpreted or
+retried.
 
-Only after every read-only gate passes, Science invokes the exact outer once.
-PASS requires controller `0`, one exact accepted scalar, zero controller
-stderr, child exit `87`, child stdout zero, exact PT06 classification, all zero
-activity counters, and postflight absence. There is no correction, alternate
-runner, or retry after start. PASS returns `POLISH VIABILITY READY` to one
-fresh Mission for a separate API shell; any mismatch is exact HOLD.
+Mission performs no controller, parent, child, credential, API, media, pixel,
+product, test, build, browser, E2E, or residual operation. It issues exactly
+one versioned decision for the post-raw-capture exact PT06 mismatch. Any
+correction preserves the passing exit/stdout facts, direct raw byte drains,
+one-parent/one-child cardinality, no-body projection, frozen carriers, zero
+activity, controlled-path absence, and one-run/no-retry discipline.
 
 API sends remain `0`; ordinal `1` remains opaque and consumed; ordinals `2`
 and `3` remain unstarted and unconsumed. The one-path rail, sole unchanged
