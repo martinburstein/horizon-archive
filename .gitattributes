@@ -8,3 +8,8 @@ Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_SCIENCE_OUTER_CONTROLLE
 Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V8_A1_LAUNCHER.ps1 text eol=lf
 Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V8_A1_STDIN_PARENT.ps1 text eol=lf
 Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V8_A1_STDIN_FIXTURE_CONTROLLER.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/BUILD_HOST06_V9_B1_CARRIER.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V9_B1_PRODUCTION_CARRIER.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V9_B1_LAUNCHER.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V9_B1_STDIN_PARENT.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V9_B1_STDIN_FIXTURE_CONTROLLER.ps1 text eol=lf
