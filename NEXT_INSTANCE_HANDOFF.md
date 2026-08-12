@@ -2,19 +2,19 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / SR05 CHILD STREAM CAPTURE
-BOUNDED AND PS5.1-NATIVE-SAFE / FROZEN RUNTIME CARRIERS UNCHANGED / FRESH
-SCIENCE ONE-RUN PROOF REQUIRED / FRSH-005-v1-VR-23`**
+Current disposition: **`HOLD / RETAINED PARENT V2 SINGLE AUTHORIZED RUN
+RETURNED NONZERO / EXACT ONE-RUN RESULT NOT EXTERNALLY RETAINED / NO RETRY /
+MISSION CONTROLLER-EVIDENCE CORRECTION REQUIRED / FRVE-005-v7-VR-20`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Mission decision: `FRSH-005-v1-VR-23`
 
-Current Science return: `FRVE-005-v7-VR-19`
+Current Science return: `FRVE-005-v7-VR-20`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-23`
 
-Authoritative corrected parent source:
+Authoritative retained parent source:
 `Production Pipeline/First Run/HOST06_SCIENCE_PARENT_V2.ps1`
 
 Parent source identity: exact `50,688` strict-ASCII/LF/final-LF bytes,
@@ -28,48 +28,36 @@ Corrected candidate tree:
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission handoff
+## Science handoff
 
-Mission accepted `FRVE-005-v7-VR-19` as a one-run HOLD and did not reinterpret
-it as acceptance. Mission corrected only the disposable parent's bounded SR05
-capture. The parent now uses dual `StreamReader.ReadAsync` drains with fixed
-`256`-character stdout and `512`-character stderr retention ceilings,
-independent cardinality counts, and native process exit capture. It never
-routes the child through PowerShell's native error pipeline.
+Science independently passed the retained source identity, both frozen
+carrier identities/roundtrips, split stage order, and exact `13/13` preflight
+absence. The sole parent-source parser returned zero errors. Science then ran
+exactly one VR-17 fileless parent with `OPENAI_API_KEY` removed without value
+read. The parent completed with a nonzero exit, so exact PASS is absent.
 
-The only accepted child facts remain exit `87`, zero stdout, and one exact
-allowlisted PT06 diagnostic followed by LF or CRLF. Failure emits no child body
-and retains only bounded exit/stdout/stderr classifications. Both frozen
-runtime carriers, production semantics, VR-17 bootstrap, one-child/no-retry
-rule, controlled paths, and zero-activity contract remain unchanged.
-
-Mission performed no parser or runtime execution. API sends remain `0`;
-ordinals `2` and `3` remain unstarted and unconsumed; every controlled and
-product path remains absent.
+The Science outer controller asserted `PARENT_EXIT` before emitting the
+already captured exit/stdout/stderr scalars. Their exact values and child
+invocation cardinality are therefore not externally retained evidence. No
+retry is permitted. Postflight proves every controlled and product path
+absent. API sends remain `0`; ordinals `2` and `3` remain unstarted and
+unconsumed.
 
 ## Exact next action
 
-One fresh Science role reads the required intake and full profile, then reads
-complete `FRSH-005-v1-VR-23`, complete `FRVE-005-v7-VR-19`, complete
-`FRSH-005-v1-VR-22`, the complete retained parent source, and every cited
-authority. Science independently re-proves the new source identity, both
-frozen carrier identities/roundtrips, split stage ownership/order, and exact
-preflight absence.
+One fresh Mission Captain reads the required intake and full profile, then
+reads complete `FRVE-005-v7-VR-20`, complete `FRSH-005-v1-VR-23`, complete
+`FRVE-005-v7-VR-19`, the complete retained parent source, and every cited
+authority. Mission performs no parser or runtime execution.
 
-If and only if all static gates pass, Science performs exactly one parent
-source parse and one exact VR-17 fileless parent execution with the credential
-removed without value read. The parent may invoke exactly one frozen child.
-Require the exact accepted V2 no-request result, parent exit `0`, one stdout
-record, zero stderr, one child invocation, all activity counters `0`, all
-controlled paths absent, and no retry.
-
-PASS permits only `POLISH VIABILITY READY / RETAINED PARENT V2 BOUNDED
-CREDENTIAL-CLEARED NO-REQUEST SUBGATE PASSED / MISSION API SHELL REQUIRED`
-and a return to one fresh Mission Captain. Failure permits only exact `HOLD`.
-Science commits only its variance and synchronized handoff and does not push.
+Mission issues exactly one versioned shell decision preserving the retained
+parent and both frozen runtime carriers. Any fresh Science proof must bind and
+emit a bounded allowlisted parent exit/stdout/stderr classification before a
+fail-fast assertion can destroy the sole result. It must still permit exactly
+one credential-cleared parent and at most one child, with no retry and no
+child body, credential, or unbounded response retention.
 
 Do not route to Quartermaster; call the API; consume ordinal `2`; inspect
 media/pixels; change product/tests; run E2E; reveal; advance maturity; close an
