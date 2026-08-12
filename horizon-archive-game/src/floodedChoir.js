@@ -43,6 +43,11 @@ const promptIdentities = Object.freeze({
   "H9-3": Object.freeze({ bytes: 2915, sha256: "62a5b09d0bac3a88f7f69b24fdc82bd46c4822c173d0e69eb73bcc5f4392c207" }),
   "H9-4": Object.freeze({ bytes: 2634, sha256: "8c5c440981b09f2de0dd21b2133cd651b6827cbd80d38bf062092347b3f4036a" }),
   "H9-5": Object.freeze({ bytes: 2867, sha256: "5e868de1da500fc1176ee739e340a6aa3f3ae4cacac1a0c50f7d49c1d502247f" }),
+  "H9-6": Object.freeze({ bytes: 3019, sha256: "9eafa0bac0399f88bd770f91e47fe629c2915d8fc5d68a7238235bea2f354b67" }),
+  "H9-7": Object.freeze({ bytes: 2700, sha256: "1e8e2b03847e07142b930f0b486eca2ea19f1bd5a3e9b97b3c0b33efff4f8b26" }),
+  "H9-8": Object.freeze({ bytes: 2690, sha256: "a938bde2672e38074c4c878d4b3a0a3d905a19211342513b20a4e5c591dc7f9c" }),
+  "H9-9": Object.freeze({ bytes: 2557, sha256: "0a96c71e9ab3b12a30b957e3cd25ce9a42454986fe96a88ec6b7e02c2fa4682b" }),
+  "H9-10": Object.freeze({ bytes: 2989, sha256: "b82b493650b3095c6bbe0d40214be98285ab6682663ca48d8e1d1bc2a59a7f4a" }),
 });
 const layoutContract = Object.freeze({ desktop: [1920,1080], laptop:[1366,768], narrow:[390,844], effective200:[768,900], retained320x180:[320,180], retained320x240:[320,240] });
 const finite = (value) => typeof value === "number" && Number.isFinite(value);
