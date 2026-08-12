@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / BOUNDED SINGLE PT06 STDERR
-NORMALIZATION RETAINED / FRESH SCIENCE ONE-RUN PROOF REQUIRED /
-FRSH-005-v1-VR-27`**
+Current disposition: **`HOLD / SOLE FRSH-005-v1-VR-27 OUTER RUN RETAINED /
+CHILD EXIT 87 PASS / CHILD STDOUT ZERO PASS / CHILD STDERR NONEXACT_BOUNDED
+FAIL / ONE PARENT / ONE CHILD / ALL CONTROLLED PATHS ABSENT / NO RETRY /
+FRESH MISSION ADJUDICATION REQUIRED / FRVE-005-v7-VR-24`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Mission decision: `FRSH-005-v1-VR-27`
 
-Current Science return: `FRVE-005-v7-VR-23`
+Current Science return: `FRVE-005-v7-VR-24`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-27`
 
@@ -32,24 +33,23 @@ Corrected candidate tree: `92b22fc56d79d18cf1abf7213c5268c9e4149830`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
 ## Exact next action
 
-Science reads the complete required intake/profile, `FRSH-005-v1-VR-27`,
-`FRVE-005-v7-VR-23`, `FRSH-005-v1-VR-26`, `FRVE-005-v7-VR-22`, both retained
-sources, `FRWO-005-v7`, and cited controls. It validates all source/carrier
-identities, parser/stage order, the exact-one anchored PT06 plus ASCII-
-whitespace-only normalizer, cardinality, and `13/13` preflight absence.
+Mission reads the complete required intake/profile, `FRVE-005-v7-VR-24`,
+`FRSH-005-v1-VR-27`, `FRVE-005-v7-VR-23`, both retained sources,
+`FRWO-005-v7`, and cited controls. It accepts the completed run only as HOLD:
+controller `89`, parent `88`, one exact parent stop at `SR05_CHILD_CAPTURE`,
+child exit `87`, child stdout `ZERO`, child stderr `NONEXACT_BOUNDED`, one
+parent, one child, and postflight absence true.
 
-If and only if all read-only gates pass, Science invokes the exact retained
-outer controller once through Windows PowerShell 5.1 x64. No alternate runner,
-correction, or retry exists. PASS requires controller exit `0`, exact accepted
-scalar, zero controller stderr, one parent, one child, zero request/activity
-counters, and exact postflight absence. PASS returns only `POLISH VIABILITY
-READY` to a fresh Mission Captain for a separate API shell. Failure is exact
-HOLD.
+Mission performs no execution and issues exactly one new versioned `FIRST RUN
+SHELL READY`, `REVISE`, or `HOLD` decision for the stderr-normalizer mismatch.
+Any correction preserves the passing exit/stdout facts, no-body projection,
+frozen carriers and production semantics, one-run/no-retry discipline, and
+all controlled-path absence. The completed run is never reinterpreted or
+retried.
 
 API sends remain `0`; ordinal `1` remains opaque and consumed; ordinals `2`
 and `3` remain unstarted and unconsumed. The one-path rail, sole unchanged
