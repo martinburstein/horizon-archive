@@ -2,15 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`RUNTIME PRESENTATION COMPLETE / FRPR-009-v2 / UNCHANGED ACCEPTED MEDIA`**
+Current disposition: **`FIRST RUN PASS RELEASED / FRAB-009-v2 / DISTINCT HOST 09`**
 
-Exact next owner: **one Intelligence Officer**
+Exact next owner: **one fresh Commandant when Martin explicitly continues**
 
-Independently validate exact candidate `eefaa5ef02a449fd51988b43d9927ae53ce95861`,
-the selected raster/provenance/registry/copy/decode/focus integration, corrected
-derived responsive evidence, full gates, budgets, protected boundaries, Git
-synchronization, and the first-PASS stop ledger. Release or return the exact
-candidate; do not generate, edit, reveal, or mutate media.
+Revalidate the released Host 09 bundle and earliest-first queue. Select no new
+Work Order and authorize no Host 10 media unless Martin explicitly provides a
+new bounded decision. Preserve the accepted source bytes and all release
+evidence; no reveal is authorized.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then

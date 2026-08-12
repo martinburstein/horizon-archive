@@ -104,8 +104,8 @@ test("clean-start E2E traverses Host 08 instead of the retired generic launcher"
   assert.match(e2e, /const severedRelaySpine = page\.locator\('\[data-hotspot-id="severed-relay-spine"\]'\)/);
   assert.match(e2e, /Host 08 was not available after Control Flow mastery/);
   assert.match(e2e, /await page\.getByRole\("button", \{ name: "USE", exact: true \}\)\.click\(\);\s*await severedRelaySpine\.click\(\);/);
-  assert.match(e2e, /Host 08 did not expose read-only completion after Client Bridge mastery/);
-  assert.match(e2e, /Completed Host 08 reopened Client Bridge/);
+  assert.match(e2e, /Host 09 was not available after Client Bridge mastery/);
+  assert.match(e2e, /Host 09 did not expose read-only completion after both owned lessons/);
   assert.doesNotMatch(e2e, /const controlContinue = page\.getByRole\("button", \{ name: "Start Client Bridge"/);
   assert.doesNotMatch(e2e, /name: "(?:Start|Resume|Open) Client Bridge/);
   assert.doesNotMatch(e2e, /Acknowledge strict mastery[\s\S]{0,500}SOURCE-GROUNDED COURSE[\s\S]{0,500}const severedRelaySpine/);

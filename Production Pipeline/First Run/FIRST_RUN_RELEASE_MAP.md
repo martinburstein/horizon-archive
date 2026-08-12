@@ -1,8 +1,8 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-009-v7`
+Map ID: `FRRM-009-v8`
 
-Current release authority: `FRAB-009-v1 / RESPONSIVE EVIDENCE REPAIR RELEASED`
+Current release authority: `FRAB-009-v2 / DISTINCT HOST 09 RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v6` / `FRCL-009-v1`
 
@@ -22,7 +22,12 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`
 
-Selected bounded Work Order: **none; `FRWO-009-v7` released by `FRAB-009-v1`**.
+Selected bounded Work Order: **none; `FRWO-009-v8` released by `FRAB-009-v2`**.
+
+`FRWO-009-v8` is released. The first corrected-gate attempt passed technical,
+physical, derived-responsive, and live-browser review; it is integrated at the
+native Host 09 dual-lesson entry. Four authorized calls were unused. Accepted
+media is `20 / 91,204,767`; scratch is absent; no Host 10 authority exists.
 
 `FRWO-009-v7` corrects the failed evidentiary method without generating or
 touching media. The actual canonical world and all Host 09 sources are 16:9,
@@ -144,7 +149,7 @@ game complete.
 | `FR-00` | Local package and launcher | Truthful local build opens `FR-01` | Product identity; no evidence | Truthful complete-game launcher/guide released by `FRAB-001-v1`; Demo Tour remains separate and unchanged |
 | `FR-01` | Title, Slot 01 setup, display name, prologue, Chapter I reveal | Final-purpose resumable opening reaches `FR-02` | Pilot/Suit ownership from the lock | Final-purpose opening, save v1, resume, and Chapter I reveal released by `FRAB-001-v1` |
 | `FR-02` | Chapter I — Glass Meadow | Existing low-growth/wet phase ridge reaches `FR-03` | Hosts 01-03; `L01-01` through `L01-03` | Hosts 01-03 exact; the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, unchanged route, and affected presentation are released by `FRAB-002-v1` |
-| `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Hosts 05-07 released; one accepted shared compression and three exact hosts exist, while Hosts 08-15 remain missing |
+| `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Hosts 05-09 released; one accepted shared compression and five exact hosts exist, while Hosts 10-15 remain missing |
 | `FR-04` | Chapter III — Witness Corridor | Damp heat-carrying channels reach `FR-05` | Host 16; `L05-07` | Silent, separate, privacy-preserving Terminal copy released; physical-host parity was outside the Work Order |
 | `FR-05` | Chapter IV — City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Direct credits-free handoff remains exact; the visible `successor packet` / `staging boundary` sentence is contradictory and two enriched hosts remain missing |
 | `FR-06` | Chapter V — Civic Record District | Heat/material margin reaches `FR-07` | Hosts 19-20; `PY009`, `RAI D1O1` | Compact chapter/learning released; both enriched hosts missing |
@@ -175,7 +180,7 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 09` | Distinct Flooded Choir physical host and native dual-lesson entry | Host 08 is released; Host 09 is earliest missing and no repeatable pattern is authorized |
+| 1 | `FR-03 / Host 10` | Next distinct physical host and its unchanged owned lesson entry | Host 09 is released; Host 10 is earliest missing and no media or Work Order authority exists |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
