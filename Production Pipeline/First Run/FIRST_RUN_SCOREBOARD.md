@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v17`
+Scoreboard ID: `FRSB-005-v18`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v17`
+Release map: `FRRM-005-v18`
 
 Operations source inspected: `53c408e792c8f611b737106b049298539c5495c0`
 
@@ -18,13 +18,14 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v17 / Stranded Lens Cradle -
-Distant Establishing G1 Attempt`**.
+Selected bounded Work Order: **none - `FRWO-005-v18 / Post-G1 Decision Hold`**.
 
-Martin explicitly authorized one new bounded attempt. G1 uses prompt v4's
-strategy change: a distant relation smaller than one fifth of the frame with
-all fragments and the dry approach in an inset center island. Selection is not
-evidence; maturity and inventory remain unchanged.
+G1 used prompt v4's distant center-island strategy and made exactly one HTTP
+200 request. It passed technical and physical review, then failed the exact
+responsive-layout and equivalent accessibility gate because the complete
+support/cradle footprint was too wide and its fragment trail extended outside
+the frozen inward group band. G1 was rejected, consumed, identity-deleted, and
+proved 9/9 absent. No selection, product, maturity, retry, or G2 exists.
 
 `FRWO-005-v15` is closed. Its sole F1 returned HTTP 200, passed strict
 technical and physical review, then failed the exact frozen v3 responsive-
@@ -147,9 +148,8 @@ accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-Fresh Science is the exact next owner. No Mission, generation/API call,
+Martin is the exact next decision owner. No Science, Mission, generation/API call,
 media attempt, asset selection/import, Host 06 implementation, Image work,
 E2E, reveal, Host 07-15 work, Witness promotion, City correction, maturity
 inference, OPEN-classification closure, residual inspection, completion sweep,
-or `FIRST RUN COMPLETE` is authorized. F1 is consumed; G1 is the sole fresh
-domain and remains unstarted; no G2 or retry exists.
+or `FIRST RUN COMPLETE` is authorized. G1 is consumed; no G2 or retry exists.
