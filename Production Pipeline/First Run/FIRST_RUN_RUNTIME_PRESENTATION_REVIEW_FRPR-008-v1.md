@@ -13,17 +13,17 @@ The selected H8-3 source remains byte-identical: `16,815,595` bytes, SHA-256
 No image generation, edit, replacement, recompression, import, publication, or
 reveal occurred in this stage.
 
-The runtime keeps exact centered-cover composition. A restrained code-only
-saturation/contrast/brightness treatment clarifies laminate separation without
-adding glow, success, damage, or authority meaning. The native target now has
-explicit 44px minima and a stable two-pixel boundary. Reduced motion removes
-transition treatment; forced colors removes image filtering and supplies
-system-native target colors/focus separation. No mechanic, evidence, state,
-copy meaning, route, save, or canon changed.
+The runtime keeps exact centered-cover composition. The bounded budget
+correction removes redundant Host-specific filtering, target sizing, and
+motion/color declarations; existing global hotspot sizing, focus, motion, and
+forced-color rules already own those behaviors. Host 08 is added only to the
+existing forced-color focus selector. No mechanic, evidence, state, copy
+meaning, route, save, canon, or media byte changed.
 
 Focused Host06/07/08/ClientBridge tests pass `20/20`; the latest full gate remains
 `993/993`; the post-presentation production build passes at `222` modules. Media
-inventory is `19 / 70,136,520`. Scratch is absent. Protected QA was not
+inventory is `19 / 70,136,520`; corrected production CSS is `119,594` bytes.
+Scratch is absent. Protected QA was not
 inspected or used.
 
-Image signs **`RUNTIME PRESENTATION COMPLETE / FRPR-008-v1 / ROUTE FRESH INTELLIGENCE`**.
+Image signs **`RUNTIME PRESENTATION COMPLETE / FRPR-008-v1 / CSS BUDGET CORRECTED / ROUTE MISSION`**.
