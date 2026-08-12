@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / PT02 TERMINAL-LF
-CONSTRUCTION CORRECTED / FROZEN HELPER IDENTITY AND API SEMANTICS PRESERVED /
-FRESH SCIENCE ONE-RUN NO-REQUEST PROOF REQUIRED / FRSH-005-v1-VR-30`**
+Current disposition: **`HOLD / SOLE FRSH-005-v1-VR-30 RUN STOPPED AT
+PT03_HELPER_COMPILE / CURRENT COMPILE OUTPUT DOES NOT MATCH PRE-FROZEN DLL
+DIGEST / CONTROLLED HELPER ROOT AND DLL RETAINED / ZERO API / NO RETRY /
+FRESH MISSION ADJUDICATION REQUIRED / FRVE-005-v7-VR-27`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Mission decision: `FRSH-005-v1-VR-30`
 
-Current Science return: `FRVE-005-v7-VR-26`
+Current Science return: `FRVE-005-v7-VR-27`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-30`
 
@@ -29,8 +30,13 @@ Parent identity: exact `54,026` strict-ASCII/LF/final-LF bytes, SHA-256
 Corrected runtime production carrier: exact `27,072` bytes, SHA-256
 `c05bf41467e6272e890607e8848e6f3354311071942166804a4d2d7444e71158`
 
-Corrected runtime tail: exact `26,096` bytes, SHA-256
-`580a11aacd59301265f4e86abc83dc973cff68b9efac015b626086b42a37836e`
+Sole-run controlled helper output retained:
+
+```text
+C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-native-identity-725b75e4-8083-4df5-9a80-a0301b8f00dd
+C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-native-identity-725b75e4-8083-4df5-9a80-a0301b8f00dd\Host06FileIdentity.dll
+DLL=4096 / 5092fcfd97f14c71841213a59c895d528bfb7b387808fadf6db9be7f9e3fe25d / ordinary non-reparse
+```
 
 Corrected inert code candidate: `f4b2062508f9e0606953a4cc9bcdaff09b66ebc4`
 
@@ -38,32 +44,30 @@ Corrected candidate tree: `92b22fc56d79d18cf1abf7213c5268c9e4149830`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
 ## Exact next action
 
-Science reads the complete required intake/profile,
-`FRSH-005-v1-VR-30`, `FRVE-005-v7-VR-26`, `FRSH-005-v1-VR-29`, both retained
-sources, `FRWO-005-v7`, and cited controls. It independently proves the exact
-retained source identities and outer-to-parent pin; canonical stored carriers;
-corrected runtime launcher `2,001 / 96feaf...`, combined `27,072 / c05bf4...`,
-prefix `976 / 5cd257...`, tail `26,096 / 580a11...`; exactly one inserted
-`$helperSource += [char]10`; frozen helper source `1,693 / 98cf56...`; frozen
-DLL `4,096 / 39e85b...`; unchanged stage order, credential removal, exact PT06
-acceptance, one-parent/one-child raw capture, and all `13/13` controlled paths
-absent.
+Mission reads the complete required intake/profile, complete
+`FRVE-005-v7-VR-27`, `FRSH-005-v1-VR-30`, `FRVE-005-v7-VR-26`, both retained
+sources, complete `FRWO-005-v7`, and cited controls. It performs no outer,
+parent, child, credential, request, API, media, product, build, browser, E2E,
+or residual operation.
 
-Only after every read-only gate passes, Science invokes the exact retained
-outer controller exactly once through Windows PowerShell 5.1 x64 with
-`OPENAI_API_KEY` removed from the outer environment. No correction, alternate
-runner, or retry follows start. Required success is controller `0`, one
-accepted parent, one child, child exit `87`, child stdout zero, child stderr
-`EXACT_PT06`, exact `PT06_CREDENTIAL_GATE`, ordinal `0`,
-`sendStarted=false`, zero request/API activity, all local absence facts true,
-and exact postflight absence. PASS returns `POLISH VIABILITY READY` to one
-fresh Mission Captain; any mismatch is exact HOLD to the earliest owner.
-Science commits only its result and synchronized handoff and does not push.
+Mission issues one exact versioned `FIRST RUN SHELL READY`, `REVISE`, or
+`HOLD` decision that adjudicates both:
+
+1. explicit identity-safe, exact-path, nonrecursive cleanup of the controlled
+   helper root/DLL retained by the sole run, without touching any parent,
+   sibling, glob, opaque residual, repository path, or protected state; and
+2. the conflict between `FRWO-005-v7`'s current-adjudication compile-output
+   freeze rule and the carrier's hard-coded prior-instance DLL digest.
+
+Any corrected proof must freeze the current compile output after one read,
+load only those same bytes, and compare later observations to that current-run
+freeze. It may not require a prior CodeDOM compile digest to reproduce. A new
+Science execution is forbidden until the retained controlled output has been
+adjudicated and safely restored to exact absence under a Mission shell.
 
 API sends remain `0`; ordinal `1` remains opaque and consumed; ordinals `2`
 and `3` remain unstarted and unconsumed. The one-path rail, sole unchanged
