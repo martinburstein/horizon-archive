@@ -2,29 +2,29 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-007-v1 / HOST 07 SEDIMENT
-ABACUS / TWO BUILT-IN ATTEMPTS MAXIMUM`**
+Current disposition: **`HOLD / FRVE-007-v1 / BUILT-IN GENERATED-OUTPUT
+PROJECT-CUSTODY ADAPTER UNAVAILABLE / ZERO ATTEMPTS CONSUMED`**
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **Martin**
 
-Operations selected one new Work Order for a dry same-basin distributed Host
-07 relation and sole unchanged `L03-01 + L03-02`. Attempt domain is exactly
-`{H7-A,H7-B}`, built-in mode only, with `H7-B` conditional on `H7-A`'s bounded
-terminal disposition. No attempt, call, candidate, asset, import,
-implementation, maturity advance, or reveal exists yet.
+Science proved the physical/runtime/learning envelope is prospectively viable
+and focused reuse tests pass `27/27`, but the current built-in tool cannot
+provide a trusted exact filesystem identity or same-isolate project-copy/
+rejected-output cleanup primitive. Calling would risk consuming an attempt and
+creating an opaque managed result. `H7-A` and `H7-B` remain unconsumed. No call,
+candidate, asset, import, implementation, maturity advance, or reveal exists.
 
-Read the complete Science profile, `FRWO-007-v1`, `FRCL-006-v1`,
-`FRPB-001-v3`, closed `FRWO-006-v2` / `FRVE-006-v1`, exact `FRAB-005-v1`,
-current Host 06/learning/runtime controls, accepted-media inventory, and the
-installed image-generation skill. Answer all eight Work Order questions with
-read-only/synthetic evidence.
+Martin chooses exactly one:
 
-Issue one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact. Do
-not call generation or inspect managed outputs. On READY, route fresh Mission
-to integrate exact prompts, custody, identity, layout/accessibility, state,
-provenance, cleanup, implementation, validation, rollback, and the same finite
-ledger into `FIRST RUN SHELL READY`.
+1. **Authorize imagegen CLI fallback for Host 07 under the same exact two-
+   attempt ceiling.** The fallback requires `OPENAI_API_KEY` set locally and a
+   fresh planning/shell correction before either attempt.
+2. **Keep Host 07 at HOLD.** Both attempts remain unconsumed and no next role
+   begins.
+
+General continuation does not authorize fallback. Do not call built-in
+generation, parse or search managed output, inspect an opaque result, start
+Mission, or begin production until Martin explicitly chooses.
 
 Preserve exact Hosts 01-06 and accepted media, sole `L02-03`, Host 07 ownership
 of unchanged `L03-01 + L03-02`, the one-path rail, learning/privacy/save/
