@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-009-v3 / FIVE FRESH COMPACT-ISLAND ATTEMPTS`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-009-v2 / FIVE FRESH ATTEMPTS`**
 
-Exact next owner: **one fresh Office of Science Administrator / `office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-Read the full Science profile, `FRWO-009-v3`, the complete prior Host 09 chain,
-and current runtime. Independently prove the compact-island prompt strategy,
-fresh five-attempt CLI/custody envelope, geometry/layout/accessibility margins,
-accepted-only runtime/PBA/E2E boundary, and exact cleanup. Issue READY, REVISE,
-or HOLD with zero generation and route a fresh Mission only on READY.
+Read the full Mission profile, `FRWO-009-v3`, `FRVE-009-v2`, and the complete
+prior Host 09 shell/production chain. Freeze five exact independent compact-
+island prompts, a fresh absent GUID OS-temp root with literal H9-6..H9-10
+children, all CLI/custody/geometry/runtime/PBA/E2E/no-reveal controls, and the
+strict role sequence. Issue and push one versioned FIRST RUN SHELL READY, then
+route fresh Recon. Do not generate or access media.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
