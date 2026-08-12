@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A blind optic well built into an ancient dry salt-stone terrace, viewed from standing eye level on a continuous safe annular rim.
+Scene: one shallow circular geological hollow in weathered pale stone. Inside it, several sturdy empty mounting brackets and inert mineral-coated fluid conduits converge around a large matte charcoal phase surface. The surface is completely nonreflective and exposes no picture at all. The mounts, conduits, hollow, and matte surface must read as one coherent physical system.
+Composition: wide 3840x2160 landscape; the complete well relation occupies the middle ground with generous stone context; continuous dry walking ring clearly visible in the foreground and around both sides; horizon and distant flooded basin restrained in the background. Keep every essential feature comfortably inside the frame.
+Lighting: cool overcast daylight, physically plausible, restrained cinematic realism, high material detail, no dramatic emission.
+Constraints: first-person maximum-quality environmental photography; no people, hands, creatures, faces, buildings, text, symbols, UI, screen, displayed image, portal, camera body, machine character, console, glowing light, hologram, active response, reward, damage, weapon, or watermark. The matte phase surface must remain blank and blind. The route is dry and unobstructed.

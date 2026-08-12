@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: premium first-person environmental plate for a 16:9 narrative learning game
+Primary request: A dry-ring observation point around a shallow blind optical depression that cannot produce a picture.
+Scene: weathered sedimentary stone forms a low oval hollow. Heavy empty support mounts, thin dormant fluid channels, and a single recessed matte graphite phase surface create a believable optical apparatus without resembling a modern device. The phase surface is featureless, dark, nonreflective, and entirely blank.
+Composition: wide 3840x2160, slightly elevated human eye level, full dry oval ring readable as traversable foreground-to-midground continuity, all mounts/routes/surface contained in one coherent family, distant water and pale horizon only as quiet context. No essential object touches the crop.
+Style: photoreal natural geology, subtle cinematic grading, cool soft daylight, fine erosion and mineral residue, no fantasy glow.
+Hard constraints: no visible picture, reflection scene, camera feed, portal, opening into another place, screen, glass display, UI, text, glyphs, console, humanoid, creature, face, active machinery, light emission, world response, reward, hazard, submerged route, or watermark. Keep the rim dry, continuous, safe, and unobstructed.

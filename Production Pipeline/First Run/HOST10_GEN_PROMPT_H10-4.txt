@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A restrained ancient optic hollow on a dry annular path, with visible mounts and fluid routing around a blind matte phase surface.
+Scene: an eroded circular basin inset into pale gray-brown rock. Four low weathered mounting cradles and branching mineral-lined conduits terminate near a broad dark matte surface at the bottom. The surface absorbs light and presents nothing. The object is an inert depression at the edge of attention, not a shrine or machine personality.
+Composition: 3840x2160 landscape, standing eye-level, dry ring prominent across the lower frame and visibly continuing around the well, the entire physical relationship placed in the middle third with ample margins, calm distant basin landscape above.
+Lighting: neutral cloudy daylight, realistic material response, high fidelity, quiet and non-theatrical.
+Prohibit: screen, image, photograph, reflection of scenery, portal, doorway, camera body, eye motif, face, mouth, person, creature, robot, console, keyboard, writing, icons, glyphs, UI, hologram, beam, glow, activation, response, wet approach, obstruction, weapon, damage, or watermark. No picture appears anywhere.

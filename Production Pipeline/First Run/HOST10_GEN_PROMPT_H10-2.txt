@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: An inert blind camera well expressed only through geology and dormant optical infrastructure.
+Scene: from a dry stone ring, look obliquely down into a broad shallow optic hollow. Three unequal weathered mounting sockets and multiple narrow mineral fluid routes surround a flat matte-black phase plate. The plate absorbs the sky and shows absolutely no image or reflection. Everything is embedded in one ancient eroded basin material family.
+Composition: 3840x2160 wide landscape, eye-height three-quarter view, complete relation in the central two-thirds, dry annular route entering from the foreground and continuing visibly behind the well, mounts and fluid paths individually legible, breathing room on all edges.
+Lighting and mood: diffuse gray-blue daylight, quiet, tactile, archaeological, cinematic but natural, crisp stone and mineral textures.
+Avoid: any camera object, lens showing scenery, mirror, screen, portal, doorway, console, interface, text, glyph, image, projection, glow, beam, person, body, face, creature, Machine, Builder, microphone, speaker, answer cue, response, spectacle, wet route, submerged target, rubble blockage, or watermark. The blind plate is inert and blank.
