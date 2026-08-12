@@ -1,6 +1,6 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-009-v3`
+Map ID: `FRRM-009-v4`
 
 Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
 
@@ -22,8 +22,8 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`
 
-Selected bounded Work Order: **`FRWO-009-v3 / Host 09 compact-island retry /
-five fresh attempts`**.
+Selected bounded Work Order: **none; `FRWO-009-v4` records the second terminal
+Host 09 generation HOLD**.
 
 `FRWO-009-v1` is closed by `FRWO-009-v2`. Its complete ledger `{H9-1..H9-5}`
 is consumed: five technically valid private candidates each failed the frozen
@@ -39,6 +39,12 @@ Martin has now supplied that separate decision: `FRWO-009-v3` opens exactly
 five rejected sources remain absent and unusable. No new call exists before
 fresh Science and Mission gates, and first PASS stops the new ledger. Host 10
 remains unauthorized.
+
+`FRWO-009-v3` is now closed by `FRWO-009-v4`. All fresh ordinals H9-6..H9-10
+were technically valid but failed the frozen compact-island layout target,
+then were identity-deleted. H9-8's provisional byte-identical copy was removed
+before integration when exact measurement rejected it. Scratch, product, and
+provenance are absent; the ten-attempt combined ledger is exhausted.
 
 Martin explicitly authorized imagegen CLI fallback with five total attempts.
 `FRWO-007-v2` freezes `{H7-1..H7-5}`, exact bundled CLI, sequential one-output

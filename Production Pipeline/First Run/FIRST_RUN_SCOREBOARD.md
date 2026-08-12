@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-009-v3`
+Scoreboard ID: `FRSB-009-v4`
 
 Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v6` / `FRCL-009-v1`
 
-Release map: `FRRM-009-v3`
+Release map: `FRRM-009-v4`
 
 Operations source inspected: `243edb4e`
 
@@ -18,8 +18,8 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`.
 
-Selected bounded Work Order: **`FRWO-009-v3 / Host 09 compact-island retry /
-five fresh attempts`**.
+Selected bounded Work Order: **none; `FRWO-009-v4` records the second terminal
+Host 09 generation HOLD**.
 
 Host 09's complete ledger `{H9-1..H9-5}` is consumed. All five technically
 valid private candidates failed the frozen responsive layout contract and were
@@ -32,6 +32,11 @@ unconsumed and gated behind new Science and Mission controls. The Work Order
 targets only the repeatedly failed responsive composition margin; maturity,
 inventory, product absence, inert runtime, and every prior rejection remain
 unchanged.
+
+That fresh ledger is now fully consumed. Every candidate failed the frozen
+compact-island layout gate and was deleted; scratch/product/provenance remain
+absent. Combined Host 09 attempts total ten consumed, with no accepted source.
+Maturity, accepted inventory, and inert runtime remain unchanged.
 
 Host 08 H8-3 is released. H8-1/H8-2 were rejected and cleaned; H8-4/H8-5 are
 unused. Accepted media is `19 / 70,136,520`.
@@ -167,7 +172,6 @@ compression / 30 missing / 1 unadvanced Witness expression`.
 / 4 exact / 7 missing`; whole-game inventory is `9 exact / 1 accepted shared
 compression / 29 missing / 1 unadvanced Witness expression`.
 
-`FRWO-009-v3` reopens the earliest missing expression under Martin's separate
-finite five-attempt decision. Maturity and inventory remain unchanged pending
-fresh gates and a passing source. No Host 10 Work Order or `FIRST RUN
+`FRWO-009-v4` closes the second finite attempt budget without a passing source.
+Maturity and inventory remain unchanged. No Host 10 Work Order or `FIRST RUN
 COMPLETE` is inferred.
