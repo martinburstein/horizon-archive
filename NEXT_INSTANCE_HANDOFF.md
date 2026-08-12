@@ -2,14 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`TERMINAL HOLD / FRWO-009-v4 / TEN ATTEMPTS CONSUMED / MARTIN DECISION REQUIRED`**
+Current disposition: **`WORK ORDER READY / FRWO-009-v5 / FIVE FRESH HIGH-AIM ATTEMPTS`**
 
-Exact next owner: **Martin**
+Exact next owner: **one fresh Office of Science Administrator / `office_of_science_administrator`**
 
-Decide whether to authorize another exact finite Host 09 source-attempt budget.
-General continuation does not authorize H9-11, rejected-source reuse, crop,
-edit, variation, Image work, release, or later-host work. Any new budget must
-restart at fresh Operations, Science, and Mission controls.
+Read the full Science profile, `FRWO-009-v5`, and the complete prior Host 09
+chain. Validate the high-aim compensation strategy against unchanged runtime
+acceptance, five-attempt CLI/custody, accepted-only integration/PBA/E2E, and
+cleanup. Issue READY, REVISE, or HOLD with zero generation.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
@@ -22,6 +22,9 @@ candidates failed the compact layout contract and were identity-deleted.
 Combined Host 09 ledger `{H9-1..H9-10}` is exhausted. Scratch root, product,
 and provenance are absent; accepted media remains `19 / 70,136,520`; runtime
 remains inert; maturity is unchanged.
+
+Fresh ledger `{H9-11..H9-15}` is fully unconsumed. No prompt, scratch root,
+credential read, call, candidate, product, or maturity change exists yet.
 
 Do not inspect, restore, stage, or use repository QA screenshots. Preserve
 released Host 08 bytes, Hosts 01-07, all accepted media, all OPEN records,
