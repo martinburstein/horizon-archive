@@ -2,16 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / RETAINED OUTER CONTROLLER
-PROJECTS ONLY REGEX-VALIDATED PARENT STOP STAGE AND FIXED CODE / SOURCE
-RETAINED BEFORE EXECUTION / FRESH SCIENCE ONE-RUN PROOF REQUIRED /
-FRSH-005-v1-VR-25`**
+Current disposition: **`HOLD / SOLE AUTHORITATIVE OUTER CONTROLLER RUN
+REJECTED THE PARENT AT SR05_CHILD_CAPTURE / EXACT BOUNDED STOP / NO RETRY /
+FRESH MISSION CAPTURE-FACT ADJUDICATION REQUIRED / FRVE-005-v7-VR-22`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Mission decision: `FRSH-005-v1-VR-25`
 
-Current Science return: `FRVE-005-v7-VR-21`
+Current Science return: `FRVE-005-v7-VR-22`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-25`
 
@@ -35,51 +34,51 @@ Corrected candidate tree:
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission handoff
+## Science handoff
 
-Mission accepts `FRVE-005-v7-VR-21` only as the completed no-retry HOLD. The
-sole prior controller run retained parent exit `88`, empty parent stdout, one
-exact parent-stop V2 class, one child, and exact postflight absence, but its
-outer scalar intentionally collapsed the already regex-validated stop stage.
+Science independently validated both retained source identities and strict
+form, parsing, frozen carrier identities and canonical roundtrips, split stage
+order, controller/parent/child cardinalities, bounded result allowlists, and
+exact `13/13` preflight absence. It then invoked the exact retained outer
+controller exactly once through Windows PowerShell 5.1 x64 with the frozen
+invocation and asynchronous dual-stream capture. No alternate runner,
+correction, or retry occurred after start.
 
-`FRSH-005-v1-VR-25` corrects only that retained outer projection. The tracked
-controller now emits `parentStopStage=<exact SR01..SR09 allowlisted stage>` and
-`parentStopCode=ASSERTION_FAILED` only after its complete existing parent-stop
-regex succeeds. Otherwise both fields are `NOT_APPLICABLE`. The parent stderr
-body, diagnostic text, child body, credential, response, Base64, exception,
-and stack remain unexposed. The complete revised source is retained and pushed
-before execution. Parent and carrier identities and every production semantic
-remain unchanged.
+The sole bounded result was:
 
-Mission performed no parser, controller, parent, child, credential, request,
-API, media, product, test, build, browser, E2E, or residual operation. API
-sends remain `0`; ordinal `1` remains opaque and consumed; ordinals `2` and
-`3` remain unstarted and unconsumed.
+```text
+controllerExecutions=1
+controllerExit=89
+controllerStdoutCharacters=238
+controllerStderrCharacters=0
+controllerStdoutRecords=1
+SCIENCE_OUTER_RESULT_V1|classification=REJECTED_PARENT_RESULT|parentExit=88|parentStdout=EMPTY|parentStderr=EXACT_PARENT_STOP_V2|parentStopStage=SR05_CHILD_CAPTURE|parentStopCode=ASSERTION_FAILED|childInvocations=1|postflightAbsent=true
+```
+
+This is exact HOLD. The retained parent rejected the captured sole-child
+result at `SR05_CHILD_CAPTURE`. The existing projection does not distinguish
+which already-regex-validated child exit/stdout/stderr fact failed. Parent and
+child bodies remain private. Independent postflight absence passed `13/13`.
+API sends remain `0`; ordinal `1` remains opaque and consumed; ordinals `2`
+and `3` remain unstarted and unconsumed.
 
 ## Exact next action
 
-One fresh Science role reads the complete required intake and profile, then
-complete `FRSH-005-v1-VR-25`, complete `FRVE-005-v7-VR-21`, complete
-`FRSH-005-v1-VR-24`, complete `FRVE-005-v7-VR-20`, both complete retained
-sources, `FRWO-005-v7`, and all cited controls.
+One fresh Mission Captain reads the complete required intake and profile,
+complete `FRVE-005-v7-VR-22`, complete `FRSH-005-v1-VR-25`, complete
+`FRVE-005-v7-VR-21`, both retained sources, `FRWO-005-v7`, and all cited
+controls.
 
-Science independently proves exact tracked identities and strict source form,
-outer parsing, frozen carrier identities and roundtrips, split stage order,
-controller/parent/child cardinalities, exact bounded result allowlists, and
-`13/13` preflight absence. If those gates pass, Science invokes the exact
-tracked outer controller exactly once through Windows PowerShell 5.1 x64 with
-the frozen invocation. It captures controller stdout/stderr and native exit
-asynchronously. No alternate runner, correction, or retry is permitted after
-start.
-
-Accepted controller result returns `POLISH VIABILITY READY` to one fresh
-Mission. An exact rejected parent stop must expose only its allowlisted stage
-and fixed code in the one scalar; Science records the exact HOLD and routes
-the located defect to its earliest owner. Any other mismatch is exact HOLD.
-Science changes only its variance and this handoff, commits, and does not push.
+Mission performs no controller, parent, child, credential, request, API,
+media, product, test, build, browser, E2E, or residual operation. It issues
+exactly one new versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD`
+decision for the exact `SR05_CHILD_CAPTURE` failure. Any future proof must
+retain only bounded allowlisted child exit/stdout/stderr facts sufficient to
+locate the capture assertion, without exposing a parent/child body, diagnostic
+text, credential, response, Base64 member, exception, or stack. The completed
+run is not reinterpreted or retried.
 
 Do not route to Quartermaster; call the API; consume ordinal `2`; inspect
 media/pixels; change product/tests; run E2E; reveal; advance maturity; close an
