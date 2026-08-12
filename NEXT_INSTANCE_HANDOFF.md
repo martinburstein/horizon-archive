@@ -2,14 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-008-v1-VR-02 / CORRECTED E2E READY`**
+Current disposition: **`HOLD / FRAB-008-v1-HOLD-03 / L03-03 RE-ENTRY`**
 
-Exact next owner: **one fresh Intelligence Officer / `intelligence_officer`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-Read the full Intelligence profile, `FRSH-008-v1-VR-02`, both Intelligence
-HOLDs, both Combat variances, and the full Host 08 chain. Independently rerun
-release gates and exactly one corrected E2E under a fresh external QA root,
-then release or reject and synchronize all release controls.
+Read the full Mission profile, `FRAB-008-v1-HOLD-03`, and current Host 08
+variances. Adjudicate the closed list of three generic Client Bridge re-entry
+calls at E2E lines 978/989/1019. Authorize Combat replacement through native
+Host 08 USE only, then one final fresh-root Intelligence E2E.
 
 Selected H8-3 is `16,815,595` bytes / SHA-256
 `f6b31c4c410c9cfc89b18047a0a529e184e58261c79f647b2afab59ecd6662a8`.
