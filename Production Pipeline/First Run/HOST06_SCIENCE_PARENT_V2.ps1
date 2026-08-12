@@ -101,16 +101,15 @@ try{
   $stage='SR04_CHILD_INVOKE'
   Assert-Exact ($process.Start()) 'CHILD_START'
   $childInvocations=1
-  $stdoutBuffer=New-Object char[] 256
-  $stderrBuffer=New-Object char[] 256
-  $stdoutCaptured=New-Object Text.StringBuilder
-  $stderrCaptured=New-Object Text.StringBuilder
+  $stdoutBuffer=New-Object byte[] 256
+  $stderrBuffer=New-Object byte[] 256
+  $stderrCaptured=New-Object IO.MemoryStream
   [long]$stdoutCount=0
   [long]$stderrCount=0
   $stdoutDone=$false
   $stderrDone=$false
-  $stdoutTask=$process.StandardOutput.ReadAsync($stdoutBuffer,0,$stdoutBuffer.Length)
-  $stderrTask=$process.StandardError.ReadAsync($stderrBuffer,0,$stderrBuffer.Length)
+  $stdoutTask=$process.StandardOutput.BaseStream.ReadAsync($stdoutBuffer,0,$stdoutBuffer.Length)
+  $stderrTask=$process.StandardError.BaseStream.ReadAsync($stderrBuffer,0,$stderrBuffer.Length)
   while(-not($stdoutDone-and$stderrDone)){
     $pending=@()
     if(-not$stdoutDone){$pending+=$stdoutTask}
@@ -120,9 +119,7 @@ try{
       $read=$stdoutTask.GetAwaiter().GetResult()
       if($read-eq 0){$stdoutDone=$true}else{
         $stdoutCount+=$read
-        $remaining=256-$stdoutCaptured.Length
-        if($remaining-gt 0){[void]$stdoutCaptured.Append($stdoutBuffer,0,[Math]::Min($read,$remaining))}
-        $stdoutTask=$process.StandardOutput.ReadAsync($stdoutBuffer,0,$stdoutBuffer.Length)
+        $stdoutTask=$process.StandardOutput.BaseStream.ReadAsync($stdoutBuffer,0,$stdoutBuffer.Length)
       }
     }
     if((-not$stderrDone)-and$stderrTask.IsCompleted){
@@ -130,8 +127,8 @@ try{
       if($read-eq 0){$stderrDone=$true}else{
         $stderrCount+=$read
         $remaining=512-$stderrCaptured.Length
-        if($remaining-gt 0){[void]$stderrCaptured.Append($stderrBuffer,0,[Math]::Min($read,$remaining))}
-        $stderrTask=$process.StandardError.ReadAsync($stderrBuffer,0,$stderrBuffer.Length)
+        if($remaining-gt 0){$stderrCaptured.Write($stderrBuffer,0,[Math]::Min($read,$remaining))}
+        $stderrTask=$process.StandardError.BaseStream.ReadAsync($stderrBuffer,0,$stderrBuffer.Length)
       }
     }
   }
@@ -139,7 +136,11 @@ try{
   $childExitEvidence=[int]$process.ExitCode
   $childStdoutCharacters=$stdoutCount
   $childStderrCharacters=$stderrCount
-  $stderr=$stderrCaptured.ToString()
+  $stderrBytes=$stderrCaptured.ToArray()
+  $stderr=$null
+  $stderrAscii=$true
+  foreach($byte in $stderrBytes){if($byte-gt 127){$stderrAscii=$false;break}}
+  if($stderrAscii){$stderr=$ascii.GetString($stderrBytes)}
   $childStderrClass=Get-ChildStderrClass $stderr $stderrCount $expectedDiagnostic
   $stage='SR05_CHILD_CAPTURE'
   Assert-Exact ($childExitEvidence-eq 87) 'CHILD_EXIT'
@@ -165,6 +166,7 @@ try{
   [Console]::Error.WriteLine('SCIENCE_PARENT_STOP_V2|stage='+$stage+'|assertion=ASSERTION_FAILED|childInvocations='+$childInvocations+'|childExit='+$childExitFact+'|childStdout='+$childStdoutFact+'|childStderr='+$childStderrFact+'|code=ASSERTION_FAILED')
   exit 88
 }finally{
+  if($stderrCaptured){$stderrCaptured.Dispose()}
   if($process){$process.Dispose()}
   $launcherCarrier=$null;$combinedCarrier=$null;$launcherBytes=$null;$combinedBytes=$null;$launcher=$null;$combined=$null
 }
