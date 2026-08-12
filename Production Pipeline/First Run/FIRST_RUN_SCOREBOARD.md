@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v11`
+Scoreboard ID: `FRSB-005-v12`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v11`
+Release map: `FRRM-005-v12`
 
-Operations source inspected: `1aaecae697996258cd4a3c6458b4ec0515558cdf`
+Operations source inspected: `750ab56fa9bc63f34879c260a76ce6bedc6403bb`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -18,8 +18,15 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v11 / Stranded Lens Cradle -
-Dictionary-Safe Image Response Attempt`**.
+Selected bounded Work Order: **`FRWO-005-v12 / Stranded Lens Cradle -
+Post-D1 Decision Hold`**.
+
+V11 D1 returned HTTP 200 and a valid 4K PNG, then failed private objective
+review because the relation exceeded its frozen composition band and the
+fragment approach would not survive required narrow/effective-`200%` layouts.
+D1 was deleted under exact identity controls and all fresh paths are absent.
+No product or maturity evidence exists. V12 records terminal HOLD pending
+Martin's separate decision; it authorizes no request.
 
 The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
 remains withdrawn and closed without production, and its negative finding
@@ -121,7 +128,7 @@ first missing fixed encounter and locks exactly one new-source continuity.
 no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
-Martin's bounded media authorization and `FRPB-001-v2` permit the distinct
+Martin's bounded media authorization and `FRPB-001-v2` permitted the distinct
 successor `FRWO-005-v11` to own at most one eventual canonical additional
 Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03` integration.
 Its target `1 accepted shared compression / 2 exact / 9 missing` is not current
@@ -130,8 +137,9 @@ accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-One fresh Mission context is the exact next owner. It must freeze the
-strict official `ImagesResponse` parser, bounded sanitized status/content-type/
+Martin is the exact next owner. Until Martin decides, no further role may
+freeze or execute the strict official `ImagesResponse` parser, bounded
+sanitized status/content-type/
 failure evidence, the exact authorized helper, and restore all fixture roots to
 absence; then independently revalidate the generatable/runtime-polishable asset
 envelope; the closed v7/v8/v9 ledgers and sole fresh v10 `{C1}` budget; exact endpoint/
@@ -142,7 +150,8 @@ pre-pixel PNG/sRGB/dimension/size/metadata/CRC/decode gates; exact rejected /
 selected cleanup; and selected byte-identical import/provenance. The
 pre-generation Combat manifest,
 numeric media/PBA budgets, six-layout/accessibility/state feasibility,
-validation, no-reveal boundary, and rollback remain exact. No Mission,
+validation, no-reveal boundary, and rollback remain exact. No Operations,
+Science, Mission,
 generation/API call, media attempt, asset selection/import, Host 06
 implementation, reveal, Host 07-15 work, Witness promotion, City correction,
 maturity inference, OPEN-classification closure, residual inspection,

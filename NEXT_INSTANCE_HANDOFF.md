@@ -2,21 +2,21 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRCA-005-v11 / SOLE D1 HTTP 200 / VALID 4K
-PNG / PRIVATE OBJECTIVE LAYOUT REJECTION / D1 CONSUMED / NO RETRY OR D2 /
-EXACT CLEANUP`**
+Current disposition: **`HOLD / FRWO-005-v12 / D1 VALID 4K BUT OBJECTIVELY
+REJECTED FOR RESPONSIVE LAYOUT / EXACT CLEANUP / NO PRODUCT / NO REMAINING
+REQUEST AUTHORITY / MARTIN DECISION REQUIRED`**
 
-Exact next owner: **one fresh Operations Planning Major /
-`operations_planning_major`**
+Exact next owner: **Martin**
 
-Fresh Operations reads the complete intake/profile, `FRWO-005-v11`,
-`FRVE-005-v10`, `FRSH-005-v1-VR-42`, and `FRCA-005-v11`. Close v11 honestly:
-D1 is consumed, its valid 4K candidate was privately rejected because the
-central relation and fragment-led approach failed the frozen responsive layout
-bands, all rejected bytes and fresh paths are absent, and no product exists.
-Issue terminal HOLD unless Martin separately authorizes a new finite image
-attempt; do not infer another paid request, revive D1, weaken layout, import,
-reveal, begin Image, or run E2E.
+Choose one bounded direction:
 
-All protected paths/state, route, lesson, canon, ending, and no-reveal rules
-remain exact.
+1. explicitly authorize a new separately versioned finite Host 06 image
+   attempt, which must begin again at fresh Operations -> Science -> Mission
+   before any credential read or request; or
+2. withdraw further Host 06 media attempts and close this cycle at terminal
+   HOLD with Host 06 honestly remaining missing.
+
+Do not infer another paid request, revive or reconstruct D1, weaken responsive
+layout, skip to Host 07, import or reveal media, begin Image, run E2E, or
+advance maturity. All protected paths/state, route, lesson, canon, ending, and
+no-reveal rules remain exact.

@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-005-v11`
+Map ID: `FRRM-005-v12`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Operations source inspected: `1aaecae697996258cd4a3c6458b4ec0515558cdf`
+Operations source inspected: `750ab56fa9bc63f34879c260a76ce6bedc6403bb`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -22,8 +22,17 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **`FRWO-005-v11 / Stranded Lens Cradle -
-Dictionary-Safe Image Response Attempt`**.
+Selected bounded Work Order: **`FRWO-005-v12 / Stranded Lens Cradle -
+Post-D1 Decision Hold`**.
+
+`FRWO-005-v11` is closed. Its sole D1 request returned HTTP 200 and a valid 4K
+PNG, but private objective review rejected the source because its central
+relation exceeded the frozen composition band and the fragment-led approach
+would not survive required narrow/effective-`200%` layouts. D1 and its exact
+paid-request authority are consumed; rejected bytes and all fresh paths are
+absent; no product or maturity evidence exists. `FRWO-005-v12` is a terminal
+decision HOLD pending Martin's separate authorization for any new finite
+attempt or withdrawal of further media work.
 
 `FRWO-004-v1` remains withdrawn and closed without production. Martin's
 bounded new-Drowned-media authorization, `FRPB-001-v2`, and `FRCL-004-v2`
@@ -109,17 +118,18 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 06` | **SELECTED - `FRWO-005-v11`**: one new source plus fixed Host 05 -> Host 06 -> unchanged `L02-03` integration | First missing fixed encounter; v11 corrects the reproduced dictionary-method defect and permits exactly one fresh `{D1}` |
-| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind independent acceptance or HOLD of `FRWO-005-v11`; no skip or repeatable host pattern is authorized |
+| 1 | `FR-03 / Host 06` | **HOLD - `FRWO-005-v12`**: no accepted source; Martin decision required | First missing fixed encounter; v11 D1 was valid but objectively rejected for responsive layout and no request authority remains |
+| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind Martin's decision on `FRWO-005-v12`; no skip or repeatable host pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
 | 6 | `FR-16` | Final-purpose Measured Horizon literary close | Ending behavior is exact; final content follows earlier journey expression unless a dependency is proven |
 | 7 | Whole game | Completion sweep | Permitted only after every critical surface is independently `FR4 RELEASED` |
 
-## Selected fifth Work Order boundary decision
+## Held fifth Work Order boundary decision
 
-`FRWO-005-v11` owns only one new eventual canonical Host 06 Drowned source and
+`FRWO-005-v12` records that `FRWO-005-v11` owned only one potential canonical
+Host 06 Drowned source and
 its complete integration into exact Host 05 -> Host 06 -> sole unchanged
 `L02-03`. It is a new Work Order under `FRPB-001-v2` and `FRCL-004-v2`, not a
 revival or amendment of closed `FRWO-004-v1`. It is a versioned replacement,
@@ -269,8 +279,8 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v11` is selected and one fresh Mission shell is the exact next
-action. `FRWO-004-v1` remains closed. This map does not preauthorize
+`FRWO-005-v12` is HOLD and Martin's decision is the exact next action.
+`FRWO-004-v1` remains closed. This map does not preauthorize
 generation/API invocation, implementation, asset selection/import, reveal, later-address
 work, maturity advancement, residual cleanup, closure of any OPEN
 classification, or `FIRST RUN COMPLETE`.
