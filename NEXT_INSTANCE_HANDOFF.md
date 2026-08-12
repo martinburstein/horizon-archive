@@ -2,40 +2,36 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRCA-005-v12 / SOLE E1 HTTP 200 / PRIVATE
-OBJECTIVE LAYOUT REJECTION / E1 CONSUMED / NO PRODUCT / NO RETRY OR E2 /
-EXACT CLEANUP / FRESH OPERATIONS`**
+Current disposition: **`HOLD / FRWO-005-v14 / FRWO-005-v13 CLOSED / SOLE E1
+HTTP 200 / TECHNICAL + PHYSICAL PASS / PRIVATE OBJECTIVE LAYOUT +
+ACCESSIBILITY REJECTION / E1 CONSUMED / NO PRODUCT OR REMAINING PAID ATTEMPT
+AUTHORITY / EXACT CLEANUP / MARTIN DECISION REQUIRED`**
 
-Exact next owner: **one fresh Operations Planning Major /
-`operations_planning_major`**
+Exact next owner: **Martin**
 
-Read `AGENTS.md`, this handoff, `FIRST_RUN_AGENT_WORKFLOW.md`, `First Run Agent
-Profiles/README.md`, and `First Run Agent Profiles/operations-planning-major.md`
-in full. Then read complete `FRWO-005-v13`, `FRVE-005-v11`,
-`FRSH-005-v1-VR-43`, and `FRCA-005-v12`, plus only the exact release-map,
-scoreboard, baseline, and continuity sections required by the Operations
-profile.
+`FRWO-005-v14` closes `FRWO-005-v13` at terminal HOLD. E1 is consumed after
+exactly one HTTP `200` request. It passed technical and physical review but
+failed private objective responsive-layout and accessibility review. All nine
+controlled/product paths are absent; accepted media remains exact `17 /
+37,410,731`; runtime remains null-first; no selected raster, provenance, copy,
+alt, layout record, content-complete candidate, Image candidate, E2E, maturity
+advance, or product change exists.
 
-Independently corroborate that E1 is consumed after exactly one HTTP `200`
-request and a private objective `LAYOUT` rejection; all nine controlled and
-product paths are absent; accepted media remains exact `17 / 37,410,731`;
-the runtime remains null-first; no selected raster, provenance, copy, alt,
-layout record, content-complete candidate, Image candidate, E2E, maturity
-advance, or product change exists; and tracked Git was clean at Quartermaster
-postflight.
+Martin must choose explicitly whether to authorize one new separately
+versioned finite Host 06 image attempt, including its exact paid-attempt count,
+or withdraw further Host 06 media attempts and leave the missing physical
+expression honestly recorded. No default is inferred.
 
-Close `FRWO-005-v13` honestly. The complete authorized attempt domain `{E1}`
-is exhausted. Do not infer E2, retry, another paid request, reuse, crop, edit,
-variation, alternate transport/model/endpoint, later host, Image work, E2E,
-release, or maturity credit from Martin's general instruction to continue.
-Any new image attempt requires Martin's separate explicit authorization, a
-fresh finite Work Order, new paths, fresh Science viability, and a new Mission
-shell. Otherwise issue terminal HOLD and leave one synchronized exact next
-action.
+Until that decision, do not begin another role, request, retry, E2, API/media
+operation, Science envelope, Mission shell, implementation, Image work, E2E,
+release, later host, maturity advance, completion sweep, or `FIRST RUN
+COMPLETE`. A new attempt requires a fresh Operations Work Order with new
+literal paths, fresh Science viability, and a fresh Mission shell before any
+credential read or request.
 
 Preserve the one-path rail, sole unchanged `L02-03`, lesson ownership, surface
 canon, null deltas, shared RP-012, and `successor=null`. Preserve the
 Operations protected-filename enumeration variance as separate and OPEN
-without repeating, using, closing, merging, waiving, or renumbering it. Do not
-access protected user state, accepted-media pixels, historical attempts, old
-roots, opaque residuals, repository quarantine, or hidden lore.
+without repeating, using, closing, merging, waiving, curing, or renumbering
+it. Do not access protected user state, accepted-media pixels, historical
+attempts, old roots, opaque residuals, repository quarantine, or hidden lore.
