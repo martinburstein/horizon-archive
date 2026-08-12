@@ -11,6 +11,9 @@ $parentStderrCaptured=$null
 $captureClass='NOT_STARTED'
 $parentStopStage='NOT_APPLICABLE'
 $parentStopCode='NOT_APPLICABLE'
+$childExitFact='NOT_APPLICABLE'
+$childStdoutFact='NOT_APPLICABLE'
+$childStderrFact='NOT_APPLICABLE'
 
 function Get-Sha256Hex([byte[]]$bytes){
   $sha=[Security.Cryptography.SHA256]::Create()
@@ -175,6 +178,9 @@ if($captureClass-ceq'COMPLETE'){
       $childInvocationsFact=$stopMatch.Groups[2].Value
       $parentStopStage=$stopMatch.Groups[1].Value
       $parentStopCode='ASSERTION_FAILED'
+      $childExitFact=$stopMatch.Groups[3].Value
+      $childStdoutFact=$stopMatch.Groups[4].Value
+      $childStderrFact=$stopMatch.Groups[5].Value
     }else{$stderrFact='NONEXACT_BOUNDED'}
   }else{$stderrFact='NONEXACT_BOUNDED'}
 }
@@ -182,7 +188,7 @@ $postflightAbsent=$true
 foreach($path in $controlledPaths){if(-not(Test-PathAbsent $path)){$postflightAbsent=$false}}
 $accepted=($captureClass-ceq'COMPLETE')-and($exitFact-ceq'0')-and($stdoutFact-ceq'EXACT_ACCEPTED_V2')-and($stderrFact-ceq'EMPTY')-and($childInvocationsFact-ceq'1')-and$postflightAbsent
 $classification=if($accepted){'ACCEPTED_PARENT_RESULT'}else{'REJECTED_PARENT_RESULT'}
-$result='SCIENCE_OUTER_RESULT_V1|classification='+$classification+'|parentExit='+$exitFact+'|parentStdout='+$stdoutFact+'|parentStderr='+$stderrFact+'|parentStopStage='+$parentStopStage+'|parentStopCode='+$parentStopCode+'|childInvocations='+$childInvocationsFact+'|postflightAbsent='+$postflightAbsent.ToString().ToLowerInvariant()
+$result='SCIENCE_OUTER_RESULT_V1|classification='+$classification+'|parentExit='+$exitFact+'|parentStdout='+$stdoutFact+'|parentStderr='+$stderrFact+'|parentStopStage='+$parentStopStage+'|parentStopCode='+$parentStopCode+'|childExitFact='+$childExitFact+'|childStdoutFact='+$childStdoutFact+'|childStderrFact='+$childStderrFact+'|childInvocations='+$childInvocationsFact+'|postflightAbsent='+$postflightAbsent.ToString().ToLowerInvariant()
 [Console]::Out.WriteLine($result)
 if($process){$process.Dispose()}
 if($accepted){exit 0}else{exit 89}
