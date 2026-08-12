@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: Produce a distant first-person environmental landmark: a very small upper-center cluster of unequal water-filled stone intervals connected by pressure traces, with two natural reflections, one dark no-return interval, incoming material continuity, and a dry observation ring. Inert geology, never life or communication.
+Scene/background: Huge empty dry basin viewed from far away; restrained distant walls and horizon.
+Subject: Low irregular formation with five nonuniform cavities, recessed water, dry lips, off-axis exterior coupling.
+Style/medium: Ultra-detailed photoreal environment photography for a premium exploration game.
+Composition/framing: Exact 3840x2160. High distant camera. Complete family x 0.41 to 0.59, y 0.17 to 0.37, center 0.50,0.27, maximum width 0.19 and height 0.21. All essential centers x 0.35 to 0.65, y 0.17 to 0.44. More than half the frame below is uninterrupted dry terrain. No foreground relation.
+Lighting/mood: Diffuse cool daylight, calm water, quiet analytical mood.
+Constraints: Three unequal sizes, reflection pair, dark case, seam, coupling, dry rim, full four-sided margin.
+Avoid: Low placement, macro, foreground, edge contact, symmetry, face, skull, body, performer, choir, music, sound, text, UI, response, reward, authority, portal, later-host reveal, watermark.

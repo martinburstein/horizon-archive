@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: Render a very wide elevated environmental survey with a tiny centered pressure-linked cavity family: unequal wet intervals, two restrained sky reflections, one dark nonreflective interval, dry mineral coupling, lower-left continuity, and a safe dry annular ledge. Inert geology only.
+Scene/background: Expansive dry stone plain and distant basin walls; empty terrain dominates.
+Subject: Low asymmetrical formation with four to six uneven cavity openings, water recessed below dry lips, one dark offset opening, subtle exterior stress traces.
+Style/medium: Photorealistic high-end game-environment source, documentary realism.
+Composition/framing: Exact 3840x2160. Place the full formation in the UPPER-MIDDLE, x 0.40 to 0.60, y 0.20 to 0.40, center 0.50,0.30. Maximum width 0.21, height 0.21. All essential centers remain x 0.35 to 0.65, y 0.20 to 0.47. At least half the image below the formation is quiet dry terrain. No essential object near an edge.
+Lighting/mood: Neutral silver daylight, natural reflection, quiet unresponsive atmosphere.
+Constraints: Three distinct scales, reflection pair, dark no-return case, pressure seam, distributed coupling, continuous dry rim, strong margins.
+Avoid: Close view, center-low or bottom placement, giant hole, edge-reaching ring, face-like symmetry, biology, people, performance, music, speech, text, UI, terminal, message, authority, reward, portal, later-host clue, watermark.

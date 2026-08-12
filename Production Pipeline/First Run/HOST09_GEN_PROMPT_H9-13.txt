@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: Create a broad dry-basin tableau where one compact family of differently sized flooded stone cavities sits visibly above the image midpoint. Show two reflected openings, one matte dark pressure-linked cavity, an incoming lower-left mineral seam, dry exterior coupling, and a continuous safe observation rim. No communicative or biological meaning.
+Scene/background: Vast weathered archive basin with quiet dry terrain filling most of the canvas.
+Subject: Five irregular recessed cavities in one small asymmetrical mineral island, thick dry lips, calm contained water, selective reflection, one dark interval.
+Style/medium: Maximum-quality photoreal game concept source, restrained monumental geology.
+Composition/framing: 3840x2160, distant high camera. Family x 0.38 to 0.62, y 0.18 to 0.40, center x 0.50 y 0.29. Every required center x 0.33 to 0.67, y 0.18 to 0.47. Preserve broad blank stone around all sides and very large lower negative space. Incoming seam may rise diagonally from x 0.31 y 0.52 to the island but must not dominate foreground.
+Lighting/mood: Cool even illumination, modest contrast, restrained reflection.
+Constraints: Minimum three unequal intervals, reflection pair, no-return case, pressure continuity, distributed dry coupling, safe dry rim.
+Avoid: Lower-third subject, close-up, foreground dominance, cropped rim, equal circles, face, mouth, anatomy, creature, person, singer, choir, instrument, sound wave, text, symbol, UI, answer, message, world reaction, access, authority, portal, underwater path, later-host reveal, watermark.

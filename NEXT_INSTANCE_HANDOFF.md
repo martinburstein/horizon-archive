@@ -2,14 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`POLISH VIABILITY READY / FRVE-009-v3 / FIVE FRESH HIGH-AIM ATTEMPTS`**
+Current disposition: **`FIRST RUN SHELL READY / FRSH-009-v3 / FIVE FRESH HIGH-AIM ATTEMPTS`**
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Reconnaissance Sergeant / `reconnaissance_sergeant`**
 
-Read the full Mission profile, `FRWO-009-v5`, `FRVE-009-v3`, and the prior Host
-09 chain. Freeze five independent high-aim prompts, a fresh GUID scratch root,
-the unchanged acceptance/CLI/custody/runtime/release controls, and strict role
-sequence. Push FIRST RUN SHELL READY and route fresh Recon. Do not generate.
+Read the full Recon profile, `FRSH-009-v3`, and current treatment. Issue a
+narrow high-aim composition variance preserving meaning, then route Tactical.
+Do not generate or access media.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then

@@ -1,0 +1,10 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: Create a distant wide basin view with one small inert family of unequal water-filled stone cavities, two reflected-water cases, one dark no-return case, dry coupling, incoming pressure continuity, and a safe dry rim. Geology only; no voice, music, life, interface, or doorway.
+Scene/background: Vast dry weathered basin with broad empty terrain on all sides. A narrow mineral seam enters from lower-left midground.
+Subject: Compact asymmetrical stone island with five unequal recessed openings, water below dry lips, two natural reflections, one matte dark cavity, exterior pressure web, continuous dry observation rim.
+Style/medium: Premium photorealistic cinematic game environment photography.
+Composition/framing: 3840x2160, distant elevated camera. Deliberately place the complete small island HIGH in frame: family x 0.39 to 0.61, y 0.23 to 0.43, center x 0.50 y 0.33. Keep all essential centers x 0.34 to 0.66, y 0.22 to 0.49. Leave large unused dry terrain left, right, above, and especially below. No foreground subject or edge contact.
+Lighting/mood: Cool diffuse daylight, restrained reflections, open dark detail, silent and analytical.
+Constraints: Minimum three distinct cavity sizes; reflection pair; no-return cavity; incoming pressure seam; distributed dry coupling; dry rim; broad four-sided margin.
+Avoid: Close-up, lower-half placement, foreground enlargement, edge crop, symmetry, face, eyes, mouth, skull, anatomy, person, performer, choir, instrument, sound, text, UI, answer, message, response, reward, access, authority, portal, flooded path, underwater target, later-host reveal, watermark.
