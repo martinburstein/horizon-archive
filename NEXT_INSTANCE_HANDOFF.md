@@ -2,43 +2,40 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-005-v1-VR-35 /
-FILELESS REDIRECTED-STANDARD-INPUT CARRIER / SOLE A1 UNCONSUMED / FRESH
-QUARTERMASTER REQUIRED`**
+Current disposition: **`HOLD / FRCA-005-v7 / EXACT RETAINED STDIN PARENT
+STOPPED AT PT02_HELPER_SOURCE / ZERO CREDENTIAL, REQUEST, OR SEND / A1
+UNCONSUMED / FRESH SCIENCE REQUIRED`**
 
 Current Work Order / Science: `FRWO-005-v8` / `FRVE-005-v8-VR-01`
 
 Active shell: `FRSH-005-v1-VR-35`
 
-Predecessor result: `FRCA-005-v6`
+Predecessor result: `FRCA-005-v7`
 
 Planning controls: `FRRM-005-v8` / `FRSB-005-v8`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Quartermaster / `quartermaster`**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
 ## Exact next action
 
-Fresh Quartermaster reads the complete required intake/profile, complete
-`FRSH-005-v1-VR-35`, `FRVE-005-v8-VR-01`, `FRCA-005-v6`, `FRVE-005-v8`,
-`FRWO-005-v8`, terminal VR-34, and every exact retained launcher, parent,
-carrier, controller, and builder source.
+Fresh Science reads the complete required intake/profile, complete
+`FRCA-005-v7`, `FRSH-005-v1-VR-35`, `FRVE-005-v8-VR-01`, `FRCA-005-v6`,
+`FRVE-005-v8`, `FRWO-005-v8`, terminal VR-34, and every exact retained
+launcher, parent, carrier, controller, and builder source.
 
-It independently reproduces all frozen byte identities and exact controlled-
-path absence, then invokes the retained stdin parent exactly once. The parent
-supplies the exact retained carrier through one closed redirected-standard-
-input stream. The obsolete carrier environment value must remain absent.
-`OPENAI_API_KEY` remains inherited separately and may be read only by the
-unchanged production carrier at PT06 after helper cleanup.
-
-At first terminal result Quartermaster stops. A pre-send failure leaves A1
-unconsumed but authorizes no relaunch under the same shell. A begun `SendAsync`
-consumes A1 regardless of outcome. No retry, A2, alternate binding/request,
-fallback, source repair, or image reveal exists. PASS requires the complete
-technical, physical, layout, accessibility, product, provenance, integration,
-test/build/served/PBA/E2E, cleanup, commit, and push envelope. Otherwise write
-one exact HOLD ledger and synchronize NEXT to the earliest owner.
+It independently reproduces the exact pre-send `PT02_HELPER_SOURCE` failure
+using inert source/byte analysis or a credential-cleared fixture only. It must
+reconcile why the retained helper-source text fails the frozen `1,693 /
+98cf...` predicate on this exact host and determine whether one bounded
+source/identity correction is viable. Science may not execute a live
+production carrier, read the credential, construct a request, begin
+`SendAsync`, inspect media, create product state, reveal an image, or consume
+A1. It issues one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`
+artifact and synchronizes NEXT. Any viable correction requires one new
+complete Mission shell before a fresh Quartermaster may act.
 
 Repository QA quarantine, protected PDF, training tree, Martin's real
 browser/profile/save, accepted-media bytes/pixels, all v7 paths/ordinals/
