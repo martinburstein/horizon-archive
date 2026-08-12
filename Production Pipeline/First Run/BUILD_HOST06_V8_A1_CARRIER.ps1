@@ -234,6 +234,7 @@ $launcherLength = $launcherBytes.Length
 $launcherSha = ([BitConverter]::ToString($sha.ComputeHash($launcherBytes))).Replace('-','').ToLowerInvariant()
 $stdinParent = [IO.File]::ReadAllText($stdinParentPath, $utf8)
 $stdinParent = [regex]::Replace($stdinParent, 'carrierBytes\.Length-ne \d+-or\(\[BitConverter\]::ToString\(\$sha\.ComputeHash\(\$carrierBytes\)\)\)\.Replace\(''-'',''''\)\.ToLowerInvariant\(\)-cne''[0-9a-f]{64}''', 'carrierBytes.Length-ne '+$carrierLength+'-or([BitConverter]::ToString($sha.ComputeHash($carrierBytes))).Replace(''-'','''').ToLowerInvariant()-cne'''+$carrierSha+'''', 1)
+$stdinParent = [regex]::Replace($stdinParent, 'carrier\.Length-ne \d+', 'carrier.Length-ne '+$carrierLength, 1)
 $stdinParent = [regex]::Replace($stdinParent, 'launcherBytes\.Length-ne \d+-or\$launcherHash-cne''[0-9a-f]{64}''', 'launcherBytes.Length-ne '+$launcherLength+'-or$launcherHash-cne'''+$launcherSha+'''', 1)
 [IO.File]::WriteAllText($carrierPath, $carrier, $utf8)
 [IO.File]::WriteAllText($launcherPath, $launcher, $utf8)

@@ -10,7 +10,7 @@ try{
   if($carrierBytes.Length-ne 34766-or([BitConverter]::ToString($sha.ComputeHash($carrierBytes))).Replace('-','').ToLowerInvariant()-cne'9b1d315bc728299145d9a9582f7fd0da134403dd0a076254a8423a065da046a5'){throw 'PARENT_CARRIER_IDENTITY'}
   foreach($byte in $carrierBytes){if($byte-gt 127){throw 'PARENT_CARRIER_ASCII'}}
   $carrier=$strictUtf8.GetString($carrierBytes)
-  if($carrier.Length-ne 33666){throw 'PARENT_CARRIER_LENGTH'}
+  if($carrier.Length-ne 34766){throw 'PARENT_CARRIER_LENGTH'}
   $tokens=$null;$errors=$null
   [void][Management.Automation.Language.Parser]::ParseInput($carrier,[ref]$tokens,[ref]$errors)
   if($errors.Count-ne 0){throw 'PARENT_CARRIER_PARSE'}
