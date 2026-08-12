@@ -2,14 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`CONTINUITY LOCK / FRCL-010-v1 / FOUR FRESH ATTEMPTS`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-010-v1 / FOUR PRIVATE ATTEMPTS`**
 
-Exact next owner: **one Operations Planning Major**
+Exact next owner: **one Mission Captain**
 
-Issue one bounded Work Order for exactly four fresh sequential attempts, first
-PASS stop, exact new prompt/path identities, private review, rejected cleanup,
-accepted-only import/integration, and full release ladder. No generation belongs
-to Operations.
+Issue one conflict-free FIRST RUN SHELL READY contract preserving all frozen
+identities, first-PASS stop, private custody, accepted-only integration, and
+release gates; push accumulated planning docs. No generation belongs to Mission.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
