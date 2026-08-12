@@ -12,6 +12,11 @@ if (-not $launcherLine.StartsWith("`$launcherCarrier='") -or -not $launcherLine.
 $carrier = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($carrierLine.Substring(18, $carrierLine.Length - 19)))
 $launcher = [Text.Encoding]::UTF8.GetString([Convert]::FromBase64String($launcherLine.Substring(18, $launcherLine.Length - 19)))
 
+$helperNeedle = '"@' + [char]10 + '  $utf8=New-Object Text.UTF8Encoding($false,$true)'
+$helperReplacement = '"@' + [char]10 + '  $helperSource += [char]10' + [char]10 + '  $utf8=New-Object Text.UTF8Encoding($false,$true)'
+if (([regex]::Matches($carrier, [regex]::Escape($helperNeedle))).Count -ne 1) { throw 'HELPER_LF_SOURCE' }
+$carrier = $carrier.Replace($helperNeedle, $helperReplacement)
+
 $oldHelper = 'C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-native-identity-725b75e4-8083-4df5-9a80-a0301b8f00dd'
 $newHelper = 'C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-native-identity-v8-5fbbd31e-8b50-4cb4-a0d3-c2f0d4b9e8aa'
 $oldLive = 'C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-api-6eae8313-1407-492d-af7c-675051ab8e08'

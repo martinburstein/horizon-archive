@@ -7,16 +7,16 @@ $sha=[Security.Cryptography.SHA256]::Create()
 $process=$null;$carrier=$null;$carrierBytes=$null
 try{
   $carrierBytes=[IO.File]::ReadAllBytes($carrierPath)
-  if($carrierBytes.Length-ne 33638-or([BitConverter]::ToString($sha.ComputeHash($carrierBytes))).Replace('-','').ToLowerInvariant()-cne'81e82f1b4f6bd936c4002f969ea6896533673ef7d03b4eef23b7953e7fcbe491'){throw 'PARENT_CARRIER_IDENTITY'}
+  if($carrierBytes.Length-ne 33666-or([BitConverter]::ToString($sha.ComputeHash($carrierBytes))).Replace('-','').ToLowerInvariant()-cne'f3926cac83905f4d82f72627b9ea518bf69e545d5aeb3c5f78aafa37996c8077'){throw 'PARENT_CARRIER_IDENTITY'}
   foreach($byte in $carrierBytes){if($byte-gt 127){throw 'PARENT_CARRIER_ASCII'}}
   $carrier=$strictUtf8.GetString($carrierBytes)
-  if($carrier.Length-ne 33638){throw 'PARENT_CARRIER_LENGTH'}
+  if($carrier.Length-ne 33666){throw 'PARENT_CARRIER_LENGTH'}
   $tokens=$null;$errors=$null
   [void][Management.Automation.Language.Parser]::ParseInput($carrier,[ref]$tokens,[ref]$errors)
   if($errors.Count-ne 0){throw 'PARENT_CARRIER_PARSE'}
   $launcherBytes=[IO.File]::ReadAllBytes($launcherPath)
   $launcherHash=([BitConverter]::ToString($sha.ComputeHash($launcherBytes))).Replace('-','').ToLowerInvariant()
-  if($launcherBytes.Length-ne 2638-or$launcherHash-cne'0465a17fd73c3f732832cd4ecb0260ca0a8ac1959c5644e6ef6d0f4c7badd83b'){throw 'PARENT_LAUNCHER_IDENTITY'}
+  if($launcherBytes.Length-ne 2638-or$launcherHash-cne'c9497754b90e18b4f8ab8bdea9fc4f2d86e6056a00e671850b3fec0f04783c1a'){throw 'PARENT_LAUNCHER_IDENTITY'}
   $launcher=$strictUtf8.GetString($launcherBytes)
   $tokens=$null;$errors=$null
   [void][Management.Automation.Language.Parser]::ParseInput($launcher,[ref]$tokens,[ref]$errors)

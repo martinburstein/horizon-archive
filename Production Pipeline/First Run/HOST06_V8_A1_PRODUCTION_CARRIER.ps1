@@ -66,6 +66,7 @@ namespace HorizonArchive.Host06 {
   }
 }
 "@
+  $helperSource += [char]10
   $utf8=New-Object Text.UTF8Encoding($false,$true)
   $sha=[Security.Cryptography.SHA256]::Create()
   $sourceBytes=$utf8.GetBytes($helperSource)
