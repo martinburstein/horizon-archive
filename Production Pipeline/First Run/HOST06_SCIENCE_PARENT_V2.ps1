@@ -80,11 +80,55 @@ try{
   $helperSourceReplacement='"@'+[char]10+'  $helperSource += [char]10'+[char]10+'  $utf8=New-Object Text.UTF8Encoding($false,$true)'
   Assert-Exact (($combined.IndexOf($helperSourceNeedle,[StringComparison]::Ordinal)-ge 0)-and($combined.IndexOf($helperSourceNeedle,[StringComparison]::Ordinal)-eq$combined.LastIndexOf($helperSourceNeedle,[StringComparison]::Ordinal))) 'HELPER_SOURCE_PATCH'
   $combined=$combined.Replace($helperSourceNeedle,$helperSourceReplacement)
+  $dllFreezeNeedle=@'
+  if ($dllInfo.Length -ne 4096 -or (($dllInfo.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0)) { throw 'PT03_HELPER_COMPILE' }
+  $assemblyBytes=[IO.File]::ReadAllBytes($helperDll)
+  if (([BitConverter]::ToString($sha.ComputeHash($assemblyBytes))).Replace('-','').ToLowerInvariant() -cne '39e85b32b7f8437c2b5732e26093ca5bd9a9182b048c411e9dc5660ba03f10c9') { throw 'PT03_HELPER_COMPILE' }
+  $production.Stage='PT04_HELPER_LOAD_IDENTITY'
+  $assembly=[Reflection.Assembly]::Load($assemblyBytes)
+  $identityType=$assembly.GetType('HorizonArchive.Host06.FileIdentity',$true,$false)
+  $readMethod=$identityType.GetMethod('Read',[Reflection.BindingFlags]'Public,Static')
+  $declared=$identityType.GetMethods([Reflection.BindingFlags]'Public,NonPublic,Static,DeclaredOnly')
+  if ($declared.Count -ne 2 -or $readMethod.ReturnType.FullName -cne 'System.UInt64[]' -or $readMethod.GetParameters().Count -ne 1 -or $readMethod.GetParameters()[0].ParameterType.FullName -cne 'Microsoft.Win32.SafeHandles.SafeFileHandle') { throw 'PT04_HELPER_LOAD_IDENTITY' }
+  $dllStream=New-Object IO.FileStream($helperDll,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::None)
+  try { $dllIdentity=[HorizonArchive.Host06.FileIdentity]::Read($dllStream.SafeFileHandle) } finally { $dllStream.Dispose() }
+  if ($dllIdentity.Count -ne 5 -or $dllIdentity[2] -ne 1 -or (($dllIdentity[3] -band 0x400) -ne 0) -or $dllIdentity[4] -ne 4096) { throw 'PT04_HELPER_LOAD_IDENTITY' }
+'@
+  $dllFreezeReplacement=@'
+  if ($dllInfo.Length -lt 1 -or $dllInfo.Length -gt 1048576 -or (($dllInfo.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0)) { throw 'PT03_HELPER_COMPILE' }
+  $assemblyBytes=[IO.File]::ReadAllBytes($helperDll)
+  $assemblyLength=$assemblyBytes.Length
+  $assemblySha=([BitConverter]::ToString($sha.ComputeHash($assemblyBytes))).Replace('-','').ToLowerInvariant()
+  if ($assemblyLength -ne $dllInfo.Length) { throw 'PT03_HELPER_COMPILE' }
+  $production.Stage='PT04_HELPER_LOAD_IDENTITY'
+  $assembly=[Reflection.Assembly]::Load($assemblyBytes)
+  $identityType=$assembly.GetType('HorizonArchive.Host06.FileIdentity',$true,$false)
+  $readMethod=$identityType.GetMethod('Read',[Reflection.BindingFlags]'Public,Static')
+  $declared=$identityType.GetMethods([Reflection.BindingFlags]'Public,NonPublic,Static,DeclaredOnly')
+  if ($declared.Count -ne 2 -or $readMethod.ReturnType.FullName -cne 'System.UInt64[]' -or $readMethod.GetParameters().Count -ne 1 -or $readMethod.GetParameters()[0].ParameterType.FullName -cne 'Microsoft.Win32.SafeHandles.SafeFileHandle') { throw 'PT04_HELPER_LOAD_IDENTITY' }
+  $dllStream=New-Object IO.FileStream($helperDll,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::None)
+  try {
+    $observedBytes=New-Object byte[] $assemblyLength
+    $observedOffset=0
+    while($observedOffset-lt$assemblyLength){$observedRead=$dllStream.Read($observedBytes,$observedOffset,$assemblyLength-$observedOffset);if($observedRead-le 0){throw 'PT04_HELPER_LOAD_IDENTITY'};$observedOffset+=$observedRead}
+    if($dllStream.ReadByte()-ne -1){throw 'PT04_HELPER_LOAD_IDENTITY'}
+    $observedSha=([BitConverter]::ToString($sha.ComputeHash($observedBytes))).Replace('-','').ToLowerInvariant()
+    $dllIdentity=[HorizonArchive.Host06.FileIdentity]::Read($dllStream.SafeFileHandle)
+  } finally { $dllStream.Dispose() }
+  if ($observedOffset -ne $assemblyLength -or $observedSha -cne $assemblySha -or $dllIdentity.Count -ne 5 -or $dllIdentity[2] -ne 1 -or (($dllIdentity[3] -band 0x400) -ne 0) -or $dllIdentity[4] -ne $assemblyLength) { throw 'PT04_HELPER_LOAD_IDENTITY' }
+  $observedBytes=$null
+'@
+  Assert-Exact (($combined.IndexOf($dllFreezeNeedle,[StringComparison]::Ordinal)-ge 0)-and($combined.IndexOf($dllFreezeNeedle,[StringComparison]::Ordinal)-eq$combined.LastIndexOf($dllFreezeNeedle,[StringComparison]::Ordinal))) 'HELPER_DLL_FREEZE_PATCH'
+  $combined=$combined.Replace($dllFreezeNeedle,$dllFreezeReplacement)
+  $provenanceDllNeedle='Helper DLL: 4096 / 39e85b32b7f8437c2b5732e26093ca5bd9a9182b048c411e9dc5660ba03f10c9'
+  $provenanceDllReplacement='Helper DLL: "+$assemblyLength+" / "+$assemblySha+"'
+  Assert-Exact (($combined.IndexOf($provenanceDllNeedle,[StringComparison]::Ordinal)-ge 0)-and($combined.IndexOf($provenanceDllNeedle,[StringComparison]::Ordinal)-eq$combined.LastIndexOf($provenanceDllNeedle,[StringComparison]::Ordinal))) 'HELPER_DLL_PROVENANCE_PATCH'
+  $combined=$combined.Replace($provenanceDllNeedle,$provenanceDllReplacement)
   $combinedBytes=$strictUtf8.GetBytes($combined)
   Assert-Exact ((Get-Sha256Hex ($strictUtf8.GetBytes($launcher))) -ceq '96feaf7e62fa89e8c80cc46d38425d465cf845ffbd426405a75c73c056314212') 'LAUNCHER_IDENTITY'
-  Assert-Exact (($combinedBytes.Length -eq 27072)-and((Get-Sha256Hex $combinedBytes) -ceq 'c05bf41467e6272e890607e8848e6f3354311071942166804a4d2d7444e71158')) 'COMBINED_IDENTITY'
+  Assert-Exact (($combinedBytes.Length -eq 27690)-and((Get-Sha256Hex $combinedBytes) -ceq '91bcba2dfd55f0f9af296a9b92bfddd48312cc65aa62aa6a318e1f8fecd72ee0')) 'COMBINED_IDENTITY'
   Assert-Exact ((Get-Sha256Hex ([byte[]]$combinedBytes[0..975])) -ceq '5cd257c94bcd70b8d6ada4e0b561b2a14ed52fd9459146b1269dc93ce1bdc7d1') 'PREFIX_IDENTITY'
-  Assert-Exact ((Get-Sha256Hex ([byte[]]$combinedBytes[976..27071])) -ceq '580a11aacd59301265f4e86abc83dc973cff68b9efac015b626086b42a37836e') 'TAIL_IDENTITY'
+  Assert-Exact ((Get-Sha256Hex ([byte[]]$combinedBytes[976..27689])) -ceq '69a70f77940b2dd6457242a979522b9a7d262419968c30860c6e4bf71019c632') 'TAIL_IDENTITY'
   Assert-Exact (($combinedBytes[975] -eq 10)-and($combinedBytes[976] -eq 36)-and($combinedBytes[$combinedBytes.Length-1] -eq 10)-and(-not($combinedBytes -contains 13))) 'PREFIX_EQUALITY'
   $tokens=$null;$parseErrors=$null
   [void][Management.Automation.Language.Parser]::ParseInput($combined,[ref]$tokens,[ref]$parseErrors)
