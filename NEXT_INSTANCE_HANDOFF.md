@@ -2,25 +2,23 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`DIRECTORIAL LOCK / FRDT-008-v1 / FIVE HOST 08 PROMPTS FROZEN`**
+Current disposition: **`PLAYER EXPERIENCE READY / FRPX-008-v1 / HOST 08 NULL-FIRST`**
 
-Exact next owner: **one fresh Tactical Operations Specialist / `tactical_operations_specialist`**
+Exact next owner: **one fresh Combat Engineer / `combat_engineer`**
 
-Read the full Tactical profile, `FRSH-008-v1`, `FRDT-008-v1`, all five
-`HOST08_GEN_PROMPT_H8-*.txt` files, current planning chain, released Host 07,
-generic Client Bridge/`L03-03`, and only required runtime sources. Independently
-verify prompt identities and issue a complete Host 08 player-experience
-blueprint plus synchronized fresh-Combat handoff. Do not generate, call the
-API, inspect media, or change runtime.
+Read the full Combat profile, `FRSH-008-v1`, `FRDT-008-v1`, `FRPX-008-v1`, all
+five immutable Host 08 prompts, current Host 07 and Client Bridge sources/tests,
+and validation budgets. Implement only inert null-first Host 08 runtime/tests,
+including accepted-only guard, irreversible generic-launcher switch, state,
+single target/source transition, focus/recovery, geometry/layout helpers, and
+seven null copy slots. Do not generate, call the API, inspect/import media, or
+populate selected fields.
 
-Freeze exact null-first state, Host07+L03-01/L03-02 entry, irreversible generic
-launcher replacement, sole unchanged L03-03 USE, completed read-only behavior,
-LOOK/TALK, return/reload/recovery, focus/announcement, copy/alt slots,
-normalized physical/semantic/label/protected records, six-layout probes,
-private candidate-decision schema, and Combat regression matrix. Prompt canon
-is locked; only a necessary measurable clarification may be requested as a
-variance.
+Run focused/related/full/validator/build/PBA/served non-media gates. Freeze and
+report exact code and prompt identities, commit/push at `PRODUCTION FUNCTIONAL`,
+prove synchronization, and route fresh Quartermaster only on PASS.
 
-All five attempts remain unconsumed. Preserve Hosts 01-07/media, no-reveal and
-scratch custody, the OPEN protected-QA capture-write variance, every other OPEN
-record, filename-enumeration records, protected exclusions, and VR-65.
+All five attempts are unconsumed. Preserve accepted Hosts 01-07/media, generic
+Client Bridge until accepted enablement, learning/privacy/save/route/ending,
+no-reveal custody, OPEN protected-QA capture-write variance, every other OPEN
+record, protected exclusions, and VR-65. Never inspect or stage protected QA.
