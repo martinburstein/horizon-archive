@@ -25,6 +25,16 @@
 - Browser computed CSS included canonical `50% 50%`, ruins `50% 20%`, and
   narrow `70% 0%`; equal-aspect projection retained the complete source.
 
+## Independent release gates
+
+- Cold full suite: `1008/1008 PASS` in `22.645s` wall time.
+- Curriculum validators: `40/40 PASS` using each validator's `--self-test`.
+- Production build: `224 modules PASS` in `7.944s` wall time.
+- PBA: JavaScript `1,711,071` bytes; CSS `119,757`; source maps `0`; accepted
+  media unchanged `19 / 70,136,520`.
+- Served identity: root, deep fallback, JS, and CSS all HTTP `200`; owned port
+  `4199` cleared.
+
 ## Boundaries
 
 Host 09 remains inert and null-first. No source, provenance, copy, alt, save,

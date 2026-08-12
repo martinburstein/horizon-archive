@@ -26,28 +26,13 @@ while H9-8 was invalidly rejected after passing the release envelope. The new
 derived gate and browser suite correct process evidence only; they do not add a
 source, advance maturity, or authorize another call.
 
-Host 09's complete ledger `{H9-1..H9-5}` is consumed. All five technically
-valid private candidates failed the frozen responsive layout contract and were
-identity-deleted. Scratch, product, and provenance are absent; accepted media
-remains `19 / 70,136,520`; the functional registry remains inert. No sixth
-call, retry, presentation stage, release proof, or maturity advance exists.
-
-Martin separately authorized the fresh ledger `{H9-6..H9-10}`. It is fully
-unconsumed and gated behind new Science and Mission controls. The Work Order
-targets only the repeatedly failed responsive composition margin; maturity,
-inventory, product absence, inert runtime, and every prior rejection remain
-unchanged.
-
-That fresh ledger is now fully consumed. Every candidate failed the frozen
-compact-island layout gate and was deleted; scratch/product/provenance remain
-absent. Combined Host 09 attempts total ten consumed, with no accepted source.
-Maturity, accepted inventory, and inert runtime remain unchanged.
-
-Martin separately authorized `{H9-11..H9-15}`. All five are now consumed:
-every technically valid private candidate failed the unchanged runtime layout
-gate, was identity-deleted, and was proved absent. Combined attempts total
-fifteen consumed. Maturity, inventory, product absence, and inert runtime
-remain unchanged; no further attempt or later host is authorized.
+Host 09's complete ledger `{H9-1..H9-15}` is consumed and every candidate is
+deleted/absent. Post-audit evidence correction supersedes the old responsive
+verdicts: H9-1..7 and H9-9..15 are `UNVERIFIED / DEFECTIVE RESPONSIVE GATE`;
+H9-8 is `INVALID REJECTION / RELEASE ENVELOPE HAD PASSED`. Scratch, product,
+and provenance are absent; accepted media remains `19 / 70,136,520`; the
+functional registry remains inert. No retry, presentation release, maturity
+advance, or later-host authority exists.
 
 Host 08 H8-3 is released. H8-1/H8-2 were rejected and cleaned; H8-4/H8-5 are
 unused. Accepted media is `19 / 70,136,520`.
