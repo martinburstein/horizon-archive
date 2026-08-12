@@ -1,10 +1,10 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-007-v3`
+Map ID: `FRRM-008-v1`
 
 Current release authority: `FRAB-007-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v4` / `FRCL-006-v2`
+Baseline / continuity lock: `FRPB-001-v5` / `FRCL-008-v1`
 
 Operations source inspected: `243edb4e`
 
@@ -20,9 +20,9 @@ Released predecessor: `TD-012 / PASS - AS BUILT RELEASED`
 
 Date: **2026-08-12**
 
-Current released Work Order: `FRWO-005-v21 / Stranded Lens Cradle`
+Current released Work Order: `FRWO-007-v2 / Sediment Abacus`
 
-Selected bounded Work Order: **`FRWO-007-v2 / Host 07 Sediment Abacus -
+Selected bounded Work Order: **`FRWO-008-v1 / Host 08 Severed Relay Spine -
 Imagegen CLI / Five Total Sequential Attempts Maximum`**.
 
 Martin explicitly authorized imagegen CLI fallback with five total attempts.

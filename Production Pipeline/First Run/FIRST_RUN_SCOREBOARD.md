@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-007-v3`
+Scoreboard ID: `FRSB-008-v1`
 
 Current release authority: `FRAB-007-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / lock: `FRPB-001-v4` / `FRCL-006-v2`
+Baseline / lock: `FRPB-001-v5` / `FRCL-008-v1`
 
-Release map: `FRRM-007-v3`
+Release map: `FRRM-008-v1`
 
 Operations source inspected: `243edb4e`
 
@@ -18,11 +18,12 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-007-v2 / Sediment Abacus`.
 
-Released bounded Work Order: **`FRWO-007-v2 / Host 07 Sediment Abacus - H7-3`**.
+Selected bounded Work Order: **`FRWO-008-v1 / Host 08 Severed Relay Spine -
+five sequential CLI attempts maximum`**.
 
-H7-1/H7-2 were objective layout rejections and were cleaned. H7-3 is the first
-PASS and is released; H7-4/H7-5 remain unused. Host 07 advances from missing
-to exact without changing the address-level physical `FR0` classification.
+Host 07 H7-3 remains released. The fresh Host 08 ledger
+`{H8-1..H8-5}` is unconsumed. This selection changes no maturity or inventory;
+Science and Mission must pass before any generation.
 
 G1 used prompt v4's distant center-island strategy and made exactly one HTTP
 200 request. It passed technical and physical review, then failed the exact
