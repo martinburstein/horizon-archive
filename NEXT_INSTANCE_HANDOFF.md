@@ -2,42 +2,41 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRCA-005-v9 / SOLE FUNDED B1 RETURNED HTTP
-200 BUT EXCEEDED THE FROZEN 16,500,000-BYTE RESPONSE ENVELOPE / B1 CONSUMED /
-NO MEDIA / EXACT CLEANUP / FRESH SCIENCE NEXT`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-005-v9-VR-01 /
+REQUIRED 4K RESPONSE-ENVELOPE CORRECTION / V9 B1 RETIRED / FRESH OPERATIONS
+NEXT`**
 
-Current Work Order / viability / shell: `FRWO-005-v9` / `FRVE-005-v9` /
-`FRSH-005-v1-VR-40`
+Current source ledger / variance: `FRCA-005-v9` /
+`FRVE-005-v9-VR-01`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Operations Planning Major /
+`operations_planning_major`**
 
-## Quartermaster result
+## Science result
 
-Quartermaster independently passed all retained-source, parser, synchronization,
-and nine-path-absence preflights, then invoked only the retained v9 stdin parent
-once. B1 made exactly one `SendAsync` and returned HTTP `200` with
-`application/json`, but the complete response exceeded the frozen
-`16,500,000`-byte cap at `PT10_RESPONSE_ENVELOPE`. B1 is consumed. No JSON,
-Base64, image, pixel, materialization, review, product, or provenance resulted.
-The carrier and independent postflight proved all nine controlled paths absent.
-There is no retry or B2.
+Science proved the old `16,500,000 / 16,000,000 / 12,000,000` response,
+Base64, and decoded-PNG caps cannot safely cover the lawful 4K truecolor
+domain: raw filtered scanlines alone total `24,885,360` bytes. A corrected
+finite envelope is viable at exact `40,500,000` response bytes,
+`40,000,000` canonical Base64 characters, and `30,000,000` decoded PNG bytes,
+with bounded chunking, staged reference clearing, the same strict parser and
+PNG gates, and no second copy/output. No credential, API, media, temp, or
+product activity occurred.
 
 ## Exact next action
 
-Fresh Science reads the complete intake/profile, `FRCA-005-v9`,
-`FRWO-005-v9`, `FRVE-005-v9`, and `FRSH-005-v1-VR-40`. With zero credential,
-API, media, temp, or product activity, determine whether a larger bounded
-complete-response/data-URL envelope can be safely admitted for the documented
-3840x2160 PNG response without weakening strict official-envelope parsing,
-decoded PNG limits, bounded memory, identity/materialization cleanup,
-no-reveal, PBA, or one-send controls. Do not infer the discarded body's exact
-size or validity and do not revive B1. On READY return to fresh Operations for
-a separately versioned finite attempt, then fresh Mission; otherwise HOLD for
-Martin.
+Fresh Operations reads the complete intake/profile, `FRCA-005-v9`,
+`FRVE-005-v9-VR-01`, and the current v9 controls. It may issue one separately
+versioned finite no-retry Work Order under Martin's active funded Host 06
+instruction, retiring v9 B1 and freezing fresh paths/attempt identity, the
+corrected response envelope, media inventory `<=18 / 67,410,731`, and every
+unchanged parser/helper/materialization/private-review/canon/validation/
+cleanup boundary. It then routes fresh Mission for new retained sources and a
+credential-cleared fixture, or issues terminal HOLD for Martin. No current
+API call is authorized.
 
 Repository QA quarantine, protected PDF, training tree, Martin's real browser/
-profile/save, accepted media, v7/v8 paths/residuals, opaque roots, VR-65,
+profile/save, accepted media, v7/v8/v9 paths or residuals, opaque roots, VR-65,
 hidden lore, and unrelated work remain inaccessible. Preserve the one-path
 rail, unchanged `L02-03`, equal-dignity MH-40 outcomes, shared RP-012 ending,
 all null deltas, and `successor=null`. No reveal is authorized.
