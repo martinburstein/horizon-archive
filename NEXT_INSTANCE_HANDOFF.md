@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRCA-005-v7 / EXACT RETAINED STDIN PARENT
-STOPPED AT PT02_HELPER_SOURCE / ZERO CREDENTIAL, REQUEST, OR SEND / A1
-UNCONSUMED / FRESH SCIENCE REQUIRED`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-005-v8-VR-02 /
+EXACT ONE-LF HELPER-SOURCE CORRECTION IDENTIFIED / ZERO CREDENTIAL, REQUEST,
+SEND, OR MEDIA ACTIVITY / A1 UNCONSUMED / FRESH MISSION REQUIRED`**
 
-Current Work Order / Science: `FRWO-005-v8` / `FRVE-005-v8-VR-01`
+Current Work Order / Science: `FRWO-005-v8` / `FRVE-005-v8-VR-02`
 
-Active shell: `FRSH-005-v1-VR-35`
+Active terminal shell: `FRSH-005-v1-VR-35`
 
 Predecessor result: `FRCA-005-v7`
 
@@ -16,26 +16,24 @@ Planning controls: `FRRM-005-v8` / `FRSB-005-v8`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
 ## Exact next action
 
-Fresh Science reads the complete required intake/profile, complete
-`FRCA-005-v7`, `FRSH-005-v1-VR-35`, `FRVE-005-v8-VR-01`, `FRCA-005-v6`,
-`FRVE-005-v8`, `FRWO-005-v8`, terminal VR-34, and every exact retained
-launcher, parent, carrier, controller, and builder source.
+Fresh Mission reads the complete required intake/profile, complete
+`FRVE-005-v8-VR-02`, `FRCA-005-v7`, `FRSH-005-v1-VR-35`,
+`FRVE-005-v8-VR-01`, `FRVE-005-v8`, `FRWO-005-v8`, terminal VR-34, decisive
+v7 terminal-LF correction history, and every retained v8 execution and builder
+source.
 
-It independently reproduces the exact pre-send `PT02_HELPER_SOURCE` failure
-using inert source/byte analysis or a credential-cleared fixture only. It must
-reconcile why the retained helper-source text fails the frozen `1,693 /
-98cf...` predicate on this exact host and determine whether one bounded
-source/identity correction is viable. Science may not execute a live
-production carrier, read the credential, construct a request, begin
-`SendAsync`, inspect media, create product state, reveal an image, or consume
-A1. It issues one versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`
-artifact and synchronizes NEXT. Any viable correction requires one new
-complete Mission shell before a fresh Quartermaster may act.
+It applies only the deterministic one-terminal-LF helper correction defined by
+Science, independently reproduces and freezes the corrected carrier, launcher,
+parent, controller, and builder identities, and issues one complete new
+`FIRST RUN SHELL READY`, `REVISE`, or `HOLD` contract. On READY it routes one
+fresh Science context for exactly one credential-cleared no-request execution
+proof before Quartermaster. Mission may not execute a production carrier,
+read a credential, construct/send a request, inspect media, create product
+state, reveal an image, or consume A1.
 
 Repository QA quarantine, protected PDF, training tree, Martin's real
 browser/profile/save, accepted-media bytes/pixels, all v7 paths/ordinals/
