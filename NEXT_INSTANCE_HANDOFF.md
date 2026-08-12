@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PLAYER EXPERIENCE READY / FRPX-010-v1 / ACCEPTED-ONLY HOST`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-010-v1 / NULL-FIRST HOST`**
 
-Exact next owner: **one Combat Engineer**
+Exact next owner: **one Quartermaster**
 
-Implement the null-first fail-closed registry and behaviorally inert accepted-
-only integration, including exact source/provenance/measurement/state guards,
-legacy-launcher retirement rule, native action/focus contracts, and focused
-tests. Run the authorized functional ladder, commit/push PRODUCTION FUNCTIONAL,
-and route one fresh Quartermaster. Do not generate or inspect candidate media.
+Run the exact private sequential ledger `{H10-1..H10-4}` through the bundled
+CLI. First total technical/physical/derived-responsive PASS stops. Identity-
+delete and prove absence for each rejection. Import at most one passing byte-
+identical raster plus provenance, populate only frozen registry/copy geometry,
+and leave unused calls unused. Do not reveal any candidate.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
