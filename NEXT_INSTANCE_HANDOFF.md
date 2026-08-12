@@ -2,30 +2,25 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-008-v1 / HOST 08 FIVE CLI ATTEMPTS`**
+Current disposition: **`DIRECTORIAL LOCK / FRDT-008-v1 / FIVE HOST 08 PROMPTS FROZEN`**
 
-Exact next owner: **one fresh Reconnaissance Sergeant / `reconnaissance_sergeant`**
+Exact next owner: **one fresh Tactical Operations Specialist / `tactical_operations_specialist`**
 
-Read the full Recon profile, `FRPB-001-v5`, `FRCL-008-v1`, `FRWO-008-v1`,
-`FRVE-008-v1`, `FRSH-008-v1`, `FRAB-007-v1`, Host 07 presentation/runtime,
-game-on-paper Host 08, accepted visual controls, and only required runtime
-sources. Issue one `DIRECTORIAL LOCK`, `REVISE`, or `HOLD` and synchronize NEXT.
+Read the full Tactical profile, `FRSH-008-v1`, `FRDT-008-v1`, all five
+`HOST08_GEN_PROMPT_H8-*.txt` files, current planning chain, released Host 07,
+generic Client Bridge/`L03-03`, and only required runtime sources. Independently
+verify prompt identities and issue a complete Host 08 player-experience
+blueprint plus synchronized fresh-Combat handoff. Do not generate, call the
+API, inspect media, or change runtime.
 
-Freeze one compelling first-person Drowned interpretation and five complete,
-independent, no-reference-image prompt files for `{H8-1..H8-5}`. Each prompt
-must preserve the exact nonhumanoid collapsed laminate, fracture-ending
-continuity, separate materially connected pressure-bearing continuity, dry
-outer-ridge approach, Host 07 handoff, world silence, and all center-safe/
-six-layout exclusions. Prompts may vary composition but not canon. Record exact
-bytes and SHA-256. Do not generate, call the API, inspect media, implement the
-runtime, or reveal Host 08.
+Freeze exact null-first state, Host07+L03-01/L03-02 entry, irreversible generic
+launcher replacement, sole unchanged L03-03 USE, completed read-only behavior,
+LOOK/TALK, return/reload/recovery, focus/announcement, copy/alt slots,
+normalized physical/semantic/label/protected records, six-layout probes,
+private candidate-decision schema, and Combat regression matrix. Prompt canon
+is locked; only a necessary measurable clarification may be requested as a
+variance.
 
-All five attempts are unconsumed. Shell scratch is the exact absent GUID root
-in `FRSH-008-v1`; product paths are absent. First PASS stops, later calls need
-objective rejection plus exact cleanup, and no sixth attempt exists.
-
-Preserve the OPEN protected-QA capture-write variance; never inspect, restore,
-stage, use, or overwrite its screenshots. Preserve Hosts 01-07/media, learning
-and privacy ownership, route, invariant world, RP-012, `successor=null`, all
-other OPEN records, filename-enumeration records, protected exclusions, and
-VR-65. Host 09 and later content remain absent.
+All five attempts remain unconsumed. Preserve Hosts 01-07/media, no-reveal and
+scratch custody, the OPEN protected-QA capture-write variance, every other OPEN
+record, filename-enumeration records, protected exclusions, and VR-65.
