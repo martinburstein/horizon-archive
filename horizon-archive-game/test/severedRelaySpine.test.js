@@ -107,4 +107,5 @@ test("clean-start E2E traverses Host 08 instead of the retired generic launcher"
   assert.match(e2e, /Host 08 did not expose read-only completion after Client Bridge mastery/);
   assert.match(e2e, /Completed Host 08 reopened Client Bridge/);
   assert.doesNotMatch(e2e, /const controlContinue = page\.getByRole\("button", \{ name: "Start Client Bridge"/);
+  assert.doesNotMatch(e2e, /Acknowledge strict mastery[\s\S]{0,500}SOURCE-GROUNDED COURSE[\s\S]{0,500}const severedRelaySpine/);
 });

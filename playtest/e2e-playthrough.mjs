@@ -945,7 +945,6 @@ print("Operator:", learner)`);
   await page.getByRole("checkbox", { name: "I produced this control-flow explanation myself without notes.", exact: true }).check();
   await page.getByRole("radio", { name: "high", exact: true }).check();
   await page.getByRole("button", { name: "Acknowledge strict mastery", exact: true }).click();
-  await teacherSpeaker.getByText("901 TEACHER // SOURCE-GROUNDED COURSE", { exact: true }).waitFor();
   const severedRelaySpine = page.locator('[data-hotspot-id="severed-relay-spine"]');
   await severedRelaySpine.waitFor();
   await page.waitForFunction(() => document.activeElement?.dataset.hotspotId === "severed-relay-spine");
