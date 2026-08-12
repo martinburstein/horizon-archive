@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-005-v16`
+Map ID: `FRRM-005-v17`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Operations source inspected: `f1d4b1b89ae0e1cbb04b02d2b9f61970c20dfe23`
+Operations source inspected: `53c408e792c8f611b737106b049298539c5495c0`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -22,8 +22,13 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **`FRWO-005-v16 / Stranded Lens Cradle -
-Post-F1 Decision Hold`**.
+Selected bounded Work Order: **`FRWO-005-v17 / Stranded Lens Cradle -
+Distant Establishing G1 Attempt`**.
+
+Martin's latest placeholder supplies the new-attempt decision required by v16.
+G1 is exactly one request with no G2/retry. Prompt v4 changes strategy to an
+extreme-wide, deliberately small central island with broad context; Operations
+authorizes no API call.
 
 `FRWO-005-v15` is closed. Its complete attempt domain `{F1}` was consumed by
 exactly one HTTP 200 request. F1 passed strict technical and physical review,
@@ -121,8 +126,8 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 06` | **HOLD - `FRWO-005-v16`**: F1 objectively rejected; no accepted source or paid-attempt authority; Martin decision required | First missing fixed encounter; F1 passed technical/physical review but failed exact v3 responsive layout/accessibility and was deleted |
-| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind Martin's decision on `FRWO-005-v16`; no skip or repeatable host pattern is authorized |
+| 1 | `FR-03 / Host 06` | **SELECTED - `FRWO-005-v17`**: one distant small-in-frame G1 source attempt | First missing fixed encounter; G1 requires fresh Science and Mission before its sole request |
+| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind independent acceptance or HOLD of `FRWO-005-v17`; no skip or repeatable host pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
@@ -303,8 +308,8 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v16` is terminal `HOLD`; Martin's explicit decision is the exact
-next action.
+`FRWO-005-v17` is selected; fresh Science is the exact next action. G1 remains
+unstarted and no request exists before a new Mission shell.
 `FRWO-004-v1` remains closed. This map does not preauthorize
 generation/API invocation before a fresh shell, implementation, asset
 selection/import, reveal, later-address work, maturity advancement, residual
