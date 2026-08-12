@@ -2,10 +2,11 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN VISION BASELINE REOPENED / FRPB-001-v4 /
-HOST 07 IMAGEGEN CLI FALLBACK / FIVE TOTAL ATTEMPTS`**
+Current disposition: **`CONTINUITY LOCK / FRCL-006-v2 / HOST 07 IMAGEGEN CLI /
+FIVE TOTAL ATTEMPTS`**
 
-Exact next owner: **one fresh Colonel / `colonel`**
+Exact next owner: **one fresh Operations Planning Major /
+`operations_planning_major`**
 
 Martin explicitly authorized the installed imagegen CLI fallback for Host 07
 with five total attempts. The new sequential ledger is
@@ -14,13 +15,14 @@ with five total attempts. The new sequential ledger is
 present locally and remains secret. No call, candidate, import, implementation,
 maturity advance, or reveal exists.
 
-Read the full Colonel profile, `FRPB-001-v4`, `FRPB-001-v3`, `FRCL-006-v1`,
-`FRWO-007-v1`, and `FRVE-007-v1`. Confirm the transport/ledger change preserves
-the exact Host 07 continuity and issue one versioned lock, REVISE, or HOLD.
+Colonel confirmed that CLI transport and five attempts change no Host 07
+meaning. Read the full Operations profile, `FRPB-001-v4`, `FRCL-006-v2` and
+`FRCL-006-v1`, `FRWO-007-v1`, `FRVE-007-v1`, and the installed imagegen CLI
+authorities. Issue a new Work Order version or HOLD.
 
-On PASS route fresh Operations to revise the Work Order for the exact CLI and
-five-attempt ledger. No role may run generation before revised Science and
-Mission gates. No sixth call, retry, `--force`, batch, edit, reference image,
+On READY replace `{H7-A,H7-B}` with `{H7-1..H7-5}` and freeze exact output
+paths, no-force/no-batch/no-internal-retry custody, cleanup, physical gates,
+and Science/Mission prerequisites. No sixth call, rerun, edit, reference image,
 alternate model, direct API, or reveal is authorized.
 
 Preserve exact Hosts 01-06 and accepted media, sole `L02-03`, Host 07 ownership
