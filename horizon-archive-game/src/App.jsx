@@ -213,6 +213,13 @@ import {
   SEVERED_RELAY_SPINE_REGISTRY,
 } from "./severedRelaySpine.js";
 import {
+  deriveFloodedChoirState,
+  FLOODED_CHOIR_PROVENANCE,
+  FLOODED_CHOIR_REGISTRY,
+  getFloodedChoirHotspot,
+  isLegacyHost09LessonLauncherVisible,
+} from "./floodedChoir.js";
+import {
   buildCompletedMeadowReturnPatch,
   buildMeadowDeparturePresentation,
   buildMeadowReturnPresentation,
@@ -1053,6 +1060,8 @@ export function App() {
   const [sedimentAbacusPresented, setSedimentAbacusPresented] = useState(false);
   const [severedRelaySpineDecodedImage, setSeveredRelaySpineDecodedImage] = useState(null);
   const [severedRelaySpinePresented, setSeveredRelaySpinePresented] = useState(false);
+  const [floodedChoirDecodedImage] = useState(null);
+  const [floodedChoirPresented] = useState(false);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
@@ -1127,6 +1136,7 @@ export function App() {
   const severedRelaySpineTransitionPendingRef = useRef(false);
   const severedRelaySpineFocusPendingRef = useRef(false);
   const severedRelaySpineAnnouncementPendingRef = useRef(false);
+  const floodedChoirRef = useRef(null);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1213,6 +1223,18 @@ export function App() {
   const severedRelaySpineLawful = severedRelaySpineState !== "hidden";
   const severedRelaySpineActive = severedRelaySpinePresented && severedRelaySpineLawful;
   const legacyHost08LessonLauncherVisible = isLegacyHost08LessonLauncherVisible(SEVERED_RELAY_SPINE_REGISTRY.source);
+  const floodedChoirState = deriveFloodedChoirState({
+    host08Lawful: severedRelaySpineLawful,
+    clientBridgeEvidence,
+    textAnalysisEvidence,
+    speechEvidence,
+    registry: FLOODED_CHOIR_REGISTRY,
+    provenance: FLOODED_CHOIR_PROVENANCE,
+    decodedImage: floodedChoirDecodedImage,
+  });
+  const floodedChoirLawful = floodedChoirState !== "hidden";
+  const floodedChoirActive = floodedChoirPresented && floodedChoirLawful;
+  const legacyHost09LessonLauncherVisible = isLegacyHost09LessonLauncherVisible(FLOODED_CHOIR_REGISTRY.source);
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -1254,11 +1276,15 @@ export function App() {
   }] : [];
   const severedRelaySpineHotspot = getSeveredRelaySpineHotspot(SEVERED_RELAY_SPINE_REGISTRY);
   const severedRelaySpineHotspots = scene.id === "ruins" && severedRelaySpineActive && severedRelaySpineHotspot ? [{ id: "severed-relay-spine", label: SEVERED_RELAY_SPINE_COPY.name, hotspot: severedRelaySpineHotspot }] : [];
+  const floodedChoirHotspot = getFloodedChoirHotspot(FLOODED_CHOIR_REGISTRY);
+  const floodedChoirHotspots = scene.id === "ruins" && floodedChoirActive && floodedChoirHotspot ? [{ id: "flooded-choir", label: "Flooded Choir", hotspot: floodedChoirHotspot }] : [];
   const sceneHotspots = [primarySceneHotspot, ...(scene.id === "ruins" ? ruinsHotspots : meadowHotspots)];
   const activeSceneHotspots = scene.id === "ruins" && strandedLensCradleActive
     ? strandedLensCradleHotspots
     : sceneHotspots;
-  const presentedSceneHotspots = scene.id === "ruins" && severedRelaySpineActive
+  const presentedSceneHotspots = scene.id === "ruins" && floodedChoirActive
+    ? floodedChoirHotspots
+    : scene.id === "ruins" && severedRelaySpineActive
     ? severedRelaySpineHotspots
     : scene.id === "ruins" && sedimentAbacusActive ? sedimentAbacusHotspots
     : activeSceneHotspots;
@@ -1271,6 +1297,7 @@ export function App() {
     const isStrandedLensCradle = scene.id === "ruins" && hotspot.id === "stranded-lens-cradle";
     const isSedimentAbacus = scene.id === "ruins" && hotspot.id === "sediment-abacus";
     const isSeveredRelaySpine = scene.id === "ruins" && hotspot.id === "severed-relay-spine";
+    const isFloodedChoir = scene.id === "ruins" && hotspot.id === "flooded-choir";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
     const nurseryStateLabel = isFractureNursery ? FRPX02_COPY.NURSERY_STATE[fractureNurseryState] : "";
     const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
@@ -1283,6 +1310,7 @@ export function App() {
     const severedRelaySpineStateLabel = isSeveredRelaySpine ? SEVERED_RELAY_SPINE_COPY.state[severedRelaySpineState] : "";
     const severedRelaySpineLabel = isSeveredRelaySpine ? ` // ${severedRelaySpineStateLabel.toUpperCase()}` : "";
     const hotspotStyle = getHotspotStyle(hotspot.hotspot);
+    if (isFloodedChoir) return <button key={hotspot.id} ref={floodedChoirRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-flooded-choir-state={floodedChoirState} style={hotspotStyle} onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} Flooded Choir, ${floodedChoirState}`}><span>{verb} Flooded Choir // {floodedChoirState.toUpperCase()}</span></button>;
     const sixfoldActivationStyle = isSixfoldWeir ? {
       ...hotspotStyle,
       top: "min(75%, calc(100% - 44px))",
@@ -3203,6 +3231,14 @@ export function App() {
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if (scene.id === "ruins" && hotspotId === "flooded-choir") {
+      if (floodedChoirState === "hidden" || terminalOpen) return;
+      if (verb === "LOOK AT") { setDialogue("SCENE // Several water-filled stone cavities share one pressure-bearing continuity. Reflected light returns from some openings and not from another. The observation rim is dry.", "scene"); return; }
+      if (verb === "TALK TO") { setDialogue("Complete silence.", "pilot"); return; }
+      if (floodedChoirState === "complete") { setDialogue("SYSTEM // Text Analysis and Speech Workloads evidence is finalized. SCENE // Stone, water, pressure, and reflected light remain unchanged.", "system"); return; }
+      if (textAnalysisEvidence?.masteryStatus === "mastered") openSpeechWorkloads(); else openTextAnalysis();
+      return;
+    }
     if (scene.id === "ruins" && hotspotId === "severed-relay-spine") {
       if (severedRelaySpineState === "hidden" || terminalOpen) return;
       if (verb === "LOOK AT") { setDialogue(SEVERED_RELAY_SPINE_COPY.unseen, "scene"); return; }
@@ -4487,7 +4523,7 @@ export function App() {
 
   return (
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
-    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined}>
+    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined} data-flooded-choir-state={scene.id === "ruins" ? floodedChoirState : undefined}>
       <p className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement>{sceneAnnouncement}</p>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         <div className="scene-world-content" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
@@ -6324,10 +6360,10 @@ export function App() {
                   {legacyHost08LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && controlFlowEvidence?.masteryStatus === "mastered" && clientBridgeEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openClientBridge(); }}>{clientBridgeSession ? "Resume Client Bridge" : clientBridgeEvidence?.masteryStatus === "primary_complete" ? "Start Client Bridge Transfer" : clientBridgeEvidence?.masteryStatus === "transfer_complete" ? "Open Client Bridge Retrieval" : clientBridgeEvidence?.masteryStatus === "retrieval_complete" ? "Open Client Bridge Closed-Note Gate" : "Start Client Bridge"}</button>
                   )}
-                  {pendingAdvance && scene.id === "ruins" && clientBridgeEvidence?.masteryStatus === "mastered" && textAnalysisEvidence?.masteryStatus !== "mastered" && (
+                  {legacyHost09LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && clientBridgeEvidence?.masteryStatus === "mastered" && textAnalysisEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openTextAnalysis(); }}>{textAnalysisSession ? "Resume Text Analysis" : textAnalysisEvidence?.masteryStatus === "primary_complete" ? "Start Text Analysis Transfer" : textAnalysisEvidence?.masteryStatus === "transfer_complete" ? "Open Text Analysis Closed-Note Gate" : "Start Text Analysis"}</button>
                   )}
-                  {pendingAdvance && scene.id === "ruins" && textAnalysisEvidence?.masteryStatus === "mastered" && speechEvidence?.masteryStatus !== "mastered" && (
+                  {legacyHost09LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && textAnalysisEvidence?.masteryStatus === "mastered" && speechEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openSpeechWorkloads(); }}>{speechSession ? "Resume Speech Workloads" : speechEvidence?.masteryStatus === "primary_complete" ? "Start Speech Transfer" : speechEvidence?.masteryStatus === "transfer_complete" ? "Open Speech Closed-Note Gate" : "Start Speech Workloads"}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && speechEvidence?.masteryStatus === "mastered" && visualEvidence?.masteryStatus !== "mastered" && (
