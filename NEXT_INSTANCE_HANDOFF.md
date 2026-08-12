@@ -2,21 +2,21 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`QUARTERMASTER HOLD / FRCA-009-v1 / FIVE ATTEMPTS CONSUMED / NO PRODUCT IMPORT`**
+Current disposition: **`TERMINAL HOLD / FRWO-009-v2 / FIVE ATTEMPTS CONSUMED / MARTIN DECISION REQUIRED`**
 
-Exact next owner: **one fresh Operations Planning Major / `operations_planning_major`**
+Exact next owner: **Martin**
 
-Read the full Operations profile, `FRWO-009-v1`, `FRSH-009-v1`,
-`FRCE-009-v1`, and `FRCA-009-v1`. Close the exhausted five-attempt Work Order
-as a terminal HOLD, preserve the inert null-first functional candidate, and
-route the exact decision to Martin. Do not authorize, infer, plan, or invoke a
-sixth attempt and do not import any rejected candidate.
+Decide whether to authorize a new exact finite Host 09 source-attempt budget.
+If authorized, the next active owner is one fresh Operations Planning Major,
+followed by fresh Science and Mission gates before any generation. General
+continuation language does not authorize a sixth call, rejected-source reuse,
+crop/edit/variation, Image work, or later-host work.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
-identity-deleted and proved absent. The external scratch root is absent. The
-product raster and provenance remain absent; accepted media remains
-`19 / 70,136,520`. No Host 10 authority exists.
+identity-deleted and proved absent. The external scratch root, product raster,
+and provenance are absent; accepted media remains `19 / 70,136,520`; the
+functional registry remains inert. No Host 10 authority exists.
 
 Do not inspect, restore, stage, or use repository QA screenshots. Preserve
 released Host 08 bytes, Hosts 01-07, all accepted media, all OPEN records,
