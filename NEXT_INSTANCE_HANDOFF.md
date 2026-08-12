@@ -2,36 +2,36 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-005-v9 / ONE FUNDED B1 /
-FRESH PATHS / NO RETRY / FRESH SCIENCE REQUIRED / NO CURRENT API OR MEDIA
-AUTHORITY`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-005-v9 / ONE FUNDED B1 /
+NEW RETAINED V9 CARRIER REQUIRED / ZERO CREDENTIAL, API, OR MEDIA ACTIVITY /
+FRESH MISSION`**
 
-Current Work Order / predecessor: `FRWO-005-v9` / `FRCA-005-v8`
+Current Work Order / viability / predecessor: `FRWO-005-v9` /
+`FRVE-005-v9` / `FRCA-005-v8`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Operations result
+## Science result
 
-Operations accepted the v8 HTTP 429 ledger without inference or revival.
-Martin subsequently added API funds and explicitly instructed the team to try
-again. `FRWO-005-v9` therefore creates exactly one new attempt `{B1}` with no
-B2 or retry, the unchanged official endpoint/model/prompt/options, strict
-response parser and safe diagnostic rules, fresh v9 literal paths, private
-no-reveal review, and byte-identical accepted import or exact cleanup. V8
-remains closed. Maturity and product remain unchanged.
+Science accepted the closed v8 ledger and Martin's funded B1-only authority.
+Current official OpenAI documentation supports the frozen GPT Image 2 request.
+The previously proven 38-case strict response/diagnostic suite remains exact;
+v9 changes only the attempt identity and fresh paths. Science independently
+proved all nine v9 controlled paths absent with zero credential reads and zero
+API/media activity. The same-run helper, stdin delivery, materialization,
+technical/physical/layout/accessibility, product, cleanup, rollback, and full
+validation envelopes are viable. A newly retained v9 executable carrier is
+mandatory; the consumed v8 carrier cannot be reused or modified in place.
 
 ## Exact next action
 
-Fresh Science reads the complete intake/profile, `FRWO-005-v9`,
-`FRCA-005-v8`, `FRSH-005-v1-VR-39`, and `FRVE-005-v8-VR-05`. With zero
-credential reads and zero API sends, revalidate the B1-only budget, current
-official request/response and diagnostic contract, fresh path isolation,
-same-run helper/stdin carrier pattern, materialization, technical/physical/
-layout/accessibility review, product/provenance, cleanup, rollback, and
-validation envelope. Require a newly retained v9 carrier. Issue one versioned
-`POLISH VIABILITY READY`, `REVISE`, or `HOLD` artifact and route fresh Mission
-on PASS.
+Fresh Mission reads the complete intake/profile, `FRWO-005-v9`,
+`FRVE-005-v9`, `FRCA-005-v8`, `FRSH-005-v1-VR-39`, and the retained v8 source
+set as construction evidence only. Build and retain a distinct v9
+builder/carrier/launcher/stdin parent/credential-cleared fixture controller,
+freeze exact byte/SHA and parser-zero identities, run one no-request fixture,
+prove all nine paths absent, and issue a complete B1-only `FIRST RUN SHELL
+READY`, `REVISE`, or `HOLD`. Mission performs no credential or API operation.
 
 Repository QA quarantine, protected PDF, training tree, Martin's real browser/
 profile/save, accepted media, v7/v8 paths/residuals, opaque roots, VR-65, hidden
