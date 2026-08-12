@@ -2,26 +2,23 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRWO-005-v18 / G1 OBJECTIVE LAYOUT REJECTION /
-NO PRODUCT / NO REMAINING PAID ATTEMPT AUTHORITY / MARTIN DECISION REQUIRED`**
+Current disposition: **`WORK ORDER READY / FRWO-005-v19 / SOLE H1 / LEGIBLE
+WIDE CENTER-SAFE PROMPT V5 / NO RETRY OR H2 / FRESH SCIENCE`**
 
-Exact next owner: **Martin**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
-`FRWO-005-v17` is closed. Its sole G1 returned HTTP 200, passed strict
-technical and physical review, and failed exact v4 responsive-layout and
-equivalent accessibility requirements. G1 was truthfully rejected with
-`codes=LAYOUT`, consumed, identity-deleted, and independently proved 9/9
-controlled paths absent. Existing accepted media remains `17 / 37,410,731`;
-the runtime remains null-first; no raster, provenance, code, test, E2E,
-maturity, or product change exists.
-
-Martin may explicitly authorize one new separately versioned finite Host 06
-attempt with an exact count, after which fresh Operations, Science, and Mission
-must gate it before any API action; or withdraw further Host 06 media attempts
-and leave the missing physical expression honestly recorded. No default is
-inferred from a placeholder or continuation message. There is no G2, retry,
-reuse, edit, variation, crop repair, Image work, later-address work, release,
-or completion authority.
+Fresh Science reads the complete intake/profile, `FRWO-005-v19`,
+`FRWO-005-v18`, `FRCA-005-v14`, `FRVE-005-v13`, `FRSH-005-v1-VR-45`, and
+current treatment/blueprint/functional/manifest controls. Independently
+reconstruct prompt v5 `5,314 /
+9a8311462765d70f1a2af2afe45f24fde782c57c22a2fd848285c60d0d276a64`;
+prove dictionary parser/request/schema, exact H1/no-H2 domain, fresh nine-path
+absence, 30 MB/aggregate budgets, same-run helper/materialization/cleanup,
+accepted-only `attemptId="H1"` and no ordinal, positive relation/fragment/
+approach geometry, and a six-layout accessible-target witness. Run only
+credential-cleared synthetic/read-only fixtures with zero API/media. Issue
+READY to fresh Mission or precise HOLD.
 
 Preserve the one-path rail, unchanged `L02-03`, canon, learning, privacy/save,
 RP-012, `successor=null`, no-reveal boundary, separate OPEN protected-filename

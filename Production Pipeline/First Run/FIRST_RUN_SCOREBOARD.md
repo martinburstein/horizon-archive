@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v18`
+Scoreboard ID: `FRSB-005-v19`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v18`
+Release map: `FRRM-005-v19`
 
 Operations source inspected: `53c408e792c8f611b737106b049298539c5495c0`
 
@@ -18,7 +18,7 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **none - `FRWO-005-v18 / Post-G1 Decision Hold`**.
+Selected bounded Work Order: **`FRWO-005-v19 / Stranded Lens Cradle - Legible Wide H1 Attempt`**.
 
 G1 used prompt v4's distant center-island strategy and made exactly one HTTP
 200 request. It passed technical and physical review, then failed the exact
@@ -148,8 +148,8 @@ accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-Martin is the exact next decision owner. No Science, Mission, generation/API call,
+Fresh Science is the exact next owner. No Mission, generation/API call,
 media attempt, asset selection/import, Host 06 implementation, Image work,
 E2E, reveal, Host 07-15 work, Witness promotion, City correction, maturity
 inference, OPEN-classification closure, residual inspection, completion sweep,
-or `FIRST RUN COMPLETE` is authorized. G1 is consumed; no G2 or retry exists.
+or `FIRST RUN COMPLETE` is authorized. H1 is unstarted; no H2 or retry exists.
