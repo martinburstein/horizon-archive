@@ -2,15 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-009-v3 / FIFTEEN-ID GUARD`**
+Current disposition: **`HOLD / FRCA-009-v3 / FIVE HIGH-AIM ATTEMPTS CONSUMED`**
 
-Exact next owner: **one fresh Quartermaster / `quartermaster`**
+Exact next owner: **one fresh Operations Planning Major / `operations_planning_major`**
 
-Read the full Quartermaster profile, `FRSH-009-v3`, `FRDT-009-v3`,
-`FRPX-009-v3`, and `FRCE-009-v3`. Preflight exact identities and the fresh
-scratch root, then execute H9-11..H9-15 sequentially. Privately inspect each
-candidate against unchanged runtime acceptance, clean every reject exactly,
-and stop at first PASS or exhausted HOLD. Do not reveal a candidate.
+Read the full Operations profile and `FRCA-009-v3`. Close `FRWO-009-v5` as a
+terminal HOLD, preserve the exact fifteen-attempt ledger and absent product,
+and route only Martin for a new decision. Do not generate, reuse, or reveal.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
