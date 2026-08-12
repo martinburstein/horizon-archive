@@ -2,55 +2,66 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-005-v8 / ONE FRESH NON-V7
-ATTEMPT A1 / STRICT OFFICIAL-ENVELOPE PARSER AND BOUNDED FAILURE EVIDENCE /
-FRESH SCIENCE REQUIRED / NO API OR MEDIA AUTHORITY`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-005-v8 / ONE FRESH A1
+OFFICIAL-ENVELOPE ATTEMPT FIXTURE-PROVED / FRESH MISSION REQUIRED / NO CURRENT
+API OR MEDIA AUTHORITY`**
 
 Current Work Order: `FRWO-005-v8`
 
-Current Mission decision: `FRSH-005-v1-VR-33`
+Current Science decision: `FRVE-005-v8`
 
-Current Science return: `FRVE-005-v7-VR-29`
+Current Mission predecessor: `FRSH-005-v1-VR-33`
 
-Current Quartermaster return: `FRCA-005-v5`
+Closed v7 ledger: `FRVE-005-v7-VR-29` / `FRCA-005-v5`
 
-Effective control lineage: `FRSH-005-v1` through `FRSH-005-v1-VR-33`, then
-`FRWO-005-v8`; no production-ready shell is active
+Planning controls: `FRRM-005-v8` / `FRSB-005-v8`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
 ## Exact next action
 
-Fresh Science reads the complete required intake/profile, complete
-`FRWO-005-v8`, `FRSH-005-v1-VR-33`, `FRVE-005-v7-VR-29`, `FRCA-005-v5`,
-`FRSH-005-v1-VR-32`, retained source/helper identities, and current
-`FRRM-005-v8` / `FRSB-005-v8` plus cited official OpenAI Image API authority.
+Fresh Mission reads the complete required intake/profile, complete
+`FRVE-005-v8`, `FRWO-005-v8`, `FRSH-005-v1-VR-33`, `FRVE-005-v7-VR-29`,
+`FRCA-005-v5`, retained parent/outer sources, exact prompt authority, current
+official OpenAI Image API authority, and current `FRRM-005-v8` /
+`FRSB-005-v8`.
 
-Science performs a zero-credential, zero-send viability pass. It must
-fixture-prove the official-`ImagesResponse` strict parser, duplicate/unknown/
-trailing/member/type rejection, canonical bounded base64, exact request echo
-metadata, status/content-type/byte-count capture, secret-safe bounded error
-projection and `diagnostic-unavailable` fallbacks. It also re-proves the exact
-request/one-send posture, fresh v8 attempt-path isolation, native helper and
-handle identity, create-new/flush/no-replace move, PNG/physical/six-layout/
-accessibility/product/cleanup/validation envelope, and controlled-path absence.
+Mission constructs and parser-checks one exact new v8 PowerShell/.NET carrier.
+It freezes a strict official-`ImagesResponse` parser admitting only `created`,
+`background`, `data`, `output_format`, `quality`, `size`, and `usage`, while
+requiring exact one `data[0].b64_json`, request-echo metadata, canonical bounded
+base64, and duplicate/unknown/malformed/trailing rejection. It freezes exact
+status/media-type/byte-count capture and strict secret-safe bounded non-success
+diagnostics with `diagnostic-unavailable` fallback. It retains the exact
+request, one-send/no-redirect posture, native helper/handle identity,
+create-new/flush/no-replace move, PNG/physical/six-layout/accessibility/
+product/cleanup/validation envelope, and these exact fresh v8 paths:
 
-Science accepts the closed v7 ledger without inspection or inference. The
-entire new paid-attempt domain is exactly `{A1}` and remains unconsumed; no
-retry or `A2` exists. PASS routes one fresh Mission Captain to issue a complete
-new `FIRST RUN SHELL READY` contract. Any defect returns exact `REVISE` or
-`HOLD`. Science performs no credential access, API send, media generation/read/
-import/reveal, product/runtime change, Host 07+ work, maturity update, release,
-or `FIRST RUN COMPLETE` operation.
+```text
+helperRoot=C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-native-identity-v8-5fbbd31e-8b50-4cb4-a0d3-c2f0d4b9e8aa
+helperDll=<helperRoot>\Host06FileIdentity.dll
+liveRoot=C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-api-v8-3f7d8a21-76c5-4d4e-9641-b2f5e73a019c
+A1Stage=<liveRoot>\.attempt-A1-95a70af8-f9d0-49dc-87dc-89675212ed35.stage
+A1Target=<liveRoot>\attempt-A1.png
+A1Decision=<liveRoot>\.attempt-A1.review-v1
+```
 
-No source raster or provenance exists; runtime registry/copy/alt remain
-null-first; maturity is unchanged. Repository QA quarantine, protected PDF,
-training tree, Martin's real browser/profile/save, accepted-media bytes and
-pixels, managed/opaque residuals, VR-65, hidden lore, and unrelated user work
-remain inaccessible.
+Mission must classify every delta from the retained carrier, freeze exact new
+launcher/carrier/helper identities, and issue one complete new `FIRST RUN
+SHELL READY`, `REVISE`, or `HOLD`. PASS routes exactly one fresh Quartermaster
+to the sole `{A1}` attempt. Failure returns exact earliest ownership. Mission
+performs no credential access, API send, temp allocation, helper/carrier
+execution, media generation/read/import/reveal, product/runtime change, test,
+maturity update, release, or `FIRST RUN COMPLETE` operation.
 
+The v7 ledger remains closed and inaccessible. `{A1}` remains unconsumed; no
+retry or `A2` exists. No source raster or provenance exists; registry/copy/alt
+remain null-first; maturity is unchanged.
+
+Repository QA quarantine, protected PDF, training tree, Martin's real
+browser/profile/save, accepted-media bytes and pixels, v7 paths, managed or
+opaque residuals, VR-65, hidden lore, and unrelated work remain inaccessible.
 The one-path rail, sole unchanged `L02-03`, equal-dignity MH-40 outcomes,
 shared RP-012 ending, all null deltas, and `successor=null` remain immutable.
