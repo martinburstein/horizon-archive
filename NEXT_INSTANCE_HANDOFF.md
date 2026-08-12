@@ -2,15 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / RUNTIME PRESENTATION COMPLETE / RESPONSIVE EVIDENCE REPAIR`**
+Current disposition: **`FIRST RUN PASS RELEASED / FRAB-009-v1 / RESPONSIVE EVIDENCE REPAIR`**
 
-Exact next owner: **one Intelligence Officer**
+Exact next owner: **Martin**
 
-Independently validate FRWO-009-v7 against the exact code candidate: patch
-integrity, focused/related/full tests, validators, build/PBA/served identity,
-isolated six-layout browser evidence, adjacent Host07/08 corroboration,
-historical-ledger correction, protected-path non-access, and Git sync. Do not
-generate or touch media.
+The correction is released. Decide whether to authorize a fresh finite Host 09
+media attempt under the corrected gate. No paid attempt, Host 10, API, media,
+or product action is presently authorized.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then

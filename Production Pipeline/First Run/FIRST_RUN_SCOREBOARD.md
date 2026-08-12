@@ -2,7 +2,7 @@
 
 Scoreboard ID: `FRSB-009-v7`
 
-Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
+Current release authority: `FRAB-009-v1 / RESPONSIVE EVIDENCE REPAIR RELEASED`
 
 Baseline / lock: `FRPB-001-v6` / `FRCL-009-v1`
 
@@ -18,7 +18,7 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`.
 
-Selected bounded Work Order: **`FRWO-009-v7 / responsive evidence repair`**.
+Selected bounded Work Order: **none; `FRWO-009-v7` released by `FRAB-009-v1`**.
 
 Host 09 attempt accounting is unchanged at fifteen consumed and zero accepted.
 The old layout verdicts are corrected: H9-1..7 and H9-9..15 are unverified,
