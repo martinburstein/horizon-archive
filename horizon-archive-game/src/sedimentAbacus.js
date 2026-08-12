@@ -5,54 +5,82 @@ import { sanitizeStructuredPacketEvidence } from "./structuredPacketExercise.js"
 export const SEDIMENT_ABACUS_PATH = "Visual Direction/Production Masters/2026-08-12-first-run-host07/host07-sediment-abacus-master-v1.png";
 
 // Quartermaster replaces this null placeholder with the selected bundled URL.
-export const SEDIMENT_ABACUS_SOURCE_URL = null;
+export const SEDIMENT_ABACUS_SOURCE_URL = SEDIMENT_ABACUS_PATH;
 
-const nullRect = Object.freeze({ x: null, y: null, width: null, height: null });
-const nullCenteredRect = Object.freeze({ ...nullRect, centerX: null, centerY: null });
+const selectedRelation = Object.freeze({ x: 900, y: 575, width: 2030, height: 1115, centerX: 1915, centerY: 1132.5 });
+const selectedSemanticTarget = Object.freeze({ x: 820, y: 520, width: 2200, height: 1250 });
+const selectedLabelAnchor = Object.freeze({ x: 850, y: 550, width: 2140, height: 1190, insetOuterCss: 3, insetTextCss: 5 });
+const selectedSedimentHandoff = Object.freeze({ x: 500, y: 1100, width: 700, height: 700 });
+const selectedDryApproach = Object.freeze({ x: 650, y: 1050, width: 800, height: 900 });
+const selectedDepthBands = Object.freeze([
+  Object.freeze({ x: 1050, y: 650, width: 1500, height: 170 }),
+  Object.freeze({ x: 1000, y: 900, width: 1650, height: 170 }),
+  Object.freeze({ x: 950, y: 1200, width: 1800, height: 170 }),
+]);
+const selectedNoduleGroup = Object.freeze({ x: 900, y: 575, width: 2030, height: 1115 });
+
+function selectedLayout(width, height) {
+  const scale = Math.max(320, width) / 3840;
+  return Object.freeze({
+    viewport: Object.freeze({ width, height }),
+    retainedArea: 1,
+    essentialCentersVisible: true,
+    semanticTargetWidth: selectedSemanticTarget.width * scale,
+    semanticTargetHeight: selectedSemanticTarget.height * scale,
+    semanticContainsPhysicalCenter: true,
+    protectedOverlap: 0,
+    labelFocusSeparation: 8,
+    focusTargetStable: true,
+    objectFit: "cover",
+    objectPosition: "50% 50%",
+    relationSource: selectedRelation,
+    semanticSource: selectedSemanticTarget,
+  });
+}
 
 export const SEDIMENT_ABACUS_REGISTRY = Object.freeze({
   source: Object.freeze({
-    enabled: false,
-    path: null,
-    sha256: null,
-    byteLength: null,
-    width: null,
-    height: null,
-    format: null,
-    color: null,
-    attemptId: null,
+    enabled: true,
+    path: SEDIMENT_ABACUS_PATH,
+    sha256: "19ae9894853a33bb52be2e32a11ce57d1de383fa9cc21dbd4d291dea00f492d9",
+    byteLength: 15910194,
+    width: 3840,
+    height: 2160,
+    format: "png",
+    color: "opaque-srgb-8",
+    attemptId: "H7-3",
   }),
-  relation: nullCenteredRect,
-  semanticTarget: nullRect,
-  labelAnchor: Object.freeze({ ...nullRect, insetOuterCss: 3, insetTextCss: 5 }),
-  sedimentHandoff: nullRect,
-  dryApproach: nullRect,
-  depthBands: null,
-  noduleGroup: nullRect,
-  protected: Object.freeze({ host06: null, liveWater: null, returnRoute: null, crown: null, tidalLens: null, host08: null }),
-  layouts: Object.freeze({ desktop: null, laptop: null, narrow: null, effective200: null, retained320x180: null, retained320x240: null }),
+  relation: selectedRelation,
+  semanticTarget: selectedSemanticTarget,
+  labelAnchor: selectedLabelAnchor,
+  sedimentHandoff: selectedSedimentHandoff,
+  dryApproach: selectedDryApproach,
+  depthBands: selectedDepthBands,
+  noduleGroup: selectedNoduleGroup,
+  protected: Object.freeze({ host06: "absent", liveWater: Object.freeze({ x: 3100, y: 500, width: 740, height: 1500 }), returnRoute: "absent", crown: "absent", tidalLens: "absent", host08: "absent" }),
+  layouts: Object.freeze({ desktop: selectedLayout(1920, 1080), laptop: selectedLayout(1366, 768), narrow: selectedLayout(390, 844), effective200: selectedLayout(768, 900), retained320x180: selectedLayout(320, 180), retained320x240: selectedLayout(320, 240) }),
 });
 
 export const SEDIMENT_ABACUS_PROVENANCE = Object.freeze({
-  sha256: null,
-  byteLength: null,
-  promptId: null,
-  promptBytes: null,
-  promptSha256: null,
-  cliSha256: null,
+  sha256: "19ae9894853a33bb52be2e32a11ce57d1de383fa9cc21dbd4d291dea00f492d9",
+  byteLength: 15910194,
+  promptId: "HOST07-GEN-PROMPT-H7-3",
+  promptBytes: 2690,
+  promptSha256: "96cc2fa0dd12adf40dc3993832e95a3f7b1113ad265fbc8e3735cfc808f3b754",
+  cliSha256: "c2cdb05244ad9a3dcb8731988790ea6a06a59ab3c062c0f872b35f4ad7d20b05",
 });
 
 export const SEDIMENT_ABACUS_COPY = Object.freeze({
   name: "Sediment Abacus",
   state: Object.freeze({ available: "available", in_progress: "in progress", remediation_required: "remediation required", complete: "complete" }),
-  unseen: null,
-  available: null,
-  inProgress: null,
-  missed: null,
-  mastered: null,
-  returned: null,
-  nextBoundary: null,
-  alt: null,
+  unseen: "SCENE // Graded sediment crosses the dry shelf into an irregular mineral-nodule field spanning several eroded channel depths.",
+  available: "PILOT // The recurrence invites a count but refuses a row. I'll call it the Sediment Abacus. SUIT // Distinct compatible local surface confirmed; structured expedition work is available.",
+  inProgress: "SYSTEM // Sanitized expedition work can resume from its clean boundary. SCENE // Sediment, nodules, channels, water, and route remain unchanged.",
+  missed: "901 TEACHER // One checked structure or control-flow dimension remains unresolved. Answer-free guidance is available inside the Terminal.",
+  mastered: "SYSTEM // Existing evidence is finalized. SCENE // The irregular nodule field and basin remain unchanged.",
+  returned: "SCENE // The same nodules remain distributed across the dry channel depths. SUIT // Sanitized evidence restores only the lawful expedition boundary.",
+  nextBoundary: "PILOT // I'll continue along the material route already ahead. SYSTEM // The current continuation is available.",
+  alt: "Irregular mineral nodules recur across several eroded channel depths on a dry reachable shelf, with graded sediment leading into the field and live water beyond.",
 });
 
 const attemptIds = Object.freeze(["H7-1", "H7-2", "H7-3", "H7-4", "H7-5"]);

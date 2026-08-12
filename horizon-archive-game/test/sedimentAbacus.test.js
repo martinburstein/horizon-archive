@@ -88,17 +88,17 @@ function lawfulRegistry() {
   return { ...base, layouts };
 }
 
-test("Host 07 registry is inert, null-first, and has no media import", () => {
-  assert.equal(SEDIMENT_ABACUS_REGISTRY.source.enabled, false);
-  assert.equal(SEDIMENT_ABACUS_REGISTRY.source.path, null);
-  assert.equal(SEDIMENT_ABACUS_PROVENANCE.sha256, null);
-  assert.equal(SEDIMENT_ABACUS_SOURCE_URL, null);
-  assert.equal(SEDIMENT_ABACUS_COPY.alt, null);
-  assert.equal(getSedimentAbacusHotspot(), null);
-  assert.equal(isSedimentAbacusMeasurementPass(), false);
+test("Host 07 selected registry is media-backed and measurement complete", () => {
+  assert.equal(SEDIMENT_ABACUS_REGISTRY.source.enabled, true);
+  assert.equal(SEDIMENT_ABACUS_REGISTRY.source.path, SEDIMENT_ABACUS_PATH);
+  assert.equal(SEDIMENT_ABACUS_PROVENANCE.sha256, "19ae9894853a33bb52be2e32a11ce57d1de383fa9cc21dbd4d291dea00f492d9");
+  assert.equal(SEDIMENT_ABACUS_SOURCE_URL, SEDIMENT_ABACUS_PATH);
+  assert.match(SEDIMENT_ABACUS_COPY.alt, /Irregular mineral nodules/);
+  assert.ok(getSedimentAbacusHotspot());
+  assert.equal(isSedimentAbacusMeasurementPass(), true);
   assert.equal(isSedimentAbacusLawful(), false);
   assert.equal(deriveSedimentAbacusState(), "hidden");
-  assert.doesNotMatch(app, /host07-sediment-abacus-master-v1\.png";/);
+  assert.match(app, /host07-sediment-abacus-master-v1\.png";/);
 });
 
 test("Host 07 accepts only the five frozen attempt identities and exact provenance", () => {
@@ -150,7 +150,7 @@ test("Host 07 selected phase routes USE through unchanged L03-01 then L03-02", (
 });
 
 test("Host 07 uses one native target and selected image only after lawfulness", () => {
-  assert.match(app, /sedimentAbacusActive \? \([\s\S]*?<img[\s\S]*?sediment-abacus-art[\s\S]*?SEDIMENT_ABACUS_SOURCE_URL/);
+  assert.match(app, /sedimentAbacusActive \? \([\s\S]*?<img[\s\S]*?sediment-abacus-art[\s\S]*?sedimentAbacusImage/);
   assert.match(app, /const presentedSceneHotspots = scene\.id === "ruins" && sedimentAbacusActive[\s\S]*?sedimentAbacusHotspots/);
   assert.match(app, /data-sediment-abacus-state/);
   assert.match(app, /aria-label={`\$\{verb\.toLowerCase\(\)\} \$\{hotspot\.label\}, \$\{sedimentAbacusStateLabel\}`}/);
@@ -165,7 +165,8 @@ test("Host 07 transition is one-frame, focus-safe, and fail-closed", () => {
   assert.doesNotMatch(app, /localStorage[^\n]*sedimentAbacus|saveGame\([^)]*sedimentAbacus/i);
 });
 
-test("Host 07 copy slots remain explicitly unpopulated for Quartermaster", () => {
-  for (const key of ["unseen", "available", "inProgress", "missed", "mastered", "returned", "nextBoundary", "alt"]) assert.equal(SEDIMENT_ABACUS_COPY[key], null);
+test("Host 07 copy slots are final-purpose and bounded", () => {
+  for (const key of ["unseen", "available", "inProgress", "missed", "mastered", "returned", "nextBoundary", "alt"]) assert.equal(typeof SEDIMENT_ABACUS_COPY[key], "string");
   assert.equal(SEDIMENT_ABACUS_COPY.name, "Sediment Abacus");
+  assert.doesNotMatch(JSON.stringify(SEDIMENT_ABACUS_COPY), /Builder|Machine|reward|access granted|invitation/i);
 });

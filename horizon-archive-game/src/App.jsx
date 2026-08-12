@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import glassMeadowImage from "../../Visual Direction/Production Masters/2026-07-15-glass-meadow-integrated-terminal/glass-meadow-integrated-terminal-master-v1.png";
 import drownedArchiveImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/drowned-archive-master.png";
 import strandedLensCradleImage from "../../Visual Direction/Production Masters/2026-08-10-first-run-host06/host06-stranded-lens-cradle-master-v1.png";
+import sedimentAbacusImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host07/host07-sediment-abacus-master-v1.png";
 import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
 import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
@@ -1534,7 +1535,7 @@ export function App() {
     image.decoding = "async";
     image.onload = () => connected && setSedimentAbacusDecodedImage({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight });
     image.onerror = () => connected && setSedimentAbacusDecodedImage(null);
-    image.src = SEDIMENT_ABACUS_SOURCE_URL;
+    image.src = sedimentAbacusImage;
     return () => { connected = false; image.onload = null; image.onerror = null; };
   }, []);
 
@@ -1550,7 +1551,7 @@ export function App() {
     }
     if (sedimentAbacusPresented || mode !== "playing" || scene.id !== "ruins" || terminalOpen) return undefined;
     if (!sedimentAbacusTransitionPendingRef.current) {
-      sedimentAbacusFocusPendingRef.current = true;
+      sedimentAbacusFocusPendingRef.current = sedimentAbacusState !== "complete";
       setSedimentAbacusPresented(true);
       return undefined;
     }
@@ -1562,7 +1563,7 @@ export function App() {
       setSedimentAbacusPresented(true);
     });
     return () => window.cancelAnimationFrame(frame);
-  }, [mode, scene.id, terminalOpen, sedimentAbacusLawful, sedimentAbacusPresented]);
+  }, [mode, scene.id, terminalOpen, sedimentAbacusLawful, sedimentAbacusPresented, sedimentAbacusState]);
 
   useLayoutEffect(() => {
     if (!sedimentAbacusFocusPendingRef.current || !sedimentAbacusActive || terminalOpen) return;
@@ -4440,7 +4441,7 @@ export function App() {
               sedimentAbacusActive ? (
                 <img
                   className="scene-art sediment-abacus-art"
-                  src={SEDIMENT_ABACUS_SOURCE_URL}
+                  src={sedimentAbacusImage}
                   alt={SEDIMENT_ABACUS_COPY.alt ?? ""}
                   data-sediment-abacus-source={SEDIMENT_ABACUS_REGISTRY.source.path ?? undefined}
                 />
