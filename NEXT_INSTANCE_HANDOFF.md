@@ -2,14 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-010-v1 / FOUR PRIVATE ATTEMPTS`**
+Current disposition: **`DIRECTORIAL LOCK / FRDT-010-v1 / BLIND SURFACE`**
 
-Exact next owner: **one Reconnaissance Sergeant**
+Exact next owner: **one Tactical Operations Specialist**
 
-Issue one directorial lock for the exact blind optic-hollow relationship,
-reading order, private-selection boundary, native two-lesson handoff, and
-unchanged later route. Do not generate, inspect media, implement runtime, or
-change the shell.
+Issue one implementation-exact player-experience blueprint for the null-first
+registry, accepted-only generic-launcher replacement, native LOOK/TALK/USE,
+focus/recovery, six-layout hotspot, two owned lessons, and unchanged later
+route. Do not generate, inspect media, or implement runtime.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
