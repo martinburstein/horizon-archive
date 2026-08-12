@@ -2,23 +2,23 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-005-v21 / EXACTLY TWO FRESH
-ATTEMPTS I1 THEN CONDITIONAL I2 / BROAD CENTER-SAFE PROMPT V6 / NO I3`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-005-v15 / I1 THEN
+CONDITIONAL I2 / PROMPT V6 / BROAD FULL-SOURCE ACCESSIBILITY`**
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-Fresh Science reads the complete intake/profile, `FRWO-005-v21`,
-`FRWO-005-v20`, `FRCA-005-v15`, current release map/scoreboard, and the proven
-v15/H1 transport controls. Independently prove prompt-v6 identity, the broad
-full-source six-layout/accessibility envelope, sequential I1/I2 control,
-fresh literal path absence, response/materialization/PBA budgets, accepted-only
-runtime identity/geometry requirements, cleanup, rollback, and protected-state
-boundaries. Issue READY or exact HOLD; perform zero credential/API/media work.
+Fresh Mission reads the complete intake/profile, `FRWO-005-v21`,
+`FRVE-005-v15`, `FRCA-005-v15`, current treatment/blueprint/functional/
+manifest controls, and the five proven v15/H1 transport sources. Derive and
+fully retain a fresh v16 source family for sequential I1 then conditional I2,
+prompt v6, fifteen exact paths, the measured candidate-dependent geometry
+schema, accepted-only runtime corrections, exact cleanup, validation, and
+rollback. Run only parser/semantic/layout and credential-cleared zero-send
+fixtures; issue the new shell, commit, push, and synchronize before production.
 
-I1 and I2 are unstarted. I2 may start only after objective rejection/failure
-and exact cleanup of I1; the first ACCEPT ends the domain. No I3, retry,
-relaunch, edit, variation, crop repair, reuse, or reveal.
+I1 and I2 remain unstarted. I2 may start only after a non-ACCEPT I1 result and
+exact I1 cleanup; the first ACCEPT closes the domain. No I3, retry, relaunch,
+edit, variation, crop repair, reuse, or reveal.
 
 Preserve the rail, sole unchanged `L02-03`, canon, learning, privacy/save,
 RP-012, `successor=null`, the separate OPEN protected-filename enumeration
