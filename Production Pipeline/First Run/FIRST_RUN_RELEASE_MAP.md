@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-006-v2`
+Map ID: `FRRM-007-v1`
 
 Current release authority: `FRAB-005-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v2-GR-01` / `FRCL-005-v1`
+Baseline / continuity lock: `FRPB-001-v3` / `FRCL-006-v1`
 
-Operations source inspected: `e31399b0a4e6f88aa34e6e198197447f6b0e70ab`
+Operations source inspected: `243edb4e`
 
 Released product candidate: `57b7b396`
 
@@ -22,8 +22,15 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-005-v21 / Stranded Lens Cradle`
 
-Selected bounded Work Order: **none - `FRWO-006-v1` closed at existing-source
-HOLD by `FRWO-006-v2`**.
+Selected bounded Work Order: **`FRWO-007-v1 / Host 07 Sediment Abacus - One
+Potential Canonical Source / Two Sequential Built-In Attempts Maximum`**.
+
+Martin explicitly reopened Host 07 new-media planning and authorized exactly
+two generation attempts. `FRPB-001-v3` and `FRCL-006-v1` bound that authority
+to one possible additional Drowned source; `FRWO-007-v1` freezes attempt domain
+`{H7-A,H7-B}`, built-in mode only, no third call/fallback/edit/variation/
+reference/reveal, and complete Science/Mission gates before any call. No call,
+candidate, product, maturity, or inventory change exists yet.
 
 `FRWO-005-v17` is closed. G1 made exactly one HTTP 200 request, passed strict
 technical and physical review, and failed the frozen v4 responsive-layout and
