@@ -29,7 +29,7 @@ Release candidate: `e6154f892418166ce119b3fc03d904938151542f`
 - Cold full game suite: `1008/1008 PASS`.
 - Curriculum validator self-tests: `40/40 PASS`.
 - Production build: `224 modules PASS`.
-- PBA: JS `1,711,071`; CSS `119,757`; accepted media `19 / 70,136,520`;
+- PBA: JS `1,711,109`; CSS `119,757`; accepted media `19 / 70,136,520`;
   maps `0`.
 - Served root, deep fallback, JS, CSS: HTTP `200`; owned port `4199` cleared.
 - Forced colors and reduced motion: one independent browser case each PASS.
