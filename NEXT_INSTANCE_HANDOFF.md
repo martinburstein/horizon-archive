@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PLAYER EXPERIENCE READY / FRPX-009-v2 / TEN-ID GUARD`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-009-v2 / FIVE FRESH ATTEMPTS`**
 
-Exact next owner: **one fresh Combat Engineer / `combat_engineer`**
+Exact next owner: **one fresh Quartermaster / `quartermaster`**
 
-Read the full Combat profile, `FRSH-009-v2`, `FRPX-009-v2`, `FRCE-009-v1`, and
-current Host 09 runtime/tests. Add only H9-6..H9-10 frozen prompt identities
-and exact guard regressions; preserve inert null-first state. Run focused,
-related, full, build, and PBA gates; issue a functional variance, push, and
-route fresh Quartermaster. Do not generate or access media.
+Read the full Quartermaster profile, imagegen skill/CLI references,
+`FRSH-009-v2`, `FRCE-009-v2`, all five new prompts, and the prior reject ledger.
+Preflight exact synchronized source/tool/prompt/key/path/product/ledger state;
+then run at most H9-6..H9-10 sequentially and privately. Exact-delete each
+objective reject before the next call; first PASS stops. Import and populate
+only one passing byte-identical source. Never reveal any image.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
