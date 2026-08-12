@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-005-v14`
+Map ID: `FRRM-005-v15`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Operations source inspected: `7f0bc32df1d44eeabf66cae39cefabe56c19da90`
+Operations source inspected: `1cb9e079d9acd9aa14a62c13f6acaa2bcdf55572`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -22,8 +22,8 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **`FRWO-005-v14 / Stranded Lens Cradle -
-Post-E1 Decision Hold`**.
+Selected bounded Work Order: **`FRWO-005-v15 / Stranded Lens Cradle -
+Center-Core F1 Attempt`**.
 
 `FRWO-005-v13` is closed. Its complete attempt domain `{E1}` was consumed by
 exactly one HTTP 200 request. E1 passed strict technical and physical review,
@@ -31,11 +31,15 @@ then failed private objective responsive-layout and accessibility review: the
 complete cradle exceeded the frozen vertical relation/tight-height bands and
 one required fragment lay outside the inward fragment band. The candidate was
 deleted under exact identity controls; all nine controlled/product paths are
-absent; no product or maturity evidence exists. `FRWO-005-v14` records the
-terminal decision HOLD. There is no E2, retry, remaining paid request, Image
-work, E2E, implementation, release, or later-address authority. Martin's
-separate explicit decision is required before any new finite attempt can be
-planned.
+absent; no product or maturity evidence exists. `FRWO-005-v14` recorded the
+terminal decision HOLD. Martin's latest placeholder explicitly authorizes
+continuation at the immediately requested decision edge, and `FRWO-005-v15`
+therefore creates exactly one separately versioned paid attempt `{F1}` with
+fresh paths and frozen `HOST06-GEN-PROMPT-v3`. F1 reduces the complete relation
+to width `.24-.27` / height `.25-.29`, moves every required fragment wholly
+inside `x=[.27,.38]`, and keeps all essential reading inside center-safe
+`x=[.27,.64], y=[.32,.82]`. No API/media action is authorized before fresh
+Science viability and a fresh Mission shell; there is no F2 or retry.
 
 `FRWO-004-v1` remains withdrawn and closed without production. Martin's
 bounded new-Drowned-media authorization, `FRPB-001-v2`, and `FRCL-004-v2`
@@ -289,9 +293,9 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v14` is terminal `HOLD`; Martin's separate explicit decision is the
-exact next action.
+`FRWO-005-v15` is `WORK ORDER READY`; fresh Science viability is the exact
+next action.
 `FRWO-004-v1` remains closed. This map does not preauthorize
-generation/API invocation, implementation, asset selection/import, reveal, later-address
-work, maturity advancement, residual cleanup, closure of any OPEN
-classification, or `FIRST RUN COMPLETE`.
+generation/API invocation before a fresh shell, implementation, asset
+selection/import, reveal, later-address work, maturity advancement, residual
+cleanup, closure of any OPEN classification, or `FIRST RUN COMPLETE`.
