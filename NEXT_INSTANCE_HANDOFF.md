@@ -2,14 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-009-v2 / FIVE FRESH ATTEMPTS`**
+Current disposition: **`DIRECTORIAL LOCK / FRDT-009-v2 / DISTANT COMPACT ISLAND`**
 
-Exact next owner: **one fresh Reconnaissance Sergeant / `reconnaissance_sergeant`**
+Exact next owner: **one fresh Tactical Operations Specialist / `tactical_operations_specialist`**
 
-Read the full Recon profile, `FRSH-009-v2`, `FRDT-009-v1`, and the prior Host 09
-chain. Issue a narrow directorial variance locking the distant compact-island
-interpretation without changing canon or physical meaning, then route fresh
-Tactical. Do not generate, inspect, import, or reveal media.
+Read the full Tactical profile, `FRSH-009-v2`, `FRDT-009-v2`, and
+`FRPX-009-v1`. Issue a narrow blueprint variance extending the exact accepted
+attempt-ID guard to H9-1..H9-10 and freezing compact-island measurement records,
+then route fresh Combat. Do not generate or access media.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
