@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN PASS RELEASED / FRAB-009-v1 / RESPONSIVE EVIDENCE REPAIR`**
+Current disposition: **`CONTINUITY LOCK / BOUNDED HOST 09 FIVE-ATTEMPT RETRY`**
 
-Exact next owner: **Martin**
+Exact next owner: **one Operations Planning Major**
 
-The correction is released. Decide whether to authorize a fresh finite Host 09
-media attempt under the corrected gate. No paid attempt, Host 10, API, media,
-or product action is presently authorized.
+Issue one fresh Host 09 Work Order containing exactly five sequential attempts
+under FRAB-009-v1's corrected gate. First PASS stops; no sixth attempt, prior
+pixel reference, edit, variation, reveal, or Host 10 action exists.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
