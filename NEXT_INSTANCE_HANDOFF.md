@@ -2,16 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / ENTIRE BOUNDED RAW CHILD
-STDERR RETURNED AS CANONICAL BASE64 WITH INDEPENDENT FACTS / ACCEPTANCE
-UNCHANGED / FRESH SCIENCE ONE-RUN LOCALIZATION REQUIRED /
-FRSH-005-v1-VR-29`**
+Current disposition: **`HOLD / SOLE FRSH-005-v1-VR-29 OUTER RUN /
+CANONICAL BASE64 LOCALIZED ACTUAL PT02_HELPER_SOURCE AGAINST FROZEN
+PT06_CREDENTIAL_GATE / ALL CONTROLLED PATHS ABSENT / NO RETRY /
+FRESH MISSION EXACT-STAGE ADJUDICATION REQUIRED / FRVE-005-v7-VR-26`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Mission decision: `FRSH-005-v1-VR-29`
 
-Current Science return: `FRVE-005-v7-VR-25`
+Current Science return: `FRVE-005-v7-VR-26`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-29`
 
@@ -33,31 +33,30 @@ Corrected candidate tree: `92b22fc56d79d18cf1abf7213c5268c9e4149830`
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
 ## Exact next action
 
-Science reads the complete required intake/profile, `FRSH-005-v1-VR-29`,
-`FRVE-005-v7-VR-25`, `FRSH-005-v1-VR-28`, `FRVE-005-v7-VR-24`, both retained
-sources, `FRWO-005-v7`, and cited controls. It validates the exact corrected
-source identities, unchanged carriers and PT06 acceptance predicate, bounded
-raw-byte drains, canonical Base64 projection, independent outer recomputation,
-one-parent/one-child cardinality, and all `13/13` preflight absences.
+Mission reads the complete required intake/profile,
+`FRVE-005-v7-VR-26`, `FRSH-005-v1-VR-29`, `FRVE-005-v7-VR-25`, both retained
+sources, `FRWO-005-v7`, and cited controls. It accepts the sole completed run
+only as immutable HOLD: controller `89`, parent `88`, one parent, one child,
+child exit `87`, child stdout zero, child stderr `NONEXACT_BOUNDED`, zero
+controller stderr, zero activity, and `13/13` postflight absence.
 
-Only after every read-only gate passes, Science runs the exact outer once with
-the credential removed. It retains controller/parent exit and stdout/stderr
-facts plus the entire validated child stderr as bounded canonical Base64,
-exact raw length, lowercase SHA-256, ASCII flag, CR count, LF count, and exact
-frozen-record occurrence count. It decodes only in memory for byte-level
-comparison, writes no decoded body, and reports the precise mismatch. The run
-is never corrected, reinterpreted, or retried.
+The validated canonical Base64 contains one 200-byte diagnostic record plus
+terminal CRLF. Its actual stage token at zero-based byte offset `32` is the
+18-byte `PT02_HELPER_SOURCE`; the frozen expected token is the 20-byte
+`PT06_CREDENTIAL_GATE`. The frozen 202-byte PT06 record occurs zero times.
+Mission adjudicates this exact stage mismatch without decoding or rerunning
+the completed child and issues exactly one new versioned `FIRST RUN SHELL
+READY`, `REVISE`, or `HOLD` decision.
 
-Expected authority remains HOLD: controller `89`, parent `88`, one parent,
-one child, child exit `87`, child stdout zero, child stderr
-`NONEXACT_BOUNDED`, zero controller stderr, zero activity, and `13/13`
-postflight absence. Science commits only its variance and handoff and does not
-push.
+Mission performs no controller, parent, child, credential, request, API,
+generation, media, pixel, product, test, build, browser, E2E, or residual
+operation. It may not route to Quartermaster, consume an ordinal, reinterpret
+or retry the completed run, inspect media, reveal, advance maturity, close an
+OPEN record, release, or call `FIRST RUN COMPLETE`.
 
 API sends remain `0`; ordinal `1` remains opaque and consumed; ordinals `2`
 and `3` remain unstarted and unconsumed. The one-path rail, sole unchanged
