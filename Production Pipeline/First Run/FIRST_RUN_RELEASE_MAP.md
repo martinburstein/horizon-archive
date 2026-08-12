@@ -1,6 +1,6 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-006-v1`
+Map ID: `FRRM-006-v2`
 
 Current release authority: `FRAB-005-v1 / FIRST RUN PASS RELEASED`
 
@@ -22,8 +22,8 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-005-v21 / Stranded Lens Cradle`
 
-Selected bounded Work Order: **`FRWO-006-v1 / Sediment Abacus - Existing-Source
-Viability and Fixed Lesson Integration`**.
+Selected bounded Work Order: **none - `FRWO-006-v1` closed at existing-source
+HOLD by `FRWO-006-v2`**.
 
 `FRWO-005-v17` is closed. G1 made exactly one HTTP 200 request, passed strict
 technical and physical review, and failed the frozen v4 responsive-layout and

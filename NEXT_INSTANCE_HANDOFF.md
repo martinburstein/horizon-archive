@@ -2,25 +2,28 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRVE-006-v1 / HOST 07 EXISTING-SOURCE
-GEOMETRY NOT PROVED / NO PRODUCTION`**
+Current disposition: **`HOLD / FRWO-006-v2 / HOST 07 EXISTING-SOURCE PATH
+UNAVAILABLE / MARTIN DECISION REQUIRED`**
 
-Exact next owner: **one fresh Operations Planning Major /
-`operations_planning_major`**
+Exact next owner: **Martin**
 
-Fresh Operations reads the complete intake/profile, `FRVE-006-v1`,
-`FRWO-006-v1`, `FRCL-005-v1`, `FRPB-001-v2-GR-01`, exact `FRAB-005-v1`, and
-corrected `FRRM-006-v1` / `FRSB-006-v1`.
+Science proved the immutable accepted Drowned master contains no distinct dry
+distributed Sediment Abacus relation. `FRWO-006-v1` is closed without
+production; Host 07 geometry/semantic/layout records are null; no code, media,
+maturity, or inventory changed.
 
-Close or revise the bounded Host 07 Work Order honestly. Science proved the
-immutable accepted Drowned master contains no distinct dry distributed
-Sediment Abacus relation; all Host 07 geometry/semantic/layout records are
-null. Do not begin Mission or production, relabel submerged machinery, reuse
-Host 06, weaken physical-host requirements, or skip to Host 08.
+Martin chooses exactly one:
 
-If the only viable path is a new Host 07 source, synchronize a bounded Martin
-decision request through the lawful Commandant route. Prior Host 06 media/API
-authority and the user's request for computational work do not authorize Host
-07 media. Otherwise record terminal HOLD. Preserve all product, canon,
-learning, privacy/save, route/world/ending, accessibility, OPEN-process,
-protected-state, and VR-65 boundaries.
+1. **Authorize bounded Host 07 new-media planning.** This routes one fresh
+   Commandant to reopen only the potential one-source boundary. It does not
+   authorize generation, attempts, API calls, asset selection, import,
+   implementation, or reveal; those require the complete fresh planning chain.
+2. **Keep Host 07 at terminal HOLD.** No next Work Order is selected.
+
+General continuation or compute/token-use instructions do not imply new-media
+authority. Do not start another role until Martin explicitly chooses.
+
+Preserve exact Hosts 01-06, accepted media, `L02-03`, `L03-01 + L03-02`, the
+one-path rail, learning/privacy/save/offline/accessibility rules, invariant
+world, RP-012, `successor=null`, every OPEN record, protected exclusions, and
+VR-65. Do not skip to Host 08 or later work.
