@@ -1,6 +1,6 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-005-v10`
+Map ID: `FRRM-005-v11`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
@@ -22,8 +22,8 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **`FRWO-005-v10 / Stranded Lens Cradle -
-Corrected 4K Envelope Attempt`**.
+Selected bounded Work Order: **`FRWO-005-v11 / Stranded Lens Cradle -
+Dictionary-Safe Image Response Attempt`**.
 
 `FRWO-004-v1` remains withdrawn and closed without production. Martin's
 bounded new-Drowned-media authorization, `FRPB-001-v2`, and `FRCL-004-v2`
@@ -109,8 +109,8 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 06` | **SELECTED - `FRWO-005-v10`**: one new source plus fixed Host 05 -> Host 06 -> unchanged `L02-03` integration | First missing fixed encounter; v10 corrects the undersized 4K envelope and permits exactly one fresh `{C1}` |
-| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind independent acceptance or HOLD of `FRWO-005-v10`; no skip or repeatable host pattern is authorized |
+| 1 | `FR-03 / Host 06` | **SELECTED - `FRWO-005-v11`**: one new source plus fixed Host 05 -> Host 06 -> unchanged `L02-03` integration | First missing fixed encounter; v11 corrects the reproduced dictionary-method defect and permits exactly one fresh `{D1}` |
+| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind independent acceptance or HOLD of `FRWO-005-v11`; no skip or repeatable host pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
@@ -119,7 +119,7 @@ game complete.
 
 ## Selected fifth Work Order boundary decision
 
-`FRWO-005-v10` owns only one new eventual canonical Host 06 Drowned source and
+`FRWO-005-v11` owns only one new eventual canonical Host 06 Drowned source and
 its complete integration into exact Host 05 -> Host 06 -> sole unchanged
 `L02-03`. It is a new Work Order under `FRPB-001-v2` and `FRCL-004-v2`, not a
 revival or amendment of closed `FRWO-004-v1`. It is a versioned replacement,
@@ -269,7 +269,7 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v10` is selected and one fresh Mission shell is the exact next
+`FRWO-005-v11` is selected and one fresh Mission shell is the exact next
 action. `FRWO-004-v1` remains closed. This map does not preauthorize
 generation/API invocation, implementation, asset selection/import, reveal, later-address
 work, maturity advancement, residual cleanup, closure of any OPEN

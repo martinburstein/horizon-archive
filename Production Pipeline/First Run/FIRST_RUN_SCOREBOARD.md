@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v10`
+Scoreboard ID: `FRSB-005-v11`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v10`
+Release map: `FRRM-005-v11`
 
 Operations source inspected: `1aaecae697996258cd4a3c6458b4ec0515558cdf`
 
@@ -18,8 +18,8 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v10 / Stranded Lens Cradle -
-Corrected 4K Envelope Attempt`**.
+Selected bounded Work Order: **`FRWO-005-v11 / Stranded Lens Cradle -
+Dictionary-Safe Image Response Attempt`**.
 
 The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
 remains withdrawn and closed without production, and its negative finding
@@ -122,7 +122,7 @@ no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
 Martin's bounded media authorization and `FRPB-001-v2` permit the distinct
-successor `FRWO-005-v10` to own at most one eventual canonical additional
+successor `FRWO-005-v11` to own at most one eventual canonical additional
 Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03` integration.
 Its target `1 accepted shared compression / 2 exact / 9 missing` is not current
 candidate or maturity evidence. Current `FR-03` remains exactly `1
