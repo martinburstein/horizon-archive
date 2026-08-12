@@ -2,11 +2,11 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`REVISE / FRSH-005-v1-VR-32 PRODUCTION AUTHORIZATION
-RETIRED / CLOSED V7 ORDINAL LEDGER / STRICT OFFICIAL-ENVELOPE PARSER
-CORRECTION FROZEN / NO API OR MEDIA AUTHORITY / FRSH-005-v1-VR-33`**
+Current disposition: **`WORK ORDER READY / FRWO-005-v8 / ONE FRESH NON-V7
+ATTEMPT A1 / STRICT OFFICIAL-ENVELOPE PARSER AND BOUNDED FAILURE EVIDENCE /
+FRESH SCIENCE REQUIRED / NO API OR MEDIA AUTHORITY`**
 
-Current Work Order: `FRWO-005-v7`
+Current Work Order: `FRWO-005-v8`
 
 Current Mission decision: `FRSH-005-v1-VR-33`
 
@@ -14,47 +14,37 @@ Current Science return: `FRVE-005-v7-VR-29`
 
 Current Quartermaster return: `FRCA-005-v5`
 
-Effective control lineage: `FRSH-005-v1` through `FRSH-005-v1-VR-33`;
-no production-ready shell is active
+Effective control lineage: `FRSH-005-v1` through `FRSH-005-v1-VR-33`, then
+`FRWO-005-v8`; no production-ready shell is active
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Operations Planning Major /
-`operations_planning_major`**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
 ## Exact next action
 
-Fresh Operations reads the complete required intake/profile, complete
-`FRSH-005-v1-VR-33`, `FRVE-005-v7-VR-29`, `FRCA-005-v5`,
-`FRSH-005-v1-VR-32`, complete `FRWO-005-v7`, retained-source identities,
-current release map/scoreboard, and the cited current official OpenAI Image API
-authority.
+Fresh Science reads the complete required intake/profile, complete
+`FRWO-005-v8`, `FRSH-005-v1-VR-33`, `FRVE-005-v7-VR-29`, `FRCA-005-v5`,
+`FRSH-005-v1-VR-32`, retained source/helper identities, and current
+`FRRM-005-v8` / `FRSB-005-v8` plus cited official OpenAI Image API authority.
 
-Operations accepts or rejects Mission's closed ledger: ordinal `1` is opaque
-and consumed, ordinal `2` was consumed by exactly one authoritative
-`SendAsync` ending at PT10 with response status/body/diagnostic unavailable,
-and ordinal `3` is unstarted and unavailable. It must not revive any v7
-ordinal or infer the PT10 cause.
+Science performs a zero-credential, zero-send viability pass. It must
+fixture-prove the official-`ImagesResponse` strict parser, duplicate/unknown/
+trailing/member/type rejection, canonical bounded base64, exact request echo
+metadata, status/content-type/byte-count capture, secret-safe bounded error
+projection and `diagnostic-unavailable` fallbacks. It also re-proves the exact
+request/one-send posture, fresh v8 attempt-path isolation, native helper and
+handle identity, create-new/flush/no-replace move, PNG/physical/six-layout/
+accessibility/product/cleanup/validation envelope, and controlled-path absence.
 
-Operations decides whether Martin's existing explicit bounded Host 06 Image
-API authorization lawfully supports one separately versioned future attempt
-budget. Any future attempt must use a fresh finite non-v7 attempt domain, the
-unchanged supported endpoint/model/prompt/request members, and the strict
-official-`ImagesResponse` parser correction frozen in `FRSH-005-v1-VR-33`.
-
-If the budget is within existing authority, Operations issues one new
-versioned Work Order or Operations variance and routes exactly one fresh
-Science no-send viability pass. Science must fixture-prove the corrected
-strict JSON parser plus the complete request, identity, materialization,
-review, cleanup, product, and validation envelope before Mission may issue a
-new shell. If Operations finds that a new paid attempt, source count,
-transport, model, or media boundary needs new authority, it issues `HOLD` and
-returns that exact decision to Martin.
-
-Operations performs no API send, credential access, parent/carrier execution
-or patch, temp allocation, media generation/read/import/reveal, product or
-runtime change, Host 07+ work, maturity update, record closure, release, or
-`FIRST RUN COMPLETE` operation.
+Science accepts the closed v7 ledger without inspection or inference. The
+entire new paid-attempt domain is exactly `{A1}` and remains unconsumed; no
+retry or `A2` exists. PASS routes one fresh Mission Captain to issue a complete
+new `FIRST RUN SHELL READY` contract. Any defect returns exact `REVISE` or
+`HOLD`. Science performs no credential access, API send, media generation/read/
+import/reveal, product/runtime change, Host 07+ work, maturity update, release,
+or `FIRST RUN COMPLETE` operation.
 
 No source raster or provenance exists; runtime registry/copy/alt remain
 null-first; maturity is unchanged. Repository QA quarantine, protected PDF,
