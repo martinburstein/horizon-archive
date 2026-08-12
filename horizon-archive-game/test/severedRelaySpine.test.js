@@ -21,6 +21,7 @@ import {
 
 const app = await readFile(new URL("../src/App.jsx", import.meta.url), "utf8");
 const source = await readFile(new URL("../src/severedRelaySpine.js", import.meta.url), "utf8");
+const e2e = await readFile(new URL("../../playtest/e2e-playthrough.mjs", import.meta.url), "utf8");
 const prompts = {
   "H8-1": [3469, "c1a34baa2fd1756fe1c7ed2aa336178ddb2779f06491ebc87ba8ab84b6bc6df9"],
   "H8-2": [2980, "2f286dece70af2bae5047c0be8d5fde0b582297c85b67ec60cf2074fb92a3976"],
@@ -97,4 +98,13 @@ test("Host 08 state is surfaced without DOM, media, save, or evidence writes", (
   assert.match(app, /severedRelaySpineImage[\s\S]*?severed-relay-spine-art/);
   assert.doesNotMatch(app, /localStorage[^\n]*severedRelaySpine|saveGame\([^)]*severedRelaySpine/i);
   assert.doesNotMatch(source, /updateClientBridgeEvidence|setClientBridgeEvidence/);
+});
+
+test("clean-start E2E traverses Host 08 instead of the retired generic launcher", () => {
+  assert.match(e2e, /const severedRelaySpine = page\.locator\('\[data-hotspot-id="severed-relay-spine"\]'\)/);
+  assert.match(e2e, /Host 08 was not available after Control Flow mastery/);
+  assert.match(e2e, /await page\.getByRole\("button", \{ name: "USE", exact: true \}\)\.click\(\);\s*await severedRelaySpine\.click\(\);/);
+  assert.match(e2e, /Host 08 did not expose read-only completion after Client Bridge mastery/);
+  assert.match(e2e, /Completed Host 08 reopened Client Bridge/);
+  assert.doesNotMatch(e2e, /const controlContinue = page\.getByRole\("button", \{ name: "Start Client Bridge"/);
 });
