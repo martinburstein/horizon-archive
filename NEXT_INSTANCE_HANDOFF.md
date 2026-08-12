@@ -2,48 +2,38 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-008-v1 / HOST 08 SEVERED
-RELAY SPINE / FIVE CLI ATTEMPTS UNCONSUMED`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-008-v1 / HOST 08 FIVE CLI ATTEMPTS UNCONSUMED`**
 
-Exact next owner: **one fresh Office of Science Administrator / `office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-Quartermaster used exactly three of Martin's five authorized Host 07 CLI
-attempts. H7-1 and H7-2 were technical PASS but objective layout REJECT and
-were identity-cleaned without reveal. H7-3 passed technical, physical,
-six-layout, accessibility, and provenance gates. H7-4/H7-5 remain unused.
-Accepted H7-3 is `15,910,194` bytes, SHA-256
-`19ae9894853a33bb52be2e32a11ce57d1de383fa9cc21dbd4d291dea00f492d9`.
+Read the full Mission profile, `FRPB-001-v5`, `FRCL-008-v1`, `FRWO-008-v1`,
+`FRVE-008-v1`, `FRAB-007-v1`, the installed imagegen CLI skill/reference and
+script identity, released Host 07 runtime, current generic Client Bridge and
+`L03-03`, media/PBA/build controls, and exact protected-QA rule.
 
-The byte-identical source, provenance, exact measurements/copy/alt, Host 06 to
-Host 07 transition, Host 07 L03-01/L03-02 ownership, and local import are
-integrated. Full release validator is `988/988`; production build is `220`
-modules; media is `18 / 53,320,925`; clean-start E2E through MH-40 passed in
-`123.7s` with runtime errors `0`. Scratch and unused output paths are absent.
+Issue one versioned `FIRST RUN SHELL READY` contract for Host 08. Freeze one
+fresh absent GUID OS-temp scratch root, exact `h8-1.png` through `h8-5.png`
+children, exact product raster/provenance paths, five prompt identities or the
+downstream role that must freeze them, attempt ledger, CLI invocation,
+technical/physical/layout/accessibility records, identity-conditioned cleanup,
+null-first Combat candidate, validation ladder, rollback, and strict role
+sequence. Commit and push the planning gate; do not call the API, generate,
+inspect media, or perform production implementation.
 
-Intelligence independently released exact Host 07 H7-3: `15,910,194` bytes,
-SHA-256 `19ae9894853a33bb52be2e32a11ce57d1de383fa9cc21dbd4d291dea00f492d9`.
-Full tests `988/988`, build `220`, media `18/53,320,925`, served identity, and
-clean-start E2E `123.7s` PASS. Host 07 owns unchanged `L03-01` and `L03-02`.
+Science independently proved the installed CLI `35,266` bytes / SHA-256
+`c2cdb05244ad9a3dcb8731988790ea6a06a59ab3c062c0f872b35f4ad7d20b05`,
+Python `3.12.10`, OpenAI SDK `3.0.0`, key boolean present, and exact CLI dry-run
+exit `0` with no output. It issued candidate, geometry, six-layout,
+accessibility, state/evidence/privacy, PBA, external-QA, cleanup, and rollback
+gates. All five attempts remain unconsumed. First PASS stops; later ordinals
+require objective rejection plus exact cleanup; no sixth attempt exists.
 
-Read the full Science profile, `FRWO-008-v1`, `FRPB-001-v5`, `FRCL-008-v1`,
-`FRAB-007-v1`, the imagegen skill/CLI references and immutable script, Host 07
-runtime, generic Client Bridge, current media/PBA/build controls, and exact
-protected-QA rule. Perform zero live API, generation, or media review.
+Preserve the OPEN protected-QA capture-write variance. Its screenshot paths
+remain unstaged and must not be inspected, restored, staged, or used without
+Martin's separate protected-QA authority. Preserve all prior OPEN records,
+both filename-enumeration records, and VR-65.
 
-Independently prove or reject CLI/dependency/custody; prompt schema; normalized
-physical/layout/accessibility records; null-first state and sole `L03-03`;
-media/PBA/decode budgets; validation, external-QA-root enforcement, cleanup,
-and rollback. Issue `POLISH VIABILITY READY`, `REVISE`, or `HOLD`, synchronize
-NEXT, and do not generate. Five planning roles and a fresh shell remain
-mandatory; no sixth attempt or reveal exists.
-
-Preserve the new OPEN process-only protected-QA capture-write variance. Its
-screenshot paths remain unstaged and must not be inspected, restored, staged,
-or used without Martin's separate protected-QA authority. Preserve all prior
-OPEN records and VR-65.
-
-Preserve exact Hosts 01-06/media, L02-03, L03-01/L03-02, one-path rail,
+Preserve exact Hosts 01-07/media, L02-03, L03-01/L03-02, one-path rail,
 learning/privacy/save/offline/accessibility rules, invariant world, RP-012,
-`successor=null`, every OPEN process record, both filename-enumeration records,
-protected exclusions, and VR-65. Do not inspect protected paths or reveal Host
-08/later work.
+`successor=null`, protected exclusions, and later-host absence. Do not inspect
+protected paths or reveal Host 08/later work.
