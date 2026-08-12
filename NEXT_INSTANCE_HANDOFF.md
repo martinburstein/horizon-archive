@@ -2,15 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-008-v1-VR-04 / FINAL CORROBORATION`**
+Current disposition: **`FIRST RUN PASS RELEASED / FRAB-008-v1 / HOST 08 H8-3`**
 
-Exact next owner: **one fresh Intelligence Officer / `intelligence_officer`**
+Exact next owner: **one fresh Commandant / `commandant`**
 
-Read the full Intelligence profile, `FRSH-008-v1-VR-04`, complete Host 08
-chain, release controls, prior successful E2E, and corrected CSS candidate.
-Independently rerun focused/full/build/PBA and affected-state live layout/
-accessibility corroboration; release or reject, synchronize release records,
-commit/push, and prove remote equality. Do not rerun the full E2E.
+Read the full Commandant profile, `FRAB-008-v1`, updated release map,
+scoreboard, and changelog. Guard-revalidate the released baseline and decide
+whether the earliest missing Host 09 should enter a new bounded planning loop.
+Select no Work Order unless continuity, provenance, and authority are exact.
 
 Selected H8-3 is `16,815,595` bytes / SHA-256
 `f6b31c4c410c9cfc89b18047a0a529e184e58261c79f647b2afab59ecd6662a8`.

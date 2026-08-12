@@ -8,6 +8,16 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-12 — `FRAB-008-v1` — TUNE
+
+- **KEEP:** finite CLI ledger, private objective rejection, accepted-only
+  import, exact Cloud identity, measured layouts, native lesson ownership, and
+  external-root E2E.
+- **TUNE:** inventory every retained launcher/re-entry before browser launch;
+  compute minified CSS bytes before the presentation commit.
+- **REDESIGN:** not warranted. H8-3 passed `994/994`, build/PBA, affected-state
+  accessibility, and a `70.851s` complete journey with zero runtime errors.
+
 ### 2026-08-12 — `FRAB-007-v1` — TUNE
 
 - **KEEP:** finite CLI ledgers, private objective rejection, exact cleanup,

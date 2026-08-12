@@ -2,7 +2,7 @@
 
 Scoreboard ID: `FRSB-008-v1`
 
-Current release authority: `FRAB-007-v1 / FIRST RUN PASS RELEASED`
+Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v5` / `FRCL-008-v1`
 
@@ -16,14 +16,13 @@ Image product candidate reviewed: `3b43d0b9`
 
 Date: **2026-08-12**
 
-Current released Work Order: `FRWO-007-v2 / Sediment Abacus`.
+Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`.
 
 Selected bounded Work Order: **`FRWO-008-v1 / Host 08 Severed Relay Spine -
 five sequential CLI attempts maximum`**.
 
-Host 07 H7-3 remains released. The fresh Host 08 ledger
-`{H8-1..H8-5}` is unconsumed. This selection changes no maturity or inventory;
-Science and Mission must pass before any generation.
+Host 08 H8-3 is released. H8-1/H8-2 were rejected and cleaned; H8-4/H8-5 are
+unused. Accepted media is `19 / 70,136,520`.
 
 G1 used prompt v4's distant center-island strategy and made exactly one HTTP
 200 request. It passed technical and physical review, then failed the exact
@@ -131,7 +130,7 @@ complete.
 - `FRWO-003-v1` independently adds one exact physical relationship at `FR-03`
   without promoting the address-level cell above `FR0`; ten Drowned hosts
   remain missing and the accepted shared compression remains visible.
-- The host inventory is now `8 exact / 1 accepted shared compression / 30
+- The host inventory is now `9 exact / 1 accepted shared compression / 29
   missing / 1 unadvanced Witness expression`.
 
 ## Current selected Work Order - maturity unchanged
@@ -152,5 +151,9 @@ compression / 31 missing / 1 unadvanced Witness expression`.
 / 3 exact / 8 missing`; whole-game inventory is `8 exact / 1 accepted shared
 compression / 30 missing / 1 unadvanced Witness expression`.
 
-Fresh Commandant revalidation is next. No Host 08 Work Order or `FIRST RUN
+`FRAB-008-v1` releases Host 08. `FR-03` is now `1 accepted shared compression
+/ 4 exact / 7 missing`; whole-game inventory is `9 exact / 1 accepted shared
+compression / 29 missing / 1 unadvanced Witness expression`.
+
+Fresh Commandant revalidation is next. No Host 09 Work Order or `FIRST RUN
 COMPLETE` is inferred.

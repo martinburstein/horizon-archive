@@ -2,7 +2,7 @@
 
 Map ID: `FRRM-008-v1`
 
-Current release authority: `FRAB-007-v1 / FIRST RUN PASS RELEASED`
+Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v5` / `FRCL-008-v1`
 
@@ -20,7 +20,7 @@ Released predecessor: `TD-012 / PASS - AS BUILT RELEASED`
 
 Date: **2026-08-12**
 
-Current released Work Order: `FRWO-007-v2 / Sediment Abacus`
+Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`
 
 Selected bounded Work Order: **`FRWO-008-v1 / Host 08 Severed Relay Spine -
 Imagegen CLI / Five Total Sequential Attempts Maximum`**.
@@ -135,7 +135,7 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Hosts 08-15` | Remaining Drowned movements and pedestrian/Crown sequence | Host 07 is released; Host 08 is earliest missing and no repeatable pattern is authorized |
+| 1 | `FR-03 / Hosts 09-15` | Remaining Drowned movements and pedestrian/Crown sequence | Host 08 is released; Host 09 is earliest missing and no repeatable pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
@@ -316,8 +316,8 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-007-v2` is released by `FRAB-007-v1`. H7-1/H7-2 were rejected and
-cleaned; H7-3 is canonical Host 07; H7-4/H7-5 are unused. No Work Order is
+`FRWO-008-v1` is released by `FRAB-008-v1`. H8-1/H8-2 were rejected and
+cleaned; H8-3 is canonical Host 08; H8-4/H8-5 are unused. No Work Order is
 selected. Fresh Commandant revalidation is next.
 `FRWO-004-v1` remains closed. This map does not preauthorize
 generation/API invocation before a fresh shell, implementation, asset
