@@ -2,19 +2,18 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN VISION BASELINE REOPENED / FRPB-001-v6 / HOST 09 / FIVE ATTEMPTS MAXIMUM`**
+Current disposition: **`CONTINUITY LOCK / FRCL-009-v1 / HOST 09 / FIVE ATTEMPTS MAXIMUM`**
 
-Exact next owner: **one fresh Colonel / `colonel`**
+Exact next owner: **one fresh Operations Planning Major / `operations_planning_major`**
 
-Read the full Colonel profile, `FRPB-001-v6`, `FRAB-008-v1`, the complete
-game-on-paper Host 08 -> Host 09 -> Host 10 chain, current lesson ownership,
-and released runtime boundary. Lock or reject exact continuity, dry access,
-multi-cavity physical relations, world silence, lesson ownership, source
-rejection conditions, and later-gap preservation. Do not select a Work Order.
+Read the full Operations profile, `FRPB-001-v6`, `FRCL-009-v1`, `FRAB-008-v1`,
+the current release map/scoreboard, and exact Host 09 runtime absence. Select
+one bounded versioned Work Order only if the five-attempt source, custody,
+runtime, lesson, validation, cleanup, and rollback scope is exact.
 
-Fresh Host 09 ledger `{H9-1..H9-5}` is fully unconsumed. Calls must be
-sequential one-output attempts; first PASS stops later calls. No prompt,
-candidate, product, generation, credential read, or Host 10 authority exists.
+Fresh Host 09 ledger `{H9-1..H9-5}` remains fully unconsumed. No prompt,
+candidate, generation, credential read, product path, Work Order, or Host 10
+authority exists yet.
 
 Do not inspect, restore, stage, or use repository QA screenshots. Preserve
 released Host 08 bytes, Hosts 01-07, all accepted media, all OPEN records,
