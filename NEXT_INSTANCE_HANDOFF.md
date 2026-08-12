@@ -2,13 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRCA-009-v3 / FIVE HIGH-AIM ATTEMPTS CONSUMED`**
+Current disposition: **`TERMINAL HOLD / FRWO-009-v6 / FIFTEEN ATTEMPTS CONSUMED`**
 
-Exact next owner: **one fresh Operations Planning Major / `operations_planning_major`**
+Exact next owner: **Martin decision only**
 
-Read the full Operations profile and `FRCA-009-v3`. Close `FRWO-009-v5` as a
-terminal HOLD, preserve the exact fifteen-attempt ledger and absent product,
-and route only Martin for a new decision. Do not generate, reuse, or reveal.
+The bounded ledger is exhausted. Do not generate, reuse, reveal, import, edit,
+crop, vary, start presentation, release, or select a later host. Any further
+attempt requires Martin's separate explicit finite authorization and a fresh
+Operations -> Science -> Mission sequence.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then

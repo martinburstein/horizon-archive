@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-009-v5`
+Scoreboard ID: `FRSB-009-v6`
 
 Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v6` / `FRCL-009-v1`
 
-Release map: `FRRM-009-v5`
+Release map: `FRRM-009-v6`
 
 Operations source inspected: `243edb4e`
 
@@ -18,8 +18,7 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`.
 
-Selected bounded Work Order: **`FRWO-009-v5 / Host 09 high-aim compensation /
-five fresh attempts`**.
+Selected bounded Work Order: **none; `FRWO-009-v6` terminal HOLD**.
 
 Host 09's complete ledger `{H9-1..H9-5}` is consumed. All five technically
 valid private candidates failed the frozen responsive layout contract and were
@@ -38,9 +37,11 @@ compact-island layout gate and was deleted; scratch/product/provenance remain
 absent. Combined Host 09 attempts total ten consumed, with no accepted source.
 Maturity, accepted inventory, and inert runtime remain unchanged.
 
-Martin separately authorized `{H9-11..H9-15}`. It is fully unconsumed and
-gated behind fresh Science and Mission controls. Maturity, inventory, product
-absence, and inert runtime remain unchanged.
+Martin separately authorized `{H9-11..H9-15}`. All five are now consumed:
+every technically valid private candidate failed the unchanged runtime layout
+gate, was identity-deleted, and was proved absent. Combined attempts total
+fifteen consumed. Maturity, inventory, product absence, and inert runtime
+remain unchanged; no further attempt or later host is authorized.
 
 Host 08 H8-3 is released. H8-1/H8-2 were rejected and cleaned; H8-4/H8-5 are
 unused. Accepted media is `19 / 70,136,520`.
