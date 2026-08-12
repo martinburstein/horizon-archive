@@ -2,14 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-008-v1-VR-03 / CLOSED RE-ENTRY LIST`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-008-v1-VR-03 / FINAL E2E READY`**
 
-Exact next owner: **one fresh Combat Engineer / `combat_engineer`**
+Exact next owner: **one fresh Intelligence Officer / `intelligence_officer`**
 
-Read the full Combat profile, `FRSH-008-v1-VR-03`, and
-`FRAB-008-v1-HOLD-03`. Replace exactly the three closed-list generic re-entry
-calls through native Host 08 USE; prove zero generic Client Bridge calls remain,
-run syntax/focused/full/build, commit/push, and route fresh Intelligence.
+Read the full Intelligence profile, `FRSH-008-v1-VR-03`, all Host 08 HOLD and
+Combat variances, and the full candidate chain. Independently run release
+gates and the sole final fresh-root E2E, then release or reject and synchronize
+the map, scoreboard, retrospective, NEXT, and remote main.
 
 Selected H8-3 is `16,815,595` bytes / SHA-256
 `f6b31c4c410c9cfc89b18047a0a529e184e58261c79f647b2afab59ecd6662a8`.
