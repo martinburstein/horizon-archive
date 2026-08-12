@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v15`
+Scoreboard ID: `FRSB-005-v16`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v15`
+Release map: `FRRM-005-v16`
 
-Operations source inspected: `1cb9e079d9acd9aa14a62c13f6acaa2bcdf55572`
+Operations source inspected: `f1d4b1b89ae0e1cbb04b02d2b9f61970c20dfe23`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -18,22 +18,19 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v15 / Stranded Lens Cradle -
-Center-Core F1 Attempt`**.
+Selected bounded Work Order: **`FRWO-005-v16 / Stranded Lens Cradle -
+Post-F1 Decision Hold`**.
 
-`FRWO-005-v13` is closed. Its sole E1 returned HTTP 200, passed strict
-technical and physical review, then failed private objective responsive-layout
-and accessibility review because the complete cradle exceeded the frozen
-vertical relation/tight-height bands and one required fragment lay outside the
-inward fragment band. E1 was deleted under exact identity controls; all nine
-controlled/product paths are absent; no product or maturity evidence exists.
-`FRWO-005-v14` completed the terminal decision HOLD. Martin's latest explicit
-continuation at that decision edge authorizes exactly one fresh paid attempt
-`{F1}` under `FRWO-005-v15`. The new frozen prompt aggressively reduces and
-centers the relation, moves every required fragment inward, and contains all
-essential reading in one substantially inset corridor. Fresh Science is next;
-Operations authorizes no API/media action, F2, retry, Image work, E2E, release,
-or later-address work.
+`FRWO-005-v15` is closed. Its sole F1 returned HTTP 200, passed strict
+technical and physical review, then failed the exact frozen v3 responsive-
+layout and equivalent accessibility gate because the complete relation was
+substantially taller and higher than the required relation/center/top bands
+and the complete fragment group extended outside the inward source band. F1
+was rejected with `codes=LAYOUT`, deleted under exact identity controls, and
+consumed. Independent postflight corroborated all nine controlled/product
+paths absent. `FRWO-005-v16` records the terminal decision HOLD. No product or
+maturity evidence exists, no paid attempt remains, and Martin's separate
+explicit decision is required before any new finite attempt.
 
 The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
 remains withdrawn and closed without production, and its negative finding
@@ -54,10 +51,10 @@ sole `{A1}` on HTTP 429 and closed with no media or product. Martin then added
 API funds and explicitly authorized another try. V9 B1 returned HTTP 200 but
 the undersized response envelope rejected it before media existed. Science
 approved corrected finite 4K budgets; C1 and later D1 are now consumed. The
-dictionary-safe response envelope remains the proven parser baseline. E1 is
-consumed. Only the newly authorized, separately versioned `{F1}` may proceed,
-and only after fresh Science viability and a fresh Mission shell.
-Selection is not as-built evidence; no maturity cell or inventory advances.
+dictionary-safe response envelope remains the proven parser baseline. E1 and
+F1 are consumed. There is no F2, retry, Image work, E2E, release, or later-
+address authority. Selection was never achieved; no maturity cell or inventory
+advances.
 
 ## Reading the matrix
 
@@ -137,18 +134,16 @@ no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
 Martin's bounded media authorization and `FRPB-001-v2` permitted the closed
-`FRWO-005-v13` E1 pass and now permit only the separately authorized
-`FRWO-005-v15` F1 planning edge to pursue at most one eventual canonical
-additional Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03`
-integration. E1 was objectively rejected and cleaned, so that target was not
-achieved. F1 has not begun. Current `FR-03` remains exactly `1
+E1 and F1 attempts to pursue at most one eventual canonical additional Drowned
+source and its Host 05 -> Host 06 -> unchanged `L02-03` integration. Both were
+objectively rejected and cleaned, so that target was not achieved. Current
+`FR-03` remains exactly `1
 accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-Fresh Science is the exact next owner. No Mission, generation/API call, media
-attempt, asset selection/import, Host 06 implementation, Image work, E2E,
-reveal, Host 07-15 work, Witness promotion, City correction, maturity
+Martin is the exact next owner. No Science, Mission, generation/API call,
+media attempt, asset selection/import, Host 06 implementation, Image work,
+E2E, reveal, Host 07-15 work, Witness promotion, City correction, maturity
 inference, OPEN-classification closure, residual inspection, completion sweep,
-or `FIRST RUN COMPLETE` is authorized before a fresh viability envelope and
-fresh Mission shell. F1 is the whole attempt domain; no F2 or retry exists.
+or `FIRST RUN COMPLETE` is authorized. F1 is consumed; no F2 or retry exists.

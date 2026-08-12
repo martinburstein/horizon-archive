@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-005-v15`
+Map ID: `FRRM-005-v16`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Operations source inspected: `1cb9e079d9acd9aa14a62c13f6acaa2bcdf55572`
+Operations source inspected: `f1d4b1b89ae0e1cbb04b02d2b9f61970c20dfe23`
 
 Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
 
@@ -22,24 +22,20 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **`FRWO-005-v15 / Stranded Lens Cradle -
-Center-Core F1 Attempt`**.
+Selected bounded Work Order: **`FRWO-005-v16 / Stranded Lens Cradle -
+Post-F1 Decision Hold`**.
 
-`FRWO-005-v13` is closed. Its complete attempt domain `{E1}` was consumed by
-exactly one HTTP 200 request. E1 passed strict technical and physical review,
-then failed private objective responsive-layout and accessibility review: the
-complete cradle exceeded the frozen vertical relation/tight-height bands and
-one required fragment lay outside the inward fragment band. The candidate was
-deleted under exact identity controls; all nine controlled/product paths are
-absent; no product or maturity evidence exists. `FRWO-005-v14` recorded the
-terminal decision HOLD. Martin's latest placeholder explicitly authorizes
-continuation at the immediately requested decision edge, and `FRWO-005-v15`
-therefore creates exactly one separately versioned paid attempt `{F1}` with
-fresh paths and frozen `HOST06-GEN-PROMPT-v3`. F1 reduces the complete relation
-to width `.24-.27` / height `.25-.29`, moves every required fragment wholly
-inside `x=[.27,.38]`, and keeps all essential reading inside center-safe
-`x=[.27,.64], y=[.32,.82]`. No API/media action is authorized before fresh
-Science viability and a fresh Mission shell; there is no F2 or retry.
+`FRWO-005-v15` is closed. Its complete attempt domain `{F1}` was consumed by
+exactly one HTTP 200 request. F1 passed strict technical and physical review,
+then failed the frozen v3 responsive-layout and equivalent accessibility gate:
+the complete relation was substantially taller and higher than the required
+relation/center/top bands, and the complete fragment group extended outside
+its inward source band. The candidate was rejected with `codes=LAYOUT` and
+deleted under exact identity controls; independent postflight corroborated all
+nine controlled/product paths absent. `FRWO-005-v16` records the terminal
+decision HOLD. No product or maturity evidence exists, no paid attempt remains,
+and no F2, retry, API/media action, implementation, reveal, or later-address
+work is authorized without Martin's separate explicit decision.
 
 `FRWO-004-v1` remains withdrawn and closed without production. Martin's
 bounded new-Drowned-media authorization, `FRPB-001-v2`, and `FRCL-004-v2`
@@ -125,8 +121,8 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 06` | **HOLD - `FRWO-005-v14`**: E1 objectively rejected; no accepted source or paid-attempt authority; Martin decision required | First missing fixed encounter; E1 passed technical/physical review but failed responsive layout/accessibility and was deleted |
-| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind Martin's decision on `FRWO-005-v14`; no skip or repeatable host pattern is authorized |
+| 1 | `FR-03 / Host 06` | **HOLD - `FRWO-005-v16`**: F1 objectively rejected; no accepted source or paid-attempt authority; Martin decision required | First missing fixed encounter; F1 passed technical/physical review but failed exact v3 responsive layout/accessibility and was deleted |
+| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind Martin's decision on `FRWO-005-v16`; no skip or repeatable host pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
@@ -175,6 +171,20 @@ attempt authority.
 Hosts 07-15 and all later gaps remain deferred. The target inventory after
 independent acceptance would be `1 accepted shared compression / 2 exact / 9
 missing` at `FR-03`, but no current maturity or inventory changes.
+
+## Held F1 Work Order boundary decision
+
+`FRWO-005-v16` closes `FRWO-005-v15`. Its sole F1 returned HTTP `200`, passed
+technical and physical review, and failed the exact frozen v3 center-core
+layout and equivalent accessibility gate. F1 was objectively rejected,
+consumed, and deleted; exact cleanup is `9 / 9`, and no product, runtime,
+test, media, maturity, reveal, or reuse authority exists.
+
+Host 06 remains the earliest missing fixed encounter. There is no F2, retry,
+edit, crop, variation, alternate, prior-attempt reuse, Image work, E2E, or
+later-address authority. A new paid attempt requires Martin's separate explicit
+authorization with an exact finite count and must begin again with fresh
+Operations, Science, and Mission controls.
 
 ## Held fourth Work Order boundary decision - historical and closed
 
@@ -293,7 +303,7 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v15` is `WORK ORDER READY`; fresh Science viability is the exact
+`FRWO-005-v16` is terminal `HOLD`; Martin's explicit decision is the exact
 next action.
 `FRWO-004-v1` remains closed. This map does not preauthorize
 generation/API invocation before a fresh shell, implementation, asset
