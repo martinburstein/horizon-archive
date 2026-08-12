@@ -8,6 +8,15 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-12 — `FRAB-007-v1` — TUNE
+
+- **KEEP:** finite CLI ledgers, private objective rejection, exact cleanup,
+  accepted-only import, provenance, measured layouts, and independent E2E.
+- **TUNE:** require an explicit external QA root before E2E and fail closed
+  when absent; never use the historical repository capture default.
+- **REDESIGN:** not warranted. H7-3 passed exact media, `988/988`, build,
+  served identity, accessibility, and `123.7s` complete-journey gates.
+
 ### 2026-08-12 — `FRAB-005-v1` — TUNE
 
 - **KEEP:** finite attempt ledgers, exact cleanup, private review, provenance,

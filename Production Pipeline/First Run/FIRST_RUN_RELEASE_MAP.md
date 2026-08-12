@@ -1,14 +1,14 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-007-v2`
+Map ID: `FRRM-007-v3`
 
-Current release authority: `FRAB-005-v1 / FIRST RUN PASS RELEASED`
+Current release authority: `FRAB-007-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v4` / `FRCL-006-v2`
 
 Operations source inspected: `243edb4e`
 
-Released product candidate: `57b7b396`
+Released product candidate: `3b43d0b9`
 
 Image product candidate reviewed: `57b7b396`
 
@@ -104,7 +104,7 @@ game complete.
 | `FR-00` | Local package and launcher | Truthful local build opens `FR-01` | Product identity; no evidence | Truthful complete-game launcher/guide released by `FRAB-001-v1`; Demo Tour remains separate and unchanged |
 | `FR-01` | Title, Slot 01 setup, display name, prologue, Chapter I reveal | Final-purpose resumable opening reaches `FR-02` | Pilot/Suit ownership from the lock | Final-purpose opening, save v1, resume, and Chapter I reveal released by `FRAB-001-v1` |
 | `FR-02` | Chapter I — Glass Meadow | Existing low-growth/wet phase ridge reaches `FR-03` | Hosts 01-03; `L01-01` through `L01-03` | Hosts 01-03 exact; the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, unchanged route, and affected presentation are released by `FRAB-002-v1` |
-| `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Host 05 / Sixfold Weir released; one accepted shared compression remains, one exact distinct Host 05 now exists, and Hosts 06-15 remain missing |
+| `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Hosts 05-07 released; one accepted shared compression and three exact hosts exist, while Hosts 08-15 remain missing |
 | `FR-04` | Chapter III — Witness Corridor | Damp heat-carrying channels reach `FR-05` | Host 16; `L05-07` | Silent, separate, privacy-preserving Terminal copy released; physical-host parity was outside the Work Order |
 | `FR-05` | Chapter IV — City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Direct credits-free handoff remains exact; the visible `successor packet` / `staging boundary` sentence is contradictory and two enriched hosts remain missing |
 | `FR-06` | Chapter V — Civic Record District | Heat/material margin reaches `FR-07` | Hosts 19-20; `PY009`, `RAI D1O1` | Compact chapter/learning released; both enriched hosts missing |
@@ -135,7 +135,7 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Host 06 is released; Host 07 is earliest missing and no repeatable pattern is authorized |
+| 1 | `FR-03 / Hosts 08-15` | Remaining Drowned movements and pedestrian/Crown sequence | Host 07 is released; Host 08 is earliest missing and no repeatable pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
@@ -316,9 +316,9 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v21` is released by `FRAB-005-v1`. I1 was rejected and cleaned; I2
-is canonical Host 06. No Work Order is selected. Fresh Commandant revalidation
-is next.
+`FRWO-007-v2` is released by `FRAB-007-v1`. H7-1/H7-2 were rejected and
+cleaned; H7-3 is canonical Host 07; H7-4/H7-5 are unused. No Work Order is
+selected. Fresh Commandant revalidation is next.
 `FRWO-004-v1` remains closed. This map does not preauthorize
 generation/API invocation before a fresh shell, implementation, asset
 selection/import, reveal, later-address work, maturity advancement, residual

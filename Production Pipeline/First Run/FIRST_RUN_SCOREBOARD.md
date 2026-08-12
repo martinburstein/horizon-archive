@@ -1,31 +1,28 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-007-v2`
+Scoreboard ID: `FRSB-007-v3`
 
-Current release authority: `FRAB-005-v1 / FIRST RUN PASS RELEASED`
+Current release authority: `FRAB-007-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v4` / `FRCL-006-v2`
 
-Release map: `FRRM-007-v2`
+Release map: `FRRM-007-v3`
 
 Operations source inspected: `243edb4e`
 
-Released product candidate: `57b7b396`
+Released product candidate: `3b43d0b9`
 
-Image product candidate reviewed: `57b7b396`
+Image product candidate reviewed: `3b43d0b9`
 
 Date: **2026-08-12**
 
-Current released Work Order: `FRWO-005-v21 / Stranded Lens Cradle`.
+Current released Work Order: `FRWO-007-v2 / Sediment Abacus`.
 
-Selected bounded Work Order: **`FRWO-007-v2 / Host 07 Sediment Abacus -
-Imagegen CLI / Five Total Sequential Attempts Maximum`**.
+Released bounded Work Order: **`FRWO-007-v2 / Host 07 Sediment Abacus - H7-3`**.
 
-This selection changes no maturity or inventory. The fresh finite ledger is
-`{H7-1..H7-5}`, all unconsumed. Exact bundled CLI only; first PASS stops;
-later ordinals require prior objective rejection and exact cleanup. No sixth
-call, rerun, candidate, product, or reveal exists. Science and Mission must
-pass before generation.
+H7-1/H7-2 were objective layout rejections and were cleaned. H7-3 is the first
+PASS and is released; H7-4/H7-5 remain unused. Host 07 advances from missing
+to exact without changing the address-level physical `FR0` classification.
 
 G1 used prompt v4's distant center-island strategy and made exactly one HTTP
 200 request. It passed technical and physical review, then failed the exact
@@ -133,7 +130,7 @@ complete.
 - `FRWO-003-v1` independently adds one exact physical relationship at `FR-03`
   without promoting the address-level cell above `FR0`; ten Drowned hosts
   remain missing and the accepted shared compression remains visible.
-- The host inventory is now `7 exact / 1 accepted shared compression / 31
+- The host inventory is now `8 exact / 1 accepted shared compression / 30
   missing / 1 unadvanced Witness expression`.
 
 ## Current selected Work Order - maturity unchanged
@@ -150,5 +147,9 @@ closes `FRWO-004-v1` without production.
 / 2 exact / 9 missing`; whole-game inventory is `7 exact / 1 accepted shared
 compression / 31 missing / 1 unadvanced Witness expression`.
 
-Fresh Commandant revalidation is next. No Host 07 Work Order or `FIRST RUN
+`FRAB-007-v1` releases Host 07. `FR-03` is now `1 accepted shared compression
+/ 3 exact / 8 missing`; whole-game inventory is `8 exact / 1 accepted shared
+compression / 30 missing / 1 unadvanced Witness expression`.
+
+Fresh Commandant revalidation is next. No Host 08 Work Order or `FIRST RUN
 COMPLETE` is inferred.
