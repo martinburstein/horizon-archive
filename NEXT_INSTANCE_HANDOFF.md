@@ -2,38 +2,36 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-005-v10 / ONE FRESH C1 /
-CORRECTED 4K RESPONSE ENVELOPE / FRESH MISSION NEXT`**
+Current disposition: **`FIRST RUN SHELL READY / FRSH-005-v1-VR-41 / SOLE
+C1 / CORRECTED 4K ENVELOPE / ONE SEND / NO RETRY / PRIVATE REVIEW`**
 
-Current Work Order / map / scoreboard: `FRWO-005-v10` / `FRRM-005-v10` /
-`FRSB-005-v10`
+Current Work Order / viability / shell: `FRWO-005-v10` /
+`FRVE-005-v9-VR-01` / `FRSH-005-v1-VR-41`
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Quartermaster / `quartermaster`**
 
-## Operations result
+## Mission result
 
-V9 B1 is retired after one HTTP-200 response exceeded the old pre-parse cap.
-Science proved the old decoded limit was below the lawful raw 4K truecolor
-domain. V10 permits exactly one new `{C1}` with corrected exact ceilings:
-`40,500,000` response bytes, `40,000,000` Base64 characters, `30,000,000`
-decoded PNG bytes, and media inventory `<=18 / 67,410,731`. There is no C2 or
-retry. Every other strict parser/helper/materialization/private-review/canon/
-validation/cleanup boundary remains unchanged.
+Mission retained five distinct v10 sources with exact frozen byte/SHA and
+parser-zero identities. One credential-cleared fixture passed through PT06
+with one child, zero credential/request/send/API/C1 activity, exact cleanup,
+and all nine paths absent. The response envelope is corrected to
+`40,500,000 / 40,000,000 / 30,000,000` response/Base64/PNG with staged memory
+clearing. C1 is unconsumed and has no C2/retry.
 
 ## Exact next action
 
-Fresh Mission reads the complete intake/profile, `FRWO-005-v10`,
-`FRVE-005-v9-VR-01`, `FRCA-005-v9`, and current treatment/blueprint/functional/
-manifest controls. Retain a distinct v10 builder, production carrier, launcher,
-stdin parent, and credential-cleared fixture controller using the exact fresh
-paths and C1 identity. Freeze strict byte/SHA and parser-zero identities; prove
-all nine paths absent; run exactly one zero-credential/no-request fixture
-through PT06 with exact cleanup; then issue a complete one-C1
-`FIRST RUN SHELL READY`, `REVISE`, or `HOLD`. Mission may not access the
-credential, send the API request, inspect media, or consume C1.
+Fresh Quartermaster reads the complete intake/profile, `FRWO-005-v10`,
+`FRVE-005-v9-VR-01`, `FRSH-005-v1-VR-41`, `FRCA-005-v9`, and current
+treatment/blueprint/functional/manifest controls. Independently verify the five
+frozen sources, parser-zero, synchronized shell, and nine paths absent. Invoke
+only `HOST06_V10_C1_STDIN_PARENT.ps1` exactly once. If C1 reaches private
+review, issue the exact bounded decision without reveal. On ACCEPT complete
+byte-identical import/provenance, null-slot population, full validation, and
+cleanup; on failure or REJECT stop after exact cleanup. No retry or C2 exists.
 
 Repository QA quarantine, protected PDF, training tree, Martin's real browser/
 profile/save, accepted media, v7-v9 paths/residuals, opaque roots, VR-65,
 hidden lore, and unrelated work remain inaccessible. Preserve the one-path
-rail, unchanged `L02-03`, equal-dignity MH-40 outcomes, shared RP-012 ending,
-all null deltas, and `successor=null`. No reveal is authorized.
+rail, unchanged `L02-03`, MH-40 parity, RP-012, all null deltas, and
+`successor=null`. No reveal is authorized.
