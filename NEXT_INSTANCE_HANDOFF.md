@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / EXACT SR05 CHILD
-EXIT-STDOUT-STDERR FACTS RETAINED THROUGH BOUNDED OUTER PROJECTION / FRESH
-SCIENCE ONE-RUN LOCALIZATION REQUIRED / FRSH-005-v1-VR-26`**
+Current disposition: **`HOLD / SOLE AUTHORITATIVE OUTER CONTROLLER RUN
+LOCALIZED SR05 TO CHILD STDERR NONEXACT_BOUNDED / CHILD EXIT 87 AND STDOUT
+ZERO PASS / ONE PARENT / ONE CHILD / ALL CONTROLLED PATHS ABSENT / NO RETRY /
+FRESH MISSION ADJUDICATION REQUIRED / FRVE-005-v7-VR-23`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Mission decision: `FRSH-005-v1-VR-26`
 
-Current Science return: `FRVE-005-v7-VR-22`
+Current Science return: `FRVE-005-v7-VR-23`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-26`
 
@@ -34,57 +35,40 @@ Corrected candidate tree:
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission handoff
+## Science handoff
 
-Mission accepts `FRVE-005-v7-VR-22` only as the completed exact HOLD. The
-sole run is not reinterpreted or retried. Read-only source analysis proved
-that SR05 owns exactly three predicates: child exit `87`, zero child stdout,
-and exact PT06 stderr. The parent already emits allowlisted facts for all
-three in an exact bounded stop; the outer controller validated but discarded
-those regex groups.
-
-Mission corrected only that bounded projection. After and only after the
-complete anchored parent-stop regex succeeds, the outer result now includes:
+Science invoked the exact retained outer controller once and only once. The
+bounded result was controller exit `89`, parent exit `88`, empty parent
+stdout, exact parent-stop V2 stderr classification, exact
+`SR05_CHILD_CAPTURE / ASSERTION_FAILED`, one child, and exact postflight
+absence. The three retained child facts compare as follows:
 
 ```text
-childExitFact=UNAVAILABLE|OUT_OF_RANGE|0..255
-childStdoutFact=UNAVAILABLE|ZERO|NONZERO_BOUNDED|NONZERO_OVERSIZE
-childStderrFact=UNAVAILABLE|EXACT_PT06|EMPTY|NONEXACT_BOUNDED|OVERSIZE
+CHILD_EXIT:   actual 87 / expected 87 / PASS
+CHILD_STDOUT: actual ZERO / expected ZERO / PASS
+CHILD_STDERR: actual NONEXACT_BOUNDED / expected EXACT_PT06 / FAIL
 ```
 
-All three remain `NOT_APPLICABLE` without an exact validated parent stop. The
-parent and every embedded carrier remain byte-identical. No stream body,
-diagnostic text, credential, response, Base64 member, exception, stack,
-handle, native value, or path-derived value is projected.
+The completed run is not reinterpreted or retried. No stream body, diagnostic
+text, credential, response, Base64 member, exception, stack, handle, native
+value, or path-derived value was exposed.
 
 ## Exact next action
 
-One fresh Science role reads the complete required intake/profile,
-`FRSH-005-v1-VR-26`, `FRVE-005-v7-VR-22`, `FRSH-005-v1-VR-25`,
-`FRVE-005-v7-VR-21`, both retained sources, `FRWO-005-v7`, and all cited
-controls. It independently validates the source identities, parser, carrier
-identities and order, cardinalities, allowlists/group mapping, and exact
-`13/13` preflight absence.
+One fresh Mission Captain reads the complete required intake/profile,
+`FRVE-005-v7-VR-23`, `FRSH-005-v1-VR-26`, `FRVE-005-v7-VR-22`, both retained
+sources, `FRWO-005-v7`, and all cited controls. Mission issues exactly one new
+versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD` decision for the exact
+`CHILD_STDERR` mismatch. It performs no controller, parent, child, credential,
+API, media, product, test, build, browser, E2E, or residual operation.
 
-Only if those gates pass, Science invokes the exact retained outer controller
-once through Windows PowerShell 5.1 x64 with the frozen invocation and
-asynchronous dual-stream capture. No alternate runner, correction, or retry
-exists after start.
-
-PASS remains exact accepted no-request proof and routes only to one fresh
-Mission Captain for a separate API shell. Any stop is HOLD. For exact
-`SR05_CHILD_CAPTURE`, Science records only the three projected facts and
-compares them to expected `87 / ZERO / EXACT_PT06`, then returns the exact
-failed predicate to one fresh Mission Captain. It commits only its Science
-artifact and synchronized handoff and does not push.
-
-Do not route to Quartermaster; call the API; consume ordinal `2`; inspect
-media/pixels; change product/tests; run E2E; reveal; advance maturity; close an
-OPEN record; access a residual or VR-65; release; or call
-`FIRST RUN COMPLETE`.
+Any correction must preserve the passing child exit/stdout predicates,
+bounded allowlisted projection, no-body/no-secret boundary, frozen carrier
+and production semantics, and one-run/no-retry discipline. Mission may not
+reinterpret or retry the completed run, route to Quartermaster, authorize an
+API request, or consume ordinal `2` from this HOLD.
 
 API sends remain `0`; ordinal `1` remains opaque and consumed; ordinals `2`
 and `3` remain unstarted and unconsumed. The one-path rail, sole unchanged
