@@ -9,6 +9,8 @@ $parentStderrCharacters=$null
 $parentStdoutCaptured=$null
 $parentStderrCaptured=$null
 $captureClass='NOT_STARTED'
+$parentStopStage='NOT_APPLICABLE'
+$parentStopCode='NOT_APPLICABLE'
 
 function Get-Sha256Hex([byte[]]$bytes){
   $sha=[Security.Cryptography.SHA256]::Create()
@@ -166,16 +168,21 @@ if($captureClass-ceq'COMPLETE'){
   if($parentStderrCharacters-eq 0){$stderrFact='EMPTY'}
   elseif($parentStderrCharacters-gt 2048){$stderrFact='OVERSIZE'}
   elseif($null-ne$stderrContent){
-    $stopPattern='\ASCIENCE_PARENT_STOP_V2\|stage=(SR0[1-9]_[A-Z0-9_]+)\|assertion=ASSERTION_FAILED\|childInvocations=(0|1)\|childExit=(UNAVAILABLE|OUT_OF_RANGE|[0-9]{1,3})\|childStdout=(UNAVAILABLE|ZERO|NONZERO_BOUNDED|NONZERO_OVERSIZE)\|childStderr=(UNAVAILABLE|EXACT_PT06|EMPTY|NONEXACT_BOUNDED|OVERSIZE)\|code=ASSERTION_FAILED\z'
+    $stopPattern='\ASCIENCE_PARENT_STOP_V2\|stage=(SR01_STATIC_IDENTITY|SR02_NORMALIZER_SELF_TEST|SR03_CHILD_PREPARE|SR04_CHILD_INVOKE|SR05_CHILD_CAPTURE|SR06_CHILD_CLASSIFY|SR07_POSTFLIGHT_ABSENCE|SR08_ZERO_ACTIVITY|SR09_RESULT_EMIT)\|assertion=ASSERTION_FAILED\|childInvocations=(0|1)\|childExit=(UNAVAILABLE|OUT_OF_RANGE|[0-9]{1,3})\|childStdout=(UNAVAILABLE|ZERO|NONZERO_BOUNDED|NONZERO_OVERSIZE)\|childStderr=(UNAVAILABLE|EXACT_PT06|EMPTY|NONEXACT_BOUNDED|OVERSIZE)\|code=ASSERTION_FAILED\z'
     $stopMatch=[regex]::Match($stderrContent,$stopPattern,[Text.RegularExpressions.RegexOptions]::CultureInvariant)
-    if($stopMatch.Success){$stderrFact='EXACT_PARENT_STOP_V2';$childInvocationsFact=$stopMatch.Groups[2].Value}else{$stderrFact='NONEXACT_BOUNDED'}
+    if($stopMatch.Success){
+      $stderrFact='EXACT_PARENT_STOP_V2'
+      $childInvocationsFact=$stopMatch.Groups[2].Value
+      $parentStopStage=$stopMatch.Groups[1].Value
+      $parentStopCode='ASSERTION_FAILED'
+    }else{$stderrFact='NONEXACT_BOUNDED'}
   }else{$stderrFact='NONEXACT_BOUNDED'}
 }
 $postflightAbsent=$true
 foreach($path in $controlledPaths){if(-not(Test-PathAbsent $path)){$postflightAbsent=$false}}
 $accepted=($captureClass-ceq'COMPLETE')-and($exitFact-ceq'0')-and($stdoutFact-ceq'EXACT_ACCEPTED_V2')-and($stderrFact-ceq'EMPTY')-and($childInvocationsFact-ceq'1')-and$postflightAbsent
 $classification=if($accepted){'ACCEPTED_PARENT_RESULT'}else{'REJECTED_PARENT_RESULT'}
-$result='SCIENCE_OUTER_RESULT_V1|classification='+$classification+'|parentExit='+$exitFact+'|parentStdout='+$stdoutFact+'|parentStderr='+$stderrFact+'|childInvocations='+$childInvocationsFact+'|postflightAbsent='+$postflightAbsent.ToString().ToLowerInvariant()
+$result='SCIENCE_OUTER_RESULT_V1|classification='+$classification+'|parentExit='+$exitFact+'|parentStdout='+$stdoutFact+'|parentStderr='+$stderrFact+'|parentStopStage='+$parentStopStage+'|parentStopCode='+$parentStopCode+'|childInvocations='+$childInvocationsFact+'|postflightAbsent='+$postflightAbsent.ToString().ToLowerInvariant()
 [Console]::Out.WriteLine($result)
 if($process){$process.Dispose()}
 if($accepted){exit 0}else{exit 89}
