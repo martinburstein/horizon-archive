@@ -194,6 +194,15 @@ import {
   STRANDED_LENS_CRADLE_SOURCE_URL,
 } from "./drownedArchive.js";
 import {
+  deriveSedimentAbacusState,
+  getSedimentAbacusHotspot,
+  isLegacyHost07LessonLauncherVisible,
+  SEDIMENT_ABACUS_COPY,
+  SEDIMENT_ABACUS_PROVENANCE,
+  SEDIMENT_ABACUS_REGISTRY,
+  SEDIMENT_ABACUS_SOURCE_URL,
+} from "./sedimentAbacus.js";
+import {
   buildCompletedMeadowReturnPatch,
   buildMeadowDeparturePresentation,
   buildMeadowReturnPresentation,
@@ -1030,6 +1039,8 @@ export function App() {
   const [modelChoiceEvidence, setModelChoiceEvidence] = useState(null);
   const [strandedLensCradleDecodedImage, setStrandedLensCradleDecodedImage] = useState(null);
   const [strandedLensCradlePresented, setStrandedLensCradlePresented] = useState(false);
+  const [sedimentAbacusDecodedImage, setSedimentAbacusDecodedImage] = useState(null);
+  const [sedimentAbacusPresented, setSedimentAbacusPresented] = useState(false);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
@@ -1096,6 +1107,10 @@ export function App() {
   const strandedLensCradleTransitionPendingRef = useRef(false);
   const strandedLensCradleFocusPendingRef = useRef(false);
   const strandedLensCradleAnnouncementPendingRef = useRef(false);
+  const sedimentAbacusRef = useRef(null);
+  const sedimentAbacusTransitionPendingRef = useRef(false);
+  const sedimentAbacusFocusPendingRef = useRef(false);
+  const sedimentAbacusAnnouncementPendingRef = useRef(false);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1158,6 +1173,18 @@ export function App() {
   const strandedLensCradleLawful = strandedLensCradleState !== "hidden";
   const strandedLensCradleActive = strandedLensCradlePresented && strandedLensCradleLawful;
   const legacyModelChoiceLauncherVisible = isLegacyModelChoiceLauncherVisible(STRANDED_LENS_CRADLE_REGISTRY.source);
+  const sedimentAbacusState = deriveSedimentAbacusState({
+    host06Lawful: strandedLensCradleLawful,
+    modelChoiceEvidence,
+    structuredPacketEvidence,
+    controlFlowEvidence,
+    registry: SEDIMENT_ABACUS_REGISTRY,
+    provenance: SEDIMENT_ABACUS_PROVENANCE,
+    decodedImage: sedimentAbacusDecodedImage,
+  });
+  const sedimentAbacusLawful = sedimentAbacusState !== "hidden";
+  const sedimentAbacusActive = sedimentAbacusPresented && sedimentAbacusLawful;
+  const legacyHost07LessonLauncherVisible = isLegacyHost07LessonLauncherVisible(SEDIMENT_ABACUS_REGISTRY.source);
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -1191,17 +1218,27 @@ export function App() {
     label: FRPX05_IDENTIFICATION.NAME,
     hotspot: strandedLensCradleHotspot,
   }] : [];
+  const sedimentAbacusHotspot = getSedimentAbacusHotspot(SEDIMENT_ABACUS_REGISTRY);
+  const sedimentAbacusHotspots = scene.id === "ruins" && sedimentAbacusActive && sedimentAbacusHotspot ? [{
+    id: "sediment-abacus",
+    label: SEDIMENT_ABACUS_COPY.name,
+    hotspot: sedimentAbacusHotspot,
+  }] : [];
   const sceneHotspots = [primarySceneHotspot, ...(scene.id === "ruins" ? ruinsHotspots : meadowHotspots)];
   const activeSceneHotspots = scene.id === "ruins" && strandedLensCradleActive
     ? strandedLensCradleHotspots
     : sceneHotspots;
+  const presentedSceneHotspots = scene.id === "ruins" && sedimentAbacusActive
+    ? sedimentAbacusHotspots
+    : activeSceneHotspots;
   const ruinsVisualState = completed.includes("ruins") ? "complete" : terminalOpen && scene.id === "ruins" ? "active" : "available";
   const ruinsImages = { canonical: drownedArchiveImage, narrow: drownedArchiveImage };
-  const hotspotButtons = activeSceneHotspots.map((hotspot) => {
+  const hotspotButtons = presentedSceneHotspots.map((hotspot) => {
     const isMeadowRouteMarker = scene.id === "meadow" && hotspot.id === "route-marker";
     const isFractureNursery = scene.id === "meadow" && hotspot.id === "fracture-nursery";
     const isSixfoldWeir = scene.id === "ruins" && hotspot.id === "sixfold-weir";
     const isStrandedLensCradle = scene.id === "ruins" && hotspot.id === "stranded-lens-cradle";
+    const isSedimentAbacus = scene.id === "ruins" && hotspot.id === "sediment-abacus";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
     const nurseryStateLabel = isFractureNursery ? FRPX02_COPY.NURSERY_STATE[fractureNurseryState] : "";
     const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
@@ -1209,6 +1246,8 @@ export function App() {
     const sixfoldLabel = isSixfoldWeir ? ` // ${sixfoldStateLabel.toUpperCase()}` : "";
     const strandedLensCradleStateLabel = isStrandedLensCradle ? FRPX05_IDENTIFICATION.STATE[strandedLensCradleState] : "";
     const strandedLensCradleLabel = isStrandedLensCradle ? ` // ${strandedLensCradleStateLabel.toUpperCase()}` : "";
+    const sedimentAbacusStateLabel = isSedimentAbacus ? SEDIMENT_ABACUS_COPY.state[sedimentAbacusState] : "";
+    const sedimentAbacusLabel = isSedimentAbacus ? ` // ${sedimentAbacusStateLabel.toUpperCase()}` : "";
     const hotspotStyle = getHotspotStyle(hotspot.hotspot);
     const sixfoldActivationStyle = isSixfoldWeir ? {
       ...hotspotStyle,
@@ -1239,6 +1278,23 @@ export function App() {
       letterSpacing: 0,
       overflow: "hidden",
     } : undefined;
+    if (isSedimentAbacus) {
+      return (
+        <button
+          key={hotspot.id}
+          ref={sedimentAbacusRef}
+          className="hotspot hotspot-secondary"
+          data-hotspot-id={hotspot.id}
+          data-sediment-abacus-state={sedimentAbacusState}
+          style={hotspotStyle}
+          onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }}
+          disabled={terminalOpen}
+          aria-label={`${verb.toLowerCase()} ${hotspot.label}, ${sedimentAbacusStateLabel}`}
+        >
+          <span data-sediment-abacus-label>{verb} {hotspot.label}{sedimentAbacusLabel}</span>
+        </button>
+      );
+    }
     if (isStrandedLensCradle) {
       return (
         <button
@@ -1467,6 +1523,59 @@ export function App() {
       image.onerror = null;
     };
   }, []);
+
+  useEffect(() => {
+    if (SEDIMENT_ABACUS_REGISTRY.source.enabled !== true || !SEDIMENT_ABACUS_SOURCE_URL) {
+      setSedimentAbacusDecodedImage(null);
+      return undefined;
+    }
+    let connected = true;
+    const image = new Image();
+    image.decoding = "async";
+    image.onload = () => connected && setSedimentAbacusDecodedImage({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight });
+    image.onerror = () => connected && setSedimentAbacusDecodedImage(null);
+    image.src = SEDIMENT_ABACUS_SOURCE_URL;
+    return () => { connected = false; image.onload = null; image.onerror = null; };
+  }, []);
+
+  useEffect(() => {
+    if (!sedimentAbacusLawful) {
+      sedimentAbacusTransitionPendingRef.current = false;
+      sedimentAbacusAnnouncementPendingRef.current = false;
+      if (sedimentAbacusPresented) {
+        strandedLensCradleFocusPendingRef.current = true;
+        setSedimentAbacusPresented(false);
+      }
+      return undefined;
+    }
+    if (sedimentAbacusPresented || mode !== "playing" || scene.id !== "ruins" || terminalOpen) return undefined;
+    if (!sedimentAbacusTransitionPendingRef.current) {
+      sedimentAbacusFocusPendingRef.current = true;
+      setSedimentAbacusPresented(true);
+      return undefined;
+    }
+    const frame = window.requestAnimationFrame(() => {
+      if (!sedimentAbacusTransitionPendingRef.current) return;
+      sedimentAbacusTransitionPendingRef.current = false;
+      sedimentAbacusFocusPendingRef.current = true;
+      sedimentAbacusAnnouncementPendingRef.current = true;
+      setSedimentAbacusPresented(true);
+    });
+    return () => window.cancelAnimationFrame(frame);
+  }, [mode, scene.id, terminalOpen, sedimentAbacusLawful, sedimentAbacusPresented]);
+
+  useLayoutEffect(() => {
+    if (!sedimentAbacusFocusPendingRef.current || !sedimentAbacusActive || terminalOpen) return;
+    const target = sedimentAbacusRef.current;
+    if (!target?.isConnected) return;
+    sedimentAbacusFocusPendingRef.current = false;
+    target.focus({ preventScroll: true });
+    if (sedimentAbacusAnnouncementPendingRef.current) {
+      sedimentAbacusAnnouncementPendingRef.current = false;
+      setSceneAnnouncement(SEDIMENT_ABACUS_COPY.available);
+      setDialogue(SEDIMENT_ABACUS_COPY.available, "system");
+    }
+  }, [sedimentAbacusActive, sedimentAbacusState, terminalOpen]);
 
   useEffect(() => {
     if (!strandedLensCradleLawful) {
@@ -3035,6 +3144,15 @@ export function App() {
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if (scene.id === "ruins" && hotspotId === "sediment-abacus") {
+      if (sedimentAbacusState === "hidden" || terminalOpen) return;
+      if (verb === "LOOK AT") { setDialogue(SEDIMENT_ABACUS_COPY.unseen, "scene"); return; }
+      if (verb === "TALK TO") { setDialogue("Complete silence.", "pilot"); return; }
+      if (sedimentAbacusState === "complete") { setDialogue(`${SEDIMENT_ABACUS_COPY.mastered} ${SEDIMENT_ABACUS_COPY.nextBoundary}`, "system"); return; }
+      if (sanitizeStructuredPacketEvidence(structuredPacketEvidence)?.masteryStatus === "mastered") openControlFlow();
+      else openStructuredPackets();
+      return;
+    }
     if (scene.id === "ruins" && hotspotId === "stranded-lens-cradle") {
       if (strandedLensCradleState === "hidden" || terminalOpen) return;
       if (verb === "LOOK AT") {
@@ -3643,6 +3761,7 @@ export function App() {
     setModelChoiceEvidence((previous) => updateModelChoiceEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true }));
     setModelChoiceSession(null);
     strandedLensCradleFocusPendingRef.current = true;
+    sedimentAbacusTransitionPendingRef.current = SEDIMENT_ABACUS_REGISTRY.source.enabled === true;
     setTerminalOpen(false);
     setRuinsTerminalKind(null);
     setDialogue("Model and deployment readiness confirmed: both 16-of-16 course-authored forms and the closed-note decision explanation are complete.", "teacher");
@@ -4318,7 +4437,14 @@ export function App() {
         ) : (
           <>
             {scene.id === "ruins" ? (
-              strandedLensCradleActive ? (
+              sedimentAbacusActive ? (
+                <img
+                  className="scene-art sediment-abacus-art"
+                  src={SEDIMENT_ABACUS_SOURCE_URL}
+                  alt={SEDIMENT_ABACUS_COPY.alt ?? ""}
+                  data-sediment-abacus-source={SEDIMENT_ABACUS_REGISTRY.source.path ?? undefined}
+                />
+              ) : strandedLensCradleActive ? (
                 <img
                   className="scene-art stranded-lens-cradle-art"
                   src={strandedLensCradleImage}
@@ -6090,7 +6216,7 @@ export function App() {
 
       <section className="command-panel" data-meadow-departure-choice={showMeadowDepartureChoice ? "true" : undefined} aria-label="Adventure controls and dialogue" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
         <nav className="verb-grid" aria-label="Action verbs">
-          {strandedLensCradleActive ? strandedLensCradleVerbButtons : legacyVerbButtons}
+          {sedimentAbacusActive || strandedLensCradleActive ? strandedLensCradleVerbButtons : legacyVerbButtons}
         </nav>
 
         <div className="dialogue-box" aria-live="polite">
@@ -6121,7 +6247,7 @@ export function App() {
                   {legacyModelChoiceLauncherVisible && pendingAdvance && scene.id === "ruins" && responsibleAIEvidence?.masteryStatus === "mastered" && modelChoiceEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openModelChoiceExercise(); }}>{modelChoiceSession ? "Resume Model Choices" : modelChoiceEvidence?.masteryStatus === "primary_complete" ? "Start Model Choice Transfer" : modelChoiceEvidence?.masteryStatus === "transfer_complete" ? "Open Closed-Note Gate" : "Start Model Choices"}</button>
                   )}
-                  {pendingAdvance && scene.id === "ruins" && modelChoiceEvidence?.masteryStatus === "mastered" && structuredPacketEvidence?.masteryStatus !== "mastered" && (
+                  {legacyHost07LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && modelChoiceEvidence?.masteryStatus === "mastered" && structuredPacketEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openStructuredPackets(); }}>{structuredPacketSession ? "Resume Structured Packets" : structuredPacketEvidence?.masteryStatus === "primary_complete" ? "Start Structured Transfer" : structuredPacketEvidence?.masteryStatus === "transfer_complete" ? "Open Structured Closed-Note Gate" : "Start Structured Packets"}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && structuredPacketEvidence?.masteryStatus === "mastered" && controlFlowEvidence?.masteryStatus !== "mastered" && (
