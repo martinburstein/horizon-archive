@@ -17,12 +17,29 @@ $childExitEvidence=$null
 $childStdoutCharacters=$null
 $childStderrCharacters=$null
 $childStderrClass='NOT_CAPTURED'
+$childStderrRawLength='UNAVAILABLE'
+$childStderrRawSha256='UNAVAILABLE'
+$childStderrRawBase64='UNAVAILABLE'
+$childStderrRawAscii='UNAVAILABLE'
+$childStderrRawCrCount='UNAVAILABLE'
+$childStderrRawLfCount='UNAVAILABLE'
+$childStderrRawRecordOccurrences='UNAVAILABLE'
 function Get-Sha256Hex([byte[]]$bytes){
   $sha=[Security.Cryptography.SHA256]::Create()
   try{return ([BitConverter]::ToString($sha.ComputeHash($bytes))).Replace('-','').ToLowerInvariant()}finally{$sha.Dispose()}
 }
 function Assert-Exact([bool]$condition,[string]$name){if(-not $condition){throw ('ASSERT:'+$name)}}
 function Assert-Absent([string]$path,[string]$name){Assert-Exact ((-not [IO.File]::Exists($path))-and(-not [IO.Directory]::Exists($path))) $name}
+function Get-ByteSequenceOccurrenceCount([byte[]]$haystack,[byte[]]$needle){
+  if(($null-eq$haystack)-or($null-eq$needle)-or($needle.Length-eq 0)-or($haystack.Length-lt$needle.Length)){return 0}
+  $count=0
+  for($offset=0;$offset-le($haystack.Length-$needle.Length);$offset++){
+    $match=$true
+    for($index=0;$index-lt$needle.Length;$index++){if($haystack[$offset+$index]-ne$needle[$index]){$match=$false;break}}
+    if($match){$count++}
+  }
+  return $count
+}
 function Assert-Ordered([string]$source,[string[]]$items,[string]$name){
   $cursor=-1
   foreach($item in $items){$next=$source.IndexOf($item,$cursor+1,[StringComparison]::Ordinal);if($next -lt 0){throw ('ASSERT:'+$name)};$cursor=$next}
@@ -141,6 +158,15 @@ try{
   $stderrAscii=$true
   foreach($byte in $stderrBytes){if($byte-gt 127){$stderrAscii=$false;break}}
   if($stderrAscii){$stderr=$ascii.GetString($stderrBytes)}
+  if(($stderrCount-le 512)-and($stderrBytes.Length-eq$stderrCount)){
+    $childStderrRawLength=[string]$stderrCount
+    $childStderrRawSha256=Get-Sha256Hex $stderrBytes
+    $childStderrRawBase64=[Convert]::ToBase64String($stderrBytes)
+    $childStderrRawAscii=$stderrAscii.ToString().ToLowerInvariant()
+    $childStderrRawCrCount=[string](($stderrBytes|Where-Object{$_-eq 13}).Count)
+    $childStderrRawLfCount=[string](($stderrBytes|Where-Object{$_-eq 10}).Count)
+    $childStderrRawRecordOccurrences=[string](Get-ByteSequenceOccurrenceCount $stderrBytes ($ascii.GetBytes($expectedDiagnostic)))
+  }
   $childStderrClass=Get-ChildStderrClass $stderr $stderrCount $expectedDiagnostic
   $stage='SR05_CHILD_CAPTURE'
   Assert-Exact ($childExitEvidence-eq 87) 'CHILD_EXIT'
@@ -163,7 +189,7 @@ try{
   $childExitFact=if($null-eq$childExitEvidence){'UNAVAILABLE'}elseif($childExitEvidence-ge 0-and$childExitEvidence-le 255){[string]$childExitEvidence}else{'OUT_OF_RANGE'}
   $childStdoutFact=if($null-eq$childStdoutCharacters){'UNAVAILABLE'}elseif($childStdoutCharacters-eq 0){'ZERO'}elseif($childStdoutCharacters-le 256){'NONZERO_BOUNDED'}else{'NONZERO_OVERSIZE'}
   $childStderrFact=if($childStderrClass-in@('EXACT_PT06','EMPTY','NONEXACT_BOUNDED','OVERSIZE')){$childStderrClass}else{'UNAVAILABLE'}
-  [Console]::Error.WriteLine('SCIENCE_PARENT_STOP_V2|stage='+$stage+'|assertion=ASSERTION_FAILED|childInvocations='+$childInvocations+'|childExit='+$childExitFact+'|childStdout='+$childStdoutFact+'|childStderr='+$childStderrFact+'|code=ASSERTION_FAILED')
+  [Console]::Error.WriteLine('SCIENCE_PARENT_STOP_V2|stage='+$stage+'|assertion=ASSERTION_FAILED|childInvocations='+$childInvocations+'|childExit='+$childExitFact+'|childStdout='+$childStdoutFact+'|childStderr='+$childStderrFact+'|childStderrLength='+$childStderrRawLength+'|childStderrSha256='+$childStderrRawSha256+'|childStderrBase64='+$childStderrRawBase64+'|childStderrAscii='+$childStderrRawAscii+'|childStderrCrCount='+$childStderrRawCrCount+'|childStderrLfCount='+$childStderrRawLfCount+'|childStderrRecordOccurrences='+$childStderrRawRecordOccurrences+'|code=ASSERTION_FAILED')
   exit 88
 }finally{
   if($stderrCaptured){$stderrCaptured.Dispose()}

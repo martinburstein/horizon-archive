@@ -14,6 +14,13 @@ $parentStopCode='NOT_APPLICABLE'
 $childExitFact='NOT_APPLICABLE'
 $childStdoutFact='NOT_APPLICABLE'
 $childStderrFact='NOT_APPLICABLE'
+$childStderrLengthFact='NOT_APPLICABLE'
+$childStderrSha256Fact='NOT_APPLICABLE'
+$childStderrBase64Fact='NOT_APPLICABLE'
+$childStderrAsciiFact='NOT_APPLICABLE'
+$childStderrCrCountFact='NOT_APPLICABLE'
+$childStderrLfCountFact='NOT_APPLICABLE'
+$childStderrRecordOccurrencesFact='NOT_APPLICABLE'
 
 function Get-Sha256Hex([byte[]]$bytes){
   $sha=[Security.Cryptography.SHA256]::Create()
@@ -41,14 +48,14 @@ try{
   Assert-Outer ([IO.File]::Exists($parentSourcePath)) 'PARENT_SOURCE_PATH'
   Assert-Outer (-not [IO.Directory]::Exists($parentSourcePath)) 'PARENT_SOURCE_PATH'
   $parentSourceBytes=[IO.File]::ReadAllBytes($parentSourcePath)
-  Assert-Outer ($parentSourceBytes.Length-eq 51241) 'PARENT_SOURCE_LENGTH'
-  Assert-Outer ((Get-Sha256Hex $parentSourceBytes)-ceq'60755e9374d56ba0d9d96ed763a9b44840c2819d90979734370f843124c297f7') 'PARENT_SOURCE_SHA256'
+  Assert-Outer ($parentSourceBytes.Length-eq 52900) 'PARENT_SOURCE_LENGTH'
+  Assert-Outer ((Get-Sha256Hex $parentSourceBytes)-ceq'59915b373283f78408df07a2f3ad37e01ed8ce4cb963b03eb453385c531009f0') 'PARENT_SOURCE_SHA256'
   Assert-Outer ($parentSourceBytes[$parentSourceBytes.Length-1]-eq 10) 'PARENT_SOURCE_FINAL_LF'
   Assert-Outer (-not($parentSourceBytes-contains 13)) 'PARENT_SOURCE_LF_ONLY'
   foreach($byte in $parentSourceBytes){Assert-Outer ($byte-le 127) 'PARENT_SOURCE_ASCII'}
   $ascii=New-Object Text.ASCIIEncoding
   $parentSource=$ascii.GetString($parentSourceBytes)
-  Assert-Outer ($parentSource.Length-eq 51241) 'PARENT_SOURCE_CHARACTERS'
+  Assert-Outer ($parentSource.Length-eq 52900) 'PARENT_SOURCE_CHARACTERS'
 
   $controllerStage='OC02_PARENT_PARSE'
   $tokens=$null
@@ -171,16 +178,60 @@ if($captureClass-ceq'COMPLETE'){
   if($parentStderrCharacters-eq 0){$stderrFact='EMPTY'}
   elseif($parentStderrCharacters-gt 2048){$stderrFact='OVERSIZE'}
   elseif($null-ne$stderrContent){
-    $stopPattern='\ASCIENCE_PARENT_STOP_V2\|stage=(SR01_STATIC_IDENTITY|SR02_NORMALIZER_SELF_TEST|SR03_CHILD_PREPARE|SR04_CHILD_INVOKE|SR05_CHILD_CAPTURE|SR06_CHILD_CLASSIFY|SR07_POSTFLIGHT_ABSENCE|SR08_ZERO_ACTIVITY|SR09_RESULT_EMIT)\|assertion=ASSERTION_FAILED\|childInvocations=(0|1)\|childExit=(UNAVAILABLE|OUT_OF_RANGE|[0-9]{1,3})\|childStdout=(UNAVAILABLE|ZERO|NONZERO_BOUNDED|NONZERO_OVERSIZE)\|childStderr=(UNAVAILABLE|EXACT_PT06|EMPTY|NONEXACT_BOUNDED|OVERSIZE)\|code=ASSERTION_FAILED\z'
+    $stopPattern='\ASCIENCE_PARENT_STOP_V2\|stage=(SR01_STATIC_IDENTITY|SR02_NORMALIZER_SELF_TEST|SR03_CHILD_PREPARE|SR04_CHILD_INVOKE|SR05_CHILD_CAPTURE|SR06_CHILD_CLASSIFY|SR07_POSTFLIGHT_ABSENCE|SR08_ZERO_ACTIVITY|SR09_RESULT_EMIT)\|assertion=ASSERTION_FAILED\|childInvocations=(0|1)\|childExit=(UNAVAILABLE|OUT_OF_RANGE|[0-9]{1,3})\|childStdout=(UNAVAILABLE|ZERO|NONZERO_BOUNDED|NONZERO_OVERSIZE)\|childStderr=(UNAVAILABLE|EXACT_PT06|EMPTY|NONEXACT_BOUNDED|OVERSIZE)\|childStderrLength=(UNAVAILABLE|0|[1-9][0-9]{0,2})\|childStderrSha256=(UNAVAILABLE|[0-9a-f]{64})\|childStderrBase64=(UNAVAILABLE|[A-Za-z0-9+/]{0,684}={0,2})\|childStderrAscii=(UNAVAILABLE|true|false)\|childStderrCrCount=(UNAVAILABLE|0|[1-9][0-9]{0,2})\|childStderrLfCount=(UNAVAILABLE|0|[1-9][0-9]{0,2})\|childStderrRecordOccurrences=(UNAVAILABLE|0|[1-9][0-9]{0,2})\|code=ASSERTION_FAILED\z'
     $stopMatch=[regex]::Match($stderrContent,$stopPattern,[Text.RegularExpressions.RegexOptions]::CultureInvariant)
     if($stopMatch.Success){
-      $stderrFact='EXACT_PARENT_STOP_V2'
-      $childInvocationsFact=$stopMatch.Groups[2].Value
-      $parentStopStage=$stopMatch.Groups[1].Value
-      $parentStopCode='ASSERTION_FAILED'
-      $childExitFact=$stopMatch.Groups[3].Value
-      $childStdoutFact=$stopMatch.Groups[4].Value
-      $childStderrFact=$stopMatch.Groups[5].Value
+      $localizedValid=$true
+      $rawLengthFact=$stopMatch.Groups[6].Value
+      $rawSha256Fact=$stopMatch.Groups[7].Value
+      $rawBase64Fact=$stopMatch.Groups[8].Value
+      $rawAsciiFact=$stopMatch.Groups[9].Value
+      $rawCrCountFact=$stopMatch.Groups[10].Value
+      $rawLfCountFact=$stopMatch.Groups[11].Value
+      $rawOccurrenceFact=$stopMatch.Groups[12].Value
+      if(($rawLengthFact-ceq'UNAVAILABLE')-or($rawSha256Fact-ceq'UNAVAILABLE')-or($rawBase64Fact-ceq'UNAVAILABLE')-or($rawAsciiFact-ceq'UNAVAILABLE')-or($rawCrCountFact-ceq'UNAVAILABLE')-or($rawLfCountFact-ceq'UNAVAILABLE')-or($rawOccurrenceFact-ceq'UNAVAILABLE')){$localizedValid=$false}
+      if($localizedValid){
+        [int]$rawLength=[int]::Parse($rawLengthFact,[Globalization.CultureInfo]::InvariantCulture)
+        [int]$rawCrCount=[int]::Parse($rawCrCountFact,[Globalization.CultureInfo]::InvariantCulture)
+        [int]$rawLfCount=[int]::Parse($rawLfCountFact,[Globalization.CultureInfo]::InvariantCulture)
+        [int]$rawOccurrences=[int]::Parse($rawOccurrenceFact,[Globalization.CultureInfo]::InvariantCulture)
+        if(($rawLength-lt 0)-or($rawLength-gt 512)-or($rawBase64Fact.Length-gt 684)-or(-not[regex]::IsMatch($rawBase64Fact,'\A(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?\z',[Text.RegularExpressions.RegexOptions]::CultureInvariant))){$localizedValid=$false}
+      }
+      if($localizedValid){
+        try{$rawBytes=[Convert]::FromBase64String($rawBase64Fact)}catch{$localizedValid=$false;$rawBytes=$null}
+      }
+      if($localizedValid){
+        $computedAscii=$true
+        [int]$computedCr=0
+        [int]$computedLf=0
+        foreach($byte in $rawBytes){if($byte-gt 127){$computedAscii=$false};if($byte-eq 13){$computedCr++};if($byte-eq 10){$computedLf++}}
+        $expectedDiagnosticBytes=(New-Object Text.ASCIIEncoding).GetBytes('HOST06_PRODUCTION_FAILURE|stage=PT06_CREDENTIAL_GATE|ordinal=0|sendStarted=false|helperRootAbsent=true|helperDllAbsent=true|liveRootAbsent=true|activeAbsent=true|productAbsent=true|provenanceAbsent=true')
+        [int]$computedOccurrences=0
+        if($rawBytes.Length-ge$expectedDiagnosticBytes.Length){
+          for($offset=0;$offset-le($rawBytes.Length-$expectedDiagnosticBytes.Length);$offset++){
+            $sequenceMatch=$true
+            for($index=0;$index-lt$expectedDiagnosticBytes.Length;$index++){if($rawBytes[$offset+$index]-ne$expectedDiagnosticBytes[$index]){$sequenceMatch=$false;break}}
+            if($sequenceMatch){$computedOccurrences++}
+          }
+        }
+        if(($rawBytes.Length-ne$rawLength)-or([Convert]::ToBase64String($rawBytes)-cne$rawBase64Fact)-or((Get-Sha256Hex $rawBytes)-cne$rawSha256Fact)-or($computedAscii.ToString().ToLowerInvariant()-cne$rawAsciiFact)-or($computedCr-ne$rawCrCount)-or($computedLf-ne$rawLfCount)-or($computedOccurrences-ne$rawOccurrences)){$localizedValid=$false}
+      }
+      if($localizedValid){
+        $stderrFact='EXACT_PARENT_STOP_V2'
+        $childInvocationsFact=$stopMatch.Groups[2].Value
+        $parentStopStage=$stopMatch.Groups[1].Value
+        $parentStopCode='ASSERTION_FAILED'
+        $childExitFact=$stopMatch.Groups[3].Value
+        $childStdoutFact=$stopMatch.Groups[4].Value
+        $childStderrFact=$stopMatch.Groups[5].Value
+        $childStderrLengthFact=$rawLengthFact
+        $childStderrSha256Fact=$rawSha256Fact
+        $childStderrBase64Fact=$rawBase64Fact
+        $childStderrAsciiFact=$rawAsciiFact
+        $childStderrCrCountFact=$rawCrCountFact
+        $childStderrLfCountFact=$rawLfCountFact
+        $childStderrRecordOccurrencesFact=$rawOccurrenceFact
+      }else{$stderrFact='NONEXACT_BOUNDED'}
     }else{$stderrFact='NONEXACT_BOUNDED'}
   }else{$stderrFact='NONEXACT_BOUNDED'}
 }
@@ -188,7 +239,7 @@ $postflightAbsent=$true
 foreach($path in $controlledPaths){if(-not(Test-PathAbsent $path)){$postflightAbsent=$false}}
 $accepted=($captureClass-ceq'COMPLETE')-and($exitFact-ceq'0')-and($stdoutFact-ceq'EXACT_ACCEPTED_V2')-and($stderrFact-ceq'EMPTY')-and($childInvocationsFact-ceq'1')-and$postflightAbsent
 $classification=if($accepted){'ACCEPTED_PARENT_RESULT'}else{'REJECTED_PARENT_RESULT'}
-$result='SCIENCE_OUTER_RESULT_V1|classification='+$classification+'|parentExit='+$exitFact+'|parentStdout='+$stdoutFact+'|parentStderr='+$stderrFact+'|parentStopStage='+$parentStopStage+'|parentStopCode='+$parentStopCode+'|childExitFact='+$childExitFact+'|childStdoutFact='+$childStdoutFact+'|childStderrFact='+$childStderrFact+'|childInvocations='+$childInvocationsFact+'|postflightAbsent='+$postflightAbsent.ToString().ToLowerInvariant()
+$result='SCIENCE_OUTER_RESULT_V1|classification='+$classification+'|parentExit='+$exitFact+'|parentStdout='+$stdoutFact+'|parentStderr='+$stderrFact+'|parentStopStage='+$parentStopStage+'|parentStopCode='+$parentStopCode+'|childExitFact='+$childExitFact+'|childStdoutFact='+$childStdoutFact+'|childStderrFact='+$childStderrFact+'|childStderrLength='+$childStderrLengthFact+'|childStderrSha256='+$childStderrSha256Fact+'|childStderrBase64='+$childStderrBase64Fact+'|childStderrAscii='+$childStderrAsciiFact+'|childStderrCrCount='+$childStderrCrCountFact+'|childStderrLfCount='+$childStderrLfCountFact+'|childStderrRecordOccurrences='+$childStderrRecordOccurrencesFact+'|childInvocations='+$childInvocationsFact+'|postflightAbsent='+$postflightAbsent.ToString().ToLowerInvariant()
 [Console]::Out.WriteLine($result)
 if($process){$process.Dispose()}
 if($accepted){exit 0}else{exit 89}
