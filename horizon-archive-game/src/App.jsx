@@ -3,6 +3,7 @@ import glassMeadowImage from "../../Visual Direction/Production Masters/2026-07-
 import drownedArchiveImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/drowned-archive-master.png";
 import strandedLensCradleImage from "../../Visual Direction/Production Masters/2026-08-10-first-run-host06/host06-stranded-lens-cradle-master-v1.png";
 import sedimentAbacusImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host07/host07-sediment-abacus-master-v1.png";
+import severedRelaySpineImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host08/host08-severed-relay-spine-master-v1.png";
 import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
 import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
@@ -205,7 +206,9 @@ import {
 } from "./sedimentAbacus.js";
 import {
   deriveSeveredRelaySpineState,
+  getSeveredRelaySpineHotspot,
   isLegacyHost08LessonLauncherVisible,
+  SEVERED_RELAY_SPINE_COPY,
   SEVERED_RELAY_SPINE_PROVENANCE,
   SEVERED_RELAY_SPINE_REGISTRY,
 } from "./severedRelaySpine.js";
@@ -1048,6 +1051,8 @@ export function App() {
   const [strandedLensCradlePresented, setStrandedLensCradlePresented] = useState(false);
   const [sedimentAbacusDecodedImage, setSedimentAbacusDecodedImage] = useState(null);
   const [sedimentAbacusPresented, setSedimentAbacusPresented] = useState(false);
+  const [severedRelaySpineDecodedImage, setSeveredRelaySpineDecodedImage] = useState(null);
+  const [severedRelaySpinePresented, setSeveredRelaySpinePresented] = useState(false);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
@@ -1118,6 +1123,10 @@ export function App() {
   const sedimentAbacusTransitionPendingRef = useRef(false);
   const sedimentAbacusFocusPendingRef = useRef(false);
   const sedimentAbacusAnnouncementPendingRef = useRef(false);
+  const severedRelaySpineRef = useRef(null);
+  const severedRelaySpineTransitionPendingRef = useRef(false);
+  const severedRelaySpineFocusPendingRef = useRef(false);
+  const severedRelaySpineAnnouncementPendingRef = useRef(false);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1199,8 +1208,10 @@ export function App() {
     clientBridgeEvidence,
     registry: SEVERED_RELAY_SPINE_REGISTRY,
     provenance: SEVERED_RELAY_SPINE_PROVENANCE,
-    decodedImage: null,
+    decodedImage: severedRelaySpineDecodedImage,
   });
+  const severedRelaySpineLawful = severedRelaySpineState !== "hidden";
+  const severedRelaySpineActive = severedRelaySpinePresented && severedRelaySpineLawful;
   const legacyHost08LessonLauncherVisible = isLegacyHost08LessonLauncherVisible(SEVERED_RELAY_SPINE_REGISTRY.source);
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
@@ -1241,12 +1252,15 @@ export function App() {
     label: SEDIMENT_ABACUS_COPY.name,
     hotspot: sedimentAbacusHotspot,
   }] : [];
+  const severedRelaySpineHotspot = getSeveredRelaySpineHotspot(SEVERED_RELAY_SPINE_REGISTRY);
+  const severedRelaySpineHotspots = scene.id === "ruins" && severedRelaySpineActive && severedRelaySpineHotspot ? [{ id: "severed-relay-spine", label: SEVERED_RELAY_SPINE_COPY.name, hotspot: severedRelaySpineHotspot }] : [];
   const sceneHotspots = [primarySceneHotspot, ...(scene.id === "ruins" ? ruinsHotspots : meadowHotspots)];
   const activeSceneHotspots = scene.id === "ruins" && strandedLensCradleActive
     ? strandedLensCradleHotspots
     : sceneHotspots;
-  const presentedSceneHotspots = scene.id === "ruins" && sedimentAbacusActive
-    ? sedimentAbacusHotspots
+  const presentedSceneHotspots = scene.id === "ruins" && severedRelaySpineActive
+    ? severedRelaySpineHotspots
+    : scene.id === "ruins" && sedimentAbacusActive ? sedimentAbacusHotspots
     : activeSceneHotspots;
   const ruinsVisualState = completed.includes("ruins") ? "complete" : terminalOpen && scene.id === "ruins" ? "active" : "available";
   const ruinsImages = { canonical: drownedArchiveImage, narrow: drownedArchiveImage };
@@ -1256,6 +1270,7 @@ export function App() {
     const isSixfoldWeir = scene.id === "ruins" && hotspot.id === "sixfold-weir";
     const isStrandedLensCradle = scene.id === "ruins" && hotspot.id === "stranded-lens-cradle";
     const isSedimentAbacus = scene.id === "ruins" && hotspot.id === "sediment-abacus";
+    const isSeveredRelaySpine = scene.id === "ruins" && hotspot.id === "severed-relay-spine";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
     const nurseryStateLabel = isFractureNursery ? FRPX02_COPY.NURSERY_STATE[fractureNurseryState] : "";
     const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
@@ -1265,6 +1280,8 @@ export function App() {
     const strandedLensCradleLabel = isStrandedLensCradle ? ` // ${strandedLensCradleStateLabel.toUpperCase()}` : "";
     const sedimentAbacusStateLabel = isSedimentAbacus ? SEDIMENT_ABACUS_COPY.state[sedimentAbacusState] : "";
     const sedimentAbacusLabel = isSedimentAbacus ? ` // ${sedimentAbacusStateLabel.toUpperCase()}` : "";
+    const severedRelaySpineStateLabel = isSeveredRelaySpine ? SEVERED_RELAY_SPINE_COPY.state[severedRelaySpineState] : "";
+    const severedRelaySpineLabel = isSeveredRelaySpine ? ` // ${severedRelaySpineStateLabel.toUpperCase()}` : "";
     const hotspotStyle = getHotspotStyle(hotspot.hotspot);
     const sixfoldActivationStyle = isSixfoldWeir ? {
       ...hotspotStyle,
@@ -1295,6 +1312,9 @@ export function App() {
       letterSpacing: 0,
       overflow: "hidden",
     } : undefined;
+    if (isSeveredRelaySpine) {
+      return <button key={hotspot.id} ref={severedRelaySpineRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-severed-relay-spine-state={severedRelaySpineState} style={hotspotStyle} onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} ${hotspot.label}, ${severedRelaySpineStateLabel}`}><span>{verb} {hotspot.label}{severedRelaySpineLabel}</span></button>;
+    }
     if (isSedimentAbacus) {
       return (
         <button
@@ -1357,6 +1377,28 @@ export function App() {
     <button key={item} className={verb === item ? "verb active" : "verb"} aria-pressed={verbPressedState[item]} onClick={() => setVerb(item)} disabled={pendingAdvance && strandedLensCradleState === "hidden"}>{item}</button>
   ));
   const canResume = useMemo(() => Boolean(loadSave()), [mode]);
+
+  useEffect(() => {
+    if (SEVERED_RELAY_SPINE_REGISTRY.source.enabled !== true) { setSeveredRelaySpineDecodedImage(null); return undefined; }
+    let connected = true; const image = new Image(); image.decoding = "async";
+    image.onload = () => connected && setSeveredRelaySpineDecodedImage({ complete:image.complete, naturalWidth:image.naturalWidth, naturalHeight:image.naturalHeight });
+    image.onerror = () => connected && setSeveredRelaySpineDecodedImage(null); image.src = severedRelaySpineImage;
+    return () => { connected=false; image.onload=null; image.onerror=null; };
+  }, []);
+
+  useEffect(() => {
+    if (!severedRelaySpineLawful) { severedRelaySpineTransitionPendingRef.current=false; severedRelaySpineAnnouncementPendingRef.current=false; if (severedRelaySpinePresented) { sedimentAbacusFocusPendingRef.current=true; setSeveredRelaySpinePresented(false); } return undefined; }
+    if (severedRelaySpinePresented || mode!=="playing" || scene.id!=="ruins" || terminalOpen) return undefined;
+    if (!severedRelaySpineTransitionPendingRef.current) { severedRelaySpineFocusPendingRef.current=severedRelaySpineState!=="complete"; setSeveredRelaySpinePresented(true); return undefined; }
+    const frame=window.requestAnimationFrame(()=>{ if(!severedRelaySpineTransitionPendingRef.current)return; severedRelaySpineTransitionPendingRef.current=false; severedRelaySpineFocusPendingRef.current=true; severedRelaySpineAnnouncementPendingRef.current=true; setSeveredRelaySpinePresented(true); });
+    return ()=>window.cancelAnimationFrame(frame);
+  }, [mode, scene.id, terminalOpen, severedRelaySpineLawful, severedRelaySpinePresented, severedRelaySpineState]);
+
+  useLayoutEffect(() => {
+    if(!severedRelaySpineFocusPendingRef.current || !severedRelaySpineActive || terminalOpen)return;
+    const target=severedRelaySpineRef.current; if(!target?.isConnected)return; severedRelaySpineFocusPendingRef.current=false; target.focus({preventScroll:true});
+    if(severedRelaySpineAnnouncementPendingRef.current){severedRelaySpineAnnouncementPendingRef.current=false; setSceneAnnouncement(SEVERED_RELAY_SPINE_COPY.available); setDialogue(SEVERED_RELAY_SPINE_COPY.available,"system");}
+  }, [severedRelaySpineActive, severedRelaySpineState, terminalOpen]);
 
   useEffect(() => {
     function handleDemoTourRequest(event) {
@@ -3161,6 +3203,13 @@ export function App() {
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if (scene.id === "ruins" && hotspotId === "severed-relay-spine") {
+      if (severedRelaySpineState === "hidden" || terminalOpen) return;
+      if (verb === "LOOK AT") { setDialogue(SEVERED_RELAY_SPINE_COPY.unseen, "scene"); return; }
+      if (verb === "TALK TO") { setDialogue("Complete silence.", "pilot"); return; }
+      if (severedRelaySpineState === "complete") { setDialogue(`${SEVERED_RELAY_SPINE_COPY.mastered} ${SEVERED_RELAY_SPINE_COPY.nextBoundary}`, "system"); return; }
+      openClientBridge(); return;
+    }
     if (scene.id === "ruins" && hotspotId === "sediment-abacus") {
       if (sedimentAbacusState === "hidden" || terminalOpen) return;
       if (verb === "LOOK AT") { setDialogue(SEDIMENT_ABACUS_COPY.unseen, "scene"); return; }
@@ -3868,7 +3917,7 @@ export function App() {
   }
   function acknowledgeControlFlowPrimary() { if (!controlFlowSession?.complete || !controlFlowEvidence?.confidence) return; setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setControlFlowSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Control Flow primary form complete at 8 of 8. Unseen transfer and closed-note flow remain.", "teacher"); }
   function checkControlFlowExplanation(event) { event.preventDefault(); const result = evaluateControlFlowExplanation(controlFlowSession.explanationResponse); setControlFlowSession({ ...controlFlowSession, explanationResult: result }); setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
-  function acknowledgeControlFlowMastery() { if (!controlFlowSession?.explanationResult?.passed || !controlFlowSession.ownershipConfirmed || !controlFlowEvidence?.confidence) return; focusContinueAfterControlRef.current = true; setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setControlFlowSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Control Flow mastery confirmed: primary, unseen transfer, and closed-note flow are complete.", "teacher"); }
+  function acknowledgeControlFlowMastery() { if (!controlFlowSession?.explanationResult?.passed || !controlFlowSession.ownershipConfirmed || !controlFlowEvidence?.confidence) return; focusContinueAfterControlRef.current = true; severedRelaySpineTransitionPendingRef.current = SEVERED_RELAY_SPINE_REGISTRY.source.enabled === true; setControlFlowEvidence((previous) => updateControlFlowEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setControlFlowSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Control Flow mastery confirmed: primary, unseen transfer, and closed-note flow are complete.", "teacher"); }
 
   function openClientBridge() {
     setTerminalOpen(true); setRuinsTerminalKind("client-bridge");
@@ -4454,7 +4503,9 @@ export function App() {
         ) : (
           <>
             {scene.id === "ruins" ? (
-              sedimentAbacusActive ? (
+              severedRelaySpineActive ? (
+                <img className="scene-art severed-relay-spine-art" src={severedRelaySpineImage} alt={SEVERED_RELAY_SPINE_COPY.alt} data-severed-relay-spine-source={SEVERED_RELAY_SPINE_REGISTRY.source.path} />
+              ) : sedimentAbacusActive ? (
                 <img
                   className="scene-art sediment-abacus-art"
                   src={sedimentAbacusImage}
@@ -6233,7 +6284,7 @@ export function App() {
 
       <section className="command-panel" data-meadow-departure-choice={showMeadowDepartureChoice ? "true" : undefined} aria-label="Adventure controls and dialogue" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
         <nav className="verb-grid" aria-label="Action verbs">
-          {sedimentAbacusActive || strandedLensCradleActive ? strandedLensCradleVerbButtons : legacyVerbButtons}
+          {severedRelaySpineActive || sedimentAbacusActive || strandedLensCradleActive ? strandedLensCradleVerbButtons : legacyVerbButtons}
         </nav>
 
         <div className="dialogue-box" aria-live="polite">

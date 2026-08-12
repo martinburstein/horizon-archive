@@ -3,36 +3,42 @@ import { sanitizeControlFlowEvidence } from "./controlFlowExercise.js";
 import { sanitizeStructuredPacketEvidence } from "./structuredPacketExercise.js";
 
 export const SEVERED_RELAY_SPINE_PATH = "Visual Direction/Production Masters/2026-08-12-first-run-host08/host08-severed-relay-spine-master-v1.png";
-export const SEVERED_RELAY_SPINE_SOURCE_URL = null;
+export const SEVERED_RELAY_SPINE_SOURCE_URL = SEVERED_RELAY_SPINE_PATH;
 
-const emptyRect = Object.freeze({ x: null, y: null, width: null, height: null });
-const emptyRelation = Object.freeze({ ...emptyRect, centerX: null, centerY: null });
-const emptyLayouts = Object.freeze({ desktop: null, laptop: null, narrow: null, effective200: null, retained320x180: null, retained320x240: null });
+const selectedRelation = Object.freeze({ x: 970, y: 590, width: 1960, height: 920, centerX: 1950, centerY: 1050 });
+const selectedSemanticTarget = Object.freeze({ x: 900, y: 520, width: 2100, height: 1080 });
+function selectedLayout(width, height) { const scale=Math.max(320,width)/3840; return Object.freeze({ viewport:Object.freeze({width,height}), retainedArea:1, essentialCentersVisible:true, semanticTargetWidth:selectedSemanticTarget.width*scale, semanticTargetHeight:selectedSemanticTarget.height*scale, semanticContainsPhysicalCenter:true, protectedOverlap:0, labelFocusSeparation:8, focusTargetStable:true, objectFit:"cover", objectPosition:"50% 50%", relationSource:selectedRelation, semanticSource:selectedSemanticTarget }); }
 
 export const SEVERED_RELAY_SPINE_REGISTRY = Object.freeze({
-  source: Object.freeze({ enabled: false, path: null, sha256: null, byteLength: null, width: null, height: null, format: null, color: null, attemptId: null }),
-  relation: emptyRelation,
-  fractureContinuity: emptyRect,
-  pressureContinuity: emptyRect,
-  host07Handoff: emptyRect,
-  dryApproach: emptyRect,
-  damagedVolume: emptyRect,
-  semanticTarget: emptyRect,
-  labelAnchor: Object.freeze({ ...emptyRect, insetOuterCss: 3, insetTextCss: 5 }),
-  protected: Object.freeze({ host07: null, liveWater: null, returnRoute: null, crown: null, host09: null }),
-  layouts: emptyLayouts,
+  source: Object.freeze({ enabled: true, path: SEVERED_RELAY_SPINE_PATH, sha256: "f6b31c4c410c9cfc89b18047a0a529e184e58261c79f647b2afab59ecd6662a8", byteLength: 16815595, width: 3840, height: 2160, format: "png", color: "opaque-srgb-8", attemptId: "H8-3" }),
+  relation: selectedRelation,
+  fractureContinuity: Object.freeze({ x: 970, y: 760, width: 520, height: 320 }),
+  pressureContinuity: Object.freeze({ x: 2450, y: 620, width: 470, height: 430 }),
+  host07Handoff: Object.freeze({ x: 570, y: 1330, width: 520, height: 300 }),
+  dryApproach: Object.freeze({ x: 780, y: 1500, width: 620, height: 360 }),
+  damagedVolume: Object.freeze({ x: 2220, y: 1430, width: 650, height: 410 }),
+  semanticTarget: selectedSemanticTarget,
+  labelAnchor: Object.freeze({ x: 930, y: 550, width: 2040, height: 1020, insetOuterCss: 3, insetTextCss: 5 }),
+  protected: Object.freeze({ host07: "absent", liveWater: Object.freeze({ x: 0, y: 900, width: 720, height: 900 }), returnRoute: "absent", crown: "absent", host09: "absent" }),
+  layouts: Object.freeze({ desktop:selectedLayout(1920,1080), laptop:selectedLayout(1366,768), narrow:selectedLayout(390,844), effective200:selectedLayout(768,900), retained320x180:selectedLayout(320,180), retained320x240:selectedLayout(320,240) }),
 });
 
 export const SEVERED_RELAY_SPINE_PROVENANCE = Object.freeze({
-  sha256: null, byteLength: null, promptId: null, promptBytes: null,
-  promptSha256: null, cliSha256: null,
+  sha256: "f6b31c4c410c9cfc89b18047a0a529e184e58261c79f647b2afab59ecd6662a8", byteLength: 16815595, promptId: "HOST08-GEN-PROMPT-H8-3", promptBytes: 3097,
+  promptSha256: "9726dfcc016645004dc3d68477d1e100807b7078749a8fcd05bb1c0f5b8afab5", cliSha256: "c2cdb05244ad9a3dcb8731988790ea6a06a59ab3c062c0f872b35f4ad7d20b05",
 });
 
 export const SEVERED_RELAY_SPINE_COPY = Object.freeze({
   name: "Severed Relay Spine",
   state: Object.freeze({ available: "available", in_progress: "in progress", remediation_required: "remediation required", complete: "complete" }),
-  unseen: null, available: null, inProgress: null, missed: null,
-  mastered: null, returned: null, nextBoundary: null, alt: null,
+  unseen: "SCENE // Weathered service laminates have collapsed sideways. One outer continuity ends at an exposed fracture; a different continuity remains compressed into the basin wall. The near ridge is dry beyond the damaged pocket.",
+  available: "PILOT // One continuity ends while another still carries load. I'll call it the Severed Relay Spine. SUIT // A compatible Client Bridge surface is available.",
+  inProgress: "SYSTEM // Sanitized Client Bridge work can resume from its clean boundary. SCENE // Fracture, pressure contacts, sediment, and basin remain unchanged.",
+  missed: "901 TEACHER // One checked Client Bridge layer remains unresolved. Answer-free remediation is available inside the Terminal.",
+  mastered: "SYSTEM // Client Bridge evidence is finalized. SCENE // The collapsed laminates and basin remain unchanged.",
+  returned: "SCENE // The same fracture and wallward pressure contacts remain. SUIT // Sanitized evidence restores only the lawful learning boundary.",
+  nextBoundary: "SYSTEM // The existing Text Analysis continuation is available.",
+  alt: "Collapsed weathered laminates lie on a dry ridge, with one continuity ending in fracture and another remaining attached toward the basin wall.",
 });
 
 const promptIdentities = Object.freeze({

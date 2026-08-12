@@ -4,7 +4,7 @@ Ledger ID: `FRCA-008-v1`
 
 Stage / owner: Quartermaster / `quartermaster`
 
-Disposition: **`HOLD / SELECTED H8-3 BYTE IDENTITY PASS / PRODUCT CLOUD-REPARSE VARIANCE`**
+Disposition: **`PRODUCTION CONTENT COMPLETE / SELECTED H8-3 / CLOUD IDENTITY PROVED`**
 
 Shell / candidate: `FRSH-008-v1` / `c3050ce1523ae3a02d3a0a6a94a31bdbaa0788d0`
 
@@ -29,14 +29,22 @@ to remain ordinary/non-reparse. Quartermaster therefore stops before claiming
 content completion, deleting either exact H8-3 identity, cleaning the scratch
 root, staging product/runtime changes, or running later release gates.
 
-This is **`REQUIRED CORRECTION / CLOUD FILE PRODUCT IDENTITY / EARLIEST OWNER
-SCIENCE THROUGH MISSION / GATING`**. Science must determine whether the exact
-Cloud Files tag/state/final-path/file-ID and stream-byte proof previously
-accepted for the OneDrive media estate can safely govern this new product, or
-whether exact identity-conditioned rollback is required. No new API call or
-attempt is authorized.
+Science and Mission resolved the variance in `FRVE-008-v1-VR-01` and
+`FRSH-008-v1-VR-01`. The exact product passed Cloud tag/no-name-surrogate,
+final-path/containment, volume/file-ID, one-link, residency, complete Cloud
+standard, exclusionary no-recall raw-byte, and metadata-quiescence gates. The
+exact ordinary H8-3 scratch source was then identity-deleted; the empty scratch
+root was deleted nonrecursively; both are absent. H8-4/H8-5 remain unconsumed
+and permanently stopped.
+
+Provenance, selected registry, exact geometry/layouts, seven final-purpose copy
+slots, factual alt, source transition, native target, sole unchanged L03-03
+USE, irreversible generic-launcher replacement, focus/recovery, and served
+asset are integrated. Focused tests pass `20/20`; full tests pass `993/993`;
+production build passes `222` modules with JS `1,699,850`, CSS `119,550`, and
+media `19 / 70,136,520`, all within shell ceilings.
 
 No candidate was revealed to the user. Protected QA was not inspected,
 restored, staged, or used. All OPEN records and VR-65 remain unchanged.
 
-Quartermaster signs **`HOLD / FRCA-008-v1 / H8-3 RETAINED EXACTLY FOR SCIENCE ADJUDICATION`**.
+Quartermaster signs **`PRODUCTION CONTENT COMPLETE / FRCA-008-v1 / H8-3 / ROUTE IMAGE SPECIALIST`**.

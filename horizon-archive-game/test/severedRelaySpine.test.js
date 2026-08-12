@@ -58,13 +58,13 @@ function lawfulRegistry() {
   return registry;
 }
 
-test("Host 08 is inert and null-first", () => {
-  assert.equal(SEVERED_RELAY_SPINE_REGISTRY.source.enabled, false);
-  assert.equal(SEVERED_RELAY_SPINE_SOURCE_URL, null);
-  assert.equal(SEVERED_RELAY_SPINE_PROVENANCE.sha256, null);
-  for (const key of ["unseen","available","inProgress","missed","mastered","returned","nextBoundary","alt"]) assert.equal(SEVERED_RELAY_SPINE_COPY[key], null);
+test("Host 08 selected registry is identity-bound and copy complete", () => {
+  assert.equal(SEVERED_RELAY_SPINE_REGISTRY.source.enabled, true);
+  assert.equal(SEVERED_RELAY_SPINE_SOURCE_URL, SEVERED_RELAY_SPINE_PATH);
+  assert.equal(SEVERED_RELAY_SPINE_PROVENANCE.sha256, "f6b31c4c410c9cfc89b18047a0a529e184e58261c79f647b2afab59ecd6662a8");
+  for (const key of ["unseen","available","inProgress","missed","mastered","returned","nextBoundary","alt"]) assert.equal(typeof SEVERED_RELAY_SPINE_COPY[key], "string");
   assert.equal(deriveSeveredRelaySpineState(), "hidden");
-  assert.equal(getSeveredRelaySpineHotspot(), null);
+  assert.ok(getSeveredRelaySpineHotspot());
 });
 
 test("Host 08 accepts exactly five immutable prompt identities", () => {
@@ -94,7 +94,7 @@ test("generic Client Bridge launcher disappears irreversibly only at enablement"
 
 test("Host 08 state is surfaced without DOM, media, save, or evidence writes", () => {
   assert.match(app, /data-severed-relay-spine-state/);
-  assert.doesNotMatch(app, /severedRelaySpineImage|host08-severed-relay-spine-master-v1\.png";/);
+  assert.match(app, /severedRelaySpineImage[\s\S]*?severed-relay-spine-art/);
   assert.doesNotMatch(app, /localStorage[^\n]*severedRelaySpine|saveGame\([^)]*severedRelaySpine/i);
   assert.doesNotMatch(source, /updateClientBridgeEvidence|setClientBridgeEvidence/);
 });

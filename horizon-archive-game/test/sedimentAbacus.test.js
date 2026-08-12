@@ -151,7 +151,7 @@ test("Host 07 selected phase routes USE through unchanged L03-01 then L03-02", (
 
 test("Host 07 uses one native target and selected image only after lawfulness", () => {
   assert.match(app, /sedimentAbacusActive \? \([\s\S]*?<img[\s\S]*?sediment-abacus-art[\s\S]*?sedimentAbacusImage/);
-  assert.match(app, /const presentedSceneHotspots = scene\.id === "ruins" && sedimentAbacusActive[\s\S]*?sedimentAbacusHotspots/);
+  assert.match(app, /severedRelaySpineActive[\s\S]*?severedRelaySpineHotspots[\s\S]*?sedimentAbacusActive \? sedimentAbacusHotspots/);
   assert.match(app, /data-sediment-abacus-state/);
   assert.match(app, /aria-label={`\$\{verb\.toLowerCase\(\)\} \$\{hotspot\.label\}, \$\{sedimentAbacusStateLabel\}`}/);
   assert.match(app, /sedimentAbacusActive \|\| strandedLensCradleActive/);
