@@ -36,7 +36,7 @@ const source = {
   height: 2160,
   format: "png",
   color: "opaque-srgb-8",
-  attemptOrdinal: 2,
+  attemptId: "I2",
 };
 const physical = { x: 1344, y: 700, width: 1200, height: 700, centerX: 1944, centerY: 1050 };
 const activation = { x: 1300, y: 650, width: 1300, height: 800 };
@@ -139,25 +139,25 @@ function masteredModelEvidence() {
   return { exerciseId: modelChoiceExercise.exercise_id, masteryStatus: "mastered", itemCorrectness };
 }
 
-test("Combat registry is inert, null-first, copy-empty, and media-free", () => {
-  assert.equal(STRANDED_LENS_CRADLE_REGISTRY.source.enabled, false);
-  assert.deepEqual(Object.values(STRANDED_LENS_CRADLE_REGISTRY.source).slice(1), Array(8).fill(null));
-  assert.equal(STRANDED_LENS_CRADLE_SOURCE_URL, null);
-  assert.deepEqual(STRANDED_LENS_CRADLE_PROVENANCE, { sha256: null, byteLength: null });
-  assert.equal(FRPX05_IDENTIFICATION.ALT, null);
+test("selected registry is identity-bound, copy-complete, and media-backed", () => {
+  assert.equal(STRANDED_LENS_CRADLE_REGISTRY.source.enabled, true);
+  assert.equal(STRANDED_LENS_CRADLE_REGISTRY.source.attemptId, "I2");
+  assert.equal(typeof STRANDED_LENS_CRADLE_SOURCE_URL, "string");
+  assert.deepEqual(STRANDED_LENS_CRADLE_PROVENANCE, { sha256: "03e80544b5749bfddc8a1ddeae70cd17bf77339053186a7878502d4d972ab781", byteLength: 16144252 });
+  assert.equal(typeof FRPX05_IDENTIFICATION.ALT, "string");
   assert.equal(Object.keys(FRPX05_COPY).length, 7);
-  assert.ok(Object.values(FRPX05_COPY).every((value) => value === null));
-  assert.doesNotMatch(app, /2026-08-10-first-run-host06\/host06-stranded-lens-cradle-master-v1\.png";/);
+  assert.ok(Object.values(FRPX05_COPY).every((value) => typeof value === "string" && value.length > 0));
+  assert.match(app, /2026-08-10-first-run-host06\/host06-stranded-lens-cradle-master-v1\.png";/);
 });
 
 test("source, measurement, provenance, and decode guards fail closed independently", () => {
   assert.equal(isStrandedLensCradleSourceIdentityPass(source, provenance), true);
-  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, attemptOrdinal: 1 }, provenance), false);
-  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, attemptOrdinal: 2 }, provenance), true);
-  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, attemptOrdinal: 3 }, provenance), true);
+  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, attemptId: "H1" }, provenance), false);
+  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, attemptId: "I1" }, provenance), true);
+  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, attemptId: "I2" }, provenance), true);
   assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, enabled: false }, provenance), false);
   assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, sha256: "b".repeat(64) }, provenance), false);
-  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, byteLength: 12000001 }, provenance), false);
+  assert.equal(isStrandedLensCradleSourceIdentityPass({ ...source, byteLength: 30000001 }, provenance), false);
   assert.equal(isStrandedLensCradleMeasurementPass(registry), true);
   assert.equal(isStrandedLensCradleMeasurementPass({ ...registry, physical: { ...physical, centerX: 0 } }), false);
   assert.equal(isStrandedLensCradleMeasurementPass({ ...registry, layouts: { ...registry.layouts, narrow: null } }), false);
@@ -184,7 +184,7 @@ test("enabled is the irreversible legacy-launcher switch, not lawfulness proof",
 });
 
 test("Host 06 uses one selected img, sole USE, completed read-only behavior, and safe source succession", () => {
-  assert.match(app, /strandedLensCradleActive \? \([\s\S]*?<img[\s\S]*?stranded-lens-cradle-art[\s\S]*?STRANDED_LENS_CRADLE_SOURCE_URL[\s\S]*?FRPX05_IDENTIFICATION\.ALT[\s\S]*?\) : \(\s*<picture>/);
+  assert.match(app, /strandedLensCradleActive \? \([\s\S]*?<img[\s\S]*?stranded-lens-cradle-art[\s\S]*?strandedLensCradleImage[\s\S]*?FRPX05_IDENTIFICATION\.ALT[\s\S]*?\) : \(\s*<picture>/);
   assert.match(app, /const activeSceneHotspots = scene\.id === "ruins" && strandedLensCradleActive[\s\S]*?\? strandedLensCradleHotspots\s*: sceneHotspots/);
   const handler = app.slice(app.indexOf('if (scene.id === "ruins" && hotspotId === "stranded-lens-cradle")'), app.indexOf('if (scene.id === "ruins" && hotspotId === "sixfold-weir")'));
   assert.match(handler, /verb === "LOOK AT"[\s\S]*?FRPX05_UNSEEN_INTERFACE[\s\S]*?return/);
@@ -212,5 +212,5 @@ test("candidate hotspot projection is finite only after the complete measurement
     width: `${(activation.width / 3840) * 100}%`,
     height: `${(activation.height / 2160) * 100}%`,
   });
-  assert.equal(getStrandedLensCradleHotspot(), null);
+  assert.ok(getStrandedLensCradleHotspot());
 });

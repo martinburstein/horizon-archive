@@ -1,6 +1,7 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import glassMeadowImage from "../../Visual Direction/Production Masters/2026-07-15-glass-meadow-integrated-terminal/glass-meadow-integrated-terminal-master-v1.png";
 import drownedArchiveImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/drowned-archive-master.png";
+import strandedLensCradleImage from "../../Visual Direction/Production Masters/2026-08-10-first-run-host06/host06-stranded-lens-cradle-master-v1.png";
 import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
 import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
@@ -1459,7 +1460,7 @@ export function App() {
     image.onerror = () => {
       if (connected) setStrandedLensCradleDecodedImage(null);
     };
-    image.src = STRANDED_LENS_CRADLE_SOURCE_URL;
+    image.src = strandedLensCradleImage;
     return () => {
       connected = false;
       image.onload = null;
@@ -4320,7 +4321,7 @@ export function App() {
               strandedLensCradleActive ? (
                 <img
                   className="scene-art stranded-lens-cradle-art"
-                  src={STRANDED_LENS_CRADLE_SOURCE_URL}
+                  src={strandedLensCradleImage}
                   alt={FRPX05_IDENTIFICATION.ALT}
                   data-stranded-lens-cradle-source={STRANDED_LENS_CRADLE_REGISTRY.source.path}
                 />
