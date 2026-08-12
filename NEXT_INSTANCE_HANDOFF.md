@@ -2,15 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRAB-008-v1-HOLD-02 / E2E ARRIVAL TIMING`**
+Current disposition: **`FIRST RUN SHELL READY / FRSH-008-v1-VR-02 / CORRECTED E2E`**
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Combat Engineer / `combat_engineer`**
 
-Read the full Mission profile, `FRAB-008-v1-HOLD-02`, `FRSH-008-v1` plus
-VR-01, and `FRCE-008-v1-VR-01`. Adjudicate one narrow shell variance: Combat
-may remove only the obsolete Teacher-line wait that races Host 08 arrival,
-then fresh Intelligence may run exactly one corrected E2E under a new external
-QA root. Freeze cleanup, no-product-change, and no-additional-retry boundaries.
+Read the full Combat profile, `FRSH-008-v1-VR-02`, `FRAB-008-v1-HOLD-02`, and
+`FRCE-008-v1-VR-01`. Remove only the obsolete Teacher-line wait, update the
+focused static contract if needed, run syntax/focused/full/build, commit/push,
+then route fresh Intelligence for the sole corrected E2E.
 
 Selected H8-3 is `16,815,595` bytes / SHA-256
 `f6b31c4c410c9cfc89b18047a0a529e184e58261c79f647b2afab59ecd6662a8`.
