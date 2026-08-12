@@ -2,14 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-009-v5 / FIVE FRESH HIGH-AIM ATTEMPTS`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-009-v3 / FIVE FRESH HIGH-AIM ATTEMPTS`**
 
-Exact next owner: **one fresh Office of Science Administrator / `office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-Read the full Science profile, `FRWO-009-v5`, and the complete prior Host 09
-chain. Validate the high-aim compensation strategy against unchanged runtime
-acceptance, five-attempt CLI/custody, accepted-only integration/PBA/E2E, and
-cleanup. Issue READY, REVISE, or HOLD with zero generation.
+Read the full Mission profile, `FRWO-009-v5`, `FRVE-009-v3`, and the prior Host
+09 chain. Freeze five independent high-aim prompts, a fresh GUID scratch root,
+the unchanged acceptance/CLI/custody/runtime/release controls, and strict role
+sequence. Push FIRST RUN SHELL READY and route fresh Recon. Do not generate.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
