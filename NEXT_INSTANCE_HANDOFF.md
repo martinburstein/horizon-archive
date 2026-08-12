@@ -2,13 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PLAYER EXPERIENCE READY / FRPX-009-v3 / FIFTEEN-ID GUARD`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-009-v3 / FIFTEEN-ID GUARD`**
 
-Exact next owner: **one fresh Combat Engineer / `combat_engineer`**
+Exact next owner: **one fresh Quartermaster / `quartermaster`**
 
-Read the full Combat profile, `FRSH-009-v3`, `FRPX-009-v3`, and current runtime.
-Add H9-11..H9-15 prompt identities/tests only, preserve inert state, run focused
-and build/PBA gates, push, and route Quartermaster. Do not generate.
+Read the full Quartermaster profile, `FRSH-009-v3`, `FRDT-009-v3`,
+`FRPX-009-v3`, and `FRCE-009-v3`. Preflight exact identities and the fresh
+scratch root, then execute H9-11..H9-15 sequentially. Privately inspect each
+candidate against unchanged runtime acceptance, clean every reject exactly,
+and stop at first PASS or exhausted HOLD. Do not reveal a candidate.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
