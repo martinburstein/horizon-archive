@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-009-v3 / FIVE FRESH HIGH-AIM ATTEMPTS`**
+Current disposition: **`DIRECTORIAL LOCK / FRDT-009-v3 / HIGH-AIM COMPENSATION`**
 
-Exact next owner: **one fresh Reconnaissance Sergeant / `reconnaissance_sergeant`**
+Exact next owner: **one fresh Tactical Operations Specialist / `tactical_operations_specialist`**
 
-Read the full Recon profile, `FRSH-009-v3`, and current treatment. Issue a
-narrow high-aim composition variance preserving meaning, then route Tactical.
-Do not generate or access media.
+Read the full Tactical profile, `FRSH-009-v3`, `FRDT-009-v3`, and current
+blueprint. Extend the exact attempt-ID guard to H9-15 while preserving all
+interaction and runtime acceptance, then route fresh Combat. Do not generate.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
