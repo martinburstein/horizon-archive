@@ -1,24 +1,25 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v21`
+Scoreboard ID: `FRSB-006-v1`
 
-Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
+Current release authority: `FRAB-005-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
+Baseline / lock: `FRPB-001-v2-GR-01` / `FRCL-005-v1`
 
-Release map: `FRRM-005-v19`
+Release map: `FRRM-006-v1`
 
-Operations source inspected: `53c408e792c8f611b737106b049298539c5495c0`
+Operations source inspected: `e31399b0a4e6f88aa34e6e198197447f6b0e70ab`
 
-Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
+Released product candidate: `57b7b396`
 
-Image product candidate reviewed: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
+Image product candidate reviewed: `57b7b396`
 
 Date: **2026-08-12**
 
-Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
+Current released Work Order: `FRWO-005-v21 / Stranded Lens Cradle`.
 
-Selected bounded Work Order: **none - `FRWO-005-v21` released by `FRAB-005-v1`**.
+Selected bounded Work Order: **`FRWO-006-v1 / Sediment Abacus - Existing-Source
+Viability and Fixed Lesson Integration`**.
 
 G1 used prompt v4's distant center-island strategy and made exactly one HTTP
 200 request. It passed technical and physical review, then failed the exact

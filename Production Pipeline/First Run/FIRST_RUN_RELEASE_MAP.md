@@ -1,16 +1,16 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-005-v21`
+Map ID: `FRRM-006-v1`
 
-Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
+Current release authority: `FRAB-005-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v2` / `FRCL-004-v2`
+Baseline / continuity lock: `FRPB-001-v2-GR-01` / `FRCL-005-v1`
 
-Operations source inspected: `53c408e792c8f611b737106b049298539c5495c0`
+Operations source inspected: `e31399b0a4e6f88aa34e6e198197447f6b0e70ab`
 
-Released product candidate: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
+Released product candidate: `57b7b396`
 
-Image product candidate reviewed: `a91763e28d488f31f8cf7d40ece0b2682246ba9b`
+Image product candidate reviewed: `57b7b396`
 
 Released geometry / transport controls:
 `8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
@@ -20,9 +20,10 @@ Released predecessor: `TD-012 / PASS - AS BUILT RELEASED`
 
 Date: **2026-08-12**
 
-Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
+Current released Work Order: `FRWO-005-v21 / Stranded Lens Cradle`
 
-Selected bounded Work Order: **none - `FRWO-005-v21` released by `FRAB-005-v1`**.
+Selected bounded Work Order: **`FRWO-006-v1 / Sediment Abacus - Existing-Source
+Viability and Fixed Lesson Integration`**.
 
 `FRWO-005-v17` is closed. G1 made exactly one HTTP 200 request, passed strict
 technical and physical review, and failed the frozen v4 responsive-layout and
