@@ -2,14 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`RUNTIME PRESENTATION COMPLETE / FRPR-008-v1 / CSS BUDGET CORRECTED`**
+Current disposition: **`FIRST RUN SHELL READY / FRSH-008-v1-VR-04 / FINAL CORROBORATION`**
 
-Exact next owner: **one fresh Mission Captain / `mission_captain`**
+Exact next owner: **one fresh Intelligence Officer / `intelligence_officer`**
 
-Read the full Mission profile, `FRAB-008-v1-HOLD-04`, updated `FRPR-008-v1`,
-and prior successful E2E. If CSS <=119900 and regression gates pass, authorize
-fresh Intelligence to corroborate the exact corrected candidate proportionately
-without changing product/runtime/media/canon.
+Read the full Intelligence profile, `FRSH-008-v1-VR-04`, complete Host 08
+chain, release controls, prior successful E2E, and corrected CSS candidate.
+Independently rerun focused/full/build/PBA and affected-state live layout/
+accessibility corroboration; release or reject, synchronize release records,
+commit/push, and prove remote equality. Do not rerun the full E2E.
 
 Selected H8-3 is `16,815,595` bytes / SHA-256
 `f6b31c4c410c9cfc89b18047a0a529e184e58261c79f647b2afab59ecd6662a8`.
