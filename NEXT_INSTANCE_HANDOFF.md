@@ -2,16 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / EXACT OUTER SCIENCE
-CONTROLLER RETAINED BEFORE EXECUTION / PARENT RESULT CLASSIFICATION EMITTED
-BEFORE PASS-FAIL EXIT / FRESH SCIENCE ONE-RUN PROOF REQUIRED /
-FRSH-005-v1-VR-24`**
+Current disposition: **`HOLD / SOLE RETAINED OUTER CONTROLLER RUN REJECTED
+THE CAPTURED PARENT RESULT / PARENT EXIT 88 / EXACT BOUNDED PARENT STOP / ONE
+CHILD / ALL CONTROLLED PATHS ABSENT / NO RETRY / MISSION BOUNDED STOP-DETAIL
+CORRECTION REQUIRED / FRVE-005-v7-VR-21`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Mission decision: `FRSH-005-v1-VR-24`
 
-Current Science return: `FRVE-005-v7-VR-20`
+Current Science return: `FRVE-005-v7-VR-21`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-24`
 
@@ -35,52 +35,54 @@ Corrected candidate tree:
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission handoff
+## Science handoff
 
-Mission corrected only the outer Science result-retention boundary. The exact
-controller source is now tracked before execution. It freezes the unchanged
-retained parent, runs the sole parser/preflight/VR-17 transport, permits one
-parent and at most one child, dual-drains parent stdout/stderr asynchronously
-with fixed capture ceilings and independent counts, captures the native exit,
-and only then emits one bounded allowlisted classification before exiting.
+Science independently validated both tracked source identities, strict source
+form, outer parsing, frozen carrier identities and canonical roundtrips, split
+stage order, single parent/child cardinalities, and exact `13/13` preflight
+absence. It then invoked the authoritative outer controller exactly once. No
+alternate runner or retry occurred.
 
-Mission executed no parser, controller, parent, child, credential, request,
-API, media, product, test, build, browser, or E2E operation. API sends remain
-`0`. Historical ordinal `1` remains opaque and consumed; ordinals `2` and `3`
-remain unstarted and unconsumed.
+The exact bounded result was controller exit `89`, one `171`-character stdout
+record including CRLF, and zero stderr:
+
+```text
+SCIENCE_OUTER_RESULT_V1|classification=REJECTED_PARENT_RESULT|parentExit=88|parentStdout=EMPTY|parentStderr=EXACT_PARENT_STOP_V2|childInvocations=1|postflightAbsent=true
+```
+
+The result proves one parent, one child, and all controlled paths absent. It
+does not pass the credential-cleared no-request subgate. The current outer
+classification intentionally collapses the regex-validated parent-stop body,
+so the exact allowlisted parent stage and child exit/stdout/stderr classes are
+not retained outside the controller. The completed run is not reinterpreted
+and is never retried.
+
+API sends remain `0`. Historical ordinal `1` remains opaque and consumed;
+ordinals `2` and `3` remain unstarted and unconsumed. No media, pixel, product,
+test, build, browser, E2E, or residual operation occurred.
 
 ## Exact next action
 
-One fresh Science role reads the complete required intake and profile, then
-complete `FRSH-005-v1-VR-24`, complete `FRVE-005-v7-VR-20`, complete
-`FRSH-005-v1-VR-23`, complete `FRVE-005-v7-VR-19`, both complete retained
-sources, complete VR-17 bootstrap authority, complete `FRWO-005-v7`, and all
+One fresh Mission role reads the complete required intake and profile, then
+complete `FRVE-005-v7-VR-21`, complete `FRSH-005-v1-VR-24`, complete
+`FRVE-005-v7-VR-20`, both complete retained sources, `FRWO-005-v7`, and all
 cited controls.
 
-Science independently proves both retained source identities, strict source
-form, carrier identities/roundtrips, stage ownership/order, controller
-cardinalities, and exact preflight absence. If every read-only gate passes, it
-invokes the exact retained controller once through exact Windows PowerShell
-5.1 x64 and captures controller exit/stdout/stderr asynchronously. No alternate
-runner, second controller, second parent, correction, or retry exists.
-
-PASS requires exact controller exit `0`, exactly one accepted
-`SCIENCE_OUTER_RESULT_V1` stdout scalar, zero controller stderr, exact parent
-exit `0`, exact accepted V2 parent stdout, zero parent stderr, one parent, one
-child, all activity counters `0`, and all controlled paths absent. Any other
-result is exact `HOLD` and retains the emitted bounded classification.
-
-PASS returns only `POLISH VIABILITY READY / RETAINED OUTER CONTROLLER V1 AND
-PARENT V2 BOUNDED CREDENTIAL-CLEARED NO-REQUEST SUBGATE PASSED / MISSION API
-SHELL REQUIRED` to one fresh Mission Captain. Science commits only its report
-and this handoff and does not push.
+Mission performs no controller, parent, child, credential, request, API,
+media, product, test, build, browser, or E2E execution. It issues exactly one
+versioned `FIRST RUN SHELL READY`, `REVISE`, or `HOLD` decision that preserves
+both retained source identities and all frozen carrier/runtime semantics while
+making any future rejected parent classification expose only the bounded,
+allowlisted parent-stop fields already validated by the outer regex. No body,
+diagnostic text, credential, response, Base64 member, exception, or stack may
+be exposed. The completed VR-24 run is not retried.
 
 Do not route to Quartermaster; call the API; consume ordinal `2`; inspect
 media/pixels; change product/tests; run E2E; reveal; advance maturity; close an
-OPEN record; access a residual or VR-65; release; or call `FIRST RUN COMPLETE`.
+OPEN record; access a residual or VR-65; release; or call
+`FIRST RUN COMPLETE`.
 
 The one-path rail, sole unchanged `L02-03`, equal-dignity MH-40 outcomes,
 shared RP-012 ending, and `successor=null` remain immutable. Repository QA
