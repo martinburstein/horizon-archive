@@ -223,6 +223,10 @@ import {
   isLegacyHost09LessonLauncherVisible,
 } from "./floodedChoir.js";
 import {
+  BLIND_CAMERA_WELL_REGISTRY,
+  isLegacyHost10LessonLauncherVisible,
+} from "./blindCameraWell.js";
+import {
   buildCompletedMeadowReturnPatch,
   buildMeadowDeparturePresentation,
   buildMeadowReturnPresentation,
@@ -1241,6 +1245,7 @@ export function App() {
   const floodedChoirLawful = floodedChoirState !== "hidden";
   const floodedChoirActive = floodedChoirPresented && floodedChoirLawful;
   const legacyHost09LessonLauncherVisible = isLegacyHost09LessonLauncherVisible(FLOODED_CHOIR_REGISTRY.source);
+  const legacyHost10LessonLauncherVisible = isLegacyHost10LessonLauncherVisible(BLIND_CAMERA_WELL_REGISTRY.source);
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -6396,10 +6401,10 @@ export function App() {
                   {legacyHost09LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && textAnalysisEvidence?.masteryStatus === "mastered" && speechEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openSpeechWorkloads(); }}>{speechSession ? "Resume Speech Workloads" : speechEvidence?.masteryStatus === "primary_complete" ? "Start Speech Transfer" : speechEvidence?.masteryStatus === "transfer_complete" ? "Open Speech Closed-Note Gate" : "Start Speech Workloads"}</button>
                   )}
-                  {pendingAdvance && scene.id === "ruins" && speechEvidence?.masteryStatus === "mastered" && visualEvidence?.masteryStatus !== "mastered" && (
+                  {legacyHost10LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && speechEvidence?.masteryStatus === "mastered" && visualEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openVisualWorkloads(); }}>{visualSession ? "Resume Visual Workloads" : visualEvidence?.masteryStatus === "primary_complete" ? "Start Visual Transfer" : visualEvidence?.masteryStatus === "transfer_complete" ? "Open Visual Closed-Note Gate" : "Start Visual Workloads"}</button>
                   )}
-                  {pendingAdvance && scene.id === "ruins" && visualEvidence?.masteryStatus === "mastered" && extractionEvidence?.masteryStatus !== "mastered" && (
+                  {legacyHost10LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && visualEvidence?.masteryStatus === "mastered" && extractionEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openExtractionWorkloads(); }}>{extractionSession ? "Resume Extraction Workloads" : extractionEvidence?.masteryStatus === "primary_complete" ? "Start Extraction Transfer" : extractionEvidence?.masteryStatus === "transfer_complete" ? "Open Extraction Closed-Note Gate" : "Start Extraction Workloads"}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && extractionEvidence?.masteryStatus === "mastered" && portalEvidence?.masteryStatus !== "mastered" && (
