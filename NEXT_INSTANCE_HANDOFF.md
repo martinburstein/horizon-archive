@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / RETAINED PARENT STATIC STAGE
-OWNERSHIP CORRECTED / FROZEN RUNTIME CARRIERS UNCHANGED / FRESH SCIENCE
-ONE-RUN PROOF REQUIRED / FRSH-005-v1-VR-22`**
+Current disposition: **`HOLD / CORRECTED RETAINED PARENT V2 SINGLE
+AUTHORIZED RUN STOPPED AT SR05 CHILD CAPTURE / PARENT EXIT 88 / ONE CHILD
+INVOCATION / NO RETRY / MISSION DIAGNOSTIC-CAPTURE CORRECTION REQUIRED /
+FRVE-005-v7-VR-19`**
 
 Current Work Order: `FRWO-005-v7`
 
 Current Mission decision: `FRSH-005-v1-VR-22`
 
-Current Science return: `FRVE-005-v7-VR-18`
+Current Science return: `FRVE-005-v7-VR-19`
 
 Effective shell: `FRSH-005-v1` through `FRSH-005-v1-VR-22`
 
@@ -28,52 +29,50 @@ Corrected candidate tree:
 
 Released predecessor: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
-Exact next owner: **one fresh Office of Science Administrator /
-`office_of_science_administrator`**
+Exact next owner: **one fresh Mission Captain / `mission_captain`**
 
-## Mission handoff
+## Science handoff
 
-Mission corrected only the retained parent's static stage ownership. The
-launcher now validates ordered `PH01`, `PH02`, `PH03`, and `PH08`; the decoded
-combined source validates ordered prehelper `PH04`, `PH05`, `PH06`, and
-`PH07`; the existing combined-source `PT01..PT06` check is unchanged.
+Science independently passed the corrected retained-source identity, both
+frozen carrier identities and roundtrips, split stage ownership/order, and all
+13 preflight absence gates. The sole authorized parent-source parser operation
+returned zero errors.
 
-The frozen launcher and combined carriers remain byte-identical at
-`2001 / 96feaf7e62fa89e8c80cc46d38425d465cf845ffbd426405a75c73c056314212`
-and
-`27044 / 015dfd96befad29793892f1e15dc9ff4362ff8cec0ae4ce7b9c45b5da9e125f3`.
-The prefix/tail, helper source/DLL, VR-17 bootstrap, PT06 classifier,
-one-child/no-retry rule, exact accepted V2 result, zero-activity contract, and
-all controlled-path gates remain unchanged.
+Science then used the exact VR-17 bootstrap once with `OPENAI_API_KEY` removed
+without value read. The parent invoked exactly one frozen child. The parent
+returned exit `88`, zero stdout characters, and one bounded `117`-character
+stderr stop at `SR05_CHILD_CAPTURE` with `childInvocations=1`. No retry
+occurred. The required accepted V2 record was absent, and the parent stop does
+not retain whether child exit, stdout cardinality, or the allowlisted PT06
+diagnostic was nonexact.
 
-Mission performed no parser, parent, child, credential, API, media, product,
-or controlled-root execution. Sends remain `0`; ordinals `2` and `3` remain
-unstarted and unconsumed; every controlled and product path remains absent.
+All helper, live, ordinal-2/3 stage/target/decision, product raster/provenance,
+and Science fixture paths are absent postflight. Science did not authorize or
+perform an API, media, pixel, product, browser, build, test, or E2E operation.
+Ordinal `1` remains opaque and consumed; ordinals `2` and `3` remain unstarted
+and unconsumed. Maturity and all OPEN records remain unchanged.
 
 ## Exact next action
 
-One fresh Science role reads the required intake and profile in full, then
-reads complete `FRSH-005-v1-VR-22`, complete `FRVE-005-v7-VR-18`, complete
-`FRSH-005-v1-VR-21`, the complete corrected retained parent source, and every
-cited authority. Science independently re-proves the new retained-source
-identity, both frozen carrier identities/roundtrips, correct split stage
-ownership and order, and exact preflight absence.
+One fresh Mission Captain reads the required intake and profile in full, then
+reads complete `FRVE-005-v7-VR-19`, complete `FRSH-005-v1-VR-22`, complete
+`FRSH-005-v1-VR-21`, the complete retained parent source, and every cited
+authority. Mission performs no parser or runtime execution.
 
-If and only if all static gates pass, Science performs exactly one read-only
-parent parse and one exact VR-17 fileless parent execution with the credential
-removed without value read. The parent may invoke exactly one frozen child.
-Require the exact accepted V2 no-request result, parent exit `0`, one stdout
-record, zero stderr, one child invocation, all activity counters `0`, all
-controlled paths absent, and no retry.
+Mission issues exactly one versioned `FIRST RUN SHELL READY`, `REVISE`, or
+`HOLD` decision that preserves both frozen runtime carrier byte identities,
+the VR-17 bootstrap, production semantics, one-child/no-retry rule, controlled
+paths, and zero-activity requirements while correcting only the disposable
+parent's bounded SR05 evidence retention. A future fresh Science one-run proof
+must be able to distinguish child exit, stdout cardinality, and the allowlisted
+PT06 diagnostic schema without retaining, exposing, or persisting an unbounded
+child body, credential, carrier, response, media, or opaque content.
 
-PASS permits only `POLISH VIABILITY READY / CORRECTED RETAINED PARENT V2
-CREDENTIAL-CLEARED NO-REQUEST SUBGATE PASSED / MISSION API SHELL REQUIRED`
-and a return to one fresh Mission Captain. Failure permits only exact `HOLD`.
-Science commits only its variance and synchronized handoff and does not push.
-
-Do not route to Quartermaster, call the API, consume ordinal `2`, inspect
-media/pixels, change product/tests, run E2E, reveal, advance maturity, close an
-OPEN record, access a residual or VR-65, release, or call `FIRST RUN COMPLETE`.
+Do not reinterpret the failed parent as acceptance; retry from the completed
+Science context; route to Quartermaster; call the API; consume ordinal `2`;
+inspect media/pixels; change product/tests; run E2E; reveal; advance maturity;
+close an OPEN record; access a residual or VR-65; release; or call
+`FIRST RUN COMPLETE`.
 
 The one-path rail, sole unchanged `L02-03`, equal-dignity MH-40 outcomes,
 shared RP-012 ending, and `successor=null` remain immutable. Repository QA
