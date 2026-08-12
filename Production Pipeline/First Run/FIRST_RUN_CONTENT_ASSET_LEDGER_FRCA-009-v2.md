@@ -6,6 +6,12 @@ Stage / owner: Quartermaster / `quartermaster`
 
 Disposition: **`HOLD / FRESH FIVE ATTEMPTS CONSUMED / NO PRODUCT IMPORT`**
 
+> **Post-audit correction / FRCA-009-v4:** H9-6, H9-7, H9-9, and H9-10 are
+> `UNVERIFIED / DEFECTIVE RESPONSIVE GATE`. H9-8 is
+> `INVALID REJECTION / RELEASE ENVELOPE HAD PASSED`: a stricter prompt-center
+> preference was incorrectly elevated over the approved acceptance envelope.
+> Every byte remains consumed, deleted, absent, and unauthorized for reuse.
+
 Shell / functional candidate: `FRSH-009-v2` / `374a0d5ce49c512951e440128335230125b390df`
 
 ## Fresh attempt ledger

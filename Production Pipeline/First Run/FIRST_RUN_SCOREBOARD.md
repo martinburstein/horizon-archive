@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-009-v6`
+Scoreboard ID: `FRSB-009-v7`
 
 Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v6` / `FRCL-009-v1`
 
-Release map: `FRRM-009-v6`
+Release map: `FRRM-009-v7`
 
 Operations source inspected: `243edb4e`
 
@@ -18,7 +18,13 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`.
 
-Selected bounded Work Order: **none; `FRWO-009-v6` terminal HOLD**.
+Selected bounded Work Order: **`FRWO-009-v7 / responsive evidence repair`**.
+
+Host 09 attempt accounting is unchanged at fifteen consumed and zero accepted.
+The old layout verdicts are corrected: H9-1..7 and H9-9..15 are unverified,
+while H9-8 was invalidly rejected after passing the release envelope. The new
+derived gate and browser suite correct process evidence only; they do not add a
+source, advance maturity, or authorize another call.
 
 Host 09's complete ledger `{H9-1..H9-5}` is consumed. All five technically
 valid private candidates failed the frozen responsive layout contract and were

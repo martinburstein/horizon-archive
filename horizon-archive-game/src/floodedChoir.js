@@ -1,6 +1,7 @@
 import { sanitizeClientBridgeEvidence } from "./clientBridgeExercise.js";
 import { sanitizeSpeechEvidence } from "./speechWorkloadExercise.js";
 import { sanitizeTextAnalysisEvidence } from "./textAnalysisExercise.js";
+import { deriveResponsiveEvidence, FIRST_RUN_RESPONSIVE_LAYOUTS } from "./responsiveImageProjection.js";
 
 export const FLOODED_CHOIR_PATH = "Visual Direction/Production Masters/2026-08-12-first-run-host09/host09-flooded-choir-master-v1.png";
 export const FLOODED_CHOIR_SOURCE_URL = null;
@@ -54,12 +55,21 @@ const promptIdentities = Object.freeze({
   "H9-14": Object.freeze({ bytes: 1440, sha256: "2ffe164e14458d6d9d8ece3b386f833c9f73720e2d7158ca8a1c5277bf2f3cfc" }),
   "H9-15": Object.freeze({ bytes: 1728, sha256: "04af1c053f6eb67974ebc083aa621b22d7480e8f12edfcee957d8c6bddd5a34d" }),
 });
-const layoutContract = Object.freeze({ desktop: [1920,1080], laptop:[1366,768], narrow:[390,844], effective200:[768,900], retained320x180:[320,180], retained320x240:[320,240] });
 const finite = (value) => typeof value === "number" && Number.isFinite(value);
 function rect(value) { return value && ["x","y","width","height"].every((key) => finite(value[key])) && value.width>0 && value.height>0 && value.x>=0 && value.y>=0 && value.x+value.width<=3840 && value.y+value.height<=2160; }
 function overlaps(a,b) { return rect(a) && rect(b) && a.x<b.x+b.width && a.x+a.width>b.x && a.y<b.y+b.height && a.y+a.height>b.y; }
 function contains(container, child) { return rect(container) && rect(child) && child.x>=container.x && child.y>=container.y && child.x+child.width<=container.x+container.width && child.y+child.height<=container.y+container.height; }
-function layoutPass(id,value,registry) { const [width,height]=layoutContract[id]; return value?.viewport?.width===width && value?.viewport?.height===height && value.retainedArea>=.95 && value.essentialCentersVisible===true && value.semanticTargetWidth>=44 && value.semanticTargetHeight>=44 && value.semanticContainsPhysicalCenter===true && value.protectedOverlap===0 && value.labelFocusSeparation>=8 && value.focusTargetStable===true && value.objectFit==="cover" && value.objectPosition==="50% 50%" && value.relationSource===registry.family && value.semanticSource===registry.semanticTarget; }
+function responsivePass(id,registry) {
+  const protectedRects=Object.values(registry.protected).filter((value)=>value!=="absent");
+  const evidence=deriveResponsiveEvidence({viewport:FIRST_RUN_RESPONSIVE_LAYOUTS[id],relation:registry.family,semanticTarget:registry.semanticTarget,essentialRects:[...registry.cavities,...registry.reflectedLightPair,registry.pressureContinuity,registry.noOpticalReturn,registry.dryRim,registry.distributedCoupling],protectedRects,objectFit:"cover",objectPosition:"50% 50%"});
+  return evidence!=null && evidence.relation.retainedArea>=.95 && evidence.essentialCentersVisible && evidence.target.width>=44 && evidence.target.height>=44 && evidence.target.contained && evidence.semanticContainsPhysicalCenter && evidence.protectedOverlap===0;
+}
+
+export function deriveFloodedChoirResponsiveEvidence(registry=FLOODED_CHOIR_REGISTRY) {
+  if(!registry?.family||!registry?.semanticTarget)return null;
+  const protectedRects=Object.values(registry.protected??{}).filter((value)=>value!=="absent");
+  return Object.freeze(Object.fromEntries(Object.entries(FIRST_RUN_RESPONSIVE_LAYOUTS).map(([id,viewport])=>[id,deriveResponsiveEvidence({viewport,relation:registry.family,semanticTarget:registry.semanticTarget,essentialRects:[...(registry.cavities??[]),...(registry.reflectedLightPair??[]),registry.pressureContinuity,registry.noOpticalReturn,registry.dryRim,registry.distributedCoupling],protectedRects,objectFit:"cover",objectPosition:"50% 50%"})])));
+}
 
 export function isFloodedChoirSourceIdentityPass(source=FLOODED_CHOIR_REGISTRY.source, provenance=FLOODED_CHOIR_PROVENANCE) {
   const prompt=promptIdentities[source?.attemptId];
@@ -70,14 +80,11 @@ export function isFloodedChoirMeasurementPass(registry=FLOODED_CHOIR_REGISTRY) {
   const {family,cavities,pressureContinuity,reflectedLightPair,noOpticalReturn,dryRim,wetExclusion,distributedCoupling,semanticTarget,labelAnchor,protected:protectedRegions,layouts}=registry??{};
   if(!rect(family)||!Array.isArray(cavities)||cavities.length<3||!cavities.every(rect)||!Array.isArray(reflectedLightPair)||reflectedLightPair.length!==2||!reflectedLightPair.every(rect)||![pressureContinuity,noOpticalReturn,dryRim,wetExclusion,distributedCoupling,semanticTarget,labelAnchor].every(rect))return false;
   if(!finite(family.centerX)||!finite(family.centerY)||family.centerX!==family.x+family.width/2||family.centerY!==family.y+family.height/2)return false;
-  if(family.x<.24*3840||family.y<.20*2160||family.x+family.width>.76*3840||family.y+family.height>.78*2160)return false;
-  if(pressureContinuity.x+pressureContinuity.width/2<.30*3840||pressureContinuity.x+pressureContinuity.width/2>.46*3840||pressureContinuity.y+pressureContinuity.height/2<.48*2160||pressureContinuity.y+pressureContinuity.height/2>.68*2160)return false;
-  if(dryRim.y<.66*2160||dryRim.y+dryRim.height>.88*2160||overlaps(dryRim,wetExclusion))return false;
-  if(family.centerX<.46*3840||family.centerX>.58*3840||family.centerY<.43*2160||family.centerY>.61*2160)return false;
+  if(overlaps(dryRim,wetExclusion))return false;
   if(!cavities.every((cavity)=>contains(family,cavity))||!reflectedLightPair.every((reflection)=>contains(family,reflection))||!contains(family,noOpticalReturn)||!contains(semanticTarget,distributedCoupling))return false;
   if(labelAnchor.insetOuterCss!==3||labelAnchor.insetTextCss!==5)return false;
   if(!protectedRegions||Object.values(protectedRegions).some((value)=>!(value==="absent"||rect(value))))return false;
-  return Object.keys(layoutContract).every((id)=>layoutPass(id,layouts?.[id],registry));
+  return Object.keys(FIRST_RUN_RESPONSIVE_LAYOUTS).every((id)=>responsivePass(id,registry));
 }
 
 export function isFloodedChoirLawful({host08Lawful,clientBridgeEvidence,registry=FLOODED_CHOIR_REGISTRY,provenance=FLOODED_CHOIR_PROVENANCE,decodedImage}={}) {
@@ -95,4 +102,4 @@ export function deriveFloodedChoirState({textAnalysisEvidence,speechEvidence,...
 }
 
 export function isLegacyHost09LessonLauncherVisible(source=FLOODED_CHOIR_REGISTRY.source){return source?.enabled !== true;}
-export function getFloodedChoirHotspot(registry=FLOODED_CHOIR_REGISTRY){if(!isFloodedChoirMeasurementPass(registry))return null;const target=registry.semanticTarget;return Object.freeze({left:`${target.x/38.4}%`,top:`${target.y/21.6}%`,width:`${target.width/38.4}%`,height:`${target.height/21.6}%`});}
+export function getFloodedChoirHotspot(registry=FLOODED_CHOIR_REGISTRY){if(!isFloodedChoirMeasurementPass(registry))return null;const target=registry.semanticTarget;const centerX=(target.x+target.width/2)/38.4;const centerY=(target.y+target.height/2)/21.6;const width=target.width/38.4;const height=target.height/21.6;return Object.freeze({left:`calc(${centerX}% - max(${width}%, 44px) / 2)`,top:`calc(${centerY}% - max(${height}%, 44px) / 2)`,width:`max(${width}%, 44px)`,height:`max(${height}%, 44px)`});}

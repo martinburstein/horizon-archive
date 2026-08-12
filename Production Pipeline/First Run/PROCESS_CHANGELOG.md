@@ -8,6 +8,18 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-12 - `FRWO-009-v7` - REDESIGN
+
+- **KEEP:** finite paid-attempt ledgers, private review, exact identity cleanup,
+  accepted-only import, and no-reveal discipline.
+- **TUNE:** retain bounded normalized review rectangles for any future content
+  decision so an audit can reproduce the verdict without retaining the image.
+- **REDESIGN:** responsive acceptance must derive `cover` projection from the
+  actual world box and computed CSS, then corroborate real DOM target/focus
+  geometry. Caller-supplied booleans and generation-prompt center bands may not
+  decide responsive lawfulness. This corrects fifteen unsupported verdicts and
+  one invalid release-envelope override without retroactively accepting media.
+
 ### 2026-08-12 — `FRAB-008-v1` — TUNE
 
 - **KEEP:** finite CLI ledger, private objective rejection, accepted-only

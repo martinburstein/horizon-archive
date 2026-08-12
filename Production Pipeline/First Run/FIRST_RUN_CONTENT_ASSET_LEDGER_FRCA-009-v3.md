@@ -6,6 +6,11 @@ Stage / owner: Quartermaster / `quartermaster`
 
 Disposition: **`HOLD / FIVE ATTEMPTS CONSUMED / NO PRODUCT IMPORT`**
 
+> **Post-audit correction / FRCA-009-v4:** every historical H9-11..H9-15
+> `LAYOUT` verdict is `UNVERIFIED / DEFECTIVE RESPONSIVE GATE`. Those candidates
+> remain consumed, deleted, absent, and unusable; no retained rectangle evidence
+> exists from which to make a corrected candidate decision.
+
 Shell / functional candidate: `FRSH-009-v3` /
 `e80a3927120ac2baeaa96694e2bc3d6ddd7246cd`
 

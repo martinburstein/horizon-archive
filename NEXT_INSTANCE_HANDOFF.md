@@ -2,13 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-009-v4 / RESPONSIVE EVIDENCE REPAIR`**
+Current disposition: **`PRODUCTION FUNCTIONAL / RUNTIME PRESENTATION COMPLETE / RESPONSIVE EVIDENCE REPAIR`**
 
-Exact next owner: **one Reconnaissance Sergeant, then Tactical and Combat**
+Exact next owner: **one Intelligence Officer**
 
-Implement `FRWO-009-v7` under `FRVE-009-v4` and `FRSH-009-v4`: derived
-projection, real `44px` target, isolated live DOM evidence, adjacent Host07/08
-evidence audit, and ledger/handoff correction. Do not generate or touch media.
+Independently validate FRWO-009-v7 against the exact code candidate: patch
+integrity, focused/related/full tests, validators, build/PBA/served identity,
+isolated six-layout browser evidence, adjacent Host07/08 corroboration,
+historical-ledger correction, protected-path non-access, and Git sync. Do not
+generate or touch media.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then

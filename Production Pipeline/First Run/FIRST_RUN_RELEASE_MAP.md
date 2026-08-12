@@ -1,6 +1,6 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-009-v6`
+Map ID: `FRRM-009-v7`
 
 Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
 
@@ -22,7 +22,16 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`
 
-Selected bounded Work Order: **none; `FRWO-009-v6` terminal HOLD**.
+Selected bounded Work Order: **`FRWO-009-v7 / responsive evidence repair`**.
+
+`FRWO-009-v7` corrects the failed evidentiary method without generating or
+touching media. The actual canonical world and all Host 09 sources are 16:9,
+so the historical source-center bands did not prove responsive crop failure.
+FRCA-009-v4 reclassifies H9-1..7 and H9-9..15 as unverified, and H9-8 as an
+invalid rejection after its release envelope had passed. All fifteen attempts
+remain consumed/deleted/absent; runtime remains inert; no source is accepted.
+The repaired runtime gate derives crop, retention, target geometry, and
+visibility from real layout inputs and requires browser corroboration.
 
 `FRWO-009-v1` is closed by `FRWO-009-v2`. Its complete ledger `{H9-1..H9-5}`
 is consumed: five technically valid private candidates each failed the frozen

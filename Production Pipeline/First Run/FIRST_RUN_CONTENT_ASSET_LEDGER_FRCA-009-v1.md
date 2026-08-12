@@ -6,6 +6,12 @@ Stage / owner: Quartermaster / `quartermaster`
 
 Disposition: **`HOLD / FIVE ATTEMPTS OBJECTIVELY REJECTED / NO PRODUCT IMPORT`**
 
+> **Post-audit correction / FRCA-009-v4:** the five historical `LAYOUT`
+> verdicts below are `UNVERIFIED / DEFECTIVE RESPONSIVE GATE`, not objective
+> responsive failures. The candidates remain consumed, deleted, absent, and
+> unusable. No candidate bytes or review rectangles survive, so the audit does
+> not infer which would have passed the corrected gate.
+
 Shell / functional candidate: `FRSH-009-v1` / `d6cbf42f9d6cd3017d124a18327f0e3c41646f2d`
 
 ## Attempt ledger

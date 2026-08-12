@@ -512,6 +512,8 @@ h1 {
 .canonical-game-frame .scene-art.stranded-lens-cradle-art { object-fit: cover; object-position: 50% 50%; }
 .canonical-game-frame .scene-art.sediment-abacus-art { object-fit: cover; object-position: 50% 50%; }
 .canonical-game-frame .scene-art.severed-relay-spine-art { object-fit: cover; object-position: 50% 50%; }
+.canonical-game-frame .scene-art.flooded-choir-art { object-fit: cover; object-position: 50% 50%; }
+.hotspot[data-hotspot-id="flooded-choir"] { min-width: 44px; min-height: 44px; }
 .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 
 @media (forced-colors: active) {
