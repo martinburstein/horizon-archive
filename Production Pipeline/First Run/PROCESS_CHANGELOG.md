@@ -8,6 +8,15 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-12 — `FRAB-005-v1` — TUNE
+
+- **KEEP:** finite attempt ledgers, exact cleanup, private review, provenance,
+  accepted-only enablement, full regressions, and independent release.
+- **TUNE:** use semantic full-source margins with measured accepted-candidate
+  rectangles; derive served asset counts from fresh build inventory.
+- **REDESIGN:** not warranted. I2 passed `979/979`, build, served identity,
+  media budget, presentation, and invariant gates.
+
 ### 2026-08-10 — `FRAB-001-v1` — TUNE
 
 - **KEEP:** immutable-candidate review; one non-overlapping clean-start E2E;

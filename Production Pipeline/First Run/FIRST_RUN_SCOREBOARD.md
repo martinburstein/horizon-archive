@@ -1,6 +1,6 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v20`
+Scoreboard ID: `FRSB-005-v21`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
@@ -18,7 +18,7 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v21 / Stranded Lens Cradle - Two-Attempt Legible Composition Pass`**.
+Selected bounded Work Order: **none - `FRWO-005-v21` released by `FRAB-005-v1`**.
 
 G1 used prompt v4's distant center-island strategy and made exactly one HTTP
 200 request. It passed technical and physical review, then failed the exact
@@ -126,7 +126,7 @@ complete.
 - `FRWO-003-v1` independently adds one exact physical relationship at `FR-03`
   without promoting the address-level cell above `FR0`; ten Drowned hosts
   remain missing and the accepted shared compression remains visible.
-- The host inventory is now `6 exact / 1 accepted shared compression / 32
+- The host inventory is now `7 exact / 1 accepted shared compression / 31
   missing / 1 unadvanced Witness expression`.
 
 ## Current selected Work Order - maturity unchanged
@@ -139,19 +139,9 @@ first missing fixed encounter and locks exactly one new-source continuity.
 no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
-Martin's bounded media authorization and `FRPB-001-v2` permitted the closed
-E1, F1, G1, and H1 attempts to pursue at most one eventual canonical
-additional Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03`
-integration. All were objectively rejected and cleaned, so that target was
-not achieved. Current
-`FR-03` remains exactly `1
-accepted shared compression / 1 exact / 10 missing`, and the forty-host
-inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
-unadvanced Witness expression`.
+`FRAB-005-v1` releases Host 06. `FR-03` is now `1 accepted shared compression
+/ 2 exact / 9 missing`; whole-game inventory is `7 exact / 1 accepted shared
+compression / 31 missing / 1 unadvanced Witness expression`.
 
-Fresh Science is the exact next owner. I1 and I2 remain unstarted; I2 is
-conditional after truthful I1 cleanup, and no I3 or retry exists. No Mission,
-generation/API call, asset selection/import, Host 06 implementation, Image
-work, E2E, reveal, later-address work, maturity inference, OPEN-classification
-closure, residual inspection, completion sweep, or `FIRST RUN COMPLETE` is
-authorized before the required fresh gates.
+Fresh Commandant revalidation is next. No Host 07 Work Order or `FIRST RUN
+COMPLETE` is inferred.

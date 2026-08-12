@@ -2,21 +2,18 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`RUNTIME PRESENTATION COMPLETE / FRPR-005-v1 /
-UNCHANGED ACCEPTED I2 MEDIA / FULL-SOURCE ACCESSIBILITY / NO IMAGE OPERATION`**
+Current disposition: **`FIRST RUN PASS RELEASED / FRAB-005-v1 / HOST 06 I2
+CANONICAL / FR-03 NOW 1 COMPRESSION + 2 EXACT + 9 MISSING`**
 
-Exact next owner: **one fresh Intelligence Officer / `intelligence_officer`**
+Exact next owner: **one fresh Commandant / `commandant`**
 
-Fresh Intelligence reads the complete intake/profile, `FRWO-005-v21`,
-`FRVE-005-v15`, `FRSH-005-v1-VR-47`, `FRCA-005-v16`, `FRPR-005-v1`, current
-map/scoreboard, exact candidate `2f4b34c0`, selected raster/provenance,
-runtime/tests, and immutable manifest. Independently verify ancestry, exact
-media/provenance, I1 cleanup and I2 selection, route/learning/save/privacy/
-ending invariants, focused/related/full tests, validators, builds, PBA, served
-identity, one sanctioned candidate E2E, process cleanup, and six-layout
-presentation. Release only from accepted as-built evidence; otherwise record
-exact variance. Synchronize map, scoreboard, changelog, and NEXT; commit, push,
-and prove equality on PASS.
+Fresh Commandant reads the complete intake/profile, `FRAB-005-v1`,
+`FRWO-005-v21`, current map/scoreboard/changelog, and prior product/continuity
+controls. Perform guarded baseline revalidation after Host 06 release,
+preserving exact I2 product/runtime/provenance, every OPEN classification, and
+VR-65; then route the next bounded earliest-first planning action. Do not
+select or implement Host 07 without the canonical planning sequence and a new
+Work Order.
 
-Never reveal the source during validation. Preserve the separate OPEN
-enumeration variance, opaque VR-65, and protected-state exclusions.
+Preserve rail, sole unchanged `L02-03`, canon, learning, privacy/save, RP-012,
+`successor=null`, no new image authority, no reveal, and protected exclusions.

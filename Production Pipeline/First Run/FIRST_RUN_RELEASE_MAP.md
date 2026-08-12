@@ -1,6 +1,6 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-005-v20`
+Map ID: `FRRM-005-v21`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
@@ -22,7 +22,7 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`
 
-Selected bounded Work Order: **`FRWO-005-v21 / Stranded Lens Cradle - Two-Attempt Legible Composition Pass`**.
+Selected bounded Work Order: **none - `FRWO-005-v21` released by `FRAB-005-v1`**.
 
 `FRWO-005-v17` is closed. G1 made exactly one HTTP 200 request, passed strict
 technical and physical review, and failed the frozen v4 responsive-layout and
@@ -128,8 +128,7 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 06` | **SELECTED - `FRWO-005-v21`**: I1 then conditional I2 broad center-safe source attempts | First missing fixed encounter; Martin explicitly authorized exactly two new attempts |
-| 2 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Blocked behind independent acceptance or HOLD of `FRWO-005-v17`; no skip or repeatable host pattern is authorized |
+| 1 | `FR-03 / Hosts 07-15` | Remaining Drowned movements and pedestrian/Crown sequence | Host 06 is released; Host 07 is earliest missing and no repeatable pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
@@ -310,10 +309,9 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
 Intelligence alone records `FR4 RELEASED`, using accepted as-built evidence.
-`FRWO-005-v21` is selected under Martin's exact two-attempt authorization.
-Fresh Science is the exact next owner. I1 and I2 are unstarted; I2 is
-conditional on an objectively rejected/failed and exactly cleaned I1; no I3
-or retry exists.
+`FRWO-005-v21` is released by `FRAB-005-v1`. I1 was rejected and cleaned; I2
+is canonical Host 06. No Work Order is selected. Fresh Commandant revalidation
+is next.
 `FRWO-004-v1` remains closed. This map does not preauthorize
 generation/API invocation before a fresh shell, implementation, asset
 selection/import, reveal, later-address work, maturity advancement, residual
