@@ -2,10 +2,10 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN PASS RELEASED / FRAB-007-v1 / HOST 07 H7-3
-/ HOSTS 08-15 REMAIN MISSING`**
+Current disposition: **`FIRST RUN VISION BASELINE REOPENED / FRPB-001-v5 /
+HOST 08 CLI / FIVE TOTAL ATTEMPTS / NO GENERATION YET`**
 
-Exact next owner: **one fresh Commandant / `commandant`**
+Exact next owner: **one fresh Colonel / `colonel`**
 
 Quartermaster used exactly three of Martin's five authorized Host 07 CLI
 attempts. H7-1 and H7-2 were technical PASS but objective layout REJECT and
@@ -25,10 +25,17 @@ SHA-256 `19ae9894853a33bb52be2e32a11ce57d1de383fa9cc21dbd4d291dea00f492d9`.
 Full tests `988/988`, build `220`, media `18/53,320,925`, served identity, and
 clean-start E2E `123.7s` PASS. Host 07 owns unchanged `L03-01` and `L03-02`.
 
-Read the full Commandant profile and `FRAB-007-v1`, then revalidate the vision
-baseline and earliest-first edge. `FR-03` remains physical `FR0`: one accepted
-shared compression, three exact hosts, and Hosts 08-15 missing. Do not infer a
-Host 08 Work Order, repeated source pattern, generation authority, or reveal.
+Read the full Colonel profile, `FRPB-001-v5`, `FRAB-007-v1`, and the exact
+game-on-paper Host 07-09 chain. Lock or HOLD exact Host 07 -> Host 08 -> Host 09
+continuity, minimum nonhumanoid broken-relay physical relations, stable dry
+outer-ridge access, sole unchanged `L03-03`, silence/nonresponse, rejection
+conditions, and preservation of Host 09/later gaps.
+
+Martin authorized exactly five fresh Host 08 CLI attempts
+`{H8-1,H8-2,H8-3,H8-4,H8-5}`. They are all unconsumed. This Commandant stage
+does not authorize generation; five planning roles and a fresh shell remain
+mandatory. No sixth attempt, retry, edit, variation, reference, batch, direct
+REST runner, alternate model, or reveal exists.
 
 Preserve the new OPEN process-only protected-QA capture-write variance. Its
 screenshot paths remain unstaged and must not be inspected, restored, staged,
