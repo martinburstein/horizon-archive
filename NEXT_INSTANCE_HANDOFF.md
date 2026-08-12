@@ -2,13 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-009-v5 / FIVE CORRECTED-GATE ATTEMPTS`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-009-v5 / FIVE CORRECTED-GATE ATTEMPTS`**
 
-Exact next owner: **one Reconnaissance Sergeant, then Tactical and Combat**
+Exact next owner: **one Quartermaster**
 
-Issue narrow continuing direction/blueprint, extend the inert H9 identity guard
-through H9-20, rerun the corrected focused/browser gates, commit/push, then
-route one Quartermaster to the five sequential private attempts.
+Execute `{H9-16..H9-20}` sequentially under FRSH-009-v5, stopping at the first
+private PASS. Use the exact frozen prompt and CLI identity for each call. A
+rejection must retain the bounded technical/physical/derived-responsive
+evidence, then identity-delete the exact raster and prove absence before the
+next call. Do not reveal any candidate.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
