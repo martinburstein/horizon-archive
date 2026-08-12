@@ -204,6 +204,12 @@ import {
   SEDIMENT_ABACUS_SOURCE_URL,
 } from "./sedimentAbacus.js";
 import {
+  deriveSeveredRelaySpineState,
+  isLegacyHost08LessonLauncherVisible,
+  SEVERED_RELAY_SPINE_PROVENANCE,
+  SEVERED_RELAY_SPINE_REGISTRY,
+} from "./severedRelaySpine.js";
+import {
   buildCompletedMeadowReturnPatch,
   buildMeadowDeparturePresentation,
   buildMeadowReturnPresentation,
@@ -1186,6 +1192,16 @@ export function App() {
   const sedimentAbacusLawful = sedimentAbacusState !== "hidden";
   const sedimentAbacusActive = sedimentAbacusPresented && sedimentAbacusLawful;
   const legacyHost07LessonLauncherVisible = isLegacyHost07LessonLauncherVisible(SEDIMENT_ABACUS_REGISTRY.source);
+  const severedRelaySpineState = deriveSeveredRelaySpineState({
+    host07Lawful: sedimentAbacusLawful,
+    structuredPacketEvidence,
+    controlFlowEvidence,
+    clientBridgeEvidence,
+    registry: SEVERED_RELAY_SPINE_REGISTRY,
+    provenance: SEVERED_RELAY_SPINE_PROVENANCE,
+    decodedImage: null,
+  });
+  const legacyHost08LessonLauncherVisible = isLegacyHost08LessonLauncherVisible(SEVERED_RELAY_SPINE_REGISTRY.source);
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -4422,7 +4438,7 @@ export function App() {
 
   return (
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
-    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined}>
+    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined}>
       <p className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement>{sceneAnnouncement}</p>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         <div className="scene-world-content" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
@@ -6254,7 +6270,7 @@ export function App() {
                   {pendingAdvance && scene.id === "ruins" && structuredPacketEvidence?.masteryStatus === "mastered" && controlFlowEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openControlFlow(); }}>{controlFlowSession ? "Resume Control Flow" : controlFlowEvidence?.masteryStatus === "primary_complete" ? "Start Control Flow Transfer" : controlFlowEvidence?.masteryStatus === "transfer_complete" ? "Open Control Flow Closed-Note Gate" : "Start Control Flow"}</button>
                   )}
-                  {pendingAdvance && scene.id === "ruins" && controlFlowEvidence?.masteryStatus === "mastered" && clientBridgeEvidence?.masteryStatus !== "mastered" && (
+                  {legacyHost08LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && controlFlowEvidence?.masteryStatus === "mastered" && clientBridgeEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openClientBridge(); }}>{clientBridgeSession ? "Resume Client Bridge" : clientBridgeEvidence?.masteryStatus === "primary_complete" ? "Start Client Bridge Transfer" : clientBridgeEvidence?.masteryStatus === "transfer_complete" ? "Open Client Bridge Retrieval" : clientBridgeEvidence?.masteryStatus === "retrieval_complete" ? "Open Client Bridge Closed-Note Gate" : "Start Client Bridge"}</button>
                   )}
                   {pendingAdvance && scene.id === "ruins" && clientBridgeEvidence?.masteryStatus === "mastered" && textAnalysisEvidence?.masteryStatus !== "mastered" && (
