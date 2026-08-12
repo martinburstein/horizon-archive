@@ -48,7 +48,8 @@ try{
   $tokens=$null;$parseErrors=$null
   [void][Management.Automation.Language.Parser]::ParseInput($combined,[ref]$tokens,[ref]$parseErrors)
   Assert-Exact ($parseErrors.Count -eq 0) 'PARSER'
-  Assert-Ordered $launcher @('PH01_ENV_RETRIEVAL','PH02_PARSE_SUCCESS','PH03_INVOCATION_ENTRY','PH04_PS51_VERSION','PH05_X64_PROCESS','PH06_ROOT_ABSENT','PH07_ROOT_CREATE_ENTRY','PH08_ROOT_CREATE_COMPLETE') 'STAGE_ORDER'
+  Assert-Ordered $launcher @('PH01_ENV_RETRIEVAL','PH02_PARSE_SUCCESS','PH03_INVOCATION_ENTRY','PH08_ROOT_CREATE_COMPLETE') 'LAUNCHER_STAGE_ORDER'
+  Assert-Ordered $combined @('PH04_PS51_VERSION','PH05_X64_PROCESS','PH06_ROOT_ABSENT','PH07_ROOT_CREATE_ENTRY') 'PREHELPER_STAGE_ORDER'
   Assert-Ordered $combined @('PT01_TAIL_ENTRY','PT02_HELPER_SOURCE','PT03_HELPER_COMPILE','PT04_HELPER_LOAD_IDENTITY','PT05_HELPER_CLEANUP','PT06_CREDENTIAL_GATE') 'STAGE_ORDER'
   $arguments='-NoLogo -NoProfile -NonInteractive -Command "'+$launcher+'"'
   Assert-Exact (($arguments.Length -lt 8191)-and($combined.Length -lt 32767)) 'WINDOWS_LIMITS'
