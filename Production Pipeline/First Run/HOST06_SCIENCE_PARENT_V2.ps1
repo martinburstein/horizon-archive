@@ -13,6 +13,10 @@ $combinedBytes=$null
 $launcher=$null
 $combined=$null
 $process=$null
+$childExitEvidence=$null
+$childStdoutCharacters=$null
+$childStderrCharacters=$null
+$childStderrClass='NOT_CAPTURED'
 function Get-Sha256Hex([byte[]]$bytes){
   $sha=[Security.Cryptography.SHA256]::Create()
   try{return ([BitConverter]::ToString($sha.ComputeHash($bytes))).Replace('-','').ToLowerInvariant()}finally{$sha.Dispose()}
@@ -85,15 +89,53 @@ try{
   $stage='SR04_CHILD_INVOKE'
   Assert-Exact ($process.Start()) 'CHILD_START'
   $childInvocations=1
-  $stdoutTask=$process.StandardOutput.ReadToEndAsync()
-  $stderrTask=$process.StandardError.ReadToEndAsync()
+  $stdoutBuffer=New-Object char[] 256
+  $stderrBuffer=New-Object char[] 256
+  $stdoutCaptured=New-Object Text.StringBuilder
+  $stderrCaptured=New-Object Text.StringBuilder
+  [long]$stdoutCount=0
+  [long]$stderrCount=0
+  $stdoutDone=$false
+  $stderrDone=$false
+  $stdoutTask=$process.StandardOutput.ReadAsync($stdoutBuffer,0,$stdoutBuffer.Length)
+  $stderrTask=$process.StandardError.ReadAsync($stderrBuffer,0,$stderrBuffer.Length)
+  while(-not($stdoutDone-and$stderrDone)){
+    $pending=@()
+    if(-not$stdoutDone){$pending+=$stdoutTask}
+    if(-not$stderrDone){$pending+=$stderrTask}
+    [void][Threading.Tasks.Task]::WaitAny([Threading.Tasks.Task[]]$pending)
+    if((-not$stdoutDone)-and$stdoutTask.IsCompleted){
+      $read=$stdoutTask.GetAwaiter().GetResult()
+      if($read-eq 0){$stdoutDone=$true}else{
+        $stdoutCount+=$read
+        $remaining=256-$stdoutCaptured.Length
+        if($remaining-gt 0){[void]$stdoutCaptured.Append($stdoutBuffer,0,[Math]::Min($read,$remaining))}
+        $stdoutTask=$process.StandardOutput.ReadAsync($stdoutBuffer,0,$stdoutBuffer.Length)
+      }
+    }
+    if((-not$stderrDone)-and$stderrTask.IsCompleted){
+      $read=$stderrTask.GetAwaiter().GetResult()
+      if($read-eq 0){$stderrDone=$true}else{
+        $stderrCount+=$read
+        $remaining=512-$stderrCaptured.Length
+        if($remaining-gt 0){[void]$stderrCaptured.Append($stderrBuffer,0,[Math]::Min($read,$remaining))}
+        $stderrTask=$process.StandardError.ReadAsync($stderrBuffer,0,$stderrBuffer.Length)
+      }
+    }
+  }
   $process.WaitForExit()
-  $stdout=$stdoutTask.GetAwaiter().GetResult()
-  $stderr=$stderrTask.GetAwaiter().GetResult()
+  $childExitEvidence=[int]$process.ExitCode
+  $childStdoutCharacters=$stdoutCount
+  $childStderrCharacters=$stderrCount
+  $stderr=$stderrCaptured.ToString()
+  if((($stderrCount-eq($expectedDiagnostic.Length+2))-and($stderr-ceq($expectedDiagnostic+"`r`n")))-or(($stderrCount-eq($expectedDiagnostic.Length+1))-and($stderr-ceq($expectedDiagnostic+"`n")))){$childStderrClass='EXACT_PT06'}
+  elseif($stderrCount-eq 0){$childStderrClass='EMPTY'}
+  elseif($stderrCount-le 512){$childStderrClass='NONEXACT_BOUNDED'}
+  else{$childStderrClass='OVERSIZE'}
   $stage='SR05_CHILD_CAPTURE'
-  Assert-Exact ($process.ExitCode -eq 87) 'CHILD_EXIT'
-  Assert-Exact ($stdout.Length -eq 0) 'CHILD_STDOUT'
-  Assert-Exact (($stderr -ceq ($expectedDiagnostic+"`r`n"))-or($stderr -ceq ($expectedDiagnostic+"`n"))) 'CHILD_STDERR'
+  Assert-Exact ($childExitEvidence-eq 87) 'CHILD_EXIT'
+  Assert-Exact ($childStdoutCharacters-eq 0) 'CHILD_STDOUT'
+  Assert-Exact ($childStderrClass-ceq 'EXACT_PT06') 'CHILD_STDERR'
   $stage='SR06_CHILD_CLASSIFY'
   $outcome='ACCEPTED_NO_REQUEST_STOP'
   $earliestStage='PT06_CREDENTIAL_GATE'
@@ -108,7 +150,10 @@ try{
   [Console]::Out.WriteLine($result)
   exit 0
 }catch{
-  [Console]::Error.WriteLine('SCIENCE_PARENT_STOP_V2|stage='+$stage+'|assertion=ASSERTION_FAILED|childInvocations='+$childInvocations+'|code=ASSERTION_FAILED')
+  $childExitFact=if($null-eq$childExitEvidence){'UNAVAILABLE'}elseif($childExitEvidence-ge 0-and$childExitEvidence-le 255){[string]$childExitEvidence}else{'OUT_OF_RANGE'}
+  $childStdoutFact=if($null-eq$childStdoutCharacters){'UNAVAILABLE'}elseif($childStdoutCharacters-eq 0){'ZERO'}elseif($childStdoutCharacters-le 256){'NONZERO_BOUNDED'}else{'NONZERO_OVERSIZE'}
+  $childStderrFact=if($childStderrClass-in@('EXACT_PT06','EMPTY','NONEXACT_BOUNDED','OVERSIZE')){$childStderrClass}else{'UNAVAILABLE'}
+  [Console]::Error.WriteLine('SCIENCE_PARENT_STOP_V2|stage='+$stage+'|assertion=ASSERTION_FAILED|childInvocations='+$childInvocations+'|childExit='+$childExitFact+'|childStdout='+$childStdoutFact+'|childStderr='+$childStderrFact+'|code=ASSERTION_FAILED')
   exit 88
 }finally{
   if($process){$process.Dispose()}
