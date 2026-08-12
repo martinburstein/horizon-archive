@@ -2,29 +2,26 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRVE-007-v1 / BUILT-IN GENERATED-OUTPUT
-PROJECT-CUSTODY ADAPTER UNAVAILABLE / ZERO ATTEMPTS CONSUMED`**
+Current disposition: **`FIRST RUN VISION BASELINE REOPENED / FRPB-001-v4 /
+HOST 07 IMAGEGEN CLI FALLBACK / FIVE TOTAL ATTEMPTS`**
 
-Exact next owner: **Martin**
+Exact next owner: **one fresh Colonel / `colonel`**
 
-Science proved the physical/runtime/learning envelope is prospectively viable
-and focused reuse tests pass `27/27`, but the current built-in tool cannot
-provide a trusted exact filesystem identity or same-isolate project-copy/
-rejected-output cleanup primitive. Calling would risk consuming an attempt and
-creating an opaque managed result. `H7-A` and `H7-B` remain unconsumed. No call,
-candidate, asset, import, implementation, maturity advance, or reveal exists.
+Martin explicitly authorized the installed imagegen CLI fallback for Host 07
+with five total attempts. The new sequential ledger is
+`{H7-1,H7-2,H7-3,H7-4,H7-5}`, all unconsumed. The exact bundled CLI is
+`image_gen.py` at `35266` bytes / SHA-256 `c2cdb052...d20b05`; the API key is
+present locally and remains secret. No call, candidate, import, implementation,
+maturity advance, or reveal exists.
 
-Martin chooses exactly one:
+Read the full Colonel profile, `FRPB-001-v4`, `FRPB-001-v3`, `FRCL-006-v1`,
+`FRWO-007-v1`, and `FRVE-007-v1`. Confirm the transport/ledger change preserves
+the exact Host 07 continuity and issue one versioned lock, REVISE, or HOLD.
 
-1. **Authorize imagegen CLI fallback for Host 07 under the same exact two-
-   attempt ceiling.** The fallback requires `OPENAI_API_KEY` set locally and a
-   fresh planning/shell correction before either attempt.
-2. **Keep Host 07 at HOLD.** Both attempts remain unconsumed and no next role
-   begins.
-
-General continuation does not authorize fallback. Do not call built-in
-generation, parse or search managed output, inspect an opaque result, start
-Mission, or begin production until Martin explicitly chooses.
+On PASS route fresh Operations to revise the Work Order for the exact CLI and
+five-attempt ledger. No role may run generation before revised Science and
+Mission gates. No sixth call, retry, `--force`, batch, edit, reference image,
+alternate model, direct API, or reveal is authorized.
 
 Preserve exact Hosts 01-06 and accepted media, sole `L02-03`, Host 07 ownership
 of unchanged `L03-01 + L03-02`, the one-path rail, learning/privacy/save/
