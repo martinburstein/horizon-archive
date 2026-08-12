@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-005-v9`
+Scoreboard ID: `FRSB-005-v10`
 
 Current release authority: `FRAB-003-v1 / FIRST RUN PASS RELEASED`
 
 Baseline / lock: `FRPB-001-v2` / `FRCL-004-v2`
 
-Release map: `FRRM-005-v9`
+Release map: `FRRM-005-v10`
 
 Operations source inspected: `1aaecae697996258cd4a3c6458b4ec0515558cdf`
 
@@ -18,8 +18,8 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-003-v1 / Sixfold Weir`.
 
-Selected bounded Work Order: **`FRWO-005-v9 / Stranded Lens Cradle - One
-Funded Official-Envelope Image API Attempt`**.
+Selected bounded Work Order: **`FRWO-005-v10 / Stranded Lens Cradle -
+Corrected 4K Envelope Attempt`**.
 
 The exact bounded Host 05 evidence remains released below. `FRWO-004-v1`
 remains withdrawn and closed without production, and its negative finding
@@ -37,9 +37,11 @@ SafeFileHandle identity/link count, with exact source/hash/output-hash rule/
 location/cleanup and no close/path/write method. The v7 ledger is closed after
 ordinal 2's PT10 stop; ordinal 3 is unavailable. `FRWO-005-v8` consumed its
 sole `{A1}` on HTTP 429 and closed with no media or product. Martin then added
-API funds and explicitly authorized another try. `FRWO-005-v9` owns exactly one
-new funded attempt `{B1}` under the same strict official response and bounded
-diagnostic rules. Fresh Science and Mission are required before any request.
+API funds and explicitly authorized another try. V9 B1 returned HTTP 200 but
+the undersized response envelope rejected it before media existed. Science
+approved corrected finite 4K budgets, and `FRWO-005-v10` owns exactly one
+fresh `{C1}` under the same strict official response and bounded diagnostic
+rules. Fresh Mission is required before any request.
 Selection is not as-built evidence; no maturity cell or inventory advances.
 
 ## Reading the matrix
@@ -120,7 +122,7 @@ no lawful local dry lens-and-cradle geometry, and `FRWO-004-v1-OPH-01` still
 closes `FRWO-004-v1` without production.
 
 Martin's bounded media authorization and `FRPB-001-v2` permit the distinct
-successor `FRWO-005-v9` to own at most one eventual canonical additional
+successor `FRWO-005-v10` to own at most one eventual canonical additional
 Drowned source and its Host 05 -> Host 06 -> unchanged `L02-03` integration.
 Its target `1 accepted shared compression / 2 exact / 9 missing` is not current
 candidate or maturity evidence. Current `FR-03` remains exactly `1
@@ -128,11 +130,11 @@ accepted shared compression / 1 exact / 10 missing`, and the forty-host
 inventory remains `6 exact / 1 accepted shared compression / 32 missing / 1
 unadvanced Witness expression`.
 
-One fresh Science context is the exact next owner. It must revalidate the
+One fresh Mission context is the exact next owner. It must freeze the
 strict official `ImagesResponse` parser, bounded sanitized status/content-type/
 failure evidence, the exact authorized helper, and restore all fixture roots to
 absence; then independently revalidate the generatable/runtime-polishable asset
-envelope; the closed v7/v8 ledgers and sole fresh v9 `{B1}` budget; exact endpoint/
+envelope; the closed v7/v8/v9 ledgers and sole fresh v10 `{C1}` budget; exact endpoint/
 model/request behavior; boolean-only key presence and env-only Authorization;
 exact `gpt-image-2` one-output request; bounded JSON/base64 handling; exclusive
 staging and atomic no-replace move to a fresh literal predeclared OS-temp path;
