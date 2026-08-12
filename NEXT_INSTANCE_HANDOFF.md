@@ -2,14 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN PASS RELEASED / FRAB-009-v2 / DISTINCT HOST 09`**
+Current disposition: **`CONTINUITY LOCK / FRCL-010-v1 / FOUR FRESH ATTEMPTS`**
 
-Exact next owner: **one fresh Commandant when Martin explicitly continues**
+Exact next owner: **one Operations Planning Major**
 
-Revalidate the released Host 09 bundle and earliest-first queue. Select no new
-Work Order and authorize no Host 10 media unless Martin explicitly provides a
-new bounded decision. Preserve the accepted source bytes and all release
-evidence; no reveal is authorized.
+Issue one bounded Work Order for exactly four fresh sequential attempts, first
+PASS stop, exact new prompt/path identities, private review, rejected cleanup,
+accepted-only import/integration, and full release ladder. No generation belongs
+to Operations.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
