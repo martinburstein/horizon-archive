@@ -510,6 +510,7 @@ h1 {
 [data-sixfold-weir-state="remediation_required"] span { border-style: dotted; }
 [data-sixfold-weir-state="complete"] span { border-style: double; }
 .canonical-game-frame .scene-art.stranded-lens-cradle-art { object-fit: cover; object-position: 50% 50%; }
+.canonical-game-frame .scene-art.sediment-abacus-art { object-fit: cover; object-position: 50% 50%; }
 .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 
 @media (forced-colors: active) {
@@ -522,7 +523,7 @@ h1 {
     box-shadow: none;
     forced-color-adjust: auto;
   }
-  .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible, [data-sixfold-weir-state]:focus-visible, [data-stranded-lens-cradle-state]:focus-visible { outline: 3px solid Highlight; }
+  .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible, [data-sixfold-weir-state]:focus-visible, [data-stranded-lens-cradle-state]:focus-visible, [data-sediment-abacus-state]:focus-visible { outline: 3px solid Highlight; }
 }
 
 /* TD-007 Braided Verge functional presentation. Final SC-08 art is Quartermaster-owned. */
