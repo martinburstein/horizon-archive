@@ -2,11 +2,11 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`CONTINUITY LOCK / FRCL-006-v2 / HOST 07 IMAGEGEN CLI /
+Current disposition: **`WORK ORDER READY / FRWO-007-v2 / HOST 07 IMAGEGEN CLI /
 FIVE TOTAL ATTEMPTS`**
 
-Exact next owner: **one fresh Operations Planning Major /
-`operations_planning_major`**
+Exact next owner: **one fresh Office of Science Administrator /
+`office_of_science_administrator`**
 
 Martin explicitly authorized the installed imagegen CLI fallback for Host 07
 with five total attempts. The new sequential ledger is
@@ -15,15 +15,17 @@ with five total attempts. The new sequential ledger is
 present locally and remains secret. No call, candidate, import, implementation,
 maturity advance, or reveal exists.
 
-Colonel confirmed that CLI transport and five attempts change no Host 07
-meaning. Read the full Operations profile, `FRPB-001-v4`, `FRCL-006-v2` and
-`FRCL-006-v1`, `FRWO-007-v1`, `FRVE-007-v1`, and the installed imagegen CLI
-authorities. Issue a new Work Order version or HOLD.
+Operations replaced the built-in ledger with exact CLI domain
+`{H7-1..H7-5}`, all unconsumed. Read the full Science profile,
+`FRWO-007-v2/v1`, `FRVE-007-v1`, `FRPB-001-v4`, `FRCL-006-v2/v1`, the full
+imagegen skill/CLI authorities and immutable script, current runtime/tests, and
+accepted-media budget.
 
-On READY replace `{H7-A,H7-B}` with `{H7-1..H7-5}` and freeze exact output
-paths, no-force/no-batch/no-internal-retry custody, cleanup, physical gates,
-and Science/Mission prerequisites. No sixth call, rerun, edit, reference image,
-alternate model, direct API, or reveal is authorized.
+Use only no-network/read-only/synthetic proof. Explicitly adjudicate the CLI's
+exists-then-write behavior under a fresh unique scratch root, dependencies,
+paths, cleanup, source/layout/accessibility/state/learning/performance gates,
+and rollback. Issue READY/REVISE/HOLD and route Mission only on PASS. Do not
+consume an attempt.
 
 Preserve exact Hosts 01-06 and accepted media, sole `L02-03`, Host 07 ownership
 of unchanged `L03-01 + L03-02`, the one-path rail, learning/privacy/save/

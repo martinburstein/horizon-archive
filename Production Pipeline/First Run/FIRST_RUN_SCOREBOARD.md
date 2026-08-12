@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-007-v1`
+Scoreboard ID: `FRSB-007-v2`
 
 Current release authority: `FRAB-005-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / lock: `FRPB-001-v3` / `FRCL-006-v1`
+Baseline / lock: `FRPB-001-v4` / `FRCL-006-v2`
 
-Release map: `FRRM-007-v1`
+Release map: `FRRM-007-v2`
 
 Operations source inspected: `243edb4e`
 
@@ -18,13 +18,14 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-005-v21 / Stranded Lens Cradle`.
 
-Selected bounded Work Order: **`FRWO-007-v1 / Host 07 Sediment Abacus - One
-Potential Canonical Source / Two Sequential Built-In Attempts Maximum`**.
+Selected bounded Work Order: **`FRWO-007-v2 / Host 07 Sediment Abacus -
+Imagegen CLI / Five Total Sequential Attempts Maximum`**.
 
-This selection changes no maturity or inventory. The finite ledger is
-`{H7-A,H7-B}` with built-in mode only; `H7-B` is conditional on `H7-A`'s safe
-terminal disposition. No third call, fallback, candidate, product, or reveal
-is authorized. Science and Mission must pass before any generation.
+This selection changes no maturity or inventory. The fresh finite ledger is
+`{H7-1..H7-5}`, all unconsumed. Exact bundled CLI only; first PASS stops;
+later ordinals require prior objective rejection and exact cleanup. No sixth
+call, rerun, candidate, product, or reveal exists. Science and Mission must
+pass before generation.
 
 G1 used prompt v4's distant center-island strategy and made exactly one HTTP
 200 request. It passed technical and physical review, then failed the exact
