@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: A silent dry basin containing one coherent family of unequal water-filled stone cavities linked by natural pressure-bearing geology.
+Scene/backdrop: Vast weathered mineral basin, dry reachable foreground and midground, distant inert water, broad open terrain, no architecture.
+Subject: One unmistakable asymmetrical geological family with five unequal recessed cavities. Water remains below dry stone lips. Two openings catch restrained ambient reflections; one pressure-related cavity is visibly matte and returns no reflection. One mineral seam enters the family, an off-axis exterior pressure web couples it, and a continuous dry observation rim surrounds the relation.
+Style/medium: Premium photorealistic cinematic first-person game environment photography, physically plausible eroded stone, mineral grain, restrained cool daylight.
+Composition/framing: 3840x2160 landscape, elevated wide camera, entire relation and dry approach visible with comfortable source margins. Prefer a balanced midground read, but physical clarity is more important than exact centering.
+Constraints: At least three clearly different cavity sizes; exactly one coherent family; readable incoming pressure continuity; two natural reflection cases; one matte no-return case; dry off-axis coupling; safe dry rim; no wet route to the target.
+Avoid: mouth, face, eyes, skull, anatomy, person, singer, choir performance, instrument, sound visualization, text, UI, answer cue, message, response, reward, access, authority, portal, flooded path, underwater target, later-host reveal, watermark.

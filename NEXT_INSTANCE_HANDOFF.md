@@ -2,13 +2,13 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`CONTINUITY LOCK / BOUNDED HOST 09 FIVE-ATTEMPT RETRY`**
+Current disposition: **`FIRST RUN SHELL READY / FRSH-009-v5 / FIVE CORRECTED-GATE ATTEMPTS`**
 
-Exact next owner: **one Operations Planning Major**
+Exact next owner: **one Reconnaissance Sergeant, then Tactical and Combat**
 
-Issue one fresh Host 09 Work Order containing exactly five sequential attempts
-under FRAB-009-v1's corrected gate. First PASS stops; no sixth attempt, prior
-pixel reference, edit, variation, reveal, or Host 10 action exists.
+Issue narrow continuing direction/blueprint, extend the inert H9 identity guard
+through H9-20, rerun the corrected focused/browser gates, commit/push, then
+route one Quartermaster to the five sequential private attempts.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then

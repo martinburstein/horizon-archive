@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: A natural ring of broken basin stone contains unequal water pockets connected by pressure fractures, observed from a dry outer rim.
+Scene/backdrop: Open mineral badlands inside a weathered basin, low horizon, dry cracked floor, restrained distant water only.
+Subject: One irregular crescent-shaped family of recessed openings, never a perfect circle. Multiple cavity sizes step through eroded load-bearing rock. Two surfaces reflect diffuse horizon light while one pressure-related pocket remains dark without optical return. An incoming seam and several dry stone contacts make the coupling physically legible. The outer crescent is a continuous dry observation route.
+Style/medium: Photorealistic cinematic environment plate, sober geological realism, subtle cool-warm stone variation, deep but readable shadows.
+Composition/framing: 3840x2160, moderately elevated wide view with the complete crescent and approach fully inside frame. Preserve ample terrain around all sides and clear separation from distant water.
+Constraints: Dry reachable; asymmetrical; at least three cavity scales; reflected-light pair; dark no-return case; pressure seam; distributed exterior coupling; no representational symbolism.
+Avoid: perfect circle, ritual site, audience, face, eyes, mouth, skeleton, living form, music, performance, text, UI, answer cue, portal, access, authority, reaction, flooded route, later host, watermark.

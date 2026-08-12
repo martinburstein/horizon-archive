@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: One ancient pressure web in dry basin rock opens into several unequal water-filled cavities that behave differently under the same ambient light.
+Scene/backdrop: Pale eroded stone terrace in a silent alien basin, dry foreground route, sparse shallow water confined inside cavities, distant basin edge.
+Subject: A low sprawling stone relation rather than a tall monument. Five uneven openings share exterior compression cracks and mineral contacts. Two show natural sky reflections; one adjacent opening is deep, matte, and nonreflective. A diagonal predecessor seam reaches the relation and distributed coupling continues across its dry exterior. The full perimeter is safely walkable and dry.
+Style/medium: High-end photorealistic game environment still, believable sedimentary stone, mineral staining, soft overcast illumination, quiet analytical mood.
+Composition/framing: 3840x2160, high oblique camera looking across the terrace. Show the entire physical family, its dry perimeter, and incoming seam without edge contact. Use natural visual hierarchy, not graphic symmetry.
+Constraints: Clearly one connected geological family; three or more cavity sizes; readable water-below-lip depth; reflection pair plus one optical no-return; dry accessible target.
+Avoid: close-up crop, central altar, face, body, creature, performer, choir, instrument, glowing answer, text, UI, message, reaction, reward, door, authority, hidden lore, flooded path, watermark.

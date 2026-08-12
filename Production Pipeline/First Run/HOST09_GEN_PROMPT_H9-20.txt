@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: A dry geological overlook reveals one family of pressure-coupled water cavities with unequal scale and contrasting reflected-light behavior.
+Scene/backdrop: Layered basin escarpment with a broad dry overlook, worn mineral ledges, quiet distant horizon, no structures or life.
+Subject: The overlook descends gently to a compact but fully visible stone family. Five irregular cavities are cut below dry lips. Two catch different fragments of natural sky reflection, one remains dark and nonreflective, and the others show muted water. A diagonal compression band arrives from the preceding terrain and spreads through off-axis dry contacts. A safe dry rim connects every observation point.
+Style/medium: Premium photorealistic first-person environment, real rock scale and erosion, diffuse daylight, understated color, cinematic depth without spectacle.
+Composition/framing: 3840x2160, wide 28mm-equivalent view from the overlook, complete relation in midground, all essential features visible and source-contained. Favor clear physical storytelling over strict center placement.
+Constraints: One inert geological system; three or more opening sizes; explicit reflection pair and no-return case; dry approach/rim; water never covers the route.
+Avoid: humanlike arrangement, mouths, faces, eyes, bodies, figures, performers, instruments, sound waves, labels, text, UI, answer, communication, reward, access, authority, portal, flooding, underwater objective, watermark.

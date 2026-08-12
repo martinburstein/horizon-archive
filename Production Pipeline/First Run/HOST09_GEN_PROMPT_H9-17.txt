@@ -1,0 +1,9 @@
+Use case: stylized-concept
+Asset type: canonical first-person game environment source for Horizon Archive Host 09
+Primary request: A broad dry shelf where erosion exposes one pressure-linked cluster of water-filled stone basins with unequal depth and optical behavior.
+Scene/backdrop: Wind-worn basin shelf above present waterline, long mineral strata, open horizon, dry walking surface from foreground to subject.
+Subject: Four to six irregular cavities nested within one fractured load-bearing stone mass. Two water surfaces mirror sky light, one connected recess stays optically dark, and a visible compression seam enters from the dry shelf and disperses through exterior contacts. A continuous dry rim makes every opening observable without entering water.
+Style/medium: Photorealistic AAA environmental concept source, natural geology, documentary clarity, subtle atmospheric depth, no fantasy glow.
+Composition/framing: 3840x2160, eye-level wide lens, three-quarter view so cavity lips, reflected surfaces, dark recess, pressure seam, coupling, and dry approach are simultaneously legible. Keep the complete relation source-contained with generous margins.
+Constraints: Asymmetrical and geological; at least three distinct cavity sizes; two restrained reflections; one no-return recess; continuous dry route and rim; no symbolic or communicative arrangement.
+Avoid: symmetry, amphitheater, organ pipes, mouths, faces, figures, animals, instruments, performance, text, signs, controls, portal, access, reward, world response, flooded walkway, submerged objective, watermark.
