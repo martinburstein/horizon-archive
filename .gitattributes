@@ -43,3 +43,9 @@ Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V15_H1_PRODUCTION_CARRI
 Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V15_H1_LAUNCHER.ps1 text eol=lf
 Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V15_H1_STDIN_PARENT.ps1 text eol=lf
 Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V15_H1_STDIN_FIXTURE_CONTROLLER.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I1_LAUNCHER.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I1_PRODUCTION_CARRIER.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I1_STDIN_PARENT.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I2_LAUNCHER.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I2_PRODUCTION_CARRIER.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I2_STDIN_PARENT.ps1 text eol=lf
