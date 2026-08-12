@@ -4,38 +4,45 @@ import { sanitizeTextAnalysisEvidence } from "./textAnalysisExercise.js";
 import { deriveResponsiveEvidence, FIRST_RUN_RESPONSIVE_LAYOUTS } from "./responsiveImageProjection.js";
 
 export const FLOODED_CHOIR_PATH = "Visual Direction/Production Masters/2026-08-12-first-run-host09/host09-flooded-choir-master-v1.png";
-export const FLOODED_CHOIR_SOURCE_URL = null;
+export const FLOODED_CHOIR_SOURCE_URL = FLOODED_CHOIR_PATH;
 
 const emptyRect = Object.freeze({ x: null, y: null, width: null, height: null });
 const emptyRelation = Object.freeze({ ...emptyRect, centerX: null, centerY: null });
 const emptyLayouts = Object.freeze({ desktop: null, laptop: null, narrow: null, effective200: null, retained320x180: null, retained320x240: null });
 
 export const FLOODED_CHOIR_REGISTRY = Object.freeze({
-  source: Object.freeze({ enabled: false, path: null, sha256: null, byteLength: null, width: null, height: null, format: null, color: null, attemptId: null }),
-  family: emptyRelation,
-  cavities: Object.freeze([emptyRect, emptyRect, emptyRect]),
-  pressureContinuity: emptyRect,
-  reflectedLightPair: Object.freeze([emptyRect, emptyRect]),
-  noOpticalReturn: emptyRect,
-  dryRim: emptyRect,
-  wetExclusion: emptyRect,
-  distributedCoupling: emptyRect,
-  semanticTarget: emptyRect,
-  labelAnchor: Object.freeze({ ...emptyRect, insetOuterCss: 3, insetTextCss: 5 }),
-  protected: Object.freeze({ host08: null, returnRoute: null, crown: null, host10: null }),
+  source: Object.freeze({ enabled: true, path: FLOODED_CHOIR_PATH, sha256: "a36b6d863cb309b11c35d28261e8d7bb4e25570f120e8eef8a0fe86499ae3370", byteLength: 21068247, width: 3840, height: 2160, format: "png", color: "opaque-srgb-8", attemptId: "H9-16" }),
+  family: Object.freeze({ x: 600, y: 450, width: 2550, height: 1300, centerX: 1875, centerY: 1100 }),
+  cavities: Object.freeze([Object.freeze({ x: 720, y: 950, width: 800, height: 700 }), Object.freeze({ x: 1650, y: 600, width: 760, height: 620 }), Object.freeze({ x: 1820, y: 1230, width: 650, height: 450 })]),
+  pressureContinuity: Object.freeze({ x: 1500, y: 450, width: 900, height: 1300 }),
+  reflectedLightPair: Object.freeze([Object.freeze({ x: 1100, y: 1050, width: 400, height: 420 }), Object.freeze({ x: 1950, y: 1330, width: 340, height: 280 })]),
+  noOpticalReturn: Object.freeze({ x: 2550, y: 900, width: 500, height: 450 }),
+  dryRim: Object.freeze({ x: 500, y: 1810, width: 2900, height: 300 }),
+  wetExclusion: Object.freeze({ x: 0, y: 0, width: 3840, height: 300 }),
+  distributedCoupling: Object.freeze({ x: 1100, y: 300, width: 1700, height: 1450 }),
+  semanticTarget: Object.freeze({ x: 500, y: 250, width: 2900, height: 1550 }),
+  labelAnchor: Object.freeze({ x: 500, y: 250, width: 2900, height: 1550, insetOuterCss: 3, insetTextCss: 5 }),
+  protected: Object.freeze({ host08: "absent", returnRoute: "absent", crown: "absent", host10: "absent" }),
   layouts: emptyLayouts,
 });
 
 export const FLOODED_CHOIR_PROVENANCE = Object.freeze({
-  sha256: null, byteLength: null, promptId: null, promptBytes: null,
-  promptSha256: null, cliSha256: null,
+  sha256: "a36b6d863cb309b11c35d28261e8d7bb4e25570f120e8eef8a0fe86499ae3370", byteLength: 21068247, promptId: "HOST09-GEN-PROMPT-H9-16", promptBytes: 1701,
+  promptSha256: "0f5b5831db6e1bf3abf350c7162e488a12ef40ad2665649ed5044816b7a03d1e", cliSha256: "c2cdb05244ad9a3dcb8731988790ea6a06a59ab3c062c0f872b35f4ad7d20b05",
 });
 
 export const FLOODED_CHOIR_COPY = Object.freeze({
   name: "Flooded Choir",
   state: Object.freeze({ available: "available", in_progress: "in progress", remediation_required: "remediation required", complete: "complete" }),
-  unseen: null, available: null, textInProgress: null, speechInProgress: null,
-  missed: null, mastered: null, returned: null, nextBoundary: null, alt: null,
+  unseen: "Unequal cavities hold the same water and pressure path without producing the same optical evidence.",
+  available: "A dry rim reaches a linked family of flooded cavities. Compare what the shared water and light return.",
+  textInProgress: "The family remains still while Text Analysis evidence is in progress.",
+  speechInProgress: "The same inert relation remains available while Speech Workloads evidence is in progress.",
+  missed: "The relation does not answer. Recheck the unequal cavities, paired reflections, and the no-return case.",
+  mastered: "Both workload comparisons are complete. Stone, water, pressure, and reflected light remain unchanged.",
+  returned: "The flooded family remains exactly as observed.",
+  nextBoundary: "Continue along the single route after both workload records are complete.",
+  alt: "Dry eroded stone terraces around linked flooded cavities; two pools reflect daylight while another remains dark.",
 });
 
 const promptIdentities = Object.freeze({

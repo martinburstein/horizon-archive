@@ -2,15 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-009-v5 / FIVE CORRECTED-GATE ATTEMPTS`**
+Current disposition: **`PRODUCTION CONTENT COMPLETE / FRCA-009-v5 / FIRST ATTEMPT ACCEPTED`**
 
-Exact next owner: **one Quartermaster**
+Exact next owner: **one Image Specialist**
 
-Execute `{H9-16..H9-20}` sequentially under FRSH-009-v5, stopping at the first
-private PASS. Use the exact frozen prompt and CLI identity for each call. A
-rejection must retain the bounded technical/physical/derived-responsive
-evidence, then identity-delete the exact raster and prove absence before the
-next call. Do not reveal any candidate.
+Review runtime code/configuration presentation using the immutable accepted
+source. Do not generate, edit, vary, replace, reveal, or re-encode media. Verify
+composition, hierarchy, focus, forced colors, reduced motion, and all six
+responsive layouts, then route fresh Intelligence for independent release.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then

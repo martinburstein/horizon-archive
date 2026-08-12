@@ -4,6 +4,7 @@ import drownedArchiveImage from "../../Visual Direction/Production Masters/2026-
 import strandedLensCradleImage from "../../Visual Direction/Production Masters/2026-08-10-first-run-host06/host06-stranded-lens-cradle-master-v1.png";
 import sedimentAbacusImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host07/host07-sediment-abacus-master-v1.png";
 import severedRelaySpineImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host08/host08-severed-relay-spine-master-v1.png";
+import floodedChoirImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host09/host09-flooded-choir-master-v1.png";
 import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
 import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
@@ -214,8 +215,10 @@ import {
 } from "./severedRelaySpine.js";
 import {
   deriveFloodedChoirState,
+  FLOODED_CHOIR_COPY,
   FLOODED_CHOIR_PROVENANCE,
   FLOODED_CHOIR_REGISTRY,
+  FLOODED_CHOIR_SOURCE_URL,
   getFloodedChoirHotspot,
   isLegacyHost09LessonLauncherVisible,
 } from "./floodedChoir.js";
@@ -1060,8 +1063,8 @@ export function App() {
   const [sedimentAbacusPresented, setSedimentAbacusPresented] = useState(false);
   const [severedRelaySpineDecodedImage, setSeveredRelaySpineDecodedImage] = useState(null);
   const [severedRelaySpinePresented, setSeveredRelaySpinePresented] = useState(false);
-  const [floodedChoirDecodedImage] = useState(null);
-  const [floodedChoirPresented] = useState(false);
+  const [floodedChoirDecodedImage, setFloodedChoirDecodedImage] = useState(null);
+  const [floodedChoirPresented, setFloodedChoirPresented] = useState(false);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
@@ -1137,6 +1140,9 @@ export function App() {
   const severedRelaySpineFocusPendingRef = useRef(false);
   const severedRelaySpineAnnouncementPendingRef = useRef(false);
   const floodedChoirRef = useRef(null);
+  const floodedChoirTransitionPendingRef = useRef(false);
+  const floodedChoirFocusPendingRef = useRef(false);
+  const floodedChoirAnnouncementPendingRef = useRef(false);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1427,6 +1433,28 @@ export function App() {
     const target=severedRelaySpineRef.current; if(!target?.isConnected)return; severedRelaySpineFocusPendingRef.current=false; target.focus({preventScroll:true});
     if(severedRelaySpineAnnouncementPendingRef.current){severedRelaySpineAnnouncementPendingRef.current=false; setSceneAnnouncement(SEVERED_RELAY_SPINE_COPY.available); setDialogue(SEVERED_RELAY_SPINE_COPY.available,"system");}
   }, [severedRelaySpineActive, severedRelaySpineState, terminalOpen]);
+
+  useEffect(() => {
+    if (FLOODED_CHOIR_REGISTRY.source.enabled !== true || !FLOODED_CHOIR_SOURCE_URL) { setFloodedChoirDecodedImage(null); return undefined; }
+    let connected = true; const image = new Image(); image.decoding = "async";
+    image.onload = () => connected && setFloodedChoirDecodedImage({ complete:image.complete, naturalWidth:image.naturalWidth, naturalHeight:image.naturalHeight });
+    image.onerror = () => connected && setFloodedChoirDecodedImage(null); image.src = floodedChoirImage;
+    return () => { connected=false; image.onload=null; image.onerror=null; };
+  }, []);
+
+  useEffect(() => {
+    if (!floodedChoirLawful) { floodedChoirTransitionPendingRef.current=false; floodedChoirAnnouncementPendingRef.current=false; if (floodedChoirPresented) setFloodedChoirPresented(false); return undefined; }
+    if (floodedChoirPresented || mode!=="playing" || scene.id!=="ruins" || terminalOpen) return undefined;
+    if (!floodedChoirTransitionPendingRef.current) { floodedChoirFocusPendingRef.current=floodedChoirState!=="complete"; setFloodedChoirPresented(true); return undefined; }
+    const frame=window.requestAnimationFrame(()=>{ if(!floodedChoirTransitionPendingRef.current)return; floodedChoirTransitionPendingRef.current=false; floodedChoirFocusPendingRef.current=true; floodedChoirAnnouncementPendingRef.current=true; setFloodedChoirPresented(true); });
+    return ()=>window.cancelAnimationFrame(frame);
+  }, [mode, scene.id, terminalOpen, floodedChoirLawful, floodedChoirPresented, floodedChoirState]);
+
+  useLayoutEffect(() => {
+    if(!floodedChoirFocusPendingRef.current || !floodedChoirActive || terminalOpen)return;
+    const target=floodedChoirRef.current; if(!target?.isConnected)return; floodedChoirFocusPendingRef.current=false; target.focus({preventScroll:true});
+    if(floodedChoirAnnouncementPendingRef.current){floodedChoirAnnouncementPendingRef.current=false; setSceneAnnouncement(FLOODED_CHOIR_COPY.available); setDialogue(FLOODED_CHOIR_COPY.available,"system");}
+  }, [floodedChoirActive, floodedChoirState, terminalOpen]);
 
   useEffect(() => {
     function handleDemoTourRequest(event) {
@@ -3967,7 +3995,7 @@ export function App() {
   function checkClientBridgeRetrieval(event) { event.preventDefault(); const result = evaluateClientBridgeRetrieval(clientBridgeSession.retrievalAnswers); setClientBridgeSession({ ...clientBridgeSession, retrievalResult: result }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "retrieval", correctness: result.correctness, incrementAttempt: true, masteryStatus: result.passed ? "retrieval_complete" : "transfer_complete" })); }
   function advanceClientBridgeExplanation() { if (!clientBridgeSession.retrievalResult?.passed) return; setClientBridgeSession({ ...clientBridgeSession, form: "explanation", phase: "explanation", retrievalResult: null }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", masteryStatus: "retrieval_complete" })); }
   function checkClientBridgeExplanation(event) { event.preventDefault(); const result = evaluateClientBridgeExplanation(clientBridgeSession.explanationResponse); setClientBridgeSession({ ...clientBridgeSession, explanationResult: result }); setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "retrieval_complete" })); }
-  function acknowledgeClientBridgeMastery() { if (!clientBridgeSession?.explanationResult?.passed || !clientBridgeSession.ownershipConfirmed || !clientBridgeEvidence?.confidence) return; focusContinueAfterClientRef.current = true; setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setClientBridgeSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Client Bridge mastery confirmed: both offline forms, retrieval, and closed-note layers are complete.", "teacher"); }
+  function acknowledgeClientBridgeMastery() { if (!clientBridgeSession?.explanationResult?.passed || !clientBridgeSession.ownershipConfirmed || !clientBridgeEvidence?.confidence) return; focusContinueAfterClientRef.current = true; floodedChoirTransitionPendingRef.current = FLOODED_CHOIR_REGISTRY.source.enabled === true; setClientBridgeEvidence((previous) => updateClientBridgeEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setClientBridgeSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Client Bridge mastery confirmed: both offline forms, retrieval, and closed-note layers are complete.", "teacher"); }
 
   function openTextAnalysis() { setTerminalOpen(true); setRuinsTerminalKind("text-analysis"); if (!textAnalysisSession) { const form = textAnalysisEvidence?.masteryStatus === "primary_complete" ? "transfer" : textAnalysisEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setTextAnalysisSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { requested_output: "", capability: "", document_id: "", mixed_result: "" }, explanationResult: null, ownershipConfirmed: false }); } }
   function exitTextAnalysis() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Text Analysis practice closed safely. Choices and explanation remain session-only.", "system"); }
@@ -4539,7 +4567,9 @@ export function App() {
         ) : (
           <>
             {scene.id === "ruins" ? (
-              severedRelaySpineActive ? (
+              floodedChoirActive ? (
+                <img className="scene-art flooded-choir-art" src={floodedChoirImage} alt={FLOODED_CHOIR_COPY.alt} data-flooded-choir-source={FLOODED_CHOIR_REGISTRY.source.path} />
+              ) : severedRelaySpineActive ? (
                 <img className="scene-art severed-relay-spine-art" src={severedRelaySpineImage} alt={SEVERED_RELAY_SPINE_COPY.alt} data-severed-relay-spine-source={SEVERED_RELAY_SPINE_REGISTRY.source.path} />
               ) : sedimentAbacusActive ? (
                 <img
