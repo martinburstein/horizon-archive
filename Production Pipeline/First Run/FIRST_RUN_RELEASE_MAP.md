@@ -1,10 +1,10 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-008-v1`
+Map ID: `FRRM-009-v1`
 
 Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v5` / `FRCL-008-v1`
+Baseline / continuity lock: `FRPB-001-v6` / `FRCL-009-v1`
 
 Operations source inspected: `243edb4e`
 
@@ -22,8 +22,13 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`
 
-Selected bounded Work Order: **`FRWO-008-v1 / Host 08 Severed Relay Spine -
-Imagegen CLI / Five Total Sequential Attempts Maximum`**.
+Selected bounded Work Order: **`FRWO-009-v1 / Host 09 Flooded Choir - Five
+Total Sequential Attempts Maximum`**.
+
+`FRWO-009-v1` is the new earliest-first bounded plan. Its fresh ledger
+`{H9-1..H9-5}` is fully unconsumed, first-PASS-stops, and requires complete
+Science and Mission gates before any generation. No candidate, product,
+credential read, maturity evidence, Host 10 work, or repeatable template exists.
 
 Martin explicitly authorized imagegen CLI fallback with five total attempts.
 `FRWO-007-v2` freezes `{H7-1..H7-5}`, exact bundled CLI, sequential one-output
@@ -135,7 +140,7 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Hosts 09-15` | Remaining Drowned movements and pedestrian/Crown sequence | Host 08 is released; Host 09 is earliest missing and no repeatable pattern is authorized |
+| 1 | `FR-03 / Host 09` | Distinct Flooded Choir physical host and native dual-lesson entry | Host 08 is released; Host 09 is earliest missing and no repeatable pattern is authorized |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |

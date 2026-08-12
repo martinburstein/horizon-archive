@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-008-v1`
+Scoreboard ID: `FRSB-009-v1`
 
 Current release authority: `FRAB-008-v1 / FIRST RUN PASS RELEASED`
 
-Baseline / lock: `FRPB-001-v5` / `FRCL-008-v1`
+Baseline / lock: `FRPB-001-v6` / `FRCL-009-v1`
 
-Release map: `FRRM-008-v1`
+Release map: `FRRM-009-v1`
 
 Operations source inspected: `243edb4e`
 
@@ -18,8 +18,11 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`.
 
-Selected bounded Work Order: **`FRWO-008-v1 / Host 08 Severed Relay Spine -
-five sequential CLI attempts maximum`**.
+Selected bounded Work Order: **`FRWO-009-v1 / Host 09 Flooded Choir - five
+sequential attempts maximum`**.
+
+Host 09 planning is open with fresh ledger `{H9-1..H9-5}`, all unconsumed.
+No candidate, product, generation, credential read, or maturity advance exists.
 
 Host 08 H8-3 is released. H8-1/H8-2 were rejected and cleaned; H8-4/H8-5 are
 unused. Accepted media is `19 / 70,136,520`.
@@ -155,5 +158,6 @@ compression / 30 missing / 1 unadvanced Witness expression`.
 / 4 exact / 7 missing`; whole-game inventory is `9 exact / 1 accepted shared
 compression / 29 missing / 1 unadvanced Witness expression`.
 
-Fresh Commandant revalidation is next. No Host 09 Work Order or `FIRST RUN
-COMPLETE` is inferred.
+`FRWO-009-v1` is selected as the earliest missing expression. Its maturity is
+unchanged pending Science, Mission, production, and independent release. No
+Host 10 Work Order or `FIRST RUN COMPLETE` is inferred.
