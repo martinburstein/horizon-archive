@@ -511,7 +511,32 @@ h1 {
 [data-sixfold-weir-state="complete"] span { border-style: double; }
 .canonical-game-frame .scene-art.stranded-lens-cradle-art { object-fit: cover; object-position: 50% 50%; }
 .canonical-game-frame .scene-art.sediment-abacus-art { object-fit: cover; object-position: 50% 50%; }
-.canonical-game-frame .scene-art.severed-relay-spine-art { object-fit: cover; object-position: 50% 50%; }
+.canonical-game-frame .scene-art.severed-relay-spine-art {
+  object-fit: cover;
+  object-position: 50% 50%;
+  filter: saturate(.92) contrast(1.025) brightness(.98);
+}
+
+.canonical-game-frame [data-severed-relay-spine-state] {
+  min-width: 44px;
+  min-height: 44px;
+  border-width: 2px;
+  background: color-mix(in srgb, var(--ink, #071013) 68%, transparent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .canonical-game-frame .scene-art.severed-relay-spine-art { transition: none; }
+}
+
+@media (forced-colors: active) {
+  .canonical-game-frame .scene-art.severed-relay-spine-art { filter: none; }
+  .canonical-game-frame [data-severed-relay-spine-state] {
+    forced-color-adjust: none;
+    color: ButtonText;
+    background: ButtonFace;
+    border-color: Highlight;
+  }
+}
 .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 
 @media (forced-colors: active) {
