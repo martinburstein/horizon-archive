@@ -2,14 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-009-v1 / HOST 09 / FIVE ATTEMPTS AVAILABLE`**
+Current disposition: **`DIRECTORIAL LOCK / FRDT-009-v1 / HOST 09 / FIVE ATTEMPTS AVAILABLE`**
 
-Exact next owner: **one fresh Reconnaissance Sergeant / `reconnaissance_sergeant`**
+Exact next owner: **one fresh Tactical Operations Specialist / `tactical_operations_specialist`**
 
-Read the full Recon profile, `FRSH-009-v1`, `FRCL-009-v1`, `FRVE-009-v1`, all
-five frozen prompt files, `FRAB-008-v1`, and adjacent visual/runtime controls.
-Issue one directorial lock that preserves physical truth, silence, center-safe
-legibility, dry access, and distinctness. Run no generation.
+Read the full Tactical profile, `FRSH-009-v1`, `FRDT-009-v1`, `FRVE-009-v1`,
+current Host 08/native and generic Text/Speech runtime, and focused tests. Issue
+one implementation-exact null-first state, flow, focus, recovery, layout,
+measurement, copy-slot, candidate-record, and acceptance blueprint. Run no
+generation.
 
 Fresh Host 09 ledger `{H9-1..H9-5}` remains fully unconsumed. Five prompt files
 are frozen by exact bytes/SHA. No candidate, product, credential read,
