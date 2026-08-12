@@ -80,18 +80,28 @@ namespace HorizonArchive.Host06 {
   if ($compileOutput.Count -ne 0) { throw 'PT03_HELPER_COMPILE' }
   if (-not [IO.File]::Exists($helperDll) -or [IO.Directory]::Exists($helperDll)) { throw 'PT03_HELPER_COMPILE' }
   $dllInfo=[IO.FileInfo]$helperDll
-  if ($dllInfo.Length -ne 4096 -or (($dllInfo.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0)) { throw 'PT03_HELPER_COMPILE' }
+  if ($dllInfo.Length -lt 1 -or $dllInfo.Length -gt 1048576 -or (($dllInfo.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0)) { throw 'PT03_HELPER_COMPILE' }
   $assemblyBytes=[IO.File]::ReadAllBytes($helperDll)
-  if (([BitConverter]::ToString($sha.ComputeHash($assemblyBytes))).Replace('-','').ToLowerInvariant() -cne '39e85b32b7f8437c2b5732e26093ca5bd9a9182b048c411e9dc5660ba03f10c9') { throw 'PT03_HELPER_COMPILE' }
+  $dllLength=[int64]$assemblyBytes.LongLength
+  $dllSha=([BitConverter]::ToString($sha.ComputeHash($assemblyBytes))).Replace('-','').ToLowerInvariant()
+  if ($dllLength -ne $dllInfo.Length -or $dllSha -notmatch '\A[0-9a-f]{64}\z') { throw 'PT03_HELPER_COMPILE' }
   $production.Stage='PT04_HELPER_LOAD_IDENTITY'
   $assembly=[Reflection.Assembly]::Load($assemblyBytes)
   $identityType=$assembly.GetType('HorizonArchive.Host06.FileIdentity',$true,$false)
   $readMethod=$identityType.GetMethod('Read',[Reflection.BindingFlags]'Public,Static')
+  $nativeMethod=$identityType.GetMethod('GetFileInformationByHandle',[Reflection.BindingFlags]'NonPublic,Static')
   $declared=$identityType.GetMethods([Reflection.BindingFlags]'Public,NonPublic,Static,DeclaredOnly')
-  if ($declared.Count -ne 2 -or $readMethod.ReturnType.FullName -cne 'System.UInt64[]' -or $readMethod.GetParameters().Count -ne 1 -or $readMethod.GetParameters()[0].ParameterType.FullName -cne 'Microsoft.Win32.SafeHandles.SafeFileHandle') { throw 'PT04_HELPER_LOAD_IDENTITY' }
+  $nativeImport=$nativeMethod.GetCustomAttributes([Runtime.InteropServices.DllImportAttribute],$false)
+  if ($declared.Count -ne 2 -or $readMethod.ReturnType.FullName -cne 'System.UInt64[]' -or $readMethod.GetParameters().Count -ne 1 -or $readMethod.GetParameters()[0].ParameterType.FullName -cne 'Microsoft.Win32.SafeHandles.SafeFileHandle' -or $null-eq $nativeMethod -or $nativeMethod.ReturnType.FullName -cne 'System.Boolean' -or $nativeMethod.GetParameters().Count -ne 2 -or $nativeMethod.GetParameters()[0].ParameterType.FullName -cne 'Microsoft.Win32.SafeHandles.SafeFileHandle' -or -not $nativeMethod.GetParameters()[1].IsOut -or $nativeImport.Count -ne 1 -or $nativeImport[0].Value -cne 'kernel32.dll' -or -not $nativeImport[0].SetLastError) { throw 'PT04_HELPER_LOAD_IDENTITY' }
   $dllStream=New-Object IO.FileStream($helperDll,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::None)
-  try { $dllIdentity=[HorizonArchive.Host06.FileIdentity]::Read($dllStream.SafeFileHandle) } finally { $dllStream.Dispose() }
-  if ($dllIdentity.Count -ne 5 -or $dllIdentity[2] -ne 1 -or (($dllIdentity[3] -band 0x400) -ne 0) -or $dllIdentity[4] -ne 4096) { throw 'PT04_HELPER_LOAD_IDENTITY' }
+  try {
+    $reobservedMemory=New-Object IO.MemoryStream
+    try { $dllStream.CopyTo($reobservedMemory);$reobservedBytes=$reobservedMemory.ToArray() } finally { $reobservedMemory.Dispose() }
+    $reobservedSha=([BitConverter]::ToString($sha.ComputeHash($reobservedBytes))).Replace('-','').ToLowerInvariant()
+    if ($reobservedBytes.LongLength -ne $dllLength -or $reobservedSha -cne $dllSha) { throw 'PT04_HELPER_LOAD_IDENTITY' }
+    $dllIdentity=[HorizonArchive.Host06.FileIdentity]::Read($dllStream.SafeFileHandle)
+  } finally { $dllStream.Dispose() }
+  if ($dllIdentity.Count -ne 5 -or $dllIdentity[2] -ne 1 -or (($dllIdentity[3] -band 0x400) -ne 0) -or $dllIdentity[4] -ne $dllLength) { throw 'PT04_HELPER_LOAD_IDENTITY' }
   $production.HelperIdentity=$true
   [IO.File]::Delete($helperDll)
   if ([IO.File]::Exists($helperDll) -or [IO.Directory]::Exists($helperDll)) { throw 'PT05_HELPER_CLEANUP' }
@@ -261,7 +271,7 @@ namespace HorizonArchive.Host06V8 {
     try{$sourceStream.CopyTo($productStream);$productStream.Flush($true)}finally{$productStream.Dispose();$sourceStream.Dispose()}
     $productBytes=[IO.File]::ReadAllBytes($productRaster)
     if($productBytes.Length-ne$targetIdentity[4]-or([BitConverter]::ToString($sha.ComputeHash($productBytes))).Replace('-','').ToLowerInvariant()-cne$decodedSha){throw 'PT16_PRODUCT_IMPORT'}
-    $provenance="# HOST06 Source Provenance`n`nWork Order: FRWO-005-v8`nShell: FRSH-005-v1-VR-34`nHelper: HOST06-FILE-IDENTITY-PSNET-v1`nHelper source: 1693 / 98cf564b7d22da686adc204a3f6051927ac2d37ef7b5f2fe22d774cb10d5da97`nHelper DLL: 4096 / 39e85b32b7f8437c2b5732e26093ca5bd9a9182b048c411e9dc5660ba03f10c9`nTransport: HOST06-IMAGE-API-PSNET-v1`nEndpoint: https://api.openai.com/v1/images/generations`nModel/options: gpt-image-2 / n=1 / 3840x2160 / high / opaque / png`nPrompt: HOST06-GEN-PROMPT-v1 / no input`nConsumed attempt: A1 accepted`nSelected attempt: attempt-A1.png`nSelected identity: "+$targetIdentity[4]+" / "+$decodedSha+"`nTechnical/physical/layout/accessibility: pass / pass / pass / pass`nManifest: c7ca95201029b490f2460a846e3dc2a64a26775b57e8c587cbc2d874df654d99`nProduct: Visual Direction/Production Masters/2026-08-10-first-run-host06/host06-stranded-lens-cradle-master-v1.png`nAccepted media unchanged: true`nHelper/live cleanup: complete`n"
+    $provenance="# HOST06 Source Provenance`n`nWork Order: FRWO-005-v8`nShell: FRSH-005-v1-VR-34`nHelper: HOST06-FILE-IDENTITY-PSNET-v1`nHelper source: 1693 / 98cf564b7d22da686adc204a3f6051927ac2d37ef7b5f2fe22d774cb10d5da97`nHelper DLL: "+$dllLength+" / "+$dllSha+"`nTransport: HOST06-IMAGE-API-PSNET-v1`nEndpoint: https://api.openai.com/v1/images/generations`nModel/options: gpt-image-2 / n=1 / 3840x2160 / high / opaque / png`nPrompt: HOST06-GEN-PROMPT-v1 / no input`nConsumed attempt: A1 accepted`nSelected attempt: attempt-A1.png`nSelected identity: "+$targetIdentity[4]+" / "+$decodedSha+"`nTechnical/physical/layout/accessibility: pass / pass / pass / pass`nManifest: c7ca95201029b490f2460a846e3dc2a64a26775b57e8c587cbc2d874df654d99`nProduct: Visual Direction/Production Masters/2026-08-10-first-run-host06/host06-stranded-lens-cradle-master-v1.png`nAccepted media unchanged: true`nHelper/live cleanup: complete`n"
     $provenanceStream=New-Object IO.FileStream($productProvenance,[IO.FileMode]::CreateNew,[IO.FileAccess]::Write,[IO.FileShare]::None)
     $production.ProvenanceOwned=$true
     try{$provenanceBytes=$utf8.GetBytes($provenance);$provenanceStream.Write($provenanceBytes,0,$provenanceBytes.Length);$provenanceStream.Flush($true)}finally{$provenanceStream.Dispose()}

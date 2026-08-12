@@ -9,10 +9,10 @@ try {
   if ([string]::IsNullOrEmpty($source)) { throw 'PH01_STDIN_RETRIEVAL' }
   $strictUtf8=New-Object Text.UTF8Encoding($false,$true)
   $sourceBytes=$strictUtf8.GetBytes($source)
-  if ($source.Length-ne 33666-or$sourceBytes.Length-ne 33666) { throw 'PH01_STDIN_RETRIEVAL' }
+  if ($source.Length-ne 34766-or$sourceBytes.Length-ne 34766) { throw 'PH01_STDIN_RETRIEVAL' }
   foreach($character in $source.ToCharArray()){if([int]$character-gt 127){throw 'PH01_STDIN_RETRIEVAL'}}
   $sha=[Security.Cryptography.SHA256]::Create()
-  if (([BitConverter]::ToString($sha.ComputeHash($sourceBytes))).Replace('-','').ToLowerInvariant()-cne'f3926cac83905f4d82f72627b9ea518bf69e545d5aeb3c5f78aafa37996c8077'){throw 'PH01_STDIN_RETRIEVAL'}
+  if (([BitConverter]::ToString($sha.ComputeHash($sourceBytes))).Replace('-','').ToLowerInvariant()-cne'9b1d315bc728299145d9a9582f7fd0da134403dd0a076254a8423a065da046a5'){throw 'PH01_STDIN_RETRIEVAL'}
   $state.Predicate='PH02_PARSE_SUCCESS'
   $tokens=$null;$errors=$null
   [void][System.Management.Automation.Language.Parser]::ParseInput($source,[ref]$tokens,[ref]$errors)

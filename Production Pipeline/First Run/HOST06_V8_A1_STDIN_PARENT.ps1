@@ -7,7 +7,7 @@ $sha=[Security.Cryptography.SHA256]::Create()
 $process=$null;$carrier=$null;$carrierBytes=$null
 try{
   $carrierBytes=[IO.File]::ReadAllBytes($carrierPath)
-  if($carrierBytes.Length-ne 33666-or([BitConverter]::ToString($sha.ComputeHash($carrierBytes))).Replace('-','').ToLowerInvariant()-cne'f3926cac83905f4d82f72627b9ea518bf69e545d5aeb3c5f78aafa37996c8077'){throw 'PARENT_CARRIER_IDENTITY'}
+  if($carrierBytes.Length-ne 34766-or([BitConverter]::ToString($sha.ComputeHash($carrierBytes))).Replace('-','').ToLowerInvariant()-cne'9b1d315bc728299145d9a9582f7fd0da134403dd0a076254a8423a065da046a5'){throw 'PARENT_CARRIER_IDENTITY'}
   foreach($byte in $carrierBytes){if($byte-gt 127){throw 'PARENT_CARRIER_ASCII'}}
   $carrier=$strictUtf8.GetString($carrierBytes)
   if($carrier.Length-ne 33666){throw 'PARENT_CARRIER_LENGTH'}
@@ -16,7 +16,7 @@ try{
   if($errors.Count-ne 0){throw 'PARENT_CARRIER_PARSE'}
   $launcherBytes=[IO.File]::ReadAllBytes($launcherPath)
   $launcherHash=([BitConverter]::ToString($sha.ComputeHash($launcherBytes))).Replace('-','').ToLowerInvariant()
-  if($launcherBytes.Length-ne 2638-or$launcherHash-cne'c9497754b90e18b4f8ab8bdea9fc4f2d86e6056a00e671850b3fec0f04783c1a'){throw 'PARENT_LAUNCHER_IDENTITY'}
+  if($launcherBytes.Length-ne 2637-or$launcherHash-cne'4eccc9abbed86b917dd987050b04340867aee023707aa063d0ecf13c6bf4bc1a'){throw 'PARENT_LAUNCHER_IDENTITY'}
   $launcher=$strictUtf8.GetString($launcherBytes)
   $tokens=$null;$errors=$null
   [void][Management.Automation.Language.Parser]::ParseInput($launcher,[ref]$tokens,[ref]$errors)

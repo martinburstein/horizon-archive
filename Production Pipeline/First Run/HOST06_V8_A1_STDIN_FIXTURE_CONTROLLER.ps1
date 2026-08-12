@@ -17,7 +17,7 @@ try{
   $stdoutTask=$process.StandardOutput.ReadToEndAsync();$stderrTask=$process.StandardError.ReadToEndAsync();$process.WaitForExit()
   $stdout=$stdoutTask.GetAwaiter().GetResult();$stderr=$stderrTask.GetAwaiter().GetResult()
   if($process.ExitCode-ne 87-or$stdout.Length-ne 0){throw 'FIXTURE_NO_REQUEST_RESULT'}
-  if($stderr-ne"HOST06_PRODUCTION_FAILURE|stage=PT02_HELPER_SOURCE|attempt=none|sendStarted=false|status=unavailable|mediaType=unavailable|responseBytes=unavailable|diagnostic=diagnostic-unavailable|helperRootAbsent=true|helperDllAbsent=true|liveRootAbsent=true|activeAbsent=true|productAbsent=true|provenanceAbsent=true`r`n"){throw 'FIXTURE_NO_REQUEST_DIAGNOSTIC'}
+  if($stderr-ne"HOST06_PRODUCTION_FAILURE|stage=PT06_CREDENTIAL_GATE|attempt=none|sendStarted=false|status=unavailable|mediaType=unavailable|responseBytes=unavailable|diagnostic=diagnostic-unavailable|helperRootAbsent=true|helperDllAbsent=true|liveRootAbsent=true|activeAbsent=true|productAbsent=true|provenanceAbsent=true`r`n"){throw 'FIXTURE_NO_REQUEST_DIAGNOSTIC'}
   foreach($path in $controlled){if([IO.File]::Exists($path)-or[IO.Directory]::Exists($path)){throw 'FIXTURE_POSTFLIGHT_ABSENCE'}}
-  [Console]::Out.WriteLine('HOST06_V8_STDIN_FIXTURE_PASS|earliestStage=PT02_HELPER_SOURCE|childInvocations=1|credentialReads=0|requestConstructions=0|sendAsyncCalls=0|apiSends=0|A1Consumed=false|controlledPathsAbsent=true')
+  [Console]::Out.WriteLine('HOST06_V8_STDIN_FIXTURE_PASS|earliestStage=PT06_CREDENTIAL_GATE|childInvocations=1|credentialReads=0|requestConstructions=0|sendAsyncCalls=0|apiSends=0|A1Consumed=false|controlledPathsAbsent=true')
 }finally{if($process){$process.Dispose()}}

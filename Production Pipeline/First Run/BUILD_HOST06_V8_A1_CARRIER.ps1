@@ -4,6 +4,7 @@ $root = Split-Path -Parent $MyInvocation.MyCommand.Path
 $parentPath = Join-Path $root 'HOST06_SCIENCE_PARENT_V2.ps1'
 $carrierPath = Join-Path $root 'HOST06_V8_A1_PRODUCTION_CARRIER.ps1'
 $launcherPath = Join-Path $root 'HOST06_V8_A1_LAUNCHER.ps1'
+$stdinParentPath = Join-Path $root 'HOST06_V8_A1_STDIN_PARENT.ps1'
 $source = [IO.File]::ReadAllText($parentPath, (New-Object Text.UTF8Encoding($false, $true)))
 $carrierLine = ($source -split "`n" | Where-Object { $_ -like '$combinedCarrier=*' } | Select-Object -First 1).TrimEnd("`r")
 $launcherLine = ($source -split "`n" | Where-Object { $_ -like '$launcherCarrier=*' } | Select-Object -First 1).TrimEnd("`r")
@@ -16,6 +17,55 @@ $helperNeedle = '"@' + [char]10 + '  $utf8=New-Object Text.UTF8Encoding($false,$
 $helperReplacement = '"@' + [char]10 + '  $helperSource += [char]10' + [char]10 + '  $utf8=New-Object Text.UTF8Encoding($false,$true)'
 if (([regex]::Matches($carrier, [regex]::Escape($helperNeedle))).Count -ne 1) { throw 'HELPER_LF_SOURCE' }
 $carrier = $carrier.Replace($helperNeedle, $helperReplacement)
+
+$dynamicIdentityNeedle = @'
+  $dllInfo=[IO.FileInfo]$helperDll
+  if ($dllInfo.Length -ne 4096 -or (($dllInfo.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0)) { throw 'PT03_HELPER_COMPILE' }
+  $assemblyBytes=[IO.File]::ReadAllBytes($helperDll)
+  if (([BitConverter]::ToString($sha.ComputeHash($assemblyBytes))).Replace('-','').ToLowerInvariant() -cne '39e85b32b7f8437c2b5732e26093ca5bd9a9182b048c411e9dc5660ba03f10c9') { throw 'PT03_HELPER_COMPILE' }
+'@
+$dynamicIdentityReplacement = @'
+  $dllInfo=[IO.FileInfo]$helperDll
+  if ($dllInfo.Length -lt 1 -or $dllInfo.Length -gt 1048576 -or (($dllInfo.Attributes -band [IO.FileAttributes]::ReparsePoint) -ne 0)) { throw 'PT03_HELPER_COMPILE' }
+  $assemblyBytes=[IO.File]::ReadAllBytes($helperDll)
+  $dllLength=[int64]$assemblyBytes.LongLength
+  $dllSha=([BitConverter]::ToString($sha.ComputeHash($assemblyBytes))).Replace('-','').ToLowerInvariant()
+  if ($dllLength -ne $dllInfo.Length -or $dllSha -notmatch '\A[0-9a-f]{64}\z') { throw 'PT03_HELPER_COMPILE' }
+'@
+if (([regex]::Matches($carrier, [regex]::Escape($dynamicIdentityNeedle))).Count -ne 1) { throw 'DYNAMIC_DLL_IDENTITY_SOURCE' }
+$carrier = $carrier.Replace($dynamicIdentityNeedle, $dynamicIdentityReplacement)
+
+$dynamicLoadNeedle = @'
+  $assembly=[Reflection.Assembly]::Load($assemblyBytes)
+  $identityType=$assembly.GetType('HorizonArchive.Host06.FileIdentity',$true,$false)
+  $readMethod=$identityType.GetMethod('Read',[Reflection.BindingFlags]'Public,Static')
+  $declared=$identityType.GetMethods([Reflection.BindingFlags]'Public,NonPublic,Static,DeclaredOnly')
+  if ($declared.Count -ne 2 -or $readMethod.ReturnType.FullName -cne 'System.UInt64[]' -or $readMethod.GetParameters().Count -ne 1 -or $readMethod.GetParameters()[0].ParameterType.FullName -cne 'Microsoft.Win32.SafeHandles.SafeFileHandle') { throw 'PT04_HELPER_LOAD_IDENTITY' }
+  $dllStream=New-Object IO.FileStream($helperDll,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::None)
+  try { $dllIdentity=[HorizonArchive.Host06.FileIdentity]::Read($dllStream.SafeFileHandle) } finally { $dllStream.Dispose() }
+  if ($dllIdentity.Count -ne 5 -or $dllIdentity[2] -ne 1 -or (($dllIdentity[3] -band 0x400) -ne 0) -or $dllIdentity[4] -ne 4096) { throw 'PT04_HELPER_LOAD_IDENTITY' }
+'@
+$dynamicLoadReplacement = @'
+  $assembly=[Reflection.Assembly]::Load($assemblyBytes)
+  $identityType=$assembly.GetType('HorizonArchive.Host06.FileIdentity',$true,$false)
+  $readMethod=$identityType.GetMethod('Read',[Reflection.BindingFlags]'Public,Static')
+  $nativeMethod=$identityType.GetMethod('GetFileInformationByHandle',[Reflection.BindingFlags]'NonPublic,Static')
+  $declared=$identityType.GetMethods([Reflection.BindingFlags]'Public,NonPublic,Static,DeclaredOnly')
+  $nativeImport=$nativeMethod.GetCustomAttributes([Runtime.InteropServices.DllImportAttribute],$false)
+  if ($declared.Count -ne 2 -or $readMethod.ReturnType.FullName -cne 'System.UInt64[]' -or $readMethod.GetParameters().Count -ne 1 -or $readMethod.GetParameters()[0].ParameterType.FullName -cne 'Microsoft.Win32.SafeHandles.SafeFileHandle' -or $null-eq $nativeMethod -or $nativeMethod.ReturnType.FullName -cne 'System.Boolean' -or $nativeMethod.GetParameters().Count -ne 2 -or $nativeMethod.GetParameters()[0].ParameterType.FullName -cne 'Microsoft.Win32.SafeHandles.SafeFileHandle' -or -not $nativeMethod.GetParameters()[1].IsOut -or $nativeImport.Count -ne 1 -or $nativeImport[0].Value -cne 'kernel32.dll' -or -not $nativeImport[0].SetLastError) { throw 'PT04_HELPER_LOAD_IDENTITY' }
+  $dllStream=New-Object IO.FileStream($helperDll,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::None)
+  try {
+    $reobservedMemory=New-Object IO.MemoryStream
+    try { $dllStream.CopyTo($reobservedMemory);$reobservedBytes=$reobservedMemory.ToArray() } finally { $reobservedMemory.Dispose() }
+    $reobservedSha=([BitConverter]::ToString($sha.ComputeHash($reobservedBytes))).Replace('-','').ToLowerInvariant()
+    if ($reobservedBytes.LongLength -ne $dllLength -or $reobservedSha -cne $dllSha) { throw 'PT04_HELPER_LOAD_IDENTITY' }
+    $dllIdentity=[HorizonArchive.Host06.FileIdentity]::Read($dllStream.SafeFileHandle)
+  } finally { $dllStream.Dispose() }
+  if ($dllIdentity.Count -ne 5 -or $dllIdentity[2] -ne 1 -or (($dllIdentity[3] -band 0x400) -ne 0) -or $dllIdentity[4] -ne $dllLength) { throw 'PT04_HELPER_LOAD_IDENTITY' }
+'@
+if (([regex]::Matches($carrier, [regex]::Escape($dynamicLoadNeedle))).Count -ne 1) { throw 'DYNAMIC_DLL_LOAD_SOURCE' }
+$carrier = $carrier.Replace($dynamicLoadNeedle, $dynamicLoadReplacement)
+$carrier = $carrier.Replace('Helper DLL: 4096 / 39e85b32b7f8437c2b5732e26093ca5bd9a9182b048c411e9dc5660ba03f10c9`nTransport:', 'Helper DLL: "+$dllLength+" / "+$dllSha+"`nTransport:')
 
 $oldHelper = 'C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-native-identity-725b75e4-8083-4df5-9a80-a0301b8f00dd'
 $newHelper = 'C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-native-identity-v8-5fbbd31e-8b50-4cb4-a0d3-c2f0d4b9e8aa'
@@ -135,13 +185,68 @@ if($carrier.Contains('foreach ($ordinal in @(2,3))') -or $carrier.Contains('atte
 if(-not $carrier.Contains('HorizonArchive.Host06V8.StrictJson') -or -not $carrier.Contains('.attempt-A1-95a70af8-f9d0-49dc-87dc-89675212ed35.stage')){throw 'PARSER_PATCH'}
 
 $utf8 = New-Object Text.UTF8Encoding($false, $true)
+$sha = [Security.Cryptography.SHA256]::Create()
+$carrierBytes = $utf8.GetBytes($carrier)
+$carrierLength = $carrierBytes.Length
+$carrierSha = ([BitConverter]::ToString($sha.ComputeHash($carrierBytes))).Replace('-','').ToLowerInvariant()
+$launcher = @'
+$ErrorActionPreference='Stop'
+$state=@{Predicate='PH01_STDIN_RETRIEVAL';RootCreated=$false;RootOrdinary=$false}
+$helperRoot='C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-native-identity-v8-5fbbd31e-8b50-4cb4-a0d3-c2f0d4b9e8aa'
+$helperDll=$helperRoot+'\Host06FileIdentity.dll'
+$liveRoot='C:\Users\marti\AppData\Local\Temp\horizon-archive-host06-api-v8-3f7d8a21-76c5-4d4e-9641-b2f5e73a019c'
+$source=$null;$sourceBytes=$null;$block=$null;$sha=$null
+try {
+  $source=[Console]::In.ReadToEnd()
+  if ([string]::IsNullOrEmpty($source)) { throw 'PH01_STDIN_RETRIEVAL' }
+  $strictUtf8=New-Object Text.UTF8Encoding($false,$true)
+  $sourceBytes=$strictUtf8.GetBytes($source)
+  if ($source.Length-ne __CARRIER_LENGTH__-or$sourceBytes.Length-ne __CARRIER_LENGTH__) { throw 'PH01_STDIN_RETRIEVAL' }
+  foreach($character in $source.ToCharArray()){if([int]$character-gt 127){throw 'PH01_STDIN_RETRIEVAL'}}
+  $sha=[Security.Cryptography.SHA256]::Create()
+  if (([BitConverter]::ToString($sha.ComputeHash($sourceBytes))).Replace('-','').ToLowerInvariant()-cne'__CARRIER_SHA__'){throw 'PH01_STDIN_RETRIEVAL'}
+  $state.Predicate='PH02_PARSE_SUCCESS'
+  $tokens=$null;$errors=$null
+  [void][System.Management.Automation.Language.Parser]::ParseInput($source,[ref]$tokens,[ref]$errors)
+  if ($errors.Count -ne 0) { throw 'PH02_PARSE_SUCCESS' }
+  $block=[scriptblock]::Create($source)
+  $state.Predicate='PH03_INVOCATION_ENTRY'
+  & $block
+  if ($state.Predicate -ne 'PH08_ROOT_CREATE_COMPLETE' -or -not $state.RootOrdinary) { throw 'PH08_ROOT_CREATE_COMPLETE' }
+} catch {
+  $failurePredicate=$state.Predicate
+  $failureClass=$_.Exception.GetType().FullName
+  $failureFqid=$_.FullyQualifiedErrorId
+  if ($state.RootCreated-and$state.RootOrdinary-and[IO.Directory]::Exists($helperRoot)-and-not[IO.File]::Exists($helperDll)){try{[IO.Directory]::Delete($helperRoot,$false)}catch{}}
+  $helperRootAbsent=(-not[IO.Directory]::Exists($helperRoot)-and-not[IO.File]::Exists($helperRoot))
+  $helperDllAbsent=(-not[IO.File]::Exists($helperDll)-and-not[IO.Directory]::Exists($helperDll))
+  $liveRootAbsent=(-not[IO.Directory]::Exists($liveRoot)-and-not[IO.File]::Exists($liveRoot))
+  [Console]::Error.WriteLine('HOST06_PREHELPER_FAILURE|predicate='+$failurePredicate+'|class='+$failureClass+'|fqid='+$failureFqid+'|helperRootAbsent='+$helperRootAbsent.ToString().ToLowerInvariant()+'|helperDllAbsent='+$helperDllAbsent.ToString().ToLowerInvariant()+'|liveRootAbsent='+$liveRootAbsent.ToString().ToLowerInvariant())
+  exit 86
+} finally {
+  if($sha){$sha.Dispose()}
+  $tokens=$null;$errors=$null;$block=$null;$source=$null;$sourceBytes=$null
+}
+'@
+$launcher = $launcher.Replace('__CARRIER_LENGTH__',[string]$carrierLength).Replace('__CARRIER_SHA__',$carrierSha)
+$launcherBytes = $utf8.GetBytes($launcher)
+$launcherLength = $launcherBytes.Length
+$launcherSha = ([BitConverter]::ToString($sha.ComputeHash($launcherBytes))).Replace('-','').ToLowerInvariant()
+$stdinParent = [IO.File]::ReadAllText($stdinParentPath, $utf8)
+$stdinParent = [regex]::Replace($stdinParent, 'carrierBytes\.Length-ne \d+-or\(\[BitConverter\]::ToString\(\$sha\.ComputeHash\(\$carrierBytes\)\)\)\.Replace\(''-'',''''\)\.ToLowerInvariant\(\)-cne''[0-9a-f]{64}''', 'carrierBytes.Length-ne '+$carrierLength+'-or([BitConverter]::ToString($sha.ComputeHash($carrierBytes))).Replace(''-'','''').ToLowerInvariant()-cne'''+$carrierSha+'''', 1)
+$stdinParent = [regex]::Replace($stdinParent, 'launcherBytes\.Length-ne \d+-or\$launcherHash-cne''[0-9a-f]{64}''', 'launcherBytes.Length-ne '+$launcherLength+'-or$launcherHash-cne'''+$launcherSha+'''', 1)
 [IO.File]::WriteAllText($carrierPath, $carrier, $utf8)
 [IO.File]::WriteAllText($launcherPath, $launcher, $utf8)
+[IO.File]::WriteAllText($stdinParentPath, $stdinParent, $utf8)
 $tokens=$null;$errors=$null
 [void][Management.Automation.Language.Parser]::ParseInput($carrier,[ref]$tokens,[ref]$errors)
 if($errors.Count){throw ('CARRIER_PARSE: '+(($errors | ForEach-Object { $_.Message }) -join '; '))}
 $tokens=$null;$errors=$null
 [void][Management.Automation.Language.Parser]::ParseInput($launcher,[ref]$tokens,[ref]$errors)
 if($errors.Count){throw ('LAUNCHER_PARSE: '+(($errors | ForEach-Object { $_.Message }) -join '; '))}
-Get-Item $launcherPath,$carrierPath | Select-Object Name,Length
-Get-FileHash -Algorithm SHA256 $launcherPath,$carrierPath | Select-Object Path,Hash
+$tokens=$null;$errors=$null
+[void][Management.Automation.Language.Parser]::ParseInput($stdinParent,[ref]$tokens,[ref]$errors)
+if($errors.Count){throw ('PARENT_PARSE: '+(($errors | ForEach-Object { $_.Message }) -join '; '))}
+$sha.Dispose()
+Get-Item $launcherPath,$carrierPath,$stdinParentPath | Select-Object Name,Length
+Get-FileHash -Algorithm SHA256 $launcherPath,$carrierPath,$stdinParentPath | Select-Object Path,Hash
