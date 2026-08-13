@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-CBT-001-v1`
+State ID: `FRLS-QTR-001-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / PRODUCTION FUNCTIONAL / QUARTERMASTER PENDING**
+Status: **OPERATE / QUARTERMASTER REVISE / SCIENCE RETURN THROUGH MISSION**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -66,6 +66,11 @@ observed:
   remaining_missing_physical_encounters_at_current_address: 2
   user_authorized_generation_call_pool: 32
   selected_host14_source_candidate_exists: false
+  quartermaster_report: FRCA-014-v1
+  call_ledger: FRLG-014-v1
+  h14_1_launch_consumed: true
+  h14_1_technical_disposition: REJECT_FORMAT32BPPARGB_REQUIRES_FORMAT24BPPRGB
+  h14_1_cleanup: PASS_EXACT_IDENTITY
   generator_dry_run: PASS_NO_CALL
   initial_prompt_identities: 8_FROZEN
 unknown:
@@ -78,7 +83,7 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: quartermaster
+active_owner: office_of_science_administrator_via_mission_captain
 information_actions_allowed:
   - inspect FRCE-014-v1, shell-owned authorities, null-first functional candidate, exact source/custody controls, and affected non-QA tests
 effect_actions_allowed:
@@ -96,7 +101,7 @@ prohibited_until_named_owner_and_stage:
 
 ```yaml
 potential:
-  hard_failures: 0_observed_at_commandant_gate
+  hard_failures: 1_generator_output_representation
   selected_encounter_missing: 0
   continuity_lock_ready: true
   work_order_ready: true
@@ -108,9 +113,9 @@ potential:
   final_holdout_passed: false
 budget:
   generation_calls_authorized: 32
-  generation_calls_used_this_cycle: 0
-  generation_calls_remaining: 32
-  initial_earned_tranche_after_shell: 8
+  generation_calls_used_this_cycle: 1
+  generation_calls_remaining: 31
+  initial_earned_tranche_after_shell: 7
   earned_extension_increment: 4
   concurrent_roles: 1
   role_order: strict_sequential
@@ -121,11 +126,12 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ## Strategy and continuation
 
 ```yaml
-active_strategy_family: sequential_shell_bounded_physical_host_release
-rejected_strategy_families: []
-continuation_reason: FRCE-014-v1 proves the inert atomic functional seam while preserving released fallback; Quartermaster is the next least-powerful sufficient source owner
-decision: GATHER_EVIDENCE
-next_owner: quartermaster
+active_strategy_family: frozen_cli_source_representation_return
+rejected_strategy_families:
+  - continue_prompt_search_under_format24bpprgb_gate
+continuation_reason: H14-1 strict-decodes as Format32bppArgb while the frozen source and custody law require Format24bppRgb; prompt strategy cannot change output representation and re-encoding is forbidden
+decision: RETURN_TO_OWNER
+next_owner: office_of_science_administrator_via_mission_captain
 ```
 
 ## Commandant checkpoint
@@ -478,3 +484,52 @@ Quartermaster may now perform only the shell-bounded source stage after exact
 preflight. It must populate the FRCE placeholder ledger from one privately
 accepted source, stop at the first complete PASS, and preserve the inert
 generic fallback on every failed or absent source path.
+
+Quartermaster completed exact preflight and consumed H14-1. The frozen
+generator produced one strict-decodable exact-size PNG, but the custody
+verifier reported `Format32bppArgb` against the shell-required
+`Format24bppRgb`. The higher technical gate failed before private physical or
+layout review. Prompt-family continuation cannot change this representation;
+post-processing, re-encoding, edit, alternate transport/model, and helper
+modification remain forbidden.
+
+## Quartermaster checkpoint
+
+```yaml
+quartermaster:
+  content_asset_ledger: FRCA-014-v1
+  call_ledger: FRLG-014-v1
+  disposition: REVISE / TECHNICAL SOURCE REPRESENTATION CEILING
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: bounded_external_effect_then_information_return
+  verifier_vector:
+    exact_preflight: PASS
+    h14_1_transport: PASS_ONE_OUTPUT
+    h14_1_dimensions_and_strict_decode: PASS
+    h14_1_required_pixel_format: FAIL_FORMAT32BPPARGB_REQUIRES_FORMAT24BPPRGB
+    private_physical_review: NOT_EVALUATED_HIGHER_GATE_FAIL
+    six_layout_measurement: NOT_EVALUATED_HIGHER_GATE_FAIL
+    source_import_registry_copy_provenance: NOT_STARTED
+    exact_identity_cleanup: PASS
+    source_dependent_full_proof: RESERVED_NOT_CONSUMED
+  delta_vs_best: zero_product_zero_media_zero_maturity_one_consumed_call_positive_failure_information
+  budget_used:
+    generation_calls: 1
+    media_imports: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 31
+    initial_tranche: 7
+    final_verification_reserve: FULL
+  remaining_uncertainty:
+    - whether Science can lawfully revise the opaque RGB predicate or freeze a native 24bpp generator primitive
+    - future physical source, responsive, accessibility, performance, and holdout evidence
+    - human assistive-technology usability study
+  decision: RETURN_TO_OWNER
+  next_owner: office_of_science_administrator_via_mission_captain
+```
+
+No H14-2 or later call is authorized before a versioned Science feasibility
+correction and Mission shell correction. Image Specialist is not authorized.
