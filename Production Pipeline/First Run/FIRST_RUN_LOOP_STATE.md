@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-MIS-002-v1`
+State ID: `FRLS-SCI-003-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / MISSION REPRESENTATION VARIANCE ROUTED / SCIENCE CORRECTION REQUIRED**
+Status: **DESIGN / SCIENCE REPRESENTATION READY / MISSION SHELL CORRECTION REQUIRED**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -30,6 +30,7 @@ target:
   work_order: FRWO-014-v1
   shell: FRSH-014-v2
   mission_variance: FRSH-014-v2-VR-01
+  science_variance: FRVE-014-v2-VR-01
 ```
 
 ## Hard constraints
@@ -56,7 +57,7 @@ observed:
   current_baseline: FRPB-001-v12
   current_continuity_lock: FRCL-014-v1
   current_work_order: FRWO-014-v1
-  current_viability_envelope: FRVE-014-v2
+  current_viability_envelope: FRVE-014-v2-VR-01
   current_shell: FRSH-014-v2
   current_player_experience_blueprint: FRPX-014-v1
   current_directorial_variance: FRCT-014-v1-VR-01
@@ -80,6 +81,9 @@ observed:
   corrected_opacity_self_test: PASS_RGB_RGBA_AND_ALPHA254_REJECTION
   generator_dry_run: PASS_NO_CALL
   initial_prompt_identities: 8_FROZEN_H14-4_THROUGH_H14-8_NOT_EXECUTABLE_AS_IS
+  replacement_h14_4_prompt: HOST14_GEN_PROMPT_H14-4-v2.txt
+  replacement_h14_4_bytes: 3757
+  replacement_h14_4_sha256: e5af6294dbefabbaeeb9f71e044d611abb6a1ffafbb9992d9b2987423d462164
 unknown:
   - future source bytes, transport result, and private physical review
   - future candidate responsive, accessibility, performance, and holdout evidence
@@ -89,15 +93,15 @@ unknown:
 ## Action and authority state
 
 ```yaml
-active_mode: OPERATE
-active_owner: office_of_science_administrator
+active_mode: DESIGN
+active_owner: mission_captain
 information_actions_allowed:
-  - Science may inspect the current shell, Mission routing, Recon variance, Quartermaster evidence, call ledger, and exact prompt texts
-  - Science may assess and freeze one exact versioned H14-4 replacement identity
+  - Mission may inspect the exact Science variance and replacement prompt identity
+  - Mission may reconcile the representation vector, plateau rule, and unchanged shell gates
 effect_actions_allowed:
-  - one versioned Science viability-return control plus one exact versioned H14-4 replacement prompt identity if viable
+  - one versioned Mission shell correction only
 prohibited_until_named_owner_and_stage:
-  - generation or external media call before exact Science prompt identity and a later Mission shell correction
+  - generation or external media call before a later Mission FIRST RUN SHELL READY correction
   - source selection/import before private technical/physical/responsive PASS
   - any product change beyond the exact FRPX-014-v1 atomic null-first Combat scope
   - runtime presentation work before Image Specialist
@@ -113,8 +117,8 @@ potential:
   selected_encounter_missing: 0
   continuity_lock_ready: true
   work_order_ready: true
-  source_feasibility_contract_ready: requires_representation_prompt_correction
-  shell_ready: true
+  source_feasibility_contract_ready: true_FRVE_014_v2_VR_01
+  shell_ready: true_FRSH_014_v2_unaffected_false_for_H14_4_until_mission_correction
   directorial_lock_ready: true
   directorial_representation_replan_ready: true
   mission_representation_routing_ready: true
@@ -142,9 +146,9 @@ rejected_strategy_families:
   - continue_prompt_search_under_format24bpprgb_gate
   - substrate_separation_that_resolves_as_human_dam
   - dry_access_waterline_nonhuman_words_that_resolve_as_human_dam
-continuation_reason: Mission accepted Recon's measurable causal mechanism at specification level and routed only prompt feasibility and exact replacement identity to Science; a later Mission shell correction is still required before any call
+continuation_reason: Science encoded the new causal mechanism in one exact ASCII/LF prompt and a conjunctive pre-layout representation vector; Mission must independently reconcile that identity before one H14-4 call can exist
 decision: RETURN_TO_OWNER
-next_owner: office_of_science_administrator
+next_owner: mission_captain
 ```
 
 ## Commandant checkpoint
@@ -818,3 +822,67 @@ mission_representation_return:
 
 Science is the sole exact next owner. No generation call, source/media action,
 product/runtime change, maturity advancement, or Image action is authorized.
+
+Science has now completed the bounded representation-feasibility return as
+`FRVE-014-v2-VR-01`. One new immutable ASCII/LF H14-4 replacement encodes the
+low concave shelf as the positive subject, three interdigitating process
+histories, one continuous trace with three substrate reactions, and branching
+recessed inert service voids. A conjunctive pre-layout vector rejects any
+barrier, human infrastructure/hardware, horizontal zoning, missing process,
+missing branch, biological substitution, or message/response cue before source
+mapping. All `FRFC-014-v2`, physical, source-mapping, six-layout,
+accessibility, custody, provenance, no-message, performance, rollback, and
+holdout gates remain unchanged.
+
+## Science representation-return checkpoint
+
+```yaml
+science_representation_return:
+  viability_variance: FRVE-014-v2-VR-01
+  disposition: POLISH VIABILITY READY / MISSION SHELL CORRECTION REQUIRED
+  replacement_prompt: HOST14_GEN_PROMPT_H14-4-v2.txt
+  replacement_prompt_bytes: 3757
+  replacement_prompt_sha256: e5af6294dbefabbaeeb9f71e044d611abb6a1ffafbb9992d9b2987423d462164
+  strategy_family: low_concave_shelf_interdigitating_processes_branching_service_voids
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    low_concave_positive_topography: PASS_ENCODED
+    three_interdigitating_process_histories: PASS_ENCODED
+    one_trace_three_substrate_reactions: PASS_ENCODED
+    branching_recessed_inert_service_voids: PASS_ENCODED
+    independent_pre_layout_vector_and_codes: PASS_FROZEN
+    exact_ascii_lf_prompt_identity: PASS
+    exact_cli_prompt_substitution: PASS_DRY_RUN_NO_CALL
+    frfc_v2_and_all_downstream_gates: PASS_SELFTEST_REPRODUCED_AND_PRESERVED
+    media_product_runtime_or_maturity_action: NONE
+  delta_vs_best: zero_product_zero_media_zero_maturity_positive_representation_information
+  budget_used:
+    generation_calls: 3_total_cycle_0_science_return
+    media_imports: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 29
+    initial_tranche_unspent: 5
+    next_observation_if_later_authorized: H14-4_only
+    final_verification_reserve: FULL
+  plateau_policy: >-
+    one later shell-authorized H14-4 may test this new family; a second
+    technically valid new-family failure on the same representation dimension
+    without a new measurable mechanism forces HOLD / REPRESENTATION CEILING
+  remaining_uncertainty:
+    - Mission shell reconciliation and Quartermaster authority
+    - future candidate representation, physical, and source-mapping compliance
+    - future six-layout, accessibility, performance, served, and E2E proof
+    - future exact candidate and independent Intelligence release
+    - human assistive-technology usability study
+  decision: RETURN_TO_OWNER
+  next_owner: mission_captain
+```
+
+H14-4 remains unauthorized until Mission issues a versioned `FIRST RUN SHELL
+READY` correction with the exact replacement identity. No generation, source,
+media, product/runtime, maturity, or Image action is authorized by Science.
