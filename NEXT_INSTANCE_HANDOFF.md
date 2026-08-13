@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`DIRECTORIAL LOCK / FRDT-012-v1 / REACHABLE EDGE`**
+Current disposition: **`PLAYER EXPERIENCE READY / FRPX-012-v1 / NATIVE HOST 12`**
 
-Exact next owner: **one fresh Tactical Operations Specialist**
+Exact next owner: **one fresh Combat Engineer**
 
-Produce one complete interaction/state/responsive/recovery blueprint for
-`FRSH-012-v1` and `FRDT-012-v1`: inert null-first registry, generic-to-native
-handoff, LOOK/TALK/USE, owned lesson order, focus/reload/return, semantic and
-physical measurement records, six layouts, accessibility, copy slots, tests,
-and exact Combat handoff. Do not generate or implement.
+Implement the inert null-first Host 12 registry, accepted-only native scene,
+generic-to-native handoff, focus/recovery, pure derived responsive records, and
+focused regression tests exactly under `FRPX-012-v1`. Import no raster and
+populate no selected-source/copy scalar. Run the functional validation ladder,
+issue the Combat report, commit/push at `PRODUCTION FUNCTIONAL`, synchronize
+this handoff to fresh Quartermaster, and prove `HEAD == origin/main`.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
