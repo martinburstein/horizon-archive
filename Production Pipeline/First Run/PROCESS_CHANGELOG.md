@@ -8,6 +8,21 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-13 - `FRAB-012-v1` - TUNE
+
+- **KEEP:** rolling finite call pools, first-PASS stop, private review,
+  accepted-only import, exact cleanup, native lesson ownership, and independent
+  full-journey release.
+- **KEEP:** the first generation attempt passed source, physical, responsive,
+  accessibility, and presentation gates; eight calls remain unused.
+- **TUNE:** selected-source E2E fixtures must inventory every initial,
+  transfer, reload, and close/reopen launcher before browser execution. When a
+  generic launcher is retired, the harness follows the native verb/hotspot
+  contract and waits for asynchronous focus restoration. The final complete
+  journey passed in `73.674s` with zero runtime errors.
+- **REDESIGN:** not warranted; the product implementation and media stayed
+  unchanged while the stale harness contract was corrected.
+
 ### 2026-08-12 - `FRAB-011-v1` - KEEP
 
 - **KEEP:** derived cover-projection acceptance, private original-resolution

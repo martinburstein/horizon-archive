@@ -1,16 +1,16 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-012-v1`
+Map ID: `FRRM-012-v2`
 
-Current release authority: `FRAB-011-v1 / DISTINCT HOST 11 RELEASED`
+Current release authority: `FRAB-012-v1 / DISTINCT HOST 12 RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v10` / `FRCL-012-v1`
 
 Operations source inspected: `243edb4e`
 
-Released product candidate: `3b43d0b9`
+Released product candidate: `a2492745`
 
-Image product candidate reviewed: `57b7b396`
+Image product candidate reviewed: `89c06514`
 
 Released geometry / transport controls:
 `8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
@@ -18,20 +18,18 @@ Released geometry / transport controls:
 
 Released predecessor: `TD-012 / PASS - AS BUILT RELEASED`
 
-Date: **2026-08-12**
+Date: **2026-08-13**
 
-Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`
+Current released Work Order: `FRWO-012-v1 / Host 12 distinct encounter`
 
-Selected bounded Work Order: **`FRWO-012-v1 / Host 12 distinct encounter`**.
+Selected bounded Work Order: **none; next cycle requires fresh Commandant verification**.
 
-`FRWO-012-v1` allocates up to nine calls from Martin's rolling pool to the
-earliest remaining missing encounter. First complete PASS stops the local
-ledger; unused calls carry only after Intelligence releases this Work Order.
-Accepted media remains `22 / 125,903,080` until as-built acceptance.
+`FRWO-012-v1` is released from exact first attempt H12-1. H12-2..H12-9 are
+unused and carry to the next earliest missing encounter under Martin's rolling
+pool. Accepted media is `23 / 140,647,485`; no later encounter is selected.
 
-`FRWO-011-v1` is released from exact first attempt `H11-1`. Nine authorized
-calls are unused. Accepted media is `22 / 125,903,080`; Host 11 owns the
-unchanged native `L05-01 + L05-02` entry. Host 12 remains unauthorized.
+`FRWO-011-v1` remains the exact predecessor release from first attempt H11-1.
+Its historical inventory was `22 / 125,903,080` before this Host12 release.
 
 `FRWO-009-v8` is released. The first corrected-gate attempt passed technical,
 physical, derived-responsive, and live-browser review; it is integrated at the
@@ -157,21 +155,21 @@ game complete.
 | --- | --- | --- | --- | --- |
 | `FR-00` | Local package and launcher | Truthful local build opens `FR-01` | Product identity; no evidence | Truthful complete-game launcher/guide released by `FRAB-001-v1`; Demo Tour remains separate and unchanged |
 | `FR-01` | Title, Slot 01 setup, display name, prologue, Chapter I reveal | Final-purpose resumable opening reaches `FR-02` | Pilot/Suit ownership from the lock | Final-purpose opening, save v1, resume, and Chapter I reveal released by `FRAB-001-v1` |
-| `FR-02` | Chapter I — Glass Meadow | Existing low-growth/wet phase ridge reaches `FR-03` | Hosts 01-03; `L01-01` through `L01-03` | Hosts 01-03 exact; the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, unchanged route, and affected presentation are released by `FRAB-002-v1` |
-| `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Hosts 05-11 released; one accepted shared compression and seven exact hosts exist, while Hosts 12-15 remain missing |
-| `FR-04` | Chapter III — Witness Corridor | Damp heat-carrying channels reach `FR-05` | Host 16; `L05-07` | Silent, separate, privacy-preserving Terminal copy released; physical-host parity was outside the Work Order |
-| `FR-05` | Chapter IV — City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Direct credits-free handoff remains exact; the visible `successor packet` / `staging boundary` sentence is contradictory and two enriched hosts remain missing |
-| `FR-06` | Chapter V — Civic Record District | Heat/material margin reaches `FR-07` | Hosts 19-20; `PY009`, `RAI D1O1` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-07` | Chapter VI — Calibration Margin | Active bypass reaches `FR-08` | Hosts 21-22; `PY010`, `D2O7` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-08` | Chapter VII — Three-Current Reach | Serviced carrier reaches `FR-09` | Hosts 23-24; `PY011`, `D1O4` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-09` | Chapter VIII — Manyfold Return | Maintained bypass reaches `FR-10` | Hosts 25-26; `PY012`, `D1O5` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-10` | Chapter IX — Interval Works | Persistent outer joints reach `FR-11` | Hosts 27-28; `PY013`, `D1O6` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-11` | Chapter X — Braided Verge | Shared safe margin reaches `FR-12` | Hosts 29-30; `PY015`, `D1O7` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-12` | Chapter XI — Offset Reach | Visible continuities reach `FR-13` | Hosts 31-32; `PY016`, `D1O8` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-13` | Chapter XII — Occluded Fold | Reachable outer skirt reaches `FR-14` | Hosts 33-34; `PY017`, `D2O1` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-14` | Chapter XIII — Counterfield | One laminar margin reaches `FR-15` | Hosts 35-36; `PY018`, `D2O3` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-15` | Chapter XIV — Unborrowed Reach | Existing outer margin reaches `FR-16` | Hosts 37-38; `PY019`, `D2O4` | Compact chapter/learning released; both enriched hosts missing |
-| `FR-16` | Chapter XV — Measured Horizon | MH-40, exact remediation/review, or authorized return; no successor | Hosts 39-40; cumulative Python/readiness | Functional ending exact; final literary close not released runtime content |
+| `FR-02` | Chapter I â€” Glass Meadow | Existing low-growth/wet phase ridge reaches `FR-03` | Hosts 01-03; `L01-01` through `L01-03` | Hosts 01-03 exact; the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, unchanged route, and affected presentation are released by `FRAB-002-v1` |
+| `FR-03` | Chapter II â€” Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Hosts 05-12 released; one accepted shared compression and eight exact hosts exist, while Hosts 13-15 remain missing |
+| `FR-04` | Chapter III â€” Witness Corridor | Damp heat-carrying channels reach `FR-05` | Host 16; `L05-07` | Silent, separate, privacy-preserving Terminal copy released; physical-host parity was outside the Work Order |
+| `FR-05` | Chapter IV â€” City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Direct credits-free handoff remains exact; the visible `successor packet` / `staging boundary` sentence is contradictory and two enriched hosts remain missing |
+| `FR-06` | Chapter V â€” Civic Record District | Heat/material margin reaches `FR-07` | Hosts 19-20; `PY009`, `RAI D1O1` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-07` | Chapter VI â€” Calibration Margin | Active bypass reaches `FR-08` | Hosts 21-22; `PY010`, `D2O7` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-08` | Chapter VII â€” Three-Current Reach | Serviced carrier reaches `FR-09` | Hosts 23-24; `PY011`, `D1O4` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-09` | Chapter VIII â€” Manyfold Return | Maintained bypass reaches `FR-10` | Hosts 25-26; `PY012`, `D1O5` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-10` | Chapter IX â€” Interval Works | Persistent outer joints reach `FR-11` | Hosts 27-28; `PY013`, `D1O6` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-11` | Chapter X â€” Braided Verge | Shared safe margin reaches `FR-12` | Hosts 29-30; `PY015`, `D1O7` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-12` | Chapter XI â€” Offset Reach | Visible continuities reach `FR-13` | Hosts 31-32; `PY016`, `D1O8` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-13` | Chapter XII â€” Occluded Fold | Reachable outer skirt reaches `FR-14` | Hosts 33-34; `PY017`, `D2O1` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-14` | Chapter XIII â€” Counterfield | One laminar margin reaches `FR-15` | Hosts 35-36; `PY018`, `D2O3` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-15` | Chapter XIV â€” Unborrowed Reach | Existing outer margin reaches `FR-16` | Hosts 37-38; `PY019`, `D2O4` | Compact chapter/learning released; both enriched hosts missing |
+| `FR-16` | Chapter XV â€” Measured Horizon | MH-40, exact remediation/review, or authorized return; no successor | Hosts 39-40; cumulative Python/readiness | Functional ending exact; final literary close not released runtime content |
 
 ## Fixed route and checkpoint rules
 
@@ -189,7 +187,7 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 10` | Next distinct physical host and its unchanged owned lesson entry | Host 09 is released; Host 10 is earliest missing and no media or Work Order authority exists |
+| 1 | `FR-03 / Host 13` | Next distinct physical host and its unchanged owned lesson entry | Host 12 is released; Host 13 is earliest missing and requires a fresh sequential Work Order loop |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
