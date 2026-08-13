@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-MSN-002-v1`
+State ID: `FRLS-QTR-002-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / CORRECTED SHELL READY / QUARTERMASTER H14-2**
+Status: **OPERATE / QUARTERMASTER REVISE / REPRESENTATION REPLAN REQUIRED**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -66,11 +66,14 @@ observed:
   remaining_missing_physical_encounters_at_current_address: 2
   user_authorized_generation_call_pool: 32
   selected_host14_source_candidate_exists: false
-  quartermaster_report: FRCA-014-v1
+  quartermaster_report: FRCA-014-v2
   call_ledger: FRLG-014-v1
   h14_1_launch_consumed: true
   h14_1_technical_disposition: REJECT_FORMAT32BPPARGB_REQUIRES_FORMAT24BPPRGB
   h14_1_cleanup: PASS_EXACT_IDENTITY
+  h14_2_disposition: TECHNICAL_PASS_PHYSICAL_FAIL_HUMAN_DAM
+  h14_3_disposition: TECHNICAL_PASS_PHYSICAL_FAIL_HUMAN_DAM_AND_CROSSING
+  h14_2_h14_3_cleanup: PASS_EXACT_IDENTITY
   corrected_opacity_self_test: PASS_RGB_RGBA_AND_ALPHA254_REJECTION
   generator_dry_run: PASS_NO_CALL
   initial_prompt_identities: 8_FROZEN
@@ -84,7 +87,7 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: quartermaster
+active_owner: reconnaissance_sergeant_via_mission_captain
 information_actions_allowed:
   - inspect FRCE-014-v1, shell-owned authorities, null-first functional candidate, exact source/custody controls, and affected non-QA tests
 effect_actions_allowed:
@@ -102,7 +105,7 @@ prohibited_until_named_owner_and_stage:
 
 ```yaml
 potential:
-  hard_failures: 0_current_shell_candidate_unknown
+  hard_failures: 2_physical_source_rejections
   selected_encounter_missing: 0
   continuity_lock_ready: true
   work_order_ready: true
@@ -114,9 +117,9 @@ potential:
   final_holdout_passed: false
 budget:
   generation_calls_authorized: 32
-  generation_calls_used_this_cycle: 1
-  generation_calls_remaining: 31
-  initial_earned_tranche_after_shell: 7
+  generation_calls_used_this_cycle: 3
+  generation_calls_remaining: 29
+  initial_earned_tranche_after_shell: 5
   earned_extension_increment: 4
   concurrent_roles: 1
   role_order: strict_sequential
@@ -127,12 +130,14 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ## Strategy and continuation
 
 ```yaml
-active_strategy_family: frozen_cli_source_with_direct_opacity_verification
+active_strategy_family: physical_source_representation_replan
 rejected_strategy_families:
   - continue_prompt_search_under_format24bpprgb_gate
-continuation_reason: FRFC-014-v2 now directly verifies strict PNG structure and every decoded alpha sample without editing bytes; one H14-2 observation can test the corrected lawful source predicate
-decision: GATHER_EVIDENCE
-next_owner: quartermaster
+  - substrate_separation_that_resolves_as_human_dam
+  - dry_access_waterline_nonhuman_words_that_resolve_as_human_dam
+continuation_reason: two technical-pass source strategies independently retained the same terrestrial dam archetype and the second weakened the mandatory history crossing; remaining frozen prompts introduce no measured mechanism to escape that anchor
+decision: RETURN_TO_OWNER
+next_owner: reconnaissance_sergeant_via_mission_captain
 ```
 
 ## Commandant checkpoint
@@ -645,3 +650,50 @@ H14-1 remains consumed/rejected/deleted. H14-2 is the only next ordinal. The
 remaining initial tranche is seven calls, the total remaining pool is 31, and
 the complete verification reserve remains protected. Image Specialist is not
 authorized.
+
+## Quartermaster v2 resume checkpoint
+
+```yaml
+quartermaster_resume:
+  report: FRCA-014-v2
+  disposition: REVISE / REPRESENTATION REPLAN REQUIRED
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    corrected_preflight_and_self_test: PASS
+    h14_2_strict_truecolor_and_full_opacity: PASS
+    h14_2_private_physical_review: FAIL_HUMAN_DAM_AND_HUMAN_SERVICE_LOGIC
+    h14_3_strict_truecolor_and_full_opacity: PASS
+    h14_3_private_physical_review: FAIL_HUMAN_DAM_HISTORY_CROSSING_AND_HUMAN_SERVICE_LOGIC
+    source_mapping_and_six_layouts: NOT_EVALUATED_HIGHER_PHYSICAL_GATE_FAIL
+    source_import_registry_copy_provenance: NOT_STARTED
+    exact_identity_cleanup: PASS
+    product_and_release: UNCHANGED_NOT_STARTED
+    final_proof_reserve: FULL
+  delta_vs_best: zero_product_zero_media_zero_maturity_two_calls_positive_failure_information
+  budget_used:
+    generation_calls: 3_total_cycle_2_this_resume
+    media_imports: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 29
+    initial_tranche: 5
+    final_verification_reserve: FULL
+  remaining_uncertainty:
+    - one visibly alien but physically causal nonhuman construction grammar
+    - a future source that passes the complete physical and source-mapping gates
+    - future six-layout, accessibility, performance, served, E2E, and Intelligence proof
+    - human assistive-technology usability study
+  decision: RETURN_TO_OWNER
+  next_owner: reconnaissance_sergeant_via_mission_captain
+```
+
+H14-2 and H14-3 are consumed/rejected/deleted. The remaining frozen prompts
+are unspent, but no further call is evidence-earned because both technical-pass
+strategies resolved to the same familiar human infrastructure archetype and
+the second weakened the required history crossing. Reconnaissance must return
+through Mission with a versioned representation replan before Quartermaster
+may continue. Image Specialist is not authorized.
