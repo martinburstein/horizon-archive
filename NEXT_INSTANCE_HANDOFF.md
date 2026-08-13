@@ -2,16 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PLAYER EXPERIENCE READY / FRPX-012-v1 / NATIVE HOST 12`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-012-v1 / INERT HOST 12 SLOT`**
 
-Exact next owner: **one fresh Combat Engineer**
+Exact next owner: **one fresh Quartermaster**
 
-Implement the inert null-first Host 12 registry, accepted-only native scene,
-generic-to-native handoff, focus/recovery, pure derived responsive records, and
-focused regression tests exactly under `FRPX-012-v1`. Import no raster and
-populate no selected-source/copy scalar. Run the functional validation ladder,
-issue the Combat report, commit/push at `PRODUCTION FUNCTIONAL`, synchronize
-this handoff to fresh Quartermaster, and prove `HEAD == origin/main`.
+Verify the exact synced Combat candidate and all shell/prompt/CLI/path/media
+guards. Execute sequential `H12-1..H12-9` privately through the exact CLI,
+stopping at the first complete technical+physical+derived-responsive+
+accessibility PASS. Identity-delete every rejection before another call. Import
+and populate only the first PASS, prove scratch cleanup, issue the content
+report, and hand fresh Image Specialist. Never reveal any candidate.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
