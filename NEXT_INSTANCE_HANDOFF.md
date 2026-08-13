@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRAB-012-v1-HOLD-VR-04 / COMBAT ASYNC FOCUS SETTLE`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-012-v1-VR-05 / INTELLIGENCE E2E RELEASE GATE`**
 
-Exact next owner: **one fresh Combat Engineer**
+Exact next owner: **one fresh Intelligence Officer**
 
-Correct only both selected Single Agent close/reopen checks: wait until the
-native Host12 boundary is `document.activeElement`, then retain the exact focus
-assertion, native `USE`, and activation. Extend focused coverage; change no
-product/media/copy/CSS/save/lesson code. Commit/push and route fresh
-Intelligence for one sole complete E2E.
+Independently inspect `FRCE-012-v1-VR-05`, then run exactly one new complete
+clean-start E2E. On PASS, release `FRAB-012-v1`, advance only accepted as-built
+maturity/inventory, preserve eight rolling calls, and route one fresh
+Commandant for the next earliest missing encounter. On failure, HOLD at the
+earliest exact owner. Do not alter product/media/copy/CSS.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
