@@ -1,0 +1,45 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-14",
+  "status": "ready",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-14-v1.md",
+  "target": {
+    "width": 3840,
+    "height": 2160,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "concepts": 3,
+    "targeted_edits": 2,
+    "concurrency": 1
+  },
+  "must_show": [
+    "a low concave constructed shelf with a dry reachable approach",
+    "three visibly different nonhuman material histories that overlap and interlock",
+    "one irregular physical trace crossing all three histories and reacting differently in each",
+    "branching recessed service voids",
+    "receded water kept laterally away from the dry route"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "silent physical evidence without a world response"
+  ],
+  "avoid": [
+    "dam or barrier silhouette",
+    "human pipes, cables, clamps, drains, roads, buildings, or machinery",
+    "ordinary natural lakebed or geological strata",
+    "writing, glyphs, UI, characters, glow, reward, answer, or watermark"
+  ],
+  "integration": {
+    "product_path": null,
+    "alt_text": null,
+    "interaction_geometry": null
+  }
+}
+

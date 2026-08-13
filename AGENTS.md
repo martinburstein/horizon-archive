@@ -67,6 +67,14 @@ and reduced motion. Image generation, image editing/replacement/variation/
 import, and cycle reveals remain disabled unless Martin explicitly changes
 that boundary.
 
+Martin changed that boundary on 2026-08-13 for the reusable lightweight image
+workflow in `Production Pipeline/Image Toolkit/README.md`. Use that toolkit for
+new raster concepts, targeted edits, normalization, and accepted-image
+receipts. It supersedes the closed FRM15 guide/custody mechanism for future
+image production. Do not rebuild a bespoke multi-agent production system for
+an individual image. The full First Run workflow still governs product
+integration, accessibility, regression proof, release, and maturity changes.
+
 Automation is disabled by default. Do not create, restart, or infer a First Run
 schedule from an archived prompt or prior program. Only Martin's explicit
 authorization plus the exact current `NEXT_INSTANCE_HANDOFF.md` may enable it.

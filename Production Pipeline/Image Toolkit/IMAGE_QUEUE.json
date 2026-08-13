@@ -1,0 +1,35 @@
+{
+  "schema": "horizon.image-queue.v1",
+  "updated": "2026-08-13",
+  "ordering": "earliest-first canonical route",
+  "items": [
+    {"asset_id": "host-14", "address": "FR-03", "status": "ready", "card": "cards/host-14.json"},
+    {"asset_id": "host-15", "address": "FR-03", "status": "queued"},
+    {"asset_id": "host-16", "address": "FR-04", "status": "queued"},
+    {"asset_id": "host-17", "address": "FR-05", "status": "queued"},
+    {"asset_id": "host-18", "address": "FR-05", "status": "queued"},
+    {"asset_id": "host-19", "address": "FR-06", "status": "queued"},
+    {"asset_id": "host-20", "address": "FR-06", "status": "queued"},
+    {"asset_id": "host-21", "address": "FR-07", "status": "queued"},
+    {"asset_id": "host-22", "address": "FR-07", "status": "queued"},
+    {"asset_id": "host-23", "address": "FR-08", "status": "queued"},
+    {"asset_id": "host-24", "address": "FR-08", "status": "queued"},
+    {"asset_id": "host-25", "address": "FR-09", "status": "queued"},
+    {"asset_id": "host-26", "address": "FR-09", "status": "queued"},
+    {"asset_id": "host-27", "address": "FR-10", "status": "queued"},
+    {"asset_id": "host-28", "address": "FR-10", "status": "queued"},
+    {"asset_id": "host-29", "address": "FR-11", "status": "queued"},
+    {"asset_id": "host-30", "address": "FR-11", "status": "queued"},
+    {"asset_id": "host-31", "address": "FR-12", "status": "queued"},
+    {"asset_id": "host-32", "address": "FR-12", "status": "queued"},
+    {"asset_id": "host-33", "address": "FR-13", "status": "queued"},
+    {"asset_id": "host-34", "address": "FR-13", "status": "queued"},
+    {"asset_id": "host-35", "address": "FR-14", "status": "queued"},
+    {"asset_id": "host-36", "address": "FR-14", "status": "queued"},
+    {"asset_id": "host-37", "address": "FR-15", "status": "queued"},
+    {"asset_id": "host-38", "address": "FR-15", "status": "queued"},
+    {"asset_id": "host-39", "address": "FR-16", "status": "queued"},
+    {"asset_id": "host-40", "address": "FR-16", "status": "queued"}
+  ]
+}
+

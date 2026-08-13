@@ -40,3 +40,6 @@ Desktop.ini
 /Concept Art Book/References/terminal-gif-inspiration/extracted/frames/full-resolution/
 /Concept Art Book/References/terminal-gif-inspiration/extracted/audio/
 /Concept Art Book/References/terminal-gif-inspiration/extracted/contact-sheets/
+
+# Lightweight image-production scratch space; accepted assets live in product paths
+/Production Pipeline/Image Toolkit/work/

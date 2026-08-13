@@ -363,18 +363,28 @@ Every First Run stage preserves:
 - first-person maximum-quality cinematic identity; and
 - protected user files named in `NEXT_INSTANCE_HANDOFF.md`.
 
-## Non-generative presentation boundary
+## Lightweight image-production boundary
 
-Image generation and cycle reveals remain disabled. No First Run role may
-generate, edit, replace, vary, import, or publish an image, or treat concept art
-as runtime-integrated evidence. Existing accepted runtime media is immutable
-unless Martin explicitly authorizes a later asset operation.
+Martin authorized the reusable lightweight image workflow at
+`Production Pipeline/Image Toolkit/README.md` on 2026-08-13. New concepts and
+targeted edits may use the built-in image-generation tool under an active exact
+handoff. Ordinary creative iteration does not require the eleven-role First
+Run sequence, a bespoke guide schema, a custody DAG, or per-call Mission
+variance. Default production is three concepts, visual selection, and at most
+two single-change edits; first acceptable result stops.
+
+Generation does not equal integration. Existing accepted runtime media remains
+immutable, a selected concept stays outside the product until its final path,
+receipt, crop, alternative text, interaction geometry, accessibility,
+performance, rollback, and affected tests are complete, and First Run retains
+authority over product integration, release, and maturity.
 
 The Image Specialist remains useful and active for code- and configuration-
 level runtime presentation: composition, crop use, lighting treatment, color,
 sound, motion, typography, hierarchy, focus visibility, responsive containment,
 forced color, and reduced motion. The role may not change media bytes or create
-a reveal.
+a reveal unless the active handoff expressly authorizes the lightweight image
+workflow.
 
 ## Intelligence close and program stop
 

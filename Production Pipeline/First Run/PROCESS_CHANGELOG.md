@@ -8,6 +8,24 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-13 - Lightweight image production - REDESIGN
+
+- **KEEP:** built-in image generation, concise production prompts, visual
+  comparison, targeted single-change edits, deterministic RGB/PNG
+  normalization, accepted-only import, provenance receipts, responsive and
+  accessibility integration checks, and first-acceptable-result stopping.
+- **TUNE:** default to three concepts and at most two edits per asset. Retain
+  only the accepted result, its prompt/card/receipt, and genuinely useful
+  references. Rejected variants do not require a custody ceremony.
+- **TUNE:** separate creative selection from product integration. Creative
+  iteration uses visual judgment; integration runs only invalidated product
+  checks and reuses exact-commit evidence elsewhere.
+- **REDESIGN:** the closed FRM15 guide schemas, append-only custody DAG,
+  restoration variances, and per-call role choreography are not reusable image
+  requirements. The durable successor is
+  `Production Pipeline/Image Toolkit/README.md` plus one small self-testing
+  normalization/receipt utility and an earliest-first asset queue.
+
 ### 2026-08-13 - `FRWO-015-v1` terminal hold - TUNE
 
 - **KEEP:** deterministic guide hard gates, append-only provenance, finite
