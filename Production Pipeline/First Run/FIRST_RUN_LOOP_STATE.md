@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-TAC-005-v1`
+State ID: `FRLS-CBT-002-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **PLAYER EXPERIENCE READY / GUIDE-TO-SOURCE GEOMETRY AND ATOMIC FALLBACK / COMBAT NEXT**
+Status: **PRODUCTION FUNCTIONAL / V2 NULL-FIRST SOURCE LAW / QUARTERMASTER NEXT**
 
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
 
@@ -28,7 +28,7 @@ state:
   best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
   committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
   committed_product_tree: 612a7d53c4563bfd0bdb7eeca110f715e5c82
-  active_owner: combat_engineer
+  active_owner: quartermaster
   controller_state: GATHER_EVIDENCE
 representation:
   cycle_namespace: FRM15
@@ -86,7 +86,7 @@ potential:
   guide_structure: NOT_CREATED
   directorial_treatment: LOCKED
   tactical_blueprint: LOCKED
-  runtime_v2_source_law: NOT_IMPLEMENTED
+  runtime_v2_source_law: IMPLEMENTED_AND_FOCUSED_PASS
   source_and_provenance: UNKNOWN
   runtime_integration: NULL_FIRST_REUSED
   exact_candidate_vs_best: NO_CANDIDATE
@@ -97,17 +97,64 @@ decision_evidence:
   - guide controls and visible-pixel truth now have independent falsifiable roles
   - no product input changed so prior behavior evidence is reused
   - Combat is the next least-powerful sufficient owner for the v2 null-first migration
-next_owner: combat_engineer
+next_owner: quartermaster
 ```
 
-Exact Combat action: read `FRPX-015-v1`, `FRSH-015-v1`, `FRCT-015-v1`,
-`FRWO-015-v1`, `FRVE-015-v1`, this state, the frozen guide/control identities,
-and the exact predecessor registry/projection/interaction/focus/recovery code
-and focused tests. Implement only the smallest fail-closed v2 source-law,
-deterministic guide-core mapping, new schema failure modes, and
-`FRPBA-015-v1` overlay with source disabled/null. Run only the changed-input
-focused checks; expand only for a documented shared-boundary invalidation.
-Issue `FRCE-015-v1`, make the dedicated Combat commit and required push, then
-hand Quartermaster the synchronized candidate. Do not build/view guides, call
-or inspect/edit/import media, populate selected-source fields, change protected
-meaning, perform presentation polish, or advance maturity.
+## Combat checkpoint
+
+```yaml
+combat:
+  report: FRCE-015-v1
+  disposition: PRODUCTION_FUNCTIONAL_V2_NULL_FIRST_QUARTERMASTER_READY
+  current_ref: FRCE-015-v1_pending_dedicated_commit
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: bounded_product_effect
+  changed:
+    - v2 exact source and provenance identity law
+    - separate visible-pixel and noncanonical control geometry
+    - exact pure guide-core point rectangle and polyline mapping
+    - contact reaction seam-DAG protection alias and layout fail-closed law
+    - minimal source-dependent FRPBA-015 overlay
+  unchanged:
+    - source disabled null and runtime URL null
+    - App route lessons copy Terminal save privacy ending CSS fixtures E2E dependencies
+    - accepted media 24/154163567 and released generic rollback
+  evidence_fresh:
+    focused_v2: 13/13_PASS
+    production_build: 234_modules_PASS
+    null_first_pba_observation: JS_1765598_CSS_121983_MAPS0_ASSETS27_RASTERS24_SOURCE_ABSENT
+    frpba015_syntax: PASS
+  evidence_reused:
+    related: FRCE-014_63/63
+    cold_full: FRCE-014_1047/1047
+    curriculum_readiness: FRCE-014_40/40
+    fixture_build: FRCE-014_57_modules
+    release_holdout: FRAB-013_only
+  not_claimed:
+    - guide build view or custody
+    - generation edit transform private pixel review or import
+    - selected-source PBA served browser E2E or release holdout
+  budget_used:
+    guide_families: 0
+    stochastic_calls: 0
+    deterministic_media_operations: 0
+    private_candidate_inspections: 0
+    browser_or_e2e: 0
+  final_proof: FULL_PROTECTED
+  remaining_uncertainty:
+    - actual guide and built-in output identity/adherence
+    - visible physical measurements and accepted provenance DAG
+    - source-enabled layout accessibility performance and journey proof
+    - human assistive-technology usability study
+    - exact product candidate and independent release
+  decision: GATHER_EVIDENCE
+  next_owner: quartermaster
+```
+
+Exact Quartermaster action: execute only the frozen G01/custody/built-in graph
+under `FRSH-015-v1`, stop at the first complete private PASS, import only exact
+accepted bytes, and populate the FRCE-015 placeholder ledger atomically. Guide
+controls cannot populate visible fields. Any absent, rejected, partial, stale,
+aliased, mismatched, or malformed source preserves the disabled v2 registry
+and exact generic rollback.

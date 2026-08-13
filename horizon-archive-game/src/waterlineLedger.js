@@ -7,7 +7,9 @@ import {
   rectanglesOverlap,
 } from "./responsiveImageProjection.js";
 
-export const WATERLINE_LEDGER_SCHEMA = "horizon.waterline-ledger.v1";
+export const WATERLINE_LEDGER_SCHEMA = "horizon.waterline-ledger.v2";
+export const WATERLINE_LEDGER_SOURCE_ID = "FRM15-A01";
+export const WATERLINE_LEDGER_PROVENANCE_SCHEMA = "horizon.first-run.frm15-source-provenance.v1";
 export const WATERLINE_LEDGER_PATH = "Visual Direction/Production Masters/2026-08-13-first-run-host14/host14-waterline-ledger-master-v1.png";
 export const WATERLINE_LEDGER_SOURCE_URL = null;
 
@@ -33,32 +35,63 @@ const freeze = (value) => {
   return value;
 };
 
-const nullSource = { enabled: false, path: null, attemptId: null, bytes: null, sha256: null, width: null, height: null, format: null, color: null };
+const nullSource = { enabled: false, path: null, sourceId: null, bytes: null, sha256: null, width: null, height: null, format: null, color: null };
 const nullLayouts = { desktop: null, laptop: null, narrow: null, effective200: null, retained320x180: null, retained320x240: null };
+const nullProtected = { predecessor: null, nextBoundary: null, liveWater: null, returnRoute: null, suspendedLandmark: null, crown: null, witness: null, narrationUi: null };
+
+export const WATERLINE_LEDGER_GUIDE_CORE = freeze({
+  canvas: { width: 1536, height: 1024 },
+  core: { x: 0, y: 80, width: 1536, height: 864 },
+  source: { width: 3840, height: 2160 },
+  scale: 2.5,
+});
+
+export const WATERLINE_LEDGER_CONTROL_GEOMETRY = freeze({
+  semanticTarget: { x: 750, y: 362.5, width: 2550, height: 1337.5 },
+  physicalCenter: { x: 1920, y: 1050 },
+  labelAnchor: { x: 1387.5, y: 50, width: 1065, height: 225, insetOuterCss: 3, insetTextCss: 5, focusSeparationCss: 8 },
+  protected: {
+    predecessor: { x: 0, y: 1425, width: 325, height: 735 },
+    nextBoundary: { x: 3515, y: 550, width: 325, height: 650 },
+    liveWater: { x: 3575, y: 1262.5, width: 265, height: 897.5 },
+    returnRoute: { x: 0, y: 550, width: 287.5, height: 625 },
+    suspendedLandmark: { x: 3375, y: 0, width: 465, height: 425 },
+    crown: { x: 3400, y: 675, width: 440, height: 425 },
+    witness: { x: 0, y: 0, width: 440, height: 425 },
+    narrationUi: { x: 1300, y: 0, width: 1240, height: 287.5 },
+  },
+});
 
 export const WATERLINE_LEDGER_REGISTRY = freeze({
   schema: WATERLINE_LEDGER_SCHEMA,
   source: nullSource,
   provenance: null,
-  relation: null,
-  dryApproach: null,
-  histories: { foundation: null, repair: null, serviceSkin: null },
-  depositionBand: null,
-  waterline: null,
-  serviceSeams: [],
-  semanticTarget: null,
-  physicalCenter: null,
-  labelAnchor: null,
-  protected: { predecessor: null, nextBoundary: null, liveWater: null, returnRoute: null, suspendedLandmark: null, crown: null, witness: null },
+  visibleGeometry: {
+    relation: null,
+    dryApproach: null,
+    histories: { foundation: null, repair: null, serviceSkin: null },
+    pairwiseContacts: { foundationRepair: [], foundationServiceSkin: [], repairServiceSkin: [] },
+    depositionTrace: null,
+    waterline: null,
+    serviceSeams: [],
+  },
+  controlGeometry: { semanticTarget: null, physicalCenter: null, labelAnchor: null, protected: nullProtected },
   layouts: nullLayouts,
   copy: null,
 });
 
-const ROOT_KEYS = ["schema", "source", "provenance", "relation", "dryApproach", "histories", "depositionBand", "waterline", "serviceSeams", "semanticTarget", "physicalCenter", "labelAnchor", "protected", "layouts", "copy"];
-const SOURCE_KEYS = ["enabled", "path", "attemptId", "bytes", "sha256", "width", "height", "format", "color"];
-const PROVENANCE_KEYS = ["schema", "path", "attemptId", "bytes", "sha256"];
+const ROOT_KEYS = ["schema", "source", "provenance", "visibleGeometry", "controlGeometry", "layouts", "copy"];
+const SOURCE_KEYS = ["enabled", "path", "sourceId", "bytes", "sha256", "width", "height", "format", "color"];
+const PROVENANCE_KEYS = ["schema", "path", "sourceId", "bytes", "sha256"];
+const VISIBLE_KEYS = ["relation", "dryApproach", "histories", "pairwiseContacts", "depositionTrace", "waterline", "serviceSeams"];
+const CONTROL_KEYS = ["semanticTarget", "physicalCenter", "labelAnchor", "protected"];
 const HISTORY_KEYS = ["foundation", "repair", "serviceSkin"];
-const PROTECTED_KEYS = ["predecessor", "nextBoundary", "liveWater", "returnRoute", "suspendedLandmark", "crown", "witness"];
+const HISTORY_VALUE_KEYS = ["bounds", "processEvidence"];
+const CONTACT_KEYS = ["foundationRepair", "foundationServiceSkin", "repairServiceSkin"];
+const TRACE_KEYS = ["bounds", "points", "reactions"];
+const REACTION_KEYS = ["foundation", "repair", "serviceSkin"];
+const SEAM_KEYS = ["id", "parent", "points"];
+const PROTECTED_KEYS = ["predecessor", "nextBoundary", "liveWater", "returnRoute", "suspendedLandmark", "crown", "witness", "narrationUi"];
 const LAYOUT_KEYS = Object.keys(FIRST_RUN_RESPONSIVE_LAYOUTS);
 const COPY_KEYS = Object.keys(WATERLINE_LEDGER_COPY);
 const finite = (value) => typeof value === "number" && Number.isFinite(value);
@@ -82,6 +115,40 @@ const boundsForPoints = (points) => {
 const intersectsRect = (points, area) => points.some((entry) => pointInRect(entry, area))
   || rectanglesOverlap(boundsForPoints(points), area);
 const equalJson = (left, right) => JSON.stringify(left) === JSON.stringify(right);
+const distinctObjects = (values) => new Set(values).size === values.length && new Set(values.map((value) => JSON.stringify(value))).size === values.length;
+const pointOnPolyline = (value, points) => points.some((entry) => entry.x === value.x && entry.y === value.y);
+const hasSharedObjectAlias = (root) => {
+  const seen = new WeakSet();
+  const visit = (value) => {
+    if (value == null || typeof value !== "object") return false;
+    if (seen.has(value)) return true;
+    seen.add(value);
+    return Object.values(value).some(visit);
+  };
+  return visit(root);
+};
+
+export function mapWaterlineLedgerGuidePoint(value) {
+  const x = Array.isArray(value) && value.length === 2 ? value[0] : value?.x;
+  const y = Array.isArray(value) && value.length === 2 ? value[1] : value?.y;
+  if (!(Array.isArray(value) ? value.length === 2 : sameKeys(value, ["x", "y"])) || !finite(x) || !finite(y)
+    || x < 0 || x > 1536 || y < 80 || y > 944) return null;
+  return freeze({ x: x * 2.5, y: (y - 80) * 2.5 });
+}
+
+export function mapWaterlineLedgerGuideRect(value) {
+  if (!sameKeys(value, ["x", "y", "width", "height"]) || ![value.x, value.y, value.width, value.height].every(finite)
+    || value.width <= 0 || value.height <= 0) return null;
+  const left = mapWaterlineLedgerGuidePoint({ x: value.x, y: value.y });
+  const right = mapWaterlineLedgerGuidePoint({ x: value.x + value.width, y: value.y + value.height });
+  return left && right ? freeze({ x: left.x, y: left.y, width: right.x - left.x, height: right.y - left.y }) : null;
+}
+
+export function mapWaterlineLedgerGuidePolyline(value) {
+  if (!Array.isArray(value) || value.length < 2) return null;
+  const mapped = value.map(mapWaterlineLedgerGuidePoint);
+  return mapped.every(Boolean) ? freeze(mapped) : null;
+}
 
 function copyPass(copy) {
   return sameKeys(copy, COPY_KEYS) && COPY_KEYS.every((key) => typeof copy[key] === "string" && copy[key] === WATERLINE_LEDGER_COPY[key]);
@@ -91,54 +158,89 @@ function sourcePass(source, provenance) {
   return sameKeys(source, SOURCE_KEYS)
     && source.enabled === true
     && source.path === WATERLINE_LEDGER_PATH
-    && /^H14-(?:[1-9]|[12][0-9]|3[0-2])$/.test(source.attemptId ?? "")
+    && source.sourceId === WATERLINE_LEDGER_SOURCE_ID
     && Number.isInteger(source.bytes) && source.bytes > 0 && source.bytes <= 30000000
     && /^[0-9a-f]{64}$/.test(source.sha256 ?? "")
     && source.width === 3840 && source.height === 2160
     && source.format === "png" && source.color === "opaque-srgb-8"
     && sameKeys(provenance, PROVENANCE_KEYS)
-    && provenance.schema === "horizon.first-run.source-provenance.v1"
-    && provenance.path === source.path && provenance.attemptId === source.attemptId
+    && provenance.schema === WATERLINE_LEDGER_PROVENANCE_SCHEMA
+    && provenance.path === source.path && provenance.sourceId === source.sourceId
     && provenance.bytes === source.bytes && provenance.sha256 === source.sha256;
 }
 
 function geometryPass(registry) {
-  if (!sameKeys(registry, ROOT_KEYS) || registry.schema !== WATERLINE_LEDGER_SCHEMA) return false;
-  if (!sameKeys(registry.histories, HISTORY_KEYS) || !sameKeys(registry.protected, PROTECTED_KEYS)) return false;
-  const { foundation, repair, serviceSkin } = registry.histories;
-  if (![registry.relation, registry.dryApproach, foundation, repair, serviceSkin, registry.waterline, registry.semanticTarget].every((entry) => rect(entry))) return false;
-  if (foundation === repair || foundation === serviceSkin || repair === serviceSkin || equalJson(foundation, repair) || equalJson(foundation, serviceSkin) || equalJson(repair, serviceSkin)) return false;
-  if (!sameKeys(registry.depositionBand, ["bounds", "points"]) || !rect(registry.depositionBand.bounds) || !polyline(registry.depositionBand.points) || registry.depositionBand.points.length < 4) return false;
-  if (!registry.depositionBand.points.every((entry) => pointInRect(entry, registry.depositionBand.bounds))) return false;
-  if (![foundation, repair, serviceSkin].every((entry) => intersectsRect(registry.depositionBand.points, entry))) return false;
-  const deltas = registry.depositionBand.points.slice(1).map((entry, index) => `${entry.x - registry.depositionBand.points[index].x}:${entry.y - registry.depositionBand.points[index].y}`);
-  if (new Set(deltas).size < 2) return false;
-  if (!Array.isArray(registry.serviceSeams) || registry.serviceSeams.length < 3 || !registry.serviceSeams.every(polyline)) return false;
-  const seamIds = registry.serviceSeams.map((seam) => JSON.stringify(seam));
-  if (new Set(seamIds).size !== seamIds.length || !registry.serviceSeams.every((seam) => seam.at(-1).y < seam[0].y)) return false;
-  if (!point(registry.physicalCenter) || !pointInRect(registry.physicalCenter, registry.semanticTarget) || !pointInRect(registry.physicalCenter, registry.relation)) return false;
-  if (!sameKeys(registry.labelAnchor, ["x", "y", "width", "height", "insetOuterCss", "insetTextCss", "focusSeparationCss"])) return false;
-  const labelRect = { x: registry.labelAnchor.x, y: registry.labelAnchor.y, width: registry.labelAnchor.width, height: registry.labelAnchor.height };
-  if (!rect(labelRect) || registry.labelAnchor.insetOuterCss < 3 || registry.labelAnchor.insetTextCss < 5 || registry.labelAnchor.focusSeparationCss < 8) return false;
-  if (!PROTECTED_KEYS.every((key) => rect(registry.protected[key]))) return false;
-  if (rectanglesOverlap(registry.semanticTarget, registry.protected.liveWater) || !rectanglesOverlap(registry.dryApproach, registry.relation)) return false;
+  const fail = () => false;
+  if (!sameKeys(registry, ROOT_KEYS) || registry.schema !== WATERLINE_LEDGER_SCHEMA) return fail("root-schema");
+  if (!sameKeys(registry.visibleGeometry, VISIBLE_KEYS) || !sameKeys(registry.controlGeometry, CONTROL_KEYS)) return fail("geometry-keys");
+  const visible = registry.visibleGeometry;
+  const control = registry.controlGeometry;
+  if (hasSharedObjectAlias({ visible, control })) return fail("geometry-object-alias");
+  if (!sameKeys(visible.histories, HISTORY_KEYS) || !sameKeys(visible.pairwiseContacts, CONTACT_KEYS)
+    || !sameKeys(control.protected, PROTECTED_KEYS) || !equalJson(control, WATERLINE_LEDGER_CONTROL_GEOMETRY)) return fail("control-identity");
+  const histories = HISTORY_KEYS.map((key) => visible.histories[key]);
+  if (!histories.every((entry) => sameKeys(entry, HISTORY_VALUE_KEYS) && rect(entry.bounds)
+    && Array.isArray(entry.processEvidence) && entry.processEvidence.length > 0 && entry.processEvidence.every((area) => rect(area) && rectanglesOverlap(area, entry.bounds)))) return fail("history-evidence");
+  if (!distinctObjects(histories) || !distinctObjects(histories.map((entry) => entry.bounds))) return fail("history-alias");
+  if (![visible.relation, visible.dryApproach, visible.waterline, control.semanticTarget].every((entry) => rect(entry))) return fail("primary-rects");
+  const contacts = Object.values(visible.pairwiseContacts).flat();
+  if (!CONTACT_KEYS.every((key) => Array.isArray(visible.pairwiseContacts[key]) && visible.pairwiseContacts[key].length >= 2
+    && visible.pairwiseContacts[key].every((area) => rect(area))) || !distinctObjects(contacts)) return fail("contact-shape-alias");
+  const pairs = { foundationRepair: ["foundation", "repair"], foundationServiceSkin: ["foundation", "serviceSkin"], repairServiceSkin: ["repair", "serviceSkin"] };
+  if (!CONTACT_KEYS.every((key) => visible.pairwiseContacts[key].every((area) => pairs[key].every((history) => rectanglesOverlap(area, visible.histories[history].bounds))))) return fail("contact-process");
+  if (!sameKeys(visible.depositionTrace, TRACE_KEYS) || !rect(visible.depositionTrace.bounds)
+    || !polyline(visible.depositionTrace.points) || visible.depositionTrace.points.length < 4
+    || !sameKeys(visible.depositionTrace.reactions, REACTION_KEYS)) return fail("trace-shape");
+  if (!visible.depositionTrace.points.every((entry) => pointInRect(entry, visible.depositionTrace.bounds))) return fail("trace-bounds");
+  if (!HISTORY_KEYS.every((key) => intersectsRect(visible.depositionTrace.points, visible.histories[key].bounds))) return fail("trace-process");
+  if (!HISTORY_KEYS.every((key) => pointOnPolyline(visible.depositionTrace.reactions[key], visible.depositionTrace.points)
+    && pointInRect(visible.depositionTrace.reactions[key], visible.histories[key].bounds))) return fail("trace-reaction");
+  const deltas = visible.depositionTrace.points.slice(1).map((entry, index) => `${entry.x - visible.depositionTrace.points[index].x}:${entry.y - visible.depositionTrace.points[index].y}`);
+  if (new Set(deltas).size < 2) return fail("trace-regular");
+  if (!Array.isArray(visible.serviceSeams) || visible.serviceSeams.length < 4
+    || !visible.serviceSeams.every((seam) => sameKeys(seam, SEAM_KEYS) && typeof seam.id === "string" && seam.id.length > 0
+      && (seam.parent === null || typeof seam.parent === "string") && polyline(seam.points))) return fail("seam-shape");
+  const ids = visible.serviceSeams.map((seam) => seam.id);
+  if (new Set(ids).size !== ids.length || !distinctObjects(visible.serviceSeams.map((seam) => seam.points))) return fail("seam-alias");
+  const mains = visible.serviceSeams.filter((seam) => seam.parent === null);
+  const branches = visible.serviceSeams.filter((seam) => seam.parent !== null);
+  if (mains.length < 3 || !mains.every((seam) => seam.points.at(-1).y < seam.points[0].y)
+    || branches.length < 1 || !branches.every((branch) => {
+      const parent = visible.serviceSeams.find((seam) => seam.id === branch.parent);
+      return parent && pointOnPolyline(branch.points[0], parent.points);
+    })) return fail("seam-branch");
+  if (!point(control.physicalCenter) || !pointInRect(control.physicalCenter, control.semanticTarget) || !pointInRect(control.physicalCenter, visible.relation)) return fail("physical-center");
+  if (!sameKeys(control.labelAnchor, ["x", "y", "width", "height", "insetOuterCss", "insetTextCss", "focusSeparationCss"])) return fail("label-shape");
+  const labelRect = { x: control.labelAnchor.x, y: control.labelAnchor.y, width: control.labelAnchor.width, height: control.labelAnchor.height };
+  if (!rect(labelRect) || control.labelAnchor.insetOuterCss < 3 || control.labelAnchor.insetTextCss < 5 || control.labelAnchor.focusSeparationCss < 8) return fail("label-insets");
+  if (!PROTECTED_KEYS.every((key) => rect(control.protected[key]))) return fail("protected-shape");
+  if (PROTECTED_KEYS.some((key) => rectanglesOverlap(control.semanticTarget, control.protected[key]))
+    || !rectanglesOverlap(visible.dryApproach, visible.relation)
+    || !rectanglesOverlap(labelRect, control.protected.narrationUi)
+    || PROTECTED_KEYS.filter((key) => key !== "narrationUi").some((key) => rectanglesOverlap(labelRect, control.protected[key]))) return fail("protected-overlap");
   return true;
 }
 
 export function deriveWaterlineLedgerResponsiveEvidence(registry = WATERLINE_LEDGER_REGISTRY) {
   if (!geometryPass(registry)) return null;
-  const essentialRects = [registry.dryApproach, ...Object.values(registry.histories), registry.depositionBand.bounds, registry.waterline, ...registry.serviceSeams.map(boundsForPoints), { x: registry.physicalCenter.x, y: registry.physicalCenter.y, width: 1, height: 1 }];
-  const protectedRects = Object.values(registry.protected);
+  const visible = registry.visibleGeometry;
+  const control = registry.controlGeometry;
+  const essentialRects = [visible.dryApproach, ...Object.values(visible.histories).flatMap((entry) => [entry.bounds, ...entry.processEvidence]),
+    ...Object.values(visible.pairwiseContacts).flat(), visible.depositionTrace.bounds, visible.waterline,
+    ...visible.serviceSeams.map((seam) => boundsForPoints(seam.points)), { x: control.physicalCenter.x, y: control.physicalCenter.y, width: 1, height: 1 }];
+  const protectedRects = Object.values(control.protected);
   const entries = Object.entries(FIRST_RUN_RESPONSIVE_LAYOUTS).map(([id, viewport]) => {
-    const base = deriveResponsiveEvidence({ viewport, sourceWidth: 3840, sourceHeight: 2160, relation: registry.relation, semanticTarget: registry.semanticTarget, essentialRects, protectedRects, objectFit: "cover", objectPosition: "50% 50%" });
+    const base = deriveResponsiveEvidence({ viewport, sourceWidth: 3840, sourceHeight: 2160, relation: visible.relation, semanticTarget: control.semanticTarget, essentialRects, protectedRects, objectFit: "cover", objectPosition: "50% 50%" });
     if (!base) return [id, null];
-    const label = projectSourceRect({ x: registry.labelAnchor.x, y: registry.labelAnchor.y, width: registry.labelAnchor.width, height: registry.labelAnchor.height }, base.geometry);
-    const physical = projectSourceRect({ x: registry.physicalCenter.x, y: registry.physicalCenter.y, width: 1, height: 1 }, base.geometry);
+    const label = projectSourceRect({ x: control.labelAnchor.x, y: control.labelAnchor.y, width: control.labelAnchor.width, height: control.labelAnchor.height }, base.geometry);
+    const physical = projectSourceRect({ x: control.physicalCenter.x, y: control.physicalCenter.y, width: 1, height: 1 }, base.geometry);
     const labelVisible = label?.visible;
     const labelContained = Boolean(labelVisible && Math.abs(labelVisible.width - label.width) < 1e-6 && Math.abs(labelVisible.height - label.height) < 1e-6);
-    const labelProtectedOverlap = protectedRects.map((entry) => projectSourceRect(entry, base.geometry)).filter((entry) => rectanglesOverlap(labelVisible, entry?.visible)).length;
+    const labelProtectedOverlap = PROTECTED_KEYS.filter((key) => key !== "narrationUi")
+      .map((key) => projectSourceRect(control.protected[key], base.geometry)).filter((entry) => rectanglesOverlap(labelVisible, entry?.visible)).length;
+    const labelInNarrationUi = rectanglesOverlap(labelVisible, projectSourceRect(control.protected.narrationUi, base.geometry)?.visible);
     const physicalCenterInTarget = physical.centerX >= base.target.x && physical.centerX <= base.target.x + base.target.width && physical.centerY >= base.target.y && physical.centerY <= base.target.y + base.target.height;
-    return [id, freeze({ ...base, label, labelContained, labelProtectedOverlap, physicalCenterInTarget })];
+    return [id, freeze({ ...base, label, labelContained, labelProtectedOverlap, labelInNarrationUi, physicalCenterInTarget })];
   });
   return freeze(Object.fromEntries(entries));
 }
@@ -155,6 +257,7 @@ export function buildWaterlineLedgerLayoutRecords(registry) {
     protectedOverlap: value.protectedOverlap,
     labelContained: value.labelContained,
     labelProtectedOverlap: value.labelProtectedOverlap,
+    labelInNarrationUi: value.labelInNarrationUi,
   }])));
 }
 
@@ -163,13 +266,15 @@ function layoutsPass(registry) {
   const derived = buildWaterlineLedgerLayoutRecords(registry);
   return derived != null && equalJson(registry.layouts, derived) && Object.values(derived).every((value) => value.relationRetention >= .95
     && value.essentialCentersVisible === true && value.target.width >= 44 && value.target.height >= 44 && value.target.contained === true
-    && value.physicalCenterInTarget === true && value.protectedOverlap === 0 && value.labelContained === true && value.labelProtectedOverlap === 0);
+    && value.physicalCenterInTarget === true && value.protectedOverlap === 0 && value.labelContained === true
+    && value.labelProtectedOverlap === 0 && value.labelInNarrationUi === true);
 }
 
 export function auditWaterlineLedgerRegistry(registry = WATERLINE_LEDGER_REGISTRY) {
+  const geometry = geometryPass(registry);
   return freeze({
     source: sourcePass(registry?.source, registry?.provenance),
-    geometry: geometryPass(registry),
+    geometry,
     copy: copyPass(registry?.copy),
     layouts: layoutsPass(registry),
   });
