@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: An ancient fused service crown on a dry high slab above drowned junction returns, cinematic but physically plausible.
+Scene: continuous dry foreground reaches the crown. At least three exposed bypass seams climb out of basin water into its mineral body; at least two sealed specimen chambers remain closed and dry. Two distinct submerged return structures visibly converge beneath the crown while water blocks access to them.
+Composition: center-safe complete relation, modest crown scale, generous top and side margins, dry path foreground, water and drowned returns behind.
+Lighting: quiet overcast daylight and subtle natural caustics only.
+Constraints: no people, hands, creatures, face-like design, stairs into water, swimming, open chambers, text, glyphs, UI, display, portal, console, projected image, answer, response, reward, weapon, or watermark.

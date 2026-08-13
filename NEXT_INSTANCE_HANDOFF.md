@@ -2,14 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-012-v1 / ROLLING-POOL TERMINAL 12`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-012-v1 / NINE ROLLING CALLS`**
 
-Exact next owner: **one fresh Office of Science Administrator**
+Exact next owner: **one fresh Mission Captain**
 
-Evaluate `FRWO-012-v1` and answer the complete technical, physical, learning,
-responsive, accessibility, performance, provenance, cleanup, rollback, and QA
-envelope. Freeze an exact prompt set and objective measurement schema for
-`H12-1..H12-9`, or HOLD at the first unproved predicate. Do not generate.
+Integrate `FRWO-012-v1`, `FRCL-012-v1`, and `FRVE-012-v1` into one exact
+`FIRST RUN SHELL READY` contract. Freeze prompt/CLI identities, local ordinal
+ledger, inert runtime registry, generation/review/import sequence, complete
+validation ladder, first-PASS stop, rolling-pool carry, rollback, protected
+boundaries, and exact Recon handoff. Do not generate.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;

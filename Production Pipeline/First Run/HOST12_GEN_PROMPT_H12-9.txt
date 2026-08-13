@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: An immense drowned routing field converges on one small accessible dry crown.
+Scene: continuous dry high-slab approach; crown entirely above present water; three clear bypass seams climb from waterline; two sealed dry sample chambers; two or more separate submerged returns converge behind and under the crown without a reachable descent.
+Composition: complete physical sentence compact inside central crop-safe area; strong foreground dry route; drowned structures legible context, not the playable destination.
+Lighting: restrained overcast basin light, realistic material response.
+Constraints: no swim, dive, underwater stairs, open chamber, person, body, creature, ship, face, writing, glyph, UI, screen, portal, kiosk, console, projection, answer, reward, response, weapon, or watermark.

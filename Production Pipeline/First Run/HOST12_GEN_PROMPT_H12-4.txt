@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A reachable dry crown caps an otherwise unreachable drowned alien switchyard.
+Scene: broad dry slab approach; fused mineral crown wholly above water; three visible bypass seams connecting waterline to crown; two closed dry sample chambers; at least two drowned returns converging below and behind through dark water.
+Composition: the entire physical sentence compactly centered in the middle third, with large crop-safe margins and no required object near an edge.
+Lighting: natural gray basin daylight, wet stone reflections, no fantasy glow.
+Constraints: no swim or dive route, open door, person, creature, ship, face, writing, icon, glyph, UI, screen, portal, kiosk, console, hologram, answer, active city response, weapon, or watermark.

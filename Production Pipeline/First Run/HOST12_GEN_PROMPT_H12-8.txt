@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A compact dry maintenance crown stands over separate drowned return channels in a pale mineral basin.
+Scene: broad dry foreground slab reaches the crown; at least three water-to-crown bypass seams; two closed sample chambers above water; at least two submerged returns converge below and behind, separated from the player by water.
+Composition: all required geometry centrally grouped and modest in scale, large crop-safe margins, standing eye height.
+Lighting: diffuse natural daylight, believable wet stone, no glow.
+Constraints: no underwater access, open chamber, human, creature, ship, face, text, symbols, UI, display, portal, console, hologram, answer, city response, weapon, or watermark.

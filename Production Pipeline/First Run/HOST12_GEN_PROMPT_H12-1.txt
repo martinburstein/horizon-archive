@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A dry fused upper crown of an immense drowned alien switchyard rises from a high slab above dark basin water, viewed from standing eye level.
+Scene: one continuous dry salt-stone approach leads to the accessible crown. At least three narrow bypass seams visibly rise from the water into the crown. At least two sealed sample chambers sit wholly above the waterline and remain visibly closed. Below and behind, at least two separate submerged return structures converge through the water toward the crown; the drowned body remains unreachable.
+Composition: wide 3840x2160 landscape; keep the complete crown-seams-chambers-return relation inside the middle third with generous crop-safe margins; dry high-slab approach spans the foreground; water clearly separates the unreachable lower junction.
+Lighting: cool overcast natural basin light, restrained reflections, no supernatural glow.
+Constraints: first-person maximum-quality environmental photography; no swimming route, stairs into water, open chamber, people, hands, creatures, faces, ship, text, symbols, glyphs, UI, screen, portal, kiosk, console, answer, hologram, active response, reward, weapon, or watermark.

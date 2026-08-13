@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A weathered dry upper crown remains usable above a vast drowned alien routing structure.
+Scene: dry stone causeway enters the crown; three bypass seams visibly bridge waterline and crown; two small closed sample chambers sit high and dry; two or more submerged return ribs converge below the crown through opaque basin water.
+Composition: compact center-safe relation with ample negative margin, no essential element at frame edge, dry approach strong in foreground.
+Lighting: realistic overcast exterior, subdued mineral colors.
+Constraints: no diving, swim route, open chamber, person, creature, face, ship, text, symbol, glyph, UI, screen, portal, kiosk, console, hologram, answer, world response, weapon, or watermark.

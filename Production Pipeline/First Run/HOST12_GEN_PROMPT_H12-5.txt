@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: Dry alien service architecture emerging above a submerged multi-return junction in an immense flooded basin.
+Scene: a continuous high dry apron leads to one fused upper crown. Four thin bypass seams rise from water into it. Two sealed sample chambers are visibly closed above water. Several separate drowned returns converge beneath and behind, clearly inaccessible.
+Composition: eye-level wide view, compact central crown relation, safe margins, readable dry route foreground and water boundary.
+Lighting: soft cold daylight with restrained reflection.
+Constraints: no player body, other beings, ship, swimming access, underwater stairs, open chamber, text, glyph, UI, display, terminal console, portal, projected imagery, answer, reward, weapon, or watermark.

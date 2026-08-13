@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A monumental dry maintenance crown survives above a mostly submerged alien junction in a flooded salt-stone basin.
+Scene: the viewer stands on a broad continuous dry upper slab. Three or more bypass seams emerge visibly from present water and enter the fused crown. Two closed sample chambers are unmistakable above water. Multiple drowned return channels remain visible below and behind but cannot be reached without entering water.
+Composition: wide standing-eye view; all required structures grouped centrally with safe margins for narrow crops; foreground approach dry and obvious; submerged network secondary but legible.
+Lighting: diffuse blue-gray daylight, physical wet reflections, weathered mineral texture.
+Constraints: no descent or swim path, open chamber, readable marks, interface, screen, terminal kiosk, portal, console, characters, bodies, faces, animals, ship, intelligence signal, hologram, answer, weapon, or watermark.
