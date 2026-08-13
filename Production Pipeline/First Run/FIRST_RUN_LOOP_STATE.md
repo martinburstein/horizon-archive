@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-TAC-001-v1`
+State ID: `FRLS-CBT-001-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / PLAYER EXPERIENCE READY / COMBAT PENDING**
+Status: **OPERATE / PRODUCTION FUNCTIONAL / QUARTERMASTER PENDING**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -78,13 +78,13 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: combat_engineer
+active_owner: quartermaster
 information_actions_allowed:
-  - inspect FRPX-014-v1, shell-owned authorities, released predecessor behavior, exact source structure, and affected non-QA tests
+  - inspect FRCE-014-v1, shell-owned authorities, null-first functional candidate, exact source/custody controls, and affected non-QA tests
 effect_actions_allowed:
-  - only shell-permitted Combat product, test, report, and compact-state files; source remains disabled/null
+  - only shell-permitted Quartermaster generation, custody, private review, measurement, source/import, registry/copy, count, provenance, report, and compact-state files
 prohibited_until_named_owner_and_stage:
-  - generation or external media call before Quartermaster and preflight
+  - generation or external media call before exact Quartermaster preflight
   - source selection/import before private technical/physical/responsive PASS
   - any product change beyond the exact FRPX-014-v1 atomic null-first Combat scope
   - runtime presentation work before Image Specialist
@@ -104,7 +104,7 @@ potential:
   shell_ready: true
   directorial_lock_ready: true
   player_experience_blueprint_ready: true
-  production_candidate: null
+  production_candidate: null_first_FRCE-014-v1_pending_commit
   final_holdout_passed: false
 budget:
   generation_calls_authorized: 32
@@ -123,9 +123,9 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ```yaml
 active_strategy_family: sequential_shell_bounded_physical_host_release
 rejected_strategy_families: []
-continuation_reason: FRPX-014-v1 closes the interaction, focus, recovery, reflow, accessibility, and atomic-fallback ambiguity; Combat is the next least-powerful sufficient effect owner
+continuation_reason: FRCE-014-v1 proves the inert atomic functional seam while preserving released fallback; Quartermaster is the next least-powerful sufficient source owner
 decision: GATHER_EVIDENCE
-next_owner: combat_engineer
+next_owner: quartermaster
 ```
 
 ## Commandant checkpoint
@@ -424,3 +424,57 @@ generic path available until one positive native-active selector atomically
 commits a lawful source, presentation, semantic hotspot, and sanitized state.
 No generation call, media inspection/selection/import, Image-stage treatment,
 maturity advancement, or Quartermaster action is authorized.
+
+Combat has now closed that exact null-first functional stage as
+`FRCE-014-v1`. Source remains disabled/null; no generation, media, browser,
+repository-QA, save/profile, or release action occurred.
+
+## Combat checkpoint
+
+```yaml
+combat:
+  functional_report: FRCE-014-v1
+  disposition: PRODUCTION FUNCTIONAL / INERT HOST 14 SLOT / QUARTERMASTER READY
+  predecessor_reproduced: 24/24_PASS
+  current_ref: FRCE-014-v1_null_first_candidate_pending_dedicated_commit
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: bounded_product_effect
+  verifier_vector:
+    null_first_deep_frozen_registry: PASS
+    strict_lawfulness_and_physical_mutations: PASS
+    atomic_native_or_exact_generic_fallback: PASS
+    semantic_action_focus_announcement_resume_fallback: PASS
+    six_layout_derivation_and_minimum_target: PASS_DETERMINISTIC
+    focused: 31/31_PASS
+    related: 63/63_PASS_AFTER_FRCV_CONTENTION_REPLAN
+    cold_full: 1047/1047_PASS
+    curriculum_readiness: 40/40_PASS
+    production_fixture_builds: 234/57_MODULES_PASS
+    null_first_pba: JS_1762475_CSS_121983_MAPS0_NO_NEW_RASTER_PASS
+    source_dependent_pba_browser_e2e_holdout: NOT_CLAIMED
+  delta_vs_best: positive_functional_seam_zero_media_zero_maturity_released_behavior_unchanged
+  budget_used:
+    generation_calls: 0
+    media_actions: 0
+    browser_or_e2e: 0
+    product_files: 6
+    control_reports: 2
+  budget_remaining:
+    generation_calls: 32
+    initial_earned_tranche: 8
+    final_verification_reserve: PROTECTED
+  remaining_uncertainty:
+    - future source bytes, transport, private physical review, and exact measurement
+    - source-derived registry/copy/provenance population and selected inventory
+    - integrated browser, accessibility, performance, served, and full E2E proof
+    - human assistive-technology usability study
+    - exact product candidate and independent Intelligence release
+  decision: GATHER_EVIDENCE
+  next_owner: quartermaster
+```
+
+Quartermaster may now perform only the shell-bounded source stage after exact
+preflight. It must populate the FRCE placeholder ledger from one privately
+accepted source, stop at the first complete PASS, and preserve the inert
+generic fallback on every failed or absent source path.

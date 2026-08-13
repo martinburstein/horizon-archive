@@ -3312,6 +3312,17 @@ async function assertObjectiveLedgerContinuity(page, phase) {
   if(await page.locator('[aria-label="Objective evidence ledger"] li').count()!==15)throw new Error(`Objective Ledger ${phase} does not show exactly 15 objective rows`);
 }
 
+async function openHost14OwnedLesson(page, genericName) {
+  const nativeBoundary = page.locator('[data-hotspot-id="waterline-ledger"]');
+  if (await nativeBoundary.count() && await nativeBoundary.isVisible()) {
+    await page.getByRole("button", { name: "USE", exact: true }).click();
+    await nativeBoundary.click();
+    return "native";
+  }
+  await page.getByRole("button", { name: genericName, exact: true }).click();
+  return "generic-fallback";
+}
+
 async function assertRemediationPlannerContinuity(page, phase) {
   const dialog=page.locator('[data-terminal-exercise="EX-L0602-REMEDIATION-PLANNER"]');
   if(await dialog.getAttribute("aria-describedby")!=="remediation-planner-offline-warning remediation-planner-route-equivalent")throw new Error(`Remediation Planner ${phase} warning/equivalent association missing`);

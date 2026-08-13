@@ -517,6 +517,12 @@ h1 {
 .canonical-game-frame .scene-art.borrowed-light-wall-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.82) contrast(1.025) brightness(.95); }
 .canonical-game-frame .scene-art.drowned-switchyard-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.84) contrast(1.025) brightness(.96); }
 .canonical-game-frame .scene-art.tidal-pattern-loom-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.78) contrast(1.055) brightness(.94); }
+.scene-art.waterline-ledger-art { object-fit: cover; object-position: 50% 50%; }
+.waterline-ledger-hotspot { min-width: 44px; min-height: 44px; border-width: 2px; overflow: hidden; overflow-wrap: anywhere; }
+.waterline-ledger-state-in_progress { border-style: dashed; }
+.waterline-ledger-state-remediation_required { border-style: dotted; }
+.waterline-ledger-state-complete { border: 4px double; }
+.waterline-ledger-hotspot:focus-visible { outline: 3px solid; outline-offset: -5px; }
 
 .canonical-game-frame .adventure-screen[data-tidal-pattern-loom-state="available"] .hotspot[data-hotspot-id="tidal-pattern-loom"] > span,
 .canonical-game-frame .adventure-screen[data-tidal-pattern-loom-state="in_progress"] .hotspot[data-hotspot-id="tidal-pattern-loom"] > span,
@@ -529,6 +535,8 @@ h1 {
 .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 
 @media (forced-colors: active) {
+  .waterline-ledger-hotspot { border-color: CanvasText; }
+  .waterline-ledger-hotspot:focus-visible { outline-color: Highlight; }
   .canonical-game-frame .adventure-screen[data-scene="meadow"] .hotspot[data-hotspot-id="primary"]:focus-visible span {
     color: CanvasText;
     background: Canvas;
