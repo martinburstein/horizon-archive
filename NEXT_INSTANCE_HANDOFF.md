@@ -2,16 +2,17 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`DIRECTORIAL LOCK / FRDT-011-v1 / LIGHT THAT ARRIVES WITHOUT ADDRESSING YOU`**
+Current disposition: **`PLAYER EXPERIENCE READY / FRPX-011-v1 / ACCEPTED-ONLY NATIVE HOST 11`**
 
-Exact next owner: **one fresh Tactical Operations Specialist**
+Exact next owner: **one fresh Combat Engineer**
 
-Translate `FRSH-011-v1` and `FRDT-011-v1` into an implementation-exact player
-experience blueprint: null-first source/state graph, replacement of generic
-`L05-01 + L05-02` entry only after exact enablement, LOOK/TALK/USE, focus and
-recovery, six-layout measurements, copy/alt placeholders, and acceptance tests.
-Route only fresh Combat. Do not generate, implement, inspect media, or reveal.
+Implement the inert null-first Host 11 registry, accepted-only native
+interaction, generic Portal/Prompt replacement guard, focus/recovery,
+responsive projection, styling scaffold, and focused regression tests under
+`FRSH-011-v1` / `FRPX-011-v1`. Populate no source, provenance, geometry, copy,
+alt, or attempt. Run the full proportional gate, commit/push `PRODUCTION
+FUNCTIONAL`, and route fresh Quartermaster. Do not generate or inspect media.
 
-Ledger `{H11-1..H11-10}` remains entirely unstarted and first-PASS-stop.
-Preserve accepted media/hosts, protected QA/user state, OPEN records, hidden
-lore exclusion, RP-012, and `successor=null`.
+Ledger `{H11-1..H11-10}` remains unstarted. Preserve accepted Hosts/media,
+protected QA/user state, OPEN records, hidden lore exclusion, RP-012, and
+`successor=null`.
