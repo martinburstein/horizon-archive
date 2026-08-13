@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A compact dry array of taut translucent mineral filaments records repeated loading at the waterline of a drowned salt-stone basin.
+Scene: a broad continuous dry path reaches three or more distinct tensioned spans. Every span has visible stone or mineral collars at both endpoints. The spans occupy varied depths and angles rather than a woven plane. Three or more collars or contact sleeves visibly show strain, repair, stress whitening, or accumulated mineral residue. Basin water is visibly continuous behind the dry array.
+Composition: eye-level wide view; complete physical relationship grouped in the central 44 percent of the image, with large crop-safe margins; dry path lower center; waterline secondary but clear; modest scale.
+Lighting: diffuse blue-gray daylight, realistic transparent mineral refraction and worn salt-stone.
+Constraints: no submerged access, slack net, spiderweb, loom textile, letters, symbols, glyphs, score, musical instrument, synchronized performance, people, creatures, faces, ship, text, UI, screen, console, portal, kiosk, projection, answer, active intelligence, weapon, or watermark.

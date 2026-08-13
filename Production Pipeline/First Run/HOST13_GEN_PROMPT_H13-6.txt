@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A compact dry array of old translucent tension members crosses between mineral collars at a flooded basin waterline.
+Scene: broad dry foreground provides a continuous approach. Three or more separate taut mineral-glass spans connect visible paired collars at varied angles and distances. At least three contacts visibly carry load or repair history through distorted mounts, sleeve repairs, mineral bloom, or residue. Calm basin water is clearly continuous behind the array.
+Composition: all essential geometry centered between source x 0.28 and 0.72, moderate object height with generous upper and lower clearance, no endpoint or approach near an image edge.
+Lighting: soft overcast exterior light, realistic weathering and restrained reflections.
+Constraints: no web, net, cloth, slack cable, lettering, glyph, rune, notation, musical performance, synchronized animation, UI, screen, console, portal, kiosk, projected image, answer, authority, world response, person, creature, face, ship, weapon, reward, or watermark.

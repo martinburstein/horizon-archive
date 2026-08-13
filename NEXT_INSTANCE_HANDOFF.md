@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`WORK ORDER READY / FRWO-013-v1 / HOST 13`**
+Current disposition: **`POLISH VIABILITY READY / FRVE-013-v1 / EIGHT CALLS`**
 
-Exact next owner: **one fresh Office of Science Administrator**
+Exact next owner: **one fresh Mission Captain**
 
-Evaluate `FRWO-013-v1` and issue one exact viability envelope: frozen prompt
-set and identities, immutable media baseline, CLI/runtime envelope, strict
-technical and physical predicates, derived six-layout proof, native lesson
-state/focus/recovery contract, budgets, generation/import/cleanup controls, and
-full release ladder. Run no generation or media inspection.
+Issue one conflict-free `FIRST RUN SHELL READY` contract for `FRWO-013-v1` /
+`FRVE-013-v1`: preserve the eight exact prompt identities, bundled CLI,
+sequential first-PASS stop, private candidate custody, actual derived six-layout
+acceptance, native unchanged `L05-05 + L05-06` ownership, budgets, rollback,
+and complete production/release ladder. Run no generation or media inspection.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;

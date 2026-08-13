@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: Dry alien bearing collars hold a compact field of tensioned mineral-glass filaments beside dark basin water.
+Scene: a continuous dry apron reaches at least three distinct taut spans. Each span terminates in visible collars at both ends; their angles and depth planes differ. At least three mounts show accumulated load through stress bloom, repaired contact bands, abrasion, or mineral staining. Waterline continuity remains visible behind the dry structure.
+Composition: modest central subject, complete relation inside the middle 44 percent of source width, strong lower-center dry approach, generous top and side margins, every required center visible.
+Lighting: subdued gray basin daylight with natural translucency and worn surfaces.
+Constraints: no wet route, slack webbing, textile, woven pattern, readable stain, symbol, glyph, music, synchronized motion, person, creature, face, ship, text, UI, display, terminal, console, portal, kiosk, hologram, answer, response, weapon, or watermark.

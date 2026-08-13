@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A weathered dry waterline structure holds several taut mineral-glass runs whose collars visibly record repeated physical loading.
+Scene: continuous dry salt-stone foreground reaches four separate translucent spans. Every span has two obvious endpoint collars, with varied angles and depth planes. At least three endpoints show stress whitening, repaired sleeves, worn contacts, or mineral accumulation. Visible basin water continues behind and below the dry structure.
+Composition: compact central physical sentence within source x 0.28-0.72, generous clear margins, dry approach lower center, water boundary legible, no required element near any edge.
+Lighting: cool diffuse daylight, physically plausible transparency and mineral wear.
+Constraints: no slack net, spiderweb, textile loom, written residue, letters, glyphs, musical notation, performance, person, creature, face, ship, screen, UI, terminal, console, kiosk, portal, projection, answer, authority, active response, reward, weapon, or watermark.

@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: An accessible dry mineral frame exposes the load history of taut glass-like spans beside an ancient flooded basin.
+Scene: one continuous dry path reaches the frame. Show at least three isolated tensioned spans, obvious collars at both ends of each, materially varied orientations and depth, and three or more strained or repaired bearing contacts with non-readable mineral residue. The present basin waterline remains clearly connected in the background.
+Composition: restrained human-scale installation, compact middle-third reading, complete relation and dry path inside broad crop-safe margins, standing eye height.
+Lighting: realistic dawn-gray natural light and subtle glass highlights, no fantasy illumination.
+Constraints: no submerged destination, giant web, slack mesh, woven message, text, symbols, glyphs, score, instrument, coordinated performance, people, hands, faces, creatures, ship, UI, display, terminal, console, kiosk, portal, hologram, answer, reward, weapon, watermark, or intelligent response.

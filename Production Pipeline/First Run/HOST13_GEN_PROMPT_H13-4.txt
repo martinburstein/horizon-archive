@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A small dry waterline frame carries several ancient taut mineral-glass tension members above a drowned basin.
+Scene: one dry salt-stone approach reaches the frame. Four visibly separate glassy spans attach through obvious collars at both ends and run at different angles and depths. Three or more endpoint contacts show strain, mineral residue, repaired bands, or worn bearing surfaces. The same basin waterline is clearly visible beyond and below.
+Composition: standing-eye perspective; entire frame, approach, spans, collar pairs, contacts, and waterline tightly grouped in the central crop-safe region with substantial empty margin on every side.
+Lighting: natural cold daylight, believable glass and mineral response, restrained reflections.
+Constraints: physical engineering remains only physical engineering. No giant web, slack net, woven surface, characters, animals, faces, ship, writing, runes, glyphs, musical score, UI, display, console, portal, kiosk, projection, answer, reward, active world response, weapon, or watermark.

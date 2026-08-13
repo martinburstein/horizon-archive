@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A weathered alien stress-measurement installation survives dry above the present waterline of an immense flooded basin.
+Scene: continuous dry foreground leads to at least three separate taut mineral-glass runs anchored by clearly visible collars at both ends. Their depths and angles vary. At least three bearing points show physical load history through repaired sleeves, strained mounts, white stress bloom, or mineral residue. Open basin water continues behind the installation.
+Composition: compact center-safe installation entirely within source x 0.28-0.72, generous sky and foreground margins, all endpoint collars legible, no required feature near the frame boundary.
+Lighting: quiet overcast daylight with subtle natural glints only.
+Constraints: no slack cords, web, net, cloth, tapestry, writing, glyph, icon, musical notation, instrument performance, UI, screen, terminal, console, kiosk, portal, hologram, answer, response, person, body, face, creature, ship, weapon, reward, or watermark.
