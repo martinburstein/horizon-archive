@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A mineral receiving wall on a dry apron transforms borrowed reflected daylight into several changed-angle returns without displaying anything.
+Scene: ancient pale stone wall in a flooded archive basin; thin iridescent mineral film; three or more embedded apertures; two or more redirected physical light paths; dry apron continuous to a left-offset service throat.
+Composition: 3840x2160 wide eye-level view, complete relation centered and compact, strong foreground route legibility, generous side/top safety, distant basin context quiet.
+Lighting: natural cold daylight and soft reflected bands, non-emissive wall.
+Constraints: absolutely no text, glyph, symbol, UI, screen, projected image, audience, seating, person, hands, creature, face, portal, console, machine character, intelligent signal, hologram, answer, reward, weapon, watermark, or submerged approach.

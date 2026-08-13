@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A silent receiving wall returns naturally reflected light at altered angles through embedded apertures, approached across a broad dry mineral apron.
+Scene: pale weathered salt-stone, thin translucent mineral skin, at least three dark embedded apertures, two or more visible redirected rays, one off-center service throat, flooded basin only in background.
+Composition: wide eye-level 3840x2160; complete semantic sentence small and central with ample crop-safe margins; foreground apron shows obvious walkable continuity; service throat remains clearly asymmetric.
+Lighting: physically plausible reflected daylight, no active emission or spectacle.
+Constraints: no writing, text, glyphs, symbols, UI, screen, projected image, audience, seating, person, face, creature, portal, console, machine, answer, hologram, response, reward, weapon, watermark, or route obstruction.

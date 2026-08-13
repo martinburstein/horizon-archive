@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A monumental but silent wall of mineral film borrows reflected basin light and redirects it through apertures beside a dry service approach.
+Scene: weathered pale stone, natural translucent film, four recessed apertures, multiple changed-angle returns, broad continuous dry foundation apron, single off-axis service throat, distant water context.
+Composition: wide 3840x2160 standing view; all required physical elements grouped comfortably inside the middle half; apron readable across foreground; throat clearly offset; no feature clipped.
+Lighting: soft overcast daylight with modest physical reflections; non-emissive and nonresponsive.
+Constraints: no people, hands, faces, creatures, audience, seats, writing, text, symbols, glyphs, UI, screen, image, portal, console, machine, hologram, answer, dialogue, reward, weapon, watermark, or submerged route.

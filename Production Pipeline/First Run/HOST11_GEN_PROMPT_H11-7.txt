@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A compact cluster of mineral apertures in an immense receiving wall bends borrowed daylight while a dry apron reaches an offset service throat.
+Scene: ancient flooded-basin masonry formed from natural stone, visible mineral film, three to five apertures, two clear redirected light returns, no emitting device, dry continuous foreground.
+Composition: 3840x2160 environmental photograph; compact relation entirely within central 45% width and 50% height; generous context; throat offset left; apron uninterrupted; no extreme perspective distortion.
+Lighting: cool diffuse natural light, restrained cinematic contrast.
+Constraints: no text, symbols, glyphs, UI, screens, images, theater, audience, seats, people, creatures, faces, portal, console, machine character, hologram, answer, intelligence cue, reward, weapon, watermark, or wet access.

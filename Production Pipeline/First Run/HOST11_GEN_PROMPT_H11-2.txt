@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A receiving wall of layered mineral film bends borrowed basin light through embedded apertures beside a dry off-axis service route.
+Scene: monumental eroded salt-stone wall, three or more recessed apertures, visible pale reflected light crossing the film and returning in two or more altered directions. Broad unbroken dry apron leads from foreground to a service throat on the left. No source fixture emits light from the wall.
+Composition: wide 3840x2160; compact complete physical relation centered with generous negative stone around it; apron visible across lower frame; throat unmistakably off-axis; all essential features comfortably crop-safe.
+Lighting: restrained natural daylight, realistic reflection and refraction, cinematic but nonmagical.
+Constraints: no people, hands, creatures, faces, audience, seating, theater architecture, text, symbols, glyphs, UI, screen, projected picture, portal, console, machine, writing, answer cue, hologram, response, reward, damage, weapon, or watermark; no wet approach.

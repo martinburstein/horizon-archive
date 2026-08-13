@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A silent geological light-receiving wall where reflected daylight travels across mineral skin, enters stone apertures, and exits at changed angles.
+Scene: flooded-basin terrace with dry pale foundation. The wall has a clearly legible mineral film, at least three deep apertures, at least two visible return-light directions, and one off-center maintenance throat connected by a broad dry apron.
+Composition: 3840x2160 standing-eye view; relation forms a compact central island occupying less than half the frame; essential geometry separated and readable; foreground apron continuous; water only beyond the safe edge.
+Lighting: cool diffuse sky plus subtle borrowed reflection; physically plausible; no internal illumination.
+Constraints: no text, imagery, glyphs, UI, display, cinema, audience, face, person, creature, portal, console, machine character, answer, intelligent signal, hologram, reward, weapon, watermark, or obstruction.

@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: An ancient dry-basin wall receives a moving ribbon of natural light and divides it through embedded mineral apertures.
+Scene: one continuous receiving wall, translucent weathered mineral film, four embedded apertures, multiple visibly redirected rays, broad dry foundation apron, and an off-axis service throat. The light comes from outside the wall and remains purely physical.
+Composition: wide symmetrical context but asymmetrical throat; compact relation low-middle frame with large crop-safe margins; entire apron and each aperture visible; no dominant sky.
+Lighting: overcast cinematic realism, restrained reflected brightness, high stone detail.
+Constraints: no writing, text, symbols, UI, screen, picture, theater seating, audience, person, creature, face, portal, machine, console, hologram, answer, dialogue, response, reward, weapon, watermark, or wet route.

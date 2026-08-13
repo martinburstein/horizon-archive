@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: A broad dry stone apron approaches a silent wall whose mineral film receives and redirects natural basin light through apertures.
+Scene: weathered monumental salt geology, at least three visible embedded openings, luminous-but-natural reflected bands traveling across film, at least two returns at changed angles, off-axis service throat on the right.
+Composition: wide 3840x2160; apron dominates lower third and proves access; wall relation grouped tightly near center; service throat offset but safely within frame; all essential centers retained under aggressive crops.
+Lighting: subdued overcast realism; wall does not glow from within.
+Constraints: no people, hands, faces, creatures, audience, text, writing, symbols, glyphs, UI, screen, picture, portal, console, machine, hologram, answer, response, reward, weapon, watermark, or water across the route.

@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: An eroded mineral wall passively receives a ribbon of daylight, feeds it through embedded apertures, and sends it back along changed physical paths.
+Scene: dry ancient terrace above basin water; continuous broad apron; three or more apertures within mineral film; two clearly different outgoing angles; off-axis maintenance throat; no wall-mounted light source.
+Composition: 3840x2160, restrained wide lens, relation compact around image center, dry route visible from bottom center, throat offset right, substantial safe margins around all essentials.
+Lighting: cool natural horizon reflection, realistic material response, quiet atmosphere.
+Constraints: no text, writing, glyph, UI, screen, picture, theater, audience, people, hands, creatures, faces, portal, console, machine character, intelligent signal, hologram, answer, reward, weapon, watermark, or wet approach.

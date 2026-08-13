@@ -1,0 +1,7 @@
+Use case: photorealistic-natural
+Asset type: first-person 16:9 game environment production master
+Primary request: An immense ancient mineral wall receives moving borrowed daylight across its surface, viewed from standing eye level on a broad dry foundation apron.
+Scene: weathered pale salt-stone in a flooded alien basin. Visible translucent mineral film carries bands of natural reflected light into at least three embedded stone apertures; at least two rays return at visibly changed physical angles. One off-axis service throat sits to the right, reached by the continuous dry apron. The wall receives rather than emits its main light.
+Composition: wide 3840x2160 landscape; keep the complete wall-light-aperture relation in the middle third with generous safe margins; dry apron spans the foreground; service throat clearly off center; distant water and the prior reflected path remain restrained context.
+Lighting: cool overcast daylight with plausible reflected bands, no supernatural glow.
+Constraints: first-person maximum-quality environmental photography; no people, hands, creatures, faces, audience, seats, text, symbols, glyphs, UI, screen, image, portal, console, machine character, writing, answer, hologram, active response, reward, weapon, or watermark. Route dry and unobstructed.
