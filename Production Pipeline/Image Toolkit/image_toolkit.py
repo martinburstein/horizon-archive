@@ -110,17 +110,22 @@ def write_new(path: Path, data: bytes) -> None:
 def inspect_image(path: Path) -> dict[str, Any]:
     resolved = path.resolve(strict=True)
     info = ordinary_file(resolved)
-    image = open_image(resolved)
+    with Image.open(resolved) as source:
+        source.load()
+        source_format = source.format
+        animated = bool(getattr(source, "is_animated", False))
+        metadata_keys = sorted(source.info.keys())
+        image = ImageOps.exif_transpose(source)
     return {
         "pass": True,
         "path": str(resolved),
-        "format": image.format,
+        "format": source_format,
         "mode": image.mode,
         "width": image.width,
         "height": image.height,
-        "animated": bool(getattr(image, "is_animated", False)),
+        "animated": animated,
         "alpha": "A" in image.getbands(),
-        "metadata_keys": sorted(image.info.keys()),
+        "metadata_keys": metadata_keys,
         "bytes": info.st_size,
         "sha256": sha256_file(resolved),
     }
@@ -172,7 +177,7 @@ def check_card(card_path: Path) -> dict[str, Any]:
     }
 
 
-def make_receipt(asset_id: str, operation: str, prompt: Path, source: Path, final: Path, output: Path) -> dict[str, Any]:
+def make_receipt(asset_id: str, operation: str, tool: str, prompt: Path, source: Path, final: Path, output: Path) -> dict[str, Any]:
     ordinary_file(prompt)
     source_info = inspect_image(source)
     final_info = inspect_image(final)
@@ -180,7 +185,7 @@ def make_receipt(asset_id: str, operation: str, prompt: Path, source: Path, fina
         "schema": RECEIPT_SCHEMA,
         "asset_id": asset_id,
         "accepted_at_utc": datetime.now(timezone.utc).isoformat(),
-        "tool": "built-in-imagegen",
+        "tool": tool,
         "operation": operation,
         "prompt": {"path": str(prompt.resolve(strict=True)), "sha256": sha256_file(prompt)},
         "source": source_info,
@@ -231,6 +236,7 @@ def main() -> int:
     item = sub.add_parser("receipt")
     item.add_argument("--asset-id", required=True)
     item.add_argument("--operation", choices=("generate", "edit"), required=True)
+    item.add_argument("--tool", default="openai-image-api:gpt-image-2")
     item.add_argument("--prompt", type=Path, required=True)
     item.add_argument("--source", type=Path, required=True)
     item.add_argument("--final", type=Path, required=True)
@@ -245,11 +251,10 @@ def main() -> int:
     elif args.command == "check-card":
         result = check_card(args.card)
     else:
-        result = make_receipt(args.asset_id, args.operation, args.prompt, args.source, args.final, args.output)
+        result = make_receipt(args.asset_id, args.operation, args.tool, args.prompt, args.source, args.final, args.output)
     print(json.dumps(result, indent=2, sort_keys=True))
     return 0 if result.get("pass") else 1
 
 
 if __name__ == "__main__":
     raise SystemExit(main())
-

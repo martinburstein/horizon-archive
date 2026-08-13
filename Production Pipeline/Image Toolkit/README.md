@@ -13,8 +13,9 @@ integration and release verification.
 1. Pick the earliest `ready` entry in `IMAGE_QUEUE.json`.
 2. Fill one asset card from `ASSET_CARD_TEMPLATE.json` and write one concise
    prompt from `PROMPT_TEMPLATE.md`.
-3. Use the built-in `image_gen` tool for up to three distinct concepts. Inspect
-   them visually and keep the strongest one.
+3. Invoke the global `$private-api-image-production` skill. Use the bundled
+   Image API CLI for up to three distinct concepts and keep every candidate
+   private. Review candidates through its text-only private evaluator.
 4. If useful, make at most two single-change edits of that chosen concept.
 5. Copy the selected result into a temporary workspace folder, normalize it
    with `image_toolkit.py`, record one receipt, and integrate only the accepted
@@ -26,8 +27,8 @@ ordinary image.
 
 ## Default budget
 
-- concepts: up to `3` built-in calls;
-- targeted edits: up to `2` built-in calls;
+- concepts: up to `3` API calls;
+- targeted edits: up to `2` API calls;
 - concurrent calls: `1`;
 - first acceptable result stops the asset;
 - after two edits that do not improve the selected concept, stop and revise the
@@ -47,14 +48,18 @@ Rejected concepts may be deleted after comparison. Retain them only when they
 are genuinely useful references. Tool-managed output paths are not runtime
 assets and are never the only location of an accepted project image.
 
-## Built-in image generation rules
+## Private API image generation rules
 
-- Use built-in `image_gen` by default.
+- Use the bundled Image API CLI with `gpt-image-2`; do not substitute the
+  built-in generator for this workflow.
 - A brand-new concept omits image references.
 - An edit includes only the selected concept and any explicitly relevant
   references.
 - Make one requested visual change per edit and repeat the invariants.
-- Never switch to the CLI/API path unless Martin explicitly asks for it.
+- Generate at `1920x1088`, then deterministically crop four pixels from the top
+  and bottom to exact `1920x1080` RGB PNG.
+- Never show candidates or selected outputs in chat unless Martin explicitly
+  reverses the private-review boundary.
 - Never overwrite accepted media. Use a versioned sibling until integration is
   approved.
 
@@ -83,7 +88,7 @@ python "Production Pipeline/Image Toolkit/image_toolkit.py" self-test
 python "Production Pipeline/Image Toolkit/image_toolkit.py" normalize `
   --input "C:\absolute\selected-source.png" `
   --output "C:\absolute\normalized-v1.png" `
-  --width 3840 --height 2160 --fit cover --background 000000
+  --width 1920 --height 1080 --fit cover --background 000000
 
 python "Production Pipeline/Image Toolkit/image_toolkit.py" inspect `
   --input "C:\absolute\normalized-v1.png"
@@ -99,6 +104,7 @@ After selection:
 python "Production Pipeline/Image Toolkit/image_toolkit.py" receipt `
   --asset-id host-14 `
   --operation edit `
+  --tool openai-image-api:gpt-image-2 `
   --prompt "Production Pipeline/Image Toolkit/prompts/host-14-v1.md" `
   --source "C:\absolute\selected-tool-result.png" `
   --final "C:\absolute\normalized-v1.png" `
@@ -117,7 +123,7 @@ the independent final release holdout.
 
 ## Current authority
 
-Martin authorized this lightweight toolkit on 2026-08-13. No image is generated
-by the toolkit-creation turn. His next prompt starts production from the first
-`ready` queue entry.
-
+Martin authorized this lightweight toolkit on 2026-08-13 and subsequently
+froze API-only, exact Full HD, private/no-reveal production as the reusable
+default. The global `$private-api-image-production` skill is the operational
+authority for future image turns.

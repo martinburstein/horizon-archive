@@ -4,10 +4,10 @@
   "status": "ready",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
-  "prompt_file": "prompts/host-14-v1.md",
+  "prompt_file": "prompts/host-14-api-v2.md",
   "target": {
-    "width": 3840,
-    "height": 2160,
+    "width": 1920,
+    "height": 1080,
     "format": "PNG",
     "mode": "RGB",
     "fit": "cover",
@@ -42,4 +42,3 @@
     "interaction_geometry": null
   }
 }
-
