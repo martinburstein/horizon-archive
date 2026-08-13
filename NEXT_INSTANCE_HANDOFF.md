@@ -2,16 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION CONTENT COMPLETE / FRCA-012-v1 / H12-1 SELECTED`**
+Current disposition: **`RUNTIME PRESENTATION COMPLETE / FRPR-012-v1 / RELEASE REVIEW`**
 
-Exact next owner: **one fresh Image Specialist**
+Exact next owner: **one fresh Intelligence Officer**
 
-Verify exact `FRCA-012-v1` content candidate and immutable raster identity.
-Polish or accept runtime code/configuration presentation only: crop treatment,
-hierarchy, focus, forced colors, reduced motion, containment, and existing
-audio behavior. Run isolated six-layout real-browser corroboration and focused
-regression. Change no media byte and create no reveal. Issue the presentation
-report and route fresh Intelligence.
+Independently verify the exact content/presentation candidate, source identity,
+first-PASS attempt ledger, scratch absence, responsive Edge evidence, focused+
+full tests, validators, clean builds, PBA/media inventory, served identity,
+clean-start E2E through the two owned lessons and unchanged ending, protected
+boundaries, candidate sync, maturity delta, rolling-pool remainder, and release
+map/scoreboard/changelog. Release or return the earliest exact defect.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
