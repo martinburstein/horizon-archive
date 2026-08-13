@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-QTR-003-v1`
+State ID: `FRLS-MSN-004-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / QUARTERMASTER REVISE / PROCESS CAUSALITY REPLAN REQUIRED**
+Status: **HOLD / CURRENT REPRESENTATION CEILING / PRODUCTION LOOP SAFELY STOPPED**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -31,6 +31,7 @@ target:
   shell: FRSH-014-v3
   mission_variance: FRSH-014-v2-VR-01
   science_variance: FRVE-014-v2-VR-01
+  mission_close: FRSH-014-v3-VR-01
 ```
 
 ## Hard constraints
@@ -62,6 +63,7 @@ observed:
   current_player_experience_blueprint: FRPX-014-v1
   current_directorial_variance: FRCT-014-v1-VR-01
   current_mission_variance: FRSH-014-v2-VR-01
+  current_mission_close: FRSH-014-v3-VR-01
   accepted_media_manifest: FRAM-014-v1
   custody_control: FRFC-014-v2
   pba_control: FRPBA-014-v1
@@ -99,13 +101,14 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: mission_captain_to_reconnaissance_and_science
+controller_state: STOPPED_HOLD
+active_owner: martin_human_authority
 information_actions_allowed:
-  - Mission may route the measured representation failure to Reconnaissance and Science for classification
-effect_actions_allowed:
-  - append-only owner-classification and versioned control updates only
+  - read-only inspection only after Martin explicitly requests it
+effect_actions_allowed: []
 prohibited_until_named_owner_and_stage:
   - H14-4 retry or any H14-5-plus call
+  - any new generation loop, schedule, wake, or automatic continuation
   - source selection/import before private technical/physical/responsive PASS
   - any product change beyond the exact FRPX-014-v1 atomic null-first Combat scope
   - runtime presentation work before Image Specialist
@@ -117,16 +120,17 @@ prohibited_until_named_owner_and_stage:
 
 ```yaml
 potential:
-  hard_failures: 3_source_rejections_latest_at_pre_layout_representation
+  hard_failures: current_prompt_only_representation_ceiling
   selected_encounter_missing: 0
   continuity_lock_ready: true
   work_order_ready: true
-  source_feasibility_contract_ready: true_FRVE_014_v2_VR_01
-  shell_ready: true_FRSH_014_v3_H14_4_v2_once
+  source_feasibility_contract_ready: false_current_representation_exhausted
+  shell_ready: exhausted_FRSH_014_v3_no_calls_remaining_authorized
   directorial_lock_ready: true
   directorial_representation_replan_ready: true
   mission_representation_routing_ready: true
   h14_4_call_authorized: false_consumed_no_retry
+  production_loop_stopped: true
   player_experience_blueprint_ready: true
   production_candidate: null_first_FRCE-014-v1_pending_commit
   final_holdout_passed: false
@@ -145,15 +149,16 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ## Strategy and continuation
 
 ```yaml
-active_strategy_family: low_concave_shelf_interdigitating_processes_branching_service_voids
+active_strategy_family: none_hold
 rejected_strategy_families:
   - continue_prompt_search_under_format24bpprgb_gate
   - substrate_separation_that_resolves_as_human_dam
   - dry_access_waterline_nonhuman_words_that_resolve_as_human_dam
   - low_concave_shelf_that_resolves_as_natural_geology_without_construction_process_causality
-continuation_reason: the one authorized observation removed the former dam and human-hardware anchor but failed seven conjunctive process/interdigitation/trace-reaction dimensions; no retry or later ordinal is authorized and owner classification is required
-decision: RETURN_TO_OWNER
-next_owner: mission_captain_to_reconnaissance_and_science
+failure_classification: prompt_noncompliance_observed_and_current_prompt_only_representation_ceiling_operationally_binding
+continuation_reason: no independently justified new mechanism exists; remaining calls are budget rather than authority, and v3 prohibits retry or later ordinals
+decision: STOP_LOW_MARGINAL_VALUE
+next_owner: martin_human_authority
 ```
 
 ## Commandant checkpoint
@@ -999,3 +1004,55 @@ removing the former barrier and human-hardware anchor, but it replaced alien
 construction causality with natural geology. That measured distinction must be
 classified by the named owners before any later prompt identity or call can
 exist. Image Specialist remains unauthorized.
+
+Mission has now classified that evidence in `FRSH-014-v3-VR-01`. The artifact
+is an observed prompt noncompliance and a partial causal-mechanism success, but
+the current prompt-only representation has reached an operational ceiling:
+there is no independently justified mechanism that preserves both the verified
+low nonhuman topology and the missing constructed-process causality. Remaining
+budget does not create authority.
+
+## Mission hold checkpoint
+
+```yaml
+mission_hold:
+  variance: FRSH-014-v3-VR-01
+  disposition: HOLD / CURRENT REPRESENTATION CEILING / PRODUCTION LOOP SAFELY STOPPED
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: none
+  verifier_vector:
+    recorded_evidence_only: PASS_SOURCE_DELETED_NOT_INSPECTED
+    prompt_noncompliance: OBSERVED_SEVEN_HARD_DIMENSIONS
+    topology_and_human_archetype_removal: PASS_RECORDED
+    new_independent_mechanism: ABSENT
+    current_representation_ceiling: OPERATIONALLY_BINDING_NOT_GLOBAL_MODEL_CLAIM
+    v3_one_observation_law: PASS_ENFORCED
+    h14_4_retry_or_h14_5_plus: NOT_AUTHORIZED
+    cleanup_and_null_first: PASS
+    product_diff: ZERO
+    accepted_release_inventory_and_final_reserve: PRESERVED
+    automation: DISABLED
+  delta_vs_best: zero_product_zero_media_zero_maturity_positive_failure_information
+  budget_used:
+    generation_calls: 4
+    media_imports: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 28_unspent_not_authorized
+    authorized_calls: 0
+    final_verification_reserve: FULL
+  remaining_uncertainty:
+    - whether a materially different representation can preserve topology and constructed-process causality together
+    - future complete production and release proof only if Martin explicitly reactivates
+    - human assistive-technology usability study
+  decision: STOP_LOW_MARGINAL_VALUE
+  next_owner: martin_human_authority
+```
+
+The production loop is safely stopped. `NEXT_INSTANCE_HANDOFF.md` names Martin
+as the sole exact next owner. No agent action, call, schedule, wake, automation,
+or downstream stage exists until Martin explicitly authorizes a materially
+different representation and its exact boundaries.
