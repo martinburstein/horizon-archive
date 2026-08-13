@@ -1,6 +1,6 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-012-v2`
+Map ID: `FRRM-013-v1`
 
 Current release authority: `FRAB-012-v1 / DISTINCT HOST 12 RELEASED`
 
@@ -22,7 +22,7 @@ Date: **2026-08-13**
 
 Current released Work Order: `FRWO-012-v1 / Host 12 distinct encounter`
 
-Selected bounded Work Order: **none; next cycle requires fresh Commandant verification**.
+Selected bounded Work Order: **`FRWO-013-v1 / Host 13 distinct encounter`**.
 
 `FRWO-012-v1` is released from exact first attempt H12-1. H12-2..H12-9 are
 unused and carry to the next earliest missing encounter under Martin's rolling

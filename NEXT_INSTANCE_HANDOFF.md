@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`CONTINUITY LOCK / FRCL-013-v1 / HOST 13`**
+Current disposition: **`WORK ORDER READY / FRWO-013-v1 / HOST 13`**
 
-Exact next owner: **one fresh Operations Planning Major**
+Exact next owner: **one fresh Office of Science Administrator**
 
-Issue one new versioned Host13 Work Order from `FRCL-013-v1`. Allocate at most
-eight sequential calls, stop at first complete PASS, define fresh literal
-scratch/product/provenance paths, accepted-only integration, complete physical
-and responsive proof, native `L05-05 + L05-06` ownership, full regression and
-cleanup gates, and return only to fresh Science. Do not generate media.
+Evaluate `FRWO-013-v1` and issue one exact viability envelope: frozen prompt
+set and identities, immutable media baseline, CLI/runtime envelope, strict
+technical and physical predicates, derived six-layout proof, native lesson
+state/focus/recovery contract, budgets, generation/import/cleanup controls, and
+full release ladder. Run no generation or media inspection.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;

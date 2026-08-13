@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-012-v2`
+Scoreboard ID: `FRSB-013-v1`
 
 Current release authority: `FRAB-012-v1 / DISTINCT HOST 12 RELEASED`
 
 Baseline / lock: `FRPB-001-v10` / `FRCL-012-v1`
 
-Release map: `FRRM-012-v2`
+Release map: `FRRM-013-v1`
 
 Operations source inspected: `243edb4e`
 
@@ -18,7 +18,7 @@ Date: **2026-08-13**
 
 Current released Work Order: `FRWO-012-v1 / Host 12 distinct encounter`.
 
-Selected bounded Work Order: **none; fresh Commandant verification required**.
+Selected bounded Work Order: **`FRWO-013-v1 / Host 13 distinct encounter`**.
 
 Host 12 is independently released from first attempt H12-1. Eight rolling calls
 remain unused for the next earliest missing encounter after a fresh sequential
