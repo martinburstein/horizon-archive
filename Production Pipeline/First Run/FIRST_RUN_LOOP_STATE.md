@@ -1,161 +1,82 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-QM-003-v1`
+State ID: `FRLS-MSN-006-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **QUARTERMASTER HOLD / G01 REPRESENTATION REPLAN REQUIRED**
+Status: **FIRST RUN SHELL READY / ONE NO-EFFECT TRANSPORT RETRY / QUARTERMASTER NEXT**
 
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
 
 ```yaml
 contract:
   shell: FRSH-015-v1
-  treatment: FRCT-015-v1
-  blueprint: FRPX-015-v1
+  variance: FRSH-015-v1-VR-01
   work_order: FRWO-015-v1
-  goal: one independently releasable physical expression through guide-conditioned built-in generation/edit and accepted-only integration
+  goal: one independently releasable guide-conditioned physical expression
   hard_constraints:
-    - strict sequential production roles and independent Intelligence release
-    - preserve canon route lessons silence privacy save offline accessibility performance RP-012 equal ending successor=null
-    - preserve accepted originals released generic rollback and inert null-first until acceptance
-    - guide controls cannot substitute for visible-pixel physical evidence
-    - no reveal and no forbidden QA browser save lore archive PDF training residual inputs
+    - C03-R1 is one exact no-effect transport retry not a new strategy or earned call
+    - same E02 prompt exact C02 current-best and exact ordered G01 references
+    - hard stochastic maximum remains six and no second retry exists
+    - preserve null-first generic rollback all product/canon/lesson/privacy/accessibility/ending/no-reveal boundaries
 state:
-  source_control_read: b43d8a958d25e7eaf12c611e411ea1ba0e2251fe
-  current_ref: FRPX-015-v1 / FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  source_control_read: 1f767b56eec7bab9235b2751920c10a3ad24826a
+  current_ref: FRCE-015-v1_null_first@398a64131fa804223cfbdfc88f2865242bb3e02a
   current_product_tree: 066077823b780ba83c5e71e7b478d117f3761dcc
   best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
   committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
-  committed_product_tree: 612a7d53c4563bfd0bdb7eeca110f715e5c82
-  active_owner: mission_captain
-  controller_state: RETURN_TO_OWNER
+  active_owner: quartermaster
+  controller_state: RETRY
 representation:
-  cycle_namespace: FRM15
-  executable_guide_family: G01
-  runtime_schema_target: horizon.waterline-ledger.v2
-  selected_source_identity: FRM15-A01
-  provenance_schema: horizon.first-run.frm15-source-provenance.v1
-  coordinate_law:
-    guide_canvas: 1536x1024
-    guide_final_core: x0_y80_w1536_h864
-    normalized_source: 3840x2160
-    x: xs=2.5*xg
-    y: ys=2.5*(yg-80)
-    rounding: prohibited_preserve_exact_half_coordinates
-  evidence_classes:
-    control: exact_target_center_label_protected_contact_windows
-    visible_pixels: relation_route_three_processes_contacts_trace_reactions_water_seams
-    rule: both_must_reconcile_guide_only_population_fails
-  atomic_selector: native_only_after_complete_source_provenance_geometry_layout_decode_PASS_else_exact_generic_fallback
-  layout_law: centered_cover_six_exact_viewports_target_44px_relation_.95_zero_protected_overlap
-  best_state_policy: preserve_FRAB_013_until_Intelligence_release
+  guide_family: G01_BUILT_VERIFIED_RETAINED
+  search_best: FRM15-E01_REJECTED_BUT_VERIFIED_IMPROVEMENT
+  retry: FRM15-C03-R1_E02_EXACT_ONCE
+  retry_input: restore_exact_C02_bytes_to_existing_ledger_path_before_launch
+  selected_source: null
+  runtime: v2_disabled_null_generic_fallback
 evidence:
   fresh:
-    - FRPX-015-v1 textually reconciles shell treatment Work Order viability guide spec and predecessor contracts
-    - exact guide-core to normalized-source transform and frozen control geometry recorded
-    - visible-pixel and noncanonical-control evidence classes separated
-    - v2 null-first registry action focus announcement resume malformed fallback crop and accepted-media atomicity locked
-    - six-layout forced-color reduced-motion touch keyboard and switch-like contracts locked
-    - exact G01 guide family built and verified under frozen controls
-    - C01 base and C02 material edit adopted and privately rejected by hard visible-pixel vectors
-    - C03 trace edit consumed on transport failure with no filesystem artifact and no retry
+    - C01 to C02 verified representation improvement
+    - C03 network transport failure after approximately 4.4 seconds
+    - known-output reconciliation proves zero artifact and zero effect
+    - C03 classified as no-observation transient eligible for one identical RETRY
+    - E02 prompt bytes and hash exact
+    - R01 and E01 empty owned OneDrive leaf containers explicitly carried
   reused:
-    - FRPB-001-v13 FRCL-015-v1 FRWO-015-v1 FRVE-015-v1 FRSH-015-v1 FRCT-015-v1
-    - FRCE-014-v1 focused 31/31 related 63/63 full 1047/1047 validators 40/40 builds 234/57 null-first PBA
-    - FRAB-013-v1 holdout for committed release only
+    - all FRSH-015-v1 guide custody physical adversarial layout accessibility import rollback gates
+    - FRCE-015-v1 focused 13/13 production build and null-first PBA
+    - predecessor related 63/63 full 1047/1047 validators 40/40 fixture build 57
   not_run:
-    - selected-source normalization composite import or activation
-    - product tests builds validators browser E2E
+    - tests builds validators media views imagegen transforms imports browser E2E
 budgets:
-  guide_families: {hard_max: 2, executable_now: 1, used: 1}
-  stochastic_calls: {hard_max: 6, initial: 3, earned: 2, reserve: 1, used: 3}
-  deterministic_operations: {hard_max: 12, used: 4}
-  private_candidate_inspections: {hard_max: 8, used: 2}
-  retained: {hard_max_files: 16, hard_max_bytes: 536870912, current_after_rejected_leaf_cleanup: 4/32541, empty_leaf_dirs: 2}
+  guide_families: {used: 1, executable: 1, hard_max: 2}
+  stochastic_calls_before_retry: {used: 3, remaining: 3}
+  stochastic_calls_after_retry_launch: {used: 4, remaining: 2, hard_max: 6}
+  deterministic_operations: {used: 4, remaining: 8}
+  private_candidate_inspections: {used: 2, remaining: 6}
+  retained: {files: 4, bytes: 32541, empty_leaf_directories: 2}
   final_proof: FULL_PROTECTED
+progression:
+  C03_original: consumed_call_zero_representation_observation
+  C03_R1: replacement_observation_not_earned_progression_call
+  C04_C05: require_strict_post_retry_vector_improvement_and_local_diagnosis
+  near_pass: shares_two_remaining_hard_slots_and_requires_exactly_one_defect
 stops:
-  - first complete release-quality PASS stops
-  - two equivalent failures require causal diagnosis
-  - three same-family non-improvements force replan return or typed stop
-  - guide correctness copy or layout attestation cannot rescue absent visible meaning
-  - accepted source registry and provenance activate atomically or generic rollback remains
-  - any identity custody privacy canon accessibility cleanup or budget ambiguity stops
-  - low marginal expected player value stops
-potential:
-  missing_physical_expression: 1
-  guide_structure: G01_BUILT_VERIFIED_RETAINED
-  directorial_treatment: LOCKED
-  tactical_blueprint: LOCKED
-  runtime_v2_source_law: IMPLEMENTED_AND_FOCUSED_PASS
-  source_and_provenance: REJECTED_NONE_SELECTED
-  runtime_integration: NULL_FIRST_REUSED
-  exact_candidate_vs_best: FRM15-E01_SEARCH_BEST_REJECTED
-  maturity_delta: ZERO
-decision: HOLD_RETURN_TO_OWNER
+  - first complete PASS stops
+  - unavailable exact C02 restoration holds before call
+  - repeated transport or no artifact yields typed WAIT or HOLD and no second retry
+  - deadband or regression does not earn continuation
+  - identity custody privacy canon accessibility cleanup or budget ambiguity stops
+decision: RETRY
 decision_evidence:
-  - C01 and C02 both failed low-concave anti-barrier anti-human-infrastructure anti-geology gates
-  - C02 improved material separation but left multiple categorical hard failures
-  - C03 was consumed by transport failure with no artifact and no lawful retry
-  - C04/C05 are unavailable because the immediately preceding call produced no improving candidate
-  - no source or product input changed so null-first product evidence remains reused
-next_owner: mission_captain
+  - transient failure was independently reconciled to zero effect
+  - exact same local action remains valid and has not yet been observed
+  - hard call maximum and all downstream gates remain unchanged
+next_owner: quartermaster
 ```
 
-## Combat checkpoint
-
-```yaml
-combat:
-  report: FRCE-015-v1
-  disposition: PRODUCTION_FUNCTIONAL_V2_NULL_FIRST_QUARTERMASTER_READY
-  current_ref: FRCE-015-v1_pending_dedicated_commit
-  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
-  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
-  action_kind: bounded_product_effect
-  changed:
-    - v2 exact source and provenance identity law
-    - separate visible-pixel and noncanonical control geometry
-    - exact pure guide-core point rectangle and polyline mapping
-    - contact reaction seam-DAG protection alias and layout fail-closed law
-    - minimal source-dependent FRPBA-015 overlay
-  unchanged:
-    - source disabled null and runtime URL null
-    - App route lessons copy Terminal save privacy ending CSS fixtures E2E dependencies
-    - accepted media 24/154163567 and released generic rollback
-  evidence_fresh:
-    focused_v2: 13/13_PASS
-    production_build: 234_modules_PASS
-    null_first_pba_observation: JS_1765598_CSS_121983_MAPS0_ASSETS27_RASTERS24_SOURCE_ABSENT
-    frpba015_syntax: PASS
-  evidence_reused:
-    related: FRCE-014_63/63
-    cold_full: FRCE-014_1047/1047
-    curriculum_readiness: FRCE-014_40/40
-    fixture_build: FRCE-014_57_modules
-    release_holdout: FRAB-013_only
-  not_claimed:
-    - guide build view or custody
-    - generation edit transform private pixel review or import
-    - selected-source PBA served browser E2E or release holdout
-  budget_used:
-    guide_families: 0
-    stochastic_calls: 0
-    deterministic_media_operations: 0
-    private_candidate_inspections: 0
-    browser_or_e2e: 0
-  final_proof: FULL_PROTECTED
-  remaining_uncertainty:
-    - actual guide and built-in output identity/adherence
-    - visible physical measurements and accepted provenance DAG
-    - source-enabled layout accessibility performance and journey proof
-    - human assistive-technology usability study
-    - exact product candidate and independent release
-  decision: GATHER_EVIDENCE
-  next_owner: quartermaster
-```
-
-Exact Mission action: review `FRCA-015-v1` and either issue a versioned
-structural/material representation variance with a new frozen guide mechanism
-and shell, or retain the typed hold. Do not retry `C03`, spend `C04-C06`, reuse
-rejected pixels, or activate the v2 source under `FRSH-015-v1`. The disabled
-v2 registry and exact generic rollback remain authoritative.
+Exact Quartermaster action: restore the exact recorded C02 bytes to their
+existing ledger path, verify the original five-node custody chain, then invoke
+exactly one `FRM15-C03-R1` with the unchanged E02 prompt, current-best target,
+and ordered G01 references. Adopt and inspect any returned candidate normally.
+On another no-effect transport failure, record `WAIT/HOLD`; do not retry again.
