@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-REC-002-v1`
+State ID: `FRLS-MIS-002-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / RECON DIRECTORIAL REPLAN READY / MISSION VARIANCE REQUIRED**
+Status: **OPERATE / MISSION REPRESENTATION VARIANCE ROUTED / SCIENCE CORRECTION REQUIRED**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -29,6 +29,7 @@ target:
   selected_address: FR-03 / Host 14
   work_order: FRWO-014-v1
   shell: FRSH-014-v2
+  mission_variance: FRSH-014-v2-VR-01
 ```
 
 ## Hard constraints
@@ -59,6 +60,7 @@ observed:
   current_shell: FRSH-014-v2
   current_player_experience_blueprint: FRPX-014-v1
   current_directorial_variance: FRCT-014-v1-VR-01
+  current_mission_variance: FRSH-014-v2-VR-01
   accepted_media_manifest: FRAM-014-v1
   custody_control: FRFC-014-v2
   pba_control: FRPBA-014-v1
@@ -88,14 +90,14 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: mission_captain
+active_owner: office_of_science_administrator
 information_actions_allowed:
-  - Mission may inspect the current shell, Science envelope, Recon variance, Quartermaster evidence, call ledger, and exact prompt texts
-  - Science may assess and freeze one exact H14-4 replacement only after Mission routes the viability variance
+  - Science may inspect the current shell, Mission routing, Recon variance, Quartermaster evidence, call ledger, and exact prompt texts
+  - Science may assess and freeze one exact versioned H14-4 replacement identity
 effect_actions_allowed:
-  - versioned Mission and Science control artifacts plus one exact H14-4 replacement prompt identity
+  - one versioned Science viability-return control plus one exact versioned H14-4 replacement prompt identity if viable
 prohibited_until_named_owner_and_stage:
-  - generation or external media call before exact Science prompt identity and Mission shell variance
+  - generation or external media call before exact Science prompt identity and a later Mission shell correction
   - source selection/import before private technical/physical/responsive PASS
   - any product change beyond the exact FRPX-014-v1 atomic null-first Combat scope
   - runtime presentation work before Image Specialist
@@ -111,10 +113,12 @@ potential:
   selected_encounter_missing: 0
   continuity_lock_ready: true
   work_order_ready: true
-  source_feasibility_contract_ready: true
+  source_feasibility_contract_ready: requires_representation_prompt_correction
   shell_ready: true
   directorial_lock_ready: true
   directorial_representation_replan_ready: true
+  mission_representation_routing_ready: true
+  h14_4_call_authorized: false
   player_experience_blueprint_ready: true
   production_candidate: null_first_FRCE-014-v1_pending_commit
   final_holdout_passed: false
@@ -138,9 +142,9 @@ rejected_strategy_families:
   - continue_prompt_search_under_format24bpprgb_gate
   - substrate_separation_that_resolves_as_human_dam
   - dry_access_waterline_nonhuman_words_that_resolve_as_human_dam
-continuation_reason: Recon replaced the barrier-layer-conduit causal grammar with a measurable low-shelf/interdigitating-process/branching-negative-space mechanism; only a Science-frozen H14-4 identity and Mission shell variance can lawfully test it
+continuation_reason: Mission accepted Recon's measurable causal mechanism at specification level and routed only prompt feasibility and exact replacement identity to Science; a later Mission shell correction is still required before any call
 decision: RETURN_TO_OWNER
-next_owner: mission_captain
+next_owner: office_of_science_administrator
 ```
 
 ## Commandant checkpoint
@@ -757,3 +761,60 @@ reconnaissance_return:
 Mission must now classify the variance and route the H14-4 identity through
 Science. No prompt, shell, call, source, media, product, maturity, or Image
 action is authorized by the Recon treatment alone.
+
+Mission has now classified the directorial return in
+`FRSH-014-v2-VR-01`. The low concave shelf, interdigitating process histories,
+and branching recessed service voids are accepted as a measurable
+representation hypothesis only. They preserve continuity, the complete
+physical sentence, no-message/no-world-response, source-derived accessibility,
+null-first rollback, accepted inventory, budget, and plateau policy at
+specification level. Science must prove exact prompt feasibility and identity
+before Mission may correct the shell.
+
+## Mission representation-routing checkpoint
+
+```yaml
+mission_representation_return:
+  variance: FRSH-014-v2-VR-01
+  disposition: REVISE / REPRESENTATION VIABILITY RETURN TO SCIENCE / H14-4 NOT AUTHORIZED
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    repeated_failure_localization: PASS
+    measurable_alternative_causal_grammar: PASS_SPECIFIED
+    continuity_and_physical_evidence: PASS_PRESERVED_AT_SPECIFICATION
+    no_message_and_world_response: PASS_PRESERVED
+    accessibility_and_source_mapping: PASS_PRESERVED_AT_SPECIFICATION
+    budget_and_plateau_policy: PASS_FROZEN
+    replacement_prompt_feasibility_and_identity: SCIENCE_OWNED_NOT_STARTED
+    call_media_product_or_image_action: NONE
+  delta_vs_best: zero_product_zero_media_zero_maturity_positive_routing_information
+  budget_used:
+    generation_calls: 3_total_cycle_0_mission_return
+    media_imports: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 29
+    initial_tranche_unspent: 5
+    next_observation_if_later_authorized: H14-4_only
+    final_verification_reserve: FULL
+  plateau_policy: >-
+    Historical H14-4 through H14-8 are not executable as-is. Science may
+    freeze one replacement H14-4 identity; Mission must later reconcile it.
+    A second technically valid new-family failure on the same representation
+    dimension without a new measurable mechanism forces HOLD or a new
+    owner-approved representation.
+  remaining_uncertainty:
+    - Science feasibility and exact replacement-prompt identity
+    - later Mission shell correction and Quartermaster authority
+    - future source compliance and complete downstream proof
+    - human assistive-technology usability study
+  decision: RETURN_TO_OWNER
+  next_owner: office_of_science_administrator
+```
+
+Science is the sole exact next owner. No generation call, source/media action,
+product/runtime change, maturity advancement, or Image action is authorized.
