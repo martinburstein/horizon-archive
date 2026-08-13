@@ -2,16 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`RUNTIME PRESENTATION COMPLETE / FRPR-012-v1 / RELEASE REVIEW`**
+Current disposition: **`HOLD / FRAB-012-v1-HOLD / COMBAT E2E HARNESS CORRECTION`**
 
-Exact next owner: **one fresh Intelligence Officer**
+Exact next owner: **one fresh Combat Engineer**
 
-Independently verify the exact content/presentation candidate, source identity,
-first-PASS attempt ledger, scratch absence, responsive Edge evidence, focused+
-full tests, validators, clean builds, PBA/media inventory, served identity,
-clean-start E2E through the two owned lessons and unchanged ending, protected
-boundaries, candidate sync, maturity delta, rolling-pool remainder, and release
-map/scoreboard/changelog. Release or return the earliest exact defect.
+Correct only the sanctioned clean-start E2E navigation at the selected Host12
+boundary. After Client Boundaries mastery, activate the native available Host12
+hotspot instead of waiting for the retired generic SDK launcher, then preserve
+the unchanged SDK -> Single Agent assertions. Add focused harness coverage,
+change no product/media/copy/CSS, commit/push the bounded Combat correction,
+and route fresh Intelligence for one new sole complete E2E.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
