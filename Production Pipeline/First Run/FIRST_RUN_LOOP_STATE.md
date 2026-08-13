@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-MSN-001-v1`
+State ID: `FRLS-REC-001-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE ENABLED / FIRST RUN SHELL READY / RECON PENDING**
+Status: **OPERATE / DIRECTORIAL LOCK / TACTICAL PENDING**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -77,7 +77,7 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: reconnaissance_sergeant
+active_owner: tactical_operations_specialist
 information_actions_allowed:
   - inspect shell-owned authorities, released predecessor behavior, visual/surface controls, and non-QA evidence
 effect_actions_allowed:
@@ -101,6 +101,7 @@ potential:
   work_order_ready: true
   source_feasibility_contract_ready: true
   shell_ready: true
+  directorial_lock_ready: true
   production_candidate: null
   final_holdout_passed: false
 budget:
@@ -120,9 +121,9 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ```yaml
 active_strategy_family: sequential_shell_bounded_physical_host_release
 rejected_strategy_families: []
-continuation_reason: FRSH-014-v1 freezes the complete executable contract; Recon is the next least-powerful sufficient information action and cannot spend a call or change product/media
+continuation_reason: FRCT-014-v1 locks one buildable physical and emotional reading; Tactical is the next least-powerful sufficient information action and cannot spend a call or change product/media
 decision: GATHER_EVIDENCE
-next_owner: reconnaissance_sergeant
+next_owner: tactical_operations_specialist
 ```
 
 ## Commandant checkpoint
@@ -324,7 +325,52 @@ mission:
   next_owner: reconnaissance_sergeant
 ```
 
-Reconnaissance may now perform only its shell-bounded directorial information
-stage. No generation call, source inspection/import, product/media/runtime
-change, maturity advancement, or Tactical action exists before the named owner
-and exact sequential gate in `FRSH-014-v1`.
+Mission authorized only the shell-bounded Reconnaissance information stage.
+That stage is now closed by `FRCT-014-v1`; it spent no call and changed no
+source, media, runtime, product, or maturity state.
+
+## Reconnaissance checkpoint
+
+```yaml
+reconnaissance:
+  creative_treatment: FRCT-014-v1
+  disposition: DIRECTORIAL LOCK
+  product_candidate: 357ad6dc4184b74150173504e86e366c761cdc0e
+  current_ref: FRCT-014-v1_directorial_state
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    shell_identity_and_authority: PASS
+    felt_improvement_and_player_fantasy: PASS
+    physical_attention_and_emotional_rhythm: PASS
+    world_interface_lesson_ownership: PASS
+    visual_audio_motion_silence_restraint: PASS
+    adjacent_and_recent_scene_contrast: PASS
+    fixed_invariants_and_tactical_freedoms: PASS
+    media_or_product_action: NONE
+  delta_vs_best: zero_product_zero_maturity_zero_media_positive_information
+  budget_used:
+    generation_calls: 0
+    product_effect_actions: 0
+    media_actions: 0
+    browser_or_e2e: 0
+    planning_effect_actions: 2_control_artifacts
+  budget_remaining:
+    generation_calls: 32_hard_pool
+    available_initial_tranche: 8
+    final_verification_reserve: PROTECTED
+  remaining_uncertainty:
+    - exact Tactical interaction, focus, announcement, reflow, and recovery blueprint
+    - future source bytes, transport, physical review, and measurements
+    - future implementation and integrated responsive/accessibility/performance evidence
+    - future exact candidate and independent release
+    - human assistive-technology usability study
+  decision: GATHER_EVIDENCE
+  next_owner: tactical_operations_specialist
+```
+
+Tactical may now perform only its shell-bounded player-experience information
+stage against `FRCT-014-v1`. No generation call, source inspection/import,
+product/media/runtime change, maturity advancement, or Combat action exists
+before the named owner and exact sequential gate in `FRSH-014-v1`.
