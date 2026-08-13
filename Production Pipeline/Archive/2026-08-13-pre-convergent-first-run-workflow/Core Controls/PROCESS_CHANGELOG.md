@@ -8,25 +8,6 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
-### 2026-08-13 - Pre-cycle method control - REDESIGN
-
-- **KEEP:** strict eleven-role sequencing, earliest-first bounded Work Orders,
-  five-role shell approval, immutable candidate identity, first-PASS stop,
-  independent Intelligence release, exact synchronized handoff, and all
-  canon/media/privacy/save/accessibility boundaries.
-- **TUNE:** every cycle now declares a target, observable state, local action
-  surface, verifier authority, best-state policy, finite multi-dimensional
-  budget, final-proof reserve, and typed stop/escalation outcomes before
-  production.
-- **TUNE:** every stage now distinguishes information from effect actions,
-  compares candidates to both current and best state, records a typed
-  continuation reason, and replans after evidence of strategy plateau instead
-  of equating another call with progress.
-- **REDESIGN:** the former method is preserved byte-for-byte at
-  `Production Pipeline/Archive/2026-08-13-pre-convergent-first-run-workflow/`.
-  The live successor adds `FIRST_RUN_CONVERGENCE_CONTROL.md` and
-  `FIRST_RUN_LOOP_STATE.md`; the archive is not an execution authority.
-
 ### 2026-08-13 - `FRAB-013-v1` - TUNE
 
 - **KEEP:** rolling finite call pools, first-PASS stop, private review,

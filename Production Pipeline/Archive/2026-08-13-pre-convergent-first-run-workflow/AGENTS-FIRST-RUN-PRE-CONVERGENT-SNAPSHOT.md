@@ -20,10 +20,8 @@ sequence toward turning the released working rail into a fully fledged game
 from clean start through the shared Measured Horizon ending.
 
 At the start of a run, read this file, `NEXT_INSTANCE_HANDOFF.md`,
-`FIRST_RUN_AGENT_WORKFLOW.md`,
-`Production Pipeline/First Run/FIRST_RUN_CONVERGENCE_CONTROL.md`, and the
-registry. Before each stage, read the selected profile in full, the immediately
-preceding handoff, the compact current loop state, and the exact
+`FIRST_RUN_AGENT_WORKFLOW.md`, and the registry. Before each stage, read the
+selected profile in full, the immediately preceding handoff, and the exact
 current-control, Work Order, or shell sections cited by that role.
 
 Run strictly sequentially:
@@ -75,12 +73,6 @@ The retired Skyscraper program is preserved at
 `Production Pipeline/Archive/2026-08-09-skyscraper-agent-program/`. Do not run,
 resume, schedule, or infer work from that archive unless Martin explicitly
 reactivates it.
-
-The pre-convergent First Run method is preserved at
-`Production Pipeline/Archive/2026-08-13-pre-convergent-first-run-workflow/`.
-It is historical evidence only. Do not use its workflow, profiles, controls,
-or handoff as current authority unless Martin explicitly reactivates that exact
-snapshot.
 
 ## Two-team agent profiles
 

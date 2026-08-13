@@ -13,9 +13,7 @@ At the start of a First Run cycle, read:
 1. applicable `AGENTS.md`;
 2. `NEXT_INSTANCE_HANDOFF.md`;
 3. `FIRST_RUN_AGENT_WORKFLOW.md`; and
-4. `Production Pipeline/First Run/FIRST_RUN_CONVERGENCE_CONTROL.md`;
-5. `Production Pipeline/First Run/FIRST_RUN_LOOP_STATE.md`; and
-6. this registry.
+4. this registry.
 
 Before each stage, read the selected profile in full, the immediately preceding
 handoff, the current First Run Shell or its in-progress planning authorities,
@@ -57,11 +55,6 @@ Every invocation must name:
 - required output artifact; and
 - next-stage recipient.
 
-It must also name the active convergence mode, loop-state version,
-current/best/committed references, binding gap or hypothesis, predicted effect,
-finite budget and final-proof reserve, verifier authority order, and permitted
-typed stop decisions.
-
 If any material field is ambiguous, perform safe read-only orientation, record
 the ambiguity, and return to the preceding owner. Do not invent scope.
 
@@ -82,12 +75,6 @@ Every stage reports:
 - protected boundaries verified;
 - commit and synchronization status; and
 - exact next-stage handoff.
-
-It also reports the observation or evidence used, action classification
-(`information` or `effect`), verifier delta against both current and best state,
-strategy-family outcome, budget consumed/remaining, remaining uncertainty, and
-one typed continuation, replan, rollback, return, wait, escalation, or stop
-decision.
 
 ## Independence and finish rules
 

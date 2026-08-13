@@ -31,11 +31,10 @@ When instructions conflict, use this order:
 2. Applicable `AGENTS.md` files.
 3. `NEXT_INSTANCE_HANDOFF.md` for current state and the exact next action.
 4. This workflow.
-5. `Production Pipeline/First Run/FIRST_RUN_CONVERGENCE_CONTROL.md`.
-6. `First Run Agent Profiles/README.md`.
-7. The selected canonical First Run profile.
-8. The approved versioned First Run Shell.
-9. Current runtime, game-on-paper, canon, curriculum, systems, visual,
+5. `First Run Agent Profiles/README.md`.
+6. The selected canonical First Run profile.
+7. The approved versioned First Run Shell.
+8. Current runtime, game-on-paper, canon, curriculum, systems, visual,
    accessibility, readiness, and work-log controls.
 
 Never use an archived workflow, profile, prompt, or exact-next-action edge as
@@ -91,25 +90,6 @@ expressed.
 
 ## First Run operating model
 
-### 0. Convergent control before iteration
-
-Every cycle is a feedback-controlled production loop governed by
-`Production Pipeline/First Run/FIRST_RUN_CONVERGENCE_CONTROL.md`. Before a role
-performs an effect action, the cycle must expose a versioned operating contract
-covering the target, hard constraints, observable state, action surface,
-verifiers, best-state policy, budgets, stop rules, and escalation boundary.
-
-Planning roles operate in `DESIGN` mode. Production roles operate in `OPERATE`
-mode against the approved shell. Intelligence operates in independent `AUDIT`
-mode, then records the bounded `POSTMORTEM` decision. A stage may gather
-evidence, continue, replan, roll back, return to an owner, wait, escalate, or
-stop, but it may not continue merely because another attempt is possible.
-
-The current working state, best-known verified state, and committed release are
-different objects. No candidate replaces the best state until its declared
-verifier set passes, and no local pass becomes the committed release until
-Intelligence completes the final holdout.
-
 ### 1. Baseline before backlog
 
 The first cycle establishes a versioned First Run Product Baseline by comparing
@@ -158,11 +138,6 @@ Every Work Order defines:
 - files and systems permitted to change; and
 - objective proof required to advance maturity.
 
-It also defines the cycle's binding gap, observable evidence, permitted
-information and effect actions, current/best/committed references, potential or
-defect vector, finite multi-dimensional budget, anti-gaming checks, plateau and
-replan thresholds, and typed stop outcomes.
-
 ### 4. Maturity ladder
 
 First Run tracks each major journey surface through the same ladder:
@@ -198,9 +173,7 @@ The active program maintains:
 6. Marine treatment, blueprint, build, content, and presentation reports;
 7. one independent As-Built Reconciliation Package per released pass;
 8. `Production Pipeline/First Run/PROCESS_CHANGELOG.md`; and
-9. `Production Pipeline/First Run/FIRST_RUN_CONVERGENCE_CONTROL.md` plus the
-   compact current `FIRST_RUN_LOOP_STATE.md`; and
-10. compact synchronized state plus one exact action in
+9. compact synchronized state plus one exact action in
    `NEXT_INSTANCE_HANDOFF.md`.
 
 The first planning cycle creates these controls through their named owners,
@@ -226,12 +199,6 @@ The Mission Captain's shell must include:
 - permitted files/systems and protected files/state;
 - definition of done, variance routing, and rollback boundary; and
 - explicit `FIRST RUN SHELL READY`, `REVISE`, or `HOLD` disposition.
-
-The shell must additionally freeze the active hypothesis or diagnosed gap,
-verifier authority order, best-state comparison rule, budget ledger and final
-verification reserve, continuation/replan criteria, plateau/oscillation
-response, and all permitted terminal outcomes. A shell that lacks these fields
-is not `FIRST RUN SHELL READY`.
 
 Production roles may request a variance but may never silently alter the shell.
 
@@ -298,11 +265,6 @@ Validation grows with risk:
 8. QA capture restoration and coordinator-owned process shutdown; and
 9. Git synchronization and exact candidate identity.
 
-Cheap hard gates run before expensive gates. Failed hard or safety constraints
-cannot be averaged into a soft score. The generator or implementer may not be
-the sole judge of its own output. Intelligence's exact-candidate release pass
-is the final holdout and must remain independent of production optimization.
-
 Never inspect or mutate Martin's real browser profile or campaign save to reach
 a gate. Use sanctioned fixtures or deterministic evidence and state any honest
 limitation.
@@ -317,21 +279,6 @@ limitation.
 - Automation is disabled by default. Only Martin may explicitly authorize a
   recurring schedule, cadence, or wake behavior for First Run.
 - `NEXT_INSTANCE_HANDOFF.md` is the sole exact-next-action authority.
-
-## Per-stage convergence decision
-
-Each role closes with exactly one typed decision from the convergence control.
-It records the evidence for that decision, the candidate-versus-best delta,
-budget consumed and reserved, remaining uncertainty, and the next responsible
-owner. Two materially equivalent failures require a fresh diagnosis before the
-same strategy can continue. Three verified non-improving iterations in one
-strategy family force replan, bounded return, or stop; they never authorize an
-equivalent fourth attempt by default.
-
-For externally metered generation, the user-authorized finite pool and the
-approved shell are both hard budgets. First release-quality PASS stops the
-encounter. Unused calls carry only after Intelligence release; a call count
-never substitutes for progress evidence.
 
 ## Continuing Horizon Archive invariants
 
