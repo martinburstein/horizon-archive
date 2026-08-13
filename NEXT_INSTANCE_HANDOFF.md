@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN VISION BASELINE REOPENED / FRPB-001-v11 / HOST 13`**
+Current disposition: **`CONTINUITY LOCK / FRCL-013-v1 / HOST 13`**
 
-Exact next owner: **one fresh Colonel**
+Exact next owner: **one fresh Operations Planning Major**
 
-Audit exact Host12 -> Host13 -> Host14 continuity and issue one bounded Host13
-continuity lock for the canonical tensioned mineral-glass filament host and
-unchanged `L05-05 + L05-06` ownership. Freeze physical minimums, dry approach,
-scene silence, separation from accepted hosts and later ledger, rejection
-conditions, and all invariants. Do not generate media or select geometry.
+Issue one new versioned Host13 Work Order from `FRCL-013-v1`. Allocate at most
+eight sequential calls, stop at first complete PASS, define fresh literal
+scratch/product/provenance paths, accepted-only integration, complete physical
+and responsive proof, native `L05-05 + L05-06` ownership, full regression and
+cleanup gates, and return only to fresh Science. Do not generate media.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
