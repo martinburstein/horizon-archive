@@ -2,15 +2,18 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN PASS RELEASED / FRAB-013-v1 / SEVEN ROLLING CALLS REMAIN`**
+Current disposition: **`FIRST RUN PASS RELEASED / FRAB-013-v1 / THIRTY-TWO ROLLING CALLS AVAILABLE`**
 
 Exact next owner: **one fresh Commandant**
 
 Perform guarded baseline revalidation from exact release candidate
 `357ad6dc4184b74150173504e86e366c761cdc0e`. If coherent, select only the next
 earliest missing physical encounter and begin one new complete sequential First
-Run loop. Martin's rolling pool contains at most seven generation calls; stop
-that encounter at its first release-quality PASS. No call, media action, or
+Run loop. Martin has added twenty-five new calls to the seven carried calls;
+the rolling pool now contains at most thirty-two generation calls. Consume
+them sequentially under each fully approved shell, stop every encounter at its
+first release-quality PASS, and carry unused calls forward only after that
+encounter's Intelligence release. No call, media action, or
 later-host selection exists before fresh Commandant/Colonel/Operations/Science/
 Mission gates.
 
