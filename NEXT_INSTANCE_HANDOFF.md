@@ -2,19 +2,18 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-011-v1 / INERT HOST 11 SLOT`**
+Current disposition: **`PRODUCTION CONTENT COMPLETE / FRCA-011-v1 / H11-1 PASS`**
 
-Exact next owner: **one fresh Quartermaster**
+Exact next owner: **one fresh Image Specialist**
 
-Under `FRSH-011-v1`, independently verify the code candidate and exact ten
-prompt/CLI identities, then execute sequential `{H11-1..H11-10}` privately.
-For each ordinal: one CLI output, technical proof, original-resolution physical
-review, conservative source measurements, derived six-layout proof, exact
-rejection record/identity cleanup; first total PASS stops. Import and populate
-only the first passing byte-identical raster plus provenance/copy/geometry.
-Commit `PRODUCTION CONTENT COMPLETE` and route fresh Image Specialist. Never
-reveal a candidate or report its path to Martin.
+Verify exact content candidate and polish only runtime code/configuration
+presentation around the unchanged selected raster: hierarchy, filter, crop,
+focus visibility, forced colors, reduced motion, narrow/effective-200%
+containment, and truthful state styling. Do not generate, edit, replace, vary,
+recompress, reveal, or otherwise change media bytes. Run focused/build and
+six-layout runtime evidence, commit `RUNTIME PRESENTATION COMPLETE`, and route
+fresh Intelligence.
 
-All ten calls are unstarted. Accepted Hosts 01-10/media are immutable. Preserve
-protected QA/user state, OPEN records, hidden lore exclusion, RP-012, and
-`successor=null`. Stop opaque on unexpected state or cleanup failure.
+H11-1 is selected. H11-2..H11-10 are unused and permanently stopped by first
+PASS. Preserve accepted media/hosts, protected QA/user state, OPEN records,
+hidden lore exclusion, RP-012, and `successor=null`.

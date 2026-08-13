@@ -6,6 +6,7 @@ import sedimentAbacusImage from "../../Visual Direction/Production Masters/2026-
 import severedRelaySpineImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host08/host08-severed-relay-spine-master-v1.png";
 import floodedChoirImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host09/host09-flooded-choir-master-v1.png";
 import blindCameraWellImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host10/host10-blind-camera-well-master-v1.png";
+import borrowedLightWallImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host11/host11-wall-of-borrowed-light-master-v1.png";
 import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
 import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
@@ -233,7 +234,12 @@ import {
   isLegacyHost10LessonLauncherVisible,
 } from "./blindCameraWell.js";
 import {
+  BORROWED_LIGHT_WALL_COPY,
+  BORROWED_LIGHT_WALL_PROVENANCE,
   BORROWED_LIGHT_WALL_REGISTRY,
+  BORROWED_LIGHT_WALL_SOURCE_URL,
+  deriveBorrowedLightWallState,
+  getBorrowedLightWallHotspot,
   isLegacyHost11LessonLauncherVisible,
 } from "./borrowedLightWall.js";
 import {
@@ -1081,6 +1087,8 @@ export function App() {
   const [floodedChoirPresented, setFloodedChoirPresented] = useState(false);
   const [blindCameraWellDecodedImage, setBlindCameraWellDecodedImage] = useState(null);
   const [blindCameraWellPresented, setBlindCameraWellPresented] = useState(false);
+  const [borrowedLightWallDecodedImage, setBorrowedLightWallDecodedImage] = useState(null);
+  const [borrowedLightWallPresented, setBorrowedLightWallPresented] = useState(false);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
@@ -1163,6 +1171,10 @@ export function App() {
   const blindCameraWellTransitionPendingRef = useRef(false);
   const blindCameraWellFocusPendingRef = useRef(false);
   const blindCameraWellAnnouncementPendingRef = useRef(false);
+  const borrowedLightWallRef = useRef(null);
+  const borrowedLightWallTransitionPendingRef = useRef(false);
+  const borrowedLightWallFocusPendingRef = useRef(false);
+  const borrowedLightWallAnnouncementPendingRef = useRef(false);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1266,6 +1278,9 @@ export function App() {
   const blindCameraWellState = deriveBlindCameraWellState({ predecessorComplete:floodedChoirState==="complete", visualEvidence, extractionEvidence, registry:BLIND_CAMERA_WELL_REGISTRY, provenance:BLIND_CAMERA_WELL_PROVENANCE, decodedImage:blindCameraWellDecodedImage });
   const blindCameraWellLawful=blindCameraWellState!=="hidden";
   const blindCameraWellActive=blindCameraWellPresented&&blindCameraWellLawful;
+  const borrowedLightWallState=deriveBorrowedLightWallState({predecessorComplete:blindCameraWellState==="complete",portalEvidence,promptEvidence,registry:BORROWED_LIGHT_WALL_REGISTRY,provenance:BORROWED_LIGHT_WALL_PROVENANCE,decodedImage:borrowedLightWallDecodedImage});
+  const borrowedLightWallLawful=borrowedLightWallState!=="hidden";
+  const borrowedLightWallActive=borrowedLightWallPresented&&borrowedLightWallLawful;
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -1311,11 +1326,15 @@ export function App() {
   const floodedChoirHotspots = scene.id === "ruins" && floodedChoirActive && floodedChoirHotspot ? [{ id: "flooded-choir", label: "Flooded Choir", hotspot: floodedChoirHotspot }] : [];
   const blindCameraWellHotspot=getBlindCameraWellHotspot(BLIND_CAMERA_WELL_REGISTRY);
   const blindCameraWellHotspots=scene.id==="ruins"&&blindCameraWellActive&&blindCameraWellHotspot?[{id:"blind-camera-well",label:BLIND_CAMERA_WELL_COPY.name,hotspot:blindCameraWellHotspot}]:[];
+  const borrowedLightWallHotspot=getBorrowedLightWallHotspot(BORROWED_LIGHT_WALL_REGISTRY);
+  const borrowedLightWallHotspots=scene.id==="ruins"&&borrowedLightWallActive&&borrowedLightWallHotspot?[{id:"borrowed-light-wall",label:BORROWED_LIGHT_WALL_COPY.name,hotspot:borrowedLightWallHotspot}]:[];
   const sceneHotspots = [primarySceneHotspot, ...(scene.id === "ruins" ? ruinsHotspots : meadowHotspots)];
   const activeSceneHotspots = scene.id === "ruins" && strandedLensCradleActive
     ? strandedLensCradleHotspots
     : sceneHotspots;
-  const presentedSceneHotspots = scene.id === "ruins" && blindCameraWellActive
+  const presentedSceneHotspots = scene.id === "ruins" && borrowedLightWallActive
+    ? borrowedLightWallHotspots
+    : scene.id === "ruins" && blindCameraWellActive
     ? blindCameraWellHotspots
     : scene.id === "ruins" && floodedChoirActive
     ? floodedChoirHotspots
@@ -1334,6 +1353,7 @@ export function App() {
     const isSeveredRelaySpine = scene.id === "ruins" && hotspot.id === "severed-relay-spine";
     const isFloodedChoir = scene.id === "ruins" && hotspot.id === "flooded-choir";
     const isBlindCameraWell=scene.id==="ruins"&&hotspot.id==="blind-camera-well";
+    const isBorrowedLightWall=scene.id==="ruins"&&hotspot.id==="borrowed-light-wall";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
     const nurseryStateLabel = isFractureNursery ? FRPX02_COPY.NURSERY_STATE[fractureNurseryState] : "";
     const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
@@ -1346,6 +1366,7 @@ export function App() {
     const severedRelaySpineStateLabel = isSeveredRelaySpine ? SEVERED_RELAY_SPINE_COPY.state[severedRelaySpineState] : "";
     const severedRelaySpineLabel = isSeveredRelaySpine ? ` // ${severedRelaySpineStateLabel.toUpperCase()}` : "";
     const hotspotStyle = getHotspotStyle(hotspot.hotspot);
+    if(isBorrowedLightWall)return <button key={hotspot.id} ref={borrowedLightWallRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-borrowed-light-wall-state={borrowedLightWallState} style={hotspotStyle} onClick={(event)=>{terminalTriggerRef.current=event.currentTarget;useHotspot(hotspot.id);}} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} ${BORROWED_LIGHT_WALL_COPY.name}, ${borrowedLightWallState}`}><span>{verb} {BORROWED_LIGHT_WALL_COPY.name} // {borrowedLightWallState.toUpperCase()}</span></button>;
     if(isBlindCameraWell)return <button key={hotspot.id} ref={blindCameraWellRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-blind-camera-well-state={blindCameraWellState} style={hotspotStyle} onClick={(event)=>{terminalTriggerRef.current=event.currentTarget;useHotspot(hotspot.id);}} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} ${BLIND_CAMERA_WELL_COPY.name}, ${blindCameraWellState}`}><span>{verb} {BLIND_CAMERA_WELL_COPY.name} // {blindCameraWellState.toUpperCase()}</span></button>;
     if (isFloodedChoir) return <button key={hotspot.id} ref={floodedChoirRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-flooded-choir-state={floodedChoirState} style={hotspotStyle} onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} Flooded Choir, ${floodedChoirState}`}><span>{verb} Flooded Choir // {floodedChoirState.toUpperCase()}</span></button>;
     const sixfoldActivationStyle = isSixfoldWeir ? {
@@ -1490,6 +1511,10 @@ export function App() {
   useEffect(()=>{if(BLIND_CAMERA_WELL_REGISTRY.source.enabled!==true||!BLIND_CAMERA_WELL_SOURCE_URL){setBlindCameraWellDecodedImage(null);return undefined;}let connected=true;const image=new Image();image.decoding="async";image.onload=()=>connected&&setBlindCameraWellDecodedImage({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setBlindCameraWellDecodedImage(null);image.src=blindCameraWellImage;return()=>{connected=false;image.onload=null;image.onerror=null;};},[]);
   useEffect(()=>{if(!blindCameraWellLawful){blindCameraWellTransitionPendingRef.current=false;blindCameraWellAnnouncementPendingRef.current=false;if(blindCameraWellPresented)setBlindCameraWellPresented(false);return undefined;}if(blindCameraWellPresented||mode!=="playing"||scene.id!=="ruins"||terminalOpen)return undefined;if(!blindCameraWellTransitionPendingRef.current){blindCameraWellFocusPendingRef.current=blindCameraWellState!=="complete";setBlindCameraWellPresented(true);return undefined;}const frame=window.requestAnimationFrame(()=>{if(!blindCameraWellTransitionPendingRef.current)return;blindCameraWellTransitionPendingRef.current=false;blindCameraWellFocusPendingRef.current=true;blindCameraWellAnnouncementPendingRef.current=true;setBlindCameraWellPresented(true);});return()=>window.cancelAnimationFrame(frame);},[mode,scene.id,terminalOpen,blindCameraWellLawful,blindCameraWellPresented,blindCameraWellState]);
   useLayoutEffect(()=>{if(!blindCameraWellFocusPendingRef.current||!blindCameraWellActive||terminalOpen)return;const target=blindCameraWellRef.current;if(!target?.isConnected)return;blindCameraWellFocusPendingRef.current=false;target.focus({preventScroll:true});if(blindCameraWellAnnouncementPendingRef.current){blindCameraWellAnnouncementPendingRef.current=false;setSceneAnnouncement(BLIND_CAMERA_WELL_COPY.available);}},[blindCameraWellActive,blindCameraWellState,terminalOpen]);
+
+  useEffect(()=>{if(BORROWED_LIGHT_WALL_REGISTRY.source.enabled!==true||!BORROWED_LIGHT_WALL_SOURCE_URL){setBorrowedLightWallDecodedImage(null);return undefined;}let connected=true;const image=new Image();image.decoding="async";image.onload=()=>connected&&setBorrowedLightWallDecodedImage({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setBorrowedLightWallDecodedImage(null);image.src=borrowedLightWallImage;return()=>{connected=false;image.onload=null;image.onerror=null;};},[]);
+  useEffect(()=>{if(!borrowedLightWallLawful){borrowedLightWallTransitionPendingRef.current=false;borrowedLightWallAnnouncementPendingRef.current=false;if(borrowedLightWallPresented)setBorrowedLightWallPresented(false);return undefined;}if(borrowedLightWallPresented||mode!=="playing"||scene.id!=="ruins"||terminalOpen)return undefined;if(!borrowedLightWallTransitionPendingRef.current){borrowedLightWallFocusPendingRef.current=borrowedLightWallState!=="complete";setBorrowedLightWallPresented(true);return undefined;}const frame=window.requestAnimationFrame(()=>{borrowedLightWallTransitionPendingRef.current=false;borrowedLightWallFocusPendingRef.current=true;borrowedLightWallAnnouncementPendingRef.current=true;setBorrowedLightWallPresented(true);});return()=>window.cancelAnimationFrame(frame);},[mode,scene.id,terminalOpen,borrowedLightWallLawful,borrowedLightWallPresented,borrowedLightWallState]);
+  useLayoutEffect(()=>{if(!borrowedLightWallFocusPendingRef.current||!borrowedLightWallActive||terminalOpen)return;const target=borrowedLightWallRef.current;if(!target?.isConnected)return;borrowedLightWallFocusPendingRef.current=false;target.focus({preventScroll:true});if(borrowedLightWallAnnouncementPendingRef.current){borrowedLightWallAnnouncementPendingRef.current=false;setSceneAnnouncement(BORROWED_LIGHT_WALL_COPY.available);}},[borrowedLightWallActive,borrowedLightWallState,terminalOpen]);
 
   useEffect(() => {
     function handleDemoTourRequest(event) {
@@ -3294,6 +3319,7 @@ export function App() {
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if(scene.id==="ruins"&&hotspotId==="borrowed-light-wall"){if(borrowedLightWallState==="hidden"||terminalOpen)return;if(verb==="LOOK AT"){setDialogue(BORROWED_LIGHT_WALL_COPY.unseen,"scene");return;}if(verb==="TALK TO"){setDialogue("Complete silence.","pilot");return;}if(borrowedLightWallState==="complete"){setDialogue(`${BORROWED_LIGHT_WALL_COPY.mastered} ${BORROWED_LIGHT_WALL_COPY.nextBoundary}`,"system");return;}if(portalEvidence?.masteryStatus==="mastered")openPromptLayers();else openPortalOrientation();return;}
     if(scene.id==="ruins"&&hotspotId==="blind-camera-well"){if(blindCameraWellState==="hidden"||terminalOpen)return;if(verb==="LOOK AT"){setDialogue(BLIND_CAMERA_WELL_COPY.unseen,"scene");return;}if(verb==="TALK TO"){setDialogue("Complete silence.","pilot");return;}if(blindCameraWellState==="complete"){setDialogue(`${BLIND_CAMERA_WELL_COPY.mastered} ${BLIND_CAMERA_WELL_COPY.nextBoundary}`,"system");return;}if(visualEvidence?.masteryStatus==="mastered")openExtractionWorkloads();else openVisualWorkloads();return;}
     if (scene.id === "ruins" && hotspotId === "flooded-choir") {
       if (floodedChoirState === "hidden" || terminalOpen) return;
@@ -4066,25 +4092,25 @@ export function App() {
   function advanceExtraction() { if (!extractionSession.result?.passed) return; const scenarios = extractionSession.form === "transfer" ? extractionTransferScenarios : extractionPrimaryScenarios; if (extractionSession.index === scenarios.length - 1) { if (extractionSession.form === "transfer") { setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setExtractionSession({ ...extractionSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setExtractionSession({ ...extractionSession, complete: true }); return; } setExtractionSession({ ...extractionSession, index: extractionSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
   function acknowledgeExtractionPrimary() { if (!extractionSession?.complete || !extractionEvidence?.confidence) return; blindCameraWellFocusPendingRef.current=true; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
   function checkExtractionExplanation(event) { event.preventDefault(); const result = evaluateExtractionExplanation(extractionSession.explanationResponse); setExtractionSession({ ...extractionSession, explanationResult: result }); setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
-  function acknowledgeExtractionMastery() { if (!extractionSession?.explanationResult?.passed || !extractionSession.ownershipConfirmed || !extractionEvidence?.confidence) return; focusContinueAfterExtractionRef.current = true; blindCameraWellFocusPendingRef.current=true; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
+  function acknowledgeExtractionMastery() { if (!extractionSession?.explanationResult?.passed || !extractionSession.ownershipConfirmed || !extractionEvidence?.confidence) return; focusContinueAfterExtractionRef.current = true; blindCameraWellFocusPendingRef.current=true; borrowedLightWallTransitionPendingRef.current=BORROWED_LIGHT_WALL_REGISTRY.source.enabled===true; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
 
   function openPortalOrientation() { setTerminalOpen(true); setRuinsTerminalKind("portal-orientation"); if (!portalSession) { const form = portalEvidence?.masteryStatus === "primary_complete" ? "transfer" : portalEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setPortalSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { scope: "", deployment: "", connection: "", cleanup: "" }, explanationResult: null, ownershipConfirmed: false }); } }
   function exitPortalOrientation() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation rehearsal closed safely. No login, Azure mutation, identifier, credential, prompt, or response was retained.", "system"); }
   function checkPortal(event) { event.preventDefault(); const scenarios = portalSession.form === "transfer" ? portalTransfer : portalPrimary; const scenario = scenarios[portalSession.index]; const result = evaluatePortalScenario(scenario.id, portalSession.response, portalSession.form); const hintLevel = result.passed ? portalSession.hintLevel : Math.max(1, portalSession.hintLevel); setPortalSession({ ...portalSession, result, hintLevel }); setPortalEvidence((previous) => updatePortalEvidence(previous, { form: portalSession.form, scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: portalSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" })); }
   function revealPortalHint() { const hintLevel = Math.min(3, portalSession.hintLevel + 1); setPortalSession({ ...portalSession, hintLevel }); setPortalEvidence((previous) => updatePortalEvidence(previous, { hintLevel })); }
   function advancePortal() { if (!portalSession.result?.passed) return; const scenarios = portalSession.form === "transfer" ? portalTransfer : portalPrimary; if (portalSession.index === scenarios.length - 1) { if (portalSession.form === "transfer") { setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setPortalSession({ ...portalSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setPortalSession({ ...portalSession, complete: true }); return; } setPortalSession({ ...portalSession, index: portalSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
-  function acknowledgePortalPrimary() { if (!portalSession?.complete || !portalEvidence?.confidence) return; setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setPortalSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation primary form complete at 16 of 16. Fresh troubleshooting transfer and closed-note explanation remain.", "teacher"); }
+  function acknowledgePortalPrimary() { if (!portalSession?.complete || !portalEvidence?.confidence) return; borrowedLightWallFocusPendingRef.current=true; setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setPortalSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation primary form complete at 16 of 16. Fresh troubleshooting transfer and closed-note explanation remain.", "teacher"); }
   function checkPortalExplanation(event) { event.preventDefault(); const result = evaluatePortalExplanation(portalSession.explanationResponse); setPortalSession({ ...portalSession, explanationResult: result }); setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
-  function acknowledgePortalMastery() { if (!portalSession?.explanationResult?.passed || !portalSession.ownershipConfirmed || !portalEvidence?.confidence) return; focusContinueAfterPortalRef.current = true; setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setPortalSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation mastery confirmed: both 16-of-16 forms, closed-note safeguards, and owner-confirmed cleanup are complete.", "teacher"); }
+  function acknowledgePortalMastery() { if (!portalSession?.explanationResult?.passed || !portalSession.ownershipConfirmed || !portalEvidence?.confidence) return; focusContinueAfterPortalRef.current = true; borrowedLightWallFocusPendingRef.current=true; setPortalEvidence((previous) => updatePortalEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setPortalSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation mastery confirmed: both 16-of-16 forms, closed-note safeguards, and owner-confirmed cleanup are complete.", "teacher"); }
 
   function openPromptLayers(){setTerminalOpen(true);setRuinsTerminalKind("prompt-layers");if(!promptSession){const form=promptEvidence?.masteryStatus==="primary_complete"?"transfer":promptEvidence?.masteryStatus==="transfer_complete"?"explanation":"primary";setPromptSession({form,phase:form==="explanation"?"explanation":"scenarios",index:0,response:{decision:"",reason:""},result:null,hintLevel:0,complete:false,explanationResponse:{layers:"",grounding_output:"",authority:"",evaluation:""},explanationResult:null,ownershipConfirmed:false});}}
   function exitPromptLayers(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers rehearsal closed safely. Text remains data, never action authority.","system");}
   function checkPrompt(event){event.preventDefault();const ss=promptSession.form==="transfer"?promptTransfer:promptPrimary,s=ss[promptSession.index],result=evaluatePromptScenario(s.id,promptSession.response,promptSession.form),hintLevel=result.passed?promptSession.hintLevel:Math.max(1,promptSession.hintLevel);setPromptSession({...promptSession,result,hintLevel});setPromptEvidence(p=>updatePromptEvidence(p,{form:promptSession.form,scenarioId:s.id,correctness:result.correctness,incrementAttempt:true,hintLevel,misconceptionTags:result.misconceptionTags,masteryStatus:promptSession.form==="transfer"?"primary_complete":result.passed?"in_progress":"remediation_required"}));}
   function revealPromptHint(){const hintLevel=Math.min(3,promptSession.hintLevel+1);setPromptSession({...promptSession,hintLevel});setPromptEvidence(p=>updatePromptEvidence(p,{hintLevel}));}
   function advancePrompt(){if(!promptSession.result?.passed)return;const ss=promptSession.form==="transfer"?promptTransfer:promptPrimary;if(promptSession.index===ss.length-1){if(promptSession.form==="transfer"){setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",masteryStatus:"transfer_complete",clearMisconceptionTags:true}));setPromptSession({...promptSession,form:"explanation",phase:"explanation",result:null,hintLevel:0});}else setPromptSession({...promptSession,complete:true});return;}setPromptSession({...promptSession,index:promptSession.index+1,response:{decision:"",reason:""},result:null,hintLevel:0});}
-  function acknowledgePromptPrimary(){if(!promptSession?.complete||!promptEvidence?.confidence)return;setPromptEvidence(p=>updatePromptEvidence(p,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setPromptSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
+  function acknowledgePromptPrimary(){if(!promptSession?.complete||!promptEvidence?.confidence)return;borrowedLightWallFocusPendingRef.current=true;setPromptEvidence(p=>updatePromptEvidence(p,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setPromptSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
   function checkPromptExplanation(event){event.preventDefault();const result=evaluatePromptExplanation(promptSession.explanationResponse);setPromptSession({...promptSession,explanationResult:result});setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",scenarioId:"explanation",correctness:result.correctness,incrementAttempt:true,masteryStatus:"transfer_complete"}));}
-  function acknowledgePromptMastery(){if(!promptSession?.explanationResult?.passed||!promptSession.ownershipConfirmed||!promptEvidence?.confidence)return;focusContinueAfterPromptRef.current=true;setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setPromptSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers mastery confirmed: both 12-of-12 forms and no-authority explanation are complete.","teacher");}
+  function acknowledgePromptMastery(){if(!promptSession?.explanationResult?.passed||!promptSession.ownershipConfirmed||!promptEvidence?.confidence)return;focusContinueAfterPromptRef.current=true;borrowedLightWallFocusPendingRef.current=true;setPromptEvidence(p=>updatePromptEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setPromptSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Prompt Layers mastery confirmed: both 12-of-12 forms and no-authority explanation are complete.","teacher");}
 
   function openClientBoundaries(){setTerminalOpen(true);setRuinsTerminalKind("client-boundaries");if(!clientBoundarySession){const form=clientBoundaryEvidence?.masteryStatus==="primary_complete"?"transfer":clientBoundaryEvidence?.masteryStatus==="transfer_complete"?"explanation":"primary";setClientBoundarySession({form,phase:clientBoundaryEvidence?.mockPassed?(form==="explanation"?"explanation":"scenarios"):"mock",index:0,response:{decision:"",reason:""},result:null,hintLevel:0,complete:false,explanationResponse:{configuration:"",client_layers:"",request_response:"",simulation_authority:""},explanationResult:null,ownershipConfirmed:false,mockResult:null});}}
   function exitClientBoundaries(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries mock closed safely. No configuration, request, response, credential, or action survives.","system");}
@@ -4587,7 +4613,7 @@ export function App() {
 
   return (
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
-    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined} data-flooded-choir-state={scene.id === "ruins" ? floodedChoirState : undefined} data-blind-camera-well-state={scene.id === "ruins" ? blindCameraWellState : undefined}>
+    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined} data-flooded-choir-state={scene.id === "ruins" ? floodedChoirState : undefined} data-blind-camera-well-state={scene.id === "ruins" ? blindCameraWellState : undefined} data-borrowed-light-wall-state={scene.id === "ruins" ? borrowedLightWallState : undefined}>
       <p className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement>{sceneAnnouncement}</p>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         <div className="scene-world-content" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
@@ -4603,7 +4629,9 @@ export function App() {
         ) : (
           <>
             {scene.id === "ruins" ? (
-              blindCameraWellActive ? (
+              borrowedLightWallActive ? (
+                <img className="scene-art borrowed-light-wall-art" src={borrowedLightWallImage} alt={BORROWED_LIGHT_WALL_COPY.alt} data-borrowed-light-wall-source={BORROWED_LIGHT_WALL_REGISTRY.source.path} />
+              ) : blindCameraWellActive ? (
                 <img className="scene-art blind-camera-well-art" src={blindCameraWellImage} alt={BLIND_CAMERA_WELL_COPY.alt} data-blind-camera-well-source={BLIND_CAMERA_WELL_REGISTRY.source.path} />
               ) : floodedChoirActive ? (
                 <img className="scene-art flooded-choir-art" src={floodedChoirImage} alt={FLOODED_CHOIR_COPY.alt} data-flooded-choir-source={FLOODED_CHOIR_REGISTRY.source.path} />

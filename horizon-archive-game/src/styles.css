@@ -514,6 +514,7 @@ h1 {
 .canonical-game-frame .scene-art.severed-relay-spine-art { object-fit: cover; object-position: 50% 50%; }
 .canonical-game-frame .scene-art.flooded-choir-art { object-fit: cover; object-position: 50% 50%; }
 .canonical-game-frame .scene-art.blind-camera-well-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.86) contrast(1.03) brightness(.96); }
+.canonical-game-frame .scene-art.borrowed-light-wall-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.82) contrast(1.025) brightness(.95); }
 .hotspot[data-hotspot-id="flooded-choir"] { min-width: 44px; min-height: 44px; }
 .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 
@@ -3397,3 +3398,4 @@ h1 {
 
 /* Accepted First Run Host 10 always uses the shell-frozen centered projection. */
 .canonical-game-frame .adventure-screen[data-scene="ruins"] .scene-art.blind-camera-well-art { object-position: 50% 50%; }
+.canonical-game-frame .adventure-screen[data-scene="ruins"] .scene-art.borrowed-light-wall-art { object-position: 50% 50%; }
