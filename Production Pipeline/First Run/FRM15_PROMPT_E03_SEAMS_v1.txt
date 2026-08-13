@@ -1,0 +1,6 @@
+Use case: precise-object-edit
+Asset type: first-person game environment source
+Primary request: Change only the recessed service-void network while preserving every other passing physical fact.
+Input images: Image 1 is the current best render and edit target; Image 2 is the immutable structural guide; Image 3 is the immutable material-ID guide; Image 4 is the immutable protection/layout guide.
+Required edit: preserve the low concave topology, dry route, water context, three constructed processes, interdigitation, continuous mineral trace and reactions, framing, lighting, protected margins, and all passing regions. Provide at least three distinct narrow recessed fissure networks that climb upward and leave the frame. They are unequal in width and spacing, nonparallel, fused into the materials, and include at least one visible branch or merge.
+Constraints: these are inert shadowed capillary voids, never attached objects. No pipe, tube, conduit, cable, clamp, bracket, bolt, fastener, drain, grate, channel cover, expansion joint, repeating module, biology, writing, glow, fluid, movement, activation, destination, response, guide color, control line, mask, label, legend, UI, watermark, answer cue, or world change. Change no other region or meaning.

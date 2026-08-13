@@ -1,0 +1,95 @@
+{
+  "schema": "horizon.first-run.frm15-guide.v1",
+  "spec_id": "FRM15-SPEC-v1",
+  "canvas": {
+    "width": 1536,
+    "height": 1024,
+    "final_core": {"x": 0, "y": 80, "width": 1536, "height": 864},
+    "normalized_output": {"width": 3840, "height": 2160}
+  },
+  "palette": {
+    "background": "#101014",
+    "structure": "#8a8177",
+    "dry_route": "#70614c",
+    "water": "#203b58",
+    "foundation": "#5a351a",
+    "repair": "#d36c34",
+    "service_skin": "#4a84b6",
+    "trace": "#f1d66d",
+    "service_void": "#050509",
+    "semantic_target": "#35d07f",
+    "label_anchor": "#4cd6e8",
+    "protected": "#ff00ff",
+    "safe_core": "#ffffff"
+  },
+  "relation": [[180, 180], [1320, 180], [1450, 650], [1290, 790], [270, 790], [90, 660]],
+  "dry_route": [[250, 660], [1285, 660], [1390, 920], [150, 920]],
+  "water": [[1320, 620], [1536, 585], [1536, 944], [1430, 944], [1320, 780]],
+  "materials": {
+    "draw_order": ["foundation", "repair", "service_skin"],
+    "foundation": [
+      [[180, 220], [1320, 220], [1410, 650], [1250, 760], [300, 760], [120, 650]]
+    ],
+    "repair": [
+      [[330, 300], [650, 250], [620, 390], [785, 365], [735, 520], [905, 490], [860, 685], [590, 650], [620, 555], [410, 600]],
+      [[260, 455], [350, 425], [380, 520], [295, 550]],
+      [[960, 305], [1045, 290], [1070, 385], [990, 410]]
+    ],
+    "service_skin": [
+      [[690, 275], [1050, 230], [1000, 380], [1190, 350], [1125, 500], [1310, 555], [1200, 700], [900, 660], [950, 540], [780, 500], [825, 390], [675, 350]],
+      [[540, 335], [625, 315], [650, 400], [565, 425]],
+      [[420, 565], [505, 545], [530, 625], [445, 650]]
+    ]
+  },
+  "pairwise_contact_windows": {
+    "foundation_repair": [
+      {"x": 250, "y": 260, "width": 220, "height": 180},
+      {"x": 390, "y": 540, "width": 230, "height": 150}
+    ],
+    "foundation_service_skin": [
+      {"x": 990, "y": 220, "width": 250, "height": 190},
+      {"x": 1120, "y": 530, "width": 210, "height": 170}
+    ],
+    "repair_service_skin": [
+      {"x": 525, "y": 285, "width": 220, "height": 170},
+      {"x": 740, "y": 475, "width": 240, "height": 190}
+    ]
+  },
+  "trace": [[225, 535], [430, 485], [620, 515], [790, 555], [980, 475], [1190, 505], [1325, 550]],
+  "trace_reaction_samples": {
+    "foundation": [225, 535],
+    "repair": [620, 515],
+    "service_skin": [980, 475]
+  },
+  "service_seams": [
+    {"id": "seam-01", "points": [[420, 700], [440, 540], [410, 350], [380, 185]]},
+    {"id": "seam-02", "points": [[760, 700], [780, 580], [750, 430], [790, 260]]},
+    {"id": "seam-03", "points": [[1100, 700], [1080, 560], [1120, 420], [1090, 220]]},
+    {"id": "seam-02-branch", "parent": "seam-02", "points": [[780, 580], [900, 430], [980, 280]]}
+  ],
+  "semantic_target": {"x": 300, "y": 225, "width": 1020, "height": 535},
+  "physical_center": {"x": 768, "y": 500},
+  "label_anchor": {"x": 555, "y": 100, "width": 426, "height": 90},
+  "protected": {
+    "predecessor": {"x": 0, "y": 650, "width": 130, "height": 294},
+    "next_boundary": {"x": 1406, "y": 300, "width": 130, "height": 260},
+    "live_water": {"x": 1430, "y": 585, "width": 106, "height": 359},
+    "return_route": {"x": 0, "y": 300, "width": 115, "height": 250},
+    "suspended_landmark": {"x": 1350, "y": 80, "width": 186, "height": 170},
+    "crown": {"x": 1360, "y": 350, "width": 176, "height": 170},
+    "witness": {"x": 0, "y": 80, "width": 176, "height": 170},
+    "narration_ui": {"x": 520, "y": 80, "width": 496, "height": 115}
+  },
+  "guide_leak_rule": {
+    "exact_palette_connected_pixels_max": 63,
+    "final_must_not_contain_labels_legends_ids_or_control_lines": true
+  },
+  "minimums": {
+    "pairwise_contact_windows_per_pair": 2,
+    "material_horizontal_overlap_px": 300,
+    "material_vertical_overlap_px": 180,
+    "trace_material_ids": 3,
+    "upward_main_seams": 3,
+    "branch_or_merge": 1
+  }
+}

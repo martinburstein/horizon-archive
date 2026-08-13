@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-OPS-002-v1`
+State ID: `FRLS-SCI-004-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **WORK ORDER READY / GUIDE-FIRST MIGRATION / SCIENCE NEXT**
+Status: **POLISH VIABILITY READY / GUIDE-CONDITIONED BUILT-IN MIGRATION / MISSION NEXT**
 
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
 
@@ -41,7 +41,7 @@ contract:
     - browser or E2E
     - automation, schedule, or wake
 state:
-  source_control_read: 49e52b7b657a7940f08b6ba95a9737ebeaffbf66
+  source_control_read: 75d1cdfa206aab7b9fd339e15517405f177dcd8d
   current_ref: FRWO-015-v1 / FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
   current_product_tree: 066077823b780ba83c5e71e7b478d117f3761dcc
   best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
@@ -49,12 +49,16 @@ state:
   committed_product_tree: 612a7d53c4564563bfd0bdb7eeca110f715e5c82
   active_baseline: FRPB-001-v13
   active_continuity_lock: FRCL-015-v1
+  active_viability_envelope: FRVE-015-v1
   predecessor_work_order: FRWO-014-v1_CLOSED
   predecessor_hold: FRSH-014-v3-VR-01
-  active_owner: office_of_science_administrator
+  active_owner: mission_captain
   controller_state: GATHER_EVIDENCE
 evidence:
   fresh:
+    - FRVE-015-v1 exact built-in guide-conditioned render/edit, custody, deterministic transform, verification, budget, and stop envelope
+    - FRM15-SPEC-v1 plus deterministic builder/verifier, append-only custody DAG, and closed transform controls
+    - guide/custody/transform synthetic self-tests PASS with adversarial failure sensitivity
     - FRWO-015-v1 earliest-first scope and guide/render/edit/transform provenance DAG
     - new FRM15 namespace and preliminary finite multi-dimensional economics
     - exact selected-source, rollback, ownership, physical, responsive, accessibility, plateau, and stop contract
@@ -63,7 +67,7 @@ evidence:
     - FRCE-014-v1 focused 31/31, related 63/63, full 1047/1047, validators 40/40, builds 234/57, null-first PBA
     - FRAB-013-v1 independent holdout for the committed release only
   not_run:
-    - tests, builds, validators, browser, E2E, generator, guide, transform, or media tools
+    - product tests, builds, validators, browser, E2E, image_gen, guide artifact build/view, candidate transform, or media tools
 representation:
   closed_strategy: prompt_only_H14_closed_no_pool_carry
   cycle_namespace: FRM15
@@ -119,17 +123,16 @@ decision_evidence:
   - Martin explicitly authorized a different mechanism
   - FRCL-015-v1 locks the lawful guide facts and protected unknowns
   - FRWO-015-v1 defines a bounded editable/verifiable DAG and finite economics
+  - FRVE-015-v1 freezes exact viable deterministic controls and built-in reference flow
+  - isolated control self-tests pass and reject their declared adversarial mutations
   - product and media state remain unchanged, so existing product evidence is reused
-next_owner: office_of_science_administrator
+next_owner: mission_captain
 ```
 
-Exact Science action: read `FRWO-015-v1`, `FRPB-001-v13`, `FRCL-015-v1`,
-`FRSH-014-v3-VR-01`, this state, the exact null-first source/lesson contracts,
-and current accessibility/privacy/save/performance/readiness authorities.
-Freeze or reject exact guide schema/builders, built-in render/edit tools,
-custody/provenance, deterministic transform allowlist, physical and responsive
-verifiers, PBA/performance limits, fallback law, validation economics, finite
-budgets, plateau rules, cleanup, rollback, and final-proof reserve. Issue one
-versioned `POLISH VIABILITY READY`, `REVISE`, or `HOLD`. Do not create or inspect
-a guide/media artifact, spend a call, modify product/runtime, run browser/E2E,
-or advance maturity.
+Exact Mission action: read `FRVE-015-v1` and independently verify all frozen
+control hashes and self-tests. Freeze literal custody and accepted destinations,
+the exact built-in reference order and initial three-call graph, the FRM15
+namespace/PBA migration, proof cascade, cleanup, rollback, and full production
+sequence in one versioned `FIRST RUN SHELL READY`, or return the earliest
+conflict. Do not build/view a guide, invoke `image_gen`, inspect/import media,
+change product/runtime, run browser/E2E, or advance maturity.

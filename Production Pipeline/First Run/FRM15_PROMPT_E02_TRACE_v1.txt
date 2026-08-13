@@ -1,0 +1,6 @@
+Use case: precise-object-edit
+Asset type: first-person game environment source
+Primary request: Change only the mineral high-water trace and its local substrate reactions while preserving every other passing physical fact.
+Input images: Image 1 is the current best render and edit target; Image 2 is the immutable structural guide; Image 3 is the immutable material-ID guide; Image 4 is the immutable protection/layout guide.
+Required edit: preserve topology, dry route, water context, all three constructed processes, pairwise interdigitation, recessed service voids, framing, lighting, protected margins, and all passing regions. Make one broken wandering natural mineral crust visibly continuous across all three processes. It must collect inside vesicular cells, feather across ceramic sinter, and become thin and interrupted over lamellar skin without splitting into separate traces.
+Constraints: the trace is irregular physical deposition, not a timeline, stripe set, diagram, writing, glyph, answer, message, authored record, glow, fluid, activation, or response. Change no other region or meaning. Do not reproduce guide colors, control lines, masks, labels, legend, UI, watermark, human infrastructure, biology, or world change.
