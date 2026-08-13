@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-QTR-002-v1`
+State ID: `FRLS-REC-002-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / QUARTERMASTER REVISE / REPRESENTATION REPLAN REQUIRED**
+Status: **OPERATE / RECON DIRECTORIAL REPLAN READY / MISSION VARIANCE REQUIRED**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -58,6 +58,7 @@ observed:
   current_viability_envelope: FRVE-014-v2
   current_shell: FRSH-014-v2
   current_player_experience_blueprint: FRPX-014-v1
+  current_directorial_variance: FRCT-014-v1-VR-01
   accepted_media_manifest: FRAM-014-v1
   custody_control: FRFC-014-v2
   pba_control: FRPBA-014-v1
@@ -76,7 +77,7 @@ observed:
   h14_2_h14_3_cleanup: PASS_EXACT_IDENTITY
   corrected_opacity_self_test: PASS_RGB_RGBA_AND_ALPHA254_REJECTION
   generator_dry_run: PASS_NO_CALL
-  initial_prompt_identities: 8_FROZEN
+  initial_prompt_identities: 8_FROZEN_H14-4_THROUGH_H14-8_NOT_EXECUTABLE_AS_IS
 unknown:
   - future source bytes, transport result, and private physical review
   - future candidate responsive, accessibility, performance, and holdout evidence
@@ -87,13 +88,14 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: reconnaissance_sergeant_via_mission_captain
+active_owner: mission_captain
 information_actions_allowed:
-  - inspect FRCE-014-v1, shell-owned authorities, null-first functional candidate, exact source/custody controls, and affected non-QA tests
+  - Mission may inspect the current shell, Science envelope, Recon variance, Quartermaster evidence, call ledger, and exact prompt texts
+  - Science may assess and freeze one exact H14-4 replacement only after Mission routes the viability variance
 effect_actions_allowed:
-  - only shell-permitted Quartermaster generation, custody, private review, measurement, source/import, registry/copy, count, provenance, report, and compact-state files
+  - versioned Mission and Science control artifacts plus one exact H14-4 replacement prompt identity
 prohibited_until_named_owner_and_stage:
-  - generation or external media call before exact Quartermaster preflight
+  - generation or external media call before exact Science prompt identity and Mission shell variance
   - source selection/import before private technical/physical/responsive PASS
   - any product change beyond the exact FRPX-014-v1 atomic null-first Combat scope
   - runtime presentation work before Image Specialist
@@ -105,13 +107,14 @@ prohibited_until_named_owner_and_stage:
 
 ```yaml
 potential:
-  hard_failures: 2_physical_source_rejections
+  hard_failures: 2_representation_equivalent_physical_source_rejections
   selected_encounter_missing: 0
   continuity_lock_ready: true
   work_order_ready: true
   source_feasibility_contract_ready: true
   shell_ready: true
   directorial_lock_ready: true
+  directorial_representation_replan_ready: true
   player_experience_blueprint_ready: true
   production_candidate: null_first_FRCE-014-v1_pending_commit
   final_holdout_passed: false
@@ -130,14 +133,14 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ## Strategy and continuation
 
 ```yaml
-active_strategy_family: physical_source_representation_replan
+active_strategy_family: low_concave_shelf_interdigitating_processes_branching_service_voids
 rejected_strategy_families:
   - continue_prompt_search_under_format24bpprgb_gate
   - substrate_separation_that_resolves_as_human_dam
   - dry_access_waterline_nonhuman_words_that_resolve_as_human_dam
-continuation_reason: two technical-pass source strategies independently retained the same terrestrial dam archetype and the second weakened the mandatory history crossing; remaining frozen prompts introduce no measured mechanism to escape that anchor
+continuation_reason: Recon replaced the barrier-layer-conduit causal grammar with a measurable low-shelf/interdigitating-process/branching-negative-space mechanism; only a Science-frozen H14-4 identity and Mission shell variance can lawfully test it
 decision: RETURN_TO_OWNER
-next_owner: reconnaissance_sergeant_via_mission_captain
+next_owner: mission_captain
 ```
 
 ## Commandant checkpoint
@@ -697,3 +700,60 @@ strategies resolved to the same familiar human infrastructure archetype and
 the second weakened the required history crossing. Reconnaissance must return
 through Mission with a versioned representation replan before Quartermaster
 may continue. Image Specialist is not authorized.
+
+Reconnaissance has now completed that bounded representation replan as
+`FRCT-014-v1-VR-01`. The new mechanism changes composition and construction
+causality rather than adding more nonhuman synonyms: a low concave basin shelf
+replaces the barrier silhouette; three interdigitating material processes
+replace horizontal construction zones; and branching recessed service voids
+replace familiar conduits, clamps, and drainage joints. The complete physical
+sentence and every no-message/no-response boundary remain fixed.
+
+## Reconnaissance representation-return checkpoint
+
+```yaml
+reconnaissance_return:
+  directorial_variance: FRCT-014-v1-VR-01
+  disposition: DIRECTORIAL REPLAN READY / MISSION VARIANCE REQUIRED
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    recorded_two_family_equivalence: PASS
+    barrier_layer_conduit_failure_localization: PASS
+    low_concave_shelf_composition: PASS_SPECIFIED
+    interdigitating_process_histories: PASS_SPECIFIED
+    branching_recessed_service_voids: PASS_SPECIFIED
+    exact_measurable_representation_delta: PASS_SPECIFIED
+    physical_story_accessibility_boundaries: PASS_PRESERVED
+    prompt_or_shell_identity_change: NOT_PERFORMED_MISSION_SCIENCE_OWNED
+    media_or_product_action: NONE
+    future_candidate: NOT_EVALUATED
+  delta_vs_best: zero_product_zero_media_zero_maturity_positive_representation_information
+  budget_used:
+    generation_calls: 3_total_cycle_0_recon_return
+    media_imports: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 29
+    initial_tranche_unspent: 5
+    next_observation_if_authorized: H14-4_only
+    final_verification_reserve: FULL
+  plateau_policy: >-
+    old H14-5 through H14-8 prompts are not executable as-is; one newly frozen
+    H14-4 may test the new mechanism; a second equivalent new-family failure
+    without a new measurable mechanism is HOLD / REPRESENTATION CEILING
+  remaining_uncertainty:
+    - Science feasibility and exact replacement-prompt identity
+    - Mission shell variance and Quartermaster authority
+    - future source compliance and complete downstream proof
+    - human assistive-technology usability study
+  decision: RETURN_TO_OWNER
+  next_owner: mission_captain
+```
+
+Mission must now classify the variance and route the H14-4 identity through
+Science. No prompt, shell, call, source, media, product, maturity, or Image
+action is authorized by the Recon treatment alone.
