@@ -2,29 +2,23 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN PASS RELEASED / FRAB-010-v1 / DISTINCT HOST 10`**
+Current disposition: **`FIRST RUN VISION BASELINE REOPENED / FRPB-001-v9 / TEN BOUNDED NEXT-HOST ATTEMPTS`**
 
-Exact next owner: **one fresh Commandant**
+Exact next owner: **one fresh Colonel**
 
-Revalidate the released First Run baseline and choose the exact next bounded
-earliest-first action. No later Work Order, generation, attempt, or media
-authority is implied by this handoff.
+Audit and lock continuity for the earliest missing encounter after released
+Host 10: canonical Terminal 11 / Wall of Borrowed Light / unchanged
+`L05-01 + L05-02`. Issue one versioned continuity artifact, then route only a
+fresh Operations Planning Major. Do not select geometry, a prompt, an attempt,
+or implementation during the Colonel stage.
 
-Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
-candidate was rejected for the frozen responsive layout contract, then
-identity-deleted and proved absent. The external scratch root, product raster,
-and provenance are absent; accepted media remains `19 / 70,136,520`; the
-functional registry remains inert. No Host 10 authority exists.
+Fresh ledger is exactly `{H11-1..H11-10}`. It is sequential, one-output, and
+first-PASS-stop; all ordinals are currently unstarted. Accepted Hosts 01-10 and
+all `21 / 109,046,406` accepted media bytes are immutable. No reveal, editing,
+variation, reference image, later Host, changed lesson, projected writing or
+answer, new canon, reward, access, identity, dialogue, world response, RP-013,
+post-ending content, or successor is authorized.
 
-Fresh ledger `{H9-6..H9-10}` is fully consumed. All five calls exited `0`; all
-candidates failed the compact layout contract and were identity-deleted.
-Combined Host 09 ledger `{H9-1..H9-10}` is exhausted. Scratch root, product,
-and provenance are absent; accepted media remains `19 / 70,136,520`; runtime
-remains inert; maturity is unchanged.
-
-Fresh ledger `{H9-11..H9-15}` is fully consumed and deleted. Its layout
-verdicts are under evidence correction; no candidate or product remains.
-
-Do not inspect, restore, stage, or use repository QA screenshots. Preserve
-released Host 08 bytes, Hosts 01-07, all accepted media, all OPEN records,
-protected exclusions, RP-012, `successor=null`, and VR-65.
+Do not inspect, restore, stage, or use repository QA screenshots. Preserve all
+OPEN records, protected exclusions, Martin's real browser/profile/save, hidden
+lore, opaque residual roots, RP-012, and `successor=null`.
