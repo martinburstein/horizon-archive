@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-REC-001-v1`
+State ID: `FRLS-TAC-001-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / DIRECTORIAL LOCK / TACTICAL PENDING**
+Status: **OPERATE / PLAYER EXPERIENCE READY / COMBAT PENDING**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -57,6 +57,7 @@ observed:
   current_work_order: FRWO-014-v1
   current_viability_envelope: FRVE-014-v1
   current_shell: FRSH-014-v1
+  current_player_experience_blueprint: FRPX-014-v1
   accepted_media_manifest: FRAM-014-v1
   custody_control: FRFC-014-v1
   pba_control: FRPBA-014-v1
@@ -77,15 +78,15 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: tactical_operations_specialist
+active_owner: combat_engineer
 information_actions_allowed:
-  - inspect shell-owned authorities, released predecessor behavior, visual/surface controls, and non-QA evidence
+  - inspect FRPX-014-v1, shell-owned authorities, released predecessor behavior, exact source structure, and affected non-QA tests
 effect_actions_allowed:
-  - only the role-owned actions, exact files, earned budgets, and stage order frozen by FRSH-014-v1
+  - only shell-permitted Combat product, test, report, and compact-state files; source remains disabled/null
 prohibited_until_named_owner_and_stage:
   - generation or external media call before Quartermaster and preflight
   - source selection/import before private technical/physical/responsive PASS
-  - product implementation before Combat
+  - any product change beyond the exact FRPX-014-v1 atomic null-first Combat scope
   - runtime presentation work before Image Specialist
   - release or maturity advancement before Intelligence
   - later-address selection
@@ -102,6 +103,7 @@ potential:
   source_feasibility_contract_ready: true
   shell_ready: true
   directorial_lock_ready: true
+  player_experience_blueprint_ready: true
   production_candidate: null
   final_holdout_passed: false
 budget:
@@ -121,9 +123,9 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ```yaml
 active_strategy_family: sequential_shell_bounded_physical_host_release
 rejected_strategy_families: []
-continuation_reason: FRCT-014-v1 locks one buildable physical and emotional reading; Tactical is the next least-powerful sufficient information action and cannot spend a call or change product/media
+continuation_reason: FRPX-014-v1 closes the interaction, focus, recovery, reflow, accessibility, and atomic-fallback ambiguity; Combat is the next least-powerful sufficient effect owner
 decision: GATHER_EVIDENCE
-next_owner: tactical_operations_specialist
+next_owner: combat_engineer
 ```
 
 ## Commandant checkpoint
@@ -370,7 +372,55 @@ reconnaissance:
   next_owner: tactical_operations_specialist
 ```
 
-Tactical may now perform only its shell-bounded player-experience information
-stage against `FRCT-014-v1`. No generation call, source inspection/import,
-product/media/runtime change, maturity advancement, or Combat action exists
-before the named owner and exact sequential gate in `FRSH-014-v1`.
+Reconnaissance authorized only the shell-bounded Tactical information stage.
+That stage is now closed by `FRPX-014-v1`; it spent no call and changed no
+source, media, runtime, product, or maturity state.
+
+## Tactical checkpoint
+
+```yaml
+tactical:
+  player_experience_blueprint: FRPX-014-v1
+  disposition: PLAYER EXPERIENCE READY
+  product_candidate: 357ad6dc4184b74150173504e86e366c761cdc0e
+  current_ref: FRPX-014-v1_information_state
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    current_and_target_graph: PASS
+    atomic_native_or_generic_replacement: PASS
+    state_action_eligibility_unavailable_paths: PASS
+    focus_announcement_and_recovery: PASS
+    input_modality_convergence: PASS
+    six_layout_reflow_and_accessibility: PASS
+    semantic_hotspot_and_source_derived_crop: PASS
+    placeholder_and_owner_ledger: PASS
+    acceptance_regression_and_hard_stop: PASS
+    media_or_product_action: NONE
+  delta_vs_best: zero_product_zero_maturity_zero_media_positive_information
+  budget_used:
+    generation_calls: 0
+    product_effect_actions: 0
+    media_actions: 0
+    browser_or_e2e: 0
+    planning_effect_actions: 2_control_artifacts
+  budget_remaining:
+    generation_calls: 32_hard_pool
+    available_initial_tranche: 8
+    final_verification_reserve: PROTECTED
+  remaining_uncertainty:
+    - future source bytes, transport, private physical review, and measurements
+    - source-derived integrated browser, accessibility, performance, and presentation proof
+    - human assistive-technology usability study
+    - exact product candidate and independent Intelligence release
+  decision: GATHER_EVIDENCE
+  next_owner: combat_engineer
+```
+
+Combat may now implement only the exact shell-bounded, null-first functional
+stage in `FRPX-014-v1`. It must keep source disabled/null and the released
+generic path available until one positive native-active selector atomically
+commits a lawful source, presentation, semantic hotspot, and sanitized state.
+No generation call, media inspection/selection/import, Image-stage treatment,
+maturity advancement, or Quartermaster action is authorized.
