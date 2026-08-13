@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-013-v1 / EIGHT CALLS`**
+Current disposition: **`DIRECTORIAL LOCK / FRDT-013-v1 / PHYSICAL LOAD READING`**
 
-Exact next owner: **one fresh Reconnaissance Sergeant**
+Exact next owner: **one fresh Tactical Operations Specialist**
 
-Issue one `DIRECTORIAL LOCK` for `FRSH-013-v1`: freeze the dry approach ->
-taut spans -> paired collars -> load/repair contacts -> residue -> waterline
-reading order, restrained natural presentation, compact crop-safe composition,
-silence/nonresponse, and no-symbol/no-performance/no-answer boundary. Run no
-generation or media inspection.
+Issue one `PLAYER EXPERIENCE READY` blueprint for `FRSH-013-v1` /
+`FRDT-013-v1`: lock null-first registry, predecessor boundary, available /
+in-progress / remediation / complete / returned states, LOOK/TALK/USE, exact
+unchanged `L05-05 + L05-06` ownership, focus/recovery, copy slots, measured
+physical and six-layout evidence, accessibility, and Combat test matrix. Run
+no generation or media inspection.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
