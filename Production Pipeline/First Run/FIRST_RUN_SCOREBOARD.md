@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-010-v1`
+Scoreboard ID: `FRSB-011-v1`
 
 Current release authority: `FRAB-010-v1 / DISTINCT HOST 10 RELEASED`
 
-Baseline / lock: `FRPB-001-v6` / `FRCL-009-v1`
+Baseline / lock: `FRPB-001-v9` / `FRCL-011-v1`
 
-Release map: `FRRM-009-v8`
+Release map: `FRRM-011-v1`
 
 Operations source inspected: `243edb4e`
 
@@ -18,7 +18,11 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`.
 
-Selected bounded Work Order: **none; `FRWO-009-v8` released by `FRAB-009-v2`**.
+Selected bounded Work Order: **`FRWO-011-v1 / Wall of Borrowed Light`**.
+
+Host 11 is the earliest missing physical encounter. Fresh private ledger
+`{H11-1..H11-10}` is unstarted; first complete PASS stops. Accepted media and
+maturity remain `21 / 109,046,406` and `FR0` physical at `FR-03`.
 
 Host 09 is released from exact selected attempt `H9-16`. Four fresh authorized
 attempts were unused after the first PASS. Accepted media is now

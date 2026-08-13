@@ -1,10 +1,10 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-010-v1`
+Map ID: `FRRM-011-v1`
 
 Current release authority: `FRAB-010-v1 / DISTINCT HOST 10 RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v6` / `FRCL-009-v1`
+Baseline / continuity lock: `FRPB-001-v9` / `FRCL-011-v1`
 
 Operations source inspected: `243edb4e`
 
@@ -22,7 +22,12 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`
 
-Selected bounded Work Order: **none; `FRWO-009-v8` released by `FRAB-009-v2`**.
+Selected bounded Work Order: **`FRWO-011-v1 / Wall of Borrowed Light`**.
+
+`FRWO-011-v1` is the earliest-first missing encounter after released Host 10.
+Martin authorizes exactly ten sequential private attempts `{H11-1..H11-10}`;
+first complete PASS stops. Science and Mission gates precede every generation
+call. Accepted media remains `21 / 109,046,406` and maturity is unchanged.
 
 `FRWO-009-v8` is released. The first corrected-gate attempt passed technical,
 physical, derived-responsive, and live-browser review; it is integrated at the

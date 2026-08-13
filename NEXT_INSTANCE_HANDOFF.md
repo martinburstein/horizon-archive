@@ -2,22 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`CONTINUITY LOCK / FRCL-011-v1 / BOUNDED WALL OF BORROWED LIGHT`**
+Current disposition: **`WORK ORDER READY / FRWO-011-v1 / TEN PRIVATE HOST 11 ATTEMPTS`**
 
-Exact next owner: **one fresh Operations Planning Major**
+Exact next owner: **one fresh Office of Science Administrator**
 
-Select and issue one versioned earliest-first Host 11 Work Order for a distinct
-dry-reachable receiving wall that owns unchanged `L05-01 + L05-02`. Freeze the
-sequential `{H11-1..H11-10}` first-PASS-stop ledger, literal scratch/product/
-provenance paths, role permissions, validation ladder, and rollback. Route only
-a fresh Office of Science Administrator; do not generate or implement.
+Evaluate the complete technical, learning, privacy, accessibility, responsive,
+performance, media, generation, provenance, cleanup, and validation envelope
+for `FRWO-011-v1`. Freeze ten exact prompt identities and the bundled CLI
+identity, derived six-layout measurement schema, accepted-only runtime guards,
+budgets, and fail-closed rollback. Issue one versioned viability envelope and
+route only a fresh Mission Captain. Do not generate, inspect candidate pixels,
+or implement.
 
-Continuity is exact: received moving light crosses mineral film, enters
-embedded apertures, and returns at changed angles; a broad dry apron reaches an
-off-axis service throat. No writing, image, UI, screen, audience, answer,
-address, intelligence, reward, access, dialogue, or world response may appear.
-
-Accepted Hosts 01-10 and `21 / 109,046,406` accepted media are immutable. Do
-not inspect, restore, stage, or use repository QA screenshots. Preserve all
-OPEN records, protected exclusions, Martin's real browser/profile/save, hidden
-lore, opaque residual roots, RP-012, and `successor=null`.
+Ledger `{H11-1..H11-10}` is entirely unstarted and first-PASS-stop. Literal
+scratch/product/provenance paths are frozen in the Work Order. Accepted Hosts
+01-10 and `21 / 109,046,406` media are immutable. Preserve the receiving-wall
+continuity, unchanged `L05-01 + L05-02`, protected QA/user state, all OPEN
+records, hidden lore exclusion, RP-012, and `successor=null`.
