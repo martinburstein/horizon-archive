@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN SHELL READY / FRSH-012-v1 / NINE ROLLING CALLS`**
+Current disposition: **`DIRECTORIAL LOCK / FRDT-012-v1 / REACHABLE EDGE`**
 
-Exact next owner: **one fresh Reconnaissance Sergeant**
+Exact next owner: **one fresh Tactical Operations Specialist**
 
-Issue one directorial lock for `FRSH-012-v1`: reading order, scale, approach,
-water boundary, restrained atmosphere, physical legibility, and rejection
-conditions across six layouts. Preserve exact canon, lessons, state, media
-custody, rolling pool, no-reveal rule, and all protected boundaries. Do not
-generate or implement.
+Produce one complete interaction/state/responsive/recovery blueprint for
+`FRSH-012-v1` and `FRDT-012-v1`: inert null-first registry, generic-to-native
+handoff, LOOK/TALK/USE, owned lesson order, focus/reload/return, semantic and
+physical measurement records, six layouts, accessibility, copy slots, tests,
+and exact Combat handoff. Do not generate or implement.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
