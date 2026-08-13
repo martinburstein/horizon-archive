@@ -533,3 +533,57 @@ quartermaster:
 
 No H14-2 or later call is authorized before a versioned Science feasibility
 correction and Mission shell correction. Image Specialist is not authorized.
+
+Science has now classified the Quartermaster return as a verifier
+representation error, not an opacity failure. W3C PNG semantics permit both
+three-channel RGB and four-channel RGBA whose every alpha sample is maximum to
+represent the same fully opaque image. `FRFC-014-v2` therefore replaces the
+decoder-format proxy with strict PNG structure plus an exhaustive decoded
+alpha proof, while retaining byte identity, no-postprocess import, and exact
+cleanup. Its isolated controls accepted opaque RGB and opaque RGBA and rejected
+one alpha mutation from `255` to `254`.
+
+## Science return checkpoint
+
+```yaml
+science_return:
+  viability_envelope: FRVE-014-v2
+  proposed_custody_control: FRFC-014-v2
+  disposition: POLISH VIABILITY REVISED / MISSION CORRECTION REQUIRED
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    w3c_png_opacity_semantics: PASS
+    microsoft_decoder_representation_semantics: PASS
+    frozen_openai_transport_support: PASS
+    opaque_rgb_positive_control: PASS
+    opaque_rgba_all_alpha_255_positive_control: PASS
+    single_alpha_254_adversarial_rejection: PASS
+    exact_identity_no_reencode_cleanup: PASS
+    future_source_physical_layout: NOT_EVALUATED
+    product_and_release: UNCHANGED_NOT_STARTED
+  delta_vs_best: zero_product_zero_media_zero_maturity_positive_verifier_information
+  budget_used:
+    generation_calls: 1
+    media_imports: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 31
+    initial_tranche: 7
+    final_verification_reserve: FULL
+  remaining_uncertainty:
+    - whether a future source passes the corrected hard predicate
+    - future private physical review and six-layout measurements
+    - integrated responsive, accessibility, performance, served, and E2E proof
+    - human assistive-technology usability study
+    - exact product candidate and independent Intelligence release
+  decision: RETURN_TO_OWNER
+  next_owner: mission_captain
+```
+
+Mission must issue `FRSH-014-v2`, freeze the exact `FRFC-014-v2` identity and
+provenance fields, and supersede only the affected pixel-format clauses before
+Quartermaster may evaluate H14-2. H14-1 remains consumed, deleted, and rejected.
+No call, media action, product action, or Image stage is currently authorized.
