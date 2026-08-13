@@ -8,6 +8,32 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-13 - `FRWO-015-v1` terminal hold - TUNE
+
+- **KEEP:** deterministic guide hard gates, append-only provenance, finite
+  stochastic/deterministic/inspection budgets, first-PASS stop, private
+  visible-pixel rejection, accepted-only import, exact no-effect retry
+  reconciliation, null-first rollback, and content-addressed product-evidence
+  reuse. Four calls yielded two measurable local improvements without spending
+  the two economically unjustified remaining slots.
+- **TUNE:** retain candidate ancestors until every dependent edit and lawful
+  retry window is closed. Tool-managed originals are recovery evidence, not a
+  durable custody substitute. If early deletion is required, design and
+  adversarially test tombstone-aware DAG semantics before production rather
+  than discovering the need during restoration.
+- **TUNE:** separate rejected-raster residual proof from OneDrive reparse and
+  empty-directory cleanup. Record harmless empty containers explicitly and do
+  not repeat destructive cleanup against reparse-backed leaves merely to make
+  the directory count cosmetically zero.
+- **TUNE:** treat built-in precise edits as stochastic global transforms.
+  Require locality evidence and classify semantic drift when an inert trace can
+  become cable-like hardware. When the binding gap is massing/topology, move to
+  a topology-editable representation instead of spending material, trace, or
+  seam prompt calls.
+- **REDESIGN:** not yet authorized. The current guide-conditioned mechanism is
+  closed at `STOP_LOW_MARGINAL_VALUE`; a new source class requires Martin's
+  explicit topology-specific tool/input/custody/cost/import/risk decision.
+
 ### 2026-08-13 - Validation economics - TUNE
 
 - **KEEP:** focused-to-related-to-full validation remains available when risk
