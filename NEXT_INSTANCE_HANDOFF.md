@@ -2,14 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION CONTENT COMPLETE / FRCA-010-v1 / FIRST PASS SELECTED`**
+Current disposition: **`RUNTIME PRESENTATION COMPLETE / FRPR-010-v1 / IMMUTABLE CANDIDATE`**
 
-Exact next owner: **one Image Specialist**
+Exact next owner: **one Intelligence Officer**
 
-Polish and validate runtime code/configuration presentation using the unchanged
-selected raster only. Confirm hierarchy, focus, forced colors, reduced motion,
-six-layout containment, decode fail-close, budgets, and immutable selected
-bytes. Do not generate, edit, replace, vary, reveal, or transform media.
+Independently validate the exact candidate, media/provenance identity, private
+attempt ledger, state/focus/recovery, six-layout browser evidence, full tests,
+validators, builds, served identity, clean-start E2E, budgets, cleanup, and all
+protected invariants. Release only from accepted as-built evidence.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then
