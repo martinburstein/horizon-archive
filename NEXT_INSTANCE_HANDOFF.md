@@ -2,16 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`DIRECTORIAL LOCK / FRDT-013-v1 / PHYSICAL LOAD READING`**
+Current disposition: **`PLAYER EXPERIENCE READY / FRPX-013-v1 / NATIVE HOST 13`**
 
-Exact next owner: **one fresh Tactical Operations Specialist**
+Exact next owner: **one fresh Combat Engineer**
 
-Issue one `PLAYER EXPERIENCE READY` blueprint for `FRSH-013-v1` /
-`FRDT-013-v1`: lock null-first registry, predecessor boundary, available /
-in-progress / remediation / complete / returned states, LOOK/TALK/USE, exact
-unchanged `L05-05 + L05-06` ownership, focus/recovery, copy slots, measured
-physical and six-layout evidence, accessibility, and Combat test matrix. Run
-no generation or media inspection.
+Implement `FRPX-013-v1` as one inert null-first fail-closed registry, App
+integration, styles, focused tests, and clean-start E2E assertions. Preserve
+generic behavior while source is disabled; exact enablement retires only the
+two owned launchers. Run focused/related/full tests, 40 validators, production
+and fixture builds, PBA/media, served identities, commit/push the functional
+candidate, and route fresh Quartermaster. Do not generate or inspect media.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
