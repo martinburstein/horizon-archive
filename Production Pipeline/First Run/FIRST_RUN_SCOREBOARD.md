@@ -1,8 +1,8 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-009-v8`
+Scoreboard ID: `FRSB-010-v1`
 
-Current release authority: `FRAB-009-v2 / DISTINCT HOST 09 RELEASED`
+Current release authority: `FRAB-010-v1 / DISTINCT HOST 10 RELEASED`
 
 Baseline / lock: `FRPB-001-v6` / `FRCL-009-v1`
 
@@ -108,7 +108,7 @@ complete.
 | `FR-00` Package | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Truthful complete-game launcher/guide independently released; Demo Tour remains separate |
 | `FR-01` Opening | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Final-purpose save/name/prologue/resume and Chapter I reveal independently released |
 | `FR-02` Glass Meadow | `FR2` | `FR2` — 3 exact | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-002-v1` independently releases the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, responsive/accessibility presentation, unchanged route/save/world, and exact `44px` departure |
-| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 5 exact / 6 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-009-v2` independently releases exact Host 09 and its native unchanged dual-lesson entry; the remaining Drowned host collapse stays visible |
+| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 6 exact / 5 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-010-v1` independently releases exact Host 10 and its native unchanged dual-lesson entry; the remaining Drowned host collapse stays visible |
 | `FR-04` Witness Corridor | `FR2` | `FR0` — unadvanced by this Work Order | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Silent, separate, privacy-preserving Terminal correction independently released |
 | `FR-05` City Threshold | `FR0` | `FR0` — 2 missing | `FR2` | `FR1` | `FR0` | `FR3` | `FR4` | Direct credits-free entry remains exact, but the visible `successor packet` / `staging boundary` sentence is an active contradiction; bounded prior release proof remains historical |
 | `FR-06` Civic Record | `FR2` | `FR0` — 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
@@ -148,7 +148,7 @@ complete.
 - `FRWO-003-v1` independently adds one exact physical relationship at `FR-03`
   without promoting the address-level cell above `FR0`; ten Drowned hosts
   remain missing and the accepted shared compression remains visible.
-- The host inventory is now `13 exact / 1 accepted shared compression / 25
+- The host inventory is now `14 exact / 1 accepted shared compression / 24
   missing / 1 unadvanced Witness expression`.
 
 ## Current selected Work Order - maturity unchanged
