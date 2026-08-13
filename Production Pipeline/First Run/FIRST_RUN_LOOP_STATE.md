@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-CBT-002-v1`
+State ID: `FRLS-QM-003-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **PRODUCTION FUNCTIONAL / V2 NULL-FIRST SOURCE LAW / QUARTERMASTER NEXT**
+Status: **QUARTERMASTER HOLD / G01 REPRESENTATION REPLAN REQUIRED**
 
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
 
@@ -28,8 +28,8 @@ state:
   best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
   committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
   committed_product_tree: 612a7d53c4563bfd0bdb7eeca110f715e5c82
-  active_owner: quartermaster
-  controller_state: GATHER_EVIDENCE
+  active_owner: mission_captain
+  controller_state: RETURN_TO_OWNER
 representation:
   cycle_namespace: FRM15
   executable_guide_family: G01
@@ -57,21 +57,22 @@ evidence:
     - visible-pixel and noncanonical-control evidence classes separated
     - v2 null-first registry action focus announcement resume malformed fallback crop and accepted-media atomicity locked
     - six-layout forced-color reduced-motion touch keyboard and switch-like contracts locked
-    - exact two-file blueprint and compact-state change only
+    - exact G01 guide family built and verified under frozen controls
+    - C01 base and C02 material edit adopted and privately rejected by hard visible-pixel vectors
+    - C03 trace edit consumed on transport failure with no filesystem artifact and no retry
   reused:
     - FRPB-001-v13 FRCL-015-v1 FRWO-015-v1 FRVE-015-v1 FRSH-015-v1 FRCT-015-v1
     - FRCE-014-v1 focused 31/31 related 63/63 full 1047/1047 validators 40/40 builds 234/57 null-first PBA
     - FRAB-013-v1 holdout for committed release only
   not_run:
-    - production guide build or view
-    - image generation edit media inspection transform or import
+    - selected-source normalization composite import or activation
     - product tests builds validators browser E2E
 budgets:
-  guide_families: {hard_max: 2, executable_now: 1, used: 0}
-  stochastic_calls: {hard_max: 6, initial: 3, earned: 2, reserve: 1, used: 0}
-  deterministic_operations: {hard_max: 12, used: 0}
-  private_candidate_inspections: {hard_max: 8, used: 0}
-  retained: {hard_max_files: 16, hard_max_bytes: 536870912, current: 0}
+  guide_families: {hard_max: 2, executable_now: 1, used: 1}
+  stochastic_calls: {hard_max: 6, initial: 3, earned: 2, reserve: 1, used: 3}
+  deterministic_operations: {hard_max: 12, used: 4}
+  private_candidate_inspections: {hard_max: 8, used: 2}
+  retained: {hard_max_files: 16, hard_max_bytes: 536870912, current_after_rejected_leaf_cleanup: 4/32541, empty_leaf_dirs: 2}
   final_proof: FULL_PROTECTED
 stops:
   - first complete release-quality PASS stops
@@ -83,21 +84,22 @@ stops:
   - low marginal expected player value stops
 potential:
   missing_physical_expression: 1
-  guide_structure: NOT_CREATED
+  guide_structure: G01_BUILT_VERIFIED_RETAINED
   directorial_treatment: LOCKED
   tactical_blueprint: LOCKED
   runtime_v2_source_law: IMPLEMENTED_AND_FOCUSED_PASS
-  source_and_provenance: UNKNOWN
+  source_and_provenance: REJECTED_NONE_SELECTED
   runtime_integration: NULL_FIRST_REUSED
-  exact_candidate_vs_best: NO_CANDIDATE
+  exact_candidate_vs_best: FRM15-E01_SEARCH_BEST_REJECTED
   maturity_delta: ZERO
-decision: GATHER_EVIDENCE
+decision: HOLD_RETURN_TO_OWNER
 decision_evidence:
-  - Tactical closed coordinate interaction layout fallback and recovery ambiguity without an effect action
-  - guide controls and visible-pixel truth now have independent falsifiable roles
-  - no product input changed so prior behavior evidence is reused
-  - Combat is the next least-powerful sufficient owner for the v2 null-first migration
-next_owner: quartermaster
+  - C01 and C02 both failed low-concave anti-barrier anti-human-infrastructure anti-geology gates
+  - C02 improved material separation but left multiple categorical hard failures
+  - C03 was consumed by transport failure with no artifact and no lawful retry
+  - C04/C05 are unavailable because the immediately preceding call produced no improving candidate
+  - no source or product input changed so null-first product evidence remains reused
+next_owner: mission_captain
 ```
 
 ## Combat checkpoint
@@ -152,9 +154,8 @@ combat:
   next_owner: quartermaster
 ```
 
-Exact Quartermaster action: execute only the frozen G01/custody/built-in graph
-under `FRSH-015-v1`, stop at the first complete private PASS, import only exact
-accepted bytes, and populate the FRCE-015 placeholder ledger atomically. Guide
-controls cannot populate visible fields. Any absent, rejected, partial, stale,
-aliased, mismatched, or malformed source preserves the disabled v2 registry
-and exact generic rollback.
+Exact Mission action: review `FRCA-015-v1` and either issue a versioned
+structural/material representation variance with a new frozen guide mechanism
+and shell, or retain the typed hold. Do not retry `C03`, spend `C04-C06`, reuse
+rejected pixels, or activate the v2 source under `FRSH-015-v1`. The disabled
+v2 registry and exact generic rollback remain authoritative.

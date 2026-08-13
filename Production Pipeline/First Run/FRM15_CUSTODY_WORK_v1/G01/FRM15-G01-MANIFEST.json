@@ -1,0 +1,28 @@
+{
+  "files": [
+    {
+      "bytes": 10860,
+      "name": "FRM15-G01-STRUCT.png",
+      "role": "structure",
+      "sha256": "974dba59c839c2671d47282c30c0a472e4892de6dd76a278a70a36082379dade"
+    },
+    {
+      "bytes": 14257,
+      "name": "FRM15-G01-MAT.png",
+      "role": "material",
+      "sha256": "014628650fa332347f6726c804426f1952dbc1246d07a4a068c4ac60ffb22d2e"
+    },
+    {
+      "bytes": 6716,
+      "name": "FRM15-G01-PROT.png",
+      "role": "protection",
+      "sha256": "ccd198f6bfa09ec485fbe482b93720011d4710de1d3a2627b7a22a340562d91e"
+    }
+  ],
+  "schema": "horizon.first-run.frm15-guide-manifest.v1",
+  "spec_id": "FRM15-SPEC-v1",
+  "validation": {
+    "errors": [],
+    "pass": true
+  }
+}
