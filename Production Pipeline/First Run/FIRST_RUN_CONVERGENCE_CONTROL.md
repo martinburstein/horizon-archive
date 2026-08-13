@@ -175,6 +175,47 @@ Every declared verifier states the property it measures, its authority, known
 blind spots, noise or sensitivity limits when material, and how optimizing it
 could violate player intent.
 
+## Validation evidence reuse and test economics
+
+Verification consumes tool time, tokens, context, and human attention. A role
+transition, handoff, report edit, or desire for reassurance is not by itself a
+reason to rerun tests.
+
+Test evidence is reusable when its record fixes all verifier-relevant inputs:
+
+- exact product/code/test/configuration tree or file hashes;
+- exact command, fixture, accepted-media manifest, and environment inputs;
+- relevant dependency, runtime, and verifier versions; and
+- result, timestamp, owning stage, and durable evidence location.
+
+When those inputs are unchanged and the evidence is trustworthy, record the
+gate as `REUSED` with its provenance rather than claiming a new `PASS`. Do not
+rerun focused, related, full, build, served, browser, or E2E gates merely
+because a new agent or role owns the next stage. Planning, prompt, ledger,
+report, and other control-only changes invalidate only their directly affected
+deterministic checks; they do not invalidate unchanged product behavior.
+
+Use the cheapest sufficient affected rung:
+
+1. after a verifier-relevant change, run the smallest focused check that can
+   falsify it;
+2. expand to related regression only when the change crosses a shared boundary
+   or the focused result exposes uncertainty;
+3. run the cold full suite after behavior-affecting product, dependency, test,
+   fixture, or runtime-configuration changes, and for the independent final
+   release holdout; and
+4. do not repeat a cold full suite on the same exact candidate between those
+   points unless evidence identifies environment drift, nondeterminism,
+   corruption, or an invalid prior run.
+
+Evidence must not be reused when a relevant input changed, provenance is
+missing, the prior run was flaky/contended/incomplete, the environment changed
+materially, or the shell explicitly requires a fresh independent holdout. Add
+or duplicate tests only for a new behavior, boundary, regression, or previously
+uncovered failure mode—not to increase counts or give each stage its own copy.
+Every fresh rerun must state which changed input or invalidation condition made
+reuse insufficient.
+
 ## Budgets, plateau, and stopping
 
 Budgets are multi-dimensional: generation calls, iterations, tool calls,

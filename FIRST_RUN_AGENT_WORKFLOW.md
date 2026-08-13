@@ -303,6 +303,18 @@ cannot be averaged into a soft score. The generator or implementer may not be
 the sole judge of its own output. Intelligence's exact-candidate release pass
 is the final holdout and must remain independent of production optimization.
 
+Validation evidence is content-addressed and reused across roles when the exact
+product/code/test/configuration inputs, command, fixture/manifest, relevant
+toolchain, and environment remain unchanged. Record reused evidence as
+`REUSED`, with its originating commit and result; do not relabel it as a fresh
+`PASS`. A handoff or control-only edit does not authorize a test rerun. Run the
+smallest affected rung after a relevant change, expand only when risk or
+failure evidence requires it, and reserve cold full-suite execution for
+behavior-affecting changes plus Intelligence's independent final holdout. Every
+other full-suite rerun must name the concrete evidence invalidation that made
+reuse unsafe. New tests must cover a new behavior, boundary, regression, or
+failure mode rather than duplicate existing coverage for a new cycle or role.
+
 Never inspect or mutate Martin's real browser profile or campaign save to reach
 a gate. Use sanctioned fixtures or deterministic evidence and state any honest
 limitation.

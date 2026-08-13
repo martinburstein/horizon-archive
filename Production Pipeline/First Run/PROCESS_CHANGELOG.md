@@ -8,6 +8,27 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-13 - Validation economics - TUNE
+
+- **KEEP:** focused-to-related-to-full validation remains available when risk
+  and changed product inputs justify it, and Intelligence retains one fresh
+  independent exact-candidate release holdout.
+- **TUNE:** exact, trustworthy verifier evidence now carries across role
+  handoffs as `REUSED` when product/code/test/configuration inputs, commands,
+  fixtures/manifests, relevant toolchain, and environment are unchanged.
+  Handoffs, reports, prompts, ledgers, and planning-only edits do not by
+  themselves justify rerunning unchanged product tests.
+- **TUNE:** use the smallest affected validation rung. Cold full-suite reruns
+  require a behavior-affecting change, the final independent holdout, or an
+  explicit invalidation such as environment drift, nondeterminism, corruption,
+  or incomplete evidence. Each fresh rerun records that reason.
+- **TUNE:** add tests only for new behavior, boundaries, regressions, or
+  previously uncovered failure modes; never duplicate coverage to increase the
+  count or give a new role/cycle its own copy.
+- **REDESIGN:** not warranted. This is an evidence-reuse and verification-cost
+  correction; it weakens no product, accessibility, privacy, curriculum, or
+  release gate.
+
 ### 2026-08-13 - Pre-cycle method control - REDESIGN
 
 - **KEEP:** strict eleven-role sequencing, earliest-first bounded Work Orders,
