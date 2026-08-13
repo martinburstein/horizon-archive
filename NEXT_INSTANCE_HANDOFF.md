@@ -2,16 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / FRAB-012-v1-HOLD-VR-01 / COMBAT NATIVE VERB CORRECTION`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-012-v1-VR-02 / INTELLIGENCE E2E RELEASE GATE`**
 
-Exact next owner: **one fresh Combat Engineer**
+Exact next owner: **one fresh Intelligence Officer**
 
-Correct only the sanctioned clean-start E2E interaction at the selected Host12
-boundary. Select exact native verb `USE` before clicking the focused native
-hotspot to open SDK Route Chooser and again after the sanitized SDK mastery
-reload to open Single Agent. Add focused harness coverage; change no product,
-media, copy, CSS, save, or lesson code. Commit/push the bounded correction and
-route one fresh Intelligence Officer for one new sole complete E2E.
+Independently inspect Combat variance `FRCE-012-v1-VR-02`, then run exactly one
+new complete clean-start E2E. On exact PASS, release `FRAB-012-v1`, advance
+only accepted as-built maturity/inventory, preserve eight rolling calls, and
+route one fresh Commandant for the next earliest missing encounter. On failure,
+HOLD at the earliest exact owner. Do not alter product/media/copy/CSS.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
