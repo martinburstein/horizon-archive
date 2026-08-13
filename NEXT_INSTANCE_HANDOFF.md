@@ -2,22 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / REQUIRED CORRECTION / FRAB-013-v1-HOLD`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-013-v1-VR-01`**
 
-Exact next owner: **one fresh Combat Engineer**
+Exact next owner: **one fresh Intelligence Officer**
 
-Update only the production asset-count literal in
-`horizon-archive-game/review-fixtures/td010-counterfield/servedIdentity.test.js`
-and
-`horizon-archive-game/review-fixtures/td011-unborrowed-reach/servedIdentity.test.js`
-from `26` to `27`. Preserve every served-byte comparison, preview, cleanup,
-fixture expectation, product byte, media byte, runtime contract, and shell
-requirement. Run both focused served-identity tests and the complete cold suite.
-On PASS, issue a bounded Combat variance report, commit, push, prove sync, and
-route one fresh Intelligence Officer for the complete release ladder.
+Independently rerun the complete release ladder for the exact candidate after
+the two-literal served-identity correction: ancestry/patch integrity, selected
+byte/provenance, physical/canon/copy/lesson/state/focus/derived-layout
+contracts, real Edge evidence, cold full tests, 40 validators, production and
+fixture builds, final PBA/media inventory, served identity, clean-start E2E in
+a fresh external QA root, scratch/process cleanup, rollback, and Git sync. On
+PASS release the bounded encounter, carry seven unused calls, update release
+map/scoreboard/changelog/NEXT, commit, push, and prove synchronization.
 
-Do not reveal the encounter or image path. Seven rolling calls remain unused
-and unavailable until this Work Order releases. Never inspect, restore, stage,
-or use repository QA screenshots. Preserve accepted hosts/media, all OPEN
-records, protected user state, hidden-lore exclusion, opaque residual roots,
-RP-012, and `successor=null`.
+Do not reveal the encounter or image path. Never inspect, restore, stage, or
+use repository QA screenshots. Preserve accepted hosts/media, all OPEN records,
+protected user state, hidden-lore exclusion, opaque residual roots, RP-012, and
+`successor=null`.
