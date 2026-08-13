@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-CMD-001-v1`
+State ID: `FRLS-COL-001-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **DESIGN / COMMANDANT BASELINE REVALIDATED / COLONEL PENDING**
+Status: **DESIGN / CONTINUITY LOCKED / OPERATIONS PENDING**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -59,7 +59,7 @@ observed:
   remaining_missing_physical_encounters_at_current_address: 2
   user_authorized_generation_call_pool: 32
 unknown:
-  - fresh continuity coherence under Colonel inspection
+  - Operations encounter confirmation and bounded Work Order identity
   - exact next encounter selection until planning gates complete
   - Work Order, viability envelope, and shell identity
 ```
@@ -68,7 +68,7 @@ unknown:
 
 ```yaml
 active_mode: DESIGN
-active_owner: colonel
+active_owner: operations_planning_major
 information_actions_allowed:
   - inspect current authorities, exact release candidate, runtime, controls, and non-QA evidence
 effect_actions_allowed_before_shell:
@@ -87,7 +87,7 @@ prohibited_before_shell:
 potential:
   hard_failures: 0_observed_at_commandant_gate
   selected_encounter_missing: 1
-  continuity_lock_ready: false
+  continuity_lock_ready: true
   work_order_ready: false
   shell_ready: false
   production_candidate: null
@@ -107,9 +107,9 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ```yaml
 active_strategy_family: sequential_convergent_planning
 rejected_strategy_families: []
-continuation_reason: FRPB-001-v12 closes baseline uncertainty and routes the least-powerful sufficient continuity information action to Colonel
+continuation_reason: FRCL-014-v1 closes continuity uncertainty and routes the least-powerful sufficient scope-and-sequencing information action to Operations
 decision: GATHER_EVIDENCE
-next_owner: colonel
+next_owner: operations_planning_major
 ```
 
 ## Commandant checkpoint
@@ -141,5 +141,36 @@ commandant:
   next_owner: colonel
 ```
 
-No later stage may begin until the Colonel writes a validated continuity
+## Colonel checkpoint
+
+```yaml
+colonel:
+  continuity_lock: FRCL-014-v1
+  disposition: CONTINUITY LOCK
+  product_candidate: 357ad6dc4184b74150173504e86e366c761cdc0e
+  delta_vs_best: zero_product_zero_maturity_positive_information
+  verifier_vector:
+    single_pedestrian_route: PASS
+    physical_causality: PASS
+    scene_pilot_suit_ownership: PASS
+    machine_builder_silence: PASS
+    current_lesson_ownership: PASS
+    no_response_world: PASS
+    rp012_equal_ending: PASS
+    successor_null: PASS
+    hidden_lore_exclusion: PASS
+    earliest_unresolved_adjacency_classified: PASS
+  budget_used:
+    generation_calls: 0
+    product_effect_actions: 0
+  remaining_uncertainty:
+    - Operations encounter confirmation and bounded Work Order identity
+    - exact source feasibility, physical mapping, and responsive proof
+    - Science viability envelope and Mission shell
+    - future candidate and independent release proof
+  decision: GATHER_EVIDENCE
+  next_owner: operations_planning_major
+```
+
+No later stage may begin until Operations writes a validated Work Order
 handoff and updates this state without weakening the immutable contract edge.
