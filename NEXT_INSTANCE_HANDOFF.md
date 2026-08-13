@@ -2,26 +2,22 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`RUNTIME PRESENTATION COMPLETE / FRPR-013-v1`**
+Current disposition: **`HOLD / REQUIRED CORRECTION / FRAB-013-v1-HOLD`**
 
-Exact next owner: **one fresh Intelligence Officer**
+Exact next owner: **one fresh Combat Engineer**
 
-Independently validate exact candidate ancestry, selected-byte/provenance,
-physical/canon/copy/lesson/state/focus/derived-layout contracts, six-layout
-real Edge evidence, focused/related/full tests, 40 validators, production and
-fixture builds, final PBA/media inventory, served identities, clean-start E2E,
-scratch absence, rollback, and Git sync. On PASS release the bounded encounter,
-carry seven unused calls, update release map/scoreboard/changelog/NEXT, commit,
-push, and prove synchronization. Do not reveal the encounter or image path.
+Update only the production asset-count literal in
+`horizon-archive-game/review-fixtures/td010-counterfield/servedIdentity.test.js`
+and
+`horizon-archive-game/review-fixtures/td011-unborrowed-reach/servedIdentity.test.js`
+from `26` to `27`. Preserve every served-byte comparison, preview, cleanup,
+fixture expectation, product byte, media byte, runtime contract, and shell
+requirement. Run both focused served-identity tests and the complete cold suite.
+On PASS, issue a bounded Combat variance report, commit, push, prove sync, and
+route one fresh Intelligence Officer for the complete release ladder.
 
-Martin authorizes the nine previously unused calls as a rolling earliest-first
-pool. One complete sequential Work Order/release loop is required per encounter;
-the first release-quality PASS stops that encounter and unused calls carry only
-to the next earliest missing encounter. Current selected media is `24 /
-154,163,567`; physical inventory remains unadvanced until Intelligence release.
-H13-1 is selected; seven calls remain pending release.
-
-Do not reveal the released encounter name or image path to Martin. Never
-inspect, restore, stage, or use repository QA screenshots. Preserve accepted
-Hosts/media, all OPEN records, protected user state, hidden lore exclusion,
-opaque residual roots, RP-012, and `successor=null`.
+Do not reveal the encounter or image path. Seven rolling calls remain unused
+and unavailable until this Work Order releases. Never inspect, restore, stage,
+or use repository QA screenshots. Preserve accepted hosts/media, all OPEN
+records, protected user state, hidden-lore exclusion, opaque residual roots,
+RP-012, and `successor=null`.
