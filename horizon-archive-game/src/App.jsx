@@ -7,6 +7,7 @@ import severedRelaySpineImage from "../../Visual Direction/Production Masters/20
 import floodedChoirImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host09/host09-flooded-choir-master-v1.png";
 import blindCameraWellImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host10/host10-blind-camera-well-master-v1.png";
 import borrowedLightWallImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host11/host11-wall-of-borrowed-light-master-v1.png";
+import drownedSwitchyardImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host12/host12-drowned-switchyard-master-v1.png";
 import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
 import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
@@ -243,7 +244,12 @@ import {
   isLegacyHost11LessonLauncherVisible,
 } from "./borrowedLightWall.js";
 import {
+  DROWNED_SWITCHYARD_COPY,
+  DROWNED_SWITCHYARD_PROVENANCE,
   DROWNED_SWITCHYARD_REGISTRY,
+  DROWNED_SWITCHYARD_SOURCE_URL,
+  deriveDrownedSwitchyardState,
+  getDrownedSwitchyardHotspot,
   isLegacyHost12LessonLauncherVisible,
 } from "./drownedSwitchyard.js";
 import {
@@ -1093,6 +1099,8 @@ export function App() {
   const [blindCameraWellPresented, setBlindCameraWellPresented] = useState(false);
   const [borrowedLightWallDecodedImage, setBorrowedLightWallDecodedImage] = useState(null);
   const [borrowedLightWallPresented, setBorrowedLightWallPresented] = useState(false);
+  const [drownedSwitchyardDecodedImage, setDrownedSwitchyardDecodedImage] = useState(null);
+  const [drownedSwitchyardPresented, setDrownedSwitchyardPresented] = useState(false);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
@@ -1179,6 +1187,10 @@ export function App() {
   const borrowedLightWallTransitionPendingRef = useRef(false);
   const borrowedLightWallFocusPendingRef = useRef(false);
   const borrowedLightWallAnnouncementPendingRef = useRef(false);
+  const drownedSwitchyardRef = useRef(null);
+  const drownedSwitchyardTransitionPendingRef = useRef(false);
+  const drownedSwitchyardFocusPendingRef = useRef(false);
+  const drownedSwitchyardAnnouncementPendingRef = useRef(false);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1286,6 +1298,9 @@ export function App() {
   const borrowedLightWallState=deriveBorrowedLightWallState({predecessorComplete:blindCameraWellState==="complete",portalEvidence,promptEvidence,registry:BORROWED_LIGHT_WALL_REGISTRY,provenance:BORROWED_LIGHT_WALL_PROVENANCE,decodedImage:borrowedLightWallDecodedImage});
   const borrowedLightWallLawful=borrowedLightWallState!=="hidden";
   const borrowedLightWallActive=borrowedLightWallPresented&&borrowedLightWallLawful;
+  const drownedSwitchyardState=deriveDrownedSwitchyardState({predecessorComplete:clientBoundaryEvidence?.masteryStatus==="mastered",sdkRouteEvidence,singleAgentEvidence,registry:DROWNED_SWITCHYARD_REGISTRY,provenance:DROWNED_SWITCHYARD_PROVENANCE,decodedImage:drownedSwitchyardDecodedImage});
+  const drownedSwitchyardLawful=drownedSwitchyardState!=="hidden";
+  const drownedSwitchyardActive=drownedSwitchyardPresented&&drownedSwitchyardLawful;
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -1333,11 +1348,15 @@ export function App() {
   const blindCameraWellHotspots=scene.id==="ruins"&&blindCameraWellActive&&blindCameraWellHotspot?[{id:"blind-camera-well",label:BLIND_CAMERA_WELL_COPY.name,hotspot:blindCameraWellHotspot}]:[];
   const borrowedLightWallHotspot=getBorrowedLightWallHotspot(BORROWED_LIGHT_WALL_REGISTRY);
   const borrowedLightWallHotspots=scene.id==="ruins"&&borrowedLightWallActive&&borrowedLightWallHotspot?[{id:"borrowed-light-wall",label:BORROWED_LIGHT_WALL_COPY.name,hotspot:borrowedLightWallHotspot}]:[];
+  const drownedSwitchyardHotspot=getDrownedSwitchyardHotspot(DROWNED_SWITCHYARD_REGISTRY);
+  const drownedSwitchyardHotspots=scene.id==="ruins"&&drownedSwitchyardActive&&drownedSwitchyardHotspot?[{id:"drowned-switchyard",label:DROWNED_SWITCHYARD_COPY.name,hotspot:drownedSwitchyardHotspot}]:[];
   const sceneHotspots = [primarySceneHotspot, ...(scene.id === "ruins" ? ruinsHotspots : meadowHotspots)];
   const activeSceneHotspots = scene.id === "ruins" && strandedLensCradleActive
     ? strandedLensCradleHotspots
     : sceneHotspots;
-  const presentedSceneHotspots = scene.id === "ruins" && borrowedLightWallActive
+  const presentedSceneHotspots = scene.id === "ruins" && drownedSwitchyardActive
+    ? drownedSwitchyardHotspots
+    : scene.id === "ruins" && borrowedLightWallActive
     ? borrowedLightWallHotspots
     : scene.id === "ruins" && blindCameraWellActive
     ? blindCameraWellHotspots
@@ -1359,6 +1378,7 @@ export function App() {
     const isFloodedChoir = scene.id === "ruins" && hotspot.id === "flooded-choir";
     const isBlindCameraWell=scene.id==="ruins"&&hotspot.id==="blind-camera-well";
     const isBorrowedLightWall=scene.id==="ruins"&&hotspot.id==="borrowed-light-wall";
+    const isDrownedSwitchyard=scene.id==="ruins"&&hotspot.id==="drowned-switchyard";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
     const nurseryStateLabel = isFractureNursery ? FRPX02_COPY.NURSERY_STATE[fractureNurseryState] : "";
     const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
@@ -1371,6 +1391,7 @@ export function App() {
     const severedRelaySpineStateLabel = isSeveredRelaySpine ? SEVERED_RELAY_SPINE_COPY.state[severedRelaySpineState] : "";
     const severedRelaySpineLabel = isSeveredRelaySpine ? ` // ${severedRelaySpineStateLabel.toUpperCase()}` : "";
     const hotspotStyle = getHotspotStyle(hotspot.hotspot);
+    if(isDrownedSwitchyard)return <button key={hotspot.id} ref={drownedSwitchyardRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-drowned-switchyard-state={drownedSwitchyardState} style={hotspotStyle} onClick={(event)=>{terminalTriggerRef.current=event.currentTarget;useHotspot(hotspot.id);}} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} ${DROWNED_SWITCHYARD_COPY.name}, ${drownedSwitchyardState}`}><span>{verb} {DROWNED_SWITCHYARD_COPY.name} // {drownedSwitchyardState.toUpperCase()}</span></button>;
     if(isBorrowedLightWall)return <button key={hotspot.id} ref={borrowedLightWallRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-borrowed-light-wall-state={borrowedLightWallState} style={hotspotStyle} onClick={(event)=>{terminalTriggerRef.current=event.currentTarget;useHotspot(hotspot.id);}} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} ${BORROWED_LIGHT_WALL_COPY.name}, ${borrowedLightWallState}`}><span>{verb} {BORROWED_LIGHT_WALL_COPY.name} // {borrowedLightWallState.toUpperCase()}</span></button>;
     if(isBlindCameraWell)return <button key={hotspot.id} ref={blindCameraWellRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-blind-camera-well-state={blindCameraWellState} style={hotspotStyle} onClick={(event)=>{terminalTriggerRef.current=event.currentTarget;useHotspot(hotspot.id);}} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} ${BLIND_CAMERA_WELL_COPY.name}, ${blindCameraWellState}`}><span>{verb} {BLIND_CAMERA_WELL_COPY.name} // {blindCameraWellState.toUpperCase()}</span></button>;
     if (isFloodedChoir) return <button key={hotspot.id} ref={floodedChoirRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-flooded-choir-state={floodedChoirState} style={hotspotStyle} onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} Flooded Choir, ${floodedChoirState}`}><span>{verb} Flooded Choir // {floodedChoirState.toUpperCase()}</span></button>;
@@ -1520,6 +1541,10 @@ export function App() {
   useEffect(()=>{if(BORROWED_LIGHT_WALL_REGISTRY.source.enabled!==true||!BORROWED_LIGHT_WALL_SOURCE_URL){setBorrowedLightWallDecodedImage(null);return undefined;}let connected=true;const image=new Image();image.decoding="async";image.onload=()=>connected&&setBorrowedLightWallDecodedImage({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setBorrowedLightWallDecodedImage(null);image.src=borrowedLightWallImage;return()=>{connected=false;image.onload=null;image.onerror=null;};},[]);
   useEffect(()=>{if(!borrowedLightWallLawful){borrowedLightWallTransitionPendingRef.current=false;borrowedLightWallAnnouncementPendingRef.current=false;if(borrowedLightWallPresented)setBorrowedLightWallPresented(false);return undefined;}if(borrowedLightWallPresented||mode!=="playing"||scene.id!=="ruins"||terminalOpen)return undefined;if(!borrowedLightWallTransitionPendingRef.current){borrowedLightWallFocusPendingRef.current=borrowedLightWallState!=="complete";setBorrowedLightWallPresented(true);return undefined;}const frame=window.requestAnimationFrame(()=>{borrowedLightWallTransitionPendingRef.current=false;borrowedLightWallFocusPendingRef.current=true;borrowedLightWallAnnouncementPendingRef.current=true;setBorrowedLightWallPresented(true);});return()=>window.cancelAnimationFrame(frame);},[mode,scene.id,terminalOpen,borrowedLightWallLawful,borrowedLightWallPresented,borrowedLightWallState]);
   useLayoutEffect(()=>{if(!borrowedLightWallFocusPendingRef.current||!borrowedLightWallActive||terminalOpen)return;const target=borrowedLightWallRef.current;if(!target?.isConnected)return;borrowedLightWallFocusPendingRef.current=false;target.focus({preventScroll:true});if(borrowedLightWallAnnouncementPendingRef.current){borrowedLightWallAnnouncementPendingRef.current=false;setSceneAnnouncement(BORROWED_LIGHT_WALL_COPY.available);}},[borrowedLightWallActive,borrowedLightWallState,terminalOpen]);
+
+  useEffect(()=>{if(DROWNED_SWITCHYARD_REGISTRY.source.enabled!==true||!DROWNED_SWITCHYARD_SOURCE_URL){setDrownedSwitchyardDecodedImage(null);return undefined;}let connected=true;const image=new Image();image.decoding="async";image.onload=()=>connected&&setDrownedSwitchyardDecodedImage({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setDrownedSwitchyardDecodedImage(null);image.src=drownedSwitchyardImage;return()=>{connected=false;image.onload=null;image.onerror=null;};},[]);
+  useEffect(()=>{if(!drownedSwitchyardLawful){drownedSwitchyardTransitionPendingRef.current=false;drownedSwitchyardAnnouncementPendingRef.current=false;if(drownedSwitchyardPresented)setDrownedSwitchyardPresented(false);return undefined;}if(drownedSwitchyardPresented||mode!=="playing"||scene.id!=="ruins"||terminalOpen)return undefined;if(!drownedSwitchyardTransitionPendingRef.current){drownedSwitchyardFocusPendingRef.current=drownedSwitchyardState!=="complete";setDrownedSwitchyardPresented(true);return undefined;}const frame=window.requestAnimationFrame(()=>{drownedSwitchyardTransitionPendingRef.current=false;drownedSwitchyardFocusPendingRef.current=true;drownedSwitchyardAnnouncementPendingRef.current=true;setDrownedSwitchyardPresented(true);});return()=>window.cancelAnimationFrame(frame);},[mode,scene.id,terminalOpen,drownedSwitchyardLawful,drownedSwitchyardPresented,drownedSwitchyardState]);
+  useLayoutEffect(()=>{if(!drownedSwitchyardFocusPendingRef.current||!drownedSwitchyardActive||terminalOpen)return;const target=drownedSwitchyardRef.current;if(!target?.isConnected)return;drownedSwitchyardFocusPendingRef.current=false;target.focus({preventScroll:true});if(drownedSwitchyardAnnouncementPendingRef.current){drownedSwitchyardAnnouncementPendingRef.current=false;setSceneAnnouncement(DROWNED_SWITCHYARD_COPY.available);}},[drownedSwitchyardActive,drownedSwitchyardState,terminalOpen]);
 
   useEffect(() => {
     function handleDemoTourRequest(event) {
@@ -3324,6 +3349,7 @@ export function App() {
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if(scene.id==="ruins"&&hotspotId==="drowned-switchyard"){if(drownedSwitchyardState==="hidden"||terminalOpen)return;if(verb==="LOOK AT"){setDialogue(DROWNED_SWITCHYARD_COPY.unseen,"scene");return;}if(verb==="TALK TO"){setDialogue("Complete silence.","pilot");return;}if(drownedSwitchyardState==="complete"){setDialogue(`${DROWNED_SWITCHYARD_COPY.mastered} ${DROWNED_SWITCHYARD_COPY.nextBoundary}`,"system");return;}if(sdkRouteEvidence?.masteryStatus==="mastered")openSingleAgent();else openSdkRouteChooser();return;}
     if(scene.id==="ruins"&&hotspotId==="borrowed-light-wall"){if(borrowedLightWallState==="hidden"||terminalOpen)return;if(verb==="LOOK AT"){setDialogue(BORROWED_LIGHT_WALL_COPY.unseen,"scene");return;}if(verb==="TALK TO"){setDialogue("Complete silence.","pilot");return;}if(borrowedLightWallState==="complete"){setDialogue(`${BORROWED_LIGHT_WALL_COPY.mastered} ${BORROWED_LIGHT_WALL_COPY.nextBoundary}`,"system");return;}if(portalEvidence?.masteryStatus==="mastered")openPromptLayers();else openPortalOrientation();return;}
     if(scene.id==="ruins"&&hotspotId==="blind-camera-well"){if(blindCameraWellState==="hidden"||terminalOpen)return;if(verb==="LOOK AT"){setDialogue(BLIND_CAMERA_WELL_COPY.unseen,"scene");return;}if(verb==="TALK TO"){setDialogue("Complete silence.","pilot");return;}if(blindCameraWellState==="complete"){setDialogue(`${BLIND_CAMERA_WELL_COPY.mastered} ${BLIND_CAMERA_WELL_COPY.nextBoundary}`,"system");return;}if(visualEvidence?.masteryStatus==="mastered")openExtractionWorkloads();else openVisualWorkloads();return;}
     if (scene.id === "ruins" && hotspotId === "flooded-choir") {
@@ -4125,7 +4151,7 @@ export function App() {
   function advanceClientBoundary(){if(!clientBoundarySession.result?.passed)return;const ss=clientBoundarySession.form==="transfer"?clientBoundaryTransfer:clientBoundaryPrimary;if(clientBoundarySession.index===ss.length-1){if(clientBoundarySession.form==="transfer"){setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",masteryStatus:"transfer_complete",clearMisconceptionTags:true}));setClientBoundarySession({...clientBoundarySession,form:"explanation",phase:"explanation",result:null,hintLevel:0});}else setClientBoundarySession({...clientBoundarySession,complete:true});return;}setClientBoundarySession({...clientBoundarySession,index:clientBoundarySession.index+1,response:{decision:"",reason:""},result:null,hintLevel:0});}
   function acknowledgeClientBoundaryPrimary(){if(!clientBoundarySession?.complete||!clientBoundaryEvidence?.confidence)return;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
   function checkClientBoundaryExplanation(event){event.preventDefault();const result=evaluateClientBoundaryExplanation(clientBoundarySession.explanationResponse);setClientBoundarySession({...clientBoundarySession,explanationResult:result});setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",scenarioId:"explanation",correctness:result.correctness,incrementAttempt:true,masteryStatus:"transfer_complete"}));}
-  function acknowledgeClientBoundaryMastery(){if(!clientBoundarySession?.explanationResult?.passed||!clientBoundarySession.ownershipConfirmed||!clientBoundaryEvidence?.confidence)return;focusContinueAfterClientBoundaryRef.current=true;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries mastery confirmed: mock, both 12-of-12 forms, and closed-note boundaries are complete.","teacher");}
+  function acknowledgeClientBoundaryMastery(){if(!clientBoundarySession?.explanationResult?.passed||!clientBoundarySession.ownershipConfirmed||!clientBoundaryEvidence?.confidence)return;focusContinueAfterClientBoundaryRef.current=true;drownedSwitchyardTransitionPendingRef.current=DROWNED_SWITCHYARD_REGISTRY.source.enabled===true;setClientBoundaryEvidence(p=>updateClientBoundaryEvidence(p,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setClientBoundarySession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Client Boundaries mastery confirmed: mock, both 12-of-12 forms, and closed-note boundaries are complete.","teacher");}
 
   function openSdkRouteChooser(){
     setTerminalOpen(true);setRuinsTerminalKind("sdk-route-chooser");
@@ -4138,16 +4164,16 @@ export function App() {
   function revealSdkRouteTraceHint(){const remediation=sdkRouteSession.remediation;if(!remediation)return;const hintLevel=Math.min(3,remediation.hintLevel+1);setSdkRouteSession({...sdkRouteSession,remediation:{...remediation,hintLevel}});setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{hintLevel}));}
   function retrySdkRouteAfterTrace(){if(!sdkRouteSession.remediation?.result?.passed)return;setSdkRouteSession({...sdkRouteSession,response:{route:"",reason:""},result:null,hintLevel:0,remediation:null});}
   function advanceSdkRoute(){if(!sdkRouteSession.result?.passed)return;const scenarios=sdkRouteSession.form==="transfer"?sdkRouteTransfer:sdkRoutePrimary;if(sdkRouteSession.index===scenarios.length-1){setSdkRouteSession({...sdkRouteSession,complete:true,result:null,remediation:null});return;}setSdkRouteSession({...sdkRouteSession,index:sdkRouteSession.index+1,response:{route:"",reason:""},result:null,hintLevel:0,remediation:null});}
-  function acknowledgeSdkRouteForm(){if(!sdkRouteSession?.complete||!sdkRouteEvidence?.confidence)return;if(sdkRouteSession.form==="primary"){setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true,confidence:null}));setSdkRouteSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser primary form complete at 16 of 16. A fresh transfer form remains.","teacher");return;}focusContinueAfterSdkRouteRef.current=true;setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:"transfer",masteryStatus:"mastered",clearMisconceptionTags:true}));setSdkRouteSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser mastery confirmed: route and reason passed on all 32 primary and fresh-transfer dimensions.","teacher");}
+  function acknowledgeSdkRouteForm(){if(!sdkRouteSession?.complete||!sdkRouteEvidence?.confidence)return;drownedSwitchyardFocusPendingRef.current=true;if(sdkRouteSession.form==="primary"){setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true,confidence:null}));setSdkRouteSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser primary form complete at 16 of 16. A fresh transfer form remains.","teacher");return;}focusContinueAfterSdkRouteRef.current=true;setSdkRouteEvidence(previous=>updateSdkRouteEvidence(previous,{form:"transfer",masteryStatus:"mastered",clearMisconceptionTags:true}));setSdkRouteSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("SDK Route Chooser mastery confirmed: route and reason passed on all 32 primary and fresh-transfer dimensions.","teacher");}
 
   function openSingleAgent(){setTerminalOpen(true);setRuinsTerminalKind("single-agent");if(!singleAgentSession){const form=singleAgentEvidence?.masteryStatus==="primary_complete"?"transfer":singleAgentEvidence?.masteryStatus==="transfer_complete"?"explanation":"primary";setSingleAgentSession({form,phase:form==="explanation"?"explanation":"scenarios",index:0,response:{decision:"",reason:""},result:null,hintLevel:0,complete:false,explanationResponse:{fit_instructions:"",least_privilege:"",failure_safety:"",client_flow:""},explanationResult:null,ownershipConfirmed:false});}}
   function exitSingleAgent(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Single Agent rehearsal closed safely. No agent, tool, service, Azure resource, or external action was created or invoked.","system");}
   function checkSingleAgent(event){event.preventDefault();const scenarios=singleAgentSession.form==="transfer"?singleAgentTransfer:singleAgentPrimary,scenario=scenarios[singleAgentSession.index],result=evaluateSingleAgentScenario(scenario.id,singleAgentSession.response,singleAgentSession.form),hintLevel=result.passed?singleAgentSession.hintLevel:Math.max(1,singleAgentSession.hintLevel);setSingleAgentSession({...singleAgentSession,result,hintLevel});setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:singleAgentSession.form,scenarioId:scenario.id,correctness:result.correctness,incrementAttempt:true,hintLevel,misconceptionTags:result.misconceptionTags,masteryStatus:singleAgentSession.form==="transfer"?"primary_complete":result.passed?"in_progress":"remediation_required"}));}
   function revealSingleAgentHint(){const hintLevel=Math.min(3,singleAgentSession.hintLevel+1);setSingleAgentSession({...singleAgentSession,hintLevel});setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{hintLevel}));}
   function advanceSingleAgent(){if(!singleAgentSession.result?.passed)return;const scenarios=singleAgentSession.form==="transfer"?singleAgentTransfer:singleAgentPrimary;if(singleAgentSession.index===scenarios.length-1){if(singleAgentSession.form==="transfer"){setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"explanation",masteryStatus:"transfer_complete",clearMisconceptionTags:true}));setSingleAgentSession({...singleAgentSession,form:"explanation",phase:"explanation",result:null,hintLevel:0});}else setSingleAgentSession({...singleAgentSession,complete:true});return;}setSingleAgentSession({...singleAgentSession,index:singleAgentSession.index+1,response:{decision:"",reason:""},result:null,hintLevel:0});}
-  function acknowledgeSingleAgentPrimary(){if(!singleAgentSession?.complete||!singleAgentEvidence?.confidence)return;setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setSingleAgentSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Single Agent primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
+  function acknowledgeSingleAgentPrimary(){if(!singleAgentSession?.complete||!singleAgentEvidence?.confidence)return;drownedSwitchyardFocusPendingRef.current=true;setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"transfer",masteryStatus:"primary_complete",clearMisconceptionTags:true}));setSingleAgentSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Single Agent primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.","teacher");}
   function checkSingleAgentExplanation(event){event.preventDefault();const result=evaluateSingleAgentExplanation(singleAgentSession.explanationResponse);setSingleAgentSession({...singleAgentSession,explanationResult:result});setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"explanation",scenarioId:"explanation",correctness:result.correctness,incrementAttempt:true,masteryStatus:"transfer_complete"}));}
-  function acknowledgeSingleAgentMastery(){if(!singleAgentSession?.explanationResult?.passed||!singleAgentSession.ownershipConfirmed||!singleAgentEvidence?.confidence)return;focusContinueAfterSingleAgentRef.current=true;setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setSingleAgentSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Single Agent mastery confirmed: both 12-of-12 forms and the closed-note fit, privilege, failure-safety, and client-flow explanation are complete.","teacher");}
+  function acknowledgeSingleAgentMastery(){if(!singleAgentSession?.explanationResult?.passed||!singleAgentSession.ownershipConfirmed||!singleAgentEvidence?.confidence)return;focusContinueAfterSingleAgentRef.current=true;drownedSwitchyardFocusPendingRef.current=true;setSingleAgentEvidence(previous=>updateSingleAgentEvidence(previous,{form:"explanation",masteryStatus:"mastered",clearMisconceptionTags:true}));setSingleAgentSession(null);setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Single Agent mastery confirmed: both 12-of-12 forms and the closed-note fit, privilege, failure-safety, and client-flow explanation are complete.","teacher");}
 
   function openTextSpeechPatterns(){setTerminalOpen(true);setRuinsTerminalKind("text-speech-patterns");if(!textSpeechPatternSession){const form=textSpeechPatternEvidence?.masteryStatus==="primary_complete"?"transfer":textSpeechPatternEvidence?.masteryStatus==="transfer_complete"?"explanation":"primary";setTextSpeechPatternSession({form,phase:form==="explanation"?"explanation":"scenarios",index:0,response:{decision:"",reason:""},result:null,hintLevel:0,complete:false,explanationResponse:{capability_direction:"",configuration_payload:"",result_cancellation:"",simulation_authority:""},explanationResult:null,ownershipConfirmed:false});}}
   function exitTextSpeechPatterns(){setTerminalOpen(false);setRuinsTerminalKind(null);setDialogue("Text and Speech Patterns rehearsal closed safely. No text, audio, media, service, Azure resource, disclosure, or external action occurred.","system");}
@@ -4618,7 +4644,7 @@ export function App() {
 
   return (
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
-    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined} data-flooded-choir-state={scene.id === "ruins" ? floodedChoirState : undefined} data-blind-camera-well-state={scene.id === "ruins" ? blindCameraWellState : undefined} data-borrowed-light-wall-state={scene.id === "ruins" ? borrowedLightWallState : undefined}>
+    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined} data-flooded-choir-state={scene.id === "ruins" ? floodedChoirState : undefined} data-blind-camera-well-state={scene.id === "ruins" ? blindCameraWellState : undefined} data-borrowed-light-wall-state={scene.id === "ruins" ? borrowedLightWallState : undefined} data-drowned-switchyard-state={scene.id === "ruins" ? drownedSwitchyardState : undefined}>
       <p className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement>{sceneAnnouncement}</p>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         <div className="scene-world-content" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
@@ -4634,7 +4660,9 @@ export function App() {
         ) : (
           <>
             {scene.id === "ruins" ? (
-              borrowedLightWallActive ? (
+              drownedSwitchyardActive ? (
+                <img className="scene-art drowned-switchyard-art" src={drownedSwitchyardImage} alt={DROWNED_SWITCHYARD_COPY.alt} data-drowned-switchyard-source={DROWNED_SWITCHYARD_REGISTRY.source.path} />
+              ) : borrowedLightWallActive ? (
                 <img className="scene-art borrowed-light-wall-art" src={borrowedLightWallImage} alt={BORROWED_LIGHT_WALL_COPY.alt} data-borrowed-light-wall-source={BORROWED_LIGHT_WALL_REGISTRY.source.path} />
               ) : blindCameraWellActive ? (
                 <img className="scene-art blind-camera-well-art" src={blindCameraWellImage} alt={BLIND_CAMERA_WELL_COPY.alt} data-blind-camera-well-source={BLIND_CAMERA_WELL_REGISTRY.source.path} />

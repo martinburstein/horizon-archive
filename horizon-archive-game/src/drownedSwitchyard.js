@@ -3,26 +3,37 @@ import { sanitizeSingleAgentEvidence } from "./singleAgentExercise.js";
 import { deriveResponsiveEvidence, FIRST_RUN_RESPONSIVE_LAYOUTS } from "./responsiveImageProjection.js";
 
 export const DROWNED_SWITCHYARD_PATH = "Visual Direction/Production Masters/2026-08-12-first-run-host12/host12-drowned-switchyard-master-v1.png";
-export const DROWNED_SWITCHYARD_SOURCE_URL = null;
+export const DROWNED_SWITCHYARD_SOURCE_URL = DROWNED_SWITCHYARD_PATH;
 const emptyRect = Object.freeze({ x: null, y: null, width: null, height: null });
 const emptyRelation = Object.freeze({ ...emptyRect, centerX: null, centerY: null });
 const emptyLayouts = Object.freeze({ desktop: null, laptop: null, narrow: null, effective200: null, retained320x180: null, retained320x240: null });
 
 export const DROWNED_SWITCHYARD_REGISTRY = Object.freeze({
-  source: Object.freeze({ enabled: false, path: null, sha256: null, byteLength: null, width: null, height: null, format: null, color: null, attemptId: null }),
-  upperCrown: emptyRelation,
-  dryApproach: emptyRect,
-  bypassSeams: Object.freeze([]),
-  sealedChambers: Object.freeze([]),
-  drownedReturns: Object.freeze([]),
-  waterBoundary: emptyRect,
-  semanticTarget: emptyRect,
-  labelAnchor: Object.freeze({ ...emptyRect, insetOuterCss: null, insetTextCss: null }),
+  source: Object.freeze({ enabled: true, path: DROWNED_SWITCHYARD_PATH, sha256: "d8b5c6abe887fa0c17321f7f426a0bea2f6bfbcddfdaca6875b219d51a8292fc", byteLength: 14744405, width: 3840, height: 2160, format: "png", color: "opaque-srgb-8", attemptId: "H12-1" }),
+  upperCrown: Object.freeze({ x: 760, y: 480, width: 2580, height: 740, centerX: 2050, centerY: 850 }),
+  dryApproach: Object.freeze({ x: 740, y: 1050, width: 2500, height: 1110 }),
+  bypassSeams: Object.freeze([Object.freeze({ x: 980, y: 690, width: 330, height: 560 }), Object.freeze({ x: 1800, y: 690, width: 300, height: 560 }), Object.freeze({ x: 2500, y: 690, width: 330, height: 560 })]),
+  sealedChambers: Object.freeze([Object.freeze({ x: 1230, y: 480, width: 490, height: 270 }), Object.freeze({ x: 2440, y: 480, width: 430, height: 260 })]),
+  drownedReturns: Object.freeze([Object.freeze({ x: 0, y: 1100, width: 1180, height: 1060 }), Object.freeze({ x: 2680, y: 1100, width: 1160, height: 1060 })]),
+  waterBoundary: Object.freeze({ x: 0, y: 810, width: 3840, height: 1350 }),
+  semanticTarget: Object.freeze({ x: 700, y: 400, width: 2700, height: 1450 }),
+  labelAnchor: Object.freeze({ x: 730, y: 430, width: 2640, height: 1390, insetOuterCss: 3, insetTextCss: 5 }),
   protected: Object.freeze({ host11: null, returnRoute: null, host13: null, witness: null }),
   layouts: emptyLayouts,
 });
-export const DROWNED_SWITCHYARD_PROVENANCE = Object.freeze({ sha256: null, byteLength: null, promptId: null, promptBytes: null, promptSha256: null, cliSha256: null });
-export const DROWNED_SWITCHYARD_COPY = Object.freeze({ name: "Drowned Switchyard", unseen: null, available: null, sdkInProgress: null, agentInProgress: null, missed: null, mastered: null, returned: null, nextBoundary: null, alt: null });
+export const DROWNED_SWITCHYARD_PROVENANCE = Object.freeze({ sha256: "d8b5c6abe887fa0c17321f7f426a0bea2f6bfbcddfdaca6875b219d51a8292fc", byteLength: 14744405, promptId: "HOST12-GEN-PROMPT-H12-1", promptBytes: 1285, promptSha256: "a5b2af07451e0a562986a8b59314d9acda57979615c9ac3d4034fade4dd9411d", cliSha256: "c2cdb05244ad9a3dcb8731988790ea6a06a59ab3c062c0f872b35f4ad7d20b05" });
+export const DROWNED_SWITCHYARD_COPY = Object.freeze({
+  name: "Drowned Switchyard",
+  unseen: "A dry high slab reaches a fused crown above separate drowned returns.",
+  available: "Three bypass seams rise from the water into the crown. Two sealed chambers remain closed and dry.",
+  sdkInProgress: "The dry crown remains unchanged while SDK route evidence is in progress.",
+  agentInProgress: "The drowned returns remain unreachable while Single Agent evidence is in progress.",
+  missed: "The junction does not answer. Recheck the dry crown, route boundaries, and sealed chambers.",
+  mastered: "Both records are complete. The chambers remain sealed and the drowned junction remains beyond the water.",
+  returned: "The same dry crown stands above the same converging returns.",
+  nextBoundary: "Continue along the dry upper route after both records are complete.",
+  alt: "A broad dry stone approach reaching a low fused crown above basin water, with three descending bypass seams, two closed circular chambers, and separate drowned return structures on both sides.",
+});
 
 const prompts = Object.freeze({
   "H12-1": [1285, "a5b2af07451e0a562986a8b59314d9acda57979615c9ac3d4034fade4dd9411d"],
