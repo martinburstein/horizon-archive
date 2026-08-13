@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-SCI-001-v1`
+State ID: `FRLS-MSN-001-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **DESIGN / POLISH VIABILITY READY / MISSION PENDING**
+Status: **OPERATE ENABLED / FIRST RUN SHELL READY / RECON PENDING**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -28,7 +28,7 @@ target:
   goal: one earliest missing physical encounter through independent release after guarded planning gates
   selected_address: FR-03 / Host 14
   work_order: FRWO-014-v1
-  shell: null
+  shell: FRSH-014-v1
 ```
 
 ## Hard constraints
@@ -56,6 +56,10 @@ observed:
   current_continuity_lock: FRCL-014-v1
   current_work_order: FRWO-014-v1
   current_viability_envelope: FRVE-014-v1
+  current_shell: FRSH-014-v1
+  accepted_media_manifest: FRAM-014-v1
+  custody_control: FRFC-014-v1
+  pba_control: FRPBA-014-v1
   accepted_media_count: 24
   accepted_media_bytes: 154163567
   remaining_missing_physical_encounters_at_current_address: 2
@@ -66,25 +70,25 @@ observed:
 unknown:
   - future source bytes, transport result, and private physical review
   - future candidate responsive, accessibility, performance, and holdout evidence
-  - shell identity
   - future production candidate and independent release proof
 ```
 
 ## Action and authority state
 
 ```yaml
-active_mode: DESIGN
-active_owner: mission_captain
+active_mode: OPERATE
+active_owner: reconnaissance_sergeant
 information_actions_allowed:
-  - inspect current authorities, Science envelope, exact release candidate, runtime, controls, and non-QA evidence
-effect_actions_allowed_before_shell:
-  - versioned planning and control artifacts only
-prohibited_before_shell:
-  - generation or external media call
-  - image or runtime media mutation
-  - product implementation
+  - inspect shell-owned authorities, released predecessor behavior, visual/surface controls, and non-QA evidence
+effect_actions_allowed:
+  - only the role-owned actions, exact files, earned budgets, and stage order frozen by FRSH-014-v1
+prohibited_until_named_owner_and_stage:
+  - generation or external media call before Quartermaster and preflight
+  - source selection/import before private technical/physical/responsive PASS
+  - product implementation before Combat
+  - runtime presentation work before Image Specialist
+  - release or maturity advancement before Intelligence
   - later-address selection
-  - maturity advancement
 ```
 
 ## Potential and budget
@@ -96,7 +100,7 @@ potential:
   continuity_lock_ready: true
   work_order_ready: true
   source_feasibility_contract_ready: true
-  shell_ready: false
+  shell_ready: true
   production_candidate: null
   final_holdout_passed: false
 budget:
@@ -114,11 +118,11 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ## Strategy and continuation
 
 ```yaml
-active_strategy_family: executable_shell_freeze_for_one_bounded_physical_host
+active_strategy_family: sequential_shell_bounded_physical_host_release
 rejected_strategy_families: []
-continuation_reason: FRVE-014-v1 freezes viable source, transport, verifier, cleanup, budget, rollback, and stop contracts; Mission is the next least-powerful sufficient information action because no executable shell exists
+continuation_reason: FRSH-014-v1 freezes the complete executable contract; Recon is the next least-powerful sufficient information action and cannot spend a call or change product/media
 decision: GATHER_EVIDENCE
-next_owner: mission_captain
+next_owner: reconnaissance_sergeant
 ```
 
 ## Commandant checkpoint
@@ -280,7 +284,47 @@ science:
   next_owner: mission_captain
 ```
 
-No later stage may begin until Mission reads `FRVE-014-v1`, freezes every
-executable identity and permitted file, and issues one versioned `FIRST RUN
-SHELL READY`, `REVISE`, or `HOLD`. No generation call, product or media action,
-Reconnaissance work, or maturity advancement exists yet.
+## Mission checkpoint
+
+```yaml
+mission:
+  shell: FRSH-014-v1
+  disposition: FIRST RUN SHELL READY
+  product_candidate: 357ad6dc4184b74150173504e86e366c761cdc0e
+  source_commit_read: 4822608811f6ca96b55718632ffd8568ac594566
+  current_ref: FRSH-014-v1_planning_state
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    planning_conflict: PASS_NONE
+    shell_completeness: PASS
+    prompt_generator_custody_identity: PASS_FROZEN_NO_CALL
+    accepted_media_and_pba_control: PASS_FROZEN
+    budget_plateau_stop_policy: PASS_FROZEN
+    future_source_and_candidate: NOT_STARTED
+    independent_release: NOT_STARTED
+  delta_vs_best: zero_product_zero_maturity_zero_media_positive_information
+  budget_used:
+    generation_calls: 0
+    product_effect_actions: 0
+    media_actions: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 32_hard_pool
+    available_initial_tranche: 8
+    extensions: 6_increments_of_4_earned_only
+    final_verification_reserve: PROTECTED
+  remaining_uncertainty:
+    - future source bytes, transport, physical review, and measurement
+    - future integrated responsive/accessibility/performance evidence
+    - future exact candidate and independent release
+    - human assistive-technology usability study
+  decision: GATHER_EVIDENCE
+  next_owner: reconnaissance_sergeant
+```
+
+Reconnaissance may now perform only its shell-bounded directorial information
+stage. No generation call, source inspection/import, product/media/runtime
+change, maturity advancement, or Tactical action exists before the named owner
+and exact sequential gate in `FRSH-014-v1`.

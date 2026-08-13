@@ -49,3 +49,6 @@ Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I1_STDIN_PARENT.ps1
 Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I2_LAUNCHER.ps1 text eol=lf
 Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I2_PRODUCTION_CARRIER.ps1 text eol=lf
 Production[[:space:]]Pipeline/First[[:space:]]Run/HOST06_V16_I2_STDIN_PARENT.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/HOST14_FILE_CUSTODY_FRFC-014-v1.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/FIRST_RUN_PBA_FRPBA-014-v1.ps1 text eol=lf
+Production[[:space:]]Pipeline/First[[:space:]]Run/FIRST_RUN_ACCEPTED_MEDIA_MANIFEST_FRAM-014-v1.json text eol=lf

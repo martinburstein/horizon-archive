@@ -1,0 +1,33 @@
+{
+  "schema": "horizon.first-run.accepted-media.v1",
+  "manifest_id": "FRAM-014-v1",
+  "released_product": "357ad6dc4184b74150173504e86e366c761cdc0e",
+  "accepted_file_count": 24,
+  "accepted_byte_count": 154163567,
+  "files": [
+    {"path":"curriculum/lessons/L-05-07/evidence/basin_audio.wav","bytes":96044,"sha256":"ab396955d4533b7d73676d3271dabf9b9de68ee4c5a4aebe3cec80ddb5756030"},
+    {"path":"Visual Direction/Production Masters/2026-07-15-glass-meadow-integrated-terminal/glass-meadow-integrated-terminal-master-v1.png","bytes":2688247,"sha256":"6b27ac8233a5c29583450064da3d51c504e16a513759d52e5651b9c60ec031d2"},
+    {"path":"Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-access-master.png","bytes":3076970,"sha256":"e03fcffeb1aaf941e9ee8c5a4ea9c840b4f90271353fdf0b26f51350421c7b4e"},
+    {"path":"Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-boundary-master.png","bytes":2990550,"sha256":"8a932f027a0db79df7d24eac6803b0ade45beb3e9099e48c324d887e38de3e4a"},
+    {"path":"Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png","bytes":2626795,"sha256":"1d727694fa1dbb4311f9d7974a017d6165e66f10080114e5f81fe3cfd44eff6d"},
+    {"path":"Visual Direction/Production Masters/2026-07-15-photorealistic-demo/drowned-archive-master.png","bytes":2727857,"sha256":"afa0008e3f1e0cdacb2b9e58f14e9f676729eab9e8725a58c87d73ac489c08ed"},
+    {"path":"Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png","bytes":2571813,"sha256":"eea780a0e0af3e57497552601e00ad80851036c26cd29ab512c0e25ef3e0c4cf"},
+    {"path":"Visual Direction/Production Masters/2026-07-16-civic-record-district-arrival/civic-record-district-arrival-master-v1.png","bytes":2594095,"sha256":"fd28d2d6bd02f40e5a37d2fd08c9cd5f29ced47608804b900ceb17f497ddaf6c"},
+    {"path":"Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp","bytes":2163752,"sha256":"b6e0f34a917732dbb7b66b65968198cfc068bc650ac00cd8a01f095a6109f63f"},
+    {"path":"Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-detail-runtime-master-v1.webp","bytes":2125650,"sha256":"1f64ee18eb14ed0fb7b35ef4814c308391635865056a21f7ec76f3f5ba48d0e9"},
+    {"path":"Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-panorama-runtime-master-v1.webp","bytes":2416978,"sha256":"3eec1a762abb1c0654cf41753044173136e79f933db55c6fe7ca097e33a5012b"},
+    {"path":"Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-crosssection-runtime-master-v1.webp","bytes":1790866,"sha256":"0d79c2c2096c0114216a666279d5acd2ed35f6920d60a117726c625177a0615d"},
+    {"path":"Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-panorama-runtime-master-v1.webp","bytes":1816650,"sha256":"ef5917632eb2440d7d6d85895f5775767389745f1534f4e107f7bb0de7d59202"},
+    {"path":"Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-contact-detail-runtime-master-v1.webp","bytes":1638180,"sha256":"182e79793ceb3f375bcaabd87ff6d6279e54b53927b8af90f988d2dfaabc4640"},
+    {"path":"Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-panorama-runtime-master-v1.webp","bytes":2097426,"sha256":"63148566d2745c45e0d9f1bdedbb437b0d74a6dae09028f61828be2f0e96031e"},
+    {"path":"Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-panorama-runtime-master-v4.webp","bytes":1619836,"sha256":"7b64d4949bf02b1fbdfb2eb3bafb1ba2c0b7c8cd6eab0ea6fa87179a927872a9"},
+    {"path":"Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-relation-detail-runtime-master-v1.webp","bytes":2369022,"sha256":"ca09c4bdfedc6efc99538a8403ac43f6dd8db221a6157434e82ae1a9767fd0b8"},
+    {"path":"Visual Direction/Production Masters/2026-08-12-first-run-host07/host07-sediment-abacus-master-v1.png","bytes":15910194,"sha256":"19ae9894853a33bb52be2e32a11ce57d1de383fa9cc21dbd4d291dea00f492d9"},
+    {"path":"Visual Direction/Production Masters/2026-08-12-first-run-host08/host08-severed-relay-spine-master-v1.png","bytes":16815595,"sha256":"f6b31c4c410c9cfc89b18047a0a529e184e58261c79f647b2afab59ecd6662a8"},
+    {"path":"Visual Direction/Production Masters/2026-08-12-first-run-host09/host09-flooded-choir-master-v1.png","bytes":21068247,"sha256":"a36b6d863cb309b11c35d28261e8d7bb4e25570f120e8eef8a0fe86499ae3370"},
+    {"path":"Visual Direction/Production Masters/2026-08-12-first-run-host10/host10-blind-camera-well-master-v1.png","bytes":17841639,"sha256":"f55a277728a34104e31efc63fc812bcdd2075e71f2ffaa9b61c3df21cc099476"},
+    {"path":"Visual Direction/Production Masters/2026-08-12-first-run-host11/host11-wall-of-borrowed-light-master-v1.png","bytes":16856674,"sha256":"562273619e50ca4de632ba8bd6437e776eda0d789385498a3deede45ecf6f74a"},
+    {"path":"Visual Direction/Production Masters/2026-08-12-first-run-host12/host12-drowned-switchyard-master-v1.png","bytes":14744405,"sha256":"d8b5c6abe887fa0c17321f7f426a0bea2f6bfbcddfdaca6875b219d51a8292fc"},
+    {"path":"Visual Direction/Production Masters/2026-08-13-first-run-host13/host13-tidal-pattern-loom-master-v1.png","bytes":13516082,"sha256":"96109e5d3f2f5ede497fbdc5a491940a1dabc2f0e72b7c15f85531a11fddc26d"}
+  ]
+}
