@@ -2,16 +2,17 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION CONTENT COMPLETE / FRCA-013-v1 / H13-1 PASS`**
+Current disposition: **`RUNTIME PRESENTATION COMPLETE / FRPR-013-v1`**
 
-Exact next owner: **one fresh Image Specialist**
+Exact next owner: **one fresh Intelligence Officer**
 
-Polish only runtime code/configuration presentation around the immutable
-selected raster and native hotspot: restrained material treatment, hierarchy,
-focus, forced colors, reduced motion, and real Edge desktop/laptop/narrow/
-effective-200%/320x180/320x240 containment. Do not generate, edit, replace,
-transform, or reveal media. Run focused responsive/browser/build/PBA checks,
-commit, and route fresh Intelligence Officer.
+Independently validate exact candidate ancestry, selected-byte/provenance,
+physical/canon/copy/lesson/state/focus/derived-layout contracts, six-layout
+real Edge evidence, focused/related/full tests, 40 validators, production and
+fixture builds, final PBA/media inventory, served identities, clean-start E2E,
+scratch absence, rollback, and Git sync. On PASS release the bounded encounter,
+carry seven unused calls, update release map/scoreboard/changelog/NEXT, commit,
+push, and prove synchronization. Do not reveal the encounter or image path.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;

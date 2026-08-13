@@ -516,7 +516,15 @@ h1 {
 .canonical-game-frame .scene-art.blind-camera-well-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.86) contrast(1.03) brightness(.96); }
 .canonical-game-frame .scene-art.borrowed-light-wall-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.82) contrast(1.025) brightness(.95); }
 .canonical-game-frame .scene-art.drowned-switchyard-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.84) contrast(1.025) brightness(.96); }
-.canonical-game-frame .scene-art.tidal-pattern-loom-art { object-fit: cover; object-position: 50% 50%; }
+.canonical-game-frame .scene-art.tidal-pattern-loom-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.78) contrast(1.055) brightness(.94); }
+
+.canonical-game-frame .adventure-screen[data-tidal-pattern-loom-state="available"] .hotspot[data-hotspot-id="tidal-pattern-loom"] > span,
+.canonical-game-frame .adventure-screen[data-tidal-pattern-loom-state="in_progress"] .hotspot[data-hotspot-id="tidal-pattern-loom"] > span,
+.canonical-game-frame .adventure-screen[data-tidal-pattern-loom-state="remediation_required"] .hotspot[data-hotspot-id="tidal-pattern-loom"] > span,
+.canonical-game-frame .adventure-screen[data-tidal-pattern-loom-state="complete"] .hotspot[data-hotspot-id="tidal-pattern-loom"] > span {
+  max-width: min(34rem, calc(100% - 10px));
+  text-wrap: balance;
+}
 .hotspot[data-hotspot-id="flooded-choir"] { min-width: 44px; min-height: 44px; }
 .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 
@@ -3402,3 +3410,4 @@ h1 {
 .canonical-game-frame .adventure-screen[data-scene="ruins"] .scene-art.blind-camera-well-art { object-position: 50% 50%; }
 .canonical-game-frame .adventure-screen[data-scene="ruins"] .scene-art.borrowed-light-wall-art { object-position: 50% 50%; }
 .canonical-game-frame .adventure-screen[data-scene="ruins"] .scene-art.drowned-switchyard-art { object-position: 50% 50%; }
+.canonical-game-frame .adventure-screen[data-scene="ruins"] .scene-art.tidal-pattern-loom-art { object-position: 50% 50%; }
