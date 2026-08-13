@@ -2,17 +2,19 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PLAYER EXPERIENCE READY / FRPX-011-v1 / ACCEPTED-ONLY NATIVE HOST 11`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-011-v1 / INERT HOST 11 SLOT`**
 
-Exact next owner: **one fresh Combat Engineer**
+Exact next owner: **one fresh Quartermaster**
 
-Implement the inert null-first Host 11 registry, accepted-only native
-interaction, generic Portal/Prompt replacement guard, focus/recovery,
-responsive projection, styling scaffold, and focused regression tests under
-`FRSH-011-v1` / `FRPX-011-v1`. Populate no source, provenance, geometry, copy,
-alt, or attempt. Run the full proportional gate, commit/push `PRODUCTION
-FUNCTIONAL`, and route fresh Quartermaster. Do not generate or inspect media.
+Under `FRSH-011-v1`, independently verify the code candidate and exact ten
+prompt/CLI identities, then execute sequential `{H11-1..H11-10}` privately.
+For each ordinal: one CLI output, technical proof, original-resolution physical
+review, conservative source measurements, derived six-layout proof, exact
+rejection record/identity cleanup; first total PASS stops. Import and populate
+only the first passing byte-identical raster plus provenance/copy/geometry.
+Commit `PRODUCTION CONTENT COMPLETE` and route fresh Image Specialist. Never
+reveal a candidate or report its path to Martin.
 
-Ledger `{H11-1..H11-10}` remains unstarted. Preserve accepted Hosts/media,
+All ten calls are unstarted. Accepted Hosts 01-10/media are immutable. Preserve
 protected QA/user state, OPEN records, hidden lore exclusion, RP-012, and
-`successor=null`.
+`successor=null`. Stop opaque on unexpected state or cleanup failure.

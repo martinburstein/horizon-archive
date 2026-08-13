@@ -37,7 +37,7 @@ test("TD010 production and fixture root, deep fallback, chunks, and media serve 
   try {
     const production = await preview({ root: gameRoot, logLevel: "error", preview: { host: "127.0.0.1", port: 4288, strictPort: true } });
     try {
-      assert.equal(await verifyServedTree({ server: production, localRoot: join(gameRoot, "dist"), baseUrl: "http://127.0.0.1:4288" }), 23);
+      assert.equal(await verifyServedTree({ server: production, localRoot: join(gameRoot, "dist"), baseUrl: "http://127.0.0.1:4288" }), 24);
     } finally {
       await closePreview(production);
     }

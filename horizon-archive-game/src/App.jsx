@@ -233,6 +233,10 @@ import {
   isLegacyHost10LessonLauncherVisible,
 } from "./blindCameraWell.js";
 import {
+  BORROWED_LIGHT_WALL_REGISTRY,
+  isLegacyHost11LessonLauncherVisible,
+} from "./borrowedLightWall.js";
+import {
   buildCompletedMeadowReturnPatch,
   buildMeadowDeparturePresentation,
   buildMeadowReturnPresentation,
@@ -1258,6 +1262,7 @@ export function App() {
   const floodedChoirActive = floodedChoirPresented && floodedChoirLawful;
   const legacyHost09LessonLauncherVisible = isLegacyHost09LessonLauncherVisible(FLOODED_CHOIR_REGISTRY.source);
   const legacyHost10LessonLauncherVisible = isLegacyHost10LessonLauncherVisible(BLIND_CAMERA_WELL_REGISTRY.source);
+  const legacyHost11LessonLauncherVisible = isLegacyHost11LessonLauncherVisible(BORROWED_LIGHT_WALL_REGISTRY.source);
   const blindCameraWellState = deriveBlindCameraWellState({ predecessorComplete:floodedChoirState==="complete", visualEvidence, extractionEvidence, registry:BLIND_CAMERA_WELL_REGISTRY, provenance:BLIND_CAMERA_WELL_PROVENANCE, decodedImage:blindCameraWellDecodedImage });
   const blindCameraWellLawful=blindCameraWellState!=="hidden";
   const blindCameraWellActive=blindCameraWellPresented&&blindCameraWellLawful;
@@ -6435,10 +6440,10 @@ export function App() {
                   {legacyHost10LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && visualEvidence?.masteryStatus === "mastered" && extractionEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openExtractionWorkloads(); }}>{extractionSession ? "Resume Extraction Workloads" : extractionEvidence?.masteryStatus === "primary_complete" ? "Start Extraction Transfer" : extractionEvidence?.masteryStatus === "transfer_complete" ? "Open Extraction Closed-Note Gate" : "Start Extraction Workloads"}</button>
                   )}
-                  {pendingAdvance && scene.id === "ruins" && extractionEvidence?.masteryStatus === "mastered" && portalEvidence?.masteryStatus !== "mastered" && (
+                  {legacyHost11LessonLauncherVisible && pendingAdvance && scene.id === "ruins" && extractionEvidence?.masteryStatus === "mastered" && portalEvidence?.masteryStatus !== "mastered" && (
                     <button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={(event) => { terminalTriggerRef.current = event.currentTarget; openPortalOrientation(); }}>{portalSession ? "Resume Portal Orientation" : portalEvidence?.masteryStatus === "primary_complete" ? "Start Portal Troubleshooting Transfer" : portalEvidence?.masteryStatus === "transfer_complete" ? "Open Portal Closed-Note Gate" : "Start Portal Orientation"}</button>
                   )}
-                  {pendingAdvance&&scene.id==="ruins"&&portalEvidence?.masteryStatus==="mastered"&&promptEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openPromptLayers();}}>{promptSession?"Resume Prompt Layers":promptEvidence?.masteryStatus==="primary_complete"?"Start Prompt Transfer":promptEvidence?.masteryStatus==="transfer_complete"?"Open Prompt Closed-Note Gate":"Start Prompt Layers"}</button>}
+                  {legacyHost11LessonLauncherVisible && pendingAdvance&&scene.id==="ruins"&&portalEvidence?.masteryStatus==="mastered"&&promptEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openPromptLayers();}}>{promptSession?"Resume Prompt Layers":promptEvidence?.masteryStatus==="primary_complete"?"Start Prompt Transfer":promptEvidence?.masteryStatus==="transfer_complete"?"Open Prompt Closed-Note Gate":"Start Prompt Layers"}</button>}
                   {pendingAdvance&&scene.id==="ruins"&&promptEvidence?.masteryStatus==="mastered"&&clientBoundaryEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openClientBoundaries();}}>{clientBoundarySession?"Resume Client Boundaries":clientBoundaryEvidence?.masteryStatus==="primary_complete"?"Start Client Boundary Transfer":clientBoundaryEvidence?.masteryStatus==="transfer_complete"?"Open Client Boundary Closed-Note Gate":"Start Client Boundaries"}</button>}
                   {pendingAdvance&&scene.id==="ruins"&&clientBoundaryEvidence?.masteryStatus==="mastered"&&sdkRouteEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openSdkRouteChooser();}}>{sdkRouteSession?"Resume SDK Route Chooser":sdkRouteEvidence?.masteryStatus==="primary_complete"?"Start SDK Route Transfer":"Start SDK Route Chooser"}</button>}
                   {pendingAdvance&&scene.id==="ruins"&&sdkRouteEvidence?.masteryStatus==="mastered"&&singleAgentEvidence?.masteryStatus!=="mastered"&&<button ref={continueButtonRef} className="continue-action" data-terminal-focus-fallback onClick={e=>{terminalTriggerRef.current=e.currentTarget;openSingleAgent();}}>{singleAgentSession?"Resume Single Agent":singleAgentEvidence?.masteryStatus==="primary_complete"?"Start Single Agent Transfer":singleAgentEvidence?.masteryStatus==="transfer_complete"?"Open Single Agent Closed-Note Gate":"Start Single Agent"}</button>}
