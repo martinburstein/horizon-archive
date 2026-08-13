@@ -516,6 +516,7 @@ h1 {
 .canonical-game-frame .scene-art.blind-camera-well-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.86) contrast(1.03) brightness(.96); }
 .canonical-game-frame .scene-art.borrowed-light-wall-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.82) contrast(1.025) brightness(.95); }
 .canonical-game-frame .scene-art.drowned-switchyard-art { object-fit: cover; object-position: 50% 50%; filter: saturate(.84) contrast(1.025) brightness(.96); }
+.canonical-game-frame .scene-art.tidal-pattern-loom-art { object-fit: cover; object-position: 50% 50%; }
 .hotspot[data-hotspot-id="flooded-choir"] { min-width: 44px; min-height: 44px; }
 .hotspot[data-hotspot-id="fracture-nursery"]:focus-visible { outline: 2px solid #f0c96a; outline-offset: -3px; }
 
