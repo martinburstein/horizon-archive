@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-COL-001-v1`
+State ID: `FRLS-OPS-001-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **DESIGN / CONTINUITY LOCKED / OPERATIONS PENDING**
+Status: **DESIGN / WORK ORDER READY / SCIENCE PENDING**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -26,8 +26,8 @@ current_product_state:
   commit: 357ad6dc4184b74150173504e86e366c761cdc0e
 target:
   goal: one earliest missing physical encounter through independent release after guarded planning gates
-  selected_address: null
-  work_order: null
+  selected_address: FR-03 / Host 14
+  work_order: FRWO-014-v1
   shell: null
 ```
 
@@ -50,25 +50,26 @@ target:
 observed:
   source_candidate_exists: true
   source_candidate_on_main: true
-  current_release_map: FRRM-013-v2
-  current_scoreboard: FRSB-013-v2
-  current_baseline: FRPB-001-v11
-  current_continuity_lock: FRCL-013-v1
+  current_release_map: FRRM-014-v1
+  current_scoreboard: FRSB-014-v1
+  current_baseline: FRPB-001-v12
+  current_continuity_lock: FRCL-014-v1
   accepted_media_count: 24
   accepted_media_bytes: 154163567
   remaining_missing_physical_encounters_at_current_address: 2
   user_authorized_generation_call_pool: 32
 unknown:
-  - Operations encounter confirmation and bounded Work Order identity
-  - exact next encounter selection until planning gates complete
-  - Work Order, viability envelope, and shell identity
+  - exact source/generator/transport and physical feasibility
+  - responsive, accessibility, cleanup, PBA, and verifier thresholds
+  - Viability Envelope and shell identity
+  - future production candidate and independent release proof
 ```
 
 ## Action and authority state
 
 ```yaml
 active_mode: DESIGN
-active_owner: operations_planning_major
+active_owner: office_of_science_administrator
 information_actions_allowed:
   - inspect current authorities, exact release candidate, runtime, controls, and non-QA evidence
 effect_actions_allowed_before_shell:
@@ -86,9 +87,10 @@ prohibited_before_shell:
 ```yaml
 potential:
   hard_failures: 0_observed_at_commandant_gate
-  selected_encounter_missing: 1
+  selected_encounter_missing: 0
   continuity_lock_ready: true
-  work_order_ready: false
+  work_order_ready: true
+  source_feasibility_unknown: true
   shell_ready: false
   production_candidate: null
   final_holdout_passed: false
@@ -96,20 +98,22 @@ budget:
   generation_calls_authorized: 32
   generation_calls_used_this_cycle: 0
   generation_calls_remaining: 32
+  initial_earned_tranche_after_shell: 8
+  earned_extension_increment: 4
   concurrent_roles: 1
   role_order: strict_sequential
-  final_verification_reserve: protected
+  final_verification_reserve: full_post_selection_cascade_plus_independent_intelligence_holdout
 best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior exact candidate
 ```
 
 ## Strategy and continuation
 
 ```yaml
-active_strategy_family: sequential_convergent_planning
+active_strategy_family: viability_hardening_for_one_bounded_physical_host
 rejected_strategy_families: []
-continuation_reason: FRCL-014-v1 closes continuity uncertainty and routes the least-powerful sufficient scope-and-sequencing information action to Operations
+continuation_reason: FRWO-014-v1 closes ordering and scope uncertainty; Science is the least-powerful sufficient information action because source, transport, verifier, cleanup, and economic feasibility remain unknown
 decision: GATHER_EVIDENCE
-next_owner: operations_planning_major
+next_owner: office_of_science_administrator
 ```
 
 ## Commandant checkpoint
@@ -172,5 +176,63 @@ colonel:
   next_owner: operations_planning_major
 ```
 
-No later stage may begin until Operations writes a validated Work Order
-handoff and updates this state without weakening the immutable contract edge.
+## Operations checkpoint
+
+```yaml
+operations:
+  work_order: FRWO-014-v1
+  release_map: FRRM-014-v1
+  scoreboard: FRSB-014-v1
+  disposition: WORK ORDER READY
+  selected_address: FR-03 / Host 14
+  product_candidate: 357ad6dc4184b74150173504e86e366c761cdc0e
+  current_ref: FRWO-014-v1_planning_state
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  binding_gap: >-
+    The released rail is functionally complete, but immediately after the
+    released last Drowned host it falls back to generic launchers instead of
+    the fixed distinct dry deposition-band face for unchanged L06-01 and
+    L06-02 ownership.
+  action_kind: information
+  predicted_effect: >-
+    Science will prove or reject source, generator/transport, physical,
+    responsive, accessibility, privacy/save, performance, cleanup, verifier,
+    and economic viability before any shell or call exists.
+  verifier_vector:
+    earliest_first: PASS
+    bounded_vertical_outcome: PASS
+    predecessor_and_adjacency: PASS
+    fixed_lesson_ownership: PASS
+    released_generic_rollback: PASS_AT_PLANNING
+    route_save_world_ending_invariants: PASS_AT_PLANNING
+    source_feasibility: UNKNOWN_SCIENCE_OWNED
+    candidate_and_release_proof: NOT_STARTED
+  delta_vs_best: zero_product_zero_maturity_zero_media_positive_information
+  budget_used:
+    generation_calls: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+    planning_effect_actions: 4_intended_control_artifacts
+  budget_remaining:
+    generation_calls: 32
+    initial_earned_tranche_after_shell: 8
+    extension_increment: 4
+    final_verification_reserve: PROTECTED
+  plateau_policy: >-
+    Two equivalent failures require fresh diagnosis; three same-family
+    non-improving attempts force replan, owner return, or typed stop; first
+    complete PASS stops all remaining calls.
+  remaining_uncertainty:
+    - exact source and invocation feasibility
+    - physical measurement and independent future-candidate review
+    - responsive/accessibility and runtime-fallback thresholds
+    - PBA, fixture, cleanup, and final-holdout envelope
+  decision: GATHER_EVIDENCE
+  next_owner: office_of_science_administrator
+```
+
+No later stage may begin until Science answers the exact questions in
+`FRWO-014-v1`, issues one validated viability handoff, and updates this state
+without weakening the immutable contract edge. No generation call, product or
+media action, Mission shell, or maturity advancement exists yet.

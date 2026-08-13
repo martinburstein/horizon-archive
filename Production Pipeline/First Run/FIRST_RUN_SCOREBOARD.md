@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-013-v2`
+Scoreboard ID: `FRSB-014-v1`
 
 Current release authority: `FRAB-013-v1 / DISTINCT HOST 13 RELEASED`
 
-Baseline / lock: `FRPB-001-v11` / `FRCL-013-v1`
+Baseline / lock: `FRPB-001-v12` / `FRCL-014-v1`
 
-Release map: `FRRM-013-v2`
+Release map: `FRRM-014-v1`
 
-Operations source inspected: `9be31071`
+Operations planning authority: `FRWO-014-v1`
 
 Released product candidate: `357ad6dc`
 
@@ -18,11 +18,20 @@ Date: **2026-08-13**
 
 Current released Work Order: `FRWO-013-v1 / Host 13 distinct encounter`.
 
-Selected bounded Work Order: **none; fresh Commandant verification required**.
+Selected bounded Work Order: **`FRWO-014-v1 / Host 14 distinct encounter`**.
+
+This is planning state only. Physical inventory remains one accepted shared
+compression, nine exact Drowned hosts, and two missing; whole-game inventory
+remains `17 exact / 1 accepted shared compression / 21 missing / 1 unadvanced
+Witness expression`. Current, best, and committed product remain
+`FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e`. Generation calls used by
+Operations are `0 / 32`; the final-proof reserve is protected. Science is next.
 
 Host 13 is independently released from the first and sole generation call.
-Seven rolling calls remain unused for the next earliest missing encounter after
-a fresh sequential loop. Accepted media is `24 / 154,163,567`.
+Its prior seven-call remainder is historical release evidence, not current
+authority. Martin's separate current authorization is the `FRWO-014-v1` hard
+pool above, subject to the fresh sequential gates and earned-continuation
+controls. Accepted media is `24 / 154,163,567`.
 
 Host 12 is independently released from first attempt H12-1. Eight rolling calls
 remain unused for the next earliest missing encounter after a fresh sequential
@@ -164,6 +173,11 @@ complete.
   missing / 1 unadvanced Witness expression`.
 
 ## Current released Work Order
+
+`FRWO-014-v1` is the current bounded planning selection, not a release. It
+owns only Host 14 physical expression and unchanged `L06-01 + L06-02` native
+entry, with the generic launcher path retained as rollback and Host 15
+deferred. No maturity or inventory cell advances from this selection.
 
 `FRAB-013-v1` releases Host 13. `FR-03` is now `1 accepted shared compression
 / 9 exact / 2 missing`; whole-game inventory is `17 exact / 1 accepted shared

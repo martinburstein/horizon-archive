@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-013-v2`
+Map ID: `FRRM-014-v1`
 
 Current release authority: `FRAB-013-v1 / DISTINCT HOST 13 RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v11` / `FRCL-013-v1`
+Baseline / continuity lock: `FRPB-001-v12` / `FRCL-014-v1`
 
-Operations source inspected: `9be31071`
+Operations planning authority: `FRWO-014-v1`
 
 Released product candidate: `357ad6dc`
 
@@ -22,11 +22,21 @@ Date: **2026-08-13**
 
 Current released Work Order: `FRWO-013-v1 / Host 13 distinct encounter`
 
-Selected bounded Work Order: **none; fresh Commandant verification required**.
+Selected bounded Work Order: **`FRWO-014-v1 / Host 14 distinct encounter`**.
 
-`FRWO-013-v1` is released from its exact first attempt. Seven rolling calls
-remain unused for the next earliest missing encounter after a fresh sequential
-loop. Accepted media is `24 / 154,163,567`; no later encounter is selected.
+`FRWO-014-v1` selects only the earliest fixed post-Host-13 physical-expression
+gap. It preserves the released generic Objective Ledger and Remediation Planner
+path as rollback, leaves Host 15 separate, and advances no maturity. The hard
+rolling pool is thirty-two calls, with only an initial eight-call tranche
+available after Science and Mission freeze a complete shell; four-call
+extensions must be earned by meaningful best-state improvement. First complete
+PASS stops the encounter. No call or product/media action exists at Operations.
+
+`FRWO-013-v1` is released from its exact first attempt. Its prior seven-call
+remainder is historical release evidence, not current authority. Martin's
+separate current authorization is the `FRWO-014-v1` hard pool above, subject
+to the fresh sequential gates and earned-continuation controls. Accepted media
+is `24 / 154,163,567`; that prior release selected no later encounter.
 
 `FRWO-012-v1` is released from exact first attempt H12-1. H12-2..H12-9 are
 unused and carry to the next earliest missing encounter under Martin's rolling
@@ -191,7 +201,8 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 14` | Next distinct physical host and its unchanged owned lesson entry | Host 13 is released; Host 14 is earliest missing and requires a fresh sequential Work Order loop |
+| 1 | `FR-03 / Host 14` | `FRWO-014-v1`: next distinct physical host with unchanged `L06-01 + L06-02` entry | Host 13 is released; Host 14 is earliest missing; Science viability is next and maturity remains unchanged |
+| 2 | `FR-03 / Host 15` | Later distinct grounded relationship with its unchanged owned lessons | Explicitly deferred until Host 14 is independently released; it may not be batched into `FRWO-014-v1` |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
@@ -368,6 +379,11 @@ new-source delta; and MH-40 with equal outcomes, invariant world, and
 `successor=null`.
 
 ## Update authority
+
+Current planning selection is `FRWO-014-v1`. It changes no released inventory
+or maturity. Current, best, and committed product remain
+`FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e`; the exact next owner is
+Science for a no-call viability decision.
 
 Operations may reorder a candidate only for a documented dependency, critical
 safety/accessibility defect, or prevention of duplicate destructive work.
