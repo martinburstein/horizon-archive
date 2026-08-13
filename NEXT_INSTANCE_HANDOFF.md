@@ -2,20 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-013-v1-VR-01`**
+Current disposition: **`HOLD / REQUIRED CORRECTION / FRAB-013-v1-HOLD-VR-01`**
 
-Exact next owner: **one fresh Intelligence Officer**
+Exact next owner: **one fresh Combat Engineer**
 
-Independently rerun the complete release ladder for the exact candidate after
-the two-literal served-identity correction: ancestry/patch integrity, selected
-byte/provenance, physical/canon/copy/lesson/state/focus/derived-layout
-contracts, real Edge evidence, cold full tests, 40 validators, production and
-fixture builds, final PBA/media inventory, served identity, clean-start E2E in
-a fresh external QA root, scratch/process cleanup, rollback, and Git sync. On
-PASS release the bounded encounter, carry seven unused calls, update release
-map/scoreboard/changelog/NEXT, commit, push, and prove synchronization.
+Audit the sanctioned E2E's selected native boundary for both owned lessons.
+Correct every initial, transfer, reload, and close/reopen entry that still
+clicks the hotspot without the required active `USE` verb or calls a retired
+generic launcher. Preserve native focus assertions and all product, media,
+copy, CSS, lesson/state/privacy/save/canon/ending behavior. Add or update a
+focused source assertion, run it and the complete cold suite, issue a bounded
+Combat variance report, commit/push/prove sync, then route one fresh
+Intelligence Officer for a new complete external-root E2E and release ladder.
 
-Do not reveal the encounter or image path. Never inspect, restore, stage, or
-use repository QA screenshots. Preserve accepted hosts/media, all OPEN records,
-protected user state, hidden-lore exclusion, opaque residual roots, RP-012, and
-`successor=null`.
+Do not reveal the encounter or image path. Seven rolling calls remain unused
+and unavailable until release. Never inspect, restore, stage, or use repository
+QA screenshots. Preserve all OPEN records, protected user state, hidden lore,
+opaque residual roots, RP-012, and `successor=null`.
