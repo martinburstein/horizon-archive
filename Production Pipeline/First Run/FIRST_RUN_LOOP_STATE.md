@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-QTR-001-v1`
+State ID: `FRLS-MSN-002-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / QUARTERMASTER REVISE / SCIENCE RETURN THROUGH MISSION**
+Status: **OPERATE / CORRECTED SHELL READY / QUARTERMASTER H14-2**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -28,7 +28,7 @@ target:
   goal: one earliest missing physical encounter through independent release after guarded planning gates
   selected_address: FR-03 / Host 14
   work_order: FRWO-014-v1
-  shell: FRSH-014-v1
+  shell: FRSH-014-v2
 ```
 
 ## Hard constraints
@@ -55,11 +55,11 @@ observed:
   current_baseline: FRPB-001-v12
   current_continuity_lock: FRCL-014-v1
   current_work_order: FRWO-014-v1
-  current_viability_envelope: FRVE-014-v1
-  current_shell: FRSH-014-v1
+  current_viability_envelope: FRVE-014-v2
+  current_shell: FRSH-014-v2
   current_player_experience_blueprint: FRPX-014-v1
   accepted_media_manifest: FRAM-014-v1
-  custody_control: FRFC-014-v1
+  custody_control: FRFC-014-v2
   pba_control: FRPBA-014-v1
   accepted_media_count: 24
   accepted_media_bytes: 154163567
@@ -71,6 +71,7 @@ observed:
   h14_1_launch_consumed: true
   h14_1_technical_disposition: REJECT_FORMAT32BPPARGB_REQUIRES_FORMAT24BPPRGB
   h14_1_cleanup: PASS_EXACT_IDENTITY
+  corrected_opacity_self_test: PASS_RGB_RGBA_AND_ALPHA254_REJECTION
   generator_dry_run: PASS_NO_CALL
   initial_prompt_identities: 8_FROZEN
 unknown:
@@ -83,7 +84,7 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: office_of_science_administrator_via_mission_captain
+active_owner: quartermaster
 information_actions_allowed:
   - inspect FRCE-014-v1, shell-owned authorities, null-first functional candidate, exact source/custody controls, and affected non-QA tests
 effect_actions_allowed:
@@ -101,7 +102,7 @@ prohibited_until_named_owner_and_stage:
 
 ```yaml
 potential:
-  hard_failures: 1_generator_output_representation
+  hard_failures: 0_current_shell_candidate_unknown
   selected_encounter_missing: 0
   continuity_lock_ready: true
   work_order_ready: true
@@ -126,12 +127,12 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ## Strategy and continuation
 
 ```yaml
-active_strategy_family: frozen_cli_source_representation_return
+active_strategy_family: frozen_cli_source_with_direct_opacity_verification
 rejected_strategy_families:
   - continue_prompt_search_under_format24bpprgb_gate
-continuation_reason: H14-1 strict-decodes as Format32bppArgb while the frozen source and custody law require Format24bppRgb; prompt strategy cannot change output representation and re-encoding is forbidden
-decision: RETURN_TO_OWNER
-next_owner: office_of_science_administrator_via_mission_captain
+continuation_reason: FRFC-014-v2 now directly verifies strict PNG structure and every decoded alpha sample without editing bytes; one H14-2 observation can test the corrected lawful source predicate
+decision: GATHER_EVIDENCE
+next_owner: quartermaster
 ```
 
 ## Commandant checkpoint
@@ -583,7 +584,64 @@ science_return:
   next_owner: mission_captain
 ```
 
-Mission must issue `FRSH-014-v2`, freeze the exact `FRFC-014-v2` identity and
-provenance fields, and supersede only the affected pixel-format clauses before
-Quartermaster may evaluate H14-2. H14-1 remains consumed, deleted, and rejected.
-No call, media action, product action, or Image stage is currently authorized.
+Science required Mission to issue `FRSH-014-v2`, freeze the exact
+`FRFC-014-v2` identity and provenance fields, and supersede only the affected
+pixel-format clauses before Quartermaster could evaluate H14-2. At that return
+checkpoint, no call, media action, product action, or Image stage was
+authorized.
+
+Mission has now accepted the bounded verifier correction and issued
+`FRSH-014-v2`. The corrected shell directly proves strict PNG structure and
+full opacity instead of using the decoder storage label as a proxy. Every
+unmentioned v1 gate, frozen CLI/prompt identity, no-postprocess rule, physical
+and layout requirement, null-first fallback, protected boundary, budget, and
+stop policy remains in force.
+
+## Mission return checkpoint
+
+```yaml
+mission_return:
+  shell: FRSH-014-v2
+  disposition: FIRST RUN SHELL READY / QUARTERMASTER H14-2 READY
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    planning_conflict: PASS_NONE
+    w3c_png_semantics: PASS
+    microsoft_decoder_semantics: PASS
+    openai_transport_support: PASS
+    custody_v2_identity: PASS
+    opaque_rgb_positive_control: PASS
+    opaque_rgba_all_alpha_255_positive_control: PASS
+    single_alpha_254_adversarial_rejection: PASS
+    frozen_prompt_generator_manifest_pba_identities: PASS
+    accepted_manifest_integrity: 24/24_PASS
+    owned_scratch_source_partial_absence: PASS
+    future_source_physical_layout: NOT_EVALUATED
+    product_and_release: UNCHANGED_NOT_STARTED
+  delta_vs_best: zero_product_zero_media_zero_maturity_positive_verifier_information
+  budget_used:
+    generation_calls: 1_total_cycle_0_mission
+    media_imports: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 31
+    initial_tranche: 7
+    final_verification_reserve: FULL
+  remaining_uncertainty:
+    - whether H14-2 or a later lawful ordinal passes the corrected hard predicate
+    - future private physical review and six-layout measurement
+    - integrated responsive, accessibility, performance, served, and E2E proof
+    - human assistive-technology usability study
+    - exact product candidate and independent Intelligence release
+  decision: GATHER_EVIDENCE
+  next_owner: quartermaster
+```
+
+H14-1 remains consumed/rejected/deleted. H14-2 is the only next ordinal. The
+remaining initial tranche is seven calls, the total remaining pool is 31, and
+the complete verification reserve remains protected. Image Specialist is not
+authorized.
