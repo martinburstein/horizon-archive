@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-CMD-002-v1`
+State ID: `FRLS-COL-002-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **REACTIVATED / DESIGN -> MIGRATE / COLONEL NEXT**
+Status: **REACTIVATED / MIGRATE / OPERATIONS NEXT**
 
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
 
@@ -36,22 +36,24 @@ contract:
     - browser or E2E
     - automation, schedule, or wake
 state:
-  source_control_read: 795436bcd74acf5be8157655eb97377806eaa4f0
+  source_control_read: d18e45b3a00caa9721b3f374dd052d41e6fdd909
   current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
   current_product_tree: 066077823b780ba83c5e71e7b478d117f3761dcc
   best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
   committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
   committed_product_tree: 612a7d53c4564563bfd0bdb7eeca110f715e5c82
   active_baseline: FRPB-001-v13
+  active_continuity_lock: FRCL-015-v1
   predecessor_hold: FRSH-014-v3-VR-01
-  active_owner: colonel
+  active_owner: operations_planning_major
   controller_state: GATHER_EVIDENCE
 evidence:
   fresh:
-    - current HEAD product tree equals null-first commit product tree
-    - release-to-current product delta is limited to the known inert null-first scaffold
-    - null-first-to-current product delta is zero
+    - FRCL-015-v1 textual concordance with current surface, game-on-paper, prior hold, null-first registry, release map, and scoreboard
+    - guide/material IDs classified as noncanonical production controls
+    - final flattened player-facing source retains independent continuity-verifier authority
   reused:
+    - Commandant exact Git/product identity observations from FRPB-001-v13
     - FRCE-014-v1 focused 31/31, related 63/63, full 1047/1047, validators 40/40, builds 234/57, null-first PBA
     - FRAB-013-v1 independent holdout for the committed release only
   not_run:
@@ -59,6 +61,11 @@ evidence:
 representation:
   old_strategy: prompt_only_closed
   new_hypothesis: deterministic_guide_then_reference_conditioned_render_edit_and_deterministic_transforms
+  continuity_lock: >-
+    Guides may encode only approved physical topology, three independent
+    construction processes, their interdigitation, one causal trace and three
+    reactions, route/crop/accessibility anchors, and protected zones; guide
+    labels, IDs, masks, and colors are never in-world evidence.
   best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior exact candidate
 budgets:
   prior_generation_pool: CLOSED_NOT_INHERITED
@@ -73,5 +80,5 @@ stops:
   - hard-boundary failure cannot be averaged away
   - stop when marginal expected player value falls below cost or risk
 decision: GATHER_EVIDENCE
-next_owner: colonel
+next_owner: operations_planning_major
 ```
