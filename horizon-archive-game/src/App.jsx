@@ -5,6 +5,7 @@ import strandedLensCradleImage from "../../Visual Direction/Production Masters/2
 import sedimentAbacusImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host07/host07-sediment-abacus-master-v1.png";
 import severedRelaySpineImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host08/host08-severed-relay-spine-master-v1.png";
 import floodedChoirImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host09/host09-flooded-choir-master-v1.png";
+import blindCameraWellImage from "../../Visual Direction/Production Masters/2026-08-12-first-run-host10/host10-blind-camera-well-master-v1.png";
 import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
 import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
@@ -223,7 +224,12 @@ import {
   isLegacyHost09LessonLauncherVisible,
 } from "./floodedChoir.js";
 import {
+  BLIND_CAMERA_WELL_COPY,
+  BLIND_CAMERA_WELL_PROVENANCE,
   BLIND_CAMERA_WELL_REGISTRY,
+  BLIND_CAMERA_WELL_SOURCE_URL,
+  deriveBlindCameraWellState,
+  getBlindCameraWellHotspot,
   isLegacyHost10LessonLauncherVisible,
 } from "./blindCameraWell.js";
 import {
@@ -1069,6 +1075,8 @@ export function App() {
   const [severedRelaySpinePresented, setSeveredRelaySpinePresented] = useState(false);
   const [floodedChoirDecodedImage, setFloodedChoirDecodedImage] = useState(null);
   const [floodedChoirPresented, setFloodedChoirPresented] = useState(false);
+  const [blindCameraWellDecodedImage, setBlindCameraWellDecodedImage] = useState(null);
+  const [blindCameraWellPresented, setBlindCameraWellPresented] = useState(false);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
@@ -1147,6 +1155,10 @@ export function App() {
   const floodedChoirTransitionPendingRef = useRef(false);
   const floodedChoirFocusPendingRef = useRef(false);
   const floodedChoirAnnouncementPendingRef = useRef(false);
+  const blindCameraWellRef = useRef(null);
+  const blindCameraWellTransitionPendingRef = useRef(false);
+  const blindCameraWellFocusPendingRef = useRef(false);
+  const blindCameraWellAnnouncementPendingRef = useRef(false);
   const sceneArrivalFocusPendingRef = useRef(false);
   const resumeContinueFocusPendingRef = useRef(false);
   const terminalTriggerRef = useRef(null);
@@ -1246,6 +1258,9 @@ export function App() {
   const floodedChoirActive = floodedChoirPresented && floodedChoirLawful;
   const legacyHost09LessonLauncherVisible = isLegacyHost09LessonLauncherVisible(FLOODED_CHOIR_REGISTRY.source);
   const legacyHost10LessonLauncherVisible = isLegacyHost10LessonLauncherVisible(BLIND_CAMERA_WELL_REGISTRY.source);
+  const blindCameraWellState = deriveBlindCameraWellState({ predecessorComplete:floodedChoirState==="complete", visualEvidence, extractionEvidence, registry:BLIND_CAMERA_WELL_REGISTRY, provenance:BLIND_CAMERA_WELL_PROVENANCE, decodedImage:blindCameraWellDecodedImage });
+  const blindCameraWellLawful=blindCameraWellState!=="hidden";
+  const blindCameraWellActive=blindCameraWellPresented&&blindCameraWellLawful;
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -1289,11 +1304,15 @@ export function App() {
   const severedRelaySpineHotspots = scene.id === "ruins" && severedRelaySpineActive && severedRelaySpineHotspot ? [{ id: "severed-relay-spine", label: SEVERED_RELAY_SPINE_COPY.name, hotspot: severedRelaySpineHotspot }] : [];
   const floodedChoirHotspot = getFloodedChoirHotspot(FLOODED_CHOIR_REGISTRY);
   const floodedChoirHotspots = scene.id === "ruins" && floodedChoirActive && floodedChoirHotspot ? [{ id: "flooded-choir", label: "Flooded Choir", hotspot: floodedChoirHotspot }] : [];
+  const blindCameraWellHotspot=getBlindCameraWellHotspot(BLIND_CAMERA_WELL_REGISTRY);
+  const blindCameraWellHotspots=scene.id==="ruins"&&blindCameraWellActive&&blindCameraWellHotspot?[{id:"blind-camera-well",label:BLIND_CAMERA_WELL_COPY.name,hotspot:blindCameraWellHotspot}]:[];
   const sceneHotspots = [primarySceneHotspot, ...(scene.id === "ruins" ? ruinsHotspots : meadowHotspots)];
   const activeSceneHotspots = scene.id === "ruins" && strandedLensCradleActive
     ? strandedLensCradleHotspots
     : sceneHotspots;
-  const presentedSceneHotspots = scene.id === "ruins" && floodedChoirActive
+  const presentedSceneHotspots = scene.id === "ruins" && blindCameraWellActive
+    ? blindCameraWellHotspots
+    : scene.id === "ruins" && floodedChoirActive
     ? floodedChoirHotspots
     : scene.id === "ruins" && severedRelaySpineActive
     ? severedRelaySpineHotspots
@@ -1309,6 +1328,7 @@ export function App() {
     const isSedimentAbacus = scene.id === "ruins" && hotspot.id === "sediment-abacus";
     const isSeveredRelaySpine = scene.id === "ruins" && hotspot.id === "severed-relay-spine";
     const isFloodedChoir = scene.id === "ruins" && hotspot.id === "flooded-choir";
+    const isBlindCameraWell=scene.id==="ruins"&&hotspot.id==="blind-camera-well";
     const routeMarkerLabel = isMeadowRouteMarker ? ` // ${meadowRouteMarkerState.toUpperCase()}` : "";
     const nurseryStateLabel = isFractureNursery ? FRPX02_COPY.NURSERY_STATE[fractureNurseryState] : "";
     const nurseryLabel = isFractureNursery ? ` // ${nurseryStateLabel.toUpperCase()}` : "";
@@ -1321,6 +1341,7 @@ export function App() {
     const severedRelaySpineStateLabel = isSeveredRelaySpine ? SEVERED_RELAY_SPINE_COPY.state[severedRelaySpineState] : "";
     const severedRelaySpineLabel = isSeveredRelaySpine ? ` // ${severedRelaySpineStateLabel.toUpperCase()}` : "";
     const hotspotStyle = getHotspotStyle(hotspot.hotspot);
+    if(isBlindCameraWell)return <button key={hotspot.id} ref={blindCameraWellRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-blind-camera-well-state={blindCameraWellState} style={hotspotStyle} onClick={(event)=>{terminalTriggerRef.current=event.currentTarget;useHotspot(hotspot.id);}} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} ${BLIND_CAMERA_WELL_COPY.name}, ${blindCameraWellState}`}><span>{verb} {BLIND_CAMERA_WELL_COPY.name} // {blindCameraWellState.toUpperCase()}</span></button>;
     if (isFloodedChoir) return <button key={hotspot.id} ref={floodedChoirRef} className="hotspot hotspot-secondary" data-hotspot-id={hotspot.id} data-flooded-choir-state={floodedChoirState} style={hotspotStyle} onClick={(event) => { terminalTriggerRef.current = event.currentTarget; useHotspot(hotspot.id); }} disabled={terminalOpen} aria-label={`${verb.toLowerCase()} Flooded Choir, ${floodedChoirState}`}><span>{verb} Flooded Choir // {floodedChoirState.toUpperCase()}</span></button>;
     const sixfoldActivationStyle = isSixfoldWeir ? {
       ...hotspotStyle,
@@ -1460,6 +1481,10 @@ export function App() {
     const target=floodedChoirRef.current; if(!target?.isConnected)return; floodedChoirFocusPendingRef.current=false; target.focus({preventScroll:true});
     if(floodedChoirAnnouncementPendingRef.current){floodedChoirAnnouncementPendingRef.current=false; setSceneAnnouncement(FLOODED_CHOIR_COPY.available);}
   }, [floodedChoirActive, floodedChoirState, terminalOpen]);
+
+  useEffect(()=>{if(BLIND_CAMERA_WELL_REGISTRY.source.enabled!==true||!BLIND_CAMERA_WELL_SOURCE_URL){setBlindCameraWellDecodedImage(null);return undefined;}let connected=true;const image=new Image();image.decoding="async";image.onload=()=>connected&&setBlindCameraWellDecodedImage({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setBlindCameraWellDecodedImage(null);image.src=blindCameraWellImage;return()=>{connected=false;image.onload=null;image.onerror=null;};},[]);
+  useEffect(()=>{if(!blindCameraWellLawful){blindCameraWellTransitionPendingRef.current=false;blindCameraWellAnnouncementPendingRef.current=false;if(blindCameraWellPresented)setBlindCameraWellPresented(false);return undefined;}if(blindCameraWellPresented||mode!=="playing"||scene.id!=="ruins"||terminalOpen)return undefined;if(!blindCameraWellTransitionPendingRef.current){blindCameraWellFocusPendingRef.current=blindCameraWellState!=="complete";setBlindCameraWellPresented(true);return undefined;}const frame=window.requestAnimationFrame(()=>{if(!blindCameraWellTransitionPendingRef.current)return;blindCameraWellTransitionPendingRef.current=false;blindCameraWellFocusPendingRef.current=true;blindCameraWellAnnouncementPendingRef.current=true;setBlindCameraWellPresented(true);});return()=>window.cancelAnimationFrame(frame);},[mode,scene.id,terminalOpen,blindCameraWellLawful,blindCameraWellPresented,blindCameraWellState]);
+  useLayoutEffect(()=>{if(!blindCameraWellFocusPendingRef.current||!blindCameraWellActive||terminalOpen)return;const target=blindCameraWellRef.current;if(!target?.isConnected)return;blindCameraWellFocusPendingRef.current=false;target.focus({preventScroll:true});if(blindCameraWellAnnouncementPendingRef.current){blindCameraWellAnnouncementPendingRef.current=false;setSceneAnnouncement(BLIND_CAMERA_WELL_COPY.available);}},[blindCameraWellActive,blindCameraWellState,terminalOpen]);
 
   useEffect(() => {
     function handleDemoTourRequest(event) {
@@ -3264,6 +3289,7 @@ export function App() {
   }
 
   function useHotspot(hotspotId = scene.primaryHotspotId ?? "primary") {
+    if(scene.id==="ruins"&&hotspotId==="blind-camera-well"){if(blindCameraWellState==="hidden"||terminalOpen)return;if(verb==="LOOK AT"){setDialogue(BLIND_CAMERA_WELL_COPY.unseen,"scene");return;}if(verb==="TALK TO"){setDialogue("Complete silence.","pilot");return;}if(blindCameraWellState==="complete"){setDialogue(`${BLIND_CAMERA_WELL_COPY.mastered} ${BLIND_CAMERA_WELL_COPY.nextBoundary}`,"system");return;}if(visualEvidence?.masteryStatus==="mastered")openExtractionWorkloads();else openVisualWorkloads();return;}
     if (scene.id === "ruins" && hotspotId === "flooded-choir") {
       if (floodedChoirState === "hidden" || terminalOpen) return;
       if (verb === "LOOK AT") { setDialogue("SCENE // Several water-filled stone cavities share one pressure-bearing continuity. Reflected light returns from some openings and not from another. The observation rim is dry.", "scene"); return; }
@@ -4018,24 +4044,24 @@ export function App() {
   function advanceSpeech() { if (!speechSession.result?.passed) return; const scenarios = speechSession.form === "transfer" ? speechTransferScenarios : speechPrimaryScenarios; if (speechSession.index === scenarios.length - 1) { if (speechSession.form === "transfer") { setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setSpeechSession({ ...speechSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setSpeechSession({ ...speechSession, complete: true }); return; } setSpeechSession({ ...speechSession, index: speechSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
   function acknowledgeSpeechPrimary() { if (!speechSession?.complete || !speechEvidence?.confidence) return; floodedChoirFocusPendingRef.current=true; setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setSpeechSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Speech Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
   function checkSpeechExplanation(event) { event.preventDefault(); const result = evaluateSpeechExplanation(speechSession.explanationResponse); setSpeechSession({ ...speechSession, explanationResult: result }); setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
-  function acknowledgeSpeechMastery() { if (!speechSession?.explanationResult?.passed || !speechSession.ownershipConfirmed || !speechEvidence?.confidence) return; focusContinueAfterSpeechRef.current = true; setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setSpeechSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Speech Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
+  function acknowledgeSpeechMastery() { if (!speechSession?.explanationResult?.passed || !speechSession.ownershipConfirmed || !speechEvidence?.confidence) return; focusContinueAfterSpeechRef.current = true; blindCameraWellTransitionPendingRef.current=BLIND_CAMERA_WELL_REGISTRY.source.enabled===true; setSpeechEvidence((previous) => updateSpeechEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setSpeechSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Speech Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
   function openVisualWorkloads() { setTerminalOpen(true); setRuinsTerminalKind("visual-workloads"); if (!visualSession) { const form = visualEvidence?.masteryStatus === "primary_complete" ? "transfer" : visualEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setVisualSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { existing_or_new: "", input_modalities: "", required_output: "", media_handling: "" }, explanationResult: null, ownershipConfirmed: false }); } }
   function exitVisualWorkloads() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads practice closed safely. No media state exists; choices remain session-only.", "system"); }
   function checkVisual(event) { event.preventDefault(); const scenarios = visualSession.form === "transfer" ? visualTransferScenarios : visualPrimaryScenarios; const scenario = scenarios[visualSession.index]; const result = evaluateVisualScenario(scenario.id, visualSession.response, visualSession.form); const hintLevel = result.passed ? visualSession.hintLevel : Math.max(1, visualSession.hintLevel); setVisualSession({ ...visualSession, result, hintLevel }); setVisualEvidence((previous) => updateVisualEvidence(previous, { form: visualSession.form, scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: visualSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" })); }
   function revealVisualHint() { const hintLevel = Math.min(3, visualSession.hintLevel + 1); setVisualSession({ ...visualSession, hintLevel }); setVisualEvidence((previous) => updateVisualEvidence(previous, { hintLevel })); }
   function advanceVisual() { if (!visualSession.result?.passed) return; const scenarios = visualSession.form === "transfer" ? visualTransferScenarios : visualPrimaryScenarios; if (visualSession.index === scenarios.length - 1) { if (visualSession.form === "transfer") { setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setVisualSession({ ...visualSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setVisualSession({ ...visualSession, complete: true }); return; } setVisualSession({ ...visualSession, index: visualSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
-  function acknowledgeVisualPrimary() { if (!visualSession?.complete || !visualEvidence?.confidence) return; setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setVisualSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
+  function acknowledgeVisualPrimary() { if (!visualSession?.complete || !visualEvidence?.confidence) return; blindCameraWellFocusPendingRef.current=true; setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setVisualSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
   function checkVisualExplanation(event) { event.preventDefault(); const result = evaluateVisualExplanation(visualSession.explanationResponse); setVisualSession({ ...visualSession, explanationResult: result }); setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
-  function acknowledgeVisualMastery() { if (!visualSession?.explanationResult?.passed || !visualSession.ownershipConfirmed || !visualEvidence?.confidence) return; focusContinueAfterVisualRef.current = true; setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setVisualSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
+  function acknowledgeVisualMastery() { if (!visualSession?.explanationResult?.passed || !visualSession.ownershipConfirmed || !visualEvidence?.confidence) return; focusContinueAfterVisualRef.current = true; blindCameraWellFocusPendingRef.current=true; setVisualEvidence((previous) => updateVisualEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setVisualSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Visual Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
 
   function openExtractionWorkloads() { setTerminalOpen(true); setRuinsTerminalKind("extraction-workloads"); if (!extractionSession) { const form = extractionEvidence?.masteryStatus === "primary_complete" ? "transfer" : extractionEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setExtractionSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { modality: "", schema: "", missing_value: "", evidence_review: "" }, explanationResult: null, ownershipConfirmed: false }); } }
   function exitExtractionWorkloads() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads practice closed safely. No source media or extracted values are retained.", "system"); }
   function checkExtraction(event) { event.preventDefault(); const scenarios = extractionSession.form === "transfer" ? extractionTransferScenarios : extractionPrimaryScenarios; const scenario = scenarios[extractionSession.index]; const result = evaluateExtractionScenario(scenario.id, extractionSession.response, extractionSession.form); const hintLevel = result.passed ? extractionSession.hintLevel : Math.max(1, extractionSession.hintLevel); setExtractionSession({ ...extractionSession, result, hintLevel }); setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: extractionSession.form, scenarioId: scenario.id, correctness: result.correctness, incrementAttempt: true, hintLevel, misconceptionTags: result.misconceptionTags, masteryStatus: extractionSession.form === "transfer" ? "primary_complete" : result.passed ? "in_progress" : "remediation_required" })); }
   function revealExtractionHint() { const hintLevel = Math.min(3, extractionSession.hintLevel + 1); setExtractionSession({ ...extractionSession, hintLevel }); setExtractionEvidence((previous) => updateExtractionEvidence(previous, { hintLevel })); }
   function advanceExtraction() { if (!extractionSession.result?.passed) return; const scenarios = extractionSession.form === "transfer" ? extractionTransferScenarios : extractionPrimaryScenarios; if (extractionSession.index === scenarios.length - 1) { if (extractionSession.form === "transfer") { setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", masteryStatus: "transfer_complete", clearMisconceptionTags: true })); setExtractionSession({ ...extractionSession, form: "explanation", phase: "explanation", result: null, hintLevel: 0 }); } else setExtractionSession({ ...extractionSession, complete: true }); return; } setExtractionSession({ ...extractionSession, index: extractionSession.index + 1, response: { decision: "", reason: "" }, result: null, hintLevel: 0 }); }
-  function acknowledgeExtractionPrimary() { if (!extractionSession?.complete || !extractionEvidence?.confidence) return; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
+  function acknowledgeExtractionPrimary() { if (!extractionSession?.complete || !extractionEvidence?.confidence) return; blindCameraWellFocusPendingRef.current=true; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "transfer", masteryStatus: "primary_complete", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads primary form complete at 12 of 12. Fresh transfer and closed-note explanation remain.", "teacher"); }
   function checkExtractionExplanation(event) { event.preventDefault(); const result = evaluateExtractionExplanation(extractionSession.explanationResponse); setExtractionSession({ ...extractionSession, explanationResult: result }); setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", scenarioId: "explanation", correctness: result.correctness, incrementAttempt: true, masteryStatus: "transfer_complete" })); }
-  function acknowledgeExtractionMastery() { if (!extractionSession?.explanationResult?.passed || !extractionSession.ownershipConfirmed || !extractionEvidence?.confidence) return; focusContinueAfterExtractionRef.current = true; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
+  function acknowledgeExtractionMastery() { if (!extractionSession?.explanationResult?.passed || !extractionSession.ownershipConfirmed || !extractionEvidence?.confidence) return; focusContinueAfterExtractionRef.current = true; blindCameraWellFocusPendingRef.current=true; setExtractionEvidence((previous) => updateExtractionEvidence(previous, { form: "explanation", masteryStatus: "mastered", clearMisconceptionTags: true })); setExtractionSession(null); setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Extraction Workloads mastery confirmed: both 12-of-12 forms and closed-note explanation are complete.", "teacher"); }
 
   function openPortalOrientation() { setTerminalOpen(true); setRuinsTerminalKind("portal-orientation"); if (!portalSession) { const form = portalEvidence?.masteryStatus === "primary_complete" ? "transfer" : portalEvidence?.masteryStatus === "transfer_complete" ? "explanation" : "primary"; setPortalSession({ form, phase: form === "explanation" ? "explanation" : "scenarios", index: 0, response: { decision: "", reason: "" }, result: null, hintLevel: 0, complete: false, explanationResponse: { scope: "", deployment: "", connection: "", cleanup: "" }, explanationResult: null, ownershipConfirmed: false }); } }
   function exitPortalOrientation() { setTerminalOpen(false); setRuinsTerminalKind(null); setDialogue("Portal Orientation rehearsal closed safely. No login, Azure mutation, identifier, credential, prompt, or response was retained.", "system"); }
@@ -4556,7 +4582,7 @@ export function App() {
 
   return (
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
-    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined} data-flooded-choir-state={scene.id === "ruins" ? floodedChoirState : undefined}>
+    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined} data-flooded-choir-state={scene.id === "ruins" ? floodedChoirState : undefined} data-blind-camera-well-state={scene.id === "ruins" ? blindCameraWellState : undefined}>
       <p className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement>{sceneAnnouncement}</p>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         <div className="scene-world-content" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
@@ -4572,7 +4598,9 @@ export function App() {
         ) : (
           <>
             {scene.id === "ruins" ? (
-              floodedChoirActive ? (
+              blindCameraWellActive ? (
+                <img className="scene-art blind-camera-well-art" src={blindCameraWellImage} alt={BLIND_CAMERA_WELL_COPY.alt} data-blind-camera-well-source={BLIND_CAMERA_WELL_REGISTRY.source.path} />
+              ) : floodedChoirActive ? (
                 <img className="scene-art flooded-choir-art" src={floodedChoirImage} alt={FLOODED_CHOIR_COPY.alt} data-flooded-choir-source={FLOODED_CHOIR_REGISTRY.source.path} />
               ) : severedRelaySpineActive ? (
                 <img className="scene-art severed-relay-spine-art" src={severedRelaySpineImage} alt={SEVERED_RELAY_SPINE_COPY.alt} data-severed-relay-spine-source={SEVERED_RELAY_SPINE_REGISTRY.source.path} />

@@ -2,15 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-010-v1 / NULL-FIRST HOST`**
+Current disposition: **`PRODUCTION CONTENT COMPLETE / FRCA-010-v1 / FIRST PASS SELECTED`**
 
-Exact next owner: **one Quartermaster**
+Exact next owner: **one Image Specialist**
 
-Run the exact private sequential ledger `{H10-1..H10-4}` through the bundled
-CLI. First total technical/physical/derived-responsive PASS stops. Identity-
-delete and prove absence for each rejection. Import at most one passing byte-
-identical raster plus provenance, populate only frozen registry/copy geometry,
-and leave unused calls unused. Do not reveal any candidate.
+Polish and validate runtime code/configuration presentation using the unchanged
+selected raster only. Confirm hierarchy, focus, forced colors, reduced motion,
+six-layout containment, decode fail-close, budgets, and immutable selected
+bytes. Do not generate, edit, replace, vary, reveal, or transform media.
 
 Ledger `{H9-1..H9-5}` is fully consumed. Every call exited `0`; every private
 candidate was rejected for the frozen responsive layout contract, then

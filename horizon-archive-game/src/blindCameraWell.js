@@ -3,30 +3,37 @@ import { sanitizeVisualEvidence } from "./visualWorkloadExercise.js";
 import { deriveResponsiveEvidence, FIRST_RUN_RESPONSIVE_LAYOUTS } from "./responsiveImageProjection.js";
 
 export const BLIND_CAMERA_WELL_PATH = "Visual Direction/Production Masters/2026-08-12-first-run-host10/host10-blind-camera-well-master-v1.png";
-export const BLIND_CAMERA_WELL_SOURCE_URL = null;
+export const BLIND_CAMERA_WELL_SOURCE_URL = BLIND_CAMERA_WELL_PATH;
 
 const emptyRect = Object.freeze({ x: null, y: null, width: null, height: null });
 const emptyRelation = Object.freeze({ ...emptyRect, centerX: null, centerY: null });
 const emptyLayouts = Object.freeze({ desktop: null, laptop: null, narrow: null, effective200: null, retained320x180: null, retained320x240: null });
 
 export const BLIND_CAMERA_WELL_REGISTRY = Object.freeze({
-  source: Object.freeze({ enabled: false, path: null, sha256: null, byteLength: null, width: null, height: null, format: null, color: null, attemptId: null }),
-  hollow: emptyRelation,
-  mounts: Object.freeze([]),
-  fluidRoutes: Object.freeze([]),
-  phaseSurface: emptyRect,
-  dryRing: emptyRect,
-  semanticTarget: emptyRect,
-  labelAnchor: Object.freeze({ ...emptyRect, insetOuterCss: null, insetTextCss: null }),
+  source: Object.freeze({ enabled: true, path: BLIND_CAMERA_WELL_PATH, sha256: "f55a277728a34104e31efc63fc812bcdd2075e71f2ffaa9b61c3df21cc099476", byteLength: 17841639, width: 3840, height: 2160, format: "png", color: "opaque-srgb-8", attemptId: "H10-1" }),
+  hollow: Object.freeze({ x: 430, y: 560, width: 2980, height: 1140, centerX: 1920, centerY: 1130 }),
+  mounts: Object.freeze([Object.freeze({x:650,y:1120,width:210,height:300}),Object.freeze({x:1260,y:850,width:190,height:270}),Object.freeze({x:1930,y:620,width:180,height:260}),Object.freeze({x:2590,y:840,width:190,height:270}),Object.freeze({x:3100,y:1090,width:210,height:300})]),
+  fluidRoutes: Object.freeze([Object.freeze({x:690,y:1320,width:800,height:170}),Object.freeze({x:2350,y:1260,width:850,height:190})]),
+  phaseSurface: Object.freeze({x:1250,y:850,width:1590,height:650}),
+  dryRing: Object.freeze({x:300,y:520,width:3240,height:1350}),
+  semanticTarget: Object.freeze({x:280,y:480,width:3280,height:1400}),
+  labelAnchor: Object.freeze({ x: 310, y: 510, width: 3220, height: 1340, insetOuterCss: 3, insetTextCss: 5 }),
   protected: Object.freeze({ host09: "absent", returnRoute: "absent", crown: "absent", host11: "absent" }),
   layouts: emptyLayouts,
 });
 
-export const BLIND_CAMERA_WELL_PROVENANCE = Object.freeze({ sha256: null, byteLength: null, promptId: null, promptBytes: null, promptSha256: null, cliSha256: null });
+export const BLIND_CAMERA_WELL_PROVENANCE = Object.freeze({ sha256: "f55a277728a34104e31efc63fc812bcdd2075e71f2ffaa9b61c3df21cc099476", byteLength: 17841639, promptId: "HOST10-GEN-PROMPT-H10-1", promptBytes: 1459, promptSha256: "c3ffdbf4626d6fc50ab0e63fbdff7659e5b7746d8dcbff80e2d1134d7bf02537", cliSha256: "c2cdb05244ad9a3dcb8731988790ea6a06a59ab3c062c0f872b35f4ad7d20b05" });
 export const BLIND_CAMERA_WELL_COPY = Object.freeze({
-  name: null, unseen: null, available: null, visualInProgress: null,
-  extractionInProgress: null, missed: null, mastered: null, returned: null,
-  nextBoundary: null, alt: null,
+  name: "Blind Camera Well",
+  unseen: "A shallow optic hollow interrupts the dry ring. Mounts and inert fluid routes hold a blank matte surface below the stone lip.",
+  available: "The dry ring reaches the complete mounted hollow. Its phase surface returns no picture.",
+  visualInProgress: "The blank assembly remains inert while Visual Workloads evidence is in progress.",
+  extractionInProgress: "The same mounted hollow remains available while Extraction Workloads evidence is in progress.",
+  missed: "The surface does not answer. Recheck the mounts, routed inputs, blank phase surface, and dry access.",
+  mastered: "Both workload records are complete. The mounted surface remains blank and unchanged.",
+  returned: "The shallow hollow remains exactly as observed.",
+  nextBoundary: "Continue along the single dry route after both workload records are complete.",
+  alt: "A dry circular stone hollow with dark mounting brackets and inert routed pipes surrounding one large blank matte surface.",
 });
 
 const prompts = Object.freeze({
