@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-011-v1`
+Scoreboard ID: `FRSB-011-v2`
 
-Current release authority: `FRAB-010-v1 / DISTINCT HOST 10 RELEASED`
+Current release authority: `FRAB-011-v1 / DISTINCT HOST 11 RELEASED`
 
 Baseline / lock: `FRPB-001-v9` / `FRCL-011-v1`
 
-Release map: `FRRM-011-v1`
+Release map: `FRRM-011-v2`
 
 Operations source inspected: `243edb4e`
 
@@ -18,11 +18,11 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`.
 
-Selected bounded Work Order: **`FRWO-011-v1 / Wall of Borrowed Light`**.
+Selected bounded Work Order: **none; `FRWO-011-v1` released by `FRAB-011-v1`**.
 
-Host 11 is the earliest missing physical encounter. Fresh private ledger
-`{H11-1..H11-10}` is unstarted; first complete PASS stops. Accepted media and
-maturity remain `21 / 109,046,406` and `FR0` physical at `FR-03`.
+Host 11 is released from H11-1; H11-2..H11-10 are unused. Accepted media is
+`22 / 125,903,080`; `FR-03` remains `FR0` physical with one compression,
+seven exact, and four missing.
 
 Host 09 is released from exact selected attempt `H9-16`. Four fresh authorized
 attempts were unused after the first PASS. Accepted media is now
@@ -112,7 +112,7 @@ complete.
 | `FR-00` Package | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Truthful complete-game launcher/guide independently released; Demo Tour remains separate |
 | `FR-01` Opening | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Final-purpose save/name/prologue/resume and Chapter I reveal independently released |
 | `FR-02` Glass Meadow | `FR2` | `FR2` — 3 exact | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-002-v1` independently releases the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, responsive/accessibility presentation, unchanged route/save/world, and exact `44px` departure |
-| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 6 exact / 5 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-010-v1` independently releases exact Host 10 and its native unchanged dual-lesson entry; the remaining Drowned host collapse stays visible |
+| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 7 exact / 4 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-011-v1` independently releases exact Host 11 and its native unchanged dual-lesson entry; the remaining Drowned host collapse stays visible |
 | `FR-04` Witness Corridor | `FR2` | `FR0` — unadvanced by this Work Order | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Silent, separate, privacy-preserving Terminal correction independently released |
 | `FR-05` City Threshold | `FR0` | `FR0` — 2 missing | `FR2` | `FR1` | `FR0` | `FR3` | `FR4` | Direct credits-free entry remains exact, but the visible `successor packet` / `staging boundary` sentence is an active contradiction; bounded prior release proof remains historical |
 | `FR-06` Civic Record | `FR2` | `FR0` — 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
@@ -152,7 +152,7 @@ complete.
 - `FRWO-003-v1` independently adds one exact physical relationship at `FR-03`
   without promoting the address-level cell above `FR0`; ten Drowned hosts
   remain missing and the accepted shared compression remains visible.
-- The host inventory is now `14 exact / 1 accepted shared compression / 24
+- The host inventory is now `15 exact / 1 accepted shared compression / 23
   missing / 1 unadvanced Witness expression`.
 
 ## Current selected Work Order - maturity unchanged

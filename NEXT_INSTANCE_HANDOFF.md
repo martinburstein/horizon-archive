@@ -2,19 +2,21 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`RUNTIME PRESENTATION COMPLETE / FRPR-011-v1 / IMMUTABLE SELECTED SOURCE`**
+Current disposition: **`FIRST RUN PASS RELEASED / FRAB-011-v1 / DISTINCT HOST 11`**
 
-Exact next owner: **one fresh Intelligence Officer**
+Exact next owner: **one fresh Commandant**
 
-Independently validate exact candidate under `FRSH-011-v1`: selected raster and
-provenance identity, source/measurement/decode guards, owned Portal-then-Prompt
-entry, generic-launcher retirement, focus/recovery, six-layout real-browser
-responsive/forced-color/reduced-motion proof, focused/related/full tests, all
-validators, builds, media/PBA/served identity, clean-start E2E through MH-40,
-cleanup, Git sync, release-map/scoreboard/maturity reconciliation, changelog,
-and synchronized fresh-Commandant handoff. Release only on exact PASS.
+Revalidate the released First Run baseline and choose the exact next bounded
+earliest-first action. No later Work Order, generation, attempt, or media
+authority is implied by this handoff.
 
-H11-1 is selected; H11-2..H11-10 are unused. Do not reveal the encounter name
-or image path to Martin. Never inspect, restore, stage, or use repository QA
-screenshots. Preserve protected user state, OPEN records, hidden lore, RP-012,
-and `successor=null`.
+H11-1 is selected and released. H11-2..H11-10 are unused under first-PASS stop.
+Scratch output/root are absent. Accepted media is `22 / 125,903,080`; physical
+inventory is `15 exact / 1 accepted shared compression / 23 missing / 1
+unadvanced Witness`. Host 12 is earliest remaining missing Drowned encounter,
+but has no authority.
+
+Do not reveal the released encounter name or image path to Martin. Never
+inspect, restore, stage, or use repository QA screenshots. Preserve accepted
+Hosts/media, all OPEN records, protected user state, hidden lore exclusion,
+opaque residual roots, RP-012, and `successor=null`.

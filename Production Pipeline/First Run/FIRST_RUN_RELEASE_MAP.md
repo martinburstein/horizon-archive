@@ -1,8 +1,8 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-011-v1`
+Map ID: `FRRM-011-v2`
 
-Current release authority: `FRAB-010-v1 / DISTINCT HOST 10 RELEASED`
+Current release authority: `FRAB-011-v1 / DISTINCT HOST 11 RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v9` / `FRCL-011-v1`
 
@@ -22,12 +22,11 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`
 
-Selected bounded Work Order: **`FRWO-011-v1 / Wall of Borrowed Light`**.
+Selected bounded Work Order: **none; `FRWO-011-v1` released by `FRAB-011-v1`**.
 
-`FRWO-011-v1` is the earliest-first missing encounter after released Host 10.
-Martin authorizes exactly ten sequential private attempts `{H11-1..H11-10}`;
-first complete PASS stops. Science and Mission gates precede every generation
-call. Accepted media remains `21 / 109,046,406` and maturity is unchanged.
+`FRWO-011-v1` is released from exact first attempt `H11-1`. Nine authorized
+calls are unused. Accepted media is `22 / 125,903,080`; Host 11 owns the
+unchanged native `L05-01 + L05-02` entry. Host 12 remains unauthorized.
 
 `FRWO-009-v8` is released. The first corrected-gate attempt passed technical,
 physical, derived-responsive, and live-browser review; it is integrated at the
@@ -154,7 +153,7 @@ game complete.
 | `FR-00` | Local package and launcher | Truthful local build opens `FR-01` | Product identity; no evidence | Truthful complete-game launcher/guide released by `FRAB-001-v1`; Demo Tour remains separate and unchanged |
 | `FR-01` | Title, Slot 01 setup, display name, prologue, Chapter I reveal | Final-purpose resumable opening reaches `FR-02` | Pilot/Suit ownership from the lock | Final-purpose opening, save v1, resume, and Chapter I reveal released by `FRAB-001-v1` |
 | `FR-02` | Chapter I — Glass Meadow | Existing low-growth/wet phase ridge reaches `FR-03` | Hosts 01-03; `L01-01` through `L01-03` | Hosts 01-03 exact; the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, unchanged route, and affected presentation are released by `FRAB-002-v1` |
-| `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Hosts 05-10 released; one accepted shared compression and six exact hosts exist, while Hosts 11-15 remain missing |
+| `FR-03` | Chapter II — Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Hosts 05-11 released; one accepted shared compression and seven exact hosts exist, while Hosts 12-15 remain missing |
 | `FR-04` | Chapter III — Witness Corridor | Damp heat-carrying channels reach `FR-05` | Host 16; `L05-07` | Silent, separate, privacy-preserving Terminal copy released; physical-host parity was outside the Work Order |
 | `FR-05` | Chapter IV — City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Direct credits-free handoff remains exact; the visible `successor packet` / `staging boundary` sentence is contradictory and two enriched hosts remain missing |
 | `FR-06` | Chapter V — Civic Record District | Heat/material margin reaches `FR-07` | Hosts 19-20; `PY009`, `RAI D1O1` | Compact chapter/learning released; both enriched hosts missing |

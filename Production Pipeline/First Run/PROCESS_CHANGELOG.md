@@ -8,6 +8,17 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-12 - `FRAB-011-v1` - KEEP
+
+- **KEEP:** derived cover-projection acceptance, private original-resolution
+  review, exact identity cleanup, accepted-only import, and first-PASS stop.
+- **KEEP:** the first attempt passed the complete physical and responsive
+  sentence, leaving nine paid calls unused; full route passed in 72.092 seconds
+  with zero runtime errors.
+- **TUNE:** derive served asset-count expectations from the fresh build rather
+  than incrementing frozen literals after inert-source and selected-raster
+  stages.
+
 ### 2026-08-12 - `FRWO-009-v7` - REDESIGN
 
 - **KEEP:** finite paid-attempt ledgers, private review, exact identity cleanup,
