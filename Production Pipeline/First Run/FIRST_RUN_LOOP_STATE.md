@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-NEXT-v1`
+State ID: `FRLS-CMD-001-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **DESIGN / COMMANDANT BASELINE REVALIDATION PENDING**
+Status: **DESIGN / COMMANDANT BASELINE REVALIDATED / COLONEL PENDING**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -25,7 +25,7 @@ current_product_state:
   package: FRAB-013-v1
   commit: 357ad6dc4184b74150173504e86e366c761cdc0e
 target:
-  goal: guarded baseline revalidation, then one earliest missing physical encounter through independent release
+  goal: one earliest missing physical encounter through independent release after guarded planning gates
   selected_address: null
   work_order: null
   shell: null
@@ -59,7 +59,7 @@ observed:
   remaining_missing_physical_encounters_at_current_address: 2
   user_authorized_generation_call_pool: 32
 unknown:
-  - guarded baseline coherence under fresh Commandant inspection
+  - fresh continuity coherence under Colonel inspection
   - exact next encounter selection until planning gates complete
   - Work Order, viability envelope, and shell identity
 ```
@@ -68,7 +68,7 @@ unknown:
 
 ```yaml
 active_mode: DESIGN
-active_owner: commandant
+active_owner: colonel
 information_actions_allowed:
   - inspect current authorities, exact release candidate, runtime, controls, and non-QA evidence
 effect_actions_allowed_before_shell:
@@ -85,8 +85,9 @@ prohibited_before_shell:
 
 ```yaml
 potential:
-  hard_failures: unknown_pending_revalidation
+  hard_failures: 0_observed_at_commandant_gate
   selected_encounter_missing: 1
+  continuity_lock_ready: false
   work_order_ready: false
   shell_ready: false
   production_candidate: null
@@ -104,12 +105,41 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ## Strategy and continuation
 
 ```yaml
-active_strategy_family: guarded_release_baseline_revalidation
+active_strategy_family: sequential_convergent_planning
 rejected_strategy_families: []
-continuation_reason: current handoff explicitly authorizes one fresh Commandant information pass
+continuation_reason: FRPB-001-v12 closes baseline uncertainty and routes the least-powerful sufficient continuity information action to Colonel
 decision: GATHER_EVIDENCE
-next_owner: commandant
+next_owner: colonel
 ```
 
-No further stage may begin until the Commandant writes a validated handoff and
-updates this state without weakening the immutable contract edge.
+## Commandant checkpoint
+
+```yaml
+commandant:
+  baseline: FRPB-001-v12
+  disposition: FIRST RUN VISION BASELINE REVALIDATED
+  product_candidate: 357ad6dc4184b74150173504e86e366c761cdc0e
+  method_control_commit_read: 256f1fc54ef8692b932db1e905de48d21ba32a22
+  delta_vs_best: zero_product_zero_maturity_positive_information
+  verifier_vector:
+    exact_product_paths_vs_release: PASS
+    product_subtree_identity: PASS
+    focused_native_boundary: 6/6 PASS
+    cold_full_suite: 1036/1036 PASS
+    curriculum_readiness: 40/40 PASS
+    production_build: 233_modules_PASS
+    prior_release_holdout: FRAB-013-v1_PASS_not_rerun
+  budget_used:
+    generation_calls: 0
+    product_effect_actions: 0
+  remaining_uncertainty:
+    - Colonel continuity classification
+    - Operations encounter selection and Work Order
+    - Science envelope and Mission shell
+    - future production candidate and independent release proof
+  decision: GATHER_EVIDENCE
+  next_owner: colonel
+```
+
+No later stage may begin until the Colonel writes a validated continuity
+handoff and updates this state without weakening the immutable contract edge.
