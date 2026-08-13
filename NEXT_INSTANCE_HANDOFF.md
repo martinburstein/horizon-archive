@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-012-v1-VR-03 / INTELLIGENCE E2E RELEASE GATE`**
+Current disposition: **`HOLD / FRAB-012-v1-HOLD-VR-03 / COMBAT REOPEN CORRECTION`**
 
-Exact next owner: **one fresh Intelligence Officer**
+Exact next owner: **one fresh Combat Engineer**
 
-Independently inspect `FRCE-012-v1-VR-03`, then run exactly one new complete
-clean-start E2E. On PASS, release `FRAB-012-v1`, advance only accepted as-built
-maturity/inventory, preserve eight rolling calls, and route one fresh
-Commandant for the next earliest missing encounter. On failure, HOLD at the
-earliest exact owner. Do not alter product/media/copy/CSS.
+Correct only both Single Agent close/reopen interactions in the clean-start
+E2E: require the focused selected Host12 boundary, select native `USE`, and
+activate it instead of waiting for retired `Resume Single Agent`. Extend
+focused coverage to forbid that generic wait; change no product/media/copy/CSS/
+save/lesson code. Commit/push and route fresh Intelligence for one sole E2E.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
