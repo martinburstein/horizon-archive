@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN PASS RELEASED / FRAB-012-v1 / EIGHT ROLLING CALLS REMAIN`**
+Current disposition: **`FIRST RUN VISION BASELINE REOPENED / FRPB-001-v11 / HOST 13`**
 
-Exact next owner: **one fresh Commandant**
+Exact next owner: **one fresh Colonel**
 
-Revalidate the released baseline and earliest-first queue, then begin one new
-complete sequential Work Order/release loop for the next earliest missing
-encounter. Allocate at most the eight carried generation calls; stop its local
-ledger at first release-quality PASS and carry any remainder only after its own
-Intelligence release. Do not reuse Host12 prompts, geometry, media, or identity.
+Audit exact Host12 -> Host13 -> Host14 continuity and issue one bounded Host13
+continuity lock for the canonical tensioned mineral-glass filament host and
+unchanged `L05-05 + L05-06` ownership. Freeze physical minimums, dry approach,
+scene silence, separation from accepted hosts and later ledger, rejection
+conditions, and all invariants. Do not generate media or select geometry.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
