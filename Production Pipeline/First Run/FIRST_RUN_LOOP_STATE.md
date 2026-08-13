@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-SCI-003-v1`
+State ID: `FRLS-MSN-003-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **DESIGN / SCIENCE REPRESENTATION READY / MISSION SHELL CORRECTION REQUIRED**
+Status: **OPERATE / FIRST RUN SHELL READY / QUARTERMASTER H14-4-v2 ONE CALL**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -28,7 +28,7 @@ target:
   goal: one earliest missing physical encounter through independent release after guarded planning gates
   selected_address: FR-03 / Host 14
   work_order: FRWO-014-v1
-  shell: FRSH-014-v2
+  shell: FRSH-014-v3
   mission_variance: FRSH-014-v2-VR-01
   science_variance: FRVE-014-v2-VR-01
 ```
@@ -58,7 +58,7 @@ observed:
   current_continuity_lock: FRCL-014-v1
   current_work_order: FRWO-014-v1
   current_viability_envelope: FRVE-014-v2-VR-01
-  current_shell: FRSH-014-v2
+  current_shell: FRSH-014-v3
   current_player_experience_blueprint: FRPX-014-v1
   current_directorial_variance: FRCT-014-v1-VR-01
   current_mission_variance: FRSH-014-v2-VR-01
@@ -93,15 +93,16 @@ unknown:
 ## Action and authority state
 
 ```yaml
-active_mode: DESIGN
-active_owner: mission_captain
+active_mode: OPERATE
+active_owner: quartermaster
 information_actions_allowed:
-  - Mission may inspect the exact Science variance and replacement prompt identity
-  - Mission may reconcile the representation vector, plateau rule, and unchanged shell gates
+  - Quartermaster may perform exact preflight, dry-run, custody self-test, and private candidate review in the frozen order
 effect_actions_allowed:
-  - one versioned Mission shell correction only
+  - exactly one H14-4 call using HOST14_GEN_PROMPT_H14-4-v2.txt and the frozen CLI
+  - append-only ledger/report/state updates and identity-safe cleanup
+  - selected-source import and existing registry/copy/provenance population only after every atomic source gate passes
 prohibited_until_named_owner_and_stage:
-  - generation or external media call before a later Mission FIRST RUN SHELL READY correction
+  - H14-4 retry or any H14-5-plus call
   - source selection/import before private technical/physical/responsive PASS
   - any product change beyond the exact FRPX-014-v1 atomic null-first Combat scope
   - runtime presentation work before Image Specialist
@@ -118,11 +119,11 @@ potential:
   continuity_lock_ready: true
   work_order_ready: true
   source_feasibility_contract_ready: true_FRVE_014_v2_VR_01
-  shell_ready: true_FRSH_014_v2_unaffected_false_for_H14_4_until_mission_correction
+  shell_ready: true_FRSH_014_v3_H14_4_v2_once
   directorial_lock_ready: true
   directorial_representation_replan_ready: true
   mission_representation_routing_ready: true
-  h14_4_call_authorized: false
+  h14_4_call_authorized: true_exactly_once_prompt_v2
   player_experience_blueprint_ready: true
   production_candidate: null_first_FRCE-014-v1_pending_commit
   final_holdout_passed: false
@@ -146,9 +147,9 @@ rejected_strategy_families:
   - continue_prompt_search_under_format24bpprgb_gate
   - substrate_separation_that_resolves_as_human_dam
   - dry_access_waterline_nonhuman_words_that_resolve_as_human_dam
-continuation_reason: Science encoded the new causal mechanism in one exact ASCII/LF prompt and a conjunctive pre-layout representation vector; Mission must independently reconcile that identity before one H14-4 call can exist
-decision: RETURN_TO_OWNER
-next_owner: mission_captain
+continuation_reason: Mission independently verified the exact replacement identity, dry-run, custody self-test, historical portfolio, unchanged gates, and one-observation economics; Quartermaster may now launch H14-4 with prompt revision v2 exactly once
+decision: GATHER_EVIDENCE
+next_owner: quartermaster
 ```
 
 ## Commandant checkpoint
@@ -886,3 +887,59 @@ science_representation_return:
 H14-4 remains unauthorized until Mission issues a versioned `FIRST RUN SHELL
 READY` correction with the exact replacement identity. No generation, source,
 media, product/runtime, maturity, or Image action is authorized by Science.
+
+Mission has now independently reproduced the exact replacement identity,
+ASCII/LF form, generator dry-run with no output, `FRFC-014-v2` opacity
+self-test, historical prompt identities, accepted-manifest integrity, owned-path
+absence, unchanged product, and one-observation economics. `FRSH-014-v3`
+supersedes only the H14-4 prompt identity/strategy, pre-layout representation
+vector, and plateau terms. Every other shell gate remains exact.
+
+## Mission representation-shell checkpoint
+
+```yaml
+mission_representation_shell:
+  shell: FRSH-014-v3
+  disposition: FIRST RUN SHELL READY / ONE H14-4-v2 REPRESENTATION OBSERVATION / QUARTERMASTER NEXT
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    science_return_identity: PASS
+    replacement_prompt_identity_ascii_lf: PASS
+    historical_prompt_portfolio_unchanged: PASS
+    exact_cli_substitution: PASS_DRY_RUN_NO_CALL_NO_OUTPUT
+    frfc_v2_selftest_and_identity: PASS
+    accepted_manifest_and_pba: PASS
+    causal_representation_vector: PASS_FROZEN_CANDIDATE_UNKNOWN
+    every_unaffected_shell_gate: PASS_PRESERVED
+    media_product_runtime_or_maturity_action: NONE
+  delta_vs_best: zero_product_zero_media_zero_maturity_positive_shell_information
+  budget_used:
+    generation_calls: 3_total_cycle_0_mission
+    media_imports: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 29_before_launch
+    initial_tranche_unspent: 5
+    authorized_now: H14-4_v2_once
+    later_ordinals: NONE
+    final_verification_reserve: FULL
+  plateau_policy: >-
+    this shell authorizes one H14-4-v2 observation only; no retry or H14-5+
+    call follows automatically; a later second same-dimension failure in the
+    new family without a new measurable mechanism forces HOLD
+  remaining_uncertainty:
+    - future H14-4 technical and representation compliance
+    - future physical, source-mapping, six-layout, and accessibility proof
+    - future product candidate and independent Intelligence release
+    - human assistive-technology usability study
+  decision: GATHER_EVIDENCE
+  next_owner: quartermaster
+```
+
+Quartermaster may now perform exact synchronized preflight and launch H14-4
+with prompt revision v2 once. H14-5 and later calls remain unauthorized. Image
+Specialist remains unauthorized until one content-complete source is accepted.
