@@ -3,28 +3,39 @@ import { sanitizeVisualPatternEvidence } from "./visualPatternExercise.js";
 import { deriveResponsiveEvidence, FIRST_RUN_RESPONSIVE_LAYOUTS } from "./responsiveImageProjection.js";
 
 export const TIDAL_PATTERN_LOOM_PATH = "Visual Direction/Production Masters/2026-08-13-first-run-host13/host13-tidal-pattern-loom-master-v1.png";
-export const TIDAL_PATTERN_LOOM_SOURCE_URL = null;
+export const TIDAL_PATTERN_LOOM_SOURCE_URL = TIDAL_PATTERN_LOOM_PATH;
 const emptyRect = Object.freeze({ x: null, y: null, width: null, height: null });
 const emptyRelation = Object.freeze({ ...emptyRect, centerX: null, centerY: null });
 const emptyLayouts = Object.freeze({ desktop: null, laptop: null, narrow: null, effective200: null, retained320x180: null, retained320x240: null });
 
 export const TIDAL_PATTERN_LOOM_REGISTRY = Object.freeze({
-  source: Object.freeze({ enabled: false, path: null, sha256: null, byteLength: null, width: null, height: null, format: null, color: null, attemptId: null }),
-  relation: emptyRelation,
-  dryApproach: emptyRect,
-  spans: Object.freeze([]),
-  collarPairs: Object.freeze([]),
-  loadContacts: Object.freeze([]),
-  residue: emptyRect,
-  waterline: emptyRect,
-  semanticTarget: emptyRect,
-  labelAnchor: Object.freeze({ ...emptyRect, insetOuterCss: null, insetTextCss: null }),
+  source: Object.freeze({ enabled: true, path: TIDAL_PATTERN_LOOM_PATH, sha256: "96109e5d3f2f5ede497fbdc5a491940a1dabc2f0e72b7c15f85531a11fddc26d", byteLength: 13516082, width: 3840, height: 2160, format: "png", color: "opaque-srgb-8", attemptId: "H13-1" }),
+  relation: Object.freeze({ x: 920, y: 340, width: 2000, height: 1450, centerX: 1920, centerY: 1065 }),
+  dryApproach: Object.freeze({ x: 760, y: 1380, width: 2300, height: 780 }),
+  spans: Object.freeze([Object.freeze({ x: 1290, y: 520, width: 1280, height: 90, angleDegrees: 0, depthPlane: 1 }), Object.freeze({ x: 1280, y: 760, width: 1300, height: 300, angleDegrees: 12, depthPlane: 2 }), Object.freeze({ x: 1290, y: 1160, width: 1280, height: 300, angleDegrees: -12, depthPlane: 3 })]),
+  collarPairs: Object.freeze([Object.freeze({ start: Object.freeze({ x: 1110, y: 440, width: 260, height: 230 }), end: Object.freeze({ x: 2520, y: 440, width: 260, height: 230 }) }), Object.freeze({ start: Object.freeze({ x: 1110, y: 690, width: 260, height: 230 }), end: Object.freeze({ x: 2530, y: 900, width: 260, height: 230 }) }), Object.freeze({ start: Object.freeze({ x: 1110, y: 1350, width: 260, height: 230 }), end: Object.freeze({ x: 2530, y: 1130, width: 260, height: 230 }) })]),
+  loadContacts: Object.freeze([Object.freeze({ x: 1040, y: 430, width: 390, height: 310 }), Object.freeze({ x: 2460, y: 850, width: 390, height: 330 }), Object.freeze({ x: 1040, y: 1280, width: 390, height: 340 })]),
+  residue: Object.freeze({ x: 980, y: 390, width: 1900, height: 1270 }),
+  waterline: Object.freeze({ x: 0, y: 820, width: 3840, height: 1120 }),
+  semanticTarget: Object.freeze({ x: 850, y: 260, width: 2140, height: 1600 }),
+  labelAnchor: Object.freeze({ x: 880, y: 290, width: 2080, height: 1540, insetOuterCss: 3, insetTextCss: 5 }),
   protected: Object.freeze({ host12: null, returnRoute: null, host14: null, witness: null }),
   layouts: emptyLayouts,
 });
 
-export const TIDAL_PATTERN_LOOM_PROVENANCE = Object.freeze({ sha256: null, byteLength: null, promptId: null, promptBytes: null, promptSha256: null, cliSha256: null });
-export const TIDAL_PATTERN_LOOM_COPY = Object.freeze({ name: "Tidal Pattern Loom", unseen: null, available: null, textSpeechInProgress: null, visualInProgress: null, missed: null, mastered: null, returned: null, nextBoundary: null, alt: null });
+export const TIDAL_PATTERN_LOOM_PROVENANCE = Object.freeze({ sha256: "96109e5d3f2f5ede497fbdc5a491940a1dabc2f0e72b7c15f85531a11fddc26d", byteLength: 13516082, promptId: "HOST13-GEN-PROMPT-H13-1", promptBytes: 1610, promptSha256: "7749b50cc8d9870d2531250c9149165a438dfd6a3bdfb0e40005c27f47f44296", cliSha256: "c2cdb05244ad9a3dcb8731988790ea6a06a59ab3c062c0f872b35f4ad7d20b05" });
+export const TIDAL_PATTERN_LOOM_COPY = Object.freeze({
+  name: "Tidal Pattern Loom",
+  unseen: "Three taut mineral-glass spans cross between weathered paired collars beside the basin waterline.",
+  available: "Different angles and loaded contacts preserve physical strain and repair without forming writing.",
+  textSpeechInProgress: "The same spans remain silent while Text and Speech Patterns evidence is in progress.",
+  visualInProgress: "The collars and residue remain unchanged while Visual Patterns evidence is in progress.",
+  missed: "The field does not answer. Recheck capability direction, operation-specific results, provenance, and authority boundaries.",
+  mastered: "Both records are complete. Wind moves across the same taut spans; nothing replies.",
+  returned: "The same dry approach, collars, loading marks, and waterline remain.",
+  nextBoundary: "Continue along the dry waterline after both records are complete.",
+  alt: "A dry stone approach to three clear mineral-glass spans held taut between paired weathered collars at different angles, with worn load contacts and basin water beyond.",
+});
 
 const prompts = Object.freeze({
   "H13-1": [1610, "7749b50cc8d9870d2531250c9149165a438dfd6a3bdfb0e40005c27f47f44296"],
