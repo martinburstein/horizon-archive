@@ -1,12 +1,12 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-011-v2`
+Scoreboard ID: `FRSB-012-v1`
 
 Current release authority: `FRAB-011-v1 / DISTINCT HOST 11 RELEASED`
 
-Baseline / lock: `FRPB-001-v9` / `FRCL-011-v1`
+Baseline / lock: `FRPB-001-v10` / `FRCL-012-v1`
 
-Release map: `FRRM-011-v2`
+Release map: `FRRM-012-v1`
 
 Operations source inspected: `243edb4e`
 
@@ -18,7 +18,11 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`.
 
-Selected bounded Work Order: **none; `FRWO-011-v1` released by `FRAB-011-v1`**.
+Selected bounded Work Order: **`FRWO-012-v1 / Host 12 distinct encounter`**.
+
+Host 12 is the earliest remaining missing encounter. Up to nine rolling-pool
+calls are planned; zero are consumed. No maturity or media inventory advances
+until independent release.
 
 Host 11 is released from H11-1; H11-2..H11-10 are unused. Accepted media is
 `22 / 125,903,080`; `FR-03` remains `FR0` physical with one compression,

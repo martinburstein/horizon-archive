@@ -1,10 +1,10 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-011-v2`
+Map ID: `FRRM-012-v1`
 
 Current release authority: `FRAB-011-v1 / DISTINCT HOST 11 RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v9` / `FRCL-011-v1`
+Baseline / continuity lock: `FRPB-001-v10` / `FRCL-012-v1`
 
 Operations source inspected: `243edb4e`
 
@@ -22,7 +22,12 @@ Date: **2026-08-12**
 
 Current released Work Order: `FRWO-008-v1 / Severed Relay Spine`
 
-Selected bounded Work Order: **none; `FRWO-011-v1` released by `FRAB-011-v1`**.
+Selected bounded Work Order: **`FRWO-012-v1 / Host 12 distinct encounter`**.
+
+`FRWO-012-v1` allocates up to nine calls from Martin's rolling pool to the
+earliest remaining missing encounter. First complete PASS stops the local
+ledger; unused calls carry only after Intelligence releases this Work Order.
+Accepted media remains `22 / 125,903,080` until as-built acceptance.
 
 `FRWO-011-v1` is released from exact first attempt `H11-1`. Nine authorized
 calls are unused. Accepted media is `22 / 125,903,080`; Host 11 owns the

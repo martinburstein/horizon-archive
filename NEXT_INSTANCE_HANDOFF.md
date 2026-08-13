@@ -2,15 +2,14 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`CONTINUITY LOCK / FRCL-012-v1 / BOUNDED TERMINAL 12`**
+Current disposition: **`WORK ORDER READY / FRWO-012-v1 / ROLLING-POOL TERMINAL 12`**
 
-Exact next owner: **one fresh Operations Planning Major**
+Exact next owner: **one fresh Office of Science Administrator**
 
-Define one integration-sized Work Order for the exact `FRCL-012-v1` physical
-sentence and unchanged `L05-03 + L05-04` ownership. Freeze a sequential local
-ledger from the rolling nine-call pool, first-PASS stop, fresh literal scratch
-and product paths, responsive/accessibility proof, cleanup, rollback, and the
-full validation ladder. Do not generate or begin a later encounter.
+Evaluate `FRWO-012-v1` and answer the complete technical, physical, learning,
+responsive, accessibility, performance, provenance, cleanup, rollback, and QA
+envelope. Freeze an exact prompt set and objective measurement schema for
+`H12-1..H12-9`, or HOLD at the first unproved predicate. Do not generate.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
