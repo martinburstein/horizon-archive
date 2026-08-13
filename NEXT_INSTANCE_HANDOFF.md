@@ -2,15 +2,16 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-012-v1-VR-02 / INTELLIGENCE E2E RELEASE GATE`**
+Current disposition: **`HOLD / FRAB-012-v1-HOLD-VR-02 / COMBAT TRANSFER ENTRY CORRECTION`**
 
-Exact next owner: **one fresh Intelligence Officer**
+Exact next owner: **one fresh Combat Engineer**
 
-Independently inspect Combat variance `FRCE-012-v1-VR-02`, then run exactly one
-new complete clean-start E2E. On exact PASS, release `FRAB-012-v1`, advance
-only accepted as-built maturity/inventory, preserve eight rolling calls, and
-route one fresh Commandant for the next earliest missing encounter. On failure,
-HOLD at the earliest exact owner. Do not alter product/media/copy/CSS.
+Correct only the SDK Route and Single Agent primary-to-transfer entries in the
+clean-start E2E: require the focused selected Host12 boundary, select native
+`USE`, and activate it instead of waiting for either retired generic transfer
+launcher. Add focused coverage for all four owned native activations, change no
+product/media/copy/CSS/save/lesson code, commit/push, and route fresh
+Intelligence for one new sole complete E2E.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
