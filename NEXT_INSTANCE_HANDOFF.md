@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`FIRST RUN VISION BASELINE REOPENED / FRPB-001-v10 / ROLLING NINE-CALL POOL`**
+Current disposition: **`CONTINUITY LOCK / FRCL-012-v1 / BOUNDED TERMINAL 12`**
 
-Exact next owner: **one fresh Colonel**
+Exact next owner: **one fresh Operations Planning Major**
 
-Issue one bounded continuity lock for the earliest missing encounter after the
-released Host 11. Read `FRPB-001-v10`, the complete canonical Terminal 12
-section, the released Host 11 transition, current runtime lesson ownership, and
-the global continuity lock. Do not select geometry, generate media, or begin a
-later encounter.
+Define one integration-sized Work Order for the exact `FRCL-012-v1` physical
+sentence and unchanged `L05-03 + L05-04` ownership. Freeze a sequential local
+ledger from the rolling nine-call pool, first-PASS stop, fresh literal scratch
+and product paths, responsive/accessibility proof, cleanup, rollback, and the
+full validation ladder. Do not generate or begin a later encounter.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
