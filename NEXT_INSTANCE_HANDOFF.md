@@ -2,20 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`HOLD / REQUIRED CORRECTION / FRAB-013-v1-HOLD-VR-01`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-013-v1-VR-02`**
 
-Exact next owner: **one fresh Combat Engineer**
+Exact next owner: **one fresh Intelligence Officer**
 
-Audit the sanctioned E2E's selected native boundary for both owned lessons.
-Correct every initial, transfer, reload, and close/reopen entry that still
-clicks the hotspot without the required active `USE` verb or calls a retired
-generic launcher. Preserve native focus assertions and all product, media,
-copy, CSS, lesson/state/privacy/save/canon/ending behavior. Add or update a
-focused source assertion, run it and the complete cold suite, issue a bounded
-Combat variance report, commit/push/prove sync, then route one fresh
-Intelligence Officer for a new complete external-root E2E and release ladder.
+Independently verify the bounded native-E2E correction, rerun one complete
+clean-start journey in a fresh external QA root, and reconcile all already
+passed release evidence: exact ancestry/selected source/provenance/scratch,
+`1036/1036`, validators `40/40`, builds `233/57/233`, PBA/media/served identity,
+real Edge six-layout/focus/forced-color/reduced-motion, runtime errors, RP-012,
+`successor=null`, cleanup, protected work, and Git sync. On PASS issue
+`FRAB-013-v1`, update release map/scoreboard/changelog/NEXT, commit/push, and
+prove synchronization.
 
 Do not reveal the encounter or image path. Seven rolling calls remain unused
-and unavailable until release. Never inspect, restore, stage, or use repository
+and carry only after release. Never inspect, restore, stage, or use repository
 QA screenshots. Preserve all OPEN records, protected user state, hidden lore,
 opaque residual roots, RP-012, and `successor=null`.
