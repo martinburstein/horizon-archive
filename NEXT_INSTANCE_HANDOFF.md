@@ -2,20 +2,20 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-013-v1-VR-02`**
+Current disposition: **`FIRST RUN PASS RELEASED / FRAB-013-v1 / SEVEN ROLLING CALLS REMAIN`**
 
-Exact next owner: **one fresh Intelligence Officer**
+Exact next owner: **one fresh Commandant**
 
-Independently verify the bounded native-E2E correction, rerun one complete
-clean-start journey in a fresh external QA root, and reconcile all already
-passed release evidence: exact ancestry/selected source/provenance/scratch,
-`1036/1036`, validators `40/40`, builds `233/57/233`, PBA/media/served identity,
-real Edge six-layout/focus/forced-color/reduced-motion, runtime errors, RP-012,
-`successor=null`, cleanup, protected work, and Git sync. On PASS issue
-`FRAB-013-v1`, update release map/scoreboard/changelog/NEXT, commit/push, and
-prove synchronization.
+Perform guarded baseline revalidation from exact release candidate
+`357ad6dc4184b74150173504e86e366c761cdc0e`. If coherent, select only the next
+earliest missing physical encounter and begin one new complete sequential First
+Run loop. Martin's rolling pool contains at most seven generation calls; stop
+that encounter at its first release-quality PASS. No call, media action, or
+later-host selection exists before fresh Commandant/Colonel/Operations/Science/
+Mission gates.
 
-Do not reveal the encounter or image path. Seven rolling calls remain unused
-and carry only after release. Never inspect, restore, stage, or use repository
-QA screenshots. Preserve all OPEN records, protected user state, hidden lore,
-opaque residual roots, RP-012, and `successor=null`.
+Do not reveal released encounter names or image paths to Martin. Never inspect,
+restore, stage, or use repository QA screenshots. Preserve accepted media
+`24 / 154,163,567`, all OPEN records, protected user state, hidden-lore
+exclusion, opaque residual roots, RP-012, equal ending dignity, and
+`successor=null`.

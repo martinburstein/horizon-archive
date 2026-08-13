@@ -8,6 +8,21 @@ accepted candidate or silently broaden a Work Order.
 
 ## Entries
 
+### 2026-08-13 - `FRAB-013-v1` - TUNE
+
+- **KEEP:** rolling finite call pools, first-PASS stop, private review,
+  accepted-only import, exact cleanup, native lesson ownership, and independent
+  full-journey release. The first generation call passed and seven calls remain.
+- **TUNE:** served-identity fixtures must derive or explicitly advance the
+  fresh-build asset count when one accepted source is added. Native-boundary
+  E2E inventory must cover initial, transfer, reload, and close/reopen entries
+  for every lesson owned by that boundary.
+- **TUNE:** release commands must set all three mandatory PBA environment flags
+  explicitly before the sole recorded E2E. The corrected exact invocation
+  passed in `124.793s` with zero runtime errors.
+- **REDESIGN:** not warranted; corrections were test/control-only and changed
+  no product or media bytes.
+
 ### 2026-08-13 - `FRAB-012-v1` - TUNE
 
 - **KEEP:** rolling finite call pools, first-PASS stop, private review,

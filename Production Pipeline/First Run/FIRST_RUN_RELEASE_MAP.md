@@ -1,16 +1,16 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-013-v1`
+Map ID: `FRRM-013-v2`
 
-Current release authority: `FRAB-012-v1 / DISTINCT HOST 12 RELEASED`
+Current release authority: `FRAB-013-v1 / DISTINCT HOST 13 RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v10` / `FRCL-012-v1`
+Baseline / continuity lock: `FRPB-001-v11` / `FRCL-013-v1`
 
-Operations source inspected: `243edb4e`
+Operations source inspected: `9be31071`
 
-Released product candidate: `a2492745`
+Released product candidate: `357ad6dc`
 
-Image product candidate reviewed: `89c06514`
+Image product candidate reviewed: `f8ca1b0f`
 
 Released geometry / transport controls:
 `8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
@@ -20,9 +20,13 @@ Released predecessor: `TD-012 / PASS - AS BUILT RELEASED`
 
 Date: **2026-08-13**
 
-Current released Work Order: `FRWO-012-v1 / Host 12 distinct encounter`
+Current released Work Order: `FRWO-013-v1 / Host 13 distinct encounter`
 
-Selected bounded Work Order: **`FRWO-013-v1 / Host 13 distinct encounter`**.
+Selected bounded Work Order: **none; fresh Commandant verification required**.
+
+`FRWO-013-v1` is released from its exact first attempt. Seven rolling calls
+remain unused for the next earliest missing encounter after a fresh sequential
+loop. Accepted media is `24 / 154,163,567`; no later encounter is selected.
 
 `FRWO-012-v1` is released from exact first attempt H12-1. H12-2..H12-9 are
 unused and carry to the next earliest missing encounter under Martin's rolling
@@ -156,7 +160,7 @@ game complete.
 | `FR-00` | Local package and launcher | Truthful local build opens `FR-01` | Product identity; no evidence | Truthful complete-game launcher/guide released by `FRAB-001-v1`; Demo Tour remains separate and unchanged |
 | `FR-01` | Title, Slot 01 setup, display name, prologue, Chapter I reveal | Final-purpose resumable opening reaches `FR-02` | Pilot/Suit ownership from the lock | Final-purpose opening, save v1, resume, and Chapter I reveal released by `FRAB-001-v1` |
 | `FR-02` | Chapter I â€” Glass Meadow | Existing low-growth/wet phase ridge reaches `FR-03` | Hosts 01-03; `L01-01` through `L01-03` | Hosts 01-03 exact; the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, unchanged route, and affected presentation are released by `FRAB-002-v1` |
-| `FR-03` | Chapter II â€” Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Hosts 05-12 released; one accepted shared compression and eight exact hosts exist, while Hosts 13-15 remain missing |
+| `FR-03` | Chapter II â€” Drowned Archive | Existing dry Crown outflow/service gap reaches `FR-04` | Hosts 04-15; `L02-01` through `L06-03`, `SIM01`, available `SIM03` | No-response copy and exact Hosts 05-13 released; one accepted shared compression and nine exact hosts exist, while Hosts 14-15 remain missing |
 | `FR-04` | Chapter III â€” Witness Corridor | Damp heat-carrying channels reach `FR-05` | Host 16; `L05-07` | Silent, separate, privacy-preserving Terminal copy released; physical-host parity was outside the Work Order |
 | `FR-05` | Chapter IV â€” City Threshold and Chapter III handoff | Already-lit civic bridge reaches `FR-06` | Hosts 17-18; `PY020`, `CUM01` | Direct credits-free handoff remains exact; the visible `successor packet` / `staging boundary` sentence is contradictory and two enriched hosts remain missing |
 | `FR-06` | Chapter V â€” Civic Record District | Heat/material margin reaches `FR-07` | Hosts 19-20; `PY009`, `RAI D1O1` | Compact chapter/learning released; both enriched hosts missing |
@@ -187,7 +191,7 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 13` | Next distinct physical host and its unchanged owned lesson entry | Host 12 is released; Host 13 is earliest missing and requires a fresh sequential Work Order loop |
+| 1 | `FR-03 / Host 14` | Next distinct physical host and its unchanged owned lesson entry | Host 13 is released; Host 14 is earliest missing and requires a fresh sequential Work Order loop |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
 | 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |

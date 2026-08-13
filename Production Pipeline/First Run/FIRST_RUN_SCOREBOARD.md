@@ -1,24 +1,28 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-013-v1`
+Scoreboard ID: `FRSB-013-v2`
 
-Current release authority: `FRAB-012-v1 / DISTINCT HOST 12 RELEASED`
+Current release authority: `FRAB-013-v1 / DISTINCT HOST 13 RELEASED`
 
-Baseline / lock: `FRPB-001-v10` / `FRCL-012-v1`
+Baseline / lock: `FRPB-001-v11` / `FRCL-013-v1`
 
-Release map: `FRRM-013-v1`
+Release map: `FRRM-013-v2`
 
-Operations source inspected: `243edb4e`
+Operations source inspected: `9be31071`
 
-Released product candidate: `a2492745`
+Released product candidate: `357ad6dc`
 
-Image product candidate reviewed: `89c06514`
+Image product candidate reviewed: `f8ca1b0f`
 
 Date: **2026-08-13**
 
-Current released Work Order: `FRWO-012-v1 / Host 12 distinct encounter`.
+Current released Work Order: `FRWO-013-v1 / Host 13 distinct encounter`.
 
-Selected bounded Work Order: **`FRWO-013-v1 / Host 13 distinct encounter`**.
+Selected bounded Work Order: **none; fresh Commandant verification required**.
+
+Host 13 is independently released from the first and sole generation call.
+Seven rolling calls remain unused for the next earliest missing encounter after
+a fresh sequential loop. Accepted media is `24 / 154,163,567`.
 
 Host 12 is independently released from first attempt H12-1. Eight rolling calls
 remain unused for the next earliest missing encounter after a fresh sequential
@@ -116,7 +120,7 @@ complete.
 | `FR-00` Package | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Truthful complete-game launcher/guide independently released; Demo Tour remains separate |
 | `FR-01` Opening | `FR2` | `N/A` | `N/A` | `FR1` | `FR2` | `FR3` | `FR4` | Final-purpose save/name/prologue/resume and Chapter I reveal independently released |
 | `FR-02` Glass Meadow | `FR2` | `FR2` â€” 3 exact | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-002-v1` independently releases the distinct Fracture Nursery, sole optional `L01-03` entry, full chapter turn, responsive/accessibility presentation, unchanged route/save/world, and exact `44px` departure |
-| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 8 exact / 3 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-012-v1` independently releases exact Host 12 and its native unchanged dual-lesson entry; the remaining Drowned host collapse stays visible |
+| `FR-03` Drowned Archive | `FR2` | `FR0` — 1 compressed / 9 exact / 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | `FRAB-013-v1` independently releases exact Host 13 and its native unchanged dual-lesson entry; the remaining Drowned host collapse stays visible |
 | `FR-04` Witness Corridor | `FR2` | `FR0` â€” unadvanced by this Work Order | `FR2` | `FR1` | `FR2` | `FR3` | `FR4` | Silent, separate, privacy-preserving Terminal correction independently released |
 | `FR-05` City Threshold | `FR0` | `FR0` â€” 2 missing | `FR2` | `FR1` | `FR0` | `FR3` | `FR4` | Direct credits-free entry remains exact, but the visible `successor packet` / `staging boundary` sentence is an active contradiction; bounded prior release proof remains historical |
 | `FR-06` Civic Record | `FR2` | `FR0` â€” 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
@@ -156,10 +160,14 @@ complete.
 - `FRWO-003-v1` independently adds one exact physical relationship at `FR-03`
   without promoting the address-level cell above `FR0`; ten Drowned hosts
   remain missing and the accepted shared compression remains visible.
-- The host inventory is now `16 exact / 1 accepted shared compression / 22
+- The host inventory is now `17 exact / 1 accepted shared compression / 21
   missing / 1 unadvanced Witness expression`.
 
-## Current selected Work Order - maturity unchanged
+## Current released Work Order
+
+`FRAB-013-v1` releases Host 13. `FR-03` is now `1 accepted shared compression
+/ 9 exact / 2 missing`; whole-game inventory is `17 exact / 1 accepted shared
+compression / 21 missing / 1 unadvanced Witness expression`.
 
 `FRAB-003-v1` records Host 05 as one exact distinct relationship while leaving
 the address physical-host cell at `FR0` with one accepted compression and ten
