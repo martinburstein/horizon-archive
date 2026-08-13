@@ -2,15 +2,15 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`POLISH VIABILITY READY / FRVE-013-v1 / EIGHT CALLS`**
+Current disposition: **`FIRST RUN SHELL READY / FRSH-013-v1 / EIGHT CALLS`**
 
-Exact next owner: **one fresh Mission Captain**
+Exact next owner: **one fresh Reconnaissance Sergeant**
 
-Issue one conflict-free `FIRST RUN SHELL READY` contract for `FRWO-013-v1` /
-`FRVE-013-v1`: preserve the eight exact prompt identities, bundled CLI,
-sequential first-PASS stop, private candidate custody, actual derived six-layout
-acceptance, native unchanged `L05-05 + L05-06` ownership, budgets, rollback,
-and complete production/release ladder. Run no generation or media inspection.
+Issue one `DIRECTORIAL LOCK` for `FRSH-013-v1`: freeze the dry approach ->
+taut spans -> paired collars -> load/repair contacts -> residue -> waterline
+reading order, restrained natural presentation, compact crop-safe composition,
+silence/nonresponse, and no-symbol/no-performance/no-answer boundary. Run no
+generation or media inspection.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
