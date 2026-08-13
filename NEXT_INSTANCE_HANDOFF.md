@@ -2,16 +2,17 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **`PLAYER EXPERIENCE READY / FRPX-013-v1 / NATIVE HOST 13`**
+Current disposition: **`PRODUCTION FUNCTIONAL / FRCE-013-v1 / EIGHT CALLS`**
 
-Exact next owner: **one fresh Combat Engineer**
+Exact next owner: **one fresh Quartermaster**
 
-Implement `FRPX-013-v1` as one inert null-first fail-closed registry, App
-integration, styles, focused tests, and clean-start E2E assertions. Preserve
-generic behavior while source is disabled; exact enablement retires only the
-two owned launchers. Run focused/related/full tests, 40 validators, production
-and fixture builds, PBA/media, served identities, commit/push the functional
-candidate, and route fresh Quartermaster. Do not generate or inspect media.
+Against exact code candidate `fb547bb64ee6b1f93b1399fe21ea4636e1aa95db`,
+invoke `{H13-1..H13-8}` sequentially with the frozen bundled CLI and prompts.
+Privately identity/technical/physical/derived-layout review each output; reject,
+identity-delete, and prove absence before continuing. First complete PASS stops.
+Import only that byte-identical raster plus provenance, measure and populate all
+registry/copy/layout fields, run focused/build/PBA checks, commit content, and
+route fresh Image Specialist. Do not reveal any candidate or product path.
 
 Martin authorizes the nine previously unused calls as a rolling earliest-first
 pool. One complete sequential Work Order/release loop is required per encounter;
