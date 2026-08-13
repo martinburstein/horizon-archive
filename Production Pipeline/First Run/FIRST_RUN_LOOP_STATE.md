@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-OPS-001-v1`
+State ID: `FRLS-SCI-001-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **DESIGN / WORK ORDER READY / SCIENCE PENDING**
+Status: **DESIGN / POLISH VIABILITY READY / MISSION PENDING**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -54,14 +54,19 @@ observed:
   current_scoreboard: FRSB-014-v1
   current_baseline: FRPB-001-v12
   current_continuity_lock: FRCL-014-v1
+  current_work_order: FRWO-014-v1
+  current_viability_envelope: FRVE-014-v1
   accepted_media_count: 24
   accepted_media_bytes: 154163567
   remaining_missing_physical_encounters_at_current_address: 2
   user_authorized_generation_call_pool: 32
+  selected_host14_source_candidate_exists: false
+  generator_dry_run: PASS_NO_CALL
+  initial_prompt_identities: 8_FROZEN
 unknown:
-  - exact source/generator/transport and physical feasibility
-  - responsive, accessibility, cleanup, PBA, and verifier thresholds
-  - Viability Envelope and shell identity
+  - future source bytes, transport result, and private physical review
+  - future candidate responsive, accessibility, performance, and holdout evidence
+  - shell identity
   - future production candidate and independent release proof
 ```
 
@@ -69,9 +74,9 @@ unknown:
 
 ```yaml
 active_mode: DESIGN
-active_owner: office_of_science_administrator
+active_owner: mission_captain
 information_actions_allowed:
-  - inspect current authorities, exact release candidate, runtime, controls, and non-QA evidence
+  - inspect current authorities, Science envelope, exact release candidate, runtime, controls, and non-QA evidence
 effect_actions_allowed_before_shell:
   - versioned planning and control artifacts only
 prohibited_before_shell:
@@ -90,7 +95,7 @@ potential:
   selected_encounter_missing: 0
   continuity_lock_ready: true
   work_order_ready: true
-  source_feasibility_unknown: true
+  source_feasibility_contract_ready: true
   shell_ready: false
   production_candidate: null
   final_holdout_passed: false
@@ -109,11 +114,11 @@ best_state_policy: preserve FRAB-013-v1 until Intelligence releases a superior e
 ## Strategy and continuation
 
 ```yaml
-active_strategy_family: viability_hardening_for_one_bounded_physical_host
+active_strategy_family: executable_shell_freeze_for_one_bounded_physical_host
 rejected_strategy_families: []
-continuation_reason: FRWO-014-v1 closes ordering and scope uncertainty; Science is the least-powerful sufficient information action because source, transport, verifier, cleanup, and economic feasibility remain unknown
+continuation_reason: FRVE-014-v1 freezes viable source, transport, verifier, cleanup, budget, rollback, and stop contracts; Mission is the next least-powerful sufficient information action because no executable shell exists
 decision: GATHER_EVIDENCE
-next_owner: office_of_science_administrator
+next_owner: mission_captain
 ```
 
 ## Commandant checkpoint
@@ -232,7 +237,50 @@ operations:
   next_owner: office_of_science_administrator
 ```
 
-No later stage may begin until Science answers the exact questions in
-`FRWO-014-v1`, issues one validated viability handoff, and updates this state
-without weakening the immutable contract edge. No generation call, product or
-media action, Mission shell, or maturity advancement exists yet.
+## Science checkpoint
+
+```yaml
+science:
+  viability_envelope: FRVE-014-v1
+  disposition: POLISH VIABILITY READY
+  product_candidate: 357ad6dc4184b74150173504e86e366c761cdc0e
+  current_ref: FRVE-014-v1_planning_state
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    official_source_currency: PASS_MICROSOFT_LEARN_ONLY
+    generator_transport: PASS_DRY_RUN_NO_CALL
+    initial_prompt_portfolio: 8_EXACT_IDENTITIES_PASS
+    resource_and_pba_budgets: FROZEN
+    temp_identity_cleanup_rollback: FROZEN
+    physical_anti_gaming: FROZEN_CANDIDATE_UNKNOWN
+    six_layout_accessibility: FROZEN_CANDIDATE_UNKNOWN
+    null_first_generic_fallback: FROZEN_NOT_IMPLEMENTED
+    state_privacy_save_offline: UNCHANGED_FROZEN
+    final_holdout: NOT_STARTED
+  delta_vs_best: zero_product_zero_maturity_zero_media_positive_information
+  budget_used:
+    generation_calls: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+    cli_dry_runs: 1
+  budget_remaining:
+    generation_calls: 32
+    initial_tranche_after_shell: 8
+    extension_increment: 4
+    maximum_extensions: 6
+    final_verification_reserve: PROTECTED
+  remaining_uncertainty:
+    - future source bytes and transport outcome
+    - candidate pixel-level physical credibility and private review
+    - integrated browser, accessibility, performance, cleanup, and holdout evidence
+    - human assistive-technology usability study
+  decision: GATHER_EVIDENCE
+  next_owner: mission_captain
+```
+
+No later stage may begin until Mission reads `FRVE-014-v1`, freezes every
+executable identity and permitted file, and issues one versioned `FIRST RUN
+SHELL READY`, `REVISE`, or `HOLD`. No generation call, product or media action,
+Reconnaissance work, or maturity advancement exists yet.
