@@ -1,12 +1,12 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-014-v1`
+Map ID: `FRRM-015-v1`
 
 Current release authority: `FRAB-013-v1 / DISTINCT HOST 13 RELEASED`
 
-Baseline / continuity lock: `FRPB-001-v12` / `FRCL-014-v1`
+Baseline / continuity lock: `FRPB-001-v13` / `FRCL-015-v1`
 
-Operations planning authority: `FRWO-014-v1`
+Operations planning authority: `FRWO-015-v1`
 
 Released product candidate: `357ad6dc`
 
@@ -22,15 +22,25 @@ Date: **2026-08-13**
 
 Current released Work Order: `FRWO-013-v1 / Host 13 distinct encounter`
 
-Selected bounded Work Order: **`FRWO-014-v1 / Host 14 distinct encounter`**.
+Selected bounded Work Order: **`FRWO-015-v1 / guide-first material representation at the same earliest missing encounter`**.
 
-`FRWO-014-v1` selects only the earliest fixed post-Host-13 physical-expression
-gap. It preserves the released generic Objective Ledger and Remediation Planner
-path as rollback, leaves Host 15 separate, and advances no maturity. The hard
-rolling pool is thirty-two calls, with only an initial eight-call tranche
-available after Science and Mission freeze a complete shell; four-call
-extensions must be earned by meaningful best-state improvement. First complete
-PASS stops the encounter. No call or product/media action exists at Operations.
+`FRWO-015-v1` selects only the same earliest fixed post-predecessor physical-
+expression gap. It replaces the exhausted prompt-only representation with a
+deterministic structure/material/protection guide, bounded guide-conditioned
+render and reference edits, provenance-bound deterministic normalization,
+private acceptance, atomic import, and runtime proof. The released generic
+lesson path and inert null-first registry remain rollback; the later missing
+encounter remains separate; maturity does not advance. The new `FRM15`
+namespace has a preliminary hard ceiling of two guide families and six total
+stochastic calls, with only three available after Science and Mission freeze a
+complete shell. Two more require measured best-state improvement and one is a
+near-pass local-repair reserve. First complete PASS stops. No guide, call,
+transform, inspection, import, test, or product/media action exists at
+Operations.
+
+`FRWO-014-v1` is closed historical evidence. Its `H14-1..H14-32` namespace,
+four consumed calls, twenty-eight unused calls, prompt files, shells, and
+rejected/deleted candidates do not carry into `FRWO-015-v1`.
 
 `FRWO-013-v1` is released from its exact first attempt. Its prior seven-call
 remainder is historical release evidence, not current authority. Martin's
@@ -201,7 +211,7 @@ game complete.
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 14` | `FRWO-014-v1`: next distinct physical host with unchanged `L06-01 + L06-02` entry | Host 13 is released; Host 14 is earliest missing; Science viability is next and maturity remains unchanged |
+| 1 | `FR-03 / Host 14` | `FRWO-015-v1`: guide-first distinct physical expression with unchanged `L06-01 + L06-02` entry | Host 13 is released; Host 14 is earliest missing; prompt-only work is closed; Science must now prove the new guide/render/edit/transform envelope and maturity remains unchanged |
 | 2 | `FR-03 / Host 15` | Later distinct grounded relationship with its unchanged owned lessons | Explicitly deferred until Host 14 is independently released; it may not be batched into `FRWO-014-v1` |
 | 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
 | 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |

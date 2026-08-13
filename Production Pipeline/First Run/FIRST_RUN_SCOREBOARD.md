@@ -1,14 +1,14 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-014-v1`
+Scoreboard ID: `FRSB-015-v1`
 
 Current release authority: `FRAB-013-v1 / DISTINCT HOST 13 RELEASED`
 
-Baseline / lock: `FRPB-001-v12` / `FRCL-014-v1`
+Baseline / lock: `FRPB-001-v13` / `FRCL-015-v1`
 
-Release map: `FRRM-014-v1`
+Release map: `FRRM-015-v1`
 
-Operations planning authority: `FRWO-014-v1`
+Operations planning authority: `FRWO-015-v1`
 
 Released product candidate: `357ad6dc`
 
@@ -18,14 +18,21 @@ Date: **2026-08-13**
 
 Current released Work Order: `FRWO-013-v1 / Host 13 distinct encounter`.
 
-Selected bounded Work Order: **`FRWO-014-v1 / Host 14 distinct encounter`**.
+Selected bounded Work Order: **`FRWO-015-v1 / guide-first material representation at the same earliest missing encounter`**.
 
 This is planning state only. Physical inventory remains one accepted shared
 compression, nine exact Drowned hosts, and two missing; whole-game inventory
 remains `17 exact / 1 accepted shared compression / 21 missing / 1 unadvanced
-Witness expression`. Current, best, and committed product remain
-`FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e`. Generation calls used by
-Operations are `0 / 32`; the final-proof reserve is protected. Science is next.
+Witness expression`. Current null-first product remains
+`FRCE-014-v1@b4444afefe624ff231d986933a56c2003c0d8ac5`; best and committed product
+remain `FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e`.
+`FRWO-014-v1` and its `H14` ledger are closed: four calls were consumed and
+twenty-eight unused calls are not inherited. `FRWO-015-v1` opens only a new
+planning namespace, `FRM15`, with zero calls or guide/media/product effects at
+Operations. Its preliminary maximum is two guide families and six stochastic
+calls; only three may become available after Science and Mission freeze the
+shell. Accepted media remains `24 / 154,163,567`, final-proof capacity remains
+fully protected, and Science is next.
 
 Host 13 is independently released from the first and sole generation call.
 Its prior seven-call remainder is historical release evidence, not current
