@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-MSN-003-v1`
+State ID: `FRLS-QTR-003-v1`
 
 Control: `FRCV-001-v1`
 
-Status: **OPERATE / FIRST RUN SHELL READY / QUARTERMASTER H14-4-v2 ONE CALL**
+Status: **OPERATE / QUARTERMASTER REVISE / PROCESS CAUSALITY REPLAN REQUIRED**
 
 This compact state is resumable diagnostic control. It does not authorize work;
 `NEXT_INSTANCE_HANDOFF.md` remains the sole exact-next-action authority.
@@ -70,7 +70,7 @@ observed:
   remaining_missing_physical_encounters_at_current_address: 2
   user_authorized_generation_call_pool: 32
   selected_host14_source_candidate_exists: false
-  quartermaster_report: FRCA-014-v2
+  quartermaster_report: FRCA-014-v3
   call_ledger: FRLG-014-v1
   h14_1_launch_consumed: true
   h14_1_technical_disposition: REJECT_FORMAT32BPPARGB_REQUIRES_FORMAT24BPPRGB
@@ -84,8 +84,13 @@ observed:
   replacement_h14_4_prompt: HOST14_GEN_PROMPT_H14-4-v2.txt
   replacement_h14_4_bytes: 3757
   replacement_h14_4_sha256: e5af6294dbefabbaeeb9f71e044d611abb6a1ffafbb9992d9b2987423d462164
+  h14_4_launch_consumed: true
+  h14_4_technical_disposition: PASS_STRICT_TRUECOLOR_FULL_OPACITY
+  h14_4_representation_disposition: FAIL_PROCESS_CAUSALITY_AND_INTERDIGITATION
+  h14_4_cleanup: PASS_EXACT_IDENTITY
 unknown:
-  - future source bytes, transport result, and private physical review
+  - owner classification of prompt noncompliance versus model/representation ceiling
+  - future source bytes and private physical review under a later lawful shell
   - future candidate responsive, accessibility, performance, and holdout evidence
   - future production candidate and independent release proof
 ```
@@ -94,13 +99,11 @@ unknown:
 
 ```yaml
 active_mode: OPERATE
-active_owner: quartermaster
+active_owner: mission_captain_to_reconnaissance_and_science
 information_actions_allowed:
-  - Quartermaster may perform exact preflight, dry-run, custody self-test, and private candidate review in the frozen order
+  - Mission may route the measured representation failure to Reconnaissance and Science for classification
 effect_actions_allowed:
-  - exactly one H14-4 call using HOST14_GEN_PROMPT_H14-4-v2.txt and the frozen CLI
-  - append-only ledger/report/state updates and identity-safe cleanup
-  - selected-source import and existing registry/copy/provenance population only after every atomic source gate passes
+  - append-only owner-classification and versioned control updates only
 prohibited_until_named_owner_and_stage:
   - H14-4 retry or any H14-5-plus call
   - source selection/import before private technical/physical/responsive PASS
@@ -114,7 +117,7 @@ prohibited_until_named_owner_and_stage:
 
 ```yaml
 potential:
-  hard_failures: 2_representation_equivalent_physical_source_rejections
+  hard_failures: 3_source_rejections_latest_at_pre_layout_representation
   selected_encounter_missing: 0
   continuity_lock_ready: true
   work_order_ready: true
@@ -123,15 +126,15 @@ potential:
   directorial_lock_ready: true
   directorial_representation_replan_ready: true
   mission_representation_routing_ready: true
-  h14_4_call_authorized: true_exactly_once_prompt_v2
+  h14_4_call_authorized: false_consumed_no_retry
   player_experience_blueprint_ready: true
   production_candidate: null_first_FRCE-014-v1_pending_commit
   final_holdout_passed: false
 budget:
   generation_calls_authorized: 32
-  generation_calls_used_this_cycle: 3
-  generation_calls_remaining: 29
-  initial_earned_tranche_after_shell: 5
+  generation_calls_used_this_cycle: 4
+  generation_calls_remaining: 28
+  initial_earned_tranche_after_shell: 4
   earned_extension_increment: 4
   concurrent_roles: 1
   role_order: strict_sequential
@@ -147,9 +150,10 @@ rejected_strategy_families:
   - continue_prompt_search_under_format24bpprgb_gate
   - substrate_separation_that_resolves_as_human_dam
   - dry_access_waterline_nonhuman_words_that_resolve_as_human_dam
-continuation_reason: Mission independently verified the exact replacement identity, dry-run, custody self-test, historical portfolio, unchanged gates, and one-observation economics; Quartermaster may now launch H14-4 with prompt revision v2 exactly once
-decision: GATHER_EVIDENCE
-next_owner: quartermaster
+  - low_concave_shelf_that_resolves_as_natural_geology_without_construction_process_causality
+continuation_reason: the one authorized observation removed the former dam and human-hardware anchor but failed seven conjunctive process/interdigitation/trace-reaction dimensions; no retry or later ordinal is authorized and owner classification is required
+decision: RETURN_TO_OWNER
+next_owner: mission_captain_to_reconnaissance_and_science
 ```
 
 ## Commandant checkpoint
@@ -943,3 +947,55 @@ mission_representation_shell:
 Quartermaster may now perform exact synchronized preflight and launch H14-4
 with prompt revision v2 once. H14-5 and later calls remain unauthorized. Image
 Specialist remains unauthorized until one content-complete source is accepted.
+
+## Quartermaster representation-observation checkpoint
+
+```yaml
+quartermaster_representation_observation:
+  report: FRCA-014-v3
+  shell: FRSH-014-v3
+  disposition: REVISE / PROCESS CAUSALITY FAIL / RETURN THROUGH MISSION
+  current_ref: FRCE-014-v1_null_first@b4444afefe624ff231d986933a56c2003c0d8ac5
+  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  action_kind: information
+  verifier_vector:
+    exact_sync_preflight_prompt_and_controls: PASS
+    opacity_selftest_and_exact_cli_dry_run: PASS_NO_CALL_NO_OUTPUT
+    h14_4_transport_and_strict_truecolor_full_opacity: PASS
+    low_shelf_dry_continuity_and_lateral_water: PASS
+    barrier_human_hardware_biology_and_message_negatives: PASS
+    three_visible_construction_processes: FAIL
+    pairwise_process_interdigitation: FAIL
+    one_trace_three_substrate_reactions: FAIL
+    recessed_unequal_branching_service_seams: PASS
+    unchanged_physical_and_adversarial_gate: NOT_EVALUATED_HIGHER_REPRESENTATION_FAIL
+    source_mapping_six_layout_accessibility: NOT_EVALUATED_HIGHER_REPRESENTATION_FAIL
+    import_provenance_registry_copy_product: NOT_STARTED
+    exact_identity_cleanup: PASS
+    final_proof_reserve: FULL
+  delta_vs_best: zero_product_zero_media_zero_maturity_one_call_positive_representation_information
+  budget_used:
+    generation_calls: 4_total_cycle_1_this_stage
+    media_imports: 0
+    product_effect_actions: 0
+    browser_or_e2e: 0
+  budget_remaining:
+    generation_calls: 28
+    initial_tranche_unspent: 4
+    authorized_next_calls: 0
+    final_verification_reserve: FULL
+  remaining_uncertainty:
+    - prompt noncompliance versus model/representation ceiling
+    - a future source that preserves the successful topology while visibly expressing three constructed processes
+    - future physical, mapping, layout, accessibility, product, and release proof
+    - human assistive-technology usability study
+  decision: RETURN_TO_OWNER
+  next_owner: mission_captain_to_reconnaissance_and_science
+```
+
+H14-4 is consumed/rejected/deleted. The result produced measurable progress by
+removing the former barrier and human-hardware anchor, but it replaced alien
+construction causality with natural geology. That measured distinction must be
+classified by the named owners before any later prompt identity or call can
+exist. Image Specialist remains unauthorized.
