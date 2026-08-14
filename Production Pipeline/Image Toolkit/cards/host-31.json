@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-31",
-  "status": "in_progress",
+  "status": "produced_pending_integration",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-31-api-v1.md",
@@ -59,18 +59,33 @@
     "interaction_geometry": null
   },
   "selection": {
-    "status": "in_progress",
-    "selected_attempt": null,
-    "practical_score": null,
-    "hard_gate": "not_evaluated_no_artifact",
-    "attempts_used": 5,
-    "attempts_unused": 15,
+    "status": "done_forced_completion",
+    "selected_attempt": 18,
+    "practical_score": 17,
+    "hard_gate": "forced_completion_compromise",
+    "attempts_used": 20,
+    "attempts_unused": 0,
     "remaining_compromises": [
       "attempt 1 returned no artifact because the API organization had no credits remaining",
       "attempt 2 was technically valid but failed the practical hard gates",
       "attempt 3 established a viable best state but its sealed form remained ambiguous",
       "attempt 4 regressed passing groups and was rejected as an edit source",
-      "attempt 5 scored 15 of 20 but failed categorical relationship gates"
+      "attempt 5 scored 15 of 20 but failed categorical relationship gates",
+      "attempt 6 scored 15 of 20 but omitted the reachable sample relation and retained a dominant core-like structure",
+      "attempt 7 launched but ended without an artifact after exact worker and output reconciliation",
+      "attempt 8 was technically valid and clarified the reachable sample but omitted the cellular mantle, filament contact, and sealed casing",
+      "attempt 9 was the second non-improving casing edit and closed that unmasked strategy family",
+      "attempt 10 used a local mask but still failed to make the sealed casing legible and did not improve the best state",
+      "attempt 11 became the new best after deterministic masked compositing at 16 of 20; only the chair-like open casing remains a hard failure",
+      "attempt 12 remained at 16 of 20 but added a hierarchy ambiguity, so attempt 11 remains best",
+      "attempt 13 regressed to 15 of 20 and closed the whole-object closed-capsule repair family",
+      "attempt 14 sealed the visible cavity but failed two independent adjudications because other hard-gate reads remained inconsistent",
+      "attempt 15 did not improve the best state and closed the cavity-fill strategy family",
+      "attempt 16 scored 16 of 20 but did not improve the targeted mantle read",
+      "attempt 17 regressed to 11 of 20 and closed the mantle-clarification family",
+      "the sealed casing remains more open and visually prominent than ideal",
+      "the cellular mantle retains a somewhat organic-looking porous texture",
+      "the filament contact is readable but subtler than ideal"
     ]
   }
 }
