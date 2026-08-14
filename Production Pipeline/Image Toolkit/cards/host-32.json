@@ -1,0 +1,74 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-32",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-32-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a massive opaque alien casing bypass integrated into an open archaeological landscape",
+    "a richly textured external mineral sheath covering part of the bypass with a conspicuous but fully fused seam",
+    "a small reachable local sample relation whose texture is compatible with the sheath without labels or classification",
+    "a stable dry approach and background continuities leaving toward overlapping shellwork"
+  ],
+  "player_critical_facts": [
+    "the focal subject is an external mineral sheath fused onto an opaque casing bypass, not a removable human-style panel",
+    "the seam never opens and no hatch, gap, detached edge, interior, interior glow, or remove action is implied",
+    "a small reachable local sample relationship supports comparison without labeling, classifying, answering, or revealing the hidden case",
+    "nothing in the scene activates, rewards, responds, or changes because of the viewer, and no text or index is written on the mineral surface"
+  ],
+  "art_direction_preferences": [
+    "the seam initially looks removable through human visual habits but resolves as continuous fused mineral growth",
+    "the sheath is richly textured, tactile, ancient, maintained, and unmistakably nonhuman",
+    "the local sample relationship is secondary and physically compatible rather than presented as a diagram or labeled exhibit",
+    "three visible continuities and distant overlapping shell folds support the transition without exposing an interior"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability and stable dry approach",
+    "external-only evidence with no hidden-case classification",
+    "quiet indifferent operation without player causation"
+  ],
+  "avoid": [
+    "open panel, removable plate, loose hatch, door, handle, hinge, fastener, window, portal, cutaway, transparent shell, visible interior, interior glow, or secret access",
+    "human industrial door, vehicle hatch, ordinary wall panel, control console, reactor, command center, shrine, altar, monument, trophy, or reward pedestal",
+    "text, the word index, numbers, labels, signage, glyphs, UI, HUD, marker, waypoint, diagram, comparison chart, or watermark",
+    "answer, classification, success/failure signal, reward, activation, acknowledgement, tracking, invitation, or world response",
+    "humanoid, hand, suit, robot, vehicle, creature, dominant biology, coral, bone, flesh, roots, vines, organs, or nest"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host32/host32-environment-master-v1.png",
+    "alt_text": "A richly textured mineral sheath lies fused across an opaque casing bypass beside a small compatible sample relation on a dry alien route.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 1,
+    "practical_score": 18,
+    "hard_gate": "pass",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "remaining_compromises": [
+      "background shell folds are subtler than ideal",
+      "weathering and haze are restrained",
+      "secondary seam patterning is slightly repetitive"
+    ]
+  }
+}
