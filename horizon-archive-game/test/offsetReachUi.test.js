@@ -15,7 +15,7 @@ test("TD008 production UI exposes exact longest copy plus released and fail-clos
   assert.match(css, /\.offset-verge\[data-active-group="or20_review"\] \.offset-heading h1\s*\{\s*font-size: clamp\(1\.45rem, 2vw, 2rem\);\s*\}/);
   assert.doesNotMatch(component, /PROVISIONAL STRUCTURAL PLACEHOLDER|offset-world-placeholder/);
   const imports = component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? [];
-  assert.equal(imports.length, 3);
+  assert.equal(imports.length, 4);
   assert.match(component, /sc09-offset-reach-panorama-runtime-master-v4\.webp/);
   assert.doesNotMatch(component, /sc09-offset-reach-panorama-runtime-master-v1\.webp/);
   assert.match(component, /sc09-offset-reach-relation-detail-runtime-master-v1\.webp/);
@@ -23,6 +23,8 @@ test("TD008 production UI exposes exact longest copy plus released and fail-clos
   assert.match(component, /detailAltByCropId/);
   assert.match(component, /data-counterexample-core-state=\{host31State\}/);
   assert.match(component, /data-counterexample-core-source=/);
+  assert.match(component, /data-mineral-index-sheath-state=\{host32State\}/);
+  assert.match(component, /data-mineral-index-sheath-source=/);
   assert.deepEqual([...controller.matchAll(/imageRoles:[\s\S]*?Object\.freeze\(\[([^\]]+)/g)].length, 1);
 });
 
