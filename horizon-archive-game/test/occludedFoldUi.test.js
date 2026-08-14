@@ -21,13 +21,15 @@ test("TD009 verified rollback copy names prior RP-009 bytes or verified absence"
   assert.doesNotMatch(component, /prior RP-008 bytes or verified absence were restored/i);
 });
 
-test("TD009 retires image placeholders into truthful code-native treatment with no runtime media", () => {
+test("TD009 retains truthful code-native fallback behind one fail-closed native master", () => {
   assert.doesNotMatch(component, /structural placeholder|final media seam|not final art/i);
-  assert.equal((component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? []).length, 0);
+  assert.equal((component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? []).length, 1);
   assert.match(controller, /SC-10-OCCLUDED-FOLD-PANORAMA/);
   assert.match(controller, /SC-10-OCCLUDED-FOLD-EXPOSED-EDGE-DETAIL/);
   assert.match(component, /data-rendering-medium="css"/);
   assert.match(component, /data-runtime-image="deferred"/);
+  assert.match(component, /data-edge-configuration-cyst-state=\{host33State\}/);
+  assert.match(component, /data-edge-configuration-cyst-source=/);
   assert.match(component, /Code-native environmental treatment of the SC-10 Occluded Fold/);
   assert.doesNotMatch(css, /occluded-structural-placeholder/);
 });
