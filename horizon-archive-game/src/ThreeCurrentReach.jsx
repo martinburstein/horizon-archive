@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import threeThroatReplicaBloomImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host23/host23-environment-master-v1.png";
+import cappedReturnPrismImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host24/host24-environment-master-v1.png";
 import calibrationMarginImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import threeCurrentReachImage from "../../Visual Direction/Production Masters/2026-07-26-rp004-three-current-runtime-master/sc05-three-current-panorama-runtime-master-v1.webp";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
@@ -8,7 +9,7 @@ import {
   threeCurrentReachActions,
   threeCurrentReachWorldPlateIds,
 } from "./ThreeCurrentReachNormal.js";
-import { THREE_THROAT_REPLICA_BLOOM_COPY, THREE_THROAT_REPLICA_BLOOM_REGISTRY, deriveThreeThroatReplicaBloomState } from "./threeCurrentHosts.js";
+import { CAPPED_RETURN_PRISM_COPY, CAPPED_RETURN_PRISM_REGISTRY, THREE_THROAT_REPLICA_BLOOM_COPY, THREE_THROAT_REPLICA_BLOOM_REGISTRY, deriveCappedReturnPrismState, deriveThreeThroatReplicaBloomState } from "./threeCurrentHosts.js";
 
 const host23Groups = new Set(["tr00_orient", "tr10_relations", "tr20_common_return", "tr30_python_primary", "tr30_python_retrieval", "tr30_python_transfer"]);
 function useDecodedImage(enabled, src) { const [decoded, setDecoded] = useState(null); useEffect(() => { if (!enabled) { setDecoded(null); return undefined; } let connected = true; const image = new Image(); image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight }); image.onerror = () => connected && setDecoded(null); image.src = src; return () => { connected = false; image.onload = null; image.onerror = null; }; }, [enabled, src]); return decoded; }
@@ -226,6 +227,7 @@ export function ThreeCurrentReach({
   const fieldRefs = useRef(new Map());
   const [fields, setFields] = useState({});
   const host23DecodedImage = useDecodedImage(THREE_THROAT_REPLICA_BLOOM_REGISTRY.source.enabled, threeThroatReplicaBloomImage);
+  const host24DecodedImage = useDecodedImage(CAPPED_RETURN_PRISM_REGISTRY.source.enabled, cappedReturnPrismImage);
 
   useLayoutEffect(() => {
     setFields({});
@@ -429,7 +431,9 @@ export function ThreeCurrentReach({
   const worldSceneId = showThreeCurrentReach ? "SC-05" : "SC-04";
   const host23State = deriveThreeThroatReplicaBloomState({ decodedImage: host23DecodedImage });
   const host23NativeActive = showThreeCurrentReach && host23State !== "hidden" && host23Groups.has(state.activeGroup);
-  const selectedWorldImage = host23NativeActive ? threeThroatReplicaBloomImage : worldImage;
+  const host24State = deriveCappedReturnPrismState({ decodedImage: host24DecodedImage });
+  const host24NativeActive = showThreeCurrentReach && host24State !== "hidden" && !host23NativeActive;
+  const selectedWorldImage = host24NativeActive ? cappedReturnPrismImage : host23NativeActive ? threeThroatReplicaBloomImage : worldImage;
   const worldAlt = worldSceneId === "SC-04"
     ? "The restored Calibration Margin remains unchanged at its three-choice navigation boundary"
     : "A vast first-person working reach where suspended matter, cyclic pressure, and conducted heat follow three equally legible handling relations toward an apparent capped return";
@@ -444,6 +448,8 @@ export function ThreeCurrentReach({
         data-active-group={state.activeGroup}
         data-three-throat-replica-bloom-state={host23State}
         data-three-throat-replica-bloom-native-active={host23NativeActive ? "true" : undefined}
+        data-capped-return-prism-state={host24State}
+        data-capped-return-prism-native-active={host24NativeActive ? "true" : undefined}
       >
         <section
           className="city-world three-current-world"
@@ -454,8 +460,9 @@ export function ThreeCurrentReach({
           <img
             className="city-world-plate city-world-plate-native"
             src={selectedWorldImage}
-            alt={host23NativeActive ? THREE_THROAT_REPLICA_BLOOM_COPY.alt : worldAlt}
+            alt={host24NativeActive ? CAPPED_RETURN_PRISM_COPY.alt : host23NativeActive ? THREE_THROAT_REPLICA_BLOOM_COPY.alt : worldAlt}
             data-three-throat-replica-bloom-source={host23NativeActive ? THREE_THROAT_REPLICA_BLOOM_REGISTRY.source.path : undefined}
+            data-capped-return-prism-source={host24NativeActive ? CAPPED_RETURN_PRISM_REGISTRY.source.path : undefined}
           />
         </section>
         <section
