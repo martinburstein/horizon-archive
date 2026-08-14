@@ -1,0 +1,74 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-34",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-34-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a reachable outer-skirt record on immense opaque alien shellwork",
+    "multiple weathered sacrificial skins overlapping across the exposed record",
+    "conductive residue, strain rhythm, repair, and accretion creating several plausible material correspondences without labels or ranking",
+    "an unmatched exposed record and a separate outer margin disappearing beneath inaccessible accretion"
+  ],
+  "player_critical_facts": [
+    "the focal subject is an accessible exterior record built from multiple overlapping sacrificial skins, not a screen, book, sign, interior wall, or inaccessible high face",
+    "physical residue, strain, repair, and accretion support several plausible correspondences without writing, labels, arrows, ranking, or a singled-out answer",
+    "at least one exposed record remains visibly unmatched while an outer margin stays buried and unavailable, preserving uncertainty rather than resolving identity or route",
+    "nothing activates, rewards, responds, acknowledges, or changes because of the viewer, and no prompt, message, code, or interface is literally embedded in the shellwork"
+  ],
+  "art_direction_preferences": [
+    "the sacrificial skins differ in age, wear, conductivity, and repair history while remaining part of one coherent nonhuman exterior",
+    "overlaps form a tactile palimpsest of stewardship rather than a diagram or archive display",
+    "the reachable skirt has a stable dry approach and strong oblique reading angle",
+    "distant folds and the descending outer continuity suggest scale without offering an interior view"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability and stable dry exterior access",
+    "bounded comparison without identity, route, persistence, transformation, or custody claims",
+    "quiet indifferent stewardship without player causation"
+  ],
+  "avoid": [
+    "written palimpsest, manuscript, book, tablet, sign, mural, alphabet, glyphs, labels, arrows, ranking, diagram, chart, code, prompt text, computer screen, UI, HUD, marker, waypoint, watermark, or logo",
+    "door, hatch, portal, window, tunnel, cutaway, transparent shell, visible interior, interior glow, mapped route, or accessible high face",
+    "human factory wall, circuit board, server rack, command console, laboratory display, shrine, altar, monument, trophy, or reward pedestal",
+    "answer, classification, source attribution, success/failure signal, reward, activation, acknowledgement, tracking, invitation, or world response",
+    "humanoid, hand, suit, robot, vehicle, creature, dominant biology, flesh, bone, roots, vines, organs, egg, or nest"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host34/host34-environment-master-v1.png",
+    "alt_text": "Weathered sacrificial skins overlap across a reachable alien shellwork skirt, preserving several physical correspondences while other records remain unmatched or buried.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 1,
+    "practical_score": 19,
+    "hard_gate": "pass",
+    "attempts_used": 3,
+    "attempts_unused": 17,
+    "remaining_compromises": [
+      "some layered edges are more uniform than ideal",
+      "the palette is dark with restrained warm contrast",
+      "background depth cues are subtle"
+    ]
+  }
+}

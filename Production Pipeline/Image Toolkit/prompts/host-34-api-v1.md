@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: private Full HD cinematic game-environment plate
+
+Create a wide, unoccupied first-person view from a stable dry ledge beside the reachable outer skirt of immense opaque alien shellwork. The focal subject is a broad exposed exterior record built from multiple sacrificial skins that overlap, peel only at sealed surface lips, and fuse into later accretions. This is ordinary ancient stewardship made visually extraordinary, not a book, manuscript, sign, screen, archive display, interior wall, high inaccessible face, or literal written palimpsest.
+
+Show at least four broad nonhuman surface skins with visibly different ages and material histories: charcoal ceramic mesh darkened by conductive residue; pale compression lamellae carrying rhythmic strain ripples; rust-gold repair fields crossing older damage; and blue-black mineral accretion partially burying earlier edges. Their overlaps should create several plausible physical correspondences across the record, but no single correspondence is highlighted, ranked, completed, or presented as the answer. Use repeated textures, scars, and edge relationships rather than words, symbols, arrows, or diagrammatic lines.
+
+Keep one smaller exposed patch visibly unmatched by any confident counterpart. Elsewhere, let one outer margin disappear beneath thick fused accretion and the curvature of the skirt so that it is physically buried and unavailable. The image must preserve uncertainty: exterior evidence can support comparison, but it cannot prove identity, an internal route, persistence, transformation, or custody.
+
+The reachable record sits at player height on a dry outer skirt with a clear oblique viewing angle. Distant overlapping folds remain opaque and reveal no interior. One exposed exterior continuity may descend toward a very broad mineral plain in the distance, but no seam, cable, light path, maintenance trail, door, tunnel, or corridor connects an apparent entry to an apparent exit.
+
+Style: premium cinematic photoreal alien archaeology; physically credible mineral-ceramic skins; tactile weathering, conductive residue, repair, strain, and accretion; rigorous nonhuman functional logic; restrained amber-violet maintenance light; blue-black shadows; subtle dust and haze; immense scale; serious, beautiful, melancholy, mysterious; no generic sleek sci-fi, fantasy, cartoon, horror, or combat framing. Clean landscape plate with crop-safe negative space and no baked interface.
+
+Nothing opens, activates, answers, rewards, acknowledges, tracks, invites, or changes because of the viewer. No written palimpsest, manuscript, text, prompt, code, word, number, label, signage, alphabet, glyph, arrow, ranking, diagram, chart, UI, HUD, marker, waypoint, watermark, logo, humanoid, hand, suit, robot, vehicle, creature, flesh, bone, roots, vines, organs, egg, nest, or dominant biology.

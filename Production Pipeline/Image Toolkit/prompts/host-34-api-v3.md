@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: private Full HD cinematic game-environment plate
+
+Create a wide, unoccupied first-person view along a dry mineral terrace at the base of an immense alien shellwork fold. The camera faces a reachable oblique flank where erosion has exposed a finite stewardship zone at player height. Make the zone the unmistakable focal subject: a broad field of many thin, overlapping mineral-ceramic ablation skins, visibly laminated like successive protective surfaces on one ancient engineered exterior. It must read as environmental construction, not a book, manuscript, wall art, armor plates, door, screen, sign, or diagram.
+
+Show older skins continuing underneath newer skins through dozens of irregular but sealed overlap edges. Some edges are worn back to reveal nested cross-sections; others are fused under later deposits. The skins carry four visibly different physical histories: black porous sheets stained by dull conductive residue; pale corrugated sheets compressed into repeating strain waves; oxidized gold repair membranes bridging fractures; and deep blue vitreous accretion flooding across and burying parts of all three. Everything is inert, sealed, and integrated into the outer shell.
+
+Create unresolved visual comparison without labels: separated regions share partial rhythms and material traces, but their patterns never line up into one complete source. Include one small isolated weathered patch that has no visible counterpart anywhere else. Make one whole side of the layered zone disappear beneath a thick blue-black accretion bank and around the shell's curvature, so its original outer margin is plainly buried and physically unreachable.
+
+The dry terrace provides a safe close approach and then continues laterally along the outer skirt. Beyond the focal flank, gigantic opaque shell folds overlap and turn away from view. There is no opening, interior, door, tunnel, cutaway, transparent material, glowing route, stair, cable, corridor, or path through the mass. The scene offers only reachable exterior evidence and refuses a better angle.
+
+Style: premium cinematic photoreal alien archaeology; monumental mineral stratigraphy; extremely tactile layered construction; rigorous nonhuman functional logic; grazing amber-violet light emphasizing sealed laminations, wear, strain, repair, and accretion; blue-black recesses; subtle dust haze; serious, beautiful, melancholy, mysterious; strong 16:9 hierarchy with crop-safe negative space; no sleek sci-fi, fantasy, cartoon, horror, or combat framing.
+
+Nothing opens, activates, answers, rewards, acknowledges, tracks, invites, or changes because of the viewer. No text, prompt, code, word, number, label, signage, alphabet, glyph, arrow, ranking, diagram, chart, screen, UI, HUD, marker, waypoint, watermark, logo, humanoid, hand, suit, robot, vehicle, creature, flesh, bone, roots, vines, organs, egg, nest, or dominant biology.
