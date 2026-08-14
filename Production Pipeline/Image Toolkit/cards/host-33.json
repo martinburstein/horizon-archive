@@ -1,0 +1,70 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-33",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-33-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a vast opaque alien shellwork landscape whose folds hide every direct interior sightline",
+    "a sealed nonbiological bulge integrated into one reachable receiving-face skin",
+    "shallow replica-like edge chambers that terminate at exposed surface features without penetrating the fold",
+    "a long dry external service ledge leading toward related feature families on a reachable outer skirt"
+  ],
+  "player_critical_facts": [
+    "the focal bulge is a sealed artificial exterior morphology integrated into an opaque shell face, not an organism, egg, nest, tumor, building, or vehicle",
+    "all visible chamber-like impressions stop at exposed edge features; there is no opening, door, tunnel, cutaway, transparent surface, or route into the shellwork",
+    "a stable dry exterior ledge and a reachable outer-skirt record support bounded comparison while every apparent interior path remains occluded",
+    "nothing labels, answers, activates, rewards, responds, or changes because of the viewer, and no text or interface is embedded in the scene"
+  ],
+  "art_direction_preferences": [
+    "the bulge reads as pressure-shaped and carefully repaired rather than biological",
+    "replica-like surface chambers recur with compatible but non-identical edge configurations",
+    "mass, curvature, accretion, and depth make the unavailable interior visually convincing",
+    "distant high folds and outer-skirt records suggest immense patient construction without connecting entry to exit"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability and stable dry approach",
+    "external edge evidence only with no cutaway or interior route",
+    "quiet indifferent operation without player causation"
+  ],
+  "avoid": [
+    "open cyst, biological sac, egg, tumor, nest, organ, flesh, membrane, veins, roots, vines, coral, creature, humanoid, hand, suit, robot, or vehicle",
+    "door, hatch, portal, window, tunnel, passage, opening, crack revealing an interior, cutaway, transparent shell, interior glow, stairs into the mass, or mapped through-route",
+    "human bunker, industrial tank, reactor, command center, laboratory pod, shrine, altar, monument, trophy, or reward pedestal",
+    "text, code, configuration screen, numbers, labels, signage, glyphs, UI, HUD, marker, waypoint, diagram, map, watermark, or logo",
+    "answer, classification, success/failure signal, reward, activation, acknowledgement, tracking, invitation, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host33/host33-environment-master-v1.png",
+    "alt_text": "A sealed pressure-shaped bulge and shallow edge chambers lie fused into an immense opaque shellwork face beside a dry exterior service ledge.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 1,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "remaining_compromises": []
+  }
+}
