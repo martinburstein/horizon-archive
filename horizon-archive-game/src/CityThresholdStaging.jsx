@@ -378,7 +378,7 @@ export function CityThresholdStaging({
     }} />;
     return <CityHotspot rect={activeBoardHotspots.forward} label="ENTER CIVIC DISTRICT" onClick={() => {
       setBoard("SC-02-50");
-      setMessage("The reversible route is recorded. The successor packet remains behind the staging boundary.");
+      setMessage("SYSTEM // EXPEDITION STATE: The reversible local route is recorded. The already-lit civic bridge remains available.");
     }} />;
   }
 

@@ -198,6 +198,8 @@ test("the accepted staging banner is absent from the shared renderer without rep
   assert.match(cityComponent, /<h1 ref=\{cityHeadingRef\} tabIndex="-1">City Threshold<\/h1>/);
   assert.match(cityComponent, /maintenance cycles were already operating when the expedition arrived/);
   assert.match(cityComponent, /The bridge is already lit\. A local record is incomplete\./);
+  assert.match(cityComponent, /SYSTEM \/\/ EXPEDITION STATE: The reversible local route is recorded\. The already-lit civic bridge remains available\./);
+  assert.doesNotMatch(cityComponent, /successor packet|staging boundary/i);
   assert.doesNotMatch(cityComponent, /welcome|acknowledg(?:e|ement)|city accepts|identity accepted/i);
   assert.match(cityComponent, /className="city-world"[\s\S]*?inert=\{overlayOpen \? true : undefined\}/);
   assert.match(cityComponent, /className="city-command-panel"[\s\S]*?inert=\{overlayOpen \? true : undefined\}/);
