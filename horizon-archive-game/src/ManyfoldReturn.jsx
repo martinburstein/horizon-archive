@@ -1,4 +1,5 @@
-import { useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import receiverChorusImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host25/host25-environment-master-v1.png";
 import panoramaMaster from "../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-panorama-runtime-master-v1.webp";
 import detailMaster from "../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-detail-runtime-master-v1.webp";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
@@ -7,6 +8,23 @@ import {
   manyfoldReturnObservationIds,
   resolveManyfoldReturnWorldScene,
 } from "./ManyfoldReturnNormal.js";
+import { RECEIVER_CHORUS_COPY, RECEIVER_CHORUS_REGISTRY, deriveReceiverChorusState } from "./manyfoldHosts.js";
+
+const host25Groups = new Set(["mf00_arrive", "mf00_oriented", "mf10_observations", "mf20_python_primary", "mf20_python_trace", "mf20_python_transfer"]);
+
+function useDecodedImage(enabled, src) {
+  const [decoded, setDecoded] = useState(null);
+  useEffect(() => {
+    if (!enabled) { setDecoded(null); return undefined; }
+    let connected = true;
+    const image = new Image();
+    image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight });
+    image.onerror = () => connected && setDecoded(null);
+    image.src = src;
+    return () => { connected = false; image.onload = null; image.onerror = null; };
+  }, [enabled, src]);
+  return decoded;
+}
 
 const headingCopy = Object.freeze({
   mf00_arrive: "Arrive without assigning meaning",
@@ -273,6 +291,7 @@ function ManyfoldForm({ form, onFieldChange }) {
 
 export function ManyfoldReturn({ state, onAction, onFieldChange }) {
   const panelRef = useRef(null);
+  const host25DecodedImage = useDecodedImage(RECEIVER_CHORUS_REGISTRY.source.enabled, receiverChorusImage);
   const worldScene = resolveManyfoldReturnWorldScene(state);
   const worldImage = worldScene?.role === "SC-06-DETAIL-MASTER"
     ? detailMaster
@@ -280,9 +299,18 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
   const worldAlt = worldScene?.role === "SC-06-DETAIL-MASTER"
     ? "Closer invariant view of unequal maintained receiver collars: recurring but nonidentical mineral cuffs, bounded supported differences, three compatible material eras, and one opaque bypassed branch mass"
     : "Immense asymmetric field of unequal low mineral receivers with nonmatching pale contact cuffs, irregular buried conduits, and an upright opaque branch mass bypassed at right";
-  const runtimeSourceMaster = worldScene?.role === "SC-06-DETAIL-MASTER"
+  const host25State = deriveReceiverChorusState({ decodedImage: host25DecodedImage });
+  const host25NativeActive = worldScene?.sceneId === "SC-06" && host25State !== "hidden" && host25Groups.has(state.activeGroup);
+  const selectedWorldImage = host25NativeActive ? receiverChorusImage : worldImage;
+  const selectedWorldAlt = host25NativeActive ? RECEIVER_CHORUS_COPY.alt : worldAlt;
+  const runtimeSourceMaster = host25NativeActive
+    ? "host25-environment-master-v1.png"
+    : worldScene?.role === "SC-06-DETAIL-MASTER"
     ? "sc06-manyfold-return-detail-runtime-master-v1.webp"
     : "sc06-manyfold-return-panorama-runtime-master-v1.webp";
+  const sourceProvenance = host25NativeActive
+    ? "2026-08-14-first-run-host25"
+    : "2026-07-27-rp005-manyfold-return-runtime";
   const recorded = useMemo(() => new Set(state.recordedObservationIds ?? []), [state.recordedObservationIds]);
 
   useLayoutEffect(() => {
@@ -298,6 +326,8 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
         data-shell-version={state.shellVersion}
         data-board-state={state.boardState}
         data-active-group={state.activeGroup}
+        data-receiver-chorus-state={host25State}
+        data-receiver-chorus-native-active={host25NativeActive ? "true" : undefined}
       >
         <figure
           className="three-current-world manyfold-world"
@@ -307,9 +337,13 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
           data-world-crop={worldScene?.cropId}
           data-runtime-source-master={runtimeSourceMaster}
           data-asset-status="PRODUCTION MASTER — IMAGE SPECIALIST ACCEPTED"
-          data-source-provenance="2026-07-27-rp005-manyfold-return-runtime"
+          data-source-provenance={sourceProvenance}
         >
-          <img src={worldImage} alt={worldAlt} />
+          <img
+            src={selectedWorldImage}
+            alt={selectedWorldAlt}
+            data-receiver-chorus-source={host25NativeActive ? RECEIVER_CHORUS_REGISTRY.source.path : undefined}
+          />
           <figcaption>
             Registered invariant SC-06 source. These physical relations remain descriptive and nonjudgmental; the adjacent expedition text carries the exact evidence and limits.
           </figcaption>
