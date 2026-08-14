@@ -8,7 +8,8 @@ import {
   measuredHorizonGateIds,
 } from "./MeasuredHorizonNormal.js";
 import quietOuterMarginImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host39/host39-environment-master-v1.png";
-import { QUIET_OUTER_MARGIN_COPY, QUIET_OUTER_MARGIN_REGISTRY, deriveQuietOuterMarginState } from "./measuredHorizonHosts.js";
+import equalDignityHorizonImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host40/host40-environment-master-v1.png";
+import { EQUAL_DIGNITY_HORIZON_COPY, EQUAL_DIGNITY_HORIZON_REGISTRY, QUIET_OUTER_MARGIN_COPY, QUIET_OUTER_MARGIN_REGISTRY, deriveEqualDignityHorizonState, deriveQuietOuterMarginState } from "./measuredHorizonHosts.js";
 
 const host40Groups = new Set(["mh25_remediation", "mh30_ready", "mh30_not_yet_ready", "mh40_restore_ready", "mh40_restore_not_yet", "mh40_save_confirm", "mh40_save_transaction", "mh40_save_recovery", "mh40_rollback_hold"]);
 function useDecodedImage(enabled, src) { const [decoded, setDecoded] = useState(null); useEffect(() => { if (!enabled) { setDecoded(null); return undefined; } let connected = true; const image = new Image(); image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight }); image.onerror = () => connected && setDecoded(null); image.src = src; return () => { connected = false; image.onload = null; image.onerror = null; }; }, [enabled, src]); return decoded; }
@@ -81,9 +82,12 @@ function SaveConfirmation({ state, onAction }) {
 export function MeasuredHorizon({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
   const host39DecodedImage = useDecodedImage(QUIET_OUTER_MARGIN_REGISTRY.source.enabled, quietOuterMarginImage);
+  const host40DecodedImage = useDecodedImage(EQUAL_DIGNITY_HORIZON_REGISTRY.source.enabled, equalDignityHorizonImage);
   const group = state.activeGroup;
   const host39State = deriveQuietOuterMarginState({ decodedImage: host39DecodedImage });
   const host39NativeActive = host39State !== "hidden" && !host40Groups.has(group);
+  const host40State = deriveEqualDignityHorizonState({ decodedImage: host40DecodedImage });
+  const host40NativeActive = host40State !== "hidden" && host40Groups.has(group);
   const renderedHeadingId = group === "mh40_save_confirm"
     ? "mh40-save-confirm-shell-heading"
     : group === "mh40_save_recovery"
@@ -110,9 +114,9 @@ export function MeasuredHorizon({ state, onAction, onFieldChange }) {
       data-shell-version={state.shellVersion} data-controller-version={state.controllerVersion}
       data-active-group={group} data-owner={state.owner} data-phase={state.phase}
       data-fixture-contract-version="td012.fixture-manifest.v1" aria-labelledby={renderedHeadingId}>
-      <figure className="measured-horizon-world" role={host39NativeActive ? undefined : "img"} data-rendering-medium={host39NativeActive ? "production-master" : "css"} data-runtime-image={host39NativeActive ? "host39-environment-master-v1.png" : "not-selected"} data-quiet-outer-margin-state={host39State} data-quiet-outer-margin-native-active={host39NativeActive ? "true" : undefined}
-        aria-label={host39NativeActive ? undefined : "Unfamiliar mineral laminae continue across an indifferent horizon. A calm expedition datum folio overlays the view without changing, measuring, or interpreting the world."}>
-        {host39NativeActive ? <img className="measured-horizon-native-scene" src={quietOuterMarginImage} alt={QUIET_OUTER_MARGIN_COPY.alt} data-quiet-outer-margin-source={QUIET_OUTER_MARGIN_REGISTRY.source.path} /> : <><span className="mh-lamina mh-lamina-a" /><span className="mh-lamina mh-lamina-b" /><span className="mh-lamina mh-lamina-c" /></>}
+      <figure className="measured-horizon-world" role={host39NativeActive || host40NativeActive ? undefined : "img"} data-rendering-medium={host39NativeActive || host40NativeActive ? "production-master" : "css"} data-runtime-image={host40NativeActive ? "host40-environment-master-v1.png" : host39NativeActive ? "host39-environment-master-v1.png" : "not-selected"} data-quiet-outer-margin-state={host39State} data-quiet-outer-margin-native-active={host39NativeActive ? "true" : undefined} data-equal-dignity-horizon-state={host40State} data-equal-dignity-horizon-native-active={host40NativeActive ? "true" : undefined}
+        aria-label={host39NativeActive || host40NativeActive ? undefined : "Unfamiliar mineral laminae continue across an indifferent horizon. A calm expedition datum folio overlays the view without changing, measuring, or interpreting the world."}>
+        {host40NativeActive ? <img className="measured-horizon-native-scene" src={equalDignityHorizonImage} alt={EQUAL_DIGNITY_HORIZON_COPY.alt} data-equal-dignity-horizon-source={EQUAL_DIGNITY_HORIZON_REGISTRY.source.path} /> : host39NativeActive ? <img className="measured-horizon-native-scene" src={quietOuterMarginImage} alt={QUIET_OUTER_MARGIN_COPY.alt} data-quiet-outer-margin-source={QUIET_OUTER_MARGIN_REGISTRY.source.path} /> : <><span className="mh-lamina mh-lamina-a" /><span className="mh-lamina mh-lamina-b" /><span className="mh-lamina mh-lamina-c" /></>}
         <figcaption>The same SC-12 laminae remain unchanged. The expedition supplies the review standard; the world supplies no verdict.</figcaption>
       </figure>
       <section className="measured-horizon-folio">
