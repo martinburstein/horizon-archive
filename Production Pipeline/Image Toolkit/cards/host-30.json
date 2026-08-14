@@ -1,0 +1,75 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-30",
+  "status": "blocked_no_artifact",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-30-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a dark exterior mineral cavity located on the bypass of a fully closed junction",
+    "ordinary separate apertures admitting ambient light from two distinct material continuities",
+    "two separate material-edge silhouettes projected into the cavity without revealing the junction interior",
+    "a reachable low alien coupling sampling only the projections",
+    "both material continuities leaving separately through a broad working cut along a safe shared margin"
+  ],
+  "player_critical_facts": [
+    "the host is a dark exterior projection cavity on the bypass of an opaque closed junction, not a confirmed camera, eye, portal, or interior view",
+    "ambient exterior light enters through ordinary separate openings and casts two distinct material-edge silhouettes into the cavity",
+    "the reachable coupling samples only those projected edges and cannot see, infer, or expose the hidden junction interior",
+    "the projection changes only with ambient light; nothing activates, answers, rewards, acknowledges, tracks, or changes because of the viewer",
+    "both material continuities remain separate and leave the bypass through a broad working cut beside a safe onward margin"
+  ],
+  "art_direction_preferences": [
+    "the cavity is initially easy to mistake for shadowed repair space before its projections become legible",
+    "the two projected edges remain visibly different without becoming characters or symbolic icons",
+    "the coupling feels like quiet material-sampling infrastructure rather than photographic equipment",
+    "ambient light feels natural to the vault rather than a spotlight, beam weapon, or puzzle cue",
+    "the scene is tactile, restrained, mysterious, beautiful, and nonbiological"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "stable dry access and a safe shared onward margin",
+    "opaque junction and ambient-only invariant operation"
+  ],
+  "avoid": [
+    "camera body, photographic camera, lens, shutter, aperture dial, tripod, film, projector, cinema screen, security camera, surveillance, telescope, microscope, webcam, or recording device",
+    "eye, iris, pupil, face, skull, mouth, creature, organ, plant, coral, mushroom, flower, or biological anatomy",
+    "open junction, visible interior, x-ray view, cutaway reveal, window, portal, hidden core, secret access, disabled reward, or invitation",
+    "literal photograph, memory playback, recorded scene, hologram, message, answer, unity symbol, common cause, shared memory, or inferred hidden object",
+    "text, numbers, signage, glyphs, UI, HUD, marker, waypoint, beacon, watermark, humanoid, vehicle, guard, robot, activation, tracking, acknowledgement, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host30/host30-environment-master-v1.png",
+    "alt_text": "Ambient light through two ordinary openings casts separate material-edge silhouettes into a dark exterior cavity where a low alien coupling samples only the projections.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "blocked_no_artifact",
+    "selected_attempt": null,
+    "practical_score": null,
+    "hard_gate": "not_evaluated_no_artifact",
+    "attempts_used": 20,
+    "attempts_unused": 0,
+    "remaining_compromises": [
+      "no decodable candidate was returned by any launched request"
+    ]
+  }
+}
