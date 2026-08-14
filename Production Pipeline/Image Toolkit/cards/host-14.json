@@ -1,10 +1,11 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-14",
-  "status": "ready",
+  "status": "produced_pending_integration",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-14-api-v2.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
   "target": {
     "width": 1920,
     "height": 1080,
@@ -14,8 +15,10 @@
     "background": "000000"
   },
   "generation_budget": {
-    "concepts": 3,
-    "targeted_edits": 2,
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
     "concurrency": 1
   },
   "must_show": [
@@ -24,6 +27,20 @@
     "one irregular physical trace crossing all three histories and reacting differently in each",
     "branching recessed service voids",
     "receded water kept laterally away from the dry route"
+  ],
+  "player_critical_facts": [
+    "dry basin with a safely approachable constructed feature integrated with or recessed into the ground",
+    "visibly nonhuman layered construction rather than a dominant dam, road, building, ordinary geology, or organism",
+    "multiple distinct material histories overlap enough to read as one manufactured artifact",
+    "physical age and recessed structure support investigation",
+    "no text, message, glow, reward, character, or world-response cue"
+  ],
+  "art_direction_preferences": [
+    "charcoal, ivory, and oxidized-red material vocabulary",
+    "multiple pairwise interlocks",
+    "one cross-material wear relation with differentiated reactions",
+    "branching angular recessed voids",
+    "strong asymmetry and lateral-water context"
   ],
   "must_preserve": [
     "first-person environmental scale",
@@ -37,8 +54,19 @@
     "writing, glyphs, UI, characters, glow, reward, answer, or watermark"
   ],
   "integration": {
-    "product_path": null,
-    "alt_text": null,
+    "product_path": "Visual Direction/Production Masters/2026-08-13-first-run-host14/host14-environment-master-v1.png",
+    "alt_text": "A shallow, weathered alien construction lies embedded in a drained basin, its dark frame interlocked with pale ceramic forms and oxidized red layers.",
     "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 25,
+    "practical_score": 16,
+    "hard_gate": "pass",
+    "remaining_compromises": [
+      "red lamellar discontinuity is subtler than ideal",
+      "the red-material wear reaction is not independently prominent",
+      "the dry approach is readable but understated"
+    ]
   }
 }

@@ -25,9 +25,12 @@ REQUIRED_CARD_FIELDS = {
     "use_case",
     "asset_type",
     "prompt_file",
+    "evaluation_rubric",
     "target",
     "generation_budget",
     "must_show",
+    "player_critical_facts",
+    "art_direction_preferences",
     "must_preserve",
     "avoid",
     "integration",
@@ -163,11 +166,17 @@ def check_card(card_path: Path) -> dict[str, Any]:
     if not isinstance(target.get("width"), int) or not isinstance(target.get("height"), int) or target.get("width", 0) <= 0 or target.get("height", 0) <= 0:
         errors.append("invalid target dimensions")
     budget = card.get("generation_budget", {})
-    if any(not isinstance(budget.get(key), int) or budget.get(key, 0) < 0 for key in ("concepts", "targeted_edits", "concurrency")):
+    budget_keys = ("max_attempts", "concepts", "targeted_edits", "max_non_improving_edits_per_family", "concurrency")
+    if any(not isinstance(budget.get(key), int) or budget.get(key, 0) < 0 for key in budget_keys):
         errors.append("invalid generation budget")
+    elif budget.get("max_attempts") != 20:
+        errors.append("max_attempts must be 20")
     prompt = card_path.parent.parent / str(card.get("prompt_file", ""))
     if not prompt.is_file():
         errors.append("prompt file missing")
+    rubric = card_path.parent.parent / str(card.get("evaluation_rubric", ""))
+    if not rubric.is_file():
+        errors.append("evaluation rubric missing")
     return {
         "pass": not errors,
         "asset_id": card.get("asset_id"),

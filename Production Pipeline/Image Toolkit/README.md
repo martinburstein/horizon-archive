@@ -21,21 +21,32 @@ integration and release verification.
    with `image_toolkit.py`, record one receipt, and integrate only the accepted
    final asset.
 
+Candidate selection is governed by `PRACTICAL_PRODUCTION_RUBRIC.md`. It uses a
+small set of genuine hard failures plus a 20-point production score. A score of
+`14+` with no hard failure is a practical pass; the workflow does not demand a
+perfect literal rendering of every prompt detail.
+
 That is the whole creative loop. Do not build a new agent pipeline, guide
 schema, custody graph, restoration ceremony, or bespoke verifier for an
 ordinary image.
 
 ## Default budget
 
-- concepts: up to `3` API calls;
-- targeted edits: up to `2` API calls;
+- hard total: up to `20` API generation/edit attempts per image;
+- initial concepts: use only as many as needed to establish a viable family;
+- targeted edits: at most `2` non-improving edits per strategy family;
 - concurrent calls: `1`;
 - first acceptable result stops the asset;
 - after two edits that do not improve the selected concept, stop and revise the
-  art direction instead of adding more calls.
+  art direction instead of adding another equivalent call;
+- if no normal pass exists after attempt `20`, select the best technically
+  valid, non-contradictory candidate and mark creative production `DONE`;
+- never launch attempt `21` for the same image.
 
-These are per-asset defaults, not a prepaid pool and not a requirement to use
-every call. A user instruction can lower or raise them.
+This is a per-image ceiling, not a requirement to use every call. The selected
+image is the best candidate observed during the run, not necessarily the final
+ordinal. Runtime integration and release remain separate from the creative
+`DONE` decision.
 
 ## What is retained
 
@@ -65,18 +76,31 @@ assets and are never the only location of an accepted project image.
 
 ## Selection checklist
 
-Select by visual judgment, not by a large synthetic score:
+Start with the hard gates in `PRACTICAL_PRODUCTION_RUBRIC.md`, then score the
+candidate as a complete player-facing image:
 
-- the required subject and physical relationships read immediately;
-- composition survives the intended wide and narrow crops;
-- no required fact depends on text, glow, UI, or an invented world response;
-- no accidental human infrastructure, modern object, watermark, or stray text;
-- the image is distinct from accepted neighboring assets;
-- the intended interaction region remains legible at small size.
+- immediate scene read;
+- composition and runtime usability;
+- art direction and world fit;
+- physical/story support; and
+- finish and production quality.
+
+Only technical invalidity, primary-subject failure, a meaning-changing
+contradiction, or actual product unusability is an automatic rejection. Exact
+counts, microscopic material relationships, ideal weathering, and hypothetical
+crop weaknesses are preferences unless the asset card explicitly identifies
+them as player-critical.
 
 If the concept is wrong at the silhouette or scene level, generate another
 concept. If it is right except for one local issue, edit it. Do not use local
 edits to rescue a fundamentally wrong composition.
+
+The first candidate scoring `14+` without a hard failure stops generation.
+For a `14–16` result, one optional single-variable edit is allowed only when its
+expected benefit exceeds regression risk; otherwise select the passing best.
+If no candidate scores `14+`, attempt 20 forces selection of the best valid,
+non-contradictory candidate. Document its compromise and stop; do not generate
+attempt 21.
 
 ## Normalize and inspect
 

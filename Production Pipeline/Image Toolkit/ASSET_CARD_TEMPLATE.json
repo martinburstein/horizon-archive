@@ -5,20 +5,25 @@
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/replace-me-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
   "target": {
-    "width": 3840,
-    "height": 2160,
+    "width": 1920,
+    "height": 1080,
     "format": "PNG",
     "mode": "RGB",
     "fit": "cover",
     "background": "000000"
   },
   "generation_budget": {
-    "concepts": 3,
-    "targeted_edits": 2,
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
     "concurrency": 1
   },
   "must_show": [],
+  "player_critical_facts": [],
+  "art_direction_preferences": [],
   "must_preserve": [],
   "avoid": [
     "text",
@@ -30,4 +35,3 @@
     "interaction_geometry": null
   }
 }
-
