@@ -1,0 +1,73 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-18",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-18-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "exhaust_budget": true
+  },
+  "must_show": [
+    "a wall-scale moving relationship made by existing civic light crossing steam and an angled mineral membrane",
+    "an off-axis service throat physically integrated at the edge of the light-steam relationship",
+    "an already-lit rightward civic bridge remaining available as the clear onward route",
+    "periodic ambient clearing that reads as an old operating cycle rather than a triggered presentation",
+    "an immense warm alien city depth whose maintenance and heat circulation continue independently"
+  ],
+  "player_critical_facts": [
+    "the wall-scale effect is abstract light, steam, and mineral shadow with no image, writing, performance, or audience-facing interface",
+    "the actual contact is a small grounded off-axis service throat at the phenomenon's edge, not a projector, screen, terminal, or identity reader",
+    "the clearing, lighting, vapor, and maintenance cycle visibly predate the player's arrival and do not react to observation or success",
+    "the already-lit rightward civic bridge remains the continuous open physical route",
+    "no Builder-space marker, acknowledgement, welcome, refusal, reward, answer, tracking, or world response appears"
+  ],
+  "art_direction_preferences": [
+    "wall-scale moving shadow and refraction feel spectacular without becoming representational imagery",
+    "the small service throat is easy to overlook beside the civic-scale phenomenon",
+    "pale old foundation masses and restrained amber-violet repair light remain materially distinct",
+    "geothermal steam periodically clears through a plausible ambient circulation cycle",
+    "the mood is awe, solitude, and persistence rather than abandonment, hostility, or welcome"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe on-foot access and an already-open rightward route",
+    "city operation without player causation"
+  ],
+  "avoid": [
+    "projected picture, recognizable symbol, writing, signage, glyphs, performance stage, audience seating, cinema, theater interior, screen, or UI",
+    "lights switching on, curtains opening, machinery turning toward the player, greeting, refusal, alarm, tracking, acknowledgement, reward, or answer",
+    "human city, palace, cathedral, factory, station, conventional road, conventional bridge, projector, camera, console, keyboard, identity scanner, or checkpoint",
+    "humanoid residents, crowds, vehicles, guards, robots, creatures, faces, eyes, or biological forms",
+    "map marker, waypoint, spotlight, beacon, portal, watermark, baked textbox, or HUD"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host18/host18-environment-master-v1.png",
+    "alt_text": "Abstract civic light crosses steam and an angled mineral membrane beside a small service throat and an already-lit onward bridge.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 14,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 16,
+    "attempts_unused": 4,
+    "remaining_compromises": []
+  }
+}

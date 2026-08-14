@@ -1,0 +1,16 @@
+Use case: stylized-concept
+Asset type: private Full HD cinematic game-environment plate
+
+Create a wide first-person environmental view within an immense warm alien habitation vault that was already operating before the viewer arrived. Existing bridge and crown light cross geothermal steam and an angled translucent mineral membrane, producing a wall-scale moving relationship of shadow, refraction, haze, and layered illumination. The effect is spectacular but wholly abstract: it carries no picture, writing, glyph, figure, narrative scene, performance, or audience-facing interface.
+
+Periodic clearing belongs to the ambient heat-and-vapor cycle. Steam thins, light geometry shifts across the fixed membrane, and vapor returns without acknowledging the viewer. Nothing switches on, opens, aims, brightens, performs, or resolves because it is watched. Pale old foundation masses remain distinct beneath later restrained amber-violet repair and exchange fabric. Small distant maintenance forms, if present, remain low abstract process elements continuing established routes without becoming characters.
+
+At the edge of the wall-scale phenomenon sits the actual reachable contact: a small off-axis nonhuman service throat integrated into ordinary heat-return material. It is grounded beside a safe dry walking margin and easy to overlook. It is not the source of the light spectacle, not a projector, not a screen, not a terminal, and not an identity-bearing aperture. It has no face, lens aimed at the viewer, controls, keyboard, signage, greeting, refusal, or command posture.
+
+An already-lit rightward civic bridge remains the clear continuous onward route through the vault. It was lit before arrival and stays physically open. No marker appears in the world, no maintenance form looks up, and the city gives no response. Environmental circulation may remain open while identity-bearing access elsewhere remains closed, but no closed identity device should dominate the composition or look unlockable.
+
+Composition: cinematic 16:9 first-person view, wall-scale abstract light-steam-mineral relationship as the main environmental spectacle, small off-axis service throat readable at its edge along a dry near-field margin, immense inhabited civic depth beyond, and an already-lit rightward bridge providing unmistakable onward continuity. Preserve crop-safe hierarchy, useful negative space, and safe pedestrian access.
+
+Style: premium photoreal tactile alien environmental concept art, rigorous nonhuman civic logic, blue-black structural mineral, pale old foundation masses, restrained amber-violet repair light, volumetric geothermal steam, physically credible refraction and shadow, immense scale, quiet persistence, beauty without welcome, ancient continuity without dystopia.
+
+No projected image, recognizable icon, writing, signage, glyphs, stage, audience, cinema, theater interior, screen, UI, HUD, map marker, waypoint, spotlight, beacon, portal, watermark, human architecture, factory, station, road, conventional bridge, projector, camera, console, keyboard, identity scanner, security checkpoint, humanoid, crowd, vehicle, guard, robot, creature, face, eye, biological form, activation, greeting, refusal, alarm, tracking, acknowledgement, reward, answer, or world response.
