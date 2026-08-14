@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-39",
-  "status": "produced_pending_integration",
+  "status": "integration_candidate",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-39-api-v1.md",
@@ -33,6 +33,6 @@
     "baked interface, flight recorder, screen, window frame, hologram, text, code, score, answer, word, number, label, signage, glyph, UI, HUD, marker, waypoint, diagram, map, watermark, or logo",
     "humanoid, hand, suit, robot, vehicle, creature, flesh, bone, roots, vines, organs, egg, nest, or dominant biology"
   ],
-  "integration": {"product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host39/host39-environment-master-v1.png", "alt_text": "Pressure-bent membranes, porous mineral foam, residue seams, and dense anchors continue beneath an unchanged quiet horizon at the outer margin.", "interaction_geometry": null},
+  "integration": {"product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host39/host39-environment-master-v1.png", "alt_text": "Pressure-bent membranes, porous mineral foam, residue seams, and dense anchors continue beneath an unchanged quiet horizon at the outer margin.", "interaction_geometry": "horizon-archive-game/src/measuredHorizonHosts.js#QUIET_OUTER_MARGIN_REGISTRY", "runtime_source": "horizon-archive-game/src/MeasuredHorizon.jsx", "candidate_status": "focused_pass_pending_aggregate_release"},
   "selection": {"status": "done_practical_rubric", "selected_attempt": 1, "practical_score": 18, "hard_gate": "pass", "attempts_used": 1, "attempts_unused": 19, "remaining_compromises": ["some independent environmental-process cues are subtle", "the deliberately restrained horizon reduces overt alien spectacle"]}
 }
