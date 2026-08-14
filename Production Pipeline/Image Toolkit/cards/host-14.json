@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-14",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-14-api-v2.md",
@@ -58,7 +58,7 @@
     "alt_text": "A shallow, weathered alien construction lies embedded in a drained basin, its dark frame interlocked with pale ceramic forms and oxidized red layers.",
     "interaction_geometry": "horizon-archive-game/src/waterlineLedger.js#WATERLINE_LEDGER_REGISTRY",
     "runtime_source": "horizon-archive-game/src/App.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

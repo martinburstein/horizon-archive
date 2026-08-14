@@ -1,16 +1,16 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-015-v1`
+Map ID: `FRRM-016-v1`
 
-Current release authority: `FRAB-013-v1 / DISTINCT HOST 13 RELEASED`
+Current release authority: `FRAB-014-v1 / ALL 27 RUNTIME IMAGE MASTERS RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v13` / `FRCL-015-v1`
 
-Operations planning authority: `FRWO-015-v1`
+Runtime integration authority: `FRSH-016-v1 / HA-RI-001 COMPLETE`
 
-Released product candidate: `357ad6dc`
+Released product candidate: `7b781abd`
 
-Image product candidate reviewed: `f8ca1b0f`
+Image product candidate reviewed: `7b781abd`
 
 Released geometry / transport controls:
 `8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
@@ -18,29 +18,22 @@ Released geometry / transport controls:
 
 Released predecessor: `TD-012 / PASS - AS BUILT RELEASED`
 
-Date: **2026-08-13**
+Date: **2026-08-14**
 
-Current released Work Order: `FRWO-013-v1 / Host 13 distinct encounter`
+Current released Work Order: `FRSH-016-v1 / Hosts 14-40 runtime image integration`
 
-Selected bounded Work Order: **`FRWO-015-v1 / guide-first material representation at the same earliest missing encounter`**.
+Released bounded Work Order: **`FRSH-016-v1 / integrate the 27 privately produced Host 14-40 masters`**.
 
-`FRWO-015-v1` selects only the same earliest fixed post-predecessor physical-
-expression gap. It replaces the exhausted prompt-only representation with a
-deterministic structure/material/protection guide, bounded guide-conditioned
-render and reference edits, provenance-bound deterministic normalization,
-private acceptance, atomic import, and runtime proof. The released generic
-lesson path and inert null-first registry remain rollback; the later missing
-encounter remains separate; maturity does not advance. The new `FRM15`
-namespace has a preliminary hard ceiling of two guide families and six total
-stochastic calls, with only three available after Science and Mission freeze a
-complete shell. Two more require measured best-state improvement and one is a
-near-pass local-repair reserve. First complete PASS stops. No guide, call,
-transform, inspection, import, test, or product/media action exists at
-Operations.
+`FRAB-014-v1` releases exact product candidate `7b781abd`. All 27 queued
+masters are integrated without route, lesson, save, privacy, world-response,
+ending, or successor changes. Aggregate identity, serialized full-suite,
+validator, build, served-identity, accessibility, and complete clean-start E2E
+proof pass. The image queue is `0 queued / 0 candidate / 27 released`; there is
+no remaining runtime-image integration action.
 
-`FRWO-014-v1` is closed historical evidence. Its `H14-1..H14-32` namespace,
-four consumed calls, twenty-eight unused calls, prompt files, shells, and
-rejected/deleted candidates do not carry into `FRWO-015-v1`.
+`FRWO-014-v1` and `FRWO-015-v1` remain closed historical production evidence.
+Their prompt, guide, call-budget, and rejected-candidate controls grant no new
+generation, editing, or integration authority.
 
 `FRWO-013-v1` is released from its exact first attempt. Its prior seven-call
 remainder is historical release evidence, not current authority. Martin's
@@ -175,7 +168,7 @@ game complete.
 
 ## Address model
 
-| Address | Player-facing surface | Required exit / next address | Content ownership | Current material distance |
+| Address | Player-facing surface | Required exit / next address | Content ownership | Historical material distance before `FRAB-014-v1` |
 | --- | --- | --- | --- | --- |
 | `FR-00` | Local package and launcher | Truthful local build opens `FR-01` | Product identity; no evidence | Truthful complete-game launcher/guide released by `FRAB-001-v1`; Demo Tour remains separate and unchanged |
 | `FR-01` | Title, Slot 01 setup, display name, prologue, Chapter I reveal | Final-purpose resumable opening reaches `FR-02` | Pilot/Suit ownership from the lock | Final-purpose opening, save v1, resume, and Chapter I reveal released by `FRAB-001-v1` |
@@ -195,6 +188,16 @@ game complete.
 | `FR-15` | Chapter XIV â€” Unborrowed Reach | Existing outer margin reaches `FR-16` | Hosts 37-38; `PY019`, `D2O4` | Compact chapter/learning released; both enriched hosts missing |
 | `FR-16` | Chapter XV â€” Measured Horizon | MH-40, exact remediation/review, or authorized return; no successor | Hosts 39-40; cumulative Python/readiness | Functional ending exact; final literary close not released runtime content |
 
+### Current runtime-image release overlay
+
+| Address range | Released physical expression | Remaining runtime-image work |
+| --- | --- | --- |
+| `FR-03` | Hosts 14-15 exact; Drowned inventory is one accepted shared compression plus eleven exact hosts | None |
+| `FR-04` | Host 16 exact | None |
+| `FR-05` | Hosts 17-18 exact; direct route behavior unchanged | None; the separate visible `successor packet` / `staging boundary` sentence remains outside this image release |
+| `FR-06` through `FR-15` | Hosts 19-38 exact | None |
+| `FR-16` | Hosts 39-40 exact; equal-dignity ending presentation and `successor=null` proven | None |
+
 ## Fixed route and checkpoint rules
 
 - The only forward order is `FR-00 -> FR-01 -> ... -> FR-16`.
@@ -207,17 +210,12 @@ game complete.
 - READY and NOT YET READY converge on the same `FR-16` horizon. Reviews and
   returns do not create `FR-17`.
 
-## Earliest-first queue
+## Runtime image integration queue
 
 | Order | Address | Candidate outcome | Ordering basis |
 | ---: | --- | --- | --- |
-| 1 | `FR-03 / Host 14` | `FRWO-015-v1`: guide-first distinct physical expression with unchanged `L06-01 + L06-02` entry | Host 13 is released; Host 14 is earliest missing; prompt-only work is closed; Science must now prove the new guide/render/edit/transform envelope and maturity remains unchanged |
-| 2 | `FR-03 / Host 15` | Later distinct grounded relationship with its unchanged owned lessons | Explicitly deferred until Host 14 is independently released; it may not be batched into `FRWO-014-v1` |
-| 3 | `FR-04` | Verify or complete the Witness Spine as one distinct physical host | Continuity is accepted, but the physical-host cell remains unadvanced |
-| 4 | `FR-05` | Remove the contradictory `successor packet` / `staging boundary` sentence, then address hosts 17-18 in bounded order | Active contradiction remains separate and later than `FR-03`/`FR-04`; direct route behavior itself is exact |
-| 5 | `FR-06` through `FR-15` | One location-sized host-expression pass at a time | Continue in route order; never batch all later hosts into a kiosk conversion |
-| 6 | `FR-16` | Final-purpose Measured Horizon literary close | Ending behavior is exact; final content follows earlier journey expression unless a dependency is proven |
-| 7 | Whole game | Completion sweep | Permitted only after every critical surface is independently `FR4 RELEASED` |
+| 1 | `FR-03` through `FR-16 / Hosts 14-40` | `FRAB-014-v1`: all 27 queued runtime masters released | Complete: exact image identity, source law, interaction, responsive/accessibility presentation, build, served identity, and clean-start E2E all pass |
+| 2 | Whole game | Runtime image queue | Complete: `0 queued / 0 candidate / 27 released`; no image integration action remains |
 
 ## Held fifth Work Order boundary decision
 

@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-28",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-28-api-v1.md",
@@ -61,7 +61,7 @@
     "alt_text": "An alien pressure-relief manifold uses differently oriented cavities to sustain a physical cadence along an exterior detour without forming speech or response.",
     "interaction_geometry": "horizon-archive-game/src/intervalHosts.js#PRESSURE_LANGUAGE_ORGAN_REGISTRY",
     "runtime_source": "horizon-archive-game/src/IntervalWorks.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

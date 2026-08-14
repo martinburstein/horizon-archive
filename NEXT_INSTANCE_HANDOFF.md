@@ -2,23 +2,21 @@
 
 Workflow: `FIRST_RUN_AGENT_WORKFLOW.md`
 
-Current disposition: **FIRST RUN SHELL READY / RUNTIME IMAGE INTEGRATION ACTIVE**
+Current disposition: **RUNTIME IMAGE INTEGRATION RELEASED / NO IMAGE QUEUE WORK PENDING**
 
-Authority: Martin's 2026-08-14 runtime-integration instruction.
+Control: `HA-RI-001-v1` / `FRSH-016-v1` / `FRAB-014-v1`
 
-Control: `HA-RI-001-v1` / `FRSH-016-v1`
+All 27 private Full HD masters for Hosts 14 through 40 are integrated and
+marked `integrated_released`. The exact product candidate is `7b781abd`.
 
-Hosts 14 through 40 are exact integration candidates. The paired Host 39/40
-Measured Horizon boundary passed focused source, provenance, selector, decode,
-fallback, presentation, and equal-outcome ownership checks `10/10`, build `275` modules, and
-byte-identical emitted media.
+Final release evidence passes: serialized full suite, exact validators `40/40`,
+production build `275` modules, emitted binary identities `52/52`, zero source
+maps, TD010 and TD011 served identity, and the complete clean-start browser
+journey in `78.555` seconds with zero runtime errors and equal READY / NOT YET
+READY Measured Horizon outcomes.
 
-Exact next action: run the single reserved aggregate release cascade over all
-27 candidates: cold full suite, exact validators, production/served identity,
-browser E2E, and independent presentation/release review. Reconcile the queue
-to `integrated_released` only after every gate passes.
+Exact next action: none. Do not restart image generation, image integration,
+First Run role automation, or a recurring production loop without Martin's
+new explicit instruction and a new bounded shell.
 
-The generation queue is complete. No generation/edit call, reveal, new queue
-entry, route/lesson/save/ending change, broad repeated test cascade, or
-recurring automation is authorized. The final aggregate validation reserve is
-protected.
+No image was revealed, edited, regenerated, or overwritten during integration.

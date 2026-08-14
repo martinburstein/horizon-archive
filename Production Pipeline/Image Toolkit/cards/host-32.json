@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-32",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-32-api-v1.md",
@@ -58,7 +58,7 @@
     "alt_text": "A richly textured mineral sheath lies fused across an opaque casing bypass beside a small compatible sample relation on a dry alien route.",
     "interaction_geometry": "horizon-archive-game/src/offsetHosts.js#MINERAL_INDEX_SHEATH_REGISTRY",
     "runtime_source": "horizon-archive-game/src/OffsetReach.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

@@ -1,38 +1,31 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-015-v1`
+Scoreboard ID: `FRSB-016-v1`
 
-Current release authority: `FRAB-013-v1 / DISTINCT HOST 13 RELEASED`
+Current release authority: `FRAB-014-v1 / ALL 27 RUNTIME IMAGE MASTERS RELEASED`
 
 Baseline / lock: `FRPB-001-v13` / `FRCL-015-v1`
 
-Release map: `FRRM-015-v1`
+Release map: `FRRM-016-v1`
 
-Operations planning authority: `FRWO-015-v1`
+Runtime integration authority: `FRSH-016-v1 / HA-RI-001 COMPLETE`
 
-Released product candidate: `357ad6dc`
+Released product candidate: `7b781abd`
 
-Image product candidate reviewed: `f8ca1b0f`
+Image product candidate reviewed: `7b781abd`
 
-Date: **2026-08-13**
+Date: **2026-08-14**
 
-Current released Work Order: `FRWO-013-v1 / Host 13 distinct encounter`.
+Current released Work Order: `FRSH-016-v1 / Hosts 14-40 runtime image integration`.
 
-Selected bounded Work Order: **`FRWO-015-v1 / guide-first material representation at the same earliest missing encounter`**.
+Released bounded Work Order: **`FRSH-016-v1 / integrate the 27 privately produced Host 14-40 masters`**.
 
-This is planning state only. Physical inventory remains one accepted shared
-compression, nine exact Drowned hosts, and two missing; whole-game inventory
-remains `17 exact / 1 accepted shared compression / 21 missing / 1 unadvanced
-Witness expression`. Current null-first product remains
-`FRCE-014-v1@b4444afefe624ff231d986933a56c2003c0d8ac5`; best and committed product
-remain `FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e`.
-`FRWO-014-v1` and its `H14` ledger are closed: four calls were consumed and
-twenty-eight unused calls are not inherited. `FRWO-015-v1` opens only a new
-planning namespace, `FRM15`, with zero calls or guide/media/product effects at
-Operations. Its preliminary maximum is two guide families and six stochastic
-calls; only three may become available after Science and Mission freeze the
-shell. Accepted media remains `24 / 154,163,567`, final-proof capacity remains
-fully protected, and Science is next.
+`FRAB-014-v1` releases exact candidate `7b781abd`. All 27 queued masters are
+integrated and reconciled to their cards, receipts, hashes, and exact Full HD
+RGB PNG identities. Whole-game physical inventory is now `39 exact / 1
+accepted shared compression / 0 missing / 0 unadvanced`. The queue is `0
+queued / 0 candidate / 27 released`; no image generation, editing, or runtime-
+integration work remains authorized.
 
 Host 13 is independently released from the first and sole generation call.
 Its prior seven-call remainder is historical release evidence, not current
@@ -129,7 +122,7 @@ set and invariant radius at `FR-00` through initial `FR-05`. A bounded `FR4`
 does not promote a lower dimension cell or declare the whole address/game
 complete.
 
-## Current maturity by journey surface
+## Historical maturity before `FRAB-014-v1`
 
 | Address | Continuity | Physical host expression | Learning | Behavior / save / recovery | Final-purpose content | Presentation | First Run release proof | Evidence note |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -150,6 +143,16 @@ complete.
 | `FR-14` Counterfield | `FR2` | `FR0` â€” 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
 | `FR-15` Unborrowed Reach | `FR2` | `FR0` â€” 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
 | `FR-16` Measured Horizon | `FR2` | `FR2` â€” hosts 39-40 exact | `FR2` | `FR1` | `FR1` | `FR3` | `FR0` | Exact functional ending; final literary close remains outside runtime |
+
+## Current `FRAB-014-v1` image-release overlay
+
+| Address range | Physical expression | Runtime image release proof |
+| --- | --- | --- |
+| `FR-03` | `FR4` — one accepted shared compression / eleven exact | Hosts 14-15 native presentation, ownership, responsive, and accessibility proof pass |
+| `FR-04` | `FR4` — Host 16 exact | Silent privacy-preserving Terminal behavior retained |
+| `FR-05` | `FR4` — Hosts 17-18 exact | Pointer ownership and neighboring-target non-overlap pass; separate visible copy contradiction remains outside image scope |
+| `FR-06` through `FR-15` | `FR4` — Hosts 19-38 exact | All twenty masters released with route, lesson, and save boundaries unchanged |
+| `FR-16` | `FR4` — Hosts 39-40 exact | Equal-dignity ending outcomes and `successor=null` pass |
 
 ## Program totals and controls
 
@@ -176,19 +179,15 @@ complete.
 - `FRWO-003-v1` independently adds one exact physical relationship at `FR-03`
   without promoting the address-level cell above `FR0`; ten Drowned hosts
   remain missing and the accepted shared compression remains visible.
-- The host inventory is now `17 exact / 1 accepted shared compression / 21
-  missing / 1 unadvanced Witness expression`.
+- The host inventory is now `39 exact / 1 accepted shared compression / 0
+  missing / 0 unadvanced`.
 
 ## Current released Work Order
 
-`FRWO-014-v1` is the current bounded planning selection, not a release. It
-owns only Host 14 physical expression and unchanged `L06-01 + L06-02` native
-entry, with the generic launcher path retained as rollback and Host 15
-deferred. No maturity or inventory cell advances from this selection.
-
-`FRAB-013-v1` releases Host 13. `FR-03` is now `1 accepted shared compression
-/ 9 exact / 2 missing`; whole-game inventory is `17 exact / 1 accepted shared
-compression / 21 missing / 1 unadvanced Witness expression`.
+`FRAB-014-v1` releases all 27 queued Host 14-40 runtime masters at exact
+candidate `7b781abd`. `FR-03` is now `1 accepted shared compression / 11 exact`;
+whole-game inventory is `39 exact / 1 accepted shared compression / 0 missing
+/ 0 unadvanced`. The runtime image queue is complete and has no next action.
 
 `FRAB-003-v1` records Host 05 as one exact distinct relationship while leaving
 the address physical-host cell at `FR0` with one accepted compression and ten

@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-21",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-21-api-v1.md",
@@ -61,7 +61,7 @@
     "alt_text": "Two corresponding alien process bands retain one bounded difference beneath a later laminate stitch, beside an exterior bypass around an opaque route.",
     "interaction_geometry": "horizon-archive-game/src/calibrationMarginHosts.js#FORKED_LOGIC_STITCH_REGISTRY",
     "runtime_source": "horizon-archive-game/src/CalibrationMarginEntry.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-16",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-16-api-v1.md",
@@ -61,7 +61,7 @@
     "alt_text": "A silent fallen alien assembly rests on the right of a damp corridor while a separate three-aperture coupling stands beside the open route on the left.",
     "interaction_geometry": "horizon-archive-game/src/witnessSpine.js#WITNESS_SPINE_REGISTRY",
     "runtime_source": "horizon-archive-game/src/App.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

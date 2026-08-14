@@ -1,13 +1,27 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-38",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-38-api-v2.md",
   "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
-  "target": {"width": 1920, "height": 1080, "format": "PNG", "mode": "RGB", "fit": "cover", "background": "000000"},
-  "generation_budget": {"max_attempts": 20, "concepts": 6, "targeted_edits": 14, "max_non_improving_edits_per_family": 2, "concurrency": 1, "stop_on_first_practical_pass": true},
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
   "must_show": [
     "a maintained alien bypass crossing an older scar beside a fully opaque unavailable outer margin",
     "multiple radial sample sleeves arranged around a reachable local exterior host on the bypass",
@@ -26,7 +40,12 @@
     "the local host is legible as functional exterior infrastructure rather than repair ornament",
     "dense folded anchors and old accretion make the unavailable margin physically convincing"
   ],
-  "must_preserve": ["first-person environmental scale", "wide crop readability and stable bypass approach", "local capability boundaries without inferred access or hidden whole", "quiet indifferent operation without player causation"],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability and stable bypass approach",
+    "local capability boundaries without inferred access or hidden whole",
+    "quiet indifferent operation without player causation"
+  ],
   "avoid": [
     "flower, bloom, petals made of flesh, plant, coral, fungus, anemone, mouth, teeth, eye, egg, nest, organ, creature, humanoid, hand, suit, robot, or vehicle",
     "portal, doorway, tunnel, passage, socket inviting insertion, gun barrel, missile pod, turbine, fan, antenna, radar, telescope, camera, open margin, cutaway, transparent body, or visible interior",
@@ -34,6 +53,22 @@
     "text, code, capability chart, answer matrix, word, number, label, signage, glyph, UI, HUD, marker, waypoint, diagram, map, watermark, or logo",
     "answer, external result, success/failure signal, reward, activation, acknowledgement, tracking, invitation, or world response"
   ],
-  "integration": {"product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host38/host38-environment-master-v1.png", "alt_text": "Radial mineral sample sleeves terminate locally on a maintained bypass beside a dense opaque alien margin that remains closed and unavailable.", "interaction_geometry": "horizon-archive-game/src/unborrowedHosts.js#RADIAL_SAMPLE_SLEEVES_REGISTRY", "runtime_source": "horizon-archive-game/src/UnborrowedReach.jsx", "candidate_status": "focused_pass_pending_aggregate_release"},
-  "selection": {"status": "done_practical_rubric", "selected_attempt": 2, "practical_score": 19, "hard_gate": "pass", "attempts_used": 2, "attempts_unused": 18, "remaining_compromises": ["the older exterior scar remains somewhat subtle"]}
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host38/host38-environment-master-v1.png",
+    "alt_text": "Radial mineral sample sleeves terminate locally on a maintained bypass beside a dense opaque alien margin that remains closed and unavailable.",
+    "interaction_geometry": "horizon-archive-game/src/unborrowedHosts.js#RADIAL_SAMPLE_SLEEVES_REGISTRY",
+    "runtime_source": "horizon-archive-game/src/UnborrowedReach.jsx",
+    "candidate_status": "released"
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 2,
+    "practical_score": 19,
+    "hard_gate": "pass",
+    "attempts_used": 2,
+    "attempts_unused": 18,
+    "remaining_compromises": [
+      "the older exterior scar remains somewhat subtle"
+    ]
+  }
 }

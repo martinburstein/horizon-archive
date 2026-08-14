@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-25",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-25-api-v1.md",
@@ -61,7 +61,7 @@
     "alt_text": "Unequal alien receiver forms share recurring mineral traces above a low replica coupling, while maintained outliers and an opaque bypass remain equally lit.",
     "interaction_geometry": "horizon-archive-game/src/manyfoldHosts.js#RECEIVER_CHORUS_REGISTRY",
     "runtime_source": "horizon-archive-game/src/ManyfoldReturn.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

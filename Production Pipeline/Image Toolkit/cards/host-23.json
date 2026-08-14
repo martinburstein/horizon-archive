@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-23",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-23-api-v1.md",
@@ -61,7 +61,7 @@
     "alt_text": "Three different alien currents enter one capped return beside three sealed material-keyed replicas on a dry outer foundation.",
     "interaction_geometry": "horizon-archive-game/src/threeCurrentHosts.js#THREE_THROAT_REPLICA_BLOOM_REGISTRY",
     "runtime_source": "horizon-archive-game/src/ThreeCurrentReach.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

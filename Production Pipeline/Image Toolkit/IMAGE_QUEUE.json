@@ -3,32 +3,167 @@
   "updated": "2026-08-13",
   "ordering": "earliest-first canonical route",
   "items": [
-    {"asset_id": "host-14", "address": "FR-03", "status": "integration_candidate", "card": "cards/host-14.json"},
-    {"asset_id": "host-15", "address": "FR-03", "status": "integration_candidate", "card": "cards/host-15.json"},
-    {"asset_id": "host-16", "address": "FR-04", "status": "integration_candidate", "card": "cards/host-16.json"},
-    {"asset_id": "host-17", "address": "FR-05", "status": "integration_candidate", "card": "cards/host-17.json"},
-    {"asset_id": "host-18", "address": "FR-05", "status": "integration_candidate", "card": "cards/host-18.json"},
-    {"asset_id": "host-19", "address": "FR-06", "status": "integration_candidate", "card": "cards/host-19.json"},
-    {"asset_id": "host-20", "address": "FR-06", "status": "integration_candidate", "card": "cards/host-20.json"},
-    {"asset_id": "host-21", "address": "FR-07", "status": "integration_candidate", "card": "cards/host-21.json"},
-    {"asset_id": "host-22", "address": "FR-07", "status": "integration_candidate", "card": "cards/host-22.json"},
-    {"asset_id": "host-23", "address": "FR-08", "status": "integration_candidate", "card": "cards/host-23.json"},
-    {"asset_id": "host-24", "address": "FR-08", "status": "integration_candidate", "card": "cards/host-24.json"},
-    {"asset_id": "host-25", "address": "FR-09", "status": "integration_candidate", "card": "cards/host-25.json"},
-    {"asset_id": "host-26", "address": "FR-09", "status": "integration_candidate", "card": "cards/host-26.json"},
-    {"asset_id": "host-27", "address": "FR-10", "status": "integration_candidate", "card": "cards/host-27.json"},
-    {"asset_id": "host-28", "address": "FR-10", "status": "integration_candidate", "card": "cards/host-28.json"},
-    {"asset_id": "host-29", "address": "FR-11", "status": "integration_candidate", "card": "cards/host-29.json"},
-    {"asset_id": "host-30", "address": "FR-11", "status": "integration_candidate", "card": "cards/host-30.json"},
-    {"asset_id": "host-31", "address": "FR-12", "status": "integration_candidate", "card": "cards/host-31.json"},
-    {"asset_id": "host-32", "address": "FR-12", "status": "integration_candidate", "card": "cards/host-32.json"},
-    {"asset_id": "host-33", "address": "FR-13", "status": "integration_candidate", "card": "cards/host-33.json"},
-    {"asset_id": "host-34", "address": "FR-13", "status": "integration_candidate", "card": "cards/host-34.json"},
-    {"asset_id": "host-35", "address": "FR-14", "status": "integration_candidate", "card": "cards/host-35.json"},
-    {"asset_id": "host-36", "address": "FR-14", "status": "integration_candidate", "card": "cards/host-36.json"},
-    {"asset_id": "host-37", "address": "FR-15", "status": "integration_candidate", "card": "cards/host-37.json"},
-    {"asset_id": "host-38", "address": "FR-15", "status": "integration_candidate", "card": "cards/host-38.json"},
-    {"asset_id": "host-39", "address": "FR-16", "status": "integration_candidate", "card": "cards/host-39.json"},
-    {"asset_id": "host-40", "address": "FR-16", "status": "integration_candidate", "card": "cards/host-40.json"}
+    {
+      "asset_id": "host-14",
+      "address": "FR-03",
+      "status": "integrated_released",
+      "card": "cards/host-14.json"
+    },
+    {
+      "asset_id": "host-15",
+      "address": "FR-03",
+      "status": "integrated_released",
+      "card": "cards/host-15.json"
+    },
+    {
+      "asset_id": "host-16",
+      "address": "FR-04",
+      "status": "integrated_released",
+      "card": "cards/host-16.json"
+    },
+    {
+      "asset_id": "host-17",
+      "address": "FR-05",
+      "status": "integrated_released",
+      "card": "cards/host-17.json"
+    },
+    {
+      "asset_id": "host-18",
+      "address": "FR-05",
+      "status": "integrated_released",
+      "card": "cards/host-18.json"
+    },
+    {
+      "asset_id": "host-19",
+      "address": "FR-06",
+      "status": "integrated_released",
+      "card": "cards/host-19.json"
+    },
+    {
+      "asset_id": "host-20",
+      "address": "FR-06",
+      "status": "integrated_released",
+      "card": "cards/host-20.json"
+    },
+    {
+      "asset_id": "host-21",
+      "address": "FR-07",
+      "status": "integrated_released",
+      "card": "cards/host-21.json"
+    },
+    {
+      "asset_id": "host-22",
+      "address": "FR-07",
+      "status": "integrated_released",
+      "card": "cards/host-22.json"
+    },
+    {
+      "asset_id": "host-23",
+      "address": "FR-08",
+      "status": "integrated_released",
+      "card": "cards/host-23.json"
+    },
+    {
+      "asset_id": "host-24",
+      "address": "FR-08",
+      "status": "integrated_released",
+      "card": "cards/host-24.json"
+    },
+    {
+      "asset_id": "host-25",
+      "address": "FR-09",
+      "status": "integrated_released",
+      "card": "cards/host-25.json"
+    },
+    {
+      "asset_id": "host-26",
+      "address": "FR-09",
+      "status": "integrated_released",
+      "card": "cards/host-26.json"
+    },
+    {
+      "asset_id": "host-27",
+      "address": "FR-10",
+      "status": "integrated_released",
+      "card": "cards/host-27.json"
+    },
+    {
+      "asset_id": "host-28",
+      "address": "FR-10",
+      "status": "integrated_released",
+      "card": "cards/host-28.json"
+    },
+    {
+      "asset_id": "host-29",
+      "address": "FR-11",
+      "status": "integrated_released",
+      "card": "cards/host-29.json"
+    },
+    {
+      "asset_id": "host-30",
+      "address": "FR-11",
+      "status": "integrated_released",
+      "card": "cards/host-30.json"
+    },
+    {
+      "asset_id": "host-31",
+      "address": "FR-12",
+      "status": "integrated_released",
+      "card": "cards/host-31.json"
+    },
+    {
+      "asset_id": "host-32",
+      "address": "FR-12",
+      "status": "integrated_released",
+      "card": "cards/host-32.json"
+    },
+    {
+      "asset_id": "host-33",
+      "address": "FR-13",
+      "status": "integrated_released",
+      "card": "cards/host-33.json"
+    },
+    {
+      "asset_id": "host-34",
+      "address": "FR-13",
+      "status": "integrated_released",
+      "card": "cards/host-34.json"
+    },
+    {
+      "asset_id": "host-35",
+      "address": "FR-14",
+      "status": "integrated_released",
+      "card": "cards/host-35.json"
+    },
+    {
+      "asset_id": "host-36",
+      "address": "FR-14",
+      "status": "integrated_released",
+      "card": "cards/host-36.json"
+    },
+    {
+      "asset_id": "host-37",
+      "address": "FR-15",
+      "status": "integrated_released",
+      "card": "cards/host-37.json"
+    },
+    {
+      "asset_id": "host-38",
+      "address": "FR-15",
+      "status": "integrated_released",
+      "card": "cards/host-38.json"
+    },
+    {
+      "asset_id": "host-39",
+      "address": "FR-16",
+      "status": "integrated_released",
+      "card": "cards/host-39.json"
+    },
+    {
+      "asset_id": "host-40",
+      "address": "FR-16",
+      "status": "integrated_released",
+      "card": "cards/host-40.json"
+    }
   ]
 }

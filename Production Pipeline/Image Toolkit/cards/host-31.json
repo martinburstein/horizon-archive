@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-31",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-31-api-v1.md",
@@ -58,7 +58,7 @@
     "alt_text": "Three distinct material families cross an open reach beside contact and non-contact samples in a small accessible replica body, while an opaque casing reveals nothing within.",
     "interaction_geometry": "horizon-archive-game/src/offsetHosts.js#COUNTEREXAMPLE_CORE_REGISTRY",
     "runtime_source": "horizon-archive-game/src/OffsetReach.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_forced_completion",

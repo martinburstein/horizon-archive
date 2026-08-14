@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-36",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-36-api-v1.md",
@@ -59,7 +59,7 @@
     "alt_text": "Refractory alien vanes hold different motion phases around a return body and local base coupling, isolated from distant works by an open mineral plain.",
     "interaction_geometry": "horizon-archive-game/src/counterfieldHosts.js#INDEPENDENT_VANE_RETURN_REGISTRY",
     "runtime_source": "horizon-archive-game/src/Counterfield.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

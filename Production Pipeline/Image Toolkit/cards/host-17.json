@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-17",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-17-api-v1.md",
@@ -61,7 +61,7 @@
     "alt_text": "An already-lit alien civic bridge crosses a geothermal vault beyond a small oblique coupling embedded beside a dry condensation route.",
     "interaction_geometry": "horizon-archive-game/src/condensateSpine.js#CONDENSATE_SPINE_REGISTRY",
     "runtime_source": "horizon-archive-game/src/CityThresholdStaging.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-37",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-37-api-v1.md",
@@ -58,7 +58,7 @@
     "alt_text": "A dark conductive seam persists from a pressure-bent translucent membrane into porous mineral foam beside a stable ceramic anchor-line approach.",
     "interaction_geometry": "horizon-archive-game/src/unborrowedHosts.js#MEMBRANE_FOAM_SEAM_REGISTRY",
     "runtime_source": "horizon-archive-game/src/UnborrowedReach.jsx",
-    "candidate_status": "focused_pass_pending_aggregate_release"
+    "candidate_status": "released"
   },
   "selection": {
     "status": "done_practical_rubric",

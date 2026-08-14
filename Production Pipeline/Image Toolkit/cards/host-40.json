@@ -1,13 +1,27 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-40",
-  "status": "integration_candidate",
+  "status": "integrated_released",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-40-api-v1.md",
   "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
-  "target": {"width": 1920, "height": 1080, "format": "PNG", "mode": "RGB", "fit": "cover", "background": "000000"},
-  "generation_budget": {"max_attempts": 20, "concepts": 6, "targeted_edits": 14, "max_non_improving_edits_per_family": 2, "concurrency": 1, "stop_on_first_practical_pass": true},
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
   "must_show": [
     "the same quiet outer-margin landscape and neutral measured horizon, with no new alien destination or acknowledgement",
     "stable ceramic footing where the player can close a separate expedition-owned folio and remain in place",
@@ -26,13 +40,36 @@
     "independent environmental clocks remain visible but understated",
     "the final view is beautiful and emotionally sufficient without implying cosmic closure"
   ],
-  "must_preserve": ["first-person environmental scale", "wide crop readability and stable final footing", "equal world treatment for every bounded local outcome", "quiet indifferent operation without player causation"],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability and stable final footing",
+    "equal world treatment for every bounded local outcome",
+    "quiet indifferent operation without player causation"
+  ],
   "avoid": [
     "graduation scene, certification seal, diploma, exam score, employment badge, access key, Microsoft logo, Azure logo, tribunal, throne, monument, gate, portal, new chamber, destination, beacon, altar, shrine, trophy, reward, or Builder interface",
     "green success light, red failure light, celebratory sunrise, ominous storm, anthem visualization, synchronized city response, opening route, turning object, approaching figure, or acknowledgement",
     "baked folio, readiness result, remediation list, screen, hologram, text, code, score, answer, word, number, label, signage, glyph, UI, HUD, marker, waypoint, diagram, map, watermark, or logo",
     "humanoid, hand, suit, robot, vehicle, creature, flesh, bone, roots, vines, organs, egg, nest, or dominant biology"
   ],
-  "integration": {"product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host40/host40-environment-master-v1.png", "alt_text": "A stable ceramic outer margin faces a neutral horizon while membranes, condensation, residue, and distant heat continue without acknowledgement or change.", "interaction_geometry": "horizon-archive-game/src/measuredHorizonHosts.js#EQUAL_DIGNITY_HORIZON_REGISTRY", "runtime_source": "horizon-archive-game/src/MeasuredHorizon.jsx", "candidate_status": "focused_pass_pending_aggregate_release"},
-  "selection": {"status": "done_practical_rubric_manual_reconciliation", "selected_attempt": 1, "practical_score": 17, "hard_gate": "pass", "attempts_used": 1, "attempts_unused": 19, "remaining_compromises": ["anchor and residue details are restrained", "some membrane clarity carries a mild biological-reading risk", "the intentionally quiet horizon is visually sparse"]}
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host40/host40-environment-master-v1.png",
+    "alt_text": "A stable ceramic outer margin faces a neutral horizon while membranes, condensation, residue, and distant heat continue without acknowledgement or change.",
+    "interaction_geometry": "horizon-archive-game/src/measuredHorizonHosts.js#EQUAL_DIGNITY_HORIZON_REGISTRY",
+    "runtime_source": "horizon-archive-game/src/MeasuredHorizon.jsx",
+    "candidate_status": "released"
+  },
+  "selection": {
+    "status": "done_practical_rubric_manual_reconciliation",
+    "selected_attempt": 1,
+    "practical_score": 17,
+    "hard_gate": "pass",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "remaining_compromises": [
+      "anchor and residue details are restrained",
+      "some membrane clarity carries a mild biological-reading risk",
+      "the intentionally quiet horizon is visually sparse"
+    ]
+  }
 }

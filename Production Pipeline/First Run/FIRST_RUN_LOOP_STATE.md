@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-IMG-027-v1`
+State ID: `FRLS-IMG-028-v1`
 
 Control: `FRCV-001-v1` / `HA-RI-001-v1`
 
-Status: **VERIFY / HOST 40 INTEGRATION CANDIDATE / AGGREGATE RELEASE PROOF NEXT**
+Status: **RELEASED / ALL 27 PRIVATE IMAGE MASTERS INTEGRATED / LOOP COMPLETE**
 
 `NEXT_INSTANCE_HANDOFF.md` remains the exact-next-action authority.
 
@@ -12,114 +12,33 @@ Status: **VERIFY / HOST 40 INTEGRATION CANDIDATE / AGGREGATE RELEASE PROOF NEXT*
 contract:
   shell: FRSH-016-v1
   loop: HA-RI-001-v1
-  scope: 27_existing_private_production_masters_one_asset_per_iteration
+  scope: 27_existing_private_production_masters
 state:
-  source_control_read: 52f1453c
-  current_asset: null
-  current_address: aggregate-release
-  controller_state: GATHER_EVIDENCE
-  current_ref: FRCE-015-v1_null_first@398a64131fa804223cfbdfc88f2865242bb3e02a
-  best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
-  committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
+  product_candidate: 7b781abd
+  release: FRAB-014-v1
+  controller_state: COMPLETE
 queue:
   produced_pending_integration: 0
-  integration_candidate: 27
-  integrated_released: 0
+  integration_candidate: 0
+  integrated_released: 27
 evidence:
-  reused:
-    - FRCE-015-v1 related 63/63 full 1047/1047 validators 40/40
-    - unchanged route save privacy lesson ending and fixture evidence
-  fresh_required:
-    - one cold full suite and exact validators
-    - one served browser E2E cascade and independent presentation release review
   fresh_passed:
-    - host-14 master identity and provenance
-    - host-14 focused source selector and mutation 10/10
-    - host-14 responsive accessibility and CSS 3/3
-    - production build 235 modules and byte-identical emitted master
-    - host-15 master identity and provenance
-    - host-15 focused source selector predecessor boundary and lesson order 16/16
-    - production build 237 modules bundle caps and byte-identical emitted master
-    - host-16 master identity and provenance
-    - host-16 focused source geometry responsive state and fallback 5/5
-    - production build 239 modules bundle caps and byte-identical emitted master
-    - host-17 master identity and provenance
-    - host-17 focused source geometry responsive state and fallback 5/5
-    - production build artifact reconciliation bundle caps and byte-identical emitted master
-    - host-18 master identity and provenance
-    - host-17 and host-18 combined focused source geometry responsive selector and fallback 10/10
-    - production build 242 modules bundle caps and byte-identical emitted master
-    - host-19 master identity and provenance
-    - host-19 focused source provenance selector decode fallback and ownership 5/5
-    - production build 244 modules and byte-identical emitted master
-    - host-20 master identity and provenance
-    - host-19 and host-20 combined focused source provenance selector decode fallback and ownership 10/10
-    - production build 245 modules and byte-identical emitted master
-    - host-21 master identity and provenance
-    - host-21 focused source provenance selector decode fallback and ownership 5/5
-    - production build 247 modules and byte-identical emitted master
-    - host-22 master identity and provenance
-    - host-21 and host-22 paired focused source provenance selector decode fallback and ownership 10/10
-    - production build 248 modules and byte-identical emitted master
-    - host-23 master identity and provenance
-    - host-23 focused source provenance selector decode fallback and ownership 5/5
-    - production build 250 modules and byte-identical emitted master
-    - host-24 master identity and provenance
-    - host-23 and host-24 paired focused source provenance selector decode fallback and ownership 10/10
-    - production build 251 modules and byte-identical emitted master
-    - host-25 master identity and provenance
-    - host-25 focused source provenance selector decode fallback presentation and ownership 9/9
-    - production build 253 modules and byte-identical emitted master
-    - host-26 master identity and provenance
-    - host-25 and host-26 paired focused source provenance selector decode fallback presentation and ownership 14/14
-    - production build 254 modules and byte-identical emitted master
-    - host-27 master identity and provenance
-    - host-27 focused source provenance selector decode fallback presentation and ownership 9/9
-    - production build 256 modules and byte-identical emitted master
-    - host-28 master identity and provenance
-    - host-27 and host-28 paired focused source provenance selector decode fallback presentation and ownership 14/14
-    - production build 257 modules and byte-identical emitted master
-    - host-29 master identity and provenance
-    - host-29 focused source provenance selector decode fallback presentation and ownership 12/12
-    - production build 259 modules and byte-identical emitted master
-    - host-30 master identity and provenance
-    - host-29 and host-30 paired focused source provenance selector decode fallback presentation and ownership 17/17
-    - production build 260 modules and byte-identical emitted master
-    - host-31 master identity and provenance
-    - host-31 focused source provenance selector decode fallback presentation and ownership 11/11
-    - production build 262 modules and byte-identical emitted master
-    - host-32 master identity and provenance
-    - host-31 and host-32 paired focused source provenance selector decode fallback presentation and ownership 16/16
-    - production build 263 modules and byte-identical emitted master
-    - host-33 master identity and provenance
-    - host-33 focused source provenance selector decode fallback presentation and ownership 12/12
-    - production build 265 modules and byte-identical emitted master
-    - host-34 master identity and provenance
-    - host-33 and host-34 paired focused source provenance selector decode fallback presentation and ownership 17/17
-    - production build 266 modules and byte-identical emitted master
-    - host-35 master identity and provenance
-    - host-35 focused source provenance selector decode fallback presentation and ownership 5/5
-    - production build 268 modules and byte-identical emitted master
-    - host-36 master identity and provenance
-    - host-35 and host-36 paired focused source provenance selector decode fallback presentation and ownership 10/10
-    - production build 269 modules and byte-identical emitted master
-    - host-37 master identity and provenance
-    - host-37 focused source provenance selector decode fallback presentation and ownership 5/5
-    - production build 271 modules and byte-identical emitted master
-    - host-38 master identity and provenance
-    - host-37 and host-38 paired focused source provenance selector decode fallback presentation and ownership 10/10
-    - production build 272 modules and byte-identical emitted master
-    - host-39 master identity and provenance
-    - host-39 focused source provenance selector decode fallback presentation and ownership 5/5
-    - production build 274 modules and byte-identical emitted master
-    - host-40 master identity and provenance
-    - host-39 and host-40 paired focused source provenance selector decode fallback presentation and equal-outcome ownership 10/10
-    - production build 275 modules and byte-identical emitted master
-  final_proof_reserve: FULL
-hard_constraints:
-  - no image generation editing reveal or accepted-master overwrite
-  - no route lesson evidence save ending world-response or successor change
-  - no broad test rerun without a named verifier-relevant invalidation
-decision: GATHER_EVIDENCE
-next_owner: aggregate_release_verifier
+    - final serialized full suite
+    - exact validators 40/40
+    - production build 275 modules
+    - emitted binary identity 52/52 with source_maps 0
+    - TD010 and TD011 served identity
+    - complete E2E 78.555 seconds runtime_errors 0
+    - READY and NOT_YET_READY equal_dignity ending proof
+    - 27/27 queue card receipt provenance and Full_HD_RGB_PNG reconciliation
+  diagnostic_variance:
+    - stale pre-integration test and E2E launcher expectations corrected
+    - shared dist contention removed by serialized release execution
+    - Host_17 overlapping pointer targets corrected and regression locked
+constraints_preserved:
+  - route lesson evidence save privacy world_response ending successor unchanged
+  - no image generation edit overwrite or reveal
+  - unrelated QA PDF training and user worktree state untouched
+decision: STOP_SUCCESS
+next_owner: null
 ```
