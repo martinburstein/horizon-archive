@@ -1,0 +1,75 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-24",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-24-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "three materially distinct live feeders remaining separate as they enter one deep return",
+    "a thick opaque glass-ceramic cap covering the central return",
+    "a thick refractive prism host seated on the dry outer service skin rather than over live flow",
+    "refraction revealing only the convergence geometry without showing contents or destination",
+    "an ordinary serviced outbound carrier and dry margin continuing away on the far side"
+  ],
+  "player_critical_facts": [
+    "three distinct live feeders visibly converge into one deep return while remaining materially separate and proving only a common return",
+    "the central return remains sealed beneath a thick opaque cap with no visible contents, interior, or destination",
+    "the accessible host is a thick refractive prism on the outer service skin, safely reachable by dry ground without crossing or stepping over live flow",
+    "the prism reveals convergence geometry through refraction only and does not act as a window, portal, scanner, screen, or control surface",
+    "an ordinary outbound carrier and its dry margin continue beyond the return while nothing opens, rewards, answers, or reacts"
+  ],
+  "art_direction_preferences": [
+    "the deep central cap carries monumental scale while the outer prism remains intimate and inspectable",
+    "refraction produces restrained duplicated edges and bent convergence lines rather than rainbow spectacle",
+    "the outbound carrier appears ordinary and serviced rather than privileged or revelatory",
+    "three current materials remain distinctive through texture and behavior instead of color labels",
+    "the scene is maintained, awe-filled, and quiet"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe dry on-foot access to the outer service-skin prism",
+    "indifferent live processes without player causation"
+  ],
+  "avoid": [
+    "transparent cap, exposed return interior, visible contents, destination reveal, tunnel view, portal, doorway, window, hologram, x-ray view, or cutaway",
+    "prism over live flow, bridge across a current, stepping stones, catwalk crossing, unsafe ledge, or blocked dry route",
+    "magic crystal, rainbow fantasy gem, beacon, projector, camera, scanner, screen, keyboard, control console, or user-facing dashboard",
+    "text, numbers, signage, glyphs, UI, HUD, map marker, waypoint, reward, answer, reveal, or watermark",
+    "humanoid residents, vehicles, guards, robots, creatures, faces, eyes, activation, opening, greeting, refusal, tracking, acknowledgement, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host24/host24-environment-master-v1.png",
+    "alt_text": "A thick outer-service prism refracts the geometry of three distinct currents entering an opaque capped return, beside a dry outbound carrier margin.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 1,
+    "practical_score": 19,
+    "hard_gate": "pass",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "remaining_compromises": [
+      "refraction strength is restrained rather than dramatic"
+    ]
+  }
+}
