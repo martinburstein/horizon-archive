@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import condensateSpineImage from "../../Visual Direction/Production Masters/2026-08-13-first-run-host17/host17-environment-master-v1.png";
+import civicShadowImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host18/host18-environment-master-v1.png";
 import cityAccessImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-access-master.png";
 import cityBoundaryImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-boundary-master.png";
 import cityOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
@@ -29,7 +30,7 @@ import {
 } from "./cityThresholdExercise.js";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { custodyLedgerRouteActions, custodyLedgerRouteOwners } from "./CustodyLedgerNormalRoute.js";
-import { CONDENSATE_SPINE_COPY, CONDENSATE_SPINE_REGISTRY, deriveCondensateSpineState, getCondensateSpineHotspots } from "./condensateSpine.js";
+import { CIVIC_SHADOW_COPY, CIVIC_SHADOW_REGISTRY, CONDENSATE_SPINE_COPY, CONDENSATE_SPINE_REGISTRY, deriveCivicShadowState, deriveCondensateSpineState, getCivicShadowHotspots, getCondensateSpineHotspots } from "./condensateSpine.js";
 
 function formatToken(value) {
   return String(value ?? "").replaceAll("_", " ").replace(/\b\w/g, (letter) => letter.toUpperCase());
@@ -83,6 +84,21 @@ const cityPlates = {
   boundary: { native: cityBoundaryImage, narrow: cityBoundaryImage },
   access: { native: cityAccessImage, narrow: cityAccessImage },
 };
+
+function useDecodedImage(enabled, src) {
+  const [decoded, setDecoded] = useState(null);
+  useEffect(() => {
+    if (!enabled) { setDecoded(null); return undefined; }
+    let connected = true;
+    const image = new Image();
+    image.decoding = "async";
+    image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight });
+    image.onerror = () => connected && setDecoded(null);
+    image.src = src;
+    return () => { connected = false; image.onload = null; image.onerror = null; };
+  }, [enabled, src]);
+  return decoded;
+}
 
 function SelectExplanation({ dimensions, options, values, onChange }) {
   return dimensions.map((dimension) => (
@@ -242,7 +258,8 @@ export function CityThresholdStaging({
   const [anchorSelected, setAnchorSelected] = useState(false);
   const [overlayOpen, setOverlayOpen] = useState(() => loadStagingSave().checkpoint !== "threshold_entry" && loadStagingSave().checkpoint !== "anchor_complete");
   const [message, setMessage] = useState("Heat, bridge lights, vapor, and maintenance cycles were already operating when the expedition arrived. No occupant is visible.");
-  const [condensateSpineDecodedImage, setCondensateSpineDecodedImage] = useState(null);
+  const condensateSpineDecodedImage = useDecodedImage(CONDENSATE_SPINE_REGISTRY.source.enabled, condensateSpineImage);
+  const civicShadowDecodedImage = useDecodedImage(CIVIC_SHADOW_REGISTRY.source.enabled, civicShadowImage);
   const cityHeadingRef = useRef(null);
   const cityWorldRef = useRef(null);
   const overlayRef = useRef(null);
@@ -253,17 +270,6 @@ export function CityThresholdStaging({
 
   useLayoutEffect(() => {
     if (!overlayOpen && board === "SC-02-00") cityHeadingRef.current?.focus({ preventScroll: true });
-  }, []);
-
-  useEffect(() => {
-    if (CONDENSATE_SPINE_REGISTRY.source.enabled !== true) { setCondensateSpineDecodedImage(null); return undefined; }
-    let connected = true;
-    const image = new Image();
-    image.decoding = "async";
-    image.onload = () => connected && setCondensateSpineDecodedImage({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight });
-    image.onerror = () => connected && setCondensateSpineDecodedImage(null);
-    image.src = condensateSpineImage;
-    return () => { connected = false; image.onload = null; image.onerror = null; };
   }, []);
 
   useLayoutEffect(() => {
@@ -306,8 +312,13 @@ export function CityThresholdStaging({
   const condensateSpineState = deriveCondensateSpineState({ checkpoint: save.checkpoint, registry: CONDENSATE_SPINE_REGISTRY, decodedImage: condensateSpineDecodedImage });
   const condensateSpineNativeActive = condensateSpineState !== "hidden";
   const condensateSpineHotspots = getCondensateSpineHotspots(CONDENSATE_SPINE_REGISTRY);
-  const activeBoardHotspots = condensateSpineNativeActive && condensateSpineHotspots?.[board] ? condensateSpineHotspots[board] : cityThresholdHotspots[board];
-  const cityPlate = boardLayer === "overview" && condensateSpineNativeActive ? { native: condensateSpineImage, narrow: condensateSpineImage } : cityPlates[boardLayer];
+  const civicShadowState = deriveCivicShadowState({ registry: CIVIC_SHADOW_REGISTRY, decodedImage: civicShadowDecodedImage });
+  const civicShadowNativeActive = civicShadowState !== "hidden";
+  const civicShadowHotspots = getCivicShadowHotspots(CIVIC_SHADOW_REGISTRY);
+  const useCivicShadow = civicShadowNativeActive && civicShadowHotspots?.[board];
+  const useCondensateSpine = !useCivicShadow && boardLayer === "overview" && condensateSpineNativeActive;
+  const activeBoardHotspots = useCivicShadow ? civicShadowHotspots[board] : condensateSpineNativeActive && condensateSpineHotspots?.[board] ? condensateSpineHotspots[board] : cityThresholdHotspots[board];
+  const cityPlate = useCivicShadow ? { native: civicShadowImage, narrow: civicShadowImage } : useCondensateSpine ? { native: condensateSpineImage, narrow: condensateSpineImage } : cityPlates[boardLayer];
   const visibleStatus = useMemo(() => `${board} // continuation unchanged // city_state_delta=None`, [board]);
 
   function cancelOverlay() {
@@ -373,7 +384,7 @@ export function CityThresholdStaging({
 
   return (
     <CanonicalGameFrame enabled>
-      <main className="game-shell city-threshold-screen" data-scene="city-threshold" data-board={board} data-city-layer={boardLayer} data-staging-only="RP-001" data-condensate-spine-state={condensateSpineState} data-condensate-spine-native-active={condensateSpineNativeActive ? "true" : undefined}>
+      <main className="game-shell city-threshold-screen" data-scene="city-threshold" data-board={board} data-city-layer={boardLayer} data-staging-only="RP-001" data-condensate-spine-state={condensateSpineState} data-condensate-spine-native-active={condensateSpineNativeActive ? "true" : undefined} data-civic-shadow-state={civicShadowState} data-civic-shadow-native-active={useCivicShadow ? "true" : undefined}>
         <header className="city-entry-header" data-copy-slot="CITY-ENTRY-HEAD">
           <p className="eyebrow">Chapter IV // local survey</p>
           <h1 ref={cityHeadingRef} tabIndex="-1">City Threshold</h1>
@@ -381,7 +392,7 @@ export function CityThresholdStaging({
         </header>
         <p className="sr-only" role="status" aria-live="polite" aria-atomic="true">{message}</p>
         <section ref={cityWorldRef} className="city-world" aria-label="City Threshold Survey Anchor staged scene" inert={overlayOpen ? true : undefined}>
-          <img className="city-world-plate city-world-plate-native" src={cityPlate.native} alt={boardLayer === "overview" && condensateSpineNativeActive ? CONDENSATE_SPINE_COPY.alt : "An immense empty underground civic landscape already operating above geothermal chasms"} data-condensate-spine-source={boardLayer === "overview" && condensateSpineNativeActive ? CONDENSATE_SPINE_REGISTRY.source.path : undefined} />
+          <img className="city-world-plate city-world-plate-native" src={cityPlate.native} alt={useCivicShadow ? CIVIC_SHADOW_COPY.alt : useCondensateSpine ? CONDENSATE_SPINE_COPY.alt : "An immense empty underground civic landscape already operating above geothermal chasms"} data-condensate-spine-source={useCondensateSpine ? CONDENSATE_SPINE_REGISTRY.source.path : undefined} data-civic-shadow-source={useCivicShadow ? CIVIC_SHADOW_REGISTRY.source.path : undefined} />
           <img className="city-world-plate city-world-plate-narrow" src={cityPlate.narrow} alt="" aria-hidden="true" />
           <div className="city-cycle-layer" aria-hidden="true"><i /><i /><i /></div>
           {renderHotspots()}

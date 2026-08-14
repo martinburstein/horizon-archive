@@ -6,11 +6,17 @@ export const CONDENSATE_SPINE_PROVENANCE_SCHEMA = "horizon.image-toolkit.product
 export const CONDENSATE_SPINE_PATH = "Visual Direction/Production Masters/2026-08-13-first-run-host17/host17-environment-master-v1.png";
 export const CONDENSATE_SPINE_WIDTH = 1920;
 export const CONDENSATE_SPINE_HEIGHT = 1080;
+export const CIVIC_SHADOW_PATH = "Visual Direction/Production Masters/2026-08-14-first-run-host18/host18-environment-master-v1.png";
 
 export const CONDENSATE_SPINE_COPY = Object.freeze({
   name: "Condensate Spine",
   alt: "An already-lit alien civic bridge crosses a geothermal vault beyond a small oblique coupling embedded beside a dry condensation route.",
   available: "The ordinary coupling remains open to ambient heat, air, and material circulation. The bridge was already lit.",
+});
+
+export const CIVIC_SHADOW_COPY = Object.freeze({
+  name: "Civic Shadow Theater",
+  alt: "Abstract civic light crosses steam and an angled mineral membrane beside a small service throat and an already-lit onward bridge.",
 });
 
 const freeze = (value) => {
@@ -73,6 +79,36 @@ function buildLayouts(registry) {
 const base = { schema: CONDENSATE_SPINE_SCHEMA, source, provenance, geometry, layouts: null, copy: CONDENSATE_SPINE_COPY };
 export const CONDENSATE_SPINE_REGISTRY = freeze({ ...base, layouts: buildLayouts(base) });
 
+const civicSource = {
+  enabled: true,
+  path: CIVIC_SHADOW_PATH,
+  sourceId: "HA-IMG-H18-v1",
+  bytes: 3413275,
+  sha256: "763415d5717d8fd03d89bcaa2a335685f2cd99e9a1753030e440db499ba9d0d5",
+  width: CONDENSATE_SPINE_WIDTH,
+  height: CONDENSATE_SPINE_HEIGHT,
+  format: "png",
+  color: "opaque-srgb-8",
+};
+const civicGeometry = {
+  relation: { x: 40, y: 780, width: 150, height: 220 },
+  semanticTarget: { x: 40, y: 780, width: 150, height: 220 },
+  bridge: { x: 1350, y: 650, width: 530, height: 320 },
+  phenomenon: { x: 550, y: 280, width: 550, height: 700 },
+  quietMargin: { x: 70, y: 760, width: 480, height: 240 },
+  operatingCycles: { x: 550, y: 280, width: 550, height: 700 },
+  dryEdge: { x: 70, y: 760, width: 480, height: 240 },
+};
+const civicBase = {
+  schema: "horizon.civic-shadow-theater.v1",
+  source: civicSource,
+  provenance: { schema: CONDENSATE_SPINE_PROVENANCE_SCHEMA, path: civicSource.path, sourceId: civicSource.sourceId, bytes: civicSource.bytes, sha256: civicSource.sha256 },
+  geometry: civicGeometry,
+  layouts: null,
+  copy: CIVIC_SHADOW_COPY,
+};
+export const CIVIC_SHADOW_REGISTRY = freeze({ ...civicBase, layouts: buildLayouts(civicBase) });
+
 function exactSource(registry) {
   const candidate = registry?.source;
   return candidate?.enabled === true
@@ -91,6 +127,14 @@ function exactSource(registry) {
     && registry.provenance.sha256 === candidate.sha256;
 }
 
+function exactCivicSource(registry) {
+  const candidate = registry?.source;
+  return candidate?.enabled === true
+    && Object.keys(civicSource).every((key) => candidate[key] === civicSource[key])
+    && registry?.provenance?.schema === CONDENSATE_SPINE_PROVENANCE_SCHEMA
+    && ["path", "sourceId", "bytes", "sha256"].every((key) => registry.provenance[key] === candidate[key]);
+}
+
 function exactLayouts(registry) {
   const expected = buildLayouts(registry);
   return JSON.stringify(registry?.layouts) === JSON.stringify(expected)
@@ -106,6 +150,10 @@ export function auditCondensateSpineRegistry(registry = CONDENSATE_SPINE_REGISTR
   return freeze({ source: exactSource(registry), layouts: exactLayouts(registry), copy: registry?.copy === CONDENSATE_SPINE_COPY });
 }
 
+export function auditCivicShadowRegistry(registry = CIVIC_SHADOW_REGISTRY) {
+  return freeze({ source: exactCivicSource(registry), layouts: exactLayouts(registry), copy: registry?.copy === CIVIC_SHADOW_COPY });
+}
+
 export function deriveCondensateSpineState({ checkpoint = "threshold_entry", registry = CONDENSATE_SPINE_REGISTRY, decodedImage } = {}) {
   const audit = auditCondensateSpineRegistry(registry);
   if (!Object.values(audit).every(Boolean)
@@ -113,6 +161,14 @@ export function deriveCondensateSpineState({ checkpoint = "threshold_entry", reg
     return "hidden";
   }
   return checkpoint === "anchor_complete" ? "complete" : "available";
+}
+
+export function deriveCivicShadowState({ registry = CIVIC_SHADOW_REGISTRY, decodedImage } = {}) {
+  const audit = auditCivicShadowRegistry(registry);
+  return Object.values(audit).every(Boolean)
+    && decodedImage?.complete === true
+    && decodedImage.naturalWidth === CONDENSATE_SPINE_WIDTH
+    && decodedImage.naturalHeight === CONDENSATE_SPINE_HEIGHT ? "available" : "hidden";
 }
 
 function projectRect(rect, width, height) {
@@ -144,6 +200,17 @@ export function getCondensateSpineHotspots(registry = CONDENSATE_SPINE_REGISTRY)
   return freeze({
     "SC-02-00": { cycles, boundary: coupling, routePreview: bridge },
     "SC-02-30": { anchor: coupling },
+    "SC-02-40": { forward: bridge },
+    "SC-02-50": { forward: bridge },
+  });
+}
+
+export function getCivicShadowHotspots(registry = CIVIC_SHADOW_REGISTRY) {
+  if (!Object.values(auditCivicShadowRegistry(registry)).every(Boolean)) return null;
+  const throat = cityRect(registry.geometry.semanticTarget);
+  const bridge = cityRect(registry.geometry.bridge);
+  return freeze({
+    "SC-02-30": { anchor: throat },
     "SC-02-40": { forward: bridge },
     "SC-02-50": { forward: bridge },
   });

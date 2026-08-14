@@ -46,9 +46,9 @@ test("Host 17 maps source-derived coupling, cycles, and route to canonical and n
 test("City Threshold binds Host 17 only to overview boards and retains legacy plates as fallback", () => {
   const component = readFileSync(new URL("../src/CityThresholdStaging.jsx", import.meta.url), "utf8");
   assert.match(component, /host17-environment-master-v1\.png/);
-  assert.match(component, /boardLayer === "overview" && condensateSpineNativeActive/);
+  assert.match(component, /const useCondensateSpine = !useCivicShadow && boardLayer === "overview" && condensateSpineNativeActive/);
   assert.match(component, /condensateSpineHotspots\?\.\[board\] \? condensateSpineHotspots\[board\] : cityThresholdHotspots\[board\]/);
-  assert.match(component, /data-condensate-spine-source=\{boardLayer === "overview" && condensateSpineNativeActive \? CONDENSATE_SPINE_REGISTRY\.source\.path : undefined\}/);
+  assert.match(component, /data-condensate-spine-source=\{useCondensateSpine \? CONDENSATE_SPINE_REGISTRY\.source\.path : undefined\}/);
   assert.match(component, /city-threshold-overview-master\.png/);
   assert.match(component, /city-threshold-boundary-master\.png/);
   assert.match(component, /city-threshold-access-master\.png/);
