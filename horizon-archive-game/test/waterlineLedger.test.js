@@ -23,71 +23,35 @@ import {
   mapWaterlineLedgerGuideRect,
 } from "../src/waterlineLedger.js";
 
-const source = { enabled: true, path: WATERLINE_LEDGER_PATH, sourceId: WATERLINE_LEDGER_SOURCE_ID, bytes: 123456, sha256: "a".repeat(64), width: 3840, height: 2160, format: "png", color: "opaque-srgb-8" };
-const provenance = { schema: WATERLINE_LEDGER_PROVENANCE_SCHEMA, path: source.path, sourceId: source.sourceId, bytes: source.bytes, sha256: source.sha256 };
-const base = {
-  schema: WATERLINE_LEDGER_SCHEMA,
-  source,
-  provenance,
-  visibleGeometry: {
-    relation: { x: 225, y: 250, width: 3400, height: 1525 },
-    dryApproach: { x: 375, y: 1450, width: 3100, height: 650 },
-    histories: {
-      foundation: { bounds: { x: 300, y: 350, width: 3225, height: 1350 }, processEvidence: [{ x: 400, y: 500, width: 500, height: 500 }] },
-      repair: { bounds: { x: 650, y: 425, width: 2025, height: 1087.5 }, processEvidence: [{ x: 900, y: 600, width: 500, height: 500 }] },
-      serviceSkin: { bounds: { x: 1050, y: 375, width: 2225, height: 1175 }, processEvidence: [{ x: 2200, y: 500, width: 500, height: 500 }] },
-    },
-    pairwiseContacts: {
-      foundationRepair: [{ x: 625, y: 450, width: 550, height: 450 }, { x: 975, y: 1150, width: 575, height: 375 }],
-      foundationServiceSkin: [{ x: 2475, y: 350, width: 625, height: 475 }, { x: 2800, y: 1125, width: 525, height: 425 }],
-      repairServiceSkin: [{ x: 1312.5, y: 512.5, width: 550, height: 425 }, { x: 1850, y: 987.5, width: 600, height: 475 }],
-    },
-    depositionTrace: {
-      bounds: { x: 500, y: 900, width: 2900, height: 350 },
-      points: [{ x: 562.5, y: 1137.5 }, { x: 1075, y: 1012.5 }, { x: 1550, y: 1087.5 }, { x: 1975, y: 1187.5 }, { x: 2450, y: 987.5 }, { x: 2975, y: 1062.5 }, { x: 3312.5, y: 1175 }],
-      reactions: { foundation: { x: 562.5, y: 1137.5 }, repair: { x: 1550, y: 1087.5 }, serviceSkin: { x: 2450, y: 987.5 } },
-    },
-    waterline: { x: 3300, y: 1262.5, width: 540, height: 897.5 },
-    serviceSeams: [
-      { id: "seam-01", parent: null, points: [{ x: 1050, y: 1550 }, { x: 1100, y: 1150 }, { x: 1025, y: 675 }, { x: 950, y: 262.5 }] },
-      { id: "seam-02", parent: null, points: [{ x: 1900, y: 1550 }, { x: 1950, y: 1250 }, { x: 1875, y: 875 }, { x: 1975, y: 450 }] },
-      { id: "seam-03", parent: null, points: [{ x: 2750, y: 1550 }, { x: 2700, y: 1200 }, { x: 2800, y: 850 }, { x: 2725, y: 350 }] },
-      { id: "seam-02-branch", parent: "seam-02", points: [{ x: 1950, y: 1250 }, { x: 2250, y: 875 }, { x: 2450, y: 500 }] },
-    ],
-  },
-  controlGeometry: structuredClone(WATERLINE_LEDGER_CONTROL_GEOMETRY),
-  layouts: { desktop: null, laptop: null, narrow: null, effective200: null, retained320x180: null, retained320x240: null },
-  copy: { ...WATERLINE_LEDGER_COPY },
-};
+const source = structuredClone(WATERLINE_LEDGER_REGISTRY.source);
+const provenance = structuredClone(WATERLINE_LEDGER_REGISTRY.provenance);
 
 function acceptedRegistry() {
-  const pending = structuredClone(base);
-  const layouts = buildWaterlineLedgerLayoutRecords(pending);
-  return { ...pending, layouts };
+  return structuredClone(WATERLINE_LEDGER_REGISTRY);
 }
 
-const decoded = { complete: true, naturalWidth: 3840, naturalHeight: 2160 };
+const decoded = { complete: true, naturalWidth: source.width, naturalHeight: source.height };
 const guard = (registry = acceptedRegistry(), evidence = {}) => ({ predecessorComplete: true, registry, decodedImage: decoded, ...evidence });
 
-test("null-first registry is recursively frozen, disabled, and contains no selected source or copy", () => {
+test("selected production registry is recursively frozen and provenance-bound", () => {
   assert.equal(Object.isFrozen(WATERLINE_LEDGER_REGISTRY), true);
   assert.equal(Object.isFrozen(WATERLINE_LEDGER_REGISTRY.source), true);
   assert.equal(Object.isFrozen(WATERLINE_LEDGER_REGISTRY.visibleGeometry), true);
   assert.equal(Object.isFrozen(WATERLINE_LEDGER_REGISTRY.controlGeometry), true);
-  assert.equal(WATERLINE_LEDGER_REGISTRY.source.enabled, false);
-  assert.equal(WATERLINE_LEDGER_REGISTRY.source.path, null);
-  assert.equal(WATERLINE_LEDGER_REGISTRY.source.sourceId, null);
-  assert.equal(WATERLINE_LEDGER_REGISTRY.provenance, null);
-  assert.equal(WATERLINE_LEDGER_REGISTRY.copy, null);
-  assert.deepEqual(WATERLINE_LEDGER_REGISTRY.visibleGeometry.serviceSeams, []);
-  assert.equal(isWaterlineLedgerLawful(guard(WATERLINE_LEDGER_REGISTRY)), false);
+  assert.equal(WATERLINE_LEDGER_REGISTRY.source.enabled, true);
+  assert.equal(WATERLINE_LEDGER_REGISTRY.source.path, WATERLINE_LEDGER_PATH);
+  assert.equal(WATERLINE_LEDGER_REGISTRY.source.sourceId, WATERLINE_LEDGER_SOURCE_ID);
+  assert.equal(WATERLINE_LEDGER_REGISTRY.provenance.schema, WATERLINE_LEDGER_PROVENANCE_SCHEMA);
+  assert.equal(WATERLINE_LEDGER_REGISTRY.copy.alt, WATERLINE_LEDGER_COPY.alt);
+  assert.equal(WATERLINE_LEDGER_REGISTRY.visibleGeometry.serviceSeams.length, 4);
+  assert.equal(isWaterlineLedgerLawful(guard(WATERLINE_LEDGER_REGISTRY)), true);
 });
 
 test("guide-core mapping is exact, preserves half coordinates, and rejects clamping or alternate inputs", () => {
-  assert.deepEqual(mapWaterlineLedgerGuidePoint({ x: 768, y: 500 }), { x: 1920, y: 1050 });
-  assert.deepEqual(mapWaterlineLedgerGuidePoint({ x: 555, y: 100 }), { x: 1387.5, y: 50 });
+  assert.deepEqual(mapWaterlineLedgerGuidePoint({ x: 768, y: 500 }), { x: 960, y: 525 });
+  assert.deepEqual(mapWaterlineLedgerGuidePoint({ x: 555, y: 100 }), { x: 693.75, y: 25 });
   assert.deepEqual(mapWaterlineLedgerGuideRect({ x: 300, y: 225, width: 1020, height: 535 }), WATERLINE_LEDGER_CONTROL_GEOMETRY.semanticTarget);
-  assert.deepEqual(mapWaterlineLedgerGuidePolyline([[225, 535], [430, 485]]), [{ x: 562.5, y: 1137.5 }, { x: 1075, y: 1012.5 }]);
+  assert.deepEqual(mapWaterlineLedgerGuidePolyline([[225, 535], [430, 485]]), [{ x: 281.25, y: 568.75 }, { x: 537.5, y: 506.25 }]);
   for (const value of [{ x: 1, y: 79.999 }, { x: -1, y: 80 }, { x: "768", y: 500 }, { x: 768, y: 945 }]) {
     assert.equal(mapWaterlineLedgerGuidePoint(value), null);
   }
@@ -107,7 +71,7 @@ test("lawfulness requires exact non-coercing source, provenance, copy, decode, a
     (r) => { r.source.color = "rgba"; },
     (r) => { r.provenance.sha256 = "b".repeat(64); },
     (r) => { r.provenance.schema = "horizon.first-run.source-provenance.v1"; },
-    (r) => { r.schema = "horizon.waterline-ledger.v1"; },
+    (r) => { r.schema = "horizon.waterline-ledger.v2"; },
     (r) => { r.copy.alt += " changed"; },
     (r) => { r.unknown = true; },
   ]) {
@@ -115,7 +79,7 @@ test("lawfulness requires exact non-coercing source, provenance, copy, decode, a
     assert.equal(isWaterlineLedgerLawful(guard(candidate)), false);
   }
   assert.equal(isWaterlineLedgerLawful({ ...guard(registry), predecessorComplete: 1 }), false);
-  assert.equal(isWaterlineLedgerLawful({ ...guard(registry), decodedImage: { complete: true, naturalWidth: 1920, naturalHeight: 1080 } }), false);
+  assert.equal(isWaterlineLedgerLawful({ ...guard(registry), decodedImage: { complete: true, naturalWidth: 3840, naturalHeight: 2160 } }), false);
 });
 
 test("physical mutations independently fail closed", () => {
@@ -176,6 +140,7 @@ test("hotspot derives from source geometry and stays at least 44 CSS pixels", ()
 
 test("App integration uses one positive native selector and inverse guards for only the two owned launchers", () => {
   const app = readFileSync(fileURLToPath(new URL("../src/App.jsx", import.meta.url)), "utf8");
+  assert.match(app, /host14-environment-master-v1\.png/);
   assert.match(app, /waterlineLedgerNativeActive/);
   assert.match(app, /!waterlineLedgerNativeActive[^\n]+openObjectiveLedger/);
   assert.match(app, /!waterlineLedgerNativeActive[^\n]+openRemediationPlanner/);

@@ -7,11 +7,13 @@ import {
   rectanglesOverlap,
 } from "./responsiveImageProjection.js";
 
-export const WATERLINE_LEDGER_SCHEMA = "horizon.waterline-ledger.v2";
-export const WATERLINE_LEDGER_SOURCE_ID = "FRM15-A01";
-export const WATERLINE_LEDGER_PROVENANCE_SCHEMA = "horizon.first-run.frm15-source-provenance.v1";
-export const WATERLINE_LEDGER_PATH = "Visual Direction/Production Masters/2026-08-13-first-run-host14/host14-waterline-ledger-master-v1.png";
-export const WATERLINE_LEDGER_SOURCE_URL = null;
+export const WATERLINE_LEDGER_SCHEMA = "horizon.waterline-ledger.v3";
+export const WATERLINE_LEDGER_SOURCE_ID = "HA-IMG-H14-v1";
+export const WATERLINE_LEDGER_PROVENANCE_SCHEMA = "horizon.image-toolkit.production-master.v1";
+export const WATERLINE_LEDGER_PATH = "Visual Direction/Production Masters/2026-08-13-first-run-host14/host14-environment-master-v1.png";
+export const WATERLINE_LEDGER_SOURCE_URL = WATERLINE_LEDGER_PATH;
+export const WATERLINE_LEDGER_SOURCE_WIDTH = 1920;
+export const WATERLINE_LEDGER_SOURCE_HEIGHT = 1080;
 
 export const WATERLINE_LEDGER_COPY = Object.freeze({
   name: "Waterline Ledger",
@@ -24,7 +26,7 @@ export const WATERLINE_LEDGER_COPY = Object.freeze({
   mastered: "Both expedition records are complete. The wall records no completion and gives no reply.",
   returned: "The same dry approach, crossed materials, waterline, and service seams remain.",
   next_boundary: "Continue along the existing dry service seam after both expedition records are complete.",
-  alt: "A broad dry inclined basin face where one irregular mineral band crosses weathered foundation, later repair, and present service skin, with several service seams continuing upward and receded water nearby.",
+  alt: "A shallow, weathered alien construction lies embedded in a drained basin, its dark frame interlocked with pale ceramic forms and oxidized red layers.",
 });
 
 const freeze = (value) => {
@@ -42,43 +44,76 @@ const nullProtected = { predecessor: null, nextBoundary: null, liveWater: null, 
 export const WATERLINE_LEDGER_GUIDE_CORE = freeze({
   canvas: { width: 1536, height: 1024 },
   core: { x: 0, y: 80, width: 1536, height: 864 },
-  source: { width: 3840, height: 2160 },
-  scale: 2.5,
+  source: { width: WATERLINE_LEDGER_SOURCE_WIDTH, height: WATERLINE_LEDGER_SOURCE_HEIGHT },
+  scale: 1.25,
 });
 
 export const WATERLINE_LEDGER_CONTROL_GEOMETRY = freeze({
-  semanticTarget: { x: 750, y: 362.5, width: 2550, height: 1337.5 },
-  physicalCenter: { x: 1920, y: 1050 },
-  labelAnchor: { x: 1387.5, y: 50, width: 1065, height: 225, insetOuterCss: 3, insetTextCss: 5, focusSeparationCss: 8 },
+  semanticTarget: { x: 375, y: 181.25, width: 1275, height: 668.75 },
+  physicalCenter: { x: 960, y: 525 },
+  labelAnchor: { x: 693.75, y: 25, width: 532.5, height: 112.5, insetOuterCss: 3, insetTextCss: 5, focusSeparationCss: 8 },
   protected: {
-    predecessor: { x: 0, y: 1425, width: 325, height: 735 },
-    nextBoundary: { x: 3515, y: 550, width: 325, height: 650 },
-    liveWater: { x: 3575, y: 1262.5, width: 265, height: 897.5 },
-    returnRoute: { x: 0, y: 550, width: 287.5, height: 625 },
-    suspendedLandmark: { x: 3375, y: 0, width: 465, height: 425 },
-    crown: { x: 3400, y: 675, width: 440, height: 425 },
-    witness: { x: 0, y: 0, width: 440, height: 425 },
-    narrationUi: { x: 1300, y: 0, width: 1240, height: 287.5 },
+    predecessor: { x: 0, y: 712.5, width: 162.5, height: 367.5 },
+    nextBoundary: { x: 1757.5, y: 275, width: 162.5, height: 325 },
+    liveWater: { x: 1787.5, y: 631.25, width: 132.5, height: 448.75 },
+    returnRoute: { x: 0, y: 275, width: 143.75, height: 312.5 },
+    suspendedLandmark: { x: 1687.5, y: 0, width: 232.5, height: 212.5 },
+    crown: { x: 1700, y: 337.5, width: 220, height: 212.5 },
+    witness: { x: 0, y: 0, width: 220, height: 212.5 },
+    narrationUi: { x: 650, y: 0, width: 620, height: 143.75 },
   },
 });
 
-export const WATERLINE_LEDGER_REGISTRY = freeze({
+const waterlineLedgerRegistryBase = {
   schema: WATERLINE_LEDGER_SCHEMA,
-  source: nullSource,
-  provenance: null,
-  visibleGeometry: {
-    relation: null,
-    dryApproach: null,
-    histories: { foundation: null, repair: null, serviceSkin: null },
-    pairwiseContacts: { foundationRepair: [], foundationServiceSkin: [], repairServiceSkin: [] },
-    depositionTrace: null,
-    waterline: null,
-    serviceSeams: [],
+  source: {
+    enabled: true,
+    path: WATERLINE_LEDGER_PATH,
+    sourceId: WATERLINE_LEDGER_SOURCE_ID,
+    bytes: 3988028,
+    sha256: "57669ea3496b98eab3cf710acc2f5d3ba3c2f2de47d47022357fde07d94e36c1",
+    width: WATERLINE_LEDGER_SOURCE_WIDTH,
+    height: WATERLINE_LEDGER_SOURCE_HEIGHT,
+    format: "png",
+    color: "opaque-srgb-8",
   },
-  controlGeometry: { semanticTarget: null, physicalCenter: null, labelAnchor: null, protected: nullProtected },
+  provenance: {
+    schema: WATERLINE_LEDGER_PROVENANCE_SCHEMA,
+    path: WATERLINE_LEDGER_PATH,
+    sourceId: WATERLINE_LEDGER_SOURCE_ID,
+    bytes: 3988028,
+    sha256: "57669ea3496b98eab3cf710acc2f5d3ba3c2f2de47d47022357fde07d94e36c1",
+  },
+  visibleGeometry: {
+    relation: { x: 112.5, y: 125, width: 1700, height: 762.5 },
+    dryApproach: { x: 187.5, y: 725, width: 1550, height: 325 },
+    histories: {
+      foundation: { bounds: { x: 150, y: 175, width: 1612.5, height: 675 }, processEvidence: [{ x: 200, y: 250, width: 250, height: 250 }] },
+      repair: { bounds: { x: 325, y: 212.5, width: 1012.5, height: 543.75 }, processEvidence: [{ x: 450, y: 300, width: 250, height: 250 }] },
+      serviceSkin: { bounds: { x: 525, y: 187.5, width: 1112.5, height: 587.5 }, processEvidence: [{ x: 1100, y: 250, width: 250, height: 250 }] },
+    },
+    pairwiseContacts: {
+      foundationRepair: [{ x: 312.5, y: 225, width: 275, height: 225 }, { x: 487.5, y: 575, width: 287.5, height: 187.5 }],
+      foundationServiceSkin: [{ x: 1237.5, y: 175, width: 312.5, height: 237.5 }, { x: 1400, y: 562.5, width: 262.5, height: 212.5 }],
+      repairServiceSkin: [{ x: 656.25, y: 256.25, width: 275, height: 212.5 }, { x: 925, y: 493.75, width: 300, height: 237.5 }],
+    },
+    depositionTrace: {
+      bounds: { x: 250, y: 450, width: 1450, height: 175 },
+      points: [{ x: 281.25, y: 568.75 }, { x: 537.5, y: 506.25 }, { x: 775, y: 543.75 }, { x: 987.5, y: 593.75 }, { x: 1225, y: 493.75 }, { x: 1487.5, y: 531.25 }, { x: 1656.25, y: 587.5 }],
+      reactions: { foundation: { x: 281.25, y: 568.75 }, repair: { x: 775, y: 543.75 }, serviceSkin: { x: 1225, y: 493.75 } },
+    },
+    waterline: { x: 1650, y: 631.25, width: 270, height: 448.75 },
+    serviceSeams: [
+      { id: "seam-01", parent: null, points: [{ x: 525, y: 775 }, { x: 550, y: 575 }, { x: 512.5, y: 337.5 }, { x: 475, y: 131.25 }] },
+      { id: "seam-02", parent: null, points: [{ x: 950, y: 775 }, { x: 975, y: 625 }, { x: 937.5, y: 437.5 }, { x: 987.5, y: 225 }] },
+      { id: "seam-03", parent: null, points: [{ x: 1375, y: 775 }, { x: 1350, y: 600 }, { x: 1400, y: 425 }, { x: 1362.5, y: 175 }] },
+      { id: "seam-02-branch", parent: "seam-02", points: [{ x: 975, y: 625 }, { x: 1125, y: 437.5 }, { x: 1225, y: 250 }] },
+    ],
+  },
+  controlGeometry: WATERLINE_LEDGER_CONTROL_GEOMETRY,
   layouts: nullLayouts,
-  copy: null,
-});
+  copy: WATERLINE_LEDGER_COPY,
+};
 
 const ROOT_KEYS = ["schema", "source", "provenance", "visibleGeometry", "controlGeometry", "layouts", "copy"];
 const SOURCE_KEYS = ["enabled", "path", "sourceId", "bytes", "sha256", "width", "height", "format", "color"];
@@ -97,12 +132,12 @@ const COPY_KEYS = Object.keys(WATERLINE_LEDGER_COPY);
 const finite = (value) => typeof value === "number" && Number.isFinite(value);
 const sameKeys = (value, keys) => value != null && typeof value === "object" && !Array.isArray(value)
   && Object.keys(value).length === keys.length && keys.every((key) => Object.prototype.hasOwnProperty.call(value, key));
-const rect = (value, width = 3840, height = 2160) => value != null
+const rect = (value, width = WATERLINE_LEDGER_SOURCE_WIDTH, height = WATERLINE_LEDGER_SOURCE_HEIGHT) => value != null
   && sameKeys(value, ["x", "y", "width", "height"])
   && [value.x, value.y, value.width, value.height].every(finite)
   && value.x >= 0 && value.y >= 0 && value.width > 0 && value.height > 0
   && value.x + value.width <= width && value.y + value.height <= height;
-const point = (value, width = 3840, height = 2160) => sameKeys(value, ["x", "y"])
+const point = (value, width = WATERLINE_LEDGER_SOURCE_WIDTH, height = WATERLINE_LEDGER_SOURCE_HEIGHT) => sameKeys(value, ["x", "y"])
   && finite(value.x) && finite(value.y) && value.x >= 0 && value.y >= 0 && value.x <= width && value.y <= height;
 const pointInRect = (value, area) => point(value) && rect(area)
   && value.x >= area.x && value.x <= area.x + area.width && value.y >= area.y && value.y <= area.y + area.height;
@@ -133,7 +168,7 @@ export function mapWaterlineLedgerGuidePoint(value) {
   const y = Array.isArray(value) && value.length === 2 ? value[1] : value?.y;
   if (!(Array.isArray(value) ? value.length === 2 : sameKeys(value, ["x", "y"])) || !finite(x) || !finite(y)
     || x < 0 || x > 1536 || y < 80 || y > 944) return null;
-  return freeze({ x: x * 2.5, y: (y - 80) * 2.5 });
+  return freeze({ x: x * 1.25, y: (y - 80) * 1.25 });
 }
 
 export function mapWaterlineLedgerGuideRect(value) {
@@ -161,7 +196,7 @@ function sourcePass(source, provenance) {
     && source.sourceId === WATERLINE_LEDGER_SOURCE_ID
     && Number.isInteger(source.bytes) && source.bytes > 0 && source.bytes <= 30000000
     && /^[0-9a-f]{64}$/.test(source.sha256 ?? "")
-    && source.width === 3840 && source.height === 2160
+    && source.width === WATERLINE_LEDGER_SOURCE_WIDTH && source.height === WATERLINE_LEDGER_SOURCE_HEIGHT
     && source.format === "png" && source.color === "opaque-srgb-8"
     && sameKeys(provenance, PROVENANCE_KEYS)
     && provenance.schema === WATERLINE_LEDGER_PROVENANCE_SCHEMA
@@ -230,7 +265,7 @@ export function deriveWaterlineLedgerResponsiveEvidence(registry = WATERLINE_LED
     ...visible.serviceSeams.map((seam) => boundsForPoints(seam.points)), { x: control.physicalCenter.x, y: control.physicalCenter.y, width: 1, height: 1 }];
   const protectedRects = Object.values(control.protected);
   const entries = Object.entries(FIRST_RUN_RESPONSIVE_LAYOUTS).map(([id, viewport]) => {
-    const base = deriveResponsiveEvidence({ viewport, sourceWidth: 3840, sourceHeight: 2160, relation: visible.relation, semanticTarget: control.semanticTarget, essentialRects, protectedRects, objectFit: "cover", objectPosition: "50% 50%" });
+    const base = deriveResponsiveEvidence({ viewport, sourceWidth: WATERLINE_LEDGER_SOURCE_WIDTH, sourceHeight: WATERLINE_LEDGER_SOURCE_HEIGHT, relation: visible.relation, semanticTarget: control.semanticTarget, essentialRects, protectedRects, objectFit: "cover", objectPosition: "50% 50%" });
     if (!base) return [id, null];
     const label = projectSourceRect({ x: control.labelAnchor.x, y: control.labelAnchor.y, width: control.labelAnchor.width, height: control.labelAnchor.height }, base.geometry);
     const physical = projectSourceRect({ x: control.physicalCenter.x, y: control.physicalCenter.y, width: 1, height: 1 }, base.geometry);
@@ -290,7 +325,7 @@ function evidencePass(objectiveLedgerEvidence, remediationPlannerEvidence) {
 
 export function isWaterlineLedgerLawful({ predecessorComplete, registry = WATERLINE_LEDGER_REGISTRY, decodedImage, objectiveLedgerEvidence = null, remediationPlannerEvidence = null } = {}) {
   return predecessorComplete === true && sourcePass(registry?.source, registry?.provenance) && geometryPass(registry) && copyPass(registry.copy)
-    && layoutsPass(registry) && decodedImage?.complete === true && decodedImage.naturalWidth === 3840 && decodedImage.naturalHeight === 2160
+    && layoutsPass(registry) && decodedImage?.complete === true && decodedImage.naturalWidth === WATERLINE_LEDGER_SOURCE_WIDTH && decodedImage.naturalHeight === WATERLINE_LEDGER_SOURCE_HEIGHT
     && evidencePass(objectiveLedgerEvidence, remediationPlannerEvidence) != null;
 }
 
@@ -334,3 +369,8 @@ export function getWaterlineLedgerCopyForState(state) {
   if (state?.state === "complete") return WATERLINE_LEDGER_COPY.mastered;
   return WATERLINE_LEDGER_COPY.remediation_in_progress;
 }
+
+export const WATERLINE_LEDGER_REGISTRY = freeze({
+  ...waterlineLedgerRegistryBase,
+  layouts: buildWaterlineLedgerLayoutRecords(waterlineLedgerRegistryBase),
+});
