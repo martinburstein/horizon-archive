@@ -32,6 +32,8 @@ test("TD006 UI binds two released masters plus fail-closed native metadata", () 
   assert.match(component, /data-runtime-source-master/);
   assert.match(component, /data-strata-comb-state=\{host27State\}/);
   assert.match(component, /data-strata-comb-source=/);
+  assert.match(component, /data-pressure-language-organ-state=\{host28State\}/);
+  assert.match(component, /data-pressure-language-organ-source=/);
   assert.match(component, /<img/);
   assert.doesNotMatch(component, /STRUCTURAL PLACEHOLDER|data-placeholder-owner|interval-world-placeholder/);
   assert.doesNotMatch(controller, /SC-08|BRAIDED VERGE|RP-007/i);

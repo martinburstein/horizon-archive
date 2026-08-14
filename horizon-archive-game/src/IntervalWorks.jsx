@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import strataCombImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host27/host27-environment-master-v1.png";
+import pressureLanguageOrganImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host28/host28-environment-master-v1.png";
 import {
   intervalWorksActions,
   intervalWorksObservationIds,
@@ -8,7 +9,7 @@ import {
 import { braidedVergeActions } from "./BraidedVergeNormal.js";
 import intervalWorksPanorama from "../../Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-panorama-runtime-master-v1.webp";
 import intervalWorksCrosssection from "../../Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-crosssection-runtime-master-v1.webp";
-import { STRATA_COMB_COPY, STRATA_COMB_REGISTRY, deriveStrataCombState } from "./intervalHosts.js";
+import { PRESSURE_LANGUAGE_ORGAN_COPY, PRESSURE_LANGUAGE_ORGAN_REGISTRY, STRATA_COMB_COPY, STRATA_COMB_REGISTRY, derivePressureLanguageOrganState, deriveStrataCombState } from "./intervalHosts.js";
 
 const host27Groups = new Set(["iw00_orientation", "iw10_observations", "iw20_python_primary", "iw20_python_trace", "iw20_python_transfer"]);
 
@@ -176,6 +177,7 @@ function IntervalWorksForm({ form, onFieldChange }) {
 export function IntervalWorks({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
   const host27DecodedImage = useDecodedImage(STRATA_COMB_REGISTRY.source.enabled, strataCombImage);
+  const host28DecodedImage = useDecodedImage(PRESSURE_LANGUAGE_ORGAN_REGISTRY.source.enabled, pressureLanguageOrganImage);
   const scene = resolveIntervalWorksWorldScene(state);
   const isCrosssection = scene?.role === "SC-07-CROSSSECTION-MASTER";
   const alt = isCrosssection
@@ -184,9 +186,13 @@ export function IntervalWorks({ state, onAction, onFieldChange }) {
   const releasedImageSource = isCrosssection ? intervalWorksCrosssection : intervalWorksPanorama;
   const host27State = deriveStrataCombState({ decodedImage: host27DecodedImage });
   const host27NativeActive = scene?.sceneId === "SC-07" && host27State !== "hidden" && host27Groups.has(state.activeGroup);
-  const imageSource = host27NativeActive ? strataCombImage : releasedImageSource;
-  const selectedAlt = host27NativeActive ? STRATA_COMB_COPY.alt : alt;
-  const imageSourceName = host27NativeActive
+  const host28State = derivePressureLanguageOrganState({ decodedImage: host28DecodedImage });
+  const host28NativeActive = scene?.sceneId === "SC-07" && host28State !== "hidden" && !host27NativeActive;
+  const imageSource = host28NativeActive ? pressureLanguageOrganImage : host27NativeActive ? strataCombImage : releasedImageSource;
+  const selectedAlt = host28NativeActive ? PRESSURE_LANGUAGE_ORGAN_COPY.alt : host27NativeActive ? STRATA_COMB_COPY.alt : alt;
+  const imageSourceName = host28NativeActive
+    ? "host28-environment-master-v1.png"
+    : host27NativeActive
     ? "host27-environment-master-v1.png"
     : isCrosssection
     ? "sc07-interval-works-crosssection-runtime-master-v1.webp"
@@ -213,6 +219,8 @@ export function IntervalWorks({ state, onAction, onFieldChange }) {
       data-crop-id={scene?.cropId}
       data-strata-comb-state={host27State}
       data-strata-comb-native-active={host27NativeActive ? "true" : undefined}
+      data-pressure-language-organ-state={host28State}
+      data-pressure-language-organ-native-active={host28NativeActive ? "true" : undefined}
       ref={rootRef}
     >
       <figure className={`interval-world ${isCrosssection ? "is-crosssection" : "is-panorama"}`}>
@@ -222,6 +230,7 @@ export function IntervalWorks({ state, onAction, onFieldChange }) {
           data-image-role={scene?.role}
           data-runtime-source-master={imageSourceName}
           data-strata-comb-source={host27NativeActive ? STRATA_COMB_REGISTRY.source.path : undefined}
+          data-pressure-language-organ-source={host28NativeActive ? PRESSURE_LANGUAGE_ORGAN_REGISTRY.source.path : undefined}
         />
         <figcaption>
           Expedition view only. These visible relations support bounded description, not a
