@@ -1,0 +1,76 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-15",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-15-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1
+  },
+  "must_show": [
+    "a monumental dark incomplete geometric frame suspended above the basin without touching water",
+    "a separate reachable grounded multi-depth counterpoise beneath the frame",
+    "the grounded structure rooted into a raised process shelf with a continuous dry on-foot approach",
+    "water below and mist passing through the suspended frame",
+    "the environment remains silent and physically unchanged"
+  ],
+  "player_critical_facts": [
+    "the monumental suspended frame and the reachable grounded host are clearly separate objects",
+    "the reachable focal structure is grounded into a raised shelf and accessible on foot",
+    "the suspended frame remains overhead, incomplete, silent, and does not move or respond",
+    "water and mist continue through the basin without being controlled by the player",
+    "no text, message, reward, character, invitation, or world-response cue"
+  ],
+  "art_direction_preferences": [
+    "the suspended frame dominates the chapter-scale skyline without resembling a human building",
+    "the grounded counterpoise has several coupled depths and unfamiliar load relationships",
+    "service seams from the preceding waterline rise visually into the grounded structure",
+    "the route feels like a material pilgrimage rather than a ceremonial human causeway",
+    "cool dark mineral palette with water reflection and mist depth"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "on-foot access without swimming or climbing into the suspended frame",
+    "silence and world invariance"
+  ],
+  "avoid": [
+    "human palace, cathedral, gantry, crane, bridge, station, tower, spaceship, or industrial machinery",
+    "stairs, road, rail, signage, console, throne, door, or invitation",
+    "text, glyphs, UI, characters, glow, beacon, reward, answer, or watermark",
+    "the grounded host appearing suspended or the overhead frame appearing reachable",
+    "the landmark moving, opening, activating, acknowledging, or responding"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-13-first-run-host15/host15-environment-master-v1.png",
+    "alt_text": "A monumental incomplete frame hangs silently above a drowned basin while a separate grounded alien coupling waits on a reachable dry shelf below.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 1,
+    "practical_score": 19,
+    "hard_gate": "pass",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "remaining_compromises": [
+      "the lower-middle composition is visually dense",
+      "the restrained palette could support slightly more variation",
+      "mist may soften a few secondary navigation details"
+    ]
+  }
+}
