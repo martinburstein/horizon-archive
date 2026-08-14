@@ -1,0 +1,73 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-16",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-16-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "exhaust_budget": true
+  },
+  "must_show": [
+    "an intimate blue-black damp alien corridor with a traversable opening continuing into violet mist",
+    "a dramatic collapsed multi-axis assembly lying across the right floor and wall around one restrained violet lens",
+    "a separate quieter three-aperture coupling rooted into wall-and-floor service laminates on the left beside the route",
+    "the coupling's three apertures at visibly different depths and orientations",
+    "a small dry apron at the coupling with the walking gap left clear"
+  ],
+  "player_critical_facts": [
+    "the fallen right assembly and the actual left coupling are visibly separate objects",
+    "no wire, cable, socket, or material bridge connects the two objects",
+    "the left coupling is grounded, reachable on foot, and rooted into the corridor's wall-and-floor mounting channels",
+    "the onward walking volume remains open behind the coupling toward violet mist",
+    "neither object activates, speaks, tracks, acknowledges, or responds"
+  ],
+  "art_direction_preferences": [
+    "the fallen assembly seizes initial attention through silhouette without becoming a humanoid robot",
+    "the actual coupling is quieter but readable through placement and three distinct aperture depths",
+    "empty nonhuman mounts recur at several heights in the damp channel field",
+    "violet light remains restrained atmospheric depth rather than a beacon",
+    "the scale shift from open basin to intimate corridor feels immediate and melancholy"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "dry on-foot access and open passage",
+    "silence, privacy, and world invariance"
+  ],
+  "avoid": [
+    "humanoid robot, skeleton, corpse, face, person, creature, or biological anatomy",
+    "the coupling installed inside, wired to, or made from the fallen assembly",
+    "plug, cable, wire, socket, umbilical, console, screen, speaker, or operating station",
+    "door, stairs, road, rail, signage, text, glyphs, UI, watermark, or instruction",
+    "glow beacon, activation, tracking eye, invitation, reward, answer, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-13-first-run-host16/host16-environment-master-v1.png",
+    "alt_text": "A silent fallen alien assembly rests on the right of a damp corridor while a separate three-aperture coupling stands beside the open route on the left.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 12,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 20,
+    "attempts_unused": 0,
+    "remaining_compromises": []
+  }
+}
