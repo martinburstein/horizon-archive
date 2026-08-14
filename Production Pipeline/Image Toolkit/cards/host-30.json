@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-30",
-  "status": "blocked_no_artifact",
+  "status": "produced_pending_integration",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-30-api-v1.md",
@@ -62,14 +62,18 @@
     "interaction_geometry": null
   },
   "selection": {
-    "status": "blocked_no_artifact",
-    "selected_attempt": null,
-    "practical_score": null,
-    "hard_gate": "not_evaluated_no_artifact",
-    "attempts_used": 20,
-    "attempts_unused": 0,
+    "status": "done_practical_rubric_after_authorized_recovery",
+    "selected_attempt": 21,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "lifetime_attempts_launched": 21,
+    "prior_no_artifact_attempts": 20,
     "remaining_compromises": [
-      "no decodable candidate was returned by any launched request"
+      "a subtle ambient violet highlight could be mistaken for energy at a glance",
+      "the composition is slightly weighted toward one side",
+      "minor shadow debris slightly softens local clarity"
     ]
   }
 }

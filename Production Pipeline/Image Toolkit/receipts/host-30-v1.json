@@ -1,0 +1,55 @@
+{
+  "schema": "horizon.image-receipt.v1",
+  "accepted_at_utc": "2026-08-14T18:41:22.0182973Z",
+  "asset_id": "host-30",
+  "tool": "openai-image-api:gpt-image-2",
+  "operation": "generate",
+  "prompt": {
+    "path": "C:\\Users\\marti\\OneDrive\\Desktop\\Horizon Archive\\Production Pipeline\\Image Toolkit\\prompts\\host-30-api-v1.md",
+    "sha256": "96cbef495807caaf76276f7ccc303a2659e80fe96694c502c1b29e7acaf752bb"
+  },
+  "selected_attempt_prompt": {
+    "path": "C:\\Users\\marti\\OneDrive\\Desktop\\Horizon Archive\\Production Pipeline\\Image Toolkit\\prompts\\host-30-api-v1.md",
+    "sha256": "96cbef495807caaf76276f7ccc303a2659e80fe96694c502c1b29e7acaf752bb"
+  },
+  "round": {
+    "hard_limit": 20,
+    "attempts_launched": 1,
+    "attempts_unused": 19,
+    "technical_passes": 1,
+    "practical_passes": 1,
+    "api_failures": 0,
+    "best_attempt": 1,
+    "best_score": 20,
+    "stop_reason": "first_practical_pass",
+    "lifetime_selected_attempt": 21,
+    "lifetime_attempts_launched": 21,
+    "prior_no_artifact_attempts": 20
+  },
+  "source": {
+    "path": "C:\\Users\\marti\\OneDrive\\Desktop\\Horizon Archive\\Production Pipeline\\Image Toolkit\\work\\host-30\\attempt-21-api.png",
+    "width": 1920,
+    "height": 1088,
+    "format": "PNG",
+    "mode": "RGB",
+    "alpha": false,
+    "animated": false,
+    "metadata_keys": [],
+    "bytes": 3635418,
+    "sha256": "f54d94faf7b98807a7c1bef9a71b92ae2f898f16fdeef79bdf1ce4f2056551ce",
+    "pass": true
+  },
+  "final": {
+    "path": "C:\\Users\\marti\\OneDrive\\Desktop\\Horizon Archive\\Visual Direction\\Production Masters\\2026-08-14-first-run-host30\\host30-environment-master-v1.png",
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "alpha": false,
+    "animated": false,
+    "metadata_keys": [],
+    "bytes": 3264764,
+    "sha256": "a9541825572da01ebbd84dea3b5131efbb0dd9bb021869820f4b43098d937834",
+    "pass": true
+  }
+}
