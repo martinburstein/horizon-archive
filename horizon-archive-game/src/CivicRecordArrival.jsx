@@ -1,4 +1,5 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import nestedCustodyFolioImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host19/host19-environment-master-v1.png";
 import civicRecordArrivalMaster from "../../Visual Direction/Production Masters/2026-07-16-civic-record-district-arrival/civic-record-district-arrival-master-v1.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import {
@@ -48,12 +49,27 @@ import {
   CUSTODY_LEDGER_RETURN_SAFELY,
 } from "./CustodyLedgerRAIAtomicSaveCommit.js";
 import { CUSTODY_LEDGER_RETURN_CITY_THRESHOLD } from "./CustodyLedgerRAIVerifiedRestore.js";
+import { NESTED_CUSTODY_FOLIO_COPY, NESTED_CUSTODY_FOLIO_REGISTRY, deriveNestedCustodyFolioState } from "./civicRecordHosts.js";
 
 function formatCustodyLedgerValue(value) {
   if (value === null) return "None";
   if (value === true) return "True";
   if (value === false) return "False";
   return String(value);
+}
+
+function useDecodedImage(enabled, src) {
+  const [decoded, setDecoded] = useState(null);
+  useEffect(() => {
+    if (!enabled) { setDecoded(null); return undefined; }
+    let connected = true;
+    const image = new Image();
+    image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight });
+    image.onerror = () => connected && setDecoded(null);
+    image.src = src;
+    return () => { connected = false; image.onload = null; image.onerror = null; };
+  }, [enabled, src]);
+  return decoded;
 }
 
 export function CivicRecordArrival({
@@ -126,6 +142,7 @@ export function CivicRecordArrival({
   const [raiTransferResponses, setRAITransferResponses] = useState({});
   const [raiTransferGuideResponses, setRAITransferGuideResponses] = useState({});
   const [raiExplanationResponses, setRAIExplanationResponses] = useState({});
+  const nestedCustodyFolioDecodedImage = useDecodedImage(NESTED_CUSTODY_FOLIO_REGISTRY.source.enabled, nestedCustodyFolioImage);
   const atNearObservation = routeState.boardId === "SC-03-10";
   const atFarObservation = routeState.boardId === "SC-03-20";
   const atLocalComparison = routeState.boardId === "SC-03-30";
@@ -153,6 +170,8 @@ export function CivicRecordArrival({
   const returnActions = routeState.availableActions.filter((action) => action === routeState.routeReturnAction);
 
   const primaryPhase = primaryInteraction?.phase ?? (atPythonPrimary ? "30-A0" : null);
+  const nestedCustodyFolioState = deriveNestedCustodyFolioState({ decodedImage: nestedCustodyFolioDecodedImage });
+  const nestedCustodyFolioNativeActive = nestedCustodyFolioState !== "hidden" && !atFarObservation && !String(primaryPhase ?? "").startsWith("RAI") && !String(primaryPhase ?? "").startsWith("RG-") && primaryPhase !== "RAD-20";
   const saveResultOwnsActions = [
     "recoverable_save_failure",
     "comparison_complete",
@@ -486,6 +505,8 @@ export function CivicRecordArrival({
         data-scene="civic-record-district"
         data-board={routeState.boardId}
         data-production-art={artRegistration}
+        data-nested-custody-folio-state={nestedCustodyFolioState}
+        data-nested-custody-folio-native-active={nestedCustodyFolioNativeActive ? "true" : undefined}
         data-production-art-hook={atNearObservation
           ? "SC-03-10-detail-pending"
           : atFarObservation
@@ -507,8 +528,9 @@ export function CivicRecordArrival({
         >
           <img
             className="city-world-plate-native"
-            src={civicRecordArrivalMaster}
-            alt="An immense nonhuman civic landscape of layered mineral infrastructure and glowing geothermal return channels, viewed in first person"
+            src={nestedCustodyFolioNativeActive ? nestedCustodyFolioImage : civicRecordArrivalMaster}
+            alt={nestedCustodyFolioNativeActive ? NESTED_CUSTODY_FOLIO_COPY.alt : "An immense nonhuman civic landscape of layered mineral infrastructure and glowing geothermal return channels, viewed in first person"}
+            data-nested-custody-folio-source={nestedCustodyFolioNativeActive ? NESTED_CUSTODY_FOLIO_REGISTRY.source.path : undefined}
           />
         </section>
         <section className="city-command-panel" aria-labelledby="rp002-arrival-heading">

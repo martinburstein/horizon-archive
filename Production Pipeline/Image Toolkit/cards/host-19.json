@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-19",
-  "status": "produced_pending_integration",
+  "status": "integration_candidate",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-19-api-v1.md",
@@ -59,7 +59,9 @@
   "integration": {
     "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host19/host19-environment-master-v1.png",
     "alt_text": "Blank nested mineral shapes sit within a repaired alien civic mass beside a small heat-return coupling and an open perimeter route.",
-    "interaction_geometry": null
+    "interaction_geometry": "horizon-archive-game/src/civicRecordHosts.js#NESTED_CUSTODY_FOLIO_REGISTRY",
+    "runtime_source": "horizon-archive-game/src/CivicRecordArrival.jsx",
+    "candidate_status": "focused_pass_pending_aggregate_release"
   },
   "selection": {
     "status": "done_forced_completion",
