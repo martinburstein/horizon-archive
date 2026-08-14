@@ -1,0 +1,72 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-31",
+  "status": "in_progress_credit_hold",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-31-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "an immense open reach containing a laminated ribbon, a cellular mantle, and an independently arriving refractory filament fan",
+    "a readable set of nearby relations: one familiar contact, one comparable non-contact passage, one filament-to-ribbon contact, and one fully opaque casing",
+    "a small reachable isolated replica body beneath the open passage holding contact and non-contact samples without ranking either",
+    "a low coupling on a stable dry cleft rim with a usable route"
+  ],
+  "player_critical_facts": [
+    "three visibly distinct manufactured material families coexist in the same environmental conditions while remaining independently traceable",
+    "both contact and non-contact are physically visible, and neither is framed as success, failure, hierarchy, or universal rule",
+    "the small replica body is reachable beneath the open passage and contains only isolated comparison samples rather than live work or a central hidden core",
+    "the opaque casing reveals no interior relation and nothing in the scene answers, rewards, activates, or changes because of the viewer"
+  ],
+  "art_direction_preferences": [
+    "the four relations read through spatial arrangement rather than labels or diagram panels",
+    "the third filament family has a refractory comb-like structure distinct from ribbon and mantle",
+    "the replica body feels like ordinary evidence infrastructure, small relative to the reach",
+    "the open reach feels immense, maintained, tactile, nonbiological, and quietly beautiful"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "stable dry access to the low coupling",
+    "indifferent operation without player causation or hidden-interior claims"
+  ],
+  "avoid": [
+    "central glowing core, reactor, command center, brain, heart, eye, camera, shrine, altar, monument, trophy, or success pedestal",
+    "diagram, four labeled stations, comparison chart, classroom display, exhibit, text, numbers, signage, glyphs, UI, HUD, marker, waypoint, or watermark",
+    "merged materials, universal contact, universal separation, winner and loser, causal arrows, hierarchy, ranking, answer, reward, or response",
+    "open casing, window, portal, cutaway, transparent shell, interior reveal, secret access, invitation, or hidden core",
+    "humanoid, vehicle, guard, robot, creature, roots, vines, coral, intestines, nerves, muscle, bone, or dominant biology"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host31/host31-environment-master-v1.png",
+    "alt_text": "Three distinct material families cross an open reach beside contact and non-contact samples in a small accessible replica body, while an opaque casing reveals nothing within.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "in_progress_credit_hold",
+    "selected_attempt": null,
+    "practical_score": null,
+    "hard_gate": "not_evaluated_no_artifact",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "remaining_compromises": [
+      "attempt 1 returned no artifact because the API organization has no credits remaining"
+    ]
+  }
+}

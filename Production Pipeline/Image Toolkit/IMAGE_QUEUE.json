@@ -20,7 +20,7 @@
     {"asset_id": "host-28", "address": "FR-10", "status": "produced_pending_integration", "card": "cards/host-28.json"},
     {"asset_id": "host-29", "address": "FR-11", "status": "produced_pending_integration", "card": "cards/host-29.json"},
     {"asset_id": "host-30", "address": "FR-11", "status": "blocked_no_artifact", "card": "cards/host-30.json"},
-    {"asset_id": "host-31", "address": "FR-12", "status": "queued"},
+    {"asset_id": "host-31", "address": "FR-12", "status": "in_progress", "card": "cards/host-31.json"},
     {"asset_id": "host-32", "address": "FR-12", "status": "queued"},
     {"asset_id": "host-33", "address": "FR-13", "status": "queued"},
     {"asset_id": "host-34", "address": "FR-13", "status": "queued"},
