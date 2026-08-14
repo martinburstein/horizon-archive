@@ -12,7 +12,7 @@
     {"asset_id": "host-20", "address": "FR-06", "status": "integration_candidate", "card": "cards/host-20.json"},
     {"asset_id": "host-21", "address": "FR-07", "status": "integration_candidate", "card": "cards/host-21.json"},
     {"asset_id": "host-22", "address": "FR-07", "status": "integration_candidate", "card": "cards/host-22.json"},
-    {"asset_id": "host-23", "address": "FR-08", "status": "produced_pending_integration", "card": "cards/host-23.json"},
+    {"asset_id": "host-23", "address": "FR-08", "status": "integration_candidate", "card": "cards/host-23.json"},
     {"asset_id": "host-24", "address": "FR-08", "status": "produced_pending_integration", "card": "cards/host-24.json"},
     {"asset_id": "host-25", "address": "FR-09", "status": "produced_pending_integration", "card": "cards/host-25.json"},
     {"asset_id": "host-26", "address": "FR-09", "status": "produced_pending_integration", "card": "cards/host-26.json"},
