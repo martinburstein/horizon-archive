@@ -1,0 +1,73 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-28",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-28-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a large alien pressure-relief detour integrated into persistent outer joints",
+    "a reachable nonhuman pressure manifold with many cavities oriented in different directions",
+    "clear physical airflow or pressure paths linking the cavities into a structured cadence",
+    "continuous operation extending beyond the focal host and onward after the local overlay",
+    "silent indifferent infrastructure without speaker, word, message, or correctness response"
+  ],
+  "player_critical_facts": [
+    "the host is a manufactured pressure-relief manifold embedded in the detour, with multiple cavities aimed in different directions rather than a musical instrument, speaker, mouth, or biological organ",
+    "the cavity geometry and connected pressure paths make a structured environmental cadence physically plausible before any interface explanation",
+    "the cadence remains nonlinguistic: no word, speaker, voice, writing, semantic symbol, or answer is present or implied",
+    "pressure continuity visibly extends past the host and continues after the local overlay closes, without pause, activation, reward, correction, or world response",
+    "a stable dry route and persistent outer joints carry the player safely onward"
+  ],
+  "art_direction_preferences": [
+    "different cavity orientations create visual rhythm without looking like organ pipes or a face",
+    "pressure is suggested by dust, membranes, suspended grit, or subtle deformation rather than glowing sound waves",
+    "the manifold feels like ordinary maintained alien infrastructure rather than a puzzle or communication device",
+    "outer joints lead toward a much larger region without revealing later story answers",
+    "the mood is tactile, quiet, immense, beautiful, and nonbiological"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "stable dry on-foot access and visible onward continuity",
+    "invariant pressure operation without player causation"
+  ],
+  "avoid": [
+    "pipe organ, church organ, flute, whistle, horn, musical instrument, speaker, microphone, headphones, radio, phonograph, synthesizer, audio mixer, equalizer, waveform display, or concert staging",
+    "mouth, lips, throat, lungs, ear, face, skull, creature, organ tissue, plant, coral, mushroom, flower, or biological anatomy",
+    "letters, words, language glyphs, subtitle, speech bubble, translation, code, alphabet, message, answer, voice visualization, or semantic symbols",
+    "correct and incorrect lights, applause, response pulse, activation, reward, greeting, refusal, tracking, acknowledgement, or player-caused change",
+    "screen, console, keyboard, chart, graph, score, text, numbers, signage, UI, HUD, marker, waypoint, beacon, watermark, humanoid, vehicle, guard, or robot"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host28/host28-environment-master-v1.png",
+    "alt_text": "An alien pressure-relief manifold uses differently oriented cavities to sustain a physical cadence along an exterior detour without forming speech or response.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 1,
+    "practical_score": 19,
+    "hard_gate": "pass",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "remaining_compromises": []
+  }
+}

@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: private Full HD cinematic game-environment plate
+
+Create a wide first-person view along a vast alien pressure-relief detour integrated into persistent outer joints of ancient interval works. The focal host is a reachable low nonhuman pressure manifold built into stable dry infrastructure. Many cavities open in deliberately different directions and connect through visible pressure channels. Their unequal geometry makes a structured physical cadence plausible through changing pressure, dust, suspended grit, and subtle material flex before any interface explanation.
+
+This is pressure infrastructure, not language. The cadence does not form words, voice, a speaker, a message, an answer, or proof of intelligence. The host is not a pipe organ, musical instrument, speaker, microphone, mouth, throat, lungs, ear, face, skull, or biological organ. No cavity resembles a mouth or face. No glowing sound waves, waveform display, subtitles, glyphs, or semantic symbols.
+
+Pressure continuity visibly enters from the detour, passes through and around the manifold, and continues beyond it along persistent outer joints after the local overlay closes. Nothing pauses into a word. Nothing activates, rewards, corrects, acknowledges, greets, refuses, tracks, or changes because of the viewer. A stable dry service route follows the same outward continuity toward a much larger region.
+
+Composition: cinematic 16:9 first-person environment; the multi-oriented cavity manifold is a clear grounded focal point; connected pressure channels and persistent outer joints create a readable directional flow through the frame; subtle dust and flex imply cadence without graphics; the dry route and continuing outer structure remain visible. Preserve crop-safe hierarchy, useful negative space, stable footing, and depth.
+
+Style: premium photoreal tactile alien archaeology, rigorous nonhuman pressure engineering, asymmetrical mineral-ceramic cavities, dark load-bearing laminates, restrained amber-violet maintenance light, subtle vapor, suspended grit, ancient repair, beautiful long-refined infrastructure, serious quiet melancholy, no generic sleek sci-fi.
+
+No pipe organ, church organ, flute, whistle, horn, musical instrument, speaker, microphone, headphones, radio, phonograph, synthesizer, mixer, equalizer, waveform, concert, mouth, lips, throat, lungs, ear, face, skull, creature, organ tissue, plant, coral, mushroom, flower, letters, words, alphabet, language glyphs, subtitle, speech bubble, translation, code, message, answer, voice visualization, semantic symbol, correct/incorrect light, applause, response pulse, activation, reward, greeting, refusal, tracking, acknowledgement, screen, console, keyboard, chart, graph, score, text, number, signage, UI, HUD, marker, waypoint, beacon, watermark, humanoid, vehicle, guard, robot, or world response.
