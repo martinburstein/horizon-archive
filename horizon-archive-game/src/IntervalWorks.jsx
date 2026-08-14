@@ -1,4 +1,5 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import strataCombImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host27/host27-environment-master-v1.png";
 import {
   intervalWorksActions,
   intervalWorksObservationIds,
@@ -7,6 +8,23 @@ import {
 import { braidedVergeActions } from "./BraidedVergeNormal.js";
 import intervalWorksPanorama from "../../Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-panorama-runtime-master-v1.webp";
 import intervalWorksCrosssection from "../../Visual Direction/Production Masters/2026-07-29-rp006-interval-works-runtime/sc07-interval-works-crosssection-runtime-master-v1.webp";
+import { STRATA_COMB_COPY, STRATA_COMB_REGISTRY, deriveStrataCombState } from "./intervalHosts.js";
+
+const host27Groups = new Set(["iw00_orientation", "iw10_observations", "iw20_python_primary", "iw20_python_trace", "iw20_python_transfer"]);
+
+function useDecodedImage(enabled, src) {
+  const [decoded, setDecoded] = useState(null);
+  useEffect(() => {
+    if (!enabled) { setDecoded(null); return undefined; }
+    let connected = true;
+    const image = new Image();
+    image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight });
+    image.onerror = () => connected && setDecoded(null);
+    image.src = src;
+    return () => { connected = false; image.onload = null; image.onerror = null; };
+  }, [enabled, src]);
+  return decoded;
+}
 
 const headingCopy = {
   iw00_orientation: "Interval Works",
@@ -157,13 +175,20 @@ function IntervalWorksForm({ form, onFieldChange }) {
 
 export function IntervalWorks({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
+  const host27DecodedImage = useDecodedImage(STRATA_COMB_REGISTRY.source.enabled, strataCombImage);
   const scene = resolveIntervalWorksWorldScene(state);
   const isCrosssection = scene?.role === "SC-07-CROSSSECTION-MASTER";
   const alt = isCrosssection
     ? "Close first-person material section. Dark underlay and translucent overlay meet pale crossing repairs and a thinner covering deposit. A changed branch form, a continuous dark phase, a sealed opaque interval with an external bypass, and compatible layers remain visible together."
     : "First-person panorama across immense nested mineral and glass-ceramic works. Pale repaired seams cross dark exposed layers around a broad opaque interval while maintained conductive lines continue beyond the view.";
-  const imageSource = isCrosssection ? intervalWorksCrosssection : intervalWorksPanorama;
-  const imageSourceName = isCrosssection
+  const releasedImageSource = isCrosssection ? intervalWorksCrosssection : intervalWorksPanorama;
+  const host27State = deriveStrataCombState({ decodedImage: host27DecodedImage });
+  const host27NativeActive = scene?.sceneId === "SC-07" && host27State !== "hidden" && host27Groups.has(state.activeGroup);
+  const imageSource = host27NativeActive ? strataCombImage : releasedImageSource;
+  const selectedAlt = host27NativeActive ? STRATA_COMB_COPY.alt : alt;
+  const imageSourceName = host27NativeActive
+    ? "host27-environment-master-v1.png"
+    : isCrosssection
     ? "sc07-interval-works-crosssection-runtime-master-v1.webp"
     : "sc07-interval-works-panorama-runtime-master-v1.webp";
 
@@ -186,14 +211,17 @@ export function IntervalWorks({ state, onAction, onFieldChange }) {
       data-scene-id={scene?.sceneId}
       data-scene-role={scene?.role}
       data-crop-id={scene?.cropId}
+      data-strata-comb-state={host27State}
+      data-strata-comb-native-active={host27NativeActive ? "true" : undefined}
       ref={rootRef}
     >
       <figure className={`interval-world ${isCrosssection ? "is-crosssection" : "is-panorama"}`}>
         <img
           src={imageSource}
-          alt={alt}
+          alt={selectedAlt}
           data-image-role={scene?.role}
           data-runtime-source-master={imageSourceName}
+          data-strata-comb-source={host27NativeActive ? STRATA_COMB_REGISTRY.source.path : undefined}
         />
         <figcaption>
           Expedition view only. These visible relations support bounded description, not a
