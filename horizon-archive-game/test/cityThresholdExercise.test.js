@@ -169,7 +169,7 @@ test("RP-001 world and command panel reflow within the fluid responsive frame", 
 });
 
 test("normalized route hotspots and lower controls remain bounded on representative layouts", () => {
-  assert.match(cityComponent, /return <CityHotspot rect=\{cityThresholdHotspots\[board\]\.forward\} label="ENTER CIVIC DISTRICT"/);
+  assert.match(cityComponent, /return <CityHotspot rect=\{activeBoardHotspots\.forward\} label="ENTER CIVIC DISTRICT"/);
   assert.doesNotMatch(cityComponent, /onReturnToCredits|RETURN TO PROLOGUE CREDITS/);
 
   for (const [hostWidth, hostHeight] of [[1600, 900], [1920, 1080], [360, 800]]) {

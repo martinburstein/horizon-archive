@@ -40,6 +40,12 @@ test("Host 17 maps source-derived coupling, cycles, and route to canonical and n
     assert.ok(rect.canonical[2] >= 44 && rect.canonical[3] >= 44);
     assert.ok(rect.narrow[2] >= 44 && rect.narrow[3] >= 44);
   }
+  const overlaps = (left, right) => left[0] < right[0] + right[2]
+    && left[0] + left[2] > right[0]
+    && left[1] < right[1] + right[3]
+    && left[1] + left[3] > right[1];
+  assert.equal(overlaps(hotspots["SC-02-00"].cycles.canonical, hotspots["SC-02-00"].routePreview.canonical), false);
+  assert.equal(overlaps(hotspots["SC-02-00"].cycles.narrow, hotspots["SC-02-00"].routePreview.narrow), false);
   assert.match(CONDENSATE_SPINE_COPY.alt, /already-lit alien civic bridge/i);
 });
 

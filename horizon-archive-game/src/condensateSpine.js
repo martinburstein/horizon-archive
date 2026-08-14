@@ -51,6 +51,7 @@ const geometry = {
   relation: { x: 120, y: 945, width: 250, height: 100 },
   semanticTarget: { x: 75, y: 930, width: 360, height: 150 },
   bridge: { x: 1140, y: 495, width: 740, height: 320 },
+  routeTarget: { x: 1530, y: 520, width: 350, height: 260 },
   operatingCycles: { x: 850, y: 500, width: 600, height: 460 },
   dryEdge: { x: 0, y: 850, width: 480, height: 230 },
 };
@@ -195,7 +196,7 @@ function cityRect(rect) {
 export function getCondensateSpineHotspots(registry = CONDENSATE_SPINE_REGISTRY) {
   if (!Object.values(auditCondensateSpineRegistry(registry)).every(Boolean)) return null;
   const coupling = cityRect(registry.geometry.semanticTarget);
-  const bridge = cityRect(registry.geometry.bridge);
+  const bridge = cityRect(registry.geometry.routeTarget);
   const cycles = cityRect(registry.geometry.operatingCycles);
   return freeze({
     "SC-02-00": { cycles, boundary: coupling, routePreview: bridge },

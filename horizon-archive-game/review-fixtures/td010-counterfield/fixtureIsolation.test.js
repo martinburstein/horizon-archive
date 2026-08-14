@@ -62,8 +62,8 @@ test("TD010 fixture freezes layouts, presentation modes, and longest-copy eviden
   const css = readFileSync(new URL("./fixture.css", import.meta.url), "utf8"); assert.match(css, /CanvasText/); assert.match(css, /animation:none!important/); assert.match(css, /grayscale\(1\)/);
 });
 
-test("TD010 production graph retires image placeholders and contains no protected or successor source", () => {
+test("TD010 production graph uses fail-closed accepted masters and contains no protected or successor source", () => {
   const source = ["../../src/CounterfieldNormal.js", "../../src/Counterfield.jsx", "../../src/App.jsx"].map((path) => readFileSync(new URL(path, import.meta.url), "utf8")).join("\n");
-  assert.match(source, /SC-11-COUNTERFIELD-PANORAMA/); assert.match(source, /retired-no-runtime-image/); assert.doesNotMatch(source, /structural-placeholder/);
+  assert.match(source, /SC-11-COUNTERFIELD-PANORAMA/); assert.match(source, /data-twin-return-coupling-state/); assert.match(source, /data-independent-vane-return-state/); assert.match(source, /data-runtime-image=\{host36NativeActive/); assert.doesNotMatch(source, /structural-placeholder/);
   assert.doesNotMatch(source, /CounterfieldProtectedJourney|rp010\.protected-journey|RP-011|SC-12|successor:\s*["'][^"']/);
 });

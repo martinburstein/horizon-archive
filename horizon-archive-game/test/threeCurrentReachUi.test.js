@@ -58,7 +58,7 @@ test("TD004 maps exact SC-04 and SC-05 states to their registered runtime master
   assert.match(component, /resolveThreeCurrentReachWorldScene\(state\)/);
   assert.match(component, /data-world-scene=\{worldSceneId\}/);
   assert.match(component, /data-world-master=\{worldAssetId\}/);
-  assert.match(component, /src=\{worldImage\}/);
+  assert.match(component, /host24NativeActive \? cappedReturnPrismImage : host23NativeActive \? threeThroatReplicaBloomImage : worldImage/);
   assert.equal(statSync(calibrationMarginMasterUrl).size, 2_626_795);
   assert.equal(
     createHash("sha256").update(calibrationMarginMaster).digest("hex").toUpperCase(),
