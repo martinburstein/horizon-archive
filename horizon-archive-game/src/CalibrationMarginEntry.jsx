@@ -1,11 +1,12 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import forkedLogicStitchImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host21/host21-environment-master-v1.png";
+import sheddingCarrierSkinImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host22/host22-environment-master-v1.png";
 import cityOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { CalibrationMarginExtractionFloor } from "./CalibrationMarginExtractionFloor.jsx";
 import { CalibrationMarginPythonFloor } from "./CalibrationMarginPythonFloor.jsx";
 import { CalibrationMarginReviewSave } from "./CalibrationMarginReviewSave.jsx";
-import { FORKED_LOGIC_STITCH_COPY, FORKED_LOGIC_STITCH_REGISTRY, deriveForkedLogicStitchState } from "./calibrationMarginHosts.js";
+import { FORKED_LOGIC_STITCH_COPY, FORKED_LOGIC_STITCH_REGISTRY, SHEDDING_CARRIER_SKIN_COPY, SHEDDING_CARRIER_SKIN_REGISTRY, deriveForkedLogicStitchState, deriveSheddingCarrierSkinState } from "./calibrationMarginHosts.js";
 
 function useDecodedImage(enabled, src) {
   const [decoded, setDecoded] = useState(null);
@@ -40,6 +41,9 @@ export function CalibrationMarginEntry({
   const forkedLogicStitchDecodedImage = useDecodedImage(FORKED_LOGIC_STITCH_REGISTRY.source.enabled, forkedLogicStitchImage);
   const forkedLogicStitchState = deriveForkedLogicStitchState({ decodedImage: forkedLogicStitchDecodedImage });
   const forkedLogicStitchNativeActive = forkedLogicStitchState !== "hidden" && !extractionFloorActive && !reviewSaveActive;
+  const sheddingCarrierSkinDecodedImage = useDecodedImage(SHEDDING_CARRIER_SKIN_REGISTRY.source.enabled, sheddingCarrierSkinImage);
+  const sheddingCarrierSkinState = deriveSheddingCarrierSkinState({ decodedImage: sheddingCarrierSkinDecodedImage });
+  const sheddingCarrierSkinNativeActive = sheddingCarrierSkinState !== "hidden" && (extractionFloorActive || reviewSaveActive);
 
   useLayoutEffect(() => {
     const target = entryState?.focusIntent?.target;
@@ -61,13 +65,16 @@ export function CalibrationMarginEntry({
         data-extraction-floor={extractionFloorActive || reviewSaveActive || undefined}
         data-forked-logic-stitch-state={forkedLogicStitchState}
         data-forked-logic-stitch-native-active={forkedLogicStitchNativeActive ? "true" : undefined}
+        data-shedding-carrier-skin-state={sheddingCarrierSkinState}
+        data-shedding-carrier-skin-native-active={sheddingCarrierSkinNativeActive ? "true" : undefined}
       >
         <section className="city-world calibration-margin-world" aria-label={entryState.boardState}>
           <img
             className="city-world-plate city-world-plate-native"
-            src={forkedLogicStitchNativeActive ? forkedLogicStitchImage : cityOverviewImage}
-            alt={forkedLogicStitchNativeActive ? FORKED_LOGIC_STITCH_COPY.alt : "An immense empty underground civic landscape already operating above geothermal chasms"}
+            src={sheddingCarrierSkinNativeActive ? sheddingCarrierSkinImage : forkedLogicStitchNativeActive ? forkedLogicStitchImage : cityOverviewImage}
+            alt={sheddingCarrierSkinNativeActive ? SHEDDING_CARRIER_SKIN_COPY.alt : forkedLogicStitchNativeActive ? FORKED_LOGIC_STITCH_COPY.alt : "An immense empty underground civic landscape already operating above geothermal chasms"}
             data-forked-logic-stitch-source={forkedLogicStitchNativeActive ? FORKED_LOGIC_STITCH_REGISTRY.source.path : undefined}
+            data-shedding-carrier-skin-source={sheddingCarrierSkinNativeActive ? SHEDDING_CARRIER_SKIN_REGISTRY.source.path : undefined}
           />
         </section>
         {reviewSaveActive ? (

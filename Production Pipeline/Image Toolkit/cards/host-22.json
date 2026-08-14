@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-22",
-  "status": "produced_pending_integration",
+  "status": "integration_candidate",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-22-api-v1.md",
@@ -59,7 +59,9 @@
   "integration": {
     "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host22/host22-environment-master-v1.png",
     "alt_text": "A translucent sacrificial skin sheds in controlled sheets from an alien bypass while an intact replacement continues beneath it toward three material routes.",
-    "interaction_geometry": null
+    "interaction_geometry": "horizon-archive-game/src/calibrationMarginHosts.js#SHEDDING_CARRIER_SKIN_REGISTRY",
+    "runtime_source": "horizon-archive-game/src/CalibrationMarginEntry.jsx",
+    "candidate_status": "focused_pass_pending_aggregate_release"
   },
   "selection": {
     "status": "done_forced_completion",

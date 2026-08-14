@@ -1,0 +1,11 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import test from "node:test";
+import { SHEDDING_CARRIER_SKIN_REGISTRY, auditSheddingCarrierSkin, deriveSheddingCarrierSkinState } from "../src/calibrationMarginHosts.js";
+const decoded = { complete: true, naturalWidth: 1920, naturalHeight: 1080 };
+test("Host 22 freezes accepted source, provenance, copy, and six layouts", () => { assert.deepEqual(auditSheddingCarrierSkin(), { source: true, provenance: true, layouts: true, copy: true }); assert.equal(SHEDDING_CARRIER_SKIN_REGISTRY.layouts.length, 6); });
+test("Host 22 fails closed on registry mutations", () => { for (const mutate of [(c) => { c.source.sha256 = "0".repeat(64); }, (c) => { c.provenance.bytes++; }, (c) => { c.layouts.shift(); }]) { const copy = structuredClone(SHEDDING_CARRIER_SKIN_REGISTRY); mutate(copy); assert.equal(deriveSheddingCarrierSkinState({ registry: copy, decodedImage: decoded }), "hidden"); } });
+test("Host 22 requires exact Full HD decode", () => { assert.equal(deriveSheddingCarrierSkinState({ decodedImage: decoded }), "available"); assert.equal(deriveSheddingCarrierSkinState({ decodedImage: null }), "hidden"); });
+test("Calibration Margin selects Host 22 for extraction and review-save states with layered fallback", () => { const source = fs.readFileSync(path.resolve("src/CalibrationMarginEntry.jsx"), "utf8"); assert.match(source, /extractionFloorActive \|\| reviewSaveActive/); assert.match(source, /sheddingCarrierSkinNativeActive \? sheddingCarrierSkinImage : forkedLogicStitchNativeActive \? forkedLogicStitchImage : cityOverviewImage/); assert.match(source, /data-shedding-carrier-skin-source=/); });
+test("Host 22 leaves extraction, review-save, actions, and focus ownership unchanged", () => { const source = fs.readFileSync(path.resolve("src/CalibrationMarginEntry.jsx"), "utf8"); assert.match(source, /CalibrationMarginExtractionFloor/); assert.match(source, /CalibrationMarginReviewSave/); assert.match(source, /entryState\.availableActions/); assert.match(source, /focusIntent/); });
