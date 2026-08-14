@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-IMG-028-v1`
+State ID: `FRLS-CITY-001-v1`
 
 Control: `FRCV-001-v1` / `HA-RI-001-v1`
 
-Status: **RELEASED / ALL 27 PRIVATE IMAGE MASTERS INTEGRATED / LOOP COMPLETE**
+Status: **RELEASED / IMAGE QUEUE COMPLETE / CITY THRESHOLD COPY CORRECTED / LOOP COMPLETE**
 
 `NEXT_INSTANCE_HANDOFF.md` remains the exact-next-action authority.
 
@@ -14,8 +14,8 @@ contract:
   loop: HA-RI-001-v1
   scope: 27_existing_private_production_masters
 state:
-  product_candidate: 7b781abd
-  release: FRAB-014-v1
+  product_candidate: 1e0039bb
+  release: FRAB-015-v1
   controller_state: COMPLETE
 queue:
   produced_pending_integration: 0
@@ -35,6 +35,10 @@ evidence:
     - stale pre-integration test and E2E launcher expectations corrected
     - shared dist contention removed by serialized release execution
     - Host_17 overlapping pointer targets corrected and regression locked
+  city_threshold_copy:
+    - focused City and adjacent-entry tests 21/21
+    - production build 275 modules
+    - successor_packet and staging_boundary absent from runtime component
 constraints_preserved:
   - route lesson evidence save privacy world_response ending successor unchanged
   - no image generation edit overwrite or reveal

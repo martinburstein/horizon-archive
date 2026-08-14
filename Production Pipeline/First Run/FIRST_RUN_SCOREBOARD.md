@@ -1,18 +1,18 @@
 # Horizon Archive First Run Scoreboard
 
-Scoreboard ID: `FRSB-016-v1`
+Scoreboard ID: `FRSB-017-v1`
 
-Current release authority: `FRAB-014-v1 / ALL 27 RUNTIME IMAGE MASTERS RELEASED`
+Current release authority: `FRAB-015-v1 / CITY THRESHOLD FINAL-PURPOSE COPY RELEASED`
 
 Baseline / lock: `FRPB-001-v13` / `FRCL-015-v1`
 
-Release map: `FRRM-016-v1`
+Release map: `FRRM-017-v1`
 
 Runtime integration authority: `FRSH-016-v1 / HA-RI-001 COMPLETE`
 
-Released product candidate: `7b781abd`
+Released product candidate: `1e0039bb`
 
-Image product candidate reviewed: `7b781abd`
+Image product candidate reviewed: `7b781abd` (unchanged by the copy-only correction)
 
 Date: **2026-08-14**
 
@@ -26,6 +26,11 @@ RGB PNG identities. Whole-game physical inventory is now `39 exact / 1
 accepted shared compression / 0 missing / 0 unadvanced`. The queue is `0
 queued / 0 candidate / 27 released`; no image generation, editing, or runtime-
 integration work remains authorized.
+
+`FRAB-015-v1` releases exact candidate `1e0039bb`. The City Threshold route
+status now uses final-purpose System-owned expedition copy; the production
+terms `successor packet` and `staging boundary` are absent from the runtime
+component. Route, ownership, save, world state, and all image bytes are exact.
 
 Host 13 is independently released from the first and sole generation call.
 Its prior seven-call remainder is historical release evidence, not current
@@ -144,13 +149,13 @@ complete.
 | `FR-15` Unborrowed Reach | `FR2` | `FR0` â€” 2 missing | `FR2` | `FR1` | `FR2` | `FR3` | `FR0` | Released compact chapter; distinct hosts absent |
 | `FR-16` Measured Horizon | `FR2` | `FR2` â€” hosts 39-40 exact | `FR2` | `FR1` | `FR1` | `FR3` | `FR0` | Exact functional ending; final literary close remains outside runtime |
 
-## Current `FRAB-014-v1` image-release overlay
+## Current `FRAB-015-v1` release overlay
 
 | Address range | Physical expression | Runtime image release proof |
 | --- | --- | --- |
 | `FR-03` | `FR4` — one accepted shared compression / eleven exact | Hosts 14-15 native presentation, ownership, responsive, and accessibility proof pass |
 | `FR-04` | `FR4` — Host 16 exact | Silent privacy-preserving Terminal behavior retained |
-| `FR-05` | `FR4` — Hosts 17-18 exact | Pointer ownership and neighboring-target non-overlap pass; separate visible copy contradiction remains outside image scope |
+| `FR-05` | `FR4` — Hosts 17-18 exact | Pointer ownership and neighboring-target non-overlap pass; final-purpose route copy contradiction closed by `FRAB-015-v1` |
 | `FR-06` through `FR-15` | `FR4` — Hosts 19-38 exact | All twenty masters released with route, lesson, and save boundaries unchanged |
 | `FR-16` | `FR4` — Hosts 39-40 exact | Equal-dignity ending outcomes and `successor=null` pass |
 
@@ -168,10 +173,10 @@ complete.
 - `FRWO-001-v1` targets continuity/content/presentation only from `FR-00`
   through initial `FR-05`; `FRAB-001-v1` releases that exact scope and changes
   no physical-host cell.
-- `FRCL-002-v1` supplied the pre-build classification. `FRAB-002-v1` now closes
-  its `FR-02` missing-expression finding from accepted as-built evidence. Its
-  separate `FR-05` contradiction remains exact and unresolved; the direct City
-  route remains behaviorally exact.
+- `FRCL-002-v1` supplied the pre-build classification. `FRAB-002-v1` closed its
+  `FR-02` missing-expression finding, and `FRAB-015-v1` now closes the separate
+  `FR-05` production-language contradiction while retaining the exact direct
+  City route.
 - `FRWO-002-v1` independently satisfies `FR2` continuity, physical-host
   expression, and final-purpose content at `FR-02`, with affected presentation
   retained at `FR3` and bounded release proof retained at `FR4` under the new
@@ -188,6 +193,10 @@ complete.
 candidate `7b781abd`. `FR-03` is now `1 accepted shared compression / 11 exact`;
 whole-game inventory is `39 exact / 1 accepted shared compression / 0 missing
 / 0 unadvanced`. The runtime image queue is complete and has no next action.
+
+`FRAB-015-v1` releases the bounded City Threshold copy correction at exact
+candidate `1e0039bb`. No physical-host, learning, behavior, save, image, route,
+or ending cell changes; the existing `FR-05` final-purpose content gap closes.
 
 `FRAB-003-v1` records Host 05 as one exact distinct relationship while leaving
 the address physical-host cell at `FR0` with one accepted compression and ten

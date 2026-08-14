@@ -1,16 +1,16 @@
 # Horizon Archive First Run Release Map
 
-Map ID: `FRRM-016-v1`
+Map ID: `FRRM-017-v1`
 
-Current release authority: `FRAB-014-v1 / ALL 27 RUNTIME IMAGE MASTERS RELEASED`
+Current release authority: `FRAB-015-v1 / CITY THRESHOLD FINAL-PURPOSE COPY RELEASED`
 
 Baseline / continuity lock: `FRPB-001-v13` / `FRCL-015-v1`
 
 Runtime integration authority: `FRSH-016-v1 / HA-RI-001 COMPLETE`
 
-Released product candidate: `7b781abd`
+Released product candidate: `1e0039bb`
 
-Image product candidate reviewed: `7b781abd`
+Image product candidate reviewed: `7b781abd` (unchanged by the copy-only correction)
 
 Released geometry / transport controls:
 `8aa1dcaf2d5a347cc21ec48a4d6022485fe7cd97` /
@@ -30,6 +30,12 @@ ending, or successor changes. Aggregate identity, serialized full-suite,
 validator, build, served-identity, accessibility, and complete clean-start E2E
 proof pass. The image queue is `0 queued / 0 candidate / 27 released`; there is
 no remaining runtime-image integration action.
+
+`FRAB-015-v1` releases exact product candidate `1e0039bb`. It replaces the one
+player-visible `successor packet` / `staging boundary` production sentence at
+City Threshold with System-owned expedition-state copy stating only that the
+reversible local route is recorded and the already-lit civic bridge remains
+available. Route, ownership, save, world state, and image bytes are unchanged.
 
 `FRWO-014-v1` and `FRWO-015-v1` remain closed historical production evidence.
 Their prompt, guide, call-budget, and rejected-candidate controls grant no new
@@ -194,7 +200,7 @@ game complete.
 | --- | --- | --- |
 | `FR-03` | Hosts 14-15 exact; Drowned inventory is one accepted shared compression plus eleven exact hosts | None |
 | `FR-04` | Host 16 exact | None |
-| `FR-05` | Hosts 17-18 exact; direct route behavior unchanged | None; the separate visible `successor packet` / `staging boundary` sentence remains outside this image release |
+| `FR-05` | Hosts 17-18 exact; direct route behavior unchanged; final-purpose route copy corrected by `FRAB-015-v1` | None |
 | `FR-06` through `FR-15` | Hosts 19-38 exact | None |
 | `FR-16` | Hosts 39-40 exact; equal-dignity ending presentation and `successor=null` proven | None |
 
