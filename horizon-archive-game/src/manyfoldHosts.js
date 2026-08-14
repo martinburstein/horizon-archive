@@ -58,3 +58,62 @@ export function deriveReceiverChorusState({
     ? "available"
     : "hidden";
 }
+
+export const SEALED_LEXICON_CRADLE_COPY = Object.freeze({
+  alt: "An exterior alien cradle holds isolated material replicas beside a fully opaque branch while a separate bypass rejoins the distant carrier.",
+});
+
+const cradleSource = Object.freeze({
+  enabled: true,
+  path: "Visual Direction/Production Masters/2026-08-14-first-run-host26/host26-environment-master-v1.png",
+  sourceId: "HA-IMG-H26-v1",
+  bytes: 3242632,
+  sha256: "0d32a0df8e47829a29aa38c604a7cc47c51919cd4156b274d222a6208a9c0987",
+  width: 1920,
+  height: 1080,
+  format: "png",
+  color: "opaque-srgb-8",
+});
+
+const cradleProvenance = Object.freeze({
+  schema: provenance.schema,
+  path: cradleSource.path,
+  sourceId: cradleSource.sourceId,
+  bytes: cradleSource.bytes,
+  sha256: cradleSource.sha256,
+});
+
+export const SEALED_LEXICON_CRADLE_REGISTRY = Object.freeze({
+  schema: "horizon.sealed-lexicon-cradle.v1",
+  source: cradleSource,
+  provenance: cradleProvenance,
+  layouts: Object.freeze(Object.keys(FIRST_RUN_RESPONSIVE_LAYOUTS)),
+  copy: SEALED_LEXICON_CRADLE_COPY,
+});
+
+export function auditSealedLexiconCradle(registry = SEALED_LEXICON_CRADLE_REGISTRY) {
+  const candidate = registry?.source;
+  return Object.freeze({
+    source: candidate?.enabled === true
+      && Object.keys(cradleSource).every((key) => candidate[key] === cradleSource[key]),
+    provenance: cradleProvenance.schema === registry?.provenance?.schema
+      && ["path", "sourceId", "bytes", "sha256"].every(
+        (key) => registry.provenance[key] === candidate?.[key],
+      ),
+    layouts: JSON.stringify(registry?.layouts)
+      === JSON.stringify(Object.keys(FIRST_RUN_RESPONSIVE_LAYOUTS)),
+    copy: registry?.copy === SEALED_LEXICON_CRADLE_COPY,
+  });
+}
+
+export function deriveSealedLexiconCradleState({
+  registry = SEALED_LEXICON_CRADLE_REGISTRY,
+  decodedImage,
+} = {}) {
+  return Object.values(auditSealedLexiconCradle(registry)).every(Boolean)
+    && decodedImage?.complete === true
+    && decodedImage.naturalWidth === 1920
+    && decodedImage.naturalHeight === 1080
+    ? "available"
+    : "hidden";
+}

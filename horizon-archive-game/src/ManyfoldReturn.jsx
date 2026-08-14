@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import receiverChorusImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host25/host25-environment-master-v1.png";
+import sealedLexiconCradleImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host26/host26-environment-master-v1.png";
 import panoramaMaster from "../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-panorama-runtime-master-v1.webp";
 import detailMaster from "../../Visual Direction/Production Masters/2026-07-27-rp005-manyfold-return-runtime/sc06-manyfold-return-detail-runtime-master-v1.webp";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
@@ -8,7 +9,7 @@ import {
   manyfoldReturnObservationIds,
   resolveManyfoldReturnWorldScene,
 } from "./ManyfoldReturnNormal.js";
-import { RECEIVER_CHORUS_COPY, RECEIVER_CHORUS_REGISTRY, deriveReceiverChorusState } from "./manyfoldHosts.js";
+import { RECEIVER_CHORUS_COPY, RECEIVER_CHORUS_REGISTRY, SEALED_LEXICON_CRADLE_COPY, SEALED_LEXICON_CRADLE_REGISTRY, deriveReceiverChorusState, deriveSealedLexiconCradleState } from "./manyfoldHosts.js";
 
 const host25Groups = new Set(["mf00_arrive", "mf00_oriented", "mf10_observations", "mf20_python_primary", "mf20_python_trace", "mf20_python_transfer"]);
 
@@ -292,6 +293,7 @@ function ManyfoldForm({ form, onFieldChange }) {
 export function ManyfoldReturn({ state, onAction, onFieldChange }) {
   const panelRef = useRef(null);
   const host25DecodedImage = useDecodedImage(RECEIVER_CHORUS_REGISTRY.source.enabled, receiverChorusImage);
+  const host26DecodedImage = useDecodedImage(SEALED_LEXICON_CRADLE_REGISTRY.source.enabled, sealedLexiconCradleImage);
   const worldScene = resolveManyfoldReturnWorldScene(state);
   const worldImage = worldScene?.role === "SC-06-DETAIL-MASTER"
     ? detailMaster
@@ -301,14 +303,20 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
     : "Immense asymmetric field of unequal low mineral receivers with nonmatching pale contact cuffs, irregular buried conduits, and an upright opaque branch mass bypassed at right";
   const host25State = deriveReceiverChorusState({ decodedImage: host25DecodedImage });
   const host25NativeActive = worldScene?.sceneId === "SC-06" && host25State !== "hidden" && host25Groups.has(state.activeGroup);
-  const selectedWorldImage = host25NativeActive ? receiverChorusImage : worldImage;
-  const selectedWorldAlt = host25NativeActive ? RECEIVER_CHORUS_COPY.alt : worldAlt;
-  const runtimeSourceMaster = host25NativeActive
+  const host26State = deriveSealedLexiconCradleState({ decodedImage: host26DecodedImage });
+  const host26NativeActive = worldScene?.sceneId === "SC-06" && host26State !== "hidden" && !host25NativeActive;
+  const selectedWorldImage = host26NativeActive ? sealedLexiconCradleImage : host25NativeActive ? receiverChorusImage : worldImage;
+  const selectedWorldAlt = host26NativeActive ? SEALED_LEXICON_CRADLE_COPY.alt : host25NativeActive ? RECEIVER_CHORUS_COPY.alt : worldAlt;
+  const runtimeSourceMaster = host26NativeActive
+    ? "host26-environment-master-v1.png"
+    : host25NativeActive
     ? "host25-environment-master-v1.png"
     : worldScene?.role === "SC-06-DETAIL-MASTER"
     ? "sc06-manyfold-return-detail-runtime-master-v1.webp"
     : "sc06-manyfold-return-panorama-runtime-master-v1.webp";
-  const sourceProvenance = host25NativeActive
+  const sourceProvenance = host26NativeActive
+    ? "2026-08-14-first-run-host26"
+    : host25NativeActive
     ? "2026-08-14-first-run-host25"
     : "2026-07-27-rp005-manyfold-return-runtime";
   const recorded = useMemo(() => new Set(state.recordedObservationIds ?? []), [state.recordedObservationIds]);
@@ -328,6 +336,8 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
         data-active-group={state.activeGroup}
         data-receiver-chorus-state={host25State}
         data-receiver-chorus-native-active={host25NativeActive ? "true" : undefined}
+        data-sealed-lexicon-cradle-state={host26State}
+        data-sealed-lexicon-cradle-native-active={host26NativeActive ? "true" : undefined}
       >
         <figure
           className="three-current-world manyfold-world"
@@ -343,6 +353,7 @@ export function ManyfoldReturn({ state, onAction, onFieldChange }) {
             src={selectedWorldImage}
             alt={selectedWorldAlt}
             data-receiver-chorus-source={host25NativeActive ? RECEIVER_CHORUS_REGISTRY.source.path : undefined}
+            data-sealed-lexicon-cradle-source={host26NativeActive ? SEALED_LEXICON_CRADLE_REGISTRY.source.path : undefined}
           />
           <figcaption>
             Registered invariant SC-06 source. These physical relations remain descriptive and nonjudgmental; the adjacent expedition text carries the exact evidence and limits.

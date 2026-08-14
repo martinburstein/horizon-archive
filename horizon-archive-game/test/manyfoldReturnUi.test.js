@@ -44,6 +44,8 @@ test("TD005 UI binds two released SC-06 role masters plus fail-closed native met
   assert.match(view, /data-source-provenance=\{sourceProvenance\}/);
   assert.match(view, /data-receiver-chorus-state=\{host25State\}/);
   assert.match(view, /data-receiver-chorus-source=/);
+  assert.match(view, /data-sealed-lexicon-cradle-state=\{host26State\}/);
+  assert.match(view, /data-sealed-lexicon-cradle-source=/);
   assert.doesNotMatch(view, /PLACEHOLDER|Image Specialist gap|data-placeholder-retirement/);
   assert.match(view, /sc06-manyfold-return-panorama-runtime-master-v1\.webp/);
   assert.match(view, /sc06-manyfold-return-detail-runtime-master-v1\.webp/);
