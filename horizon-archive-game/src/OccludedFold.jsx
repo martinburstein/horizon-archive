@@ -8,7 +8,15 @@ import {
 } from "./OccludedFoldNormal.js";
 import { useEffect, useState } from "react";
 import edgeConfigurationCystImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host33/host33-environment-master-v1.png";
-import { EDGE_CONFIGURATION_CYST_COPY, EDGE_CONFIGURATION_CYST_REGISTRY, deriveEdgeConfigurationCystState } from "./occludedHosts.js";
+import exteriorPromptPalimpsestImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host34/host34-environment-master-v1.png";
+import {
+  EDGE_CONFIGURATION_CYST_COPY,
+  EDGE_CONFIGURATION_CYST_REGISTRY,
+  EXTERIOR_PROMPT_PALIMPSEST_COPY,
+  EXTERIOR_PROMPT_PALIMPSEST_REGISTRY,
+  deriveEdgeConfigurationCystState,
+  deriveExteriorPromptPalimpsestState,
+} from "./occludedHosts.js";
 
 const host33Groups=new Set(["of00_orientation","of10_observations","of20_python_primary","of20_python_trace","of20_python_transfer"]);
 function useDecodedImage(enabled,src){const[decoded,setDecoded]=useState(null);useEffect(()=>{if(!enabled){setDecoded(null);return undefined;}let connected=true;const image=new Image();image.onload=()=>connected&&setDecoded({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setDecoded(null);image.src=src;return()=>{connected=false;image.onload=null;image.onerror=null;};},[enabled,src]);return decoded;}
@@ -207,11 +215,14 @@ function OccludedFoldForm({ form, onFieldChange }) {
 export function OccludedFold({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
   const host33DecodedImage=useDecodedImage(EDGE_CONFIGURATION_CYST_REGISTRY.source.enabled,edgeConfigurationCystImage);
+  const host34DecodedImage=useDecodedImage(EXTERIOR_PROMPT_PALIMPSEST_REGISTRY.source.enabled,exteriorPromptPalimpsestImage);
   const scene = resolveOccludedFoldWorldScene(state);
   const isDetail = scene?.role === "SC-10-OCCLUDED-FOLD-EXPOSED-EDGE-DETAIL";
   const alt = isDetail ? detailAltByCropId[scene?.cropId] : panoramaAlt;
   const host33State=deriveEdgeConfigurationCystState({decodedImage:host33DecodedImage});
   const host33NativeActive=scene?.sceneId==="SC-10"&&host33State!=="hidden"&&host33Groups.has(state.activeGroup);
+  const host34State=deriveExteriorPromptPalimpsestState({decodedImage:host34DecodedImage});
+  const host34NativeActive=scene?.sceneId==="SC-10"&&host34State!=="hidden"&&!host33NativeActive;
   useLayoutEffect(() => {
     const root = rootRef.current;
     const target = root?.querySelector(`#${CSS.escape(state.focusIntent?.target ?? state.headingId)}`)
@@ -234,6 +245,8 @@ export function OccludedFold({ state, onAction, onFieldChange }) {
       data-crop-id={scene?.cropId}
       data-edge-configuration-cyst-state={host33State}
       data-edge-configuration-cyst-native-active={host33NativeActive?"true":undefined}
+      data-exterior-prompt-palimpsest-state={host34State}
+      data-exterior-prompt-palimpsest-native-active={host34NativeActive?"true":undefined}
       ref={rootRef}
       onKeyDown={(event) => {
         if (state.activeGroup === "of20_save" && event.key === "Escape") {
@@ -243,7 +256,14 @@ export function OccludedFold({ state, onAction, onFieldChange }) {
       }}
     >
       <figure className={`occluded-world occluded-code-native-environment ${isDetail ? "is-detail" : "is-panorama"}`}>
-        {host33NativeActive ? <img
+        {host34NativeActive ? <img
+          className="occluded-native-scene"
+          src={exteriorPromptPalimpsestImage}
+          alt={EXTERIOR_PROMPT_PALIMPSEST_COPY.alt}
+          data-image-role={scene?.role}
+          data-runtime-source-master="host34-environment-master-v1.png"
+          data-exterior-prompt-palimpsest-source={EXTERIOR_PROMPT_PALIMPSEST_REGISTRY.source.path}
+        /> : host33NativeActive ? <img
           className="occluded-native-scene"
           src={edgeConfigurationCystImage}
           alt={EDGE_CONFIGURATION_CYST_COPY.alt}
