@@ -1,0 +1,74 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-36",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-36-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a conspicuous middle-district cluster of refractory vanes surrounding one alien return body",
+    "vanes visibly caught at different angles and phases so their rhythms read as independent rather than synchronized",
+    "a reachable compatible local return coupling integrated at the base of the vane body",
+    "broad undisturbed substrate separating other visible districts with no connecting infrastructure"
+  ],
+  "player_critical_facts": [
+    "the focal subject is a nonhuman refractory vane assembly around one return body with a distinct reachable coupling at its base, not a wind farm, rail switchyard, antenna array, turbine, vehicle, or human machine",
+    "the vanes visibly operate in independent phases with no master clock, synchronized pattern, signal choreography, or reaction to the viewer",
+    "other districts remain separated across open stable substrate with no road, rail, cable, channel, bridge, marked lane, light path, or proven network route",
+    "nothing claims an active resource, endpoint, credential, external result, answer, reward, acknowledgement, or world response, and no text or interface appears"
+  ],
+  "art_direction_preferences": [
+    "the vanes use varied pivots, silhouettes, and refractory materials while remaining one coherent district work",
+    "the base coupling is compatible with the return body but visually secondary to the vane rhythm",
+    "the scene captures different motion phases without heavy blur or a frozen symmetrical fan",
+    "a laminar material margin leaves the district toward pressure-bent terrain while unrelated works stay separate"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability and stable unmarked substrate",
+    "independent district clocks without inferred topology, chronology, cause, origin, or purpose",
+    "quiet indifferent operation without player causation"
+  ],
+  "avoid": [
+    "wind turbines, wind farm, solar farm, rail switchyard, railway points, power substation, antenna array, satellite dishes, radar, human factory, industrial fan, jet engine, vehicle, reactor, or command center",
+    "synchronized vanes, identical radial fan, clock face, metronome display, coordinated lights, signal pulses, beams, cables, pipes, wires, roads, rails, bridges, channels, marked lanes, or maintenance trails linking districts",
+    "open hatch, doorway, tunnel, cockpit, visible interior, transparent machine, shrine, altar, monument, trophy, or reward pedestal",
+    "text, code, endpoint, credential, words, numbers, labels, signage, glyphs, UI, HUD, marker, waypoint, diagram, map, watermark, or logo",
+    "answer, external result, success/failure signal, reward, activation, acknowledgement, tracking, invitation, player synchronization, or world response",
+    "humanoid, hand, suit, robot, creature, flesh, bone, roots, vines, organs, egg, nest, or dominant biology"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host36/host36-environment-master-v1.png",
+    "alt_text": "Refractory alien vanes hold different motion phases around a return body and local base coupling, isolated from distant works by an open mineral plain.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 1,
+    "practical_score": 19,
+    "hard_gate": "pass",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "remaining_compromises": [
+      "some independent motion phases are conveyed mainly by vane posture",
+      "the distant laminar transition is visually restrained"
+    ]
+  }
+}
