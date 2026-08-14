@@ -1,9 +1,25 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import forkedLogicStitchImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host21/host21-environment-master-v1.png";
 import cityOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import { CanonicalGameFrame } from "./CanonicalGameFrame.jsx";
 import { CalibrationMarginExtractionFloor } from "./CalibrationMarginExtractionFloor.jsx";
 import { CalibrationMarginPythonFloor } from "./CalibrationMarginPythonFloor.jsx";
 import { CalibrationMarginReviewSave } from "./CalibrationMarginReviewSave.jsx";
+import { FORKED_LOGIC_STITCH_COPY, FORKED_LOGIC_STITCH_REGISTRY, deriveForkedLogicStitchState } from "./calibrationMarginHosts.js";
+
+function useDecodedImage(enabled, src) {
+  const [decoded, setDecoded] = useState(null);
+  useEffect(() => {
+    if (!enabled) { setDecoded(null); return undefined; }
+    let connected = true;
+    const image = new Image();
+    image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight });
+    image.onerror = () => connected && setDecoded(null);
+    image.src = src;
+    return () => { connected = false; image.onload = null; image.onerror = null; };
+  }, [enabled, src]);
+  return decoded;
+}
 
 export function CalibrationMarginEntry({
   entryState,
@@ -21,6 +37,9 @@ export function CalibrationMarginEntry({
     entryState.shellVersion === "SS-RP003-IE01-v1";
   const reviewSaveActive =
     entryState.shellVersion === "SS-RP003-REVIEW-SAVE-v1";
+  const forkedLogicStitchDecodedImage = useDecodedImage(FORKED_LOGIC_STITCH_REGISTRY.source.enabled, forkedLogicStitchImage);
+  const forkedLogicStitchState = deriveForkedLogicStitchState({ decodedImage: forkedLogicStitchDecodedImage });
+  const forkedLogicStitchNativeActive = forkedLogicStitchState !== "hidden" && !extractionFloorActive && !reviewSaveActive;
 
   useLayoutEffect(() => {
     const target = entryState?.focusIntent?.target;
@@ -40,12 +59,15 @@ export function CalibrationMarginEntry({
         data-phase={entryState.phase}
         data-python-floor={pythonFloorActive || undefined}
         data-extraction-floor={extractionFloorActive || reviewSaveActive || undefined}
+        data-forked-logic-stitch-state={forkedLogicStitchState}
+        data-forked-logic-stitch-native-active={forkedLogicStitchNativeActive ? "true" : undefined}
       >
         <section className="city-world calibration-margin-world" aria-label={entryState.boardState}>
           <img
             className="city-world-plate city-world-plate-native"
-            src={cityOverviewImage}
-            alt="An immense empty underground civic landscape already operating above geothermal chasms"
+            src={forkedLogicStitchNativeActive ? forkedLogicStitchImage : cityOverviewImage}
+            alt={forkedLogicStitchNativeActive ? FORKED_LOGIC_STITCH_COPY.alt : "An immense empty underground civic landscape already operating above geothermal chasms"}
+            data-forked-logic-stitch-source={forkedLogicStitchNativeActive ? FORKED_LOGIC_STITCH_REGISTRY.source.path : undefined}
           />
         </section>
         {reviewSaveActive ? (
