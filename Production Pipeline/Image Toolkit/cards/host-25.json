@@ -1,0 +1,73 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-25",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-25-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "an incoming alien carrier dividing through embedded branch bodies beneath a large field of unequal receiver forms",
+    "receivers visibly varying in height, material, wear, curvature, and repair while remaining equally maintained",
+    "recurring mineral traces across most exposed output cuffs with several clear outliers outside the recurring span",
+    "a low underfield coupling beneath several receivers holding only isolated replica relationships",
+    "one branch disappearing beneath an opaque service laminate while its external bypass remains active"
+  ],
+  "player_critical_facts": [
+    "a branching incoming carrier feeds a visibly unequal receiver field whose forms remain individual rather than identical, ranked, or normalized",
+    "most exposed output cuffs share a recurring mineral-trace span while several outliers remain visibly maintained in the same light and condition",
+    "the reachable host is a low dry underfield coupling beneath several receivers and contains only sanitized isolated replica relationships, not live output",
+    "one branch genuinely disappears beneath an opaque service laminate while a separate external bypass stays visibly continuous and active",
+    "frequency never becomes truth or judgment: nothing praises, rejects, dims, rewards, answers, or reacts"
+  ],
+  "art_direction_preferences": [
+    "the repeated receiver field reads first, then individual variation and outliers emerge on closer inspection",
+    "outliers differ through physical trace and form rather than red warning color or damaged condition",
+    "the low coupling is subtle but reachable from a stable dry service lane",
+    "the opaque laminate feels ordinary and maintained rather than secretive, locked, or punitive",
+    "the field feels civilization-scale, quiet, beautiful, and nonbiological"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe dry on-foot access to the underfield coupling",
+    "equal maintenance and indifferent operation without player causation"
+  ],
+  "avoid": [
+    "identical receiver army, ranked rows, winner and loser, approved and rejected units, good and bad color coding, spotlighted champion, broken outcast, trash pile, quarantine, or punishment",
+    "speakers, microphones, choir people, faces, mouths, flowers, mushrooms, coral, trees, organisms, crowds, statues, or humanoid silhouettes",
+    "open opaque branch, visible interior, hidden chamber reveal, locked door, vault challenge, disabled reward, alarm, or security checkpoint",
+    "screen, console, keyboard, chart, graph, rating, score, text, numbers, signage, glyphs, UI, HUD, map marker, waypoint, beacon, reward, answer, reveal, or watermark",
+    "vehicle traffic, guards, robots, creatures, activation, cheering, voting, greeting, refusal, tracking, acknowledgement, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host25/host25-environment-master-v1.png",
+    "alt_text": "Unequal alien receiver forms share recurring mineral traces above a low replica coupling, while maintained outliers and an opaque bypass remain equally lit.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 4,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 4,
+    "attempts_unused": 16,
+    "remaining_compromises": []
+  }
+}
