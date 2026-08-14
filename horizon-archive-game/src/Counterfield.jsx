@@ -1,9 +1,14 @@
-import { useEffect, useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import {
   COUNTERFIELD_ROUTE_ACTION, COUNTERFIELD_ROUTE_GROUP, counterfieldActions,
   counterfieldObservationIds, counterfieldRecoveryLongestError,
   counterfieldTruthAuthorityLongestLabel,
 } from "./CounterfieldNormal.js";
+import twinReturnCouplingImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host35/host35-environment-master-v1.png";
+import { TWIN_RETURN_COUPLING_COPY, TWIN_RETURN_COUPLING_REGISTRY, deriveTwinReturnCouplingState } from "./counterfieldHosts.js";
+
+const host35Groups = new Set(["cf00_orientation", "cf10_observations", "cf20_python_primary", "cf20_python_trace", "cf20_python_transfer"]);
+function useDecodedImage(enabled, src) { const [decoded, setDecoded] = useState(null); useEffect(() => { if (!enabled) { setDecoded(null); return undefined; } let connected = true; const image = new Image(); image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight }); image.onerror = () => connected && setDecoded(null); image.src = src; return () => { connected = false; image.onload = null; image.onerror = null; }; }, [enabled, src]); return decoded; }
 
 const observationLabels = Object.freeze({
   recurrent_adjacency: "Recurrent adjacency", incomplete_ordered_change: "Incomplete ordered change",
@@ -55,18 +60,20 @@ const sceneAlternatives = Object.freeze({
 
 function Scene({ detail = false, group, observationId }) {
   const alternativeKey = observationId ?? (group.startsWith("cf20_") ? "cf20_course" : group);
+  const host35DecodedImage = useDecodedImage(TWIN_RETURN_COUPLING_REGISTRY.source.enabled, twinReturnCouplingImage);
+  const host35State = deriveTwinReturnCouplingState({ decodedImage: host35DecodedImage });
+  const host35NativeActive = host35State !== "hidden" && host35Groups.has(group);
   return (
-    <div className={`counterfield-scene ${detail ? "counterfield-scene-detail" : ""}`} role="img"
+    <div className={`counterfield-scene ${detail ? "counterfield-scene-detail" : ""}`} role={host35NativeActive ? undefined : "img"}
       data-scene-role={detail ? "SC-11-COUNTERFIELD-CONTINUOUS-LANDSCAPE-DETAIL" : "SC-11-COUNTERFIELD-PANORAMA"}
-      data-rendering-medium="css"
-      data-runtime-image="not-selected"
-      data-asset-role-disposition="retired-no-runtime-image"
-      aria-label={sceneAlternatives[alternativeKey] ?? sceneAlternatives.cf10_observations}>
-      <span className="counterfield-horizon" aria-hidden="true" />
-      <span className="counterfield-near" aria-hidden="true" />
-      <span className="counterfield-middle" aria-hidden="true" />
-      <span className="counterfield-far" aria-hidden="true" />
-      <span className="counterfield-mask" aria-hidden="true" />
+      data-rendering-medium={host35NativeActive ? "production-master" : "css"}
+      data-runtime-image={host35NativeActive ? "host35-environment-master-v1.png" : "not-selected"}
+      data-twin-return-coupling-state={host35State}
+      data-twin-return-coupling-native-active={host35NativeActive ? "true" : undefined}
+      aria-label={host35NativeActive ? undefined : sceneAlternatives[alternativeKey] ?? sceneAlternatives.cf10_observations}>
+      {host35NativeActive
+        ? <img className="counterfield-native-scene" src={twinReturnCouplingImage} alt={TWIN_RETURN_COUPLING_COPY.alt} data-twin-return-coupling-source={TWIN_RETURN_COUPLING_REGISTRY.source.path} />
+        : <><span className="counterfield-horizon" aria-hidden="true" /><span className="counterfield-near" aria-hidden="true" /><span className="counterfield-middle" aria-hidden="true" /><span className="counterfield-far" aria-hidden="true" /><span className="counterfield-mask" aria-hidden="true" /></>}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-35",
-  "status": "produced_pending_integration",
+  "status": "integration_candidate",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-35-api-v1.md",
@@ -56,7 +56,9 @@
   "integration": {
     "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host35/host35-environment-master-v1.png",
     "alt_text": "Two sealed chambers share an off-axis alien coupling in a near outer skin, while a broad unmarked mineral plain separates distant vane works.",
-    "interaction_geometry": null
+    "interaction_geometry": "horizon-archive-game/src/counterfieldHosts.js#TWIN_RETURN_COUPLING_REGISTRY",
+    "runtime_source": "horizon-archive-game/src/Counterfield.jsx",
+    "candidate_status": "focused_pass_pending_aggregate_release"
   },
   "selection": {
     "status": "done_practical_rubric",

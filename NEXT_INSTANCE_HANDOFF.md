@@ -8,14 +8,14 @@ Authority: Martin's 2026-08-14 runtime-integration instruction.
 
 Control: `HA-RI-001-v1` / `FRSH-016-v1`
 
-Hosts 14 through 34 are exact integration candidates. The paired Host 33/34
-Occluded Fold boundary passed focused source, provenance, selector, decode,
-fallback, presentation, and ownership checks `17/17`, build `266` modules, and
+Hosts 14 through 35 are exact integration candidates. The Host 35 Counterfield
+boundary passed focused source, provenance, selector, decode, fallback,
+presentation, and ownership checks `5/5`, build `268` modules, and
 byte-identical emitted media.
 
-Exact next action: integrate Host 35's completed production master into its
+Exact next action: integrate Host 36's completed production master into its
 existing `FR-14` boundary using the same controller, while preserving Hosts 14
-through 34 and the final aggregate validation reserve.
+through 35 and the final aggregate validation reserve.
 
 The generation queue is complete. No generation/edit call, reveal, new queue
 entry, route/lesson/save/ending change, broad repeated test cascade, or
