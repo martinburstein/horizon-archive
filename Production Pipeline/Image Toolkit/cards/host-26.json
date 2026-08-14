@@ -1,0 +1,76 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-26",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-26-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a fully opaque sealed branch with no opening cues",
+    "a reachable external cradle beside the sealed branch on stable dry service access",
+    "isolated inert material replicas held by the cradle without physical connection to the sealed branch",
+    "a separate active bypass visibly rejoining the carrier beyond the receiver field",
+    "quiet indifferent infrastructure with no response through light or frequency"
+  ],
+  "player_critical_facts": [
+    "one branch remains fully sealed, opaque, and unavailable with no interior, window, handle, door seam, opening, reward, or implied access",
+    "the reachable cradle sits beside the sealed branch on its exterior service skin and stable dry access, never inside the branch",
+    "the cradle holds only isolated inert material replicas and has no live contents or physical connection into the sealed branch",
+    "a separate external bypass stays visibly active and rejoins the carrier beyond the receiver field, preserving the safe onward route",
+    "nothing answers, ranks, rewards, acknowledges, or changes through frequency, light, or player presence"
+  ],
+  "art_direction_preferences": [
+    "the sealed boundary and adjacent cradle read immediately, with the bypass legible on a second look",
+    "replicas are visibly separate material specimens rather than books, letters, keys, or treasure",
+    "the cradle feels like ordinary maintained alien service infrastructure rather than a puzzle device",
+    "unequal receiver silhouettes recede into the background without competing with the foreground relationship",
+    "the scene is quiet, tactile, asymmetrical, civilization-scale, and nonbiological"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe dry on-foot access to the exterior cradle and bypass continuity",
+    "sealed unavailability and indifferent operation without player causation"
+  ],
+  "avoid": [
+    "open branch, visible interior, window, hatch, handle, door seam, keyhole, lock, portal, invitation, disabled reward, secret reveal, or implied access",
+    "treasure chest, book, library, alphabet, letters, dictionary, keyboard, terminal, computer, puzzle box, shrine, altar, or magical lexicon",
+    "live sample, cable into the sealed branch, conduit through the laminate, exposed connection, creature, organ, plant, coral, mushroom, or biology",
+    "screen, console, chart, graph, score, label, text, numbers, signage, glyphs, UI, HUD, marker, waypoint, beacon, reward, answer, reveal, or watermark",
+    "humanoid, vehicle, guard, robot, activation, spotlight, alarm, pulse, tracking, acknowledgement, greeting, refusal, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host26/host26-environment-master-v1.png",
+    "alt_text": "An exterior alien cradle holds isolated material replicas beside a fully opaque branch while a separate bypass rejoins the distant carrier.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 3,
+    "practical_score": 18,
+    "hard_gate": "pass",
+    "attempts_used": 3,
+    "attempts_unused": 17,
+    "remaining_compromises": [
+      "material replicas could be more visually cohesive",
+      "background haze slightly softens distant elements"
+    ]
+  }
+}
