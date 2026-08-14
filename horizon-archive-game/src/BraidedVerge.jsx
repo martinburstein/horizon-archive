@@ -1,5 +1,6 @@
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import saddleEchoOrganImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host29/host29-environment-master-v1.png";
+import contactCameraObscuraImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host30/host30-environment-master-v1.png";
 import {
   BRAIDED_VERGE_TRUTHFUL_WORKSPACE_LABEL,
   braidedVergeActions,
@@ -9,7 +10,7 @@ import {
 } from "./BraidedVergeNormal.js";
 import braidedVergePanorama from "../../Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-panorama-runtime-master-v1.webp";
 import braidedVergeContactDetail from "../../Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-contact-detail-runtime-master-v1.webp";
-import { SADDLE_ECHO_ORGAN_COPY, SADDLE_ECHO_ORGAN_REGISTRY, deriveSaddleEchoOrganState } from "./braidedHosts.js";
+import { CONTACT_CAMERA_OBSCURA_COPY, CONTACT_CAMERA_OBSCURA_REGISTRY, SADDLE_ECHO_ORGAN_COPY, SADDLE_ECHO_ORGAN_REGISTRY, deriveContactCameraObscuraState, deriveSaddleEchoOrganState } from "./braidedHosts.js";
 
 const host29Groups = new Set(["bv00_orientation", "bv10_observations", "bv20_python_primary", "bv20_python_trace", "bv20_python_transfer"]);
 
@@ -217,15 +218,20 @@ function BraidedVergeForm({ form, onFieldChange }) {
 export function BraidedVerge({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
   const host29DecodedImage = useDecodedImage(SADDLE_ECHO_ORGAN_REGISTRY.source.enabled, saddleEchoOrganImage);
+  const host30DecodedImage = useDecodedImage(CONTACT_CAMERA_OBSCURA_REGISTRY.source.enabled, contactCameraObscuraImage);
   const scene = resolveBraidedVergeWorldScene(state);
   const isDetail = scene?.role === "SC-08-CONTACT-DETAIL-MASTER";
   const alt = isDetail ? detailAltByCropId[scene?.cropId] : panoramaAlt;
   const releasedImageSource = isDetail ? braidedVergeContactDetail : braidedVergePanorama;
   const host29State = deriveSaddleEchoOrganState({ decodedImage: host29DecodedImage });
   const host29NativeActive = scene?.sceneId === "SC-08" && host29State !== "hidden" && host29Groups.has(state.activeGroup);
-  const imageSource = host29NativeActive ? saddleEchoOrganImage : releasedImageSource;
-  const selectedAlt = host29NativeActive ? SADDLE_ECHO_ORGAN_COPY.alt : alt;
-  const sourceName = host29NativeActive
+  const host30State = deriveContactCameraObscuraState({ decodedImage: host30DecodedImage });
+  const host30NativeActive = scene?.sceneId === "SC-08" && host30State !== "hidden" && !host29NativeActive;
+  const imageSource = host30NativeActive ? contactCameraObscuraImage : host29NativeActive ? saddleEchoOrganImage : releasedImageSource;
+  const selectedAlt = host30NativeActive ? CONTACT_CAMERA_OBSCURA_COPY.alt : host29NativeActive ? SADDLE_ECHO_ORGAN_COPY.alt : alt;
+  const sourceName = host30NativeActive
+    ? "host30-environment-master-v1.png"
+    : host29NativeActive
     ? "host29-environment-master-v1.png"
     : isDetail
     ? "sc08-braided-verge-contact-detail-runtime-master-v1.webp"
@@ -253,6 +259,8 @@ export function BraidedVerge({ state, onAction, onFieldChange }) {
       data-crop-id={scene?.cropId}
       data-saddle-echo-organ-state={host29State}
       data-saddle-echo-organ-native-active={host29NativeActive ? "true" : undefined}
+      data-contact-camera-obscura-state={host30State}
+      data-contact-camera-obscura-native-active={host30NativeActive ? "true" : undefined}
       ref={rootRef}
     >
       <figure className={`braided-world ${isDetail ? "is-detail" : "is-panorama"}`}>
@@ -262,6 +270,7 @@ export function BraidedVerge({ state, onAction, onFieldChange }) {
           data-image-role={scene?.role}
           data-runtime-source-master={sourceName}
           data-saddle-echo-organ-source={host29NativeActive ? SADDLE_ECHO_ORGAN_REGISTRY.source.path : undefined}
+          data-contact-camera-obscura-source={host30NativeActive ? CONTACT_CAMERA_OBSCURA_REGISTRY.source.path : undefined}
         />
         <figcaption>
           Expedition view only. Distinct continuities, recurrent contact, bounded difference,

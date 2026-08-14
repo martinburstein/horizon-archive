@@ -66,13 +66,15 @@ test("TD007 UI has one status, deterministic focus, native controls, and equal t
 test("TD007 directly imports two released roles plus one fail-closed native source", () => {
   assert.doesNotMatch(component, /STRUCTURAL PLACEHOLDER|data-placeholder-owner|ASSET PENDING/);
   const imports = component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? [];
-  assert.equal(imports.length, 3);
+  assert.equal(imports.length, 4);
   assert.match(component, /sc08-braided-verge-panorama-runtime-master-v1\.webp/);
   assert.match(component, /sc08-braided-verge-contact-detail-runtime-master-v1\.webp/);
   assert.match(component, /<img/);
   assert.match(component, /detailAltByCropId/);
   assert.match(component, /data-saddle-echo-organ-state=\{host29State\}/);
   assert.match(component, /data-saddle-echo-organ-source=/);
+  assert.match(component, /data-contact-camera-obscura-state=\{host30State\}/);
+  assert.match(component, /data-contact-camera-obscura-source=/);
   assert.doesNotMatch(controller, /Production Masters|\.png|\.webp|\.jpg|\.avif/i);
 });
 
