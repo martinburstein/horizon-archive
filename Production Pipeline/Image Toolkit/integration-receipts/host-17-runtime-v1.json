@@ -1,0 +1,38 @@
+{
+  "schema": "horizon.runtime-image-integration-receipt.v1",
+  "loop": "HA-RI-001-v1",
+  "shell": "FRSH-016-v1",
+  "asset_id": "host-17",
+  "address": "FR-05",
+  "source_commit": "cce4c78a",
+  "master": {
+    "path": "Visual Direction/Production Masters/2026-08-13-first-run-host17/host17-environment-master-v1.png",
+    "bytes": 3514517,
+    "sha256": "3b08b8309ed7b3d0487038cfa14b0fe8a0372945060b82da38d609a8e43966fa",
+    "width": 1920,
+    "height": 1080,
+    "format": "png",
+    "pixel_format": "Format24bppRgb"
+  },
+  "runtime": {
+    "registry": "horizon-archive-game/src/condensateSpine.js#CONDENSATE_SPINE_REGISTRY",
+    "selector": "condensateSpineNativeActive",
+    "presentation": "horizon-archive-game/src/CityThresholdStaging.jsx#city-world-plate-native",
+    "fallback": "previous shipped City Threshold overview plate and hotspot graph; boundary and access plates remain unchanged",
+    "alt_text_source": "Production Pipeline/Image Toolkit/cards/host-17.json"
+  },
+  "verification": {
+    "master_metadata_hash": "PASS",
+    "focused_source_geometry_fallback": "PASS 5/5",
+    "production_build": "PASS artifact reconciliation",
+    "bundle_caps": "PASS JS 1782578 CSS 121983 maps 0",
+    "emitted_master_identity": "PASS byte-identical",
+    "related": "REUSED FRCE-015-v1 63/63",
+    "full": "REUSED FRCE-015-v1 1047/1047",
+    "validators": "REUSED FRCE-015-v1 40/40",
+    "aggregate_release_holdout": "RESERVED"
+  },
+  "status": "integration_candidate",
+  "decision": "STOP_SUCCESS",
+  "next_asset": "host-18"
+}
