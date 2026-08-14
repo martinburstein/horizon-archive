@@ -1,0 +1,73 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-21",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-21-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "two long exposed alien process bands whose broad interval rhythms visibly correspond",
+    "one bounded chamber present in only one band while the other band remains deliberately different",
+    "a later conductive laminate stitching across both bands without erasing or correcting their difference",
+    "a small flush local coupling at the stitched joint reachable from a stable dry foundation exposure",
+    "an opaque sealed third route known only by exterior service continuity, with a visible active bypass around it"
+  ],
+  "player_critical_facts": [
+    "two corresponding process bands remain visibly distinct, including one bounded chamber that exists in only one band",
+    "a conductive laminate physically couples both bands while preserving rather than smoothing away their bounded difference",
+    "the actual local contact is a small flush coupling at the stitched joint and is safely reachable from stable dry ground",
+    "an opaque third route remains sealed and unreadable inside while an exterior carrier-skin bypass visibly continues around it",
+    "nothing opens, judges, corrects, rewards, answers, or changes because the player arrived"
+  ],
+  "art_direction_preferences": [
+    "the matching interval rhythm reads before the single bounded mismatch is noticed",
+    "the stitch feels like a later careful maintenance layer rather than a repair that homogenized the bands",
+    "the bypass uses a related carrier-skin material without resembling a human road, cable, or pipe",
+    "the dry foundation exposure provides an intimate archaeological approach within a civilization-scale vault",
+    "pale mineral process bands, dark joints, and restrained conductive laminate remain quiet and tactile"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe dry on-foot access to the local coupling",
+    "environmental operation and physical difference without player causation"
+  ],
+  "avoid": [
+    "perfectly identical bands, mirrored duplication, corrected mismatch, merged chamber, repaired-away difference, broken structure, or error alarm",
+    "open third route, visible interior, invented tunnel, exposed secret, portal, doorway, vault challenge, or unlock puzzle",
+    "human road, railway, bridge, cable, wire, pipe, conduit, circuit board, switch, keyboard, screen, control console, or security checkpoint",
+    "text, numbers, signage, glyphs, UI, HUD, map marker, waypoint, beacon, reward, answer, reveal, or watermark",
+    "humanoid residents, vehicles, guards, robots, creatures, faces, eyes, biological forms, activation, judgment, correction, greeting, refusal, tracking, acknowledgement, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host21/host21-environment-master-v1.png",
+    "alt_text": "Two corresponding alien process bands retain one bounded difference beneath a later laminate stitch, beside an exterior bypass around an opaque route.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 7,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 7,
+    "attempts_unused": 13,
+    "remaining_compromises": []
+  }
+}
