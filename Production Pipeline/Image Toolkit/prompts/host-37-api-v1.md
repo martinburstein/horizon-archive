@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: private Full HD cinematic game-environment plate
+
+Create a wide, unoccupied first-person archaeological view where a stable dense ceramic anchor line crosses an alien reach of pressure-bent membranes and porous mineral foam. The player stands on the dry structural anchor line, not on the flexible material. The focal subject is a reachable sacrificial laminate fused along one side of the anchor: a broad translucent mineral membrane meeting a pale porous foam phase in one ancient nonhuman construction.
+
+Make the material relation immediately legible. The translucent membrane is a thick glasslike ceramic sheet bent into a long shallow curve by visible environmental pressure, with internal stress veils but no transparency into an interior. The adjacent pale mineral foam is rigid, open-pored, and softly gathers beads of condensation. Dense charcoal ceramic anchors emerge below both materials and disappear beneath older rust-gold and blue-black accretion.
+
+One continuous dark conductive seam must persist clearly across the unlike substrates. It begins embedded in the translucent membrane, crosses the fused laminate boundary without interruption, and continues through the porous foam where condensation beads collect around it. It is a flush mineral relation inside the construction, not a cable, wire, hose, pipe, crack, road, marked path, glowing circuit, written line, or invitation to follow.
+
+The stable anchor line provides an obvious safe dry approach to the fused laminate. Use rigid ceramic ribs and broad load-bearing slabs underfoot. The flexible translucent membrane should visibly bow away beside the route and must not resemble a bridge, floor, sail, tent, fabric, skin, wing, cocoon, or biological organ. In the distance, a maintained opaque bypass may cross an older scar toward another sealed margin, but it remains secondary and reveals no interior.
+
+Style: premium cinematic photoreal alien archaeology; physically credible translucent mineral ceramics, porous foam, condensation, conductive seams, anchors, and accretion; rigorous nonhuman functional logic; cool diffuse light through the membrane; restrained amber-violet maintenance light on the anchor; blue-black recesses; subtle mist and immense scale; serious, beautiful, melancholy, mysterious; clean 16:9 landscape plate with crop-safe negative space; no sleek sci-fi, fantasy, cartoon, horror, or combat framing.
+
+Nothing opens, activates, answers, rewards, acknowledges, tracks, invites, or changes because of the viewer. No fabric, skin, flesh, creature, humanoid, hand, suit, robot, vehicle, text, code, API, SDK, endpoint, word, number, label, signage, glyph, arrow, route, UI, HUD, marker, waypoint, diagram, map, watermark, logo, visible interior, portal, shrine, altar, monument, or reward display.

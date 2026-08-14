@@ -1,0 +1,73 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-37",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-37-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a reachable sacrificial alien laminate fused between a broad pressure-bent translucent membrane and pale porous mineral foam",
+    "one dark conductive seam visibly persisting across the unlike membrane and foam substrates",
+    "dense ceramic anchors disappearing beneath older accretion around the laminate",
+    "a stable structural anchor line supporting the approach while the flexible membrane remains visibly unsafe to walk on"
+  ],
+  "player_critical_facts": [
+    "the focal host is a fused nonhuman laminate relation between translucent pressure-bent membrane and porous mineral foam, not fabric, skin, a biological organ, a screen, or a human composite panel",
+    "one continuous dark conductive seam visibly crosses from the membrane into the foam without becoming a cable, pipe, crack, written line, or route",
+    "the player-facing approach is supported by a stable dense anchor line; the flexible membrane is clearly not the walking surface",
+    "nothing claims a live API, SDK, endpoint, external result, answer, activation, reward, or world response, and no text or interface appears"
+  ],
+  "art_direction_preferences": [
+    "condensation gathers naturally in the pale porous phase without making the structure biological",
+    "pressure visibly bends the translucent membrane while the seam retains continuity across the material transition",
+    "dense ceramic anchors and old accretion make the stable approach physically convincing",
+    "a maintained bypass and older scar may remain secondary beyond the fresh laminate evidence"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability and stable dry anchor-line approach",
+    "fresh local evidence without borrowed conclusions or Builder equivalence",
+    "quiet indifferent operation without player causation"
+  ],
+  "avoid": [
+    "fabric curtain, tent, sail, tarp, clothing, skin, flesh, wing, cocoon, web, fungus, coral, bone, organ, creature, humanoid, hand, suit, robot, or vehicle",
+    "human composite panel, circuit board, cable, wire, hose, pipe, road, bridge, rail, marked lane, glowing path, electrical arc, open portal, door, window, or visible interior",
+    "computer screen, network diagram, API icon, SDK logo, endpoint marker, command console, reactor, shrine, altar, monument, trophy, or reward pedestal",
+    "text, code, words, numbers, labels, signage, glyphs, UI, HUD, marker, waypoint, diagram, map, watermark, or logo",
+    "answer, external result, success/failure signal, reward, activation, acknowledgement, tracking, invitation, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host37/host37-environment-master-v1.png",
+    "alt_text": "A dark conductive seam persists from a pressure-bent translucent membrane into porous mineral foam beside a stable ceramic anchor-line approach.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 1,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 1,
+    "attempts_unused": 19,
+    "remaining_compromises": [
+      "conductive-seam texture could be more pronounced",
+      "membrane translucency contrast is restrained"
+    ]
+  }
+}
