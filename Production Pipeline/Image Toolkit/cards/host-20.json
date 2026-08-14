@@ -1,0 +1,73 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-20",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-20-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a dramatic sealed alien interlock embedded in the layered civic district boundary",
+    "a much quieter off-axis service aperture beside the interlock, partly blending into repair fabric",
+    "clear physical separation with no cable, tunnel, channel, or route from the service aperture into the sealed identity-bearing structure",
+    "an exposed heat-and-material working margin continuing beyond the interlock perimeter as the safe onward route",
+    "ambient heat return, repair, and district operation continuing unchanged and indifferent"
+  ],
+  "player_critical_facts": [
+    "the large identity-bearing interlock is visibly sealed, inert, and noninviting without reading as a puzzle, portal, punishment, refusal, or unlock challenge",
+    "the actual compatible contact is a small grounded service aperture beside the interlock, distinct from it and easy to overlook within ordinary repair fabric",
+    "the service aperture samples only bounded environmental replicas and has no physical connection or access route into the sealed identity-bearing content",
+    "a stable exposed heat-and-material margin remains physically continuous beyond the perimeter as the clear open pedestrian route",
+    "nothing opens, grants custody, reveals content, tracks, welcomes, refuses, rewards, answers, or reacts"
+  ],
+  "art_direction_preferences": [
+    "the sealed interlock attracts the eye before the quieter service aperture is noticed",
+    "the service aperture resembles ordinary repair infrastructure rather than a user-facing terminal",
+    "pale old layered masses retain distinct joints beneath restrained amber-violet repair fabric",
+    "the onward working margin leads toward a civilization-scale cross-section",
+    "the district feels maintained, serious, and habitable rather than hostile, carceral, or abandoned"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe dry on-foot perimeter access",
+    "environmental operation without player causation"
+  ],
+  "avoid": [
+    "open doorway, visible interior, keyhole, lock puzzle, portal, force field, vault challenge, barrier alarm, red denial light, security checkpoint, or punitive architecture",
+    "cable, wire, pipe, conduit, tunnel, beam, data stream, or channel connecting the service aperture to the sealed interlock",
+    "identity scanner, face reader, command console, screen, keyboard, camera, projector, user-facing control panel, or archive terminal",
+    "text, signage, glyphs, UI, HUD, map marker, waypoint, beacon, reward, answer, reveal, or watermark",
+    "humanoid residents, crowds, vehicles, guards, robots, creatures, faces, eyes, biological forms, activation, opening, greeting, refusal, alarm, tracking, acknowledgement, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host20/host20-environment-master-v1.png",
+    "alt_text": "A sealed alien interlock stands beside a smaller separate service aperture and an open heat-return walking margin.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 2,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 2,
+    "attempts_unused": 18,
+    "remaining_compromises": []
+  }
+}
