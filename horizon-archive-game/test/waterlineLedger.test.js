@@ -124,6 +124,8 @@ test("one selector atomically yields native or exactly one eligible generic laun
   assert.equal(inactive, false);
   assert.deepEqual(deriveWaterlineLedgerLauncherGuards({ nativeActive: inactive, sceneId: "ruins", pendingAdvance: true, predecessorComplete: true }), { native: false, objectiveGeneric: true, plannerGeneric: false });
   const active = deriveWaterlineLedgerSelector({ sceneId: "ruins", pendingAdvance: true, presented: true, state: { state: "available" } });
+  const completed = deriveWaterlineLedgerSelector({ sceneId: "ruins", pendingAdvance: true, presented: true, state: { state: "complete" } });
+  assert.equal(completed, false, "completed Host 14 yields the scene to Host 15");
   assert.deepEqual(deriveWaterlineLedgerLauncherGuards({ nativeActive: active, sceneId: "ruins", pendingAdvance: true, predecessorComplete: true }), { native: true, objectiveGeneric: false, plannerGeneric: false });
   const objectiveMastered = { masteryStatus: "mastered" };
   const fallback = deriveWaterlineLedgerLauncherGuards({ nativeActive: false, sceneId: "ruins", pendingAdvance: true, predecessorComplete: true, objectiveLedgerEvidence: objectiveMastered });

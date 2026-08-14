@@ -341,7 +341,7 @@ export function deriveWaterlineLedgerState({ returned = false, objectiveLedgerEv
 }
 
 export function deriveWaterlineLedgerSelector({ sceneId, pendingAdvance, presented, state } = {}) {
-  return sceneId === "ruins" && pendingAdvance === true && presented === true && state?.state !== "hidden";
+  return sceneId === "ruins" && pendingAdvance === true && presented === true && state?.state !== "hidden" && state?.state !== "complete";
 }
 
 export function deriveWaterlineLedgerLauncherGuards({ nativeActive, sceneId, pendingAdvance, predecessorComplete, objectiveLedgerEvidence, remediationPlannerEvidence } = {}) {

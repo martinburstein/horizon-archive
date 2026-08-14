@@ -3,12 +3,12 @@
   "loop": "HA-RI-001-v1",
   "controller_state": "OPERATE",
   "source_queue": "Production Pipeline/Image Toolkit/IMAGE_QUEUE.json",
-  "current_asset": "host-15",
-  "current_address": "FR-03",
+  "current_asset": "host-16",
+  "current_address": "FR-04",
   "strategy_family": "existing-state-boundary-media-adapter",
   "counts": {
-    "produced_pending_integration": 26,
-    "integration_candidate": 1,
+    "produced_pending_integration": 25,
+    "integration_candidate": 2,
     "integrated_released": 0
   },
   "evidence": {
@@ -19,13 +19,13 @@
       "unmodified route/save/privacy/ending evidence"
     ],
     "fresh_required": [
-      "host-15 master identity and provenance",
-      "host-15 runtime boundary and focused selector evidence"
+      "host-16 master identity and provenance",
+      "host-16 runtime boundary and focused selector evidence"
     ],
     "final_reserve": "one aggregate independent release cascade"
   },
   "best_verified_state_ref": "FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e",
   "committed_release_ref": "FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e",
   "decision": "CONTINUE_SAME_STRATEGY",
-  "next_action": "integrate host-15 into its existing FR-03 boundary while preserving the verified host-14 candidate"
+  "next_action": "integrate host-16 into its existing FR-04 boundary while preserving the verified host-14 and host-15 candidates"
 }
