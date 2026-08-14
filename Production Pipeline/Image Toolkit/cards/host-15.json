@@ -56,21 +56,17 @@
     "the landmark moving, opening, activating, acknowledging, or responding"
   ],
   "integration": {
-    "product_path": "Visual Direction/Production Masters/2026-08-13-first-run-host15/host15-environment-master-v1.png",
+    "product_path": "Visual Direction/Production Masters/2026-08-13-first-run-host15/host15-environment-master-v2.png",
     "alt_text": "A monumental incomplete frame hangs silently above a drowned basin while a separate grounded alien coupling waits on a reachable dry shelf below.",
     "interaction_geometry": null
   },
   "selection": {
     "status": "done_practical_rubric",
-    "selected_attempt": 1,
-    "practical_score": 19,
+    "selected_attempt": 2,
+    "practical_score": 20,
     "hard_gate": "pass",
-    "attempts_used": 1,
-    "attempts_unused": 19,
-    "remaining_compromises": [
-      "the lower-middle composition is visually dense",
-      "the restrained palette could support slightly more variation",
-      "mist may soften a few secondary navigation details"
-    ]
+    "attempts_used": 20,
+    "attempts_unused": 0,
+    "remaining_compromises": []
   }
 }
