@@ -1,0 +1,38 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-40",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-40-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {"width": 1920, "height": 1080, "format": "PNG", "mode": "RGB", "fit": "cover", "background": "000000"},
+  "generation_budget": {"max_attempts": 20, "concepts": 6, "targeted_edits": 14, "max_non_improving_edits_per_family": 2, "concurrency": 1, "stop_on_first_practical_pass": true},
+  "must_show": [
+    "the same quiet outer-margin landscape and neutral measured horizon, with no new alien destination or acknowledgement",
+    "stable ceramic footing where the player can close a separate expedition-owned folio and remain in place",
+    "independent membrane, condensation, residue, and distant-heat processes continuing without synchronized change",
+    "balanced negative space for a separate local readiness/remediation overlay that is not baked into the image"
+  ],
+  "player_critical_facts": [
+    "the final clean plate shows an unchanged indifferent world, not a certification scene, exam prediction, tribunal, graduation monument, Builder acceptance, access grant, employment promise, or reward reveal",
+    "both a locally ready result and a locally not-yet-ready result must fit over the exact same landscape with equal dignity; no green/red world lighting, anthem, seal, beacon, aperture, or route change appears",
+    "the outer margin remains closed and the horizon offers no new chamber, destination, turning object, approaching voice, or environmental response",
+    "the plate contains no baked folio, result text, score, answer, remediation list, certification mark, Microsoft/Azure branding, or interface"
+  ],
+  "art_direction_preferences": [
+    "the composition feels conclusive through calm framing rather than spectacle",
+    "stable footing and horizon balance allow the later local interface to appear and recede cleanly",
+    "independent environmental clocks remain visible but understated",
+    "the final view is beautiful and emotionally sufficient without implying cosmic closure"
+  ],
+  "must_preserve": ["first-person environmental scale", "wide crop readability and stable final footing", "equal world treatment for every bounded local outcome", "quiet indifferent operation without player causation"],
+  "avoid": [
+    "graduation scene, certification seal, diploma, exam score, employment badge, access key, Microsoft logo, Azure logo, tribunal, throne, monument, gate, portal, new chamber, destination, beacon, altar, shrine, trophy, reward, or Builder interface",
+    "green success light, red failure light, celebratory sunrise, ominous storm, anthem visualization, synchronized city response, opening route, turning object, approaching figure, or acknowledgement",
+    "baked folio, readiness result, remediation list, screen, hologram, text, code, score, answer, word, number, label, signage, glyph, UI, HUD, marker, waypoint, diagram, map, watermark, or logo",
+    "humanoid, hand, suit, robot, vehicle, creature, flesh, bone, roots, vines, organs, egg, nest, or dominant biology"
+  ],
+  "integration": {"product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host40/host40-environment-master-v1.png", "alt_text": "A stable ceramic outer margin faces a neutral horizon while membranes, condensation, residue, and distant heat continue without acknowledgement or change.", "interaction_geometry": null},
+  "selection": {"status": "done_practical_rubric_manual_reconciliation", "selected_attempt": 1, "practical_score": 17, "hard_gate": "pass", "attempts_used": 1, "attempts_unused": 19, "remaining_compromises": ["anchor and residue details are restrained", "some membrane clarity carries a mild biological-reading risk", "the intentionally quiet horizon is visually sparse"]}
+}
