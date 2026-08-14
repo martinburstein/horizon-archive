@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-IMG-002-v1`
+State ID: `FRLS-IMG-003-v1`
 
 Control: `FRCV-001-v1` / `HA-RI-001-v1`
 
-Status: **OPERATE / HOST 15 INTEGRATION CANDIDATE / HOST 16 NEXT**
+Status: **OPERATE / HOST 16 INTEGRATION CANDIDATE / HOST 17 NEXT**
 
 `NEXT_INSTANCE_HANDOFF.md` remains the exact-next-action authority.
 
@@ -15,22 +15,22 @@ contract:
   scope: 27_existing_private_production_masters_one_asset_per_iteration
 state:
   source_control_read: 6bf7036d
-  current_asset: host-16
-  current_address: FR-04
+  current_asset: host-17
+  current_address: FR-05
   controller_state: CONTINUE_SAME_STRATEGY
   current_ref: FRCE-015-v1_null_first@398a64131fa804223cfbdfc88f2865242bb3e02a
   best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
   committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
 queue:
-  produced_pending_integration: 25
-  integration_candidate: 2
+  produced_pending_integration: 24
+  integration_candidate: 3
   integrated_released: 0
 evidence:
   reused:
     - FRCE-015-v1 related 63/63 full 1047/1047 validators 40/40
     - unchanged route save privacy lesson ending and fixture evidence
   fresh_required:
-    - host-16 master identity provenance and affected runtime boundary evidence
+    - host-17 master identity provenance and affected runtime boundary evidence
   fresh_passed:
     - host-14 master identity and provenance
     - host-14 focused source selector and mutation 10/10
@@ -39,11 +39,14 @@ evidence:
     - host-15 master identity and provenance
     - host-15 focused source selector predecessor boundary and lesson order 16/16
     - production build 237 modules bundle caps and byte-identical emitted master
+    - host-16 master identity and provenance
+    - host-16 focused source geometry responsive state and fallback 5/5
+    - production build 239 modules bundle caps and byte-identical emitted master
   final_proof_reserve: FULL
 hard_constraints:
   - no image generation editing reveal or accepted-master overwrite
   - no route lesson evidence save ending world-response or successor change
   - no broad test rerun without a named verifier-relevant invalidation
 decision: CONTINUE_SAME_STRATEGY
-next_owner: runtime_integration_controller_host_16
+next_owner: runtime_integration_controller_host_17
 ```

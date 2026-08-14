@@ -11,6 +11,7 @@ import drownedSwitchyardImage from "../../Visual Direction/Production Masters/20
 import tidalPatternLoomImage from "../../Visual Direction/Production Masters/2026-08-13-first-run-host13/host13-tidal-pattern-loom-master-v1.png";
 import waterlineLedgerImage from "../../Visual Direction/Production Masters/2026-08-13-first-run-host14/host14-environment-master-v1.png";
 import crownCounterpoiseImage from "../../Visual Direction/Production Masters/2026-08-13-first-run-host15/host15-environment-master-v2.png";
+import witnessSpineImage from "../../Visual Direction/Production Masters/2026-08-13-first-run-host16/host16-environment-master-v1.png";
 import automatonImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/witness-corridor-master.png";
 import cityThresholdOverviewImage from "../../Visual Direction/Production Masters/2026-07-15-photorealistic-demo/city-threshold-overview-master.png";
 import evidenceAudio from "../../curriculum/lessons/L-05-07/evidence/basin_audio.wav";
@@ -258,6 +259,7 @@ import {
 import { TIDAL_PATTERN_LOOM_COPY, TIDAL_PATTERN_LOOM_PROVENANCE, TIDAL_PATTERN_LOOM_REGISTRY, TIDAL_PATTERN_LOOM_SOURCE_URL, deriveTidalPatternLoomState, getTidalPatternLoomHotspot, isLegacyHost13LessonLauncherVisible } from "./tidalPatternLoom.js";
 import { WATERLINE_LEDGER_COPY, WATERLINE_LEDGER_REGISTRY, WATERLINE_LEDGER_SOURCE_URL, deriveWaterlineLedgerSelector, deriveWaterlineLedgerState, getWaterlineLedgerCopyForState, getWaterlineLedgerHotspot } from "./waterlineLedger.js";
 import { CROWN_COUNTERPOISE_COPY, CROWN_COUNTERPOISE_REGISTRY, deriveCrownCounterpoiseSelector, deriveCrownCounterpoiseState, getCrownCounterpoiseCopyForState, getCrownCounterpoiseHotspot } from "./crownCounterpoise.js";
+import { WITNESS_SPINE_COPY, WITNESS_SPINE_REGISTRY, deriveWitnessSpineState, getWitnessSpineHotspots } from "./witnessSpine.js";
 import {
   buildCompletedMeadowReturnPatch,
   buildMeadowDeparturePresentation,
@@ -1112,6 +1114,7 @@ export function App() {
   const [waterlineLedgerDecodedImage, setWaterlineLedgerDecodedImage] = useState(null);
   const [waterlineLedgerPresented, setWaterlineLedgerPresented] = useState(false);
   const [crownCounterpoiseDecodedImage, setCrownCounterpoiseDecodedImage] = useState(null);
+  const [witnessSpineDecodedImage, setWitnessSpineDecodedImage] = useState(null);
   const [structuredPacketSession, setStructuredPacketSession] = useState(null);
   const [structuredPacketEvidence, setStructuredPacketEvidence] = useState(null);
   const [controlFlowSession, setControlFlowSession] = useState(null);
@@ -1331,6 +1334,8 @@ export function App() {
   const waterlineLedgerNativeActive=deriveWaterlineLedgerSelector({sceneId:scene.id,pendingAdvance,presented:waterlineLedgerPresented,state:waterlineLedgerState});
   const crownCounterpoiseState=deriveCrownCounterpoiseState({predecessorComplete:remediationPlannerEvidence?.masteryStatus==="mastered",capstoneEvidence:capstoneReadinessEvidence,mixedEvidence:mixedSimulationEvidence,finalEvidence:finalConfidenceEvidence,registry:CROWN_COUNTERPOISE_REGISTRY,decodedImage:crownCounterpoiseDecodedImage});
   const crownCounterpoiseNativeActive=deriveCrownCounterpoiseSelector({sceneId:scene.id,pendingAdvance,state:crownCounterpoiseState});
+  const witnessSpineState=deriveWitnessSpineState({sceneId:scene.id,completed:completed.includes("automaton"),registry:WITNESS_SPINE_REGISTRY,decodedImage:witnessSpineDecodedImage});
+  const witnessSpineNativeActive=witnessSpineState!=="hidden";
   const meadowDestination = scenes[sceneIndex + 1]?.location ?? "the next survey site";
   const meadowDeparturePresentation = buildMeadowDeparturePresentation(meadowDestination, {
     calibrationState: fractureNurseryState,
@@ -1386,11 +1391,15 @@ export function App() {
   const waterlineLedgerHotspots=waterlineLedgerNativeActive&&waterlineLedgerHotspot?[{id:"waterline-ledger",label:WATERLINE_LEDGER_COPY.name,hotspot:waterlineLedgerHotspot}]:[];
   const crownCounterpoiseHotspot=getCrownCounterpoiseHotspot(CROWN_COUNTERPOISE_REGISTRY);
   const crownCounterpoiseHotspots=crownCounterpoiseNativeActive&&crownCounterpoiseHotspot?[{id:"crown-counterpoise",label:CROWN_COUNTERPOISE_COPY.name,hotspot:crownCounterpoiseHotspot}]:[];
+  const witnessSpineSourceHotspots=getWitnessSpineHotspots(WITNESS_SPINE_REGISTRY);
+  const witnessSpineHotspots=witnessSpineNativeActive&&witnessSpineSourceHotspots?[{id:"evidence-terminal",label:WITNESS_SPINE_COPY.name,hotspot:witnessSpineSourceHotspots.primary,primary:true},{id:"fallen-automaton",label:WITNESS_SPINE_COPY.fallenName,hotspot:witnessSpineSourceHotspots.fallen}]:[];
   const sceneHotspots = [primarySceneHotspot, ...(scene.id === "ruins" ? ruinsHotspots : meadowHotspots)];
   const activeSceneHotspots = scene.id === "ruins" && strandedLensCradleActive
     ? strandedLensCradleHotspots
     : sceneHotspots;
-  const presentedSceneHotspots = crownCounterpoiseNativeActive
+  const presentedSceneHotspots = scene.id === "automaton" && witnessSpineNativeActive
+    ? witnessSpineHotspots
+    : crownCounterpoiseNativeActive
     ? crownCounterpoiseHotspots
     : waterlineLedgerNativeActive
     ? waterlineLedgerHotspots
@@ -1600,6 +1609,7 @@ export function App() {
 
   useEffect(()=>{if(WATERLINE_LEDGER_REGISTRY.source.enabled!==true||!WATERLINE_LEDGER_SOURCE_URL){setWaterlineLedgerDecodedImage(null);return undefined;}let connected=true;const image=new Image();image.decoding="async";image.onload=()=>connected&&setWaterlineLedgerDecodedImage({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setWaterlineLedgerDecodedImage(null);image.src=waterlineLedgerImage;return()=>{connected=false;image.onload=null;image.onerror=null;};},[]);
   useEffect(()=>{if(CROWN_COUNTERPOISE_REGISTRY.source.enabled!==true){setCrownCounterpoiseDecodedImage(null);return undefined;}let connected=true;const image=new Image();image.decoding="async";image.onload=()=>connected&&setCrownCounterpoiseDecodedImage({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setCrownCounterpoiseDecodedImage(null);image.src=crownCounterpoiseImage;return()=>{connected=false;image.onload=null;image.onerror=null;};},[]);
+  useEffect(()=>{if(WITNESS_SPINE_REGISTRY.source.enabled!==true){setWitnessSpineDecodedImage(null);return undefined;}let connected=true;const image=new Image();image.decoding="async";image.onload=()=>connected&&setWitnessSpineDecodedImage({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setWitnessSpineDecodedImage(null);image.src=witnessSpineImage;return()=>{connected=false;image.onload=null;image.onerror=null;};},[]);
   useEffect(()=>{if(!waterlineLedgerLawful){waterlineLedgerFocusPendingRef.current=false;waterlineLedgerAnnouncementPendingRef.current=false;if(waterlineLedgerPresented)setWaterlineLedgerPresented(false);return;}if(waterlineLedgerPresented||mode!=="playing"||scene.id!=="ruins"||terminalOpen)return;waterlineLedgerFocusPendingRef.current=true;waterlineLedgerAnnouncementPendingRef.current=true;setWaterlineLedgerPresented(true);},[mode,scene.id,terminalOpen,waterlineLedgerLawful,waterlineLedgerPresented]);
   useLayoutEffect(()=>{if(!waterlineLedgerFocusPendingRef.current||!waterlineLedgerNativeActive||terminalOpen)return;const target=waterlineLedgerRef.current;if(!target?.isConnected)return;waterlineLedgerFocusPendingRef.current=false;target.focus({preventScroll:true});if(waterlineLedgerAnnouncementPendingRef.current){waterlineLedgerAnnouncementPendingRef.current=false;setSceneAnnouncement(getWaterlineLedgerCopyForState(waterlineLedgerState));}},[waterlineLedgerNativeActive,waterlineLedgerState.state,waterlineLedgerState.lesson,waterlineLedgerState.presentation,terminalOpen]);
 
@@ -4704,7 +4714,7 @@ export function App() {
 
   return (
     <CanonicalGameFrame enabled={scene.id === "meadow" || scene.id === "ruins"}>
-    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined} data-flooded-choir-state={scene.id === "ruins" ? floodedChoirState : undefined} data-blind-camera-well-state={scene.id === "ruins" ? blindCameraWellState : undefined} data-borrowed-light-wall-state={scene.id === "ruins" ? borrowedLightWallState : undefined} data-drowned-switchyard-state={scene.id === "ruins" ? drownedSwitchyardState : undefined} data-tidal-pattern-loom-state={scene.id === "ruins" ? tidalPatternLoomState : undefined} data-waterline-ledger-state={scene.id === "ruins" ? waterlineLedgerState.state : undefined} data-waterline-ledger-native-active={waterlineLedgerNativeActive ? "true" : undefined} data-crown-counterpoise-state={scene.id === "ruins" ? crownCounterpoiseState.state : undefined} data-crown-counterpoise-native-active={crownCounterpoiseNativeActive ? "true" : undefined}>
+    <main className="game-shell adventure-screen" data-scene={scene.id} data-terminal-open={terminalOpen ? "true" : "false"} data-route-marker-state={scene.id === "meadow" ? meadowRouteMarkerState : undefined} data-severed-relay-spine-state={scene.id === "ruins" ? severedRelaySpineState : undefined} data-flooded-choir-state={scene.id === "ruins" ? floodedChoirState : undefined} data-blind-camera-well-state={scene.id === "ruins" ? blindCameraWellState : undefined} data-borrowed-light-wall-state={scene.id === "ruins" ? borrowedLightWallState : undefined} data-drowned-switchyard-state={scene.id === "ruins" ? drownedSwitchyardState : undefined} data-tidal-pattern-loom-state={scene.id === "ruins" ? tidalPatternLoomState : undefined} data-waterline-ledger-state={scene.id === "ruins" ? waterlineLedgerState.state : undefined} data-waterline-ledger-native-active={waterlineLedgerNativeActive ? "true" : undefined} data-crown-counterpoise-state={scene.id === "ruins" ? crownCounterpoiseState.state : undefined} data-crown-counterpoise-native-active={crownCounterpoiseNativeActive ? "true" : undefined} data-witness-spine-state={scene.id === "automaton" ? witnessSpineState : undefined} data-witness-spine-native-active={witnessSpineNativeActive ? "true" : undefined}>
       <p className="sr-only" role="status" aria-live="polite" aria-atomic="true" data-scene-announcement>{sceneAnnouncement}</p>
       <section className="scene-frame" aria-label={`${scene.location} scene`}>
         <div className="scene-world-content" inert={terminalOpen || demoTourConfirmation ? true : undefined}>
@@ -4756,6 +4766,8 @@ export function App() {
                   <img className="scene-art" src={ruinsImages.canonical} alt={scene.imageAlt} data-ab01-state={ruinsVisualState} />
                 </picture>
               )
+            ) : scene.id === "automaton" && witnessSpineNativeActive ? (
+              <img className="scene-art witness-spine-art" src={witnessSpineImage} alt={WITNESS_SPINE_COPY.alt} data-witness-spine-source={WITNESS_SPINE_REGISTRY.source.path} style={{objectPosition:"50% 50%"}} />
             ) : (
               <img className="scene-art" src={scene.image} alt={scene.imageAlt ?? `Alien archaeological site: ${scene.location}`} />
             )}

@@ -8,13 +8,13 @@ Authority: Martin's 2026-08-14 runtime-integration instruction.
 
 Control: `HA-RI-001-v1` / `FRSH-016-v1`
 
-Hosts 14 and 15 are exact integration candidates. Host 15 passed its focused
-and predecessor-boundary checks `16/16`, production build `237` modules,
-bundle caps, and byte-identical emitted media.
+Hosts 14 through 16 are exact integration candidates. Host 16 passed its
+focused source, geometry, state, and fallback checks `5/5`, production build
+`239` modules, bundle caps, and byte-identical emitted media.
 
-Exact next action: integrate Host 16's completed production master into its
-existing `FR-04` boundary using the same controller, while preserving Hosts 14
-and 15 and the final aggregate validation reserve.
+Exact next action: integrate Host 17's completed production master into its
+existing `FR-05` boundary using the same controller, while preserving Hosts 14
+through 16 and the final aggregate validation reserve.
 
 The generation queue is complete. No generation/edit call, reveal, new queue
 entry, route/lesson/save/ending change, broad repeated test cascade, or

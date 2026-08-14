@@ -1,0 +1,38 @@
+{
+  "schema": "horizon.runtime-image-integration-receipt.v1",
+  "loop": "HA-RI-001-v1",
+  "shell": "FRSH-016-v1",
+  "asset_id": "host-16",
+  "address": "FR-04",
+  "source_commit": "caf24d07",
+  "master": {
+    "path": "Visual Direction/Production Masters/2026-08-13-first-run-host16/host16-environment-master-v1.png",
+    "bytes": 3293498,
+    "sha256": "b07b2a6602eb23e3742212ba84ca84d8e3377bb24cdacd95e8e20f4676ef9c2e",
+    "width": 1920,
+    "height": 1080,
+    "format": "png",
+    "pixel_format": "Format24bppRgb"
+  },
+  "runtime": {
+    "registry": "horizon-archive-game/src/witnessSpine.js#WITNESS_SPINE_REGISTRY",
+    "selector": "witnessSpineNativeActive",
+    "presentation": "horizon-archive-game/src/App.jsx#witness-spine-art",
+    "fallback": "previous shipped Witness Corridor plate with unchanged Evidence Terminal lesson graph",
+    "alt_text_source": "Production Pipeline/Image Toolkit/cards/host-16.json"
+  },
+  "verification": {
+    "master_metadata_hash": "PASS",
+    "focused_source_geometry_fallback": "PASS 5/5",
+    "production_build": "PASS 239 modules",
+    "bundle_caps": "PASS JS 1778539 CSS 121983 maps 0",
+    "emitted_master_identity": "PASS byte-identical",
+    "related": "REUSED FRCE-015-v1 63/63",
+    "full": "REUSED FRCE-015-v1 1047/1047",
+    "validators": "REUSED FRCE-015-v1 40/40",
+    "aggregate_release_holdout": "RESERVED"
+  },
+  "status": "integration_candidate",
+  "decision": "STOP_SUCCESS",
+  "next_asset": "host-17"
+}
