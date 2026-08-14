@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-38",
-  "status": "produced_pending_integration",
+  "status": "integration_candidate",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-38-api-v2.md",
@@ -34,6 +34,6 @@
     "text, code, capability chart, answer matrix, word, number, label, signage, glyph, UI, HUD, marker, waypoint, diagram, map, watermark, or logo",
     "answer, external result, success/failure signal, reward, activation, acknowledgement, tracking, invitation, or world response"
   ],
-  "integration": {"product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host38/host38-environment-master-v1.png", "alt_text": "Radial mineral sample sleeves terminate locally on a maintained bypass beside a dense opaque alien margin that remains closed and unavailable.", "interaction_geometry": null},
+  "integration": {"product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host38/host38-environment-master-v1.png", "alt_text": "Radial mineral sample sleeves terminate locally on a maintained bypass beside a dense opaque alien margin that remains closed and unavailable.", "interaction_geometry": "horizon-archive-game/src/unborrowedHosts.js#RADIAL_SAMPLE_SLEEVES_REGISTRY", "runtime_source": "horizon-archive-game/src/UnborrowedReach.jsx", "candidate_status": "focused_pass_pending_aggregate_release"},
   "selection": {"status": "done_practical_rubric", "selected_attempt": 2, "practical_score": 19, "hard_gate": "pass", "attempts_used": 2, "attempts_unused": 18, "remaining_compromises": ["the older exterior scar remains somewhat subtle"]}
 }

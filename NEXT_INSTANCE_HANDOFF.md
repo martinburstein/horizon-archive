@@ -8,14 +8,14 @@ Authority: Martin's 2026-08-14 runtime-integration instruction.
 
 Control: `HA-RI-001-v1` / `FRSH-016-v1`
 
-Hosts 14 through 37 are exact integration candidates. The Host 37 Unborrowed
-Reach boundary passed focused source, provenance, selector, decode, fallback,
-presentation, and ownership checks `5/5`, build `271` modules, and
+Hosts 14 through 38 are exact integration candidates. The paired Host 37/38
+Unborrowed Reach boundary passed focused source, provenance, selector, decode,
+fallback, presentation, and ownership checks `10/10`, build `272` modules, and
 byte-identical emitted media.
 
-Exact next action: integrate Host 38's completed production master into its
-existing `FR-15` boundary using the same controller, while preserving Hosts 14
-through 37 and the final aggregate validation reserve.
+Exact next action: integrate Host 39's completed production master into its
+existing `FR-16` boundary using the same controller, while preserving Hosts 14
+through 38 and the final aggregate validation reserve.
 
 The generation queue is complete. No generation/edit call, reveal, new queue
 entry, route/lesson/save/ending change, broad repeated test cascade, or

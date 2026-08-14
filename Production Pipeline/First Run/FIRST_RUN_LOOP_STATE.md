@@ -1,10 +1,10 @@
 # Horizon Archive First Run Loop State
 
-State ID: `FRLS-IMG-024-v1`
+State ID: `FRLS-IMG-025-v1`
 
 Control: `FRCV-001-v1` / `HA-RI-001-v1`
 
-Status: **OPERATE / HOST 37 INTEGRATION CANDIDATE / HOST 38 NEXT**
+Status: **OPERATE / HOST 38 INTEGRATION CANDIDATE / HOST 39 NEXT**
 
 `NEXT_INSTANCE_HANDOFF.md` remains the exact-next-action authority.
 
@@ -14,23 +14,23 @@ contract:
   loop: HA-RI-001-v1
   scope: 27_existing_private_production_masters_one_asset_per_iteration
 state:
-  source_control_read: 62a2bbe
-  current_asset: host-38
-  current_address: FR-15
+  source_control_read: 3a81662e
+  current_asset: host-39
+  current_address: FR-16
   controller_state: CONTINUE_SAME_STRATEGY
   current_ref: FRCE-015-v1_null_first@398a64131fa804223cfbdfc88f2865242bb3e02a
   best_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
   committed_ref: FRAB-013-v1@357ad6dc4184b74150173504e86e366c761cdc0e
 queue:
-  produced_pending_integration: 3
-  integration_candidate: 24
+  produced_pending_integration: 2
+  integration_candidate: 25
   integrated_released: 0
 evidence:
   reused:
     - FRCE-015-v1 related 63/63 full 1047/1047 validators 40/40
     - unchanged route save privacy lesson ending and fixture evidence
   fresh_required:
-    - host-38 master identity provenance and affected runtime boundary evidence
+    - host-39 master identity provenance and affected runtime boundary evidence
   fresh_passed:
     - host-14 master identity and provenance
     - host-14 focused source selector and mutation 10/10
@@ -105,11 +105,14 @@ evidence:
     - host-37 master identity and provenance
     - host-37 focused source provenance selector decode fallback presentation and ownership 5/5
     - production build 271 modules and byte-identical emitted master
+    - host-38 master identity and provenance
+    - host-37 and host-38 paired focused source provenance selector decode fallback presentation and ownership 10/10
+    - production build 272 modules and byte-identical emitted master
   final_proof_reserve: FULL
 hard_constraints:
   - no image generation editing reveal or accepted-master overwrite
   - no route lesson evidence save ending world-response or successor change
   - no broad test rerun without a named verifier-relevant invalidation
 decision: CONTINUE_SAME_STRATEGY
-next_owner: runtime_integration_controller_host_38
+next_owner: runtime_integration_controller_host_39
 ```

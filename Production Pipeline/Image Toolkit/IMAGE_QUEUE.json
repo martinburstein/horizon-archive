@@ -27,7 +27,7 @@
     {"asset_id": "host-35", "address": "FR-14", "status": "integration_candidate", "card": "cards/host-35.json"},
     {"asset_id": "host-36", "address": "FR-14", "status": "integration_candidate", "card": "cards/host-36.json"},
     {"asset_id": "host-37", "address": "FR-15", "status": "integration_candidate", "card": "cards/host-37.json"},
-    {"asset_id": "host-38", "address": "FR-15", "status": "produced_pending_integration", "card": "cards/host-38.json"},
+    {"asset_id": "host-38", "address": "FR-15", "status": "integration_candidate", "card": "cards/host-38.json"},
     {"asset_id": "host-39", "address": "FR-16", "status": "produced_pending_integration", "card": "cards/host-39.json"},
     {"asset_id": "host-40", "address": "FR-16", "status": "produced_pending_integration", "card": "cards/host-40.json"}
   ]
