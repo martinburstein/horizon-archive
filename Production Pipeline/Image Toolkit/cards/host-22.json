@@ -1,0 +1,77 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-22",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-22-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "an alien carrier-skin bypass crossing the exposed margin",
+    "a sacrificial translucent outer layer peeling away in controlled broad sheets",
+    "a continuous intact replacement skin clearly visible underneath the shedding layer",
+    "a small dry exchange collar at the bypass edge reachable from stable ground and distinct from the moving sheets",
+    "the bypass rejoining three materially distinct stable continuities beyond the exposed margin"
+  ],
+  "player_critical_facts": [
+    "controlled shedding affects only a translucent sacrificial outer layer while an intact replacement remains visibly continuous underneath",
+    "the actual local contact is a small dry exchange collar at the bypass edge, safely reachable and visually separate from the largest moving sheets",
+    "the shedding reads as ordinary material renewal rather than damage, collapse, biological molting, alarm, rejection, or correction",
+    "the bypass continues and visibly rejoins three materially distinct stable continuities, with a broad safe onward route",
+    "nothing opens, judges, rewards, answers, supplies a missing value, or changes because the player arrived"
+  ],
+  "art_direction_preferences": [
+    "the conspicuous translucent sheets attract attention before the quieter exchange collar is discovered",
+    "the underlayer appears seamless, load-bearing, and already continuous rather than freshly activated",
+    "the three onward continuities differ through material and cadence instead of colored signage",
+    "pale mineral structure and restrained amber-violet carrier skin remain tactile and quiet",
+    "the scene feels maintained and beautiful rather than broken, hazardous, or abandoned"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe dry on-foot access to the exchange collar",
+    "pre-existing environmental operation without player causation"
+  ],
+  "avoid": [
+    "torn load-bearing structure, collapse, explosion, damage alarm, emergency repair, exposed interior, broken route, blocked passage, or hazardous debris field",
+    "animal skin, scales, shell, cocoon, wing, membrane, flesh, molt, organic creature, face, or eye",
+    "human conveyor, road, railway, bridge, cable, wire, pipe, duct, factory machine, airlock, control panel, switch, screen, keyboard, or security checkpoint",
+    "text, numbers, signage, glyphs, UI, HUD, map marker, waypoint, beacon, reward, answer, reveal, or watermark",
+    "humanoid residents, vehicles, guards, robots, creatures, activation, judgment, correction, greeting, refusal, tracking, acknowledgement, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host22/host22-environment-master-v1.png",
+    "alt_text": "A translucent sacrificial skin sheds in controlled sheets from an alien bypass while an intact replacement continues beneath it toward three material routes.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_forced_completion",
+    "selected_attempt": 3,
+    "practical_score": 17,
+    "hard_gate": "forced_completion_compromise",
+    "attempts_used": 20,
+    "attempts_unused": 0,
+    "remaining_compromises": [
+      "the small exchange collar remains visually subtle and may require careful runtime hotspot placement",
+      "the broad onward continuity is less explicit than preferred",
+      "the renewal process retains some structural ambiguity at a glance"
+    ]
+  }
+}
