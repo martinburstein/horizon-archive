@@ -1,0 +1,73 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-17",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-17-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "exhaust_budget": true
+  },
+  "must_show": [
+    "a stable incidental threshold lip overlooking an immense volcanic alien habitation vault already operating",
+    "an already-lit rightward civic bridge crossing heat channels and vapor below",
+    "an oblique condensate coupling embedded in ordinary return infrastructure along a reachable dry edge",
+    "old foundation fabric visibly joined to later exchange ribs at the coupling",
+    "ambient heat exchange and restrained maintenance activity continuing independently of the player"
+  ],
+  "player_critical_facts": [
+    "all city lights, vapor, heat routing, and maintenance cycles visibly predate the player's arrival",
+    "the local coupling is grounded along a dry condensation-return edge and reachable on foot without crossing live flow",
+    "the coupling reads as ordinary environmental infrastructure rather than a welcoming console or identity terminal",
+    "the already-lit rightward bridge remains the clear physical onward route",
+    "nothing activates, turns toward the player, opens, welcomes, refuses, rewards, or responds"
+  ],
+  "art_direction_preferences": [
+    "immense civic scale contrasts with the small ordinary coupling",
+    "pale old foundation masses retain distinct joints beneath amber-violet repair fabric",
+    "small low maintenance forms remain distant process elements rather than characters",
+    "the dry condensation edge is visually calm beside active heat and vapor circulation",
+    "the mood is awe without welcome, abandonment, or hostility"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe on-foot access and an already-open route",
+    "city operation without player causation"
+  ],
+  "avoid": [
+    "lights switching on, doors opening, machinery turning toward the player, greeting, refusal, or alarm",
+    "human city, palace, cathedral, factory, train station, road system, or conventional bridge architecture",
+    "identity scanner, face reader, security checkpoint, command console, screen, keyboard, or user-facing control panel",
+    "humanoid residents, crowds, vehicles, guards, robots, creatures, or biological forms",
+    "text, signage, glyphs, UI, map marker, spotlight, beacon, reward, answer, portal, or watermark"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-13-first-run-host17/host17-environment-master-v1.png",
+    "alt_text": "An already-lit alien civic bridge crosses a geothermal vault beyond a small oblique coupling embedded beside a dry condensation route.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 2,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 20,
+    "attempts_unused": 0,
+    "remaining_compromises": []
+  }
+}
