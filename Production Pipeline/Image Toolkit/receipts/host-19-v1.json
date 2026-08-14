@@ -1,0 +1,50 @@
+{
+  "schema": "horizon.image-receipt.v1",
+  "accepted_at_utc": "2026-08-14T04:51:28.6501954Z",
+  "asset_id": "host-19",
+  "tool": "openai-image-api:gpt-image-2",
+  "operation": "edit",
+  "prompt": {
+    "path": "C:\\Users\\marti\\OneDrive\\Desktop\\Horizon Archive\\Production Pipeline\\Image Toolkit\\prompts\\host-19-api-v1.md",
+    "sha256": "87cf61ce58f540e3f8cd1707fc7bc509bed2e72fa07bcf62e303333a1b865c91"
+  },
+  "round": {
+    "hard_limit": 20,
+    "attempts_launched": 20,
+    "attempts_unused": 0,
+    "technical_passes": 20,
+    "practical_passes": 0,
+    "api_failures": 0,
+    "best_attempt": 10,
+    "best_score": 17,
+    "forced_completion": true,
+    "stop_reason": "forced_completion_at_hard_attempt_budget",
+    "remaining_compromise": "three blank mineral leaves read as nested mineral shapes rather than unmistakably separate leaves"
+  },
+  "source": {
+    "path": "C:\\Users\\marti\\OneDrive\\Desktop\\Horizon Archive\\Production Pipeline\\Image Toolkit\\work\\host-19\\attempt-10-api.png",
+    "width": 1920,
+    "height": 1088,
+    "format": "PNG",
+    "mode": "RGB",
+    "alpha": false,
+    "animated": false,
+    "metadata_keys": [],
+    "bytes": 4094156,
+    "sha256": "169dd3c4f69e1f15cd2b89c36e125ee76fd4edb250cbae103aa747d72cb8c6b6",
+    "pass": true
+  },
+  "final": {
+    "path": "C:\\Users\\marti\\OneDrive\\Desktop\\Horizon Archive\\Visual Direction\\Production Masters\\2026-08-14-first-run-host19\\host19-environment-master-v1.png",
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "alpha": false,
+    "animated": false,
+    "metadata_keys": [],
+    "bytes": 3714330,
+    "sha256": "3590a7f6e41d4ad303bec850ba1801b4820940e9fa98b6594db73af577124814",
+    "pass": true
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-19",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-19-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "a quiet alien civic record district of low layered masses with heat return and maintenance already mid-cycle",
+    "a near exposed mass containing three distinctly nested blank mineral leaves with no text or symbols",
+    "a fixed trace, later repair fabric crossing it, and a carefully bordered empty absence visible as separate conditions around the leaves",
+    "a small compatible coupling grounded along a stable heat-return margin and physically isolated from live district processes",
+    "an open pedestrian perimeter route that passes the bordered absence without treating a separate closed identity interlock as a challenge"
+  ],
+  "player_critical_facts": [
+    "exactly three blank nested mineral leaves are visibly physical parts of one exposed alien mass and contain no writing, imagery, labels, or page-like human content",
+    "the surrounding construction clearly presents a fixed trace, later crossing repair fabric, and a maintained bordered absence without implying an inscription or answer",
+    "the actual compatible contact is a small grounded coupling on a stable heat-return margin, separate from the blank leaves and isolated from live district machinery",
+    "a separate identity-bearing closure remains visibly closed and noninviting while the safe perimeter route stays open",
+    "heat return, maintenance, light, and every world process remain indifferent and do not react, reward, reveal, welcome, or refuse"
+  ],
+  "art_direction_preferences": [
+    "the nested leaves attract attention through material form rather than glow or signage",
+    "near and far masses repeat related blank-layer geometry at different scales",
+    "pale old substrate, restrained amber-violet repair fabric, and dark bordered absence remain materially distinct",
+    "the coupling is easy to overlook beside the leaves and closed interlock",
+    "the district feels cared for, quiet, and habitable rather than dystopian, funerary, or abandoned"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe dry on-foot perimeter access",
+    "environmental operation without player causation"
+  ],
+  "avoid": [
+    "book, paper, written folio, tablet, filing cabinet, library, archive shelves, gravestone, memorial plaque, shrine, altar, or human office",
+    "text, letters, numbers, writing, inscription, signage, glyphs, image, diagram, screen, UI, or readable symbol on the mineral leaves",
+    "identity scanner, security checkpoint, command console, keyboard, projector, camera, user-facing operating station, or unlockable challenge",
+    "humanoid residents, crowds, vehicles, guards, robots, creatures, faces, eyes, or biological forms",
+    "activation, opening closure, greeting, refusal, alarm, tracking, acknowledgement, reward, answer, reveal, map marker, waypoint, beacon, portal, or watermark"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host19/host19-environment-master-v1.png",
+    "alt_text": "Blank nested mineral shapes sit within a repaired alien civic mass beside a small heat-return coupling and an open perimeter route.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_forced_completion",
+    "selected_attempt": 10,
+    "practical_score": 17,
+    "hard_gate": "forced_completion_no_meaning_changing_contradiction",
+    "attempts_used": 20,
+    "attempts_unused": 0,
+    "remaining_compromises": [
+      "three blank mineral leaves read as nested mineral shapes rather than unmistakably separate leaves"
+    ]
+  }
+}
