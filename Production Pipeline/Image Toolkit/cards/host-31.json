@@ -1,7 +1,7 @@
 {
   "schema": "horizon.image-asset-card.v1",
   "asset_id": "host-31",
-  "status": "in_progress_credit_hold",
+  "status": "in_progress",
   "use_case": "stylized-concept",
   "asset_type": "game environment plate",
   "prompt_file": "prompts/host-31-api-v1.md",
@@ -59,14 +59,18 @@
     "interaction_geometry": null
   },
   "selection": {
-    "status": "in_progress_credit_hold",
+    "status": "in_progress",
     "selected_attempt": null,
     "practical_score": null,
     "hard_gate": "not_evaluated_no_artifact",
-    "attempts_used": 1,
-    "attempts_unused": 19,
+    "attempts_used": 5,
+    "attempts_unused": 15,
     "remaining_compromises": [
-      "attempt 1 returned no artifact because the API organization has no credits remaining"
+      "attempt 1 returned no artifact because the API organization had no credits remaining",
+      "attempt 2 was technically valid but failed the practical hard gates",
+      "attempt 3 established a viable best state but its sealed form remained ambiguous",
+      "attempt 4 regressed passing groups and was rejected as an edit source",
+      "attempt 5 scored 15 of 20 but failed categorical relationship gates"
     ]
   }
 }
