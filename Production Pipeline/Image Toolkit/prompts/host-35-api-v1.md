@@ -1,0 +1,14 @@
+Use case: stylized-concept
+Asset type: private Full HD cinematic game-environment plate
+
+Create a wide, unoccupied first-person view across a vast alien mineral counterfield. The near foreground contains a maintained outer skin integrated low into the terrain. Its focal feature is one large off-axis coupling: an asymmetric mineral-ceramic body angled across the skin, reachable from a stable dry approach, with two clearly related sealed replica chambers nested side by side inside the same exterior mass.
+
+The twin chambers are artificial and nonbiological. Make them visible only as enclosed exterior volumes defined by different rib patterns and shallow sealed contours. Both terminate completely within the local coupling body before reaching any active-looking district process. They are not open rooms, doors, pods, cockpits, lungs, organs, eggs, organisms, vehicles, human machines, sender/receiver devices, or a communications pair. There is no transparent surface, visible interior, pipe, cable, wire, beam, channel, tunnel, or signal leaving either chamber.
+
+Beyond the near coupling, show a huge expanse of broad undisturbed mineral substrate. Far across it, a separate middle district contains a refractory return body ringed by several tall dark vanes at varied angles. A third horizon district has another distinct silhouette. The three districts share only the camera's field of view. No road, marked lane, bridge, cable, channel, light sequence, maintenance trail, synchronized emission, or repeated paving connects them. The stable walking bearing is simply open substrate, not an engineered route.
+
+Compose the distant vanes on the physical onward bearing while preserving their independence. Near structures should feel close and tactile; the middle district should feel genuinely far; the horizon works should remain equally visible and equally irrelevant. Recurrence across scale may invite comparison, but the image must not prove communication, topology, chronology, cause, origin, or purpose.
+
+Style: premium cinematic photoreal alien archaeology; physically credible mineral-ceramic construction; rigorous nonhuman functional logic; distinct district materials and silhouettes; restrained amber-violet maintenance light; blue-black seams; very broad quiet plain; subtle dust haze and immense atmospheric depth; serious, beautiful, melancholy, mysterious; clean 16:9 landscape plate with crop-safe negative space; no generic sleek sci-fi, fantasy, cartoon, horror, or combat framing.
+
+Nothing replies, synchronizes, opens, activates, answers, rewards, acknowledges, tracks, invites, or changes because of the viewer. No text, prompt, code, request/reply symbol, word, number, label, signage, glyph, arrow, route, UI, HUD, marker, waypoint, diagram, map, watermark, logo, humanoid, hand, suit, robot, vehicle, creature, flesh, bone, roots, vines, organs, egg, nest, or dominant biology.
