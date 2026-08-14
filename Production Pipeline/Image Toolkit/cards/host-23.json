@@ -1,0 +1,73 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-23",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-23-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "three visually and materially distinct live currents approaching from different horizons toward one capped common return",
+    "a nearby low radial cluster of exactly three sealed replica throats around a small dry junction",
+    "each replica throat materially corresponding to one current while remaining visibly separate from live flow",
+    "the low replica junction reachable from a broad dry outer foundation without crossing any current",
+    "the three separate live feeders remaining visible as they enter the common return"
+  ],
+  "player_critical_facts": [
+    "three different live currents remain separately readable as suspended-matter ceramic flow, cyclic-pressure mineral-fiber spans, and heat-conducting refractory beds while converging on one capped return",
+    "the local host is a low cluster of three sealed replica throats around one junction, with each replica materially keyed to a different current",
+    "all three replicas are physically isolated from live flow and safely reachable from the dry outer foundation without stepping over or touching a current",
+    "convergence shows only a shared return; the image must not imply shared origin, equivalence, destination, or one system becoming another",
+    "nothing changes speed, opens, rewards, answers, or reacts because the player arrived"
+  ],
+  "art_direction_preferences": [
+    "the radial replica cluster earns a bloom-like silhouette through geometry without looking botanical or biological",
+    "three live-current materials remain distinctive through texture and physical behavior rather than color coding",
+    "the common return sits deep beneath a thick opaque glass-ceramic cap",
+    "the dry foundation visibly skirts all three systems and continues toward the cap",
+    "the scale is awe-filled, carefully maintained, and scientifically legible"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "safe dry on-foot access to the replica junction",
+    "indifferent live processes without player causation"
+  ],
+  "avoid": [
+    "replicas connected to live currents, crossed live flow, open replica throat, visible interior, suction, discharge, sampling beam, or active transfer",
+    "three identical pipes, color-coded cables, ordinary plumbing, turbine, power plant, factory manifold, road interchange, rail junction, or human control station",
+    "flower petals, botanical bloom, plant, fungus, coral, mouth, throat anatomy, creature, face, eye, flesh, or organic body",
+    "text, numbers, signage, glyphs, UI, HUD, map marker, waypoint, beacon, reward, answer, reveal, or watermark",
+    "humanoid residents, vehicles, guards, robots, activation, opening, greeting, refusal, tracking, acknowledgement, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host23/host23-environment-master-v1.png",
+    "alt_text": "Three different alien currents enter one capped return beside three sealed material-keyed replicas on a dry outer foundation.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_practical_rubric",
+    "selected_attempt": 6,
+    "practical_score": 20,
+    "hard_gate": "pass",
+    "attempts_used": 6,
+    "attempts_unused": 14,
+    "remaining_compromises": []
+  }
+}
