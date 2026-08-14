@@ -1,4 +1,5 @@
-import { useLayoutEffect, useRef } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import saddleEchoOrganImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host29/host29-environment-master-v1.png";
 import {
   BRAIDED_VERGE_TRUTHFUL_WORKSPACE_LABEL,
   braidedVergeActions,
@@ -8,6 +9,23 @@ import {
 } from "./BraidedVergeNormal.js";
 import braidedVergePanorama from "../../Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-panorama-runtime-master-v1.webp";
 import braidedVergeContactDetail from "../../Visual Direction/Production Masters/2026-07-29-rp007-braided-verge-runtime/sc08-braided-verge-contact-detail-runtime-master-v1.webp";
+import { SADDLE_ECHO_ORGAN_COPY, SADDLE_ECHO_ORGAN_REGISTRY, deriveSaddleEchoOrganState } from "./braidedHosts.js";
+
+const host29Groups = new Set(["bv00_orientation", "bv10_observations", "bv20_python_primary", "bv20_python_trace", "bv20_python_transfer"]);
+
+function useDecodedImage(enabled, src) {
+  const [decoded, setDecoded] = useState(null);
+  useEffect(() => {
+    if (!enabled) { setDecoded(null); return undefined; }
+    let connected = true;
+    const image = new Image();
+    image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight });
+    image.onerror = () => connected && setDecoded(null);
+    image.src = src;
+    return () => { connected = false; image.onload = null; image.onerror = null; };
+  }, [enabled, src]);
+  return decoded;
+}
 
 const headingCopy = {
   bv30_offset_reach_route_choice: "Offset Reach adjacent survey",
@@ -198,11 +216,18 @@ function BraidedVergeForm({ form, onFieldChange }) {
 
 export function BraidedVerge({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
+  const host29DecodedImage = useDecodedImage(SADDLE_ECHO_ORGAN_REGISTRY.source.enabled, saddleEchoOrganImage);
   const scene = resolveBraidedVergeWorldScene(state);
   const isDetail = scene?.role === "SC-08-CONTACT-DETAIL-MASTER";
   const alt = isDetail ? detailAltByCropId[scene?.cropId] : panoramaAlt;
-  const imageSource = isDetail ? braidedVergeContactDetail : braidedVergePanorama;
-  const sourceName = isDetail
+  const releasedImageSource = isDetail ? braidedVergeContactDetail : braidedVergePanorama;
+  const host29State = deriveSaddleEchoOrganState({ decodedImage: host29DecodedImage });
+  const host29NativeActive = scene?.sceneId === "SC-08" && host29State !== "hidden" && host29Groups.has(state.activeGroup);
+  const imageSource = host29NativeActive ? saddleEchoOrganImage : releasedImageSource;
+  const selectedAlt = host29NativeActive ? SADDLE_ECHO_ORGAN_COPY.alt : alt;
+  const sourceName = host29NativeActive
+    ? "host29-environment-master-v1.png"
+    : isDetail
     ? "sc08-braided-verge-contact-detail-runtime-master-v1.webp"
     : "sc08-braided-verge-panorama-runtime-master-v1.webp";
 
@@ -226,14 +251,17 @@ export function BraidedVerge({ state, onAction, onFieldChange }) {
       data-scene-id={scene?.sceneId}
       data-scene-role={scene?.role}
       data-crop-id={scene?.cropId}
+      data-saddle-echo-organ-state={host29State}
+      data-saddle-echo-organ-native-active={host29NativeActive ? "true" : undefined}
       ref={rootRef}
     >
       <figure className={`braided-world ${isDetail ? "is-detail" : "is-panorama"}`}>
         <img
           src={imageSource}
-          alt={alt}
+          alt={selectedAlt}
           data-image-role={scene?.role}
           data-runtime-source-master={sourceName}
+          data-saddle-echo-organ-source={host29NativeActive ? SADDLE_ECHO_ORGAN_REGISTRY.source.path : undefined}
         />
         <figcaption>
           Expedition view only. Distinct continuities, recurrent contact, bounded difference,
