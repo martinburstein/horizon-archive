@@ -1,0 +1,77 @@
+{
+  "schema": "horizon.image-asset-card.v1",
+  "asset_id": "host-27",
+  "status": "produced_pending_integration",
+  "use_case": "stylized-concept",
+  "asset_type": "game environment plate",
+  "prompt_file": "prompts/host-27-api-v1.md",
+  "evaluation_rubric": "PRACTICAL_PRODUCTION_RUBRIC.md",
+  "target": {
+    "width": 1920,
+    "height": 1080,
+    "format": "PNG",
+    "mode": "RGB",
+    "fit": "cover",
+    "background": "000000"
+  },
+  "generation_budget": {
+    "max_attempts": 20,
+    "concepts": 6,
+    "targeted_edits": 14,
+    "max_non_improving_edits_per_family": 2,
+    "concurrency": 1,
+    "stop_on_first_practical_pass": true
+  },
+  "must_show": [
+    "an exposed nonhuman constructed cross-section with several distinct overlapping material layers and readable physical order",
+    "a fully opaque interval between two exposed faces with an exterior pressure-relief bypass around it",
+    "a low comb-like coupling at the stable base of the cross-section",
+    "comb teeth contacting isolated replicas at multiple layers without accessing live work",
+    "one conductive phase leaving the comb and following the detour around the opaque interval"
+  ],
+  "player_critical_facts": [
+    "the scene is an exposed manufactured cross-section whose foundation layer, later glass-ceramic overlay, crossing repair web, and thinner covering deposition make physical order legible without becoming a timeline or diagram",
+    "an opaque service laminate hides the middle between two exposed faces; no interior is shown and external paths visibly bypass it",
+    "the reachable host is a low stable comb-like coupling whose teeth touch only isolated material replicas at several layers, never live work",
+    "one conductive phase visibly leaves the comb and crosses the pressure-relief detour around the opaque interval",
+    "nothing supplies a date, duration, author, cause, answer, reward, or world response"
+  ],
+  "art_direction_preferences": [
+    "the cross-cut material order reads before fine comb detail",
+    "matched outer interfaces persist while one internal branch form visibly changes",
+    "the comb feels like embedded nonhuman infrastructure rather than a human tool or literal hair comb",
+    "gaps between isolated replica contacts remain visibly meaningful",
+    "the scene feels ancient, maintained, tactile, quiet, and structurally credible"
+  ],
+  "must_preserve": [
+    "first-person environmental scale",
+    "wide crop readability",
+    "stable dry access to the base coupling and exterior detour",
+    "fixed layers and indifferent operation without player causation"
+  ],
+  "avoid": [
+    "timeline, labeled strata chart, museum display, geological textbook diagram, graph, calendar, clock, date, author, causal arrow, or explanatory annotation",
+    "open opaque interval, visible middle, window, hatch, door, portal, hidden chamber reveal, disabled reward, secret access, or invitation",
+    "literal hair comb, brush, rake, keyboard, circuit board, server rack, audio equalizer, musical instrument, ordinary excavation tool, or human industrial machine",
+    "live sample, replay screen, memory projection, cable reading live work, creature, organ, plant, coral, mushroom, or biology",
+    "text, numbers, signage, glyphs, UI, HUD, marker, waypoint, beacon, reward, answer, watermark, humanoid, vehicle, robot, activation, tracking, acknowledgement, or world response"
+  ],
+  "integration": {
+    "product_path": "Visual Direction/Production Masters/2026-08-14-first-run-host27/host27-environment-master-v1.png",
+    "alt_text": "A low alien strata coupling touches isolated replicas across an exposed layered cross-section while a conductive phase follows a detour around an opaque interval.",
+    "interaction_geometry": null
+  },
+  "selection": {
+    "status": "done_forced_completion",
+    "selected_attempt": 8,
+    "practical_score": 16,
+    "hard_gate": "forced_completion_compromise",
+    "attempts_used": 20,
+    "attempts_unused": 0,
+    "remaining_compromises": [
+      "foreground suit gloves are visible but do not alter the environmental evidence",
+      "the conductive detour retains some familiar piping vocabulary",
+      "some layer transitions are more geological-looking than ideal"
+    ]
+  }
+}
