@@ -1,10 +1,15 @@
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { counterfieldScopeRows } from "./CounterfieldNormal.js";
 import {
   UNBORROWED_REACH_CONTROLLER_VERSION, UNBORROWED_REACH_ROUTE_GROUP,
   UNBORROWED_REACH_SHELL_VERSION, unborrowedReachActions, unborrowedReachLimitIds,
   unborrowedReachObservationIds, unborrowedReachReconciliationMethodIds,
 } from "./UnborrowedReachNormal.js";
+import membraneFoamSeamImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host37/host37-environment-master-v1.png";
+import { MEMBRANE_FOAM_SEAM_COPY, MEMBRANE_FOAM_SEAM_REGISTRY, deriveMembraneFoamSeamState } from "./unborrowedHosts.js";
+
+const host37Groups = new Set(["ur00_isolation", "ur10_fresh_observations", "ur20_python_primary", "ur20_python_trace", "ur20_python_transfer"]);
+function useDecodedImage(enabled, src) { const [decoded, setDecoded] = useState(null); useEffect(() => { if (!enabled) { setDecoded(null); return undefined; } let connected = true; const image = new Image(); image.onload = () => connected && setDecoded({ complete: image.complete, naturalWidth: image.naturalWidth, naturalHeight: image.naturalHeight }); image.onerror = () => connected && setDecoded(null); image.src = src; return () => { connected = false; image.onload = null; image.onerror = null; }; }, [enabled, src]); return decoded; }
 
 const observationActions = [
   unborrowedReachActions.observePersistentTransition, unborrowedReachActions.observeDifferingRelation,
@@ -123,8 +128,11 @@ function SaveConfirmation({ group, actions, onAction }) {
 
 export function UnborrowedReach({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
+  const host37DecodedImage = useDecodedImage(MEMBRANE_FOAM_SEAM_REGISTRY.source.enabled, membraneFoamSeamImage);
   useLayoutEffect(() => { const target = state.focusIntent?.target ?? state.headingId; rootRef.current?.querySelector(`#${CSS.escape(target)}`)?.focus?.({ preventScroll: true }); }, [state.activeGroup, state.focusIntent?.target, state.statusMessageId]);
   const group = state.activeGroup;
+  const host37State = deriveMembraneFoamSeamState({ decodedImage: host37DecodedImage });
+  const host37NativeActive = host37State !== "hidden" && host37Groups.has(group);
   const route = group === UNBORROWED_REACH_ROUTE_GROUP;
   const confirmation = group === "ur20_fresh_confirm" || group === "ur30_final_confirm";
   const controlFocus = !state.headingId.endsWith("-heading");
@@ -133,7 +141,7 @@ export function UnborrowedReach({ state, onAction, onFieldChange }) {
   const mainActions = state.availableActions.filter((action) => !returnActions.has(action));
   return (
     <main ref={rootRef} className="unborrowed-reach-shell" data-product-landmark="unborrowed-reach-product-landmark" data-shell-version={state.shellVersion ?? UNBORROWED_REACH_SHELL_VERSION} data-controller-version={state.controllerVersion ?? UNBORROWED_REACH_CONTROLLER_VERSION} data-active-group={group} data-owner={state.owner} data-phase={state.phase} data-fixture-contract-version="td011.fixture-manifest.v1" aria-labelledby={headingDomId}>
-      <div className="unborrowed-reach-scene" role="img" data-rendering-medium="css" data-runtime-image="not-selected" aria-label="Unfamiliar mineral laminae continue outward without a repeated landmark, alignment, route, destination, or response."><span /><span /><span /><span /></div>
+      <div className="unborrowed-reach-scene" role={host37NativeActive ? undefined : "img"} data-rendering-medium={host37NativeActive ? "production-master" : "css"} data-runtime-image={host37NativeActive ? "host37-environment-master-v1.png" : "not-selected"} data-membrane-foam-seam-state={host37State} data-membrane-foam-seam-native-active={host37NativeActive ? "true" : undefined} aria-label={host37NativeActive ? undefined : "Unfamiliar mineral laminae continue outward without a repeated landmark, alignment, route, destination, or response."}>{host37NativeActive ? <img className="unborrowed-native-scene" src={membraneFoamSeamImage} alt={MEMBRANE_FOAM_SEAM_COPY.alt} data-membrane-foam-seam-source={MEMBRANE_FOAM_SEAM_REGISTRY.source.path} /> : <><span /><span /><span /><span /></>}</div>
       <section className="unborrowed-reach-panel">
         <p className="eyebrow" data-active-owner={state.owner}>{state.owner}</p>
         <h2 id={headingDomId} tabIndex="-1">{state.heading ?? "UNBORROWED REACH"}</h2>
