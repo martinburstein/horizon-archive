@@ -8,6 +8,12 @@ import {
 } from "./OffsetReachNormal.js";
 import offsetReachPanorama from "../../Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-panorama-runtime-master-v4.webp";
 import offsetReachRelationDetail from "../../Visual Direction/Production Masters/2026-08-01-rp008-offset-reach-runtime/sc09-offset-reach-relation-detail-runtime-master-v1.webp";
+import { useEffect, useState } from "react";
+import counterexampleCoreImage from "../../Visual Direction/Production Masters/2026-08-14-first-run-host31/host31-environment-master-v1.png";
+import { COUNTEREXAMPLE_CORE_COPY, COUNTEREXAMPLE_CORE_REGISTRY, deriveCounterexampleCoreState } from "./offsetHosts.js";
+
+const host31Groups=new Set(["or00_orientation","or10_observations","or20_python_primary","or20_python_trace","or20_python_transfer"]);
+function useDecodedImage(enabled,src){const[decoded,setDecoded]=useState(null);useEffect(()=>{if(!enabled){setDecoded(null);return undefined;}let connected=true;const image=new Image();image.onload=()=>connected&&setDecoded({complete:image.complete,naturalWidth:image.naturalWidth,naturalHeight:image.naturalHeight});image.onerror=()=>connected&&setDecoded(null);image.src=src;return()=>{connected=false;image.onload=null;image.onerror=null;};},[enabled,src]);return decoded;}
 
 const headingCopy = {
   or00_orientation: "Offset Reach",
@@ -201,11 +207,18 @@ function OffsetReachForm({ form, onFieldChange }) {
 
 export function OffsetReach({ state, onAction, onFieldChange }) {
   const rootRef = useRef(null);
+  const host31DecodedImage=useDecodedImage(COUNTEREXAMPLE_CORE_REGISTRY.source.enabled,counterexampleCoreImage);
   const scene = resolveOffsetReachWorldScene(state);
   const isDetail = scene?.role === "SC-09-RELATION-DETAIL-MASTER";
   const alt = isDetail ? detailAltByCropId[scene?.cropId] : panoramaAlt;
-  const imageSource = isDetail ? offsetReachRelationDetail : offsetReachPanorama;
-  const sourceName = isDetail
+  const releasedImageSource=isDetail?offsetReachRelationDetail:offsetReachPanorama;
+  const host31State=deriveCounterexampleCoreState({decodedImage:host31DecodedImage});
+  const host31NativeActive=scene?.sceneId==="SC-09"&&host31State!=="hidden"&&host31Groups.has(state.activeGroup);
+  const imageSource=host31NativeActive?counterexampleCoreImage:releasedImageSource;
+  const selectedAlt=host31NativeActive?COUNTEREXAMPLE_CORE_COPY.alt:alt;
+  const sourceName = host31NativeActive
+    ? "host31-environment-master-v1.png"
+    : isDetail
     ? "sc09-offset-reach-relation-detail-runtime-master-v1.webp"
     : "sc09-offset-reach-panorama-runtime-master-v4.webp";
 
@@ -229,6 +242,8 @@ export function OffsetReach({ state, onAction, onFieldChange }) {
       data-scene-id={scene?.sceneId}
       data-scene-role={scene?.role}
       data-crop-id={scene?.cropId}
+      data-counterexample-core-state={host31State}
+      data-counterexample-core-native-active={host31NativeActive?"true":undefined}
       ref={rootRef}
       onKeyDown={(event) => {
         if (state.activeGroup === "or20_save" && event.key === "Escape") {
@@ -240,9 +255,10 @@ export function OffsetReach({ state, onAction, onFieldChange }) {
       <figure className={`offset-world ${isDetail ? "is-detail" : "is-panorama"}`}>
         <img
           src={imageSource}
-          alt={alt}
+          alt={selectedAlt}
           data-image-role={scene?.role}
           data-runtime-source-master={sourceName}
+          data-counterexample-core-source={host31NativeActive?COUNTEREXAMPLE_CORE_REGISTRY.source.path:undefined}
         />
         <figcaption>
           Expedition view only. Retained local association, recurring contact, comparable

@@ -10,17 +10,19 @@ const entry = readFileSync(new URL("../src/CalibrationMarginNormalEntry.js", imp
 const braidedVerge = readFileSync(new URL("../src/BraidedVerge.jsx", import.meta.url), "utf8");
 const css = readFileSync(new URL("../src/styles.css", import.meta.url), "utf8");
 
-test("TD008 production UI exposes exact longest copy and exactly two truthful production masters", () => {
+test("TD008 production UI exposes exact longest copy plus released and fail-closed native masters", () => {
   assert.match(component, /Review retained local association and independent offset responsibilities/);
   assert.match(css, /\.offset-verge\[data-active-group="or20_review"\] \.offset-heading h1\s*\{\s*font-size: clamp\(1\.45rem, 2vw, 2rem\);\s*\}/);
   assert.doesNotMatch(component, /PROVISIONAL STRUCTURAL PLACEHOLDER|offset-world-placeholder/);
   const imports = component.match(/import\s+\w+\s+from\s+["'][^"']+\.(?:png|webp|jpg|jpeg|avif)["']/gi) ?? [];
-  assert.equal(imports.length, 2);
+  assert.equal(imports.length, 3);
   assert.match(component, /sc09-offset-reach-panorama-runtime-master-v4\.webp/);
   assert.doesNotMatch(component, /sc09-offset-reach-panorama-runtime-master-v1\.webp/);
   assert.match(component, /sc09-offset-reach-relation-detail-runtime-master-v1\.webp/);
   assert.match(component, /<img/);
   assert.match(component, /detailAltByCropId/);
+  assert.match(component, /data-counterexample-core-state=\{host31State\}/);
+  assert.match(component, /data-counterexample-core-source=/);
   assert.deepEqual([...controller.matchAll(/imageRoles:[\s\S]*?Object\.freeze\(\[([^\]]+)/g)].length, 1);
 });
 
